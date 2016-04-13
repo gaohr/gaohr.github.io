@@ -1,304 +1,66 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
-<!--[if !IE]><!--> <html lang="cn"> <!--<![endif]-->
-<!-- BEGIN HEAD -->
+<html>
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="高会然" content="">
-	<title>SEIM on line</title>
-	
-	<link href="../css/bootstrap/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/style/style.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/style/style-responsive.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/default.css" rel="stylesheet" type="text/css" id="style_color"/>
-	<link href="../css/uniform.default.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/promo.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/animate.css" rel="stylesheet" type="text/css"/>
-	<link href="../css/component.css" rel="stylesheet" type="text/css"/>
-	
-	<link rel="shortcut icon" href="../img/earth.png" />
-	
-<!-- 顶部 -->
-</head>
-<body class="page-header-fixed page-sidebar-closed">
-    <div class="header navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner" style="height:56px">
-			<div class="container-fluid">
-				<a class="navbar-brand" href="index.html" style="position:absolute;color:#1E90FF;margin:10px;font-size:32px;text-decoration:none">
-					<img src="../img/earth.png" alt="logo"/>Scenario Analysis Online
-				</a>
-				<!-- 响应式菜单 -->
-				<a href="javascript:;" class="btn-navbar collapsed icon-list" data-toggle="collapse" data-target=".nav-collapse"></a> 
-				
-				<ul class="nav pull-right">
-					<li style="margin:7px" class="hiden">
-					    <form class="form-wrapper cf">
-	                        <input type="text" placeholder="查询……" required>
-	                        <button type="submit"><i class="icon-search"></i></button>
-                        </form>
-				    </li>
-						<li class="dropdown user">
-						<a href="#" data-toggle="dropdown" id="userin">
-							<img alt="name" id="userhead-in" src="" width="32"/>
-							<span class="username" id="username-in">User</span>
-							<i class="icon-angle-down"></i>
-						</a>
-						<a href="#" id="userout">
-							<img alt="name" id="userhead-out" src="" width="32"/>
-							<span class="username" id="username-out"></span>
-						</a>
-						<ul class="dropdown-menu" id="usermenu">
-							<li><a href="#"><i class="icon-user"></i> My Profile</a></li>
-							<li><a href="#"><i class="icon-calendar"></i> My Data</a></li>
-							<li><a href="#"><i class="icon-envelope"></i> My Work</a></li>
-							<li><a href="#"><i class="icon-tasks"></i> My Result</a></li>
-							<li class="divider"></li>
-							<li><a href="#"><i class="icon-lock"></i> Lock Screen</a></li>
-							<li><a href="login/Login.html"><i class="icon-key" id="logout"></i> Log Out</a></li>
-						</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="page-container">
-	<!-- 左边栏 -->
-		<div class="page-sidebar nav-collapse collapse">
-			<ul class="page-sidebar-menu">
-				<li>
-					<div class="sidebar-toggler hidden-phone icon-list" style="color:white;margin-top:25px"></div>
-				</li>
-				<li class="active">
-					<a href="index.html">
-					<i class="icon-home"></i> 
-					<span class="title">首页</span>
-					<span class="selected"></span>
-					</a>
-				</li>
-				<li class="">
-					<a href="DataDisplay.html">
-					    <i class="icon-picture"></i> 
-					    <span class="title">数据显示</span>
-					</a>
-				</li>
-				<li class="">
-					<a id="modal-01" href="#modal-container-01" role="button" data-toggle="modal">
-					<i class="icon-cogs"></i> 
-					<span class="title">治理措施</span>
-					<span class="arrow"></span>
-					</a>
-					<ul class="sub-menu">
-					    <li><a href="#"><i class="icon-cogs"></i>工程措施<span class="arrow"></span></a>
-					        <ul class="sub-menu">
-								<li><a href="EngineBMP.html"><i class="icon-cog"></i>茶果园坡改梯</a></li>
-							</ul>
-					    </li>
-					    <li><a href="#"><i class="icon-cogs"></i>非工程措施<span class="arrow"></span></a>
-					        <ul class="sub-menu">
-								<li><a href="EngineNonBMP.html"><i class="icon-cog"></i>低效林改造</a></li>
-								<li><a href="EngineNonBMP.html"><i class="icon-cog"></i>等高草灌带</a></li>
-								<li><a href="EngineNonBMP.html"><i class="icon-cog"></i>草灌乔混交</a></li>
-								<li><a href="EngineNonBMP.html"><i class="icon-cog"></i>小穴播草</a></li>
-								<li><a href="EngineNonBMP.html"><i class="icon-cog"></i>封禁</a></li>
-							</ul>
-					    </li>
-					</ul>
-				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-wrench"></i> 
-					<span class="title">情景配置</span>
-					<span class="arrow"></span>
-					</a>
-					<ul class="sub-menu">
-						<li><a href="#"><i class="icon- icon-user"></i>人工配置<span class="arrow"></span></a>
-							<ul class="sub-menu">
-								<li><a href="Single-Config.html"><i class="icon-edit"></i>空间逐地块设计情景</a></li>
-								<li><a href="Rules-Config.html"><i class=" icon-th-large"></i>按属性规则设计情景</a></li>
-							</ul>
-						</li>
-						<li><a href="CriticalZone.html"><i class="icon-screenshot"></i>按关键源区配置治理目标</a></li>
-						<li><a href="Intelligent-Optimization.html"><i class="icon-sitemap"></i>智能优化</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="javascript:;">
-					<i class="icon-legal"></i> 
-					<span class="title">模拟分析</span>
-					<span class="arrow"></span>
-					</a>
-					<ul class="sub-menu">
-						<li><a href="ScenarioSet.html"><i class="icon-beaker"></i>多情景集加载、批量分析</a></li>
-						<li><a href="Evaluation.html"><i class="icon-bar-chart"></i>情景分析结果对比</a></li>
-						<!-- 
-						<li><a href="#" class="active"><i class=" icon-bar-chart"></i>情景分析结果对比<span class="arrow"></span></a>
-							<ul class="sub-menu">
-								<li><a href="Evaluation.html"><i class="icon-comment-alt"></i>单一评价</a></li>
-								<li><a href="#"><i class="icon-comments-alt"></i>综合评价</a></li>
-							</ul>
-						</li>
-						 -->
-					</ul>
-				</li>
-				<li class="">
-					<a href="javascript:;">
-					<i class="icon-comment"></i> 
-					<span class="title">关于</span>
-					<span class="arrow "></span>
-					</a>
-					<ul class="sub-menu">
-						<li>
-						    <a href="#"><i class="icon-group"></i>Group</a>
-						</li>
-						<li>
-						    <a href="userManuals.html"><i class="icon-briefcase"></i>Help</a>
-						</li>
-					</ul>
-				</li>
-            </ul>
-        </div>
-     </div>
-<!-- 页面 -->
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <title>Gaohr | Homepage by gaohr</title>
+  </head>
 
-        <div class="page-content">
-			<div class="container-fluid promo-page">
-				<div class="row-fluid">
-					<div class="span12">
-						<div class="block-grey" style="background:-webkit-radial-gradient(bottom left,ellipse,#3b6c85,#fff,#fff,#24417f);" id="main">
-							<div class="row-fluid" style="margin-top:20px;width:90%;margin-left:5%">
-								<div class="span8 animated">
-									<p class="name"><b>在线式流域管理措施<span style="color:#0065b3">情景分析</span></b></p>
-									<div class="promo-page-text">
-										<p>&nbsp;&nbsp;<img src="../img/icon/pushpin.png">SEIM 空间全分布式水文模型</p>
-										<p>&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/icon/pushpin.png">流域管理措施库及其空间关系知识库</p>
-										<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/icon/pushpin.png">情景优化配置工具</p>
-										<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/icon/pushpin.png">流域综合效益评价</p>
-										<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../img/icon/pushpin.png">在线交互式操作</p>
-									</div>
-									<div class="homeoption">
-										<a href="DataDisplay.html" class="circlebtn">数据展示</a>
-										<a href="IntroBMP.html" class="circlebtn">治理措施</a>
-										<a href="Rules-Config.html" class="circlebtn">情景配置</a>
-										<a href="Evaluation.html" class="circlebtn">效益评价</a>
-									</div>
-								</div>
-								<div class="span4">
-									<div style="position:absolute;left:92%;top:10%">
-										<a class="btn btn-mini disabled">中文</a>
-										<a href="../html_en/MyIndex.html" class="btn btn-mini btn-info">English</a>
-									</div>
-									<div class="animated rotateInDownLeft hiden">
-										<a href="index.html"><img src="http://zhulj-blog.oss-cn-beijing.aliyuncs.com/SEIMS_Online/SA_Online/toolsOnline.png" alt="img"></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div style="position:absolute;left:50%;top:94%;font-size:28px;color:#555;opacity:0.7" class="arrowpoint"><i class=" icon-chevron-down" style="text-align:center"></i></div>
-			</div>
-				<div class="promo-page-n" style="color:#fff;background:-webkit-radial-gradient(bottom right,ellipse,#BBB,#2B6C85,#756E85);">
-						    <div class="block-transparent">
-						    	<div class="row-fluid pagepart" id="datadisplay">
-									<div class="span8 margin-bottom-20">
-										<h2>数据展示</h2>
-										<h5>研究区数据展示，包括研究区空间分布矢量数据，高程及其地形参数数据,以及模型运行相关数据等</h5>
-										<button class="btn smallbtn blue pull-right">More</button>
-									</div>
-									<div class="span4 margin-bottom-20" style="text-align:center">
-										<img src="../img/icon/layers.png" style="padding:20px 30px;border:2px solid #ddd;border-radius:10px" class="hiden">
-									</div>
-								</div>
-								<div class="row-fluid pagepart" id="bmps">
-									<div class="span4" style="text-align:center">
-										<img src="../img/icon/toolbox.png" style="padding:20px 30px;border:2px solid #ddd;border-radius:10px" class="hiden">
-									</div>
-									<div class="span8 margin-bottom-20">
-										<h2>治理措施</h2>
-										<h5>基于各种治理措施的功能，识别治理措施影响到的水文和侵蚀过程，选择流域模型中相关的参数来体现它们影响到的过程，
-						             		 在此利用修改参数的方法基于空间全分布式模型SEIM表达了封禁、草灌乔混交、低效林改造、等高草灌带
-						              		、小穴播草、茶果园坡改梯等治理措施。根据其治理模式分为工程与非工程两大类。</h5>
-										<button class="btn smallbtn blue pull-right">More</button>
-									</div>
-								</div>
-								<div class="row-fluid pagepart" id="setting">
-									<div class="span8 margin-bottom-20">
-										<h2>情景配置</h2>
-										<h5>人工配置（空间逐地块、按属性规则）、关键源区识别、基于智能优化算法的配置方法</h5>
-										<button class="btn smallbtn blue pull-right">More</button>
-									</div>
-									<div class="span4 margin-bottom-20" style="text-align:center">
-										<img src="../img/icon/wrench.png" style="padding:20px 30px;border:2px solid #ddd;border-radius:10px" class="hiden">
-									</div>
-								</div>
-								<div class="row-fluid pagepart" id="evaluation">
-									<div class="span4" style="text-align:center">
-										<img src="../img/icon/evalue.png" style="padding:20px 30px;border:2px solid #ddd;border-radius:10px" class="hiden">
-									</div>
-									<div class="span8 margin-bottom-20">
-										<h2>效益评价</h2>
-										<h5>模型运行结果展示，评价</h5>
-										<button class="btn smallbtn blue pull-right">More</button>
-									</div>
-								</div>
-							</div>
-						</div>
-		</div>
-				
-	<div class="footer">
-		<div class="footer-inner">
-			2015 &copy; IGSNRR <a>GHR</a>
-		</div>
-		<div class="footer-tools">
-			<span class="go-top">
-			<i class="icon-angle-up"></i>
-			</span>
-		</div>
-	</div>
-	
-	<script src="../tools/jquery/jquery-1.10.1.min.js" type="text/javascript"></script>
-	<script src="../tools/jquery/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
-	<script src="../tools/jquery/jquery-ui.custom.min.js" type="text/javascript"></script> 
-	<script src="../tools/bootstrap/bootstrap.min.js" type="text/javascript"></script>   
-	<script src="../tools/jquery/jquery.cookie.js" type="text/javascript"></script>
-	<script src="../tools/app.js" type="text/javascript"></script>
-	<script>
-		jQuery(document).ready(function() {    
-		   App.init();
-		   $(".scroll").click(function(event){		
-				event.preventDefault();
-				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
-			});
-		    
-		    username_i = $.cookie("user_SA"); // 读取 cookie;
-		    //alert(username_i);
-			if (username_i != null && username_i != "") {
-				$("#username-in").html("" + username_i + "");
-				$("#userhead-in").attr("src","../img/icon/monkey.png");
-				$("#userout").hide();
-			} else {
-				$("#username-out").html("<a href='login/Login.html' style='color:#aaa'>登陆/注册</a>");
-				$("#userhead-out").attr("src","../img/icon/user-b.png");
-				$("#userin").hide();
-			}
-		});
-		
-		$("#logout").click(function() {
-			$.cookie("user_SA", null, { path:"/SA_Online/html" });
-		})
-	</script>
-	<script>
-		//自适应屏幕高度
-		//alert($("#main").height())
-		$("#main").css("height",$("#main").height() + 120);
+  <body>
+    <div id="container">
+      <div class="inner">
 
-	</script>
-</body>
+        <header>
+          <h1>Gaohr | Homepage</h1>
+          <h2>Home page</h2>
+        </header>
+
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/gaohr" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
+
+        <hr>
+
+        <section id="main_content">
+          <h3>
+<a id="welcome-to-gaohrs-github-pages" class="anchor" href="#welcome-to-gaohrs-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GaoHR's GitHub Pages.</h3>
+
+<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+
+<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
+
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
+
+<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+
+<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+
+<h3>
+<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+        </section>
+
+        <footer>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
+    </div>
+  </body>
 </html>
-
