@@ -1,0 +1,93 @@
+
+{% include header.html %}
+
+<div class="container container-left">
+    <div class="row">
+        <div class="col-md-3 hidden-xs">
+            {% include sidebar.html %}
+        </div>
+        <div class="col-md-9">
+        <div class="article">
+            <div class="well">
+                <h1><a href="{{ site.baseurl}}{{ page.url }}">{{ page.date | date: "%b %-d, %Y" }} - {{ page.title }}</a></h1>
+			{% if site.comments == true and page.comments == true and site.disqus != '' %}
+                <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
+            {% endif %}
+			{% include post-tags.html %}
+            <div class="post-content">
+            {{ content }}
+            </div>
+			{% if page.comments %}
+			<!-- comments start using disqus-->
+			<div id="disqus_thread">
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+            </div>
+			<!-- comments start using duoshuo -->
+			<!--<div class="ds-share flat" data-thread-key={{ page.id }} data-title={{ page.title }} data-content={{ page.title }} data-url="{{ site.baseurl}}{{ page.url }}">
+				<div class="ds-share-inline">
+					<ul  class="ds-share-icons-16">
+						<li data-toggle="ds-share-icons-more"><a class="ds-more" href="javascript:void(0);">分享到：</a></li>
+						<li><a class="ds-weibo" href="javascript:void(0);" data-service="weibo">微博</a></li>
+						<li><a class="ds-qzone" href="javascript:void(0);" data-service="qzone">QQ空间</a></li>
+						<li><a class="ds-qqt" href="javascript:void(0);" data-service="qqt">腾讯微博</a></li>
+						<li><a class="ds-wechat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+						
+					</ul>
+				<div class="ds-share-icons-more"></div>
+				</div>
+			</div>
+			<div class="ds-thread" data-thread-key={{ page.id }} data-title={{ page.title }} data-url="{{ site.baseurl}}{{ page.url }}"></div>-->
+			<!-- comments end -->
+			{% endif %}
+<!-- duoshuo
+			<script type="text/javascript">
+var duoshuoQuery = {short_name:"zhuliangjun"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+</script> -->
+            
+			</div>
+		</div>
+		<!-- add back to up button -->
+		<div id="back-top">
+		  <a href="#top" title="back-to-top">
+			<i class="fa fa-arrow-up fa-2x"></i>
+		  </a>
+		</div>
+		<script type="text/javascript">
+		$("#back-top").hide();
+		$(document).ready(function () {
+		  $(window).scroll(function () {
+			if ($(this).scrollTop() > 100) {
+			  $('#back-top').fadeIn();
+			} else {
+			  $('#back-top').fadeOut();
+			}
+		  });
+		  $('#back-top a').click(function () {
+			$('body,html').animate({
+			  scrollTop: 0
+			}, 500);
+			return false;
+		  });
+		});
+		</script>
+		<div class="pagination">
+			{% if page.next %}
+			<a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
+			{% endif %}
+			{% if page.previous %}
+			<a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">Older Post</a>
+			{% endif %}
+		</div>
+	</div>
+</div>
+{% include disqus-comments.html %}
+{% include footer.html %}

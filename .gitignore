@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Compiled Object files
 *.slo
 *.lo
@@ -32,3 +33,7 @@
 
 # Everything in the build directory
 build
+=======
+_cache
+_site
+>>>>>>> refs/remotes/origin/master

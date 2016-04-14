@@ -1,0 +1,45 @@
+# Jekyll configuration
+
+name: GAO Huiran
+description: GIS, Watershed modeling
+
+
+# baseurl will often be '', but for a project page on gh-pages, it needs to
+# be the project name.
+# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
+#     run it like so: jekyll serve --baseurl=''
+baseurl: ''
+port: 5000
+
+#Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
+follow:
+  - class: fa fa-weibo fa-2x
+    url: http://weibo.com/531239592
+  - class: fa fa-github fa-2x
+    url: https://github.com/gaohr
+  - class: fa fa-google fa-2x
+    url: https://scholar.google.com.hk/citations?user=FkNIpcQAAAAJ&hl=zh-CN
+  - class: fa fa-facebook-official fa-2x
+    url: https://www.facebook.com/
+  - class: fa fa-twitter fa-2x
+    url: https://twitter.com/
+
+# Set this to your UA-# value, or '' to disable the block completely
+gaaccount: 'UA-75301149-1'
+
+# Set this to your disqus shortname to enable comments. Note that the 'comments'
+# setting below must also be true. Individual posts can override 'comments' to
+# disable on a post-by-post basis
+disqus: 'gaozhong'
+comments: true
+paginate: 6
+paginate_path: "page:num"
+excerpt_separator: "<!-- more -->"
+syntax_highligher: rouge
+markdown: kramdown
+kramdown:
+    input: GFM
+    syntax_highlighter: rouge
+
+gems: ['jekyll-paginate','rouge']
+timezone: Asia/Shanghai
