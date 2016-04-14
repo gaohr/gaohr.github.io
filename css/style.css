@@ -1,9 +1,9 @@
 
 
-a:hover, a:focus { text-decoration: none; }
 a:hover {
 	-webkit-transition: all 0.3s ease;
 	transition: all 0.3s ease;
+	text-decoration: none;
 }
 .margin-b-30 { margin-bottom: 30px; }
 
@@ -19,7 +19,7 @@ a:hover {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #161E2C;
+	background-color: #222;
 	font-family: 'Open Sans', sans-serif;
 	overflow-x: hidden;
 }
@@ -27,11 +27,12 @@ body {
 .main-body {
 	float: left;
 	width: 100%;
-	background: url(../images/page-bg.jpg) no-repeat top center;
+	background: #ddd;
 	background-size: 100% auto;
 	background-attachment: fixed;
 }
-
+.mainlogo a{position: relative;font-size:42px;font-family:'华文琥珀';color:#1e90ff;margin:10px;}
+.mainlogo a:hover {color:#ff201e}
 /* 
  * http://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/
  * Background attachment fixed bug on IE 
