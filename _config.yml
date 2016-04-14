@@ -1,6 +1,6 @@
 # Jekyll configuration
 
-name: GAO Huiran
+name: Liang-Jun Zhu
 description: GIS, Watershed modeling, Digital terrain analysis...
 
 
@@ -14,15 +14,15 @@ port: 5000
 #Follow me, you can choose your icon by http://fortawesome.github.io/Font-Awesome/icons/#brand
 follow:
   - class: fa fa-weibo fa-2x
-    url: http://weibo.com/gaohr
+    url: http://weibo.com/crazyzlj
   - class: fa fa-github fa-2x
-    url: https://github.com/gaohr
+    url: https://github.com/crazyzlj
   - class: fa fa-google fa-2x
     url: https://scholar.google.com.hk/citations?user=FkNIpcQAAAAJ&hl=zh-CN
   - class: fa fa-facebook-official fa-2x
-    url: https://www.facebook.com/gaohr
+    url: https://www.facebook.com/liangjun.zhu.1
   - class: fa fa-twitter fa-2x
-    url: https://twitter.com/gaohr
+    url: https://twitter.com/LiangjunZhu
 
 # Set this to your UA-# value, or '' to disable the block completely
 gaaccount: 'UA-75301149-1'
@@ -30,7 +30,7 @@ gaaccount: 'UA-75301149-1'
 # Set this to your disqus shortname to enable comments. Note that the 'comments'
 # setting below must also be true. Individual posts can override 'comments' to
 # disable on a post-by-post basis
-disqus: 'gaozhong'
+disqus: 'liangjunzhusblog'
 comments: true
 paginate: 6
 paginate_path: "page:num"
