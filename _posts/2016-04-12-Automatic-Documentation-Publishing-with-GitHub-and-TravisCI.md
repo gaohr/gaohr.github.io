@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Message Board"
+title: "Message-Board"
 category: [Others]
 tag: [Github,mannual]
 date: 2016-04-14 20:24:00
