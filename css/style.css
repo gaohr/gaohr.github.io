@@ -19,7 +19,7 @@ a:hover {
 body {
 	margin: 0;
 	padding: 0;
-	background-color: #ddd;
+	background-color: #222;
 	font-family: 'Open Sans', sans-serif;
 	overflow-x: hidden;
 }
@@ -31,12 +31,11 @@ body {
 	background-size: 100% auto;
 	background-attachment: fixed;
 }
-.mainlogo a{position: relative;font-size:42px;font-family:'华文琥珀';color:#1e90ff;margin:10px;}
+.mainlogo a{position: relative;font-size:42px;font-family:'Microsoft YaHei';color:#ddd;margin:10px;margin-left:5%;}
 .mainlogo a:hover {color:#ff201e}
-/* 
- * http://philipnewcomer.net/2014/04/target-internet-explorer-10-11-css/
- * Background attachment fixed bug on IE 
-*/
+.mainlogo p {float:right;margin:10px;color:#ddd;vertical-align:middle;line-height:42px;}
+.mainlogo img {float:right;margin:10px;vertical-align:middle;width:42px;margin-right:5%}
+
 .copyrights{
 	text-indent:-9999px;
 	height:0;
