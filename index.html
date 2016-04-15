@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel='stylesheet' type='text/css' href='http://fonts.useso.com/css?family=Open+Sans:300,400,600,700,400italic'>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/menu.css">
+	<link rel="stylesheet" type="text/css" href="css/blog.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>GaoHR | Homepage</title>
 </head>
@@ -18,25 +20,92 @@
 		<img src="img/head.png">
 		<p>-Welcome-</p>
 	</div>
-	
-    <div class="main-body">	
-	<div class="container-fluid">
+	<div class="container-fluid main-page">
 		<div class="row">
 			<div class="col-md-2">
-				
+				<div class="host">
+					<img src="img/images/head-img.jpg" class="img-rounded"><br><br>
+					<i class="icon-user">&nbsp;&nbsp;斩之浪</i>
+				</div>
+				<!-- Navigation -->
+				<div class="svg-wrapper">
+					<svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="shape" height="40" width="150"></rect></svg>
+					<div id="text"><a href="index.html"><span class="spot"></span><i class="icon-home"></i></a></div>
+				</div>
+				<div class="sider-menu centerer-menu wrap-menu">
+					<a href="Blogs.html" class="btn-menu">博客</a>
+					<a href="About.html" class="btn-menu">关于</a>
+					<a href="Contact.html" class="btn-menu">留言</a>
+				</div>
+				<div class="hr"></div>
+				<div class="links">
+					<p><b>Foolow me</b></p>
+					<a href="http://weibo.com/531239592"><i class="icon-weibo"></i></a>
+					<a href="https://github.com/gaohr"><i class="icon-github-sign"></i></a>
+					<a href="###"><i class=" icon-google-plus-sign"></i></a>
+					<a href="###"><i class="icon-twitter-sign"></i></a>
+				</div>
 			</div>
 			<div class="col-md-7">
-			
+				<!--breadcrumb-->
+				<div class="block"></div>
+				<ol class="breadcrumb">
+					<li><a href="index.html"><i class="icon-home"></i> Home</a></li>
+					<!--<li class="active">Data</li>-->
+				</ol>
+				<!--正文-->
+				<p class="blog-top">Latest Blog</p>
+				<div class="hr"></div>
+					<div class="blog-page">
+						<div class="col-md-4 blog-tag-data">
+							<img src="img/images/ArcGIS.jpg" class="blog-img">
+							<ul class="unstyled inline blog-tags">
+								<li type="circle">
+									<i class="icon-tags"></i> 
+									<a href="#">ArcGIS</a> 
+									<a href="#">矢量</a>
+									<a href="#">裁剪</a>
+								</li>
+							</ul>
+							<ul class="unstyled inline">
+								<li type="circle"><i class="icon-calendar"></i> <a href="#">April 15, 2016</a></li>
+								<li type="circle"><i class="icon-comments"></i> <a href="#">0 Comments</a></li>
+							</ul>
+						</div>
+						<div class="col-md-8 blog-article">
+							<a href="#" id="blog-title" class="blog-title">Title</a>
+							<p>Content</p>
+							<a class="btn btn-primary" href="page_blog_item.html">Read more <i class="icon-circle-arrow-right"></i></a>
+						</div>
+					</div>
+
+				<!-- END PAGE CONTENT-->
+
+				
 				<!-- footer  --> 
 				<footer class="row">
-					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 footer">
-						<p class="copyright">Copyright © 2016 GAO Huiran</a></p>
-					</div>    
+					<div class="col-md-6 col-md-offset-2">
+						<p class="copyright">Copyright © 2016 GAO Huiran</a></p> 
+					</div>
 				</footer>
 			</div>
 			<div class="col-md-3">
-			
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-link"></i><b> 小站链接 </b><i class="icon-link"></i></p>
+				</div>
+				<div class="blog-sidebar">
+					<ul class="blog-images">
+						<li><a href="#"><img alt="" src="media/image/2.jpg"></a></li>
+						<li><a href="#"><img alt="" src="media/image/3.jpg"></a></li>
+						<li><a href="#"><img alt="" src="media/image/4.jpg"></a></li>
+						<li><a href="#"><img alt="" src="media/image/5.jpg"></a></li>
+						<li><a href="#"><img alt="" src="media/image/5.jpg"></a></li>
+						<li><a href="#"><img alt="" src="media/image/5.jpg"></a></li>
+					</ul>
+				</div>
 				<!-- Disqus  -->
+				<!--
 				<div id="disqus_thread"></div>
 				<script>
 					(function() { // DON'T EDIT BELOW THIS LINE
@@ -47,14 +116,12 @@
 					})();
 				</script>
 				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-				
-			</div>
+				 -->
 		</div>
 	</div>
-    </div>
     <!-- JavaScript -->
-    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+</script>
 </body>
 </html>

@@ -1,0 +1,23 @@
+/***
+Blog Page
+***/
+
+/*--Block Article--*/
+.blog-top {margin-bottom:10px;font-size:2em;font-family:'Microsoft YaHei'}
+.blog-page {margin-top:10px;font-family:'Microsoft YaHei'}
+.blog-page p {color:#222}
+.blog-article  .blog-title{font-size:2em;color:#222;}
+.blog-article .blog-title:hover{color:#306cb5;}
+.blog-img {width:110%;margin-left:-15px;margin-bottom:-5px}
+.blog-page .blog-tag-data li {padding: 0;}
+.blog-page .blog-tag-data li i {color: #d85546;}
+.blog-page .blog-tag-data li a {padding: 0;color: #555;margin-right: 8px;}
+.blog-page .blog-tag-data {margin-bottom: 1px;}
+.blog-page .blog-tag-data ul.blog-tags a {background:#eee;padding:1px 4px;margin:0;display:inline-block;}
+.blog-page .blog-tag-data ul.blog-tags a:hover {background:#ddd;text-decoration: none;}
+
+.blog-images li > a > img{width:40%;}
+/*For Responsive*/
+@media (max-width: 768px) {
+  .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}  
+}
