@@ -12,20 +12,20 @@
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="shortcut icon" href="../../img/mainicon.png">
     <title>GaoHR | 知乎热门</title>
-	<style type="text/css">
-		#content {padding:10px;background:rgba(255,255,200,0.2);width:100%;height:auto;overflow-y:scroll}
-		#content a {background:rgba(255,255,255,1);padding:0 5px;color:#555;text-decoration:none;border-left:5px solid #fcc;border-radius:2px}
+	<style>
+		#content {padding:10px;background:rgba(255,255,255,0.2);width:100%;height:300px;overflow-y:scroll}
+		#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;text-decoration:none;border-left:5px solid #a55;border-radius:2px}
 		#content a:hover {color:#222}
 		#content p {height:auto;color:#f99;line-height:50%;font-size:12px;margin:5px}
 		.search {margin-left:15%}
-	</style> 
+	</style>
 </head>
 
 <body>
 	<!--head-->
 	<div class="mainlogo">
-		<a href="index.html">GaoHR</a>
-		<img src="img/head.png">
+		<a href="../../index.html">GaoHR</a>
+		<img src="../../img/head.png">
 		<p>-Welcome-</p>
 	</div>
 	<div class="main-page">
@@ -48,11 +48,10 @@
 				</div>
 				<div class="hr"></div>
 				<div class="links">
-					<p><b>Follow me</b></p>
-					<a href="http://weibo.com/531239592" target="_blank"><i class="icon-weibo"></i></a>
-					<a href="https://github.com/gaohr" target="_blank"><i class="icon-github-sign"></i></a>
-					<a href="###" target="_blank"><i class=" icon-google-plus-sign"></i></a>
-					<a href="###" target="_blank"><i class="icon-twitter-sign"></i></a>
+					<a href="http://weibo.com/531239592" target="_blank" class="weibo"><i class="icon-weibo"></i></a>
+					<a href="https://github.com/gaohr" target="_blank" class="github"><i class="icon-github-sign"></i></a>
+					<a href="###" target="_blank" class="google"><i class=" icon-google-plus-sign"></i></a>
+					<a href="###" target="_blank" class="twitter"><i class="icon-twitter-sign"></i></a>
 				</div>
 			</div>
 			<div class="span8">
@@ -69,19 +68,9 @@
 				<div id="content"></div> 
 			</div>
 			<div class="span2">
-				<!-- Disqus  -->
-				<div id="disqus_thread"></div>
-				<script>
-					(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = '//gaohraf.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+				
+			</div>
 		</div>
-	</div>
 	</div>
 	</div>
 	<!-- footer  --> 
@@ -102,7 +91,7 @@
 			if((myDate.getDate() + "").length == 1) {
 				day = "0" + myDate.getDate();
 			} else {
-				day = myDate.getDate();
+				day = myDate.getDate() - 1;
 			}
 			var date = myDate.getFullYear() + month + day;
 			//alert(myDate.getFullYear() + "-" + month + "-" + day);
@@ -113,9 +102,7 @@
 				async:false,
 				success:function(data){
 					for(i = 0; i < data.answers.length; i++) {
-						$("#content").append("<img src=\"" + data.answers[i].avatar + "\" style=\"width:50px\">"
-								+ "<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a>"
-								+ "<p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><hr>" );
+						$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><br><img src=\"" + data.answers[i].avatar + "\" style=\"width:24px;float:left\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
 					}
 				},
 				error:function(){alert("Error")}
@@ -132,9 +119,7 @@
 						async:false,
 						success:function(data){
 							for(i = 0; i < data.answers.length; i++) {
-								$("#content").append("<img src=\"" + data.answers[i].avatar + "\" style=\"width:50px\">"
-										+ "<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a>"
-										+ "<p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><hr>" );
+								$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><br><img src=\"" + data.answers[i].avatar + "\" style=\"width:24px;float:left\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
 							}
 						},
 						error:function(){alert("Error")}

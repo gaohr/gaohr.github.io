@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/blog.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="shortcut icon" href="../../img/mainicon.png">
-    <title>GaoHR | Homepage</title>
+    <title>GaoHR | Blogs</title>
 </head>
 
 <body>
@@ -26,7 +26,7 @@
 	<div class="main-page">
 	<div class="container-fluid">
 		<div class="row-fluid">
-			<div class="span2 sider-bar">
+			<div class="span2">
 				<div class="host">
 					<img src="img/images/head-img.jpg" class="img-rounded"><br><br>
 					<i class="icon-user">&nbsp;&nbsp;斩之浪</i>
@@ -34,12 +34,12 @@
 				<!-- Navigation -->
 				<div class="svg-wrapper">
 					<svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="shape" height="40" width="150"></rect></svg>
-					<div id="text"><a href="index.html"><span class="spot"></span><i class="icon-home menu-active"></i></a></div>
+					<div id="text"><a href="index.html"><span class="spot"></span><i class="icon-home"></i></a></div>
 				</div>
 				<div class="sider-menu centerer-menu wrap-menu">
 					<a href="Blogs.html" class="btn-menu">博客</a>
 					<a href="About.html" class="btn-menu">关于</a>
-					<a href="Contact.html" class="btn-menu">留言</a>
+					<a href="Contact.html" class="btn-menu menu-active">留言</a>
 				</div>
 				<div class="hr"></div>
 				<div class="links">
@@ -53,19 +53,23 @@
 				<!--breadcrumb-->
 				<div class="block"></div>
 				<ol class="breadcrumb">
-					<li><a href="index.html"><i class="icon-home"></i> Home</a></li>
+					<li><a href="###">留言</a></li>
 					<!--<li class="active">Data</li>-->
 				</ol>
 				<!--正文-->
-				<p class="blog-top pull-left">近期博文</p>
-				<a href="Blogs.html" class="pull-right"><i class="icon-search"></i>查看更多</a><br><hr>
-				<div class="blog-page" id="blog"></div>
-				<div class="zhihu">
-					<p class="pull-left">知乎热门</p><br>
-					<a href="site/zhihu/index.html" class="pull-right"> | <i class="icon-search"></i>查看更多</a>
-					<a href="###" id="refresh" class="pull-right"><i class="icon-return"></i>换一批</a>
-				</div><br>
-				<div id="content"></div> 
+				<p class="blog-top">欢迎留言</p>
+				<div class="hr"></div>
+				<!-- Disqus  -->
+				<div id="disqus_thread"></div>
+				<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//gaohraf.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 			</div>
 			<div class="span3">
 				<div class="block"></div>
@@ -79,20 +83,9 @@
 						<li><a href="site/zhihu/index.html" target="_blank"><img alt="" src="img/images/zhihu.png"></a></li>
 						<li><a href="site/music/index.html" target="_blank"><img alt="" src="img/images/music.png"></a></li>
 						<li><a href="site/joker/index.html" target="_blank"><img alt="" src="img/images/joke.png"></a></li>
-						<li><a href="site/iFood/html/index.html target="_blank""><img alt="" src="img/images/iFoodicon.png"></a></li>
+						<li><a href="site/iFood/html/index.html" target="_blank"><img alt="" src="img/images/iFoodicon.png"></a></li>
 					</ul>
 				</div>
-				<!-- Disqus 
-				<div id="disqus_thread"></div>
-				<script>
-					(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = '//gaohraf.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
 		</div>
 	</div>
 	</div>
@@ -104,8 +97,6 @@
     <!-- JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-	<script src="js/bloglist.js"></script>
-	<script src="js/blogsload.js"></script>
 </script>
 </body>
 </html>
