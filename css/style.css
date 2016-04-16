@@ -39,43 +39,9 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #content i{color:#a88;font-size:1.5em;margin:0px;}
 .zhihu p{color:#a33;font-size:2em;font-family:宋体;font-weight:bold;margin:2px;}
 
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-	.main-body { background-attachment: scroll;	}
-}
-
-@media screen and (max-width: 1199px) and (min-width: 992px) {
-
-}
-
-@media screen and (max-width: 719px) {
-	#content { float: none; }
-}
-
-@media screen and (min-width: 720px) {
-	#content .box { width: 33%; box-shadow: none;}
-}
-
-@media screen and (min-width: 992px) {
-	#content .box { width: 33%; box-shadow: none;}
-}
-
-@media (min-width: 1230px) {
-	.container { width: 1200px;	}
-}
-
-@media (max-width:991px) {
-	.main-body { background-size: auto; }
-}
-
-@media (max-width: 800px) {
-	.container {padding-left: 40px;padding-right: 40px;}
-}
-
-@media (max-width:767px) {
-	
-}
-@media (max-width: 550px) {
-
+@media (max-width: 560px) {
+	.main-page {position:relative;width:100%;margin:15% 0;}
+	.svg {display:none}
 }
 
 @media (max-width: 480px) {
