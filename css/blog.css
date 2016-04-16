@@ -16,7 +16,7 @@ Blog Page
 .blog-page .blog-tag-data ul.blog-tags a {background:#eee;padding:1px 4px;margin:0;display:inline-block;}
 .blog-page .blog-tag-data ul.blog-tags a:hover {background:#ddd;text-decoration: none;}
 
-.blog-images li > a > img{width:40%;}
+.blog-images li > a > img{width:25%;height:40%}
 /*For Responsive*/
 @media (max-width: 768px) {
   .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}  

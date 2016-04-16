@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,,maximum-scale=1.0,user-scalable=no;">
+		<title>iFood</title>
+		<link href="../css/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/bootstrap.combined.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/login.css" type="text/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../img/iFoodicon.png">
+	</head>
+	<body>
+		<div id="user-container" style="margin:5%">
+			<div class="portlet box grey">
+					<div class="portlet-title">
+						<div class="caption" style="color:#fff"><i class="icon-user"></i>个人信息</div>
+						<a href="index.html" class="btn btn-small pull-right" style="padding:0.3em 1em">返回</a>
+						<a href="Login.html" class="btn btn-success btn-small pull-right" id="username-re" style="padding:0.3em 1em">切换账号</a>
+					</div>
+					<div class="portlet-body" style="color:#777">
+						<div class="row-fluid">
+  							<div class="span3" style="text-align:center">
+  								<img alt="user-image" id="userhead" src="" style="width:80%;padding:5px;border:1px solid #88f;border-radius:5px">
+  								<p style="color:#999;font-size:12px">点击更改头像</p>
+  							</div>
+  							<div class="span9">
+  								登录名：<p id="name" style="float:right;margin-right:2em;color:#55c;font-size:18px"></p>
+  							</div>
+						</div>
+						<br><br>
+						<div class="row-fluid">
+							<div class="span4">
+								<label style="margin-left:1em;">电话：</label>
+								<hr>
+								<label style="margin-left:1em;">邮箱：</label>
+							</div>
+  							<div class="span8">
+  								<p id="tel" style="color:#999"></p>
+  								<hr>
+  								<p id="email" style="color:#999"></p>
+  							</div>
+						</div>
+						<hr>
+					</div>
+				</div>
+		</div>
+		<div id="popupHead" style="position:absolute;top:0;left:0;width:100%;height:100%;display:none;background:rgba(0,0,0,0.7)">
+			<div class="hcontent" id="hps" style="width:80%;margin-left:10%;margin-top:10%;background:rgba(255,255,255,0.5);padding:10px">
+				<a href="#" onclick="selecthp('01')" style=""><img src="/iFood/img/userIcon/01.png" id="01"></a>
+            	<a href="#" onclick="selecthp('02')" style=""><img src="/iFood/img/userIcon/02.png" id="02"></a>
+            	<a href="#" onclick="selecthp('03')" style=""><img src="/iFood/img/userIcon/03.png" id="03"></a>
+            	<a href="#" onclick="selecthp('04')" style=""><img src="/iFood/img/userIcon/04.png" id="04"></a>
+            	<a href="#" onclick="selecthp('05')" style=""><img src="/iFood/img/userIcon/05.png" id="05"></a>
+            	<a href="#" onclick="selecthp('06')" style=""><img src="/iFood/img/userIcon/06.png" id="06"></a>
+            	<a href="#" onclick="selecthp('07')" style=""><img src="/iFood/img/userIcon/07.png" id="07"></a>
+            	<a href="#" onclick="selecthp('08')" style=""><img src="/iFood/img/userIcon/08.png" id="08"></a>
+            	<a href="#" onclick="selecthp('09')" style=""><img src="/iFood/img/userIcon/09.png" id="09"></a>
+            	<a href="#" onclick="selecthp('010')" style=""><img src="/iFood/img/userIcon/010.png" id="010"></a>
+            	<a href="#" onclick="selecthp('011')" style=""><img src="/iFood/img/userIcon/011.png" id="011"></a>
+            	<a href="#" onclick="selecthp('012')" style=""><img src="/iFood/img/userIcon/012.png" id="012"></a>
+            	<a href="#" onclick="selecthp('41')" style=""><img src="/iFood/img/userIcon/41.png" id="41"></a>
+            	<a href="#" onclick="selecthp('42')" style=""><img src="/iFood/img/userIcon/42.png" id="42"></a>
+            	<a href="#" onclick="selecthp('43')" style=""><img src="/iFood/img/userIcon/43.png" id="43"></a>
+            	<a href="#" onclick="selecthp('44')" style=""><img src="/iFood/img/userIcon/44.png" id="44"></a>
+            	<a href="#" onclick="selecthp('45')" style=""><img src="/iFood/img/userIcon/45.png" id="45"></a>
+            	<a href="#" onclick="selecthp('46')" style=""><img src="/iFood/img/userIcon/46.png" id="46"></a>
+            	<a href="#" onclick="selecthp('47')" style=""><img src="/iFood/img/userIcon/47.png" id="47"></a>
+            	<a href="#" onclick="selecthp('48')" style=""><img src="/iFood/img/userIcon/48.png" id="48"></a>
+			</div>
+			<a id="headok" href="#" class="btn" style="">确定</a>
+			<a id="headcancel" href="#" class="btn" style="">取消</a>
+		</div>
+		
+		<script src="../js/jquery-1.10.1.min.js"></script>
+		<script src="../js/jquery-ui-1.10.1.custom.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/userinfo.js"></script>
+	</body>
+</html>

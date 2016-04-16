@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width; initial-scale=1">
+		<title>iFood</title>
+		<link href="../css/bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/bootstrap.combined.min.css" rel="stylesheet" type="text/css">
+		<link href="../css/style.css" rel="stylesheet" type="text/css">
+		<link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/login.css" type="text/css">
+		<link rel="shortcut icon" type="image/x-icon" href="../img/iFoodicon.png">
+	</head>
+	<body>
+		<div class="login-container" id="login-container">
+			<h1>iFood账号登陆</h1>
+			<div class="connect">
+				<p>Login</p>
+			</div>
+			<form action="/iFood/Login" method="post" name="loginForm">
+				<div>
+					<input type="text" name="username" id="username" class="username" placeholder="用户名">
+				</div>
+				<div>
+					<input type="password" name="password" id="password" class="password" placeholder="密码">
+				</div>
+				<button id="submit" type="submit">登 陆</button>
+			</form>
+			<a href="Register.html">
+				<button type="button" class="register-tis">还有没有账号？</button>
+			</a>
+		</div>
+		
+		<script src="../js/jquery-1.10.1.min.js"></script>
+		<script src="../js/jquery.cookie.js"></script>
+		<script src="../js/login.js"></script>
+	</body>
+</html>

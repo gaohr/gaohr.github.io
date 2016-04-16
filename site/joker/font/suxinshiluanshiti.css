@@ -1,0 +1,10 @@
+@font-face {
+font-family: 'suxinshiluanshiti587249';
+src: url('suxinshiluanshiti.eot');
+src: url('suxinshiluanshiti.eot?#iefix') format('embedded-opentype'),
+     url('suxinshiluanshiti.woff') format('woff'),
+     url('suxinshiluanshiti.ttf') format('truetype'),
+     url('suxinshiluanshiti.svg#suxinshiluanshiti') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
