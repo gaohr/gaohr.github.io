@@ -4,10 +4,11 @@
 body {;background-color:#ddd;font-family:'Open Sans',sans-serif;overflow-x:hidden}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:9999}
-.mainlogo a{position:fixed;left:5%;top:20px;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;text-shadow:1px 1px 3px #fff !important}
+.mainlogo a{position:fixed;left:6%;margin:10px 0;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;}
 .mainlogo a:hover {color:#ff4444}
-.mainlogo p {float:right;margin:10px;color:#ddd;}
-.mainlogo img {float:right;width:36px;margin-right:5%}
+.mainlogo p > img{float:right;color:#ddd;height:40px}
+.mainlogo .headimg {float:right;width:36px;margin-right:5%}
+.mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 
 .main-page {position:relative;width:80%;margin:5% 10%;}
 .host {width:100%;text-align:center}
