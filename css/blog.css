@@ -9,12 +9,12 @@ Blog Page
 .blog-article  .blog-title{font-size:1.5em;color:#222;margin-left:5px}
 .blog-article .blog-title:hover{color:#306cb5;}
 
-.blog-img {width:100%;margin-bottom:2px}
-.blog-page .blog-tag-data li {padding: 0;}
+.blog-img {width:90%;margin-bottom:2px;margin-left:5%}
+.blog-page .blog-tag-data li {padding: 0;margin-left:5%}
 .blog-page .blog-tag-data li i {color: #d85546;}
 .blog-page .blog-tag-data li a {padding: 0;color: #555;margin-right: 8px;}
 .blog-page .blog-tag-data {margin-bottom: 2px;}
-.blog-page .blog-tag-data ul.blog-tags a {background:#eee;padding:1px 4px;margin:0;display:inline-block;}
+.blog-page .blog-tag-data ul.blog-tags a {background:#eee;padding:1px 4px;margin:2px;display:inline-block;}
 .blog-page .blog-tag-data ul.blog-tags a:hover {background:#ddd;text-decoration: none;}
 .btn-blue {background-color:#2878c8;padding:5px;border-radius:3px;color:#fff}
 .btn-blue:hover {background-color:#295c8e;color:#eee}

@@ -7,7 +7,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo p {float:right;margin:10px;color:#ddd;}
 .mainlogo img {float:right;vertical-align:middle;width:36px;margin-right:5%}
 
-.main-page {width:80%;}
+.main-page {width:80%;margin-left:10%}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
