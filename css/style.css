@@ -1,5 +1,5 @@
 /*By GaoHR*/
-body {;background-color:#ddd;font-family:'Open Sans',sans-serif;}
+body {;background-color:#ddd;font-family:'Open Sans',sans-serif;overflow-x:hidden}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {background-color:#222; width:100%;padding:10px;vertical-align:middle;}
 .mainlogo a{font-size:40px;font-family:'Microsoft YaHei';color:#ddd;margin-left:5%;}
@@ -7,7 +7,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo p {float:right;margin:10px;color:#ddd;}
 .mainlogo img {float:right;vertical-align:middle;width:36px;margin-right:5%}
 
-.main-page {width:80%;margin-left:10%;}
+.main-page {width:80%;}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}

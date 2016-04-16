@@ -1,6 +1,8 @@
 $(document).ready(function() {
-		$.getJSON("../bloglist.json", function(data){
-			alert(data.length);
+		var blogs = eval('blogs');
+		alert("OK");
+		for(i = 0; i < blogs.length; i++) {
+			alert(blogs.length);
 				for(i = 0; i < data.length; i++) {
 						$("#blog").append(
 							"<div class='blog-page' id='blog'>" +
@@ -10,8 +12,8 @@ $(document).ready(function() {
 							"<li type='circle'>" +
 							"<i class='icon-tags'></i> " +
 							"<a href='#'>" + data[i].tags[0] + "</a> " +
-							"<a href='#'> ∏¡ø</a>" +
-							"<a href='#'>≤√ºÙ</a>" +
+							"<a href='#'>Áü¢Èáè</a>" +
+							"<a href='#'>Ë£ÅÂâ™</a>" +
 							"</li>" +
 							"</ul>" +
 							"<ul class='unstyled inline'>" +
@@ -27,5 +29,4 @@ $(document).ready(function() {
 							"</div>"
 						);
 					}
-		}); 
 	})
