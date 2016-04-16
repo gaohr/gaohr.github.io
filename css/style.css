@@ -1,7 +1,7 @@
 /*By GaoHR*/
 body {;background-color:#ddd;font-family:'Open Sans',sans-serif;overflow-x:hidden}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
-.mainlogo {background-color:#222; width:100%;padding:10px;vertical-align:middle;}
+.mainlogo {position:fixed;background-color:#222; width:100%;padding:10px;vertical-align:middle;}
 .mainlogo a{font-size:40px;font-family:'Microsoft YaHei';color:#ddd;margin-left:5%;}
 .mainlogo a:hover {color:#ff201e}
 .mainlogo p {float:right;margin:10px;color:#ddd;}
