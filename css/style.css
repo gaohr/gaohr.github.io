@@ -1,14 +1,13 @@
 /*By GaoHR*/
-body {;background-color:#ddd;font-family:'Open Sans',sans-serif;overflow-x:hidden;}
-.main-page {width:80%;margin-left:10%;}
+body {;background-color:#ddd;font-family:'Open Sans',sans-serif;}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
-
-.mainlogo {background-color:#222; width:100%}
-.mainlogo a{position:relative;font-size:42px;font-family:'Microsoft YaHei';color:#ddd;margin:10px;margin-left:5%;}
+.mainlogo {background-color:#222; width:100%;padding:10px;vertical-align:middle;}
+.mainlogo a{font-size:40px;font-family:'Microsoft YaHei';color:#ddd;margin-left:5%;}
 .mainlogo a:hover {color:#ff201e}
-.mainlogo p {float:right;margin:10px;color:#ddd;vertical-align:middle;line-height:42px;}
-.mainlogo img {float:right;margin:10px;vertical-align:middle;width:42px;margin-right:5%}
+.mainlogo p {float:right;margin:10px;color:#ddd;}
+.mainlogo img {float:right;vertical-align:middle;width:36px;margin-right:5%}
 
+.main-page {width:80%;margin-left:10%;}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
@@ -23,8 +22,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 
 .copyright{text-align:center;color:#555 !important;}
 
-.portlet {width:100%;margin:5px;}
-.portlet .title{padding:2px;text-align:center;background:#d85546;color:#fff;font-size:1.5em;border-radius:5px}
+.portlet {width:100%;margin:5px}
+.portlet .title{padding:5px;text-align:center;background:#d85546;color:#fff;font-size:1.5em;border-radius:5px}
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
 	.main-body { background-attachment: scroll;	}

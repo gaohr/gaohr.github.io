@@ -8,10 +8,11 @@
 .btn-menu {
   position: relative;
   display: block;
-  margin: 15px 0;
+  margin: 25px 0;
   color: #222;
   width: 100%;
   overflow: hidden;
+  padding:5px 0;
   border: 1px solid #ddd;
   -webkit-transition: 1s;
   transition: 1s;
@@ -52,10 +53,10 @@
   transition: 1s;
 }
 .btn-menu:hover:before {
-  border-width: 135px 0 0 135px;
+  border-width: 145px 0 0 145px;
 }
 .btn-menu:hover:after {
-  border-width: 0 135px 135px 0;
+  border-width: 0 145px 145px 0;
 }
 .btn-menu:active {
   background: #999;
@@ -72,7 +73,7 @@
 @charset "utf-8";
 .svg-wrapper{margin-top:10%;border-radius:3px;text-align:center}
 #shape{stroke-width:10px;fill:transparent;stroke:#555;stroke-dasharray:85 240;stroke-dashoffset:-220;transition:1s all ease}
-#text{margin-top:-45px;text-align:center}
+#text{margin-top:-40px;text-align:center}
 #text a{color:#222;text-decoration:none;font-size:2em}
 #text a:hover{color:#0099ff}
 .svg-wrapper:hover #shape{stroke-dasharray:50 0;stroke-width:5px;stroke-dashoffset:0;stroke:#0099ff}
