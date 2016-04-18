@@ -1,7 +1,7 @@
 /*
 *By GaoHR
 */
-body {;background-color:#ddd;font-family:'Open Sans',sans-serif;overflow-x:hidden}
+body {;background-color:#ddd;overflow-x:hidden}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:9999}
 .mainlogo a{position:fixed;left:6%;margin:10px 0;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;}
@@ -41,7 +41,22 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .zhihu p{color:#a33;font-size:2em;font-family:宋体;font-weight:bold;margin:2px;}
 
 /*About*/
+.info {font-family:'Microsoft YaHei'}
+.info h4 {color:#da2e1b;}
+.info p {color:#333}
+.info .geyan {border-left:5px solid #f99186;padding-left:20px;color:#555}
+.moreinfo {color:#333}
+.moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:2px solid #f99186;}
+.moreinfo .infocontent{color:#444;margin-left:5%}
 
+/*滚动条美化*/
+::-webkit-scrollbar{width:10px;height:6px}
+::-webkit-scrollbar-button:vertical{display:none}
+::-webkit-scrollbar-track:vertical{background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:transparent;}
+::-webkit-scrollbar-thumb:vertical{background-color:#3792ef;border-radius:6px}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:vertical:active {background-color: #2e86ef}
 
 @media (max-width: 1660px) {
 	.menulist {display:none;margin-left:10px}
