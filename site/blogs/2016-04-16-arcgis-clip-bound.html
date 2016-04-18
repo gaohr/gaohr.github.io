@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min-2.3.1.css">
-	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-style.css">
     <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
 	<link rel="stylesheet" type="text/css" href="../../css/blog.css">
@@ -26,6 +27,24 @@
 	<div class="container-fluid main-page">
 		<div class="row-fluid">
 			<div class="span2">
+				<!--responsive menu-->
+				<div class="menulist">
+					<div class="btn-group">
+						<ul class="nav nav-pills">
+							<li class="dropdown">
+								<a class="dropdown-toggle"data-toggle="dropdown"href="#"><i class="icon-list"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="../../index.html"><i class="icon-home menu-active"></i></a></li>
+									<li><a href="../../Blogs.html">博客</a></li>
+									<li class="divider"></li>
+									<li><a href="../../About.html">关于</a></li>
+									<li><a href="../../Contact.html">留言</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sider-bar">
 				<div class="host">
 					<img src="../../img/images/head-img.jpg" class="img-rounded"><br><br>
 					<i class="icon-user">&nbsp;&nbsp;斩之浪</i>
@@ -33,10 +52,10 @@
 				<!-- Navigation -->
 				<div class="svg-wrapper">
 					<span class="svg"><svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="shape" height="40" width="150"></rect></svg></span>
-					<div id="text"><a href="../../index.html"><span class="spot"></span><i class="icon-home"></i></a></div>
+					<div id="text"><a href="../../index.html"><span class="spot"></span><i class="icon-home menu-active"></i></a></div>
 				</div>
 				<div class="sider-menu centerer-menu wrap-menu">
-					<a href="../../Blogs.html" class="btn-menu menu-active">博客</a>
+					<a href="../../Blogs.html" class="btn-menu">博客</a>
 					<a href="../../About.html" class="btn-menu">关于</a>
 					<a href="../../Contact.html" class="btn-menu">留言</a>
 				</div>
@@ -47,6 +66,7 @@
 					<a href="###" target="_blank" class="google"><i class=" icon-google-plus-sign"></i></a>
 					<a href="###" target="_blank" class="twitter"><i class="icon-twitter-sign"></i></a>
 				</div>
+			</div>
 			</div>
 			<div class="span8">
 				<!--breadcrumb-->
@@ -88,8 +108,10 @@ Editing</span><span style="font-size: 12pt; text-indent: 24pt;">中的标准矩�
 <p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes">
 <br></span></p>
 				</div>
-				
-				<!-- Disqus  -->
+				<!-- UY BEGIN
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>-->
+				<!-- Disqus -->
 				<div id="disqus_thread"></div>
 				<script>
 					(function() { // DON'T EDIT BELOW THIS LINE

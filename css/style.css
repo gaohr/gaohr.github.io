@@ -9,6 +9,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo p > img{float:right;color:#ddd;height:40px}
 .mainlogo .headimg {float:right;width:36px;margin-right:5%}
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
+.menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .main-page {position:relative;width:80%;margin:5% 10%;}
 .host {width:100%;text-align:center}
@@ -39,9 +40,17 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #content i{color:#a88;font-size:1.5em;margin:0px;}
 .zhihu p{color:#a33;font-size:2em;font-family:宋体;font-weight:bold;margin:2px;}
 
+@media (max-width: 1660px) {
+	.menulist {display:none;margin-left:10px}
+}
 @media (max-width: 560px) {
 	.main-page {position:relative;width:100%;margin:15% 0;}
 	.svg {display:none}
+	.sider-bar {display:none}
+	.welcome {display:none}
+	.menulist {display:block;margin-top:10%;font-size:18px;}
+	.menulist a{color:#333 !important;}
+	.block {display:none}
 }
 
 @media (max-width: 480px) {

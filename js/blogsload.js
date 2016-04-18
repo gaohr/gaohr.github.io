@@ -91,7 +91,7 @@ $(document).ready(function() {
 				success:function(data){
 					//for(i = 0; i < data.answers.length; i++) {
 					for(i = 0; i < 5; i++) {
-						$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><span>" + data.answers[i].vote + "</span><i class=\"icon-thumbs-up\"></i><br><img src=\"" + data.answers[i].avatar + "\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
+						$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><span>" + data.answers[i].vote + "</span><i class=\"icon-thumbs-up\"></i><br><img src=\"" + data.answers[i].avatar + "\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><hr>" );
 					}
 				},
 				error:function(){alert("Error")}
@@ -115,7 +115,7 @@ $(document).ready(function() {
 						success:function(data){
 							//for(i = 0; i < data.answers.length; i++) {
 							for(i = 0; i < 5; i++) {
-								$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><span>" + data.answers[i].vote + "</span><i class=\"icon-thumbs-up\"></i><br><img src=\"" + data.answers[i].avatar + "\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
+								$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><span>" + data.answers[i].vote + "</span><i class=\"icon-thumbs-up\"></i><br><img src=\"" + data.answers[i].avatar + "\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><hr>" );
 							}
 						},
 						error:function(){alert("Error")}
