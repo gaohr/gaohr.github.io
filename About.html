@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="css/blog.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="shortcut icon" href="img/mainicon.png">
-    <title>GaoHR | Contact</title>
+    <title>GaoHR | About me</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 	<div class="mainlogo">
 		<a href="index.html"><span class="g-left">G</span>aoHR</a>
 		<img src="img/head.png" class="headimg">
-		<p><img src="img/welcome.png"></p>
+		<p><img src="img/welcome.png" class="welcome"></p>
 	</div>
 	<div class="main-page">
 	<div class="container-fluid">
@@ -57,8 +57,8 @@
 				</div>
 				<div class="sider-menu centerer-menu wrap-menu">
 					<a href="Blogs.html" class="btn-menu">博客</a>
-					<a href="About.html" class="btn-menu">关于</a>
-					<a href="Contact.html" class="btn-menu menu-active">留言</a>
+					<a href="About.html" class="btn-menu menu-active">关于</a>
+					<a href="Contact.html" class="btn-menu">留言</a>
 				</div>
 				<div class="hr"></div>
 				<div class="links">
@@ -73,23 +73,21 @@
 				<!--breadcrumb-->
 				<div class="block"></div>
 				<ol class="breadcrumb">
-					<li><a href="###">留言</a></li>
+					<li><a href="index.html"><i class="icon-home"></i> About</a></li>
 					<!--<li class="active">Data</li>-->
 				</ol>
 				<!--正文-->
-				<p class="blog-top">欢迎留言</p>
-				<div class="hr"></div>
-				<!-- Disqus  -->
-				<div id="disqus_thread"></div>
-				<script>
-					(function() { // DON'T EDIT BELOW THIS LINE
-						var d = document, s = d.createElement('script');
-						s.src = '//gaohraf.disqus.com/embed.js';
-						s.setAttribute('data-timestamp', +new Date());
-						(d.head || d.body).appendChild(s);
-					})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+				<div class="row-fluid">
+					<div class="span5">
+						<img src="img/images/ghr.jpg" class="img-rounded">
+					</div>
+					<div class="span7">
+						<div class="info">
+							<p>斩之浪</p>
+							<p>斩之浪</p>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="span3">
 				<div class="block"></div>
@@ -106,6 +104,21 @@
 						<li><a href="site/iFood/html/index.html" target="_blank"><img alt="" src="img/images/iFoodicon.png"></a></li>
 					</ul>
 				</div>
+				<!-- UY BEGIN
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>-->
+				
+				<!-- Disqus  -->
+				<div id="disqus_thread"></div>
+				<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//gaohraf.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
 		</div>
 	</div>
 	</div>
@@ -117,6 +130,8 @@
     <!-- JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script src="js/bloglist.js"></script>
+	<script src="js/blogsload.js"></script>
 </script>
 </body>
 </html>

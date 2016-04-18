@@ -40,6 +40,9 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #content i{color:#a88;font-size:1.5em;margin:0px;}
 .zhihu p{color:#a33;font-size:2em;font-family:宋体;font-weight:bold;margin:2px;}
 
+/*About*/
+
+
 @media (max-width: 1660px) {
 	.menulist {display:none;margin-left:10px}
 }
