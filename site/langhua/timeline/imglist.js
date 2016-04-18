@@ -55,6 +55,11 @@ var imglist = [
 		textcon:'新学期启程！',
 	},
 	{
+		title:'浪花', data:'2016-02-01', location:'• 趵突泉 济南', type:'image', 
+		src:[{url:'img/201602011.jpg'}, {url:'img/201602012.jpg'}, {url:'img/201602013.jpg'}, {url:'img/201602014.jpg'}],
+		textcon:'千佛山，大明湖，趵突泉是济南的三大名胜……',
+	},
+	{
 		title:'浪花', data:'2016-01-15', location:'• 首都师范大学-上岛咖啡馆 北京', type:'image', 
 		src:[{url:'img/201601151.jpg'}, {url:'img/201601152.jpg'}, {url:'img/201601153.jpg'}, {url:'img/201601154.jpg'}, {url:'img/201601155.jpg'}],
 		textcon:'下午休闲时光！',
