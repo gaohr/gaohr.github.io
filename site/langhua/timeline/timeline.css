@@ -26,10 +26,6 @@ a {
   font-family: "Microsoft yahei", sans-serif;
 }
 
-img {
-  max-width: 100%;
-}
-
 h1, h2 {
   font-family: "Microsoft yahei", sans-serif;
   font-weight: bold;
@@ -52,23 +48,18 @@ Modules - reusable parts of our design
   display: table;
   clear: both;
 }
-.imglh {border-radius:10px;width:45%;border:0 solid #acbdff;transition:0.5s}
-.imglh:hover {border:7px solid #7cbdff;transition:0.5s;}
-
+header img {width:35%;margin-left:10%}
+.imglh {border-radius:2px;width:18%;border:5px solid rgba(0,0,0,0.1);transition:0.5s}
+.imglh:hover {border:0 solid #000;transition:0.5s;}
 .yinhao{font-size:56px;font-family:黑体;color:#777}
-
 .imgpopup {position:fixed;display:none;top:5%;width:100%;height:90%;text-align:center;background:rgba(0,0,0,0.5)}
-
 .imglhdis {margin-top:20px;height:90%;border:5px solid #ddd;border-radius:20px}
-
 .imgclose {position:fixed;display:none;top:5%;left:90%;font-size:64px;padding:0 15px;text-align:center;color:#ddd;background:rgba(0,0,0,0.3);border-radius:100px}
 .imgclose:hover {background:rgba(0,0,0,0.6)}
-
 .imgnext {position:fixed;display:none;top:40%;left:90%;font-size:72px;padding:20px 15px;text-align:center;color:#ddd;background:rgba(0,0,0,0.3);border-radius:20px}
 .imgnext :hover {background:rgba(0,0,0,0.6)}
 .imgpre {position:fixed;display:none;top:40%;left:10%;font-size:72px;padding:20px 15px;text-align:center;color:#ddd;background:rgba(0,0,0,0.3);border-radius:20px}
 .imgpre:hover {background:rgba(0,0,0,0.6)}
-
 .yearsdiv {position:fixed;top:24%;left:0;}
 .years {font-size:28px;text-align:center;background:rgba(255,255,255,0.5);border-left:25px solid rgba(255,0,0,0.3);border-right:25px solid rgba(255,0,0,0.3);border-top:25px solid transparent;border-bottom:25px solid transparent;border-radius:50px;transition:0.5s}
 .years:hover {background:rgba(255,255,255,0.3);border-left:25px solid rgba(255,0,0,0.5);border-right:25px solid rgba(255,0,0,0.5);border-top:25px solid transparent;border-bottom:25px solid transparent;transition:0.5s}
@@ -77,14 +68,24 @@ Modules - reusable parts of our design
 
 .division {color:#a00;font-size:36px;background:rgba(255,255,255,0.8);border-radius:20px;padding:10px;text-align:center}
 
+@media (max-width: 560px) {
+	.imglh {border-radius:2px;width:85%;border:2px solid rgba(0,0,0,0.1)}
+	.imglh:hover {border:0 solid #000;}
+	.yearsdiv {display:none}
+	.cd-container {width:90%}
+	#cd-timeline {padding:0.2em 0;margin:0;}
+	.cd-timeline-block {position: relative;margin:0;}
+	.cd-timeline-content {margin:0;}
+	.cd-timeline-content {padding:0;margin:0;}
+	header img {width:90%}
+}
 /* -------------------------------- 
 
 Main components 
 
 -------------------------------- */
 header {
-  height: 100px;
-  text-align: center;
+  height: auto;
   background: rgba(0,0,0,0.5);
 }
 header h1 {
@@ -92,16 +93,6 @@ header h1 {
   font-size: 18px;
   font-size: 1.125rem;
 }
-@media only screen and (min-width: 1170px) {
-  header {
-    height: 200px;
-  }
-  header h1 {
-    font-size: 24px;
-    font-size: 1.5rem;
-  }
-}
-
 #cd-timeline {
   position: relative;
   padding: 2em 0;
@@ -118,17 +109,6 @@ header h1 {
   width: 4px;
   background: #acbdff;
 }
-@media only screen and (min-width: 1170px) {
-  #cd-timeline {
-    margin-top: 3em;
-    margin-bottom: 3em;
-  }
-  #cd-timeline::before {
-    left: 50%;
-    margin-left: -2px;
-  }
-}
-
 .cd-timeline-block {
   position: relative;
   margin: 2em 0;
@@ -143,17 +123,6 @@ header h1 {
 }
 .cd-timeline-block:last-child {
   margin-bottom: 0;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-block {
-    margin: 4em 0;
-  }
-  .cd-timeline-block:first-child {
-    margin-top: 0;
-  }
-  .cd-timeline-block:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .cd-timeline-img {
@@ -183,26 +152,6 @@ header h1 {
 }
 .cd-timeline-img.cd-location {
   background: #f0ca45;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-img {
-    width: 60px;
-    height: 60px;
-    left: 50%;
-    margin-left: -30px;
-    /* Force Hardware Acceleration in WebKit */
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-  }
-  .cssanimations .cd-timeline-img.is-hidden {
-    visibility: hidden;
-  }
-  .cssanimations .cd-timeline-img.bounce-in {
-    visibility: visible;
-    -webkit-animation: cd-bounce-1 0.6s;
-    -moz-animation: cd-bounce-1 0.6s;
-    animation: cd-bounce-1 0.6s;
-  }
 }
 
 @-webkit-keyframes cd-bounce-1 {
@@ -310,68 +259,6 @@ header h1 {
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 18px;
     font-size: 0.875rem;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-timeline-content {
-    margin-left: 0;
-    padding: 1.6em;
-    width: 45%;
-  }
-  .cd-timeline-content::before {
-    top: 24px;
-    left: 100%;
-    border-color: transparent;
-    border-left-color: #ffffff;
-  }
-  .cd-timeline-content .cd-read-more {
-    float: left;
-  }
-  .cd-timeline-content .cd-date {
-    position: absolute;
-    width: 45%;
-    left: 122%;
-    top: 6px;
-	color: #333;
-	text-align:center;
-    font-size: 20px;
-    background-color:rgba(255,255,255,0.7);
-	border-radius:20px;
-	transition:0.5s
-  }
-  .cd-timeline-content .cd-date:hover {color: #ddd;background-color:rgba(0,0,0,0.8);transition:0.5s}
-  .cd-timeline-content .textcon {
-    top: 6px;
-    font-size: 18px;
-	text-align:left;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content::before {
-    top: 24px;
-    left: auto;
-    right: 100%;
-    border-color: transparent;
-    border-right-color: #ffffff;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-read-more {
-    float: right;
-  }
-  .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
-    left: auto;
-    right: 122%;
-	font-size: 20px;
-    text-align: center;
-  }
-  .cssanimations .cd-timeline-content.is-hidden {
-    visibility: hidden;
-  }
-  .cssanimations .cd-timeline-content.bounce-in {
-    visibility: visible;
-    -webkit-animation: cd-bounce-2 0.6s;
-    -moz-animation: cd-bounce-2 0.6s;
-    animation: cd-bounce-2 0.6s;
   }
 }
 

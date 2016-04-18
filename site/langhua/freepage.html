@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+	<title>浪花</title>
+
+	<link href="timeline/timeline.css" rel="stylesheet" type="text/css">
+	<link rel="canonical" href="http://s.cssdeck.com/labs/css3-good-afternoon-clock">
+	<link href="timeline/clock/clock.css" rel="stylesheet" type="text/css">
+    <script src="timeline/clock/prefixfree.min.js"></script>
+    <script src="timeline/clock/clock.js"></script>
+</head>
+<body>
+	<header>
+		<h1 style="font-size:80px"><img src="timeline/lh.gif"></h1>
+	</header>
+	
+	<section id="cd-timeline" class="cd-container"></section>
+	<div class="imgpopup" id="imgdiv"></div>
+	
+	<a class="imgclose" href="###" id="imgclose">×</a>
+	<a class="imgpre" href="###" id="imgpre">‹</a>
+	<a class="imgnext" href="###" id="imgnext">›</a>
+	
+	<div class="yearsdiv">
+		<div class="years"><a href="#year2016" id="year2016">2016</a></div>
+		<div class="years"><a href="#year2015" id="year2015">2015</a></div>
+		<div class="years"><a href="#year2014" id="year2015">2014</a></div>
+	</div>
+	
+	<div id="clock">
+		<div id="hour" class="hands" style="-webkit-transform: rotate(513.5deg);"></div>
+		<div id="minute" class="hands" style="-webkit-transform: rotate(42deg);"></div>
+		<div id="second" class="hands" style="-webkit-transform: rotate(6deg);"></div>
+	</div>
+	
+	
+	<script type="text/javascript" src="timeline/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src="timeline/modernizr.js"></script>
+	<script type="text/javascript" src="timeline/imglist.free.js"></script>
+	<script type="text/javascript" src="timeline/readjson.free.js"></script>
+	<script>
+		$(document).ready(function () {
+			
+		$(document).on("scroll", onScroll);
+		$('a[href^="#"]').on('click', function (e) {
+			e.preventDefault();
+			$(document).off("scroll");
+			$('a').each(function () {
+				$(this).removeClass('active');
+			})
+			$(this).addClass('active');
+			var target = this.hash;
+			$target = $(target);
+			$('html, body').stop().animate({
+				'scrollTop': $target.offset().top
+			}, 1000, 'swing', function () {
+				window.location.hash = target;
+				$(document).on("scroll", onScroll);
+			});
+		});
+	});
+	</script>
+
+</body>
+</html>

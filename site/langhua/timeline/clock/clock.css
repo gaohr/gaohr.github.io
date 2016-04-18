@@ -1,12 +1,12 @@
 /* onto the css now */
 
 #clock {
-	width: 100px; height: 100px;
+	width: 80px; height: 80px;
 	border-radius: 50%;
 	margin: 35px auto 0;
 	background: rgba(0,0,0,0.2);
 	position: absolute;
-	top:25%;
+	top:3%;
 	left:90%;
 	box-shadow:
 		inset 3px 3px 3px rgba(110,103,97,0.8),

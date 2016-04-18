@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/menu.css">
 	<link rel="stylesheet" type="text/css" href="css/blog.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="site/clock/clock.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="img/mainicon.png">
     <title>GaoHR | Homepage</title>
 </head>
@@ -90,11 +91,20 @@
 			<div class="span3">
 				<div class="block"></div>
 				<div class="portlet">
+					<p class="title"><b>惜时</b></p>
+				</div>
+				<div id="clock">
+					<div id="hour" class="hands" style="-webkit-transform: rotate(513.5deg);"></div>
+					<div id="minute" class="hands" style="-webkit-transform: rotate(42deg);"></div>
+					<div id="second" class="hands" style="-webkit-transform: rotate(6deg);"></div>
+				</div>
+				<div class="block"></div>
+				<div class="portlet">
 					<p class="title"><i class="icon-link"></i><b> 小站链接 </b><i class="icon-link"></i></p>
 				</div>
 				<div class="blog-sidebar">
 					<ul class="blog-images">
-						<li><a href="site/langhua/index.html" target="_blank"><img alt="" src="img/images/langhua.png"></a></li>
+						<li><a href="site/langhua/freepage.html" target="_blank"><img alt="" src="img/images/langhua.png"></a></li>
 						<li><a href="site/resume/zhaf/index.html" target="_blank"><img alt="" src="img/images/resume.png"></a></li>
 						<li><a href="site/zhihu/index.html" target="_blank"><img alt="" src="img/images/zhihu.png"></a></li>
 						<li><a href="site/music/index.html" target="_blank"><img alt="" src="img/images/music.png"></a></li>
@@ -132,6 +142,7 @@
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/bloglist.js"></script>
 	<script src="js/blogsload.js"></script>
+	<script src="site/clock/clock.js"></script>
 </script>
 </body>
 </html>

@@ -1,0 +1,153 @@
+﻿
+	function onScroll(event){
+		var scrollPosition = $(document).scrollTop();
+		$('.nav li a').each(function () {
+			var currentLink = $(this);
+			var refElement = $(currentLink.attr("href"));
+			if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+				$('.nav li a').removeClass("active");
+				currentLink.addClass("active");
+			}
+			else{
+				currentLink.removeClass("active");
+			}
+		});
+	}  
+	
+var imgs = eval('imglist');
+var imgid;
+for(i = 0; i < imgs.length; i++) {
+	if(imgs[i].title == "division") {
+		$("#cd-timeline").append("<div class='cd-timeline-block division' id='year" + imgs[i].data + "'>" + imgs[i].data + "</div>")
+	} else {
+		$("#cd-timeline").append(
+			"<div class='cd-timeline-block'>" + 
+				"<div class='cd-timeline-img cd-" + selecttype(imgs[i].type) + "'>" + 
+					"<img src='timeline/icon-" + selecttype(imgs[i].type) + ".svg' alt='Picture'>" + 
+				"</div>" + 
+				"<div class='cd-timeline-content'>" + 
+					"<h2>" + imgs[i].title + "</h2>" + 
+					"<a href='###'>" + getsrcnum(i) + "</a>" +
+					"<p class='textcon' id='p_" + i + "'><span class='yinhao'>" + yinhao_left(imgs[i].type) + "</span>" + imgs[i].textcon + "<span class='yinhao'>" + yinhao_right(imgs[i].type) + "</span></p>" + 
+					"<p style='color:#555'>" + imgs[i].location + "</p>" + 
+					"<span class='cd-date'><strong>" + imgs[i].data + "</strong></span>" + 
+				"</div>" + 
+			"</div>"
+		);
+	}
+	
+}
+
+function getsrcnum(n) {
+	var imgsrc = "";
+	for(k = 0; k < imgs[n].src.length; k++) {
+		imgsrc += "<img class='imglh' onclick='imgdisplay(\"" + imgs[n].src[k].url + "\", " + n + ")' src='" + imgs[n].src[k].url + "'>_"
+	}
+	return imgsrc;
+}
+
+function selecttype(n) {
+	if(n == "image") return "picture";
+	if(n == "movie") return "movie";
+	if(n == "location") return "location";
+}
+
+function imgdisplay(imgurl,n) {
+	$("#imgdiv").css('display', 'none');
+	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgurl + "'>");
+	$("#imgclose").css('display', 'block');
+	$("#imgpre").css('display', 'block');
+	$("#imgnext").css('display', 'block');
+	$("#imgdiv").css('display', 'block');
+	imgid = n + 1;
+}
+function divclose() {
+	$("#imgclose").css('display', 'none');
+	$("#imgdiv").css('display', 'none');
+	$("#imgpre").css('display', 'none');
+	$("#imgnext").css('display', 'none');
+}
+
+$("#imgclose").click(function() {
+	$("#imgclose").css('display', 'none');
+	$("#imgdiv").css('display', 'none');
+	$("#imgpre").css('display', 'none');
+	$("#imgnext").css('display', 'none');
+})
+
+function yinhao_left(n) {
+	if(n == "image") return "";
+	if(n == "movie") return "";
+	if(n == "location") return "“";
+}
+function yinhao_right(n) {
+	if(n == "image") return "";
+	if(n == "movie") return "";
+	if(n == "location") return "”";
+}
+
+/*文字动画*/
+var i = 0;
+function getColor(){
+	i++;
+	switch(i){ 
+		case 1:return "#ff0000";
+		case 2:return "#ff6600";
+		case 3:return "#3366cc";
+		case 4:return "#00cc66";
+		case 5:return "#cc66ff";
+		case 6:return "#3366ff";
+		default:return "gray";
+	}
+}
+function colorful(){
+	var o = document.getElementById('cd-timeline');
+	o.style.color = getColor();
+	if(i == 6 ) i = 0;
+	setTimeout('colorful()', 1000);
+}
+colorful();
+
+//向后翻
+var imgnum = 0;
+$("#imgnext").click(function() {
+	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgs[imgid].src[imgnum].url + "'>");
+	imgnum++;
+	if(imgnum == imgs[imgid].src.length){
+		imgid++;
+		imgnum = 0
+	}
+	if(imgid == imgs.length) { imgid = 0; }
+})
+//向前翻
+$("#imgpre").click(function() {
+	imgid--;
+	if(imgid == 0) { 
+		alert("前面没有照片啦！"); 
+		imgnum = 0;
+	} else {
+		$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgs[imgid].src[0].url + "'>");
+	}
+})
+
+	  	//照片浮出动态效果
+		function photoview(){
+		var $timeline_block = $('.cd-timeline-block');
+		//hide timeline blocks which are outside the viewport
+		$timeline_block.each(function(){
+			if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+				$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+			}
+		});
+		//on scolling, show/animate timeline blocks when enter the viewport
+		$(window).on('scroll', function(){
+			$timeline_block.each(function(){
+				if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+					$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
+				}
+			});
+		});
+	}
+	photoview();  
+	  
+	  
