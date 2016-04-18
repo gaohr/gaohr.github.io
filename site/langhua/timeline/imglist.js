@@ -4,7 +4,11 @@ var imglist = [
 	{
 		title:'division', data:'2016',
 	},
-	
+	{
+		title:'浪花', data:'2016-04-17', location:'• 念坛公园 北京 大兴', type:'image', 
+		src:[{url:'img/201604171.jpg'}, {url:'img/201604172.jpg'}, {url:'img/201604173.jpg'}, {url:'img/201604174.jpg'}, {url:'img/201604175.jpg'}, {url:'img/201604176.jpg'}, {url:'img/201604177.jpg'}, {url:'img/201604178.jpg'}],
+		textcon:'春色美，婉转动人',
+	},
 	{
 		title:'浪花', data:'2016-04-04', location:'• 首都师范大学 北京', type:'image', 
 		src:[{url:'img/201604041.jpg'}, {url:'img/201604042.jpg'}, {url:'img/201604043.jpg'}, {url:'img/201604044.jpg'}, {url:'img/201604045.jpg'}, {url:'img/201604046.jpg'}],

@@ -11,23 +11,27 @@ $(document).ready(function() {
 		var tags = readtags(i);
 		$("#blog").append(
 			"<div class='row-fluid'>" +
-			"<div class='span4 blog-tag-data'>" +
-			"<img src='" + blogs[i].img + "' class='blog-img'>" +
-			"<ul class='unstyled inline blog-tags'>" +
-			"<li type='circle'>" +
-			"<i class='icon-tags'></i> " + tags +
-			"</li>" +
-			"</ul>" +
+			"<div class='span12 blog-article'>" +
+			"<a href='" + blogs[i].href + "' class='blog-title'><i class=' icon-bookmark' style='color:#6a6'> </i>" + blogs[i].title + "</a>" +
+			"<div class='row-fluid'>" +
+			"<div class='span3 blog-tag-data'>" +
+			"<img src='" + blogs[i].img + "' class='blog-img' style='width:90%'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[i].date + "</a></li>" +
-				"<li type='circle'><i class='icon-comments'></i> <a href='#'>" + blogs[i].comments + " Comments</a></li>" +
+			"</ul>" +
+			"<ul class='unstyled inline blog-tags'>" +
+			"<li type='circle'>" +
+			"<i class='icon-tags'></i><small>" + tags +
+			"</small></li>" +
 			"</ul>" +
 			"</div>" +
-			"<div class='span8 blog-article'>" +
-				"<a href='" + blogs[i].href + "' class='blog-title'>" + blogs[i].title + "</a>" +
+			"<div class='span9 blog-article'>" +
 			"<p>" + blogs[i].content + "</p>" +
 			"<a class='btn-blue' href='" + blogs[i].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
+			"</div>" +
+			"</div>" +
+			
 			"</div><hr>"
 		);
 	}
@@ -39,14 +43,14 @@ $(document).ready(function() {
 			"<div class='row-fluid'>" +
 			"<div class='span4 blog-tag-data'>" +
 			"<img src='" + blogs[i].img + "' class='blog-img'>" +
-			"<ul class='unstyled inline blog-tags'>" +
-			"<li type='circle'>" +
-			"<i class='icon-tags'></i> " + tags +
-			"</li>" +
-			"</ul>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[i].date + "</a></li>" +
 				"<li type='circle'><i class='icon-comments'></i> <a href='#'>" + blogs[i].comments + " Comments</a></li>" +
+			"</ul>" +
+			"<ul class='unstyled inline blog-tags'>" +
+			"<li type='circle'>" +
+			"<i class='icon-tags'></i>" + tags +
+			"</li>" +
 			"</ul>" +
 			"</div>" +
 			"<div class='span8 blog-article'>" +
@@ -60,7 +64,7 @@ $(document).ready(function() {
 	function readtags(n) {
 		tagslist = "";
 		for(t = 0; t < blogs[n].tags.length; t++) {
-			tagslist += "<a href='#'>" + blogs[n].tags[t] + "</a>";
+			tagslist += "<a href='#' style='font-size:9px !important'>" + blogs[n].tags[t] + "</a>";
 		}
 		return tagslist;
 	}
