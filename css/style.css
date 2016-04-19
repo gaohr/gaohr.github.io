@@ -11,7 +11,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
-.main-page {position:relative;width:86%;margin:5% 7%;background-color:#ddd;z-index:999}
+.main-page {position:relative;width:86%;margin:5% 7%;background-color:#ddd;z-index:0}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
