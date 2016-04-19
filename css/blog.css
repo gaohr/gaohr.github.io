@@ -5,10 +5,9 @@ Blog Page
 /*--Block Article--*/
 .blog-top {margin-bottom:10px;font-size:2em;font-family:'宋体';color:#1868b8;font-weight:bold;}
 .blog-page {margin-top:10px;font-family:'Microsoft YaHei'}
-.blog-page p {color:#555}
-.blog-article  .blog-title{font-size:1.5em;color:#222;margin-left:5px}
+.blog-page p {color:#555;}
+.blog-article  .blog-title{font-size:1.5em;color:#222;}
 .blog-article .blog-title:hover{color:#306cb5;}
-
 .blog-img {width:90%;margin-bottom:2px;margin-left:5%}
 .blog-page .blog-tag-data li {padding: 0;margin-left:5%}
 .blog-page .blog-tag-data li i {color: #d85546;}
@@ -20,7 +19,11 @@ Blog Page
 .btn-blue:hover {background-color:#295c8e;color:#eee}
 .btn-blue:active {background-color:#2878c8;}
 .blog-images li > a > img{width:25%;height:40%}
+.blog-page .blog-type {color:#eb493d;background:rgba(0,0,0,0);float:right;font-size:0.5em;margin-right:5px;border-radius:5px}
+.blog-page .blog-type:hover {color:#fff;background:rgba(238,39,39,0.7);}
+.tab-title > li > a {color:#d85556}
+.tab-title > li > a:hover {color:#c83536}
 /*For Responsive*/
-@media (max-width: 768px) {
-  .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}  
+@media (max-width: 560px) {
+  .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}
 }

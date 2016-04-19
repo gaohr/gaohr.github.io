@@ -13,9 +13,10 @@ $(document).ready(function() {
 			"<div class='row-fluid'>" +
 			"<div class='span12 blog-article'>" +
 			"<a href='" + blogs[i].href + "' class='blog-title'><i class=' icon-bookmark' style='color:#6a6'> </i>" + blogs[i].title + "</a>" +
+			"<a href='#' class='blog-type'>[ " + blogs[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
-			"<div class='span3 blog-tag-data'>" +
-			"<img src='" + blogs[i].img + "' class='blog-img' style='width:90%'>" +
+			"<div class='span4 blog-tag-data'>" +
+			"<img src='" + blogs[i].img + "' class='blog-img' style='width:80%;margin-left:10%'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[i].date + "</a></li>" +
 			"</ul>" +
@@ -25,7 +26,7 @@ $(document).ready(function() {
 			"</small></li>" +
 			"</ul>" +
 			"</div>" +
-			"<div class='span9 blog-article'>" +
+			"<div class='span8 blog-article'>" +
 			"<p>" + blogs[i].content + "</p>" +
 			"<a class='btn-blue' href='" + blogs[i].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
@@ -39,13 +40,23 @@ $(document).ready(function() {
 	//for(i = 0; i < 1; i++) {
 	for(i = 0; i < blogs.length; i++) {
 		var tags = readtags(i);
-		$("#blogs").append(
-			"<div class='row-fluid'>" +
+		$("#allblogs").append(addblog(blogs,i,tags));
+		if(blogs[i].type == "专业技术") {
+			$("#technology").append(addblog(blogs,i,tags));
+		} else if(blogs[i].type == "随笔小记") {
+			$("#prose").append(addblog(blogs,i,tags));
+		} else if(blogs[i].type == "心情寄语") {
+			$("#emotion").append(addblog(blogs,i,tags));
+		} else {}
+	}	
+	//add Blog
+	function addblog(blogs,n,tags) {
+		var blogcon = "<div class='row-fluid'>" +
 			"<div class='span4 blog-tag-data'>" +
-			"<img src='" + blogs[i].img + "' class='blog-img'>" +
+			"<img src='" + blogs[n].img + "' class='blog-img'>" +
 			"<ul class='unstyled inline'>" +
-			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[i].date + "</a></li>" +
-				"<li type='circle'><i class='icon-comments'></i> <a href='#'>" + blogs[i].comments + " Comments</a></li>" +
+			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
+			"<li type='circle'><i class='icon-comments'></i> <a href='#'>" + blogs[n].comments + " Comments</a></li>" +
 			"</ul>" +
 			"<ul class='unstyled inline blog-tags'>" +
 			"<li type='circle'>" +
@@ -54,13 +65,14 @@ $(document).ready(function() {
 			"</ul>" +
 			"</div>" +
 			"<div class='span8 blog-article'>" +
-				"<a href='" + blogs[i].href + "' class='blog-title'>" + blogs[i].title + "</a>" +
-			"<p>" + blogs[i].content + "</p>" +
-			"<a class='btn-blue' href='" + blogs[i].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			"<a href='" + blogs[n].href + "' class='blog-title'>" + blogs[n].title + "</a>" +
+			"<p>" + blogs[n].content + "</p>" +
+			"<a class='btn-blue' href='" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
-			"</div><hr>"
-		);
-	}	
+			"</div><hr>";
+			return blogcon;
+	}
+	
 	function readtags(n) {
 		tagslist = "";
 		for(t = 0; t < blogs[n].tags.length; t++) {
@@ -68,6 +80,7 @@ $(document).ready(function() {
 		}
 		return tagslist;
 	}
+	
 	
 	//知乎热文
 	var myDate = new Date();
