@@ -8,8 +8,6 @@
 #clock:after {
 	position: absolute;
 	border-radius: 50%;
-	/* we do not want the pseudo elements to appear above */
-	z-index: -1;
 }
 
 #clock:before {

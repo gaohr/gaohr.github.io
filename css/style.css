@@ -1,7 +1,7 @@
 /*
 *By GaoHR
 */
-body {background-color:#ddd;overflow-x:hidden}
+body {background-color:#eee;overflow-x:hidden}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:9999}
 .mainlogo a{position:fixed;left:6%;margin:10px 0;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;}
@@ -11,7 +11,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
-.main-page {position:relative;width:80%;margin:5% 10%;}
+.main-page {position:relative;width:86%;margin:5% 7%;background-color:#ddd;z-index:999}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
@@ -33,7 +33,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 
 /*Zhihu*/
 #content {padding:10px;background:rgba(255,255,255,0.2);width:100%;}
-#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;border-left:5px solid #a55;border-bottom:1px solid #a55;border-radius:2px}
+#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;border-left:5px solid #a55;border-bottom:1px solid #a55;border-radius:2px;line-height:1.7em}
 #content a:hover {color:#522}
 #content img {width:24px;float:left;margin:5px}
 #content p {height:auto;color:#777;line-height:50%;font-size:12px;margin:10px}

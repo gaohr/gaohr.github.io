@@ -59,7 +59,7 @@
 					<a href="../../About.html" class="btn-menu">关于</a>
 					<a href="../../Contact.html" class="btn-menu">留言</a>
 				</div>
-				<div class="hr"></div>
+				<hr>
 				<div class="links">
 					<a href="http://weibo.com/531239592" target="_blank" class="weibo"><i class="icon-weibo"></i></a>
 					<a href="https://github.com/gaohr" target="_blank" class="github"><i class="icon-github-sign"></i></a>
@@ -67,6 +67,8 @@
 					<a href="###" target="_blank" class="fb"><i class="icon-facebook-sign"></i></a>
 					<a href="###" target="_blank" class="twitter"><i class="icon-twitter-sign"></i></a>
 				</div>
+				<hr>
+					<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=7zTRRe3421Txxf4_cC0berN9WTmSoMpyyQNLqisACuo"></script>
 			</div>
 			</div>
 			<div class="span8">
@@ -78,30 +80,41 @@
 					<!--<li class="active">Blog</li>-->
 				</ol>
 				<!--正文-->
-				<div style="text-align:center">
+				<input id="blogid" style="display:none" value="2016041601">
+				<style>.blogcon img {width:60%;margin-left:20%}</style>
+				<div class="blogcon">
 				<h2>ArcGIS创建明确边界矩形矢量面</h2>
+				<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 				<p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">
 现有研究区矢量边界图层，要求将该区域遥感影像裁剪，裁剪边界范围距离研究区上下左右范围十公里（<span>10,000m</span>），如图，</span></p>
 <div><img src="http://ww1.sinaimg.cn/large/9e089d54jw1erpcbfh6svj20ep0eg3z3.jpg" id="image_operate_63281460813592408">&nbsp;<span style="font-size: 12pt;"> <br> 在裁剪时输入边界范围，是个简单易行的方法，但是因为有大量遥感影像数据需要裁剪，所以在裁剪时逐个输入边界范围就十分耗时了，因此需要做一张相同范围的掩膜图层，这边是题目所说的</span>创建明确边界矩形矢量面。</div>
 <p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">
 创建明确边界矩形矢量面，可以想到的方法有多种，首先我们想到的应该是矢量裁剪，<span>ArcToolBox-&gt;Analysis-&gt;Extract-&gt;Clip</span>，但是，它需要裁剪框才能进行，并且输出的矢量和裁剪框的边界是完全相同的，这就实现不了我们想要的，在每个工具里都有<span>Environment</span>选项，</span></p>
 <p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;mso-no-proof:yes">
-<img src="http://ww3.sinaimg.cn/large/9e089d54jw1erpcbwrdsvj20mm0dt408.jpg" id="image_operate_79331460813592782">&nbsp;</span><span style="font-family: 宋体; font-size: 12pt; text-indent: 24pt;">我们可以设置处理范围，输入明确的边界后，运行，结果仍无变化，只好放弃这一方法。</span></p>
+<img src="http://ww3.sinaimg.cn/large/9e089d54jw1erpcbwrdsvj20mm0dt408.jpg" id="image_operate_79331460813592782">&nbsp;</span>
+<br> 
+<span style="font-family: 宋体; font-size: 12pt; text-indent: 24pt;">我们可以设置处理范围，输入明确的边界后，运行，结果仍无变化，只好放弃这一方法。</span></p>
 <p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:">让我们想想简单的方法，不要想得复杂，在编辑菜单里，有我们熟悉的<span>CutPolygons
 Tool</span>，<img src="http://ww2.sinaimg.cn/large/9e089d54jw1erpcc6n7dvj20ba00vjr7.jpg"></span></p>
 <p style="text-indent: 24pt;">&nbsp;</p>
 <div><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"><span style="font-size: 12pt; text-indent: 24pt;">因此，我们可以事先画一个稍大范围的矢量面，确保将目的矩形包括，然后，选中矢量剪切工具，在矢量面范围外点一下，然后在矢量面内点击右键，选择</span><span style="font-size: 12pt; text-indent: 24pt;">Absolute
-X,Y</span><span style="font-size: 12pt; text-indent: 24pt;">，出现下图界面<img src="http://ww4.sinaimg.cn/large/9e089d54jw1erpccusoosj20gd0dnwew.jpg">&nbsp;</span><span style="font-size: 12pt; text-indent: 24pt;">在文本框内输入目标边界的左上顶点，回车，然后右键同样的方法，输入左下顶点，回车，最后在矢量面外下侧点击一下，双击鼠标，便将图层左侧裁剪完毕，如上图所示裁剪线，然后用同样的方法将其他三个边裁剪，保留中央矩形，即为目标边界。</span></span></div>
+X,Y</span><span style="font-size: 12pt; text-indent: 24pt;">，出现下图界面<img src="http://ww4.sinaimg.cn/large/9e089d54jw1erpccusoosj20gd0dnwew.jpg">&nbsp;</span>
+<br> 
+<span style="font-size: 12pt; text-indent: 24pt;">在文本框内输入目标边界的左上顶点，回车，然后右键同样的方法，输入左下顶点，回车，最后在矢量面外下侧点击一下，双击鼠标，便将图层左侧裁剪完毕，如上图所示裁剪线，然后用同样的方法将其他三个边裁剪，保留中央矩形，即为目标边界。</span></span></div>
 <p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">
 另外一种方法，既然我们可以裁剪出目标栅格矩形，那么我们就可以利用一下该裁剪后的栅格，直接将其转为矢量面，为我所用。</span></p>
 <p style="text-indent: 24pt;"><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-font-family:宋体;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast">
 具体步骤为：利用栅格转矢量工具，<span>Conversion Tools -&gt; From Raster -&gt;
 Raster to Polygon</span>，</span></p>
-<div><img src="http://ww2.sinaimg.cn/large/9e089d54jw1erpcd5xlebj20mn0dvgmh.jpg">&nbsp;<span style="font-size: 12pt; text-indent: 24pt;">但在完成之后，我们可以看到它是由很多面元素组成，这在之后的处理中会使运行变慢，所以我们再对它进行合并，利用</span><span style="font-size: 12pt; text-indent: 24pt;">Editor</span><span style="font-size: 12pt; text-indent: 24pt;">菜单栏下的</span><span style="font-size: 12pt; text-indent: 24pt;">merge</span><span style="font-size: 12pt; text-indent: 24pt;">工具就可以了。</span></div>
+<div><img src="http://ww2.sinaimg.cn/large/9e089d54jw1erpcd5xlebj20mn0dvgmh.jpg">&nbsp;
+<br> 
+<span style="font-size: 12pt; text-indent: 24pt;">但在完成之后，我们可以看到它是由很多面元素组成，这在之后的处理中会使运行变慢，所以我们再对它进行合并，利用</span><span style="font-size: 12pt; text-indent: 24pt;">Editor</span><span style="font-size: 12pt; text-indent: 24pt;">菜单栏下的</span><span style="font-size: 12pt; text-indent: 24pt;">merge</span><span style="font-size: 12pt; text-indent: 24pt;">工具就可以了。</span></div>
 <p style="text-indent: 24pt;">&nbsp;</p>
 <p style="text-indent: 24pt;">&nbsp;</p>
 <div>
-<div><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"><img src="http://ww3.sinaimg.cn/large/9e089d54jw1erpcddzpfsj20e905udge.jpg">&nbsp;<span style="font-size: 12pt; text-indent: 24pt;">至此，我们已经有多种方法可以实现我们的目的，此外，还有几种不常用的方法，比如</span><span style="font-size: 12pt; text-indent: 24pt;">Advanced
+<div><span style="font-size:12.0pt;mso-bidi-font-size:11.0pt;font-family:宋体;mso-ascii-theme-font:minor-fareast;mso-fareast-theme-font:minor-fareast;mso-hansi-theme-font:minor-fareast;mso-bidi-font-family:"><img src="http://ww3.sinaimg.cn/large/9e089d54jw1erpcddzpfsj20e905udge.jpg">&nbsp;
+<br> 
+<span style="font-size: 12pt; text-indent: 24pt;">至此，我们已经有多种方法可以实现我们的目的，此外，还有几种不常用的方法，比如</span><span style="font-size: 12pt; text-indent: 24pt;">Advanced
 Editing</span><span style="font-size: 12pt; text-indent: 24pt;">中的标准矩形工具、草图工具等，有兴趣的朋友可以尝试一下。</span></span></div>
 </div>
 <p style="text-indent: 24pt;">&nbsp;</p>

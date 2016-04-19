@@ -9,6 +9,11 @@ $(document).ready(function() {
 	for(i = 0; i < 3; i++) {
 		var tags = readtags(i);
 		$("#blogs").append(addblog(blogs,i,tags));
+		var blogid = $("#blogid").val();
+		if(blogs[i].blogid == blogid) {
+			$("#blogtopinfo").append("[" + blogs[i].date + "]&nbsp;&nbsp; <i class='icon-tags'></i>" + tags );
+		}
+		
 	}	
 	//add Blog
 	function addblog(blogs,n,tags) {
