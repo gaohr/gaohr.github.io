@@ -13,7 +13,7 @@ $(document).ready(function() {
 			"<div class='row-fluid'>" +
 			"<div class='span12 blog-article'>" +
 			"<a href='" + blogs[i].href + "' class='blog-title'><i class=' icon-bookmark' style='color:#6a6'> </i>" + blogs[i].title + "</a>" +
-			"<a href='#' class='blog-type'>[ " + blogs[i].type + " ]</a>" +
+			"<a href='Blogs.html#" + blogtype(blogs[i].type) + "' class='blog-type'>[ " + blogs[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
 			"<div class='span4 blog-tag-data'>" +
 			"<img src='" + blogs[i].img + "' class='blog-img' style='width:80%;margin-left:10%'>" +
@@ -81,6 +81,15 @@ $(document).ready(function() {
 		return tagslist;
 	}
 	
+	function blogtype(type) {
+		if(type == "专业技术") {
+			return "tab_4_2";
+		} else if(type == "随笔小记") {
+			return "tab_4_3";
+		} else if(type == "心情寄语") {
+			return "tab_4_4";
+		} else {}
+	}
 	
 	//知乎热文
 	var myDate = new Date();
