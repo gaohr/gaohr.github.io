@@ -23,15 +23,14 @@ Blog Page
 .blog-page .blog-type:hover {color:#fff;background:rgba(238,39,39,0.7);}
 .tab-title > li > a {color:#d85556}
 .tab-title > li > a:hover {color:#c83536}
-.blogcontent {color:#222}
+
+.blogcontent {color:#222;background:#eee;padding:10px}
 .blogcontent h2 {text-align:center}
 .blogcontent p {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent li {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent .imginblog {width:auto;text-align:center}
-
 .blogtopinfo {font-size:10px;color:#555;text-align:center !important}
 .blogtopinfo > span > a {margin-left:5px}
-
 .greencode {color:#080;}
 /*For Responsive*/
 @media (max-width: 560px) {
