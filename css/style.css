@@ -11,7 +11,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
-.main-page {position:relative;width:86%;margin:5% 7%;background-color:#ddd;z-index:0}
+.main-page {position:relative;margin-top:60px;background-color:#ddd;z-index:0}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
@@ -21,7 +21,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .hr {position:relative;width:100%;height:3px;background:#ccc;margin-top:20px;border-bottom:1px solid #fff}
 .links {padding:5px;color:#236eb8}
 .links p {font-size:1.5em;font-family:'SimHei'}
-.links a {font-size:2.1em;}
+.links a {font-size:2.4em;}
 .links .weibo  {color:#e03b29}.links .github {color:#333}.links .google  {color:#3b8029}.links .twitter {color:#2366bb}.links .fb {color:#5366bb}
 .links a :hover{color:#236eb8}
 

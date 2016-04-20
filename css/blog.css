@@ -18,7 +18,7 @@ Blog Page
 .btn-blue {background-color:#2878c8;padding:5px;border-radius:3px;color:#fff}
 .btn-blue:hover {background-color:#295c8e;color:#eee}
 .btn-blue:active {background-color:#2878c8;}
-.blog-images li > a > img{width:25%;height:40%}
+.blog-images li > a > img{width:18%;height:40%}
 .blog-page .blog-type {color:#eb493d;background:rgba(0,0,0,0);float:right;font-size:0.5em;margin-right:5px;border-radius:5px}
 .blog-page .blog-type:hover {color:#fff;background:rgba(238,39,39,0.7);}
 .tab-title > li > a {color:#d85556}
