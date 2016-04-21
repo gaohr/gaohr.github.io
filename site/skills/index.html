@@ -8,18 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min-2.3.1.css">
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-style.css">
     <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../css/blog.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="shortcut icon" href="../../img/mainicon.png">
-    <title>GaoHR | 知乎热门</title>
-	<style>
-		#content {padding:10px;background:rgba(255,255,255,0.2);width:100%;height:300px;overflow-y:scroll}
-		#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;text-decoration:none;border-left:5px solid #a55;border-radius:2px}
-		#content a:hover {color:#222}
-		#content p {height:auto;color:#f99;line-height:50%;font-size:12px;margin:5px}
-		.search {margin-left:15%}
-	</style>
+    <title>GaoHR | 技术图谱</title>
 </head>
 
 <body>
@@ -40,11 +35,11 @@
 							<li class="dropdown">
 								<a class="dropdown-toggle"data-toggle="dropdown"href="#"><i class="icon-list"></i></a>
 								<ul class="dropdown-menu">
-									<li><a href="index.html"><i class="icon-home menu-active"></i></a></li>
-									<li><a href="Blogs.html">博客</a></li>
+									<li><a href="../../index.html"><i class="icon-home"></i></a></li>
+									<li><a href="../../Blogs.html">博客</a></li>
 									<li class="divider"></li>
-									<li><a href="About.html">关于</a></li>
-									<li><a href="Contact.html">留言</a></li>
+									<li><a href="../../About.html">关于</a></li>
+									<li><a href="../../Contact.html">留言</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -63,7 +58,7 @@
 				<div class="sider-menu centerer-menu wrap-menu">
 					<a href="../../Blogs.html" class="btn-menu">博客</a>
 					<a href="../../About.html" class="btn-menu">关于</a>
-					<a href="../../Contact.html" class="btn-menu">留言</a>
+					<a href="../../Contact.html" class="btn-menu menu-active">留言</a>
 				</div>
 				<hr>
 				<div class="links">
@@ -77,21 +72,30 @@
 					<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=7zTRRe3421Txxf4_cC0berN9WTmSoMpyyQNLqisACuo"></script>
 			</div>
 			</div>
-			<div class="span8">
+			<div class="span7">
 				<!--breadcrumb-->
-				<div class="block"></div>
 				<ol class="breadcrumb">
-					<li><a href="../../index.html"><i class="icon-home"></i> Home</a></li>
-					<i class="icon-angle-right"></i>
-					<li class="active">zhihu</li>
+					<li><i class="icon-comments-alt"></i><a href="###"> 技术图谱</a></li>
+					<!--<li class="active">Data</li>-->
 				</ol>
 				<!--正文-->
-				<div style="font-family:黑体"><p style="color:#f66;font-size:0.8em;font-family:宋体;font-weight:bold">知乎热门</p></div>
-				<div class="search">日期：<input type="date" id="date"/><a id="search" class="btn" style="border-left:none;text-align:center">搜索</a></div>
-				<div id="content"></div> 
+				 <div class="wrap">
+					<canvas id="skillboard" width="750" height="450"></canvas>
+				</div>
 			</div>
-			<div class="span2">
-				
+			<div class="span3">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-link"></i><b> 站链接</b></p>
+					<div class="blog-sidebar">
+						<ul class="blog-images">
+							<li><a href="../../site/resume/gaohr/index.html" target="_blank"><img alt="" src="../../img/images/resume.png"></a></li>
+							<li><a href="../../site/zhihu/index.html" target="_blank"><img alt="" src="../../img/images/zhihu.png"></a></li>
+							<li><a href="../../site/music/index.html" target="_blank"><img alt="" src="../../img/images/music.png"></a></li>
+							<li><a href="../../site/skills/index.html" target="_blank"><img alt="" src="../../img/images/skills.png"></a></li>
+						</ul>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -103,56 +107,10 @@
     <!-- JavaScript -->
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-	<script type="text/javascript">
-		$(function(){
-			var myDate = new Date();
-			if((myDate.getMonth() + "").length == 1) {
-				month = "0" + (myDate.getMonth() + 1);
-			} else {
-				month = myDate.getMonth();
-			}
-			if((myDate.getDate() + "").length == 1) {
-				day = "0" + myDate.getDate();
-			} else {
-				day = myDate.getDate() - 1;
-			}
-			var date = myDate.getFullYear() + month + day;
-			//alert(myDate.getFullYear() + "-" + month + "-" + day);
-			$("#date").val(myDate.getFullYear() + "-" + month + "-" + day);
-			$.ajax({
-				url:"http://api.kanzhihu.com/getpostanswers/" + date + "/recent",
-				dataType:"json",
-				async:false,
-				success:function(data){
-					for(i = 0; i < data.answers.length; i++) {
-						$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><br><img src=\"" + data.answers[i].avatar + "\" style=\"width:24px;float:left\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
-					}
-				},
-				error:function(){alert("Error")}
-			});
-			
-			$("#search").click(function() {
-				var selectdate = $("#date").val();
-				selectdate = selectdate.substr(0,4) + selectdate.substr(5,2) + selectdate.substr(8,2);
-				if(selectdate != null && selectdate != "") {
-					$("#content").empty();
-					$.ajax({
-						url:"http://api.kanzhihu.com/getpostanswers/" + selectdate + "/recent",
-						dataType:"json",
-						async:false,
-						success:function(data){
-							for(i = 0; i < data.answers.length; i++) {
-								$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><br><img src=\"" + data.answers[i].avatar + "\" style=\"width:24px;float:left\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
-							}
-						},
-						error:function(){alert("Error")}
-					});
-				} else {
-					alert("未选择日期！");
-				}
-			})
-		}) 
+	<script src="arbor.js"></script>
+	<script src="arbor-tween.js"></script>
+	<script src="graphics.js"></script>
+	<script src="arbor_main.js"></script>
 	</script>
 </body>
 </html>
-

@@ -4944,19 +4944,19 @@ Block Images(new in v1.2.2)
 }
 
 .blog-images li img {
-  width: 50px;
-  height: 50px;
-  opacity: 0.6;
+  opacity: 1;
   margin: 0 2px 8px;
 }
-
 .blog-images li img:hover {
+  opacity: 0.6;
+}
+/*.blog-images li img:hover {
   opacity: 1;
   box-shadow: 0 0 0 4px #72c02c;
   transition: all 0.4s ease-in-out 0s;
   -moz-transition: all 0.4s ease-in-out 0s;
   -webkit-transition: all 0.4s ease-in-out 0s;
-}
+}*/
 
 /*Sidebar Tags*/
 ul.sidebar-tags a {

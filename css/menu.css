@@ -14,8 +14,8 @@
   overflow: hidden;
   padding:5px 0;
   border: 1px solid #ddd;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 .btn-menu:before {
   content: '';
@@ -29,8 +29,8 @@
   bottom: 0;
   left: 0;
   box-sizing: border-box;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 .btn-menu:after {
   content: '';
@@ -44,13 +44,13 @@
   top: 0;
   right: 0;
   box-sizing: border-box;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 .btn-menu:hover {
   color: #ddd;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 .btn-menu:hover:before {
   border-width: 145px 0 0 145px;
@@ -60,8 +60,8 @@
 }
 .btn-menu:active {
   background: #999;
-  -webkit-transition: 1s;
-  transition: 1s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .btn-menu:before,
@@ -76,7 +76,7 @@
 #text{margin-top:-40px;text-align:center}
 #text a{color:#222;text-decoration:none;font-size:2em}
 #text a:hover{color:#0099ff}
-.svg-wrapper:hover #shape{stroke-dasharray:50 0;stroke-width:5px;stroke-dashoffset:0;stroke:#0099ff}
+.svg-wrapper:hover #shape{stroke-dasharray:50 0;stroke-width:5px;stroke-dashoffset:0;stroke:#ddd}
 
 
 

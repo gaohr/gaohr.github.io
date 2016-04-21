@@ -92,6 +92,7 @@ $(document).ready(function() {
 	}
 	
 	//知乎热文
+	/*
 	var myDate = new Date();
 			if((myDate.getMonth() + "").length == 1) {
 				month = "0" + (myDate.getMonth() + 1);
@@ -146,6 +147,7 @@ $(document).ready(function() {
 					alert("错误日期，请重新选择！");
 				}
 			})
+			*/
 }) 
 	
 	

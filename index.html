@@ -74,46 +74,45 @@
 					<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=7zTRRe3421Txxf4_cC0berN9WTmSoMpyyQNLqisACuo"></script>
 			</div>
 			</div>
-			<div class="span7">
+			<div class="span8">
 				<!--breadcrumb-->
 				<ol class="breadcrumb">
 					<li><a href="index.html"><i class="icon-home"></i> 首页</a></li>
 					<!--<li class="active">Data</li>-->
 				</ol>
 				<!--正文-->
-				<p class="blog-top pull-left">最新博文</p>
-				<a href="Blogs.html" class="pull-right"><i class="icon-search"></i>查看更多</a><br><hr>
-				<div class="blog-page" id="blog"></div>
-				<div class="zhihu">
-					<p class="pull-left">知乎热门</p><br>
-					<a href="site/zhihu/index.html" class="pull-right"> | <i class="icon-search"></i>查看更多</a>
-					<a href="###" id="refresh" class="pull-right"><i class="icon-return"></i>换一批</a>
-				</div><br>
-				<div id="content"></div> 
+				<div class="centerpage">
+					<p class="blog-top pull-left">最新博文</p>
+					<a href="Blogs.html" class="pull-right"><i class="icon-search"></i>查看更多</a><br><hr>
+					<div class="blog-page" id="blog"></div>
+					<!--知乎
+					<div class="zhihu">
+						<p class="pull-left">知乎热门</p><br>
+						<a href="site/zhihu/index.html" class="pull-right"> | <i class="icon-search"></i>查看更多</a>
+						<a href="###" id="refresh" class="pull-right"><i class="icon-return"></i>换一批</a>
+					</div><br>
+					<div id="content"></div>
+					-->
+				</div>
 			</div>
-			<div class="span3">
+			<div class="span2">
 				<div class="block"></div>
 				<div class="portlet">
 					<p class="title"><i class="icon-time"></i><b> 惜时</b></p>
+					
 					<div id="clock">
 						<div id="hour" class="hands" style="-webkit-transform: rotate(513.5deg);"></div>
 						<div id="minute" class="hands" style="-webkit-transform: rotate(42deg);"></div>
 						<div id="second" class="hands" style="-webkit-transform: rotate(6deg);"></div>
 					</div>
+					<p style="margin-top:5px;text-indent:2em;color:#555;font-size:0.5em">世界上最快而又最慢，最长而又最短，最平凡而又最珍贵，最易被忽视而又最令人后悔的就是时间。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;——高尔基</p>
 				</div>
+				<hr>
 				<div class="block"></div>
 				<div class="portlet">
 					<p class="title"><i class="icon-link"></i><b> 站链接</b></p>
-					<div class="blog-sidebar">
-						<ul class="blog-images">
-							<li><a href="site/langhua/index.html" target="_blank"><img alt="" src="img/images/langhua.png"></a></li>
-							<li><a href="site/resume/gaohr/index.html" target="_blank"><img alt="" src="img/images/resume.png"></a></li>
-							<li><a href="site/zhihu/index.html" target="_blank"><img alt="" src="img/images/zhihu.png"></a></li>
-							<li><a href="site/music/index.html" target="_blank"><img alt="" src="img/images/music.png"></a></li>
-							<li><a href="site/joker/index.html" target="_blank"><img alt="" src="img/images/joke.png"></a></li>
-							<li><a href="site/iFood/html/index.html" target="_blank"><img alt="" src="img/images/iFoodicon.png"></a></li>
-						</ul>
-					</div>
+					<div class="blog-sidebar" id="relatedlinks"></div>
 				</div>
 				<!-- UY BEGIN
 				<div id="uyan_frame"></div>
@@ -153,6 +152,7 @@
 	<script src="js/bloglist.js"></script>
 	<script src="js/blogsload.js"></script>
 	<script src="site/clock/clock.js"></script>
+	<script src="js/common.js"></script>
 </script>
 </body>
 </html>

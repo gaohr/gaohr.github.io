@@ -4,6 +4,17 @@ var imglist = [
 	{
 		title:'division', data:'2016',
 	},
+	
+	{
+		title:'小花', data:'2016-04-21', location:'• 北京郊区', type:'image', 
+		src:[{url:'img/201604211.jpg'}, {url:'img/201604212.jpg'}],
+		textcon:'小花去游玩了~',
+	},
+	{
+		title:'小花', data:'2016-04-20', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'img/201604201.jpg'}, {url:'img/201604202.jpg'}],
+		textcon:'国际范',
+	},
 	{
 		title:'浪花', data:'2016-04-17', location:'• 念坛公园 北京 大兴', type:'image', 
 		src:[{url:'img/201604171.jpg'}, {url:'img/201604172.jpg'}, {url:'img/201604173.jpg'}, {url:'img/201604174.jpg'}, {url:'img/201604175.jpg'}, {url:'img/201604176.jpg'}, {url:'img/201604177.jpg'}, {url:'img/201604178.jpg'}],
