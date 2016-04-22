@@ -262,91 +262,84 @@
     // or, equivalently:
     //
     var nodes = {
-      'js': { description: 'javascript', type: 'lang' },
+      'js': { description: 'JavaScript', type: 'lang' },
       'java': { description: 'Java', type: 'lang' },
       'c': { description: 'C/C++', type: 'lang' },
-      'c#': { description: 'C#', type: 'lang' },
-      'lisp': { description: 'lisp', type: 'lang' },
+	  'py': { description: 'Python', type: 'lang' },
+	  'f': { description: 'Fortran', type: 'lang' },
       'css': { description: 'css', type: 'lang' },
       'html': { description: 'html5', type: 'lang' },
       'git': { description: 'git', type: 'tool' },
-      'justjs': { description: 'JustJS', type: 'experience' },
-      'jreparser': { description: 'JRE-Parser', type: 'experience' },
-      'ms-intern': { description: 'Microsoft实习', type: 'experience' },
-      'haijiao': { description: '海角教育', type: 'experience' },
-      'cocos2d-js': { description: 'cocos2d-JS', type: 'tool' },
-      'unity-3d': { description: 'Unity-3d', type: 'tool' },
       'mongodb': { description: 'MongoDB', type: 'tool' },
-      'logv': { description: 'LogV', type: 'experience' },
-      'kinect': { description: 'Kinect', type: 'tool' },
-      'screenbuilder': { description: 'Screen Builder', type: 'experience' },
-      'maoxian': { description: '冒险的召唤', type: 'experience' },
       'jekyll': { description: 'jekyll', type: 'tool' },
-      'cocos-docs': { description: 'cocos维基', type: 'experience' },
-      'uav': { description: '小型无人机技术大赛', type: 'experience' },
-      'ssh': { description: 'Struct+Spring+Hibernate', type: 'tool' },
-      'game-dev': { description: '游戏开发', type: 'experience' },
-      'blog': { description: 'Jerry的乐园（博客）', type: 'experience' }
+	  'arcgis': { description: 'ArcGIS', type: 'tool' },
+      'qgis': { description: 'QGIS', type: 'tool' },
+      'spss': { description: 'SPSS', type: 'tool' },
+	  'ps': { description: 'PhotoShop', type: 'tool' },
+      'qgis': { description: 'QGIS', type: 'tool' },
+      'matlab': { description: 'MatLab', type: 'tool' },
+      'swat': { description: 'SWAT', type: 'tool' },
+      'seims': { description: 'SEIMS', type: 'tool' },
+      'envi': { description: 'ENVI', type: 'tool' },
+      'eclipse': { description: 'Eclipse', type: 'tool' },
+      'esri': { description: 'ESRI制图大赛', type: 'experience' },
+      'dev': { description: 'Develope', type: 'experience' },
+      'dianxin': { description: '点心桌面设计', type: 'experience' },
+	  'blog': { description: 'GaoHR（博客）', type: 'experience' }
     };
 
     var edges = {
-      'ms-intern': {
-        'js': { weight: 3 },
-        'css': { weight: 2 },
-        'html': { weight: 2 },
-        'c#': { weight: 2 },
-        'git': { weight: 2 }
-      },
-      'haijiao':{
-        'ssh': { weight: 2 },
-        'js': { weight: 1 },
-        'java': { weight: 2 },
-        'git': { weight: 1 }
-      },
-      'cocos2d-js': {
-        'js': { weight: 2 },
-        'game-dev': { weight: 3 }
-      },
-      'logv': {
-        'js': { weight: 2 },
-        'css': { weight: 1 },
-        'java': { weight: 2 },
-        'mongodb': { weight: 2 }
-      },
-      'screenbuilder': {
-        'c': { weight: 2 },
-        'c#': { weight: 2 },
-        'kinect': { weight: 3 }
-      },
-      'maoxian': {
-        'unity-3d': { weight: 3 },
-        'game-dev': { weight: 3 },
-        'c#': { weight: 1 },
-        'js': { weight: 2 }
-      },
       'blog': {
-        'jekyll': { weight: 2 },
-        'js': { weight: 2 },
+        'jekyll': { weight: 1 },
+        'js': { weight: 3 },
         'css': { weight: 3 },
         'html': { weight: 3 },
         'git': { weight: 2 }
       },
-      'uav': {
-        'c': { weight: 2 },
-        'git': { weight: 1 }
+      'esri': {
+        'arcgis': { weight: 3 },
+        'envi': { weight: 2 },
+		'dev': { weight: 3 },
+		'matlab': { weight: 1 },
+		'dianxin': { weight: 1 }
       },
-      'lisp': {
-        'js': { weight: 1 }
+	  'mongodb': {
+       'c': { weight: 3 },
+        'js': { weight: 2 },
+        'py': { weight: 3 },
+        'html': { weight: 1 },
+        'qgis': { weight: 2 }
       },
-      'cocos-docs': {
-        'cocos2d-js': { weight: 1 }
+	  'seims': {
+       'c': { weight: 3 },
+        'git': { weight: 2 },
+        'py': { weight: 3 },
+        'f': { weight: 1 },
+        'swat': { weight: 2 }
       },
-      'justjs': {
-        'js': { weight: 3 }
+	  'eclipse': {
+       'java': { weight: 1 },
+        'js': { weight: 3 },
+        'css': { weight: 3 },
+        'html': { weight: 3 },
+        'qgis': { weight: 2 }
       },
-      'jreparser': {
-        'js': { weight: 3 }
-      }
+	  'dianxin': {
+       'ps': { weight: 3 },
+        'css': { weight: 3 },
+        'html': { weight: 2 }
+      },
+	  'git': {
+        'js': { weight: 2 },
+        'css': { weight: 2 },
+        'html': { weight: 3 },
+		'blog': { weight: 2 },
+      },
+	  'dev': {
+        'spss': { weight: 1 },
+        'java': { weight: 3 },
+        'c': { weight: 2 }
+      },
     };
 
     for (var n1 in edges) {
