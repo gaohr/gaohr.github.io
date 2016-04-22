@@ -52,24 +52,25 @@ $(document).ready(function() {
 	//add Blog
 	function addblog(blogs,n,tags) {
 		var blogcon = "<div class='row-fluid'>" +
-			"<div class='span4 blog-tag-data'>" +
+			"<div class='span2 blog-tag-data'>" +
 			"<img src='" + blogs[n].img + "' class='blog-img'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
 			"<li type='circle'><i class='icon-comments'></i> <a href='#'>" + blogs[n].comments + " Comments</a></li>" +
 			"</ul>" +
-			"<ul class='unstyled inline blog-tags'>" +
-			"<li type='circle'>" +
+			"</div>" +
+			"<div class='span9 blog-article'>" +
+			"<a href='" + blogs[n].href + "' class='blog-title'>" + blogs[n].title + "</a>" +
+			"<ul class='unstyled inline blog-tags pull-right'>" +
+			"<li>" +
 			"<i class='icon-tags'></i>" + tags +
 			"</li>" +
 			"</ul>" +
-			"</div>" +
-			"<div class='span8 blog-article'>" +
-			"<a href='" + blogs[n].href + "' class='blog-title'>" + blogs[n].title + "</a>" +
 			"<p>" + blogs[n].content + "</p>" +
-			"<a class='btn-blue' href='" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			"<a class='btn-blue btn-mini' href='" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
-			"</div><hr>";
+			"</div>" +
+			"<div style='background:#ddd;height:2px;margin:10px;'></div>";
 			return blogcon;
 	}
 	
@@ -91,8 +92,52 @@ $(document).ready(function() {
 		} else {}
 	}
 	
+	//Blog tags
+	var tagscon = "";
+	var tagsarr = [];  //put tags into array
+	var tagnum = [];  //same tags numeber and index
+	for(i = 0; i < blogs.length; i++) {
+		for(t = 0; t < blogs[i].tags.length; t++) {
+			var has = tagsarr.indexOf(blogs[i].tags[t]);
+			if(has == "-1") {
+				tagsarr.push(blogs[i].tags[t]);
+			} else {
+				if(tagnum[has] == undefined) {
+						tagnum[has] = 2;
+					} else {
+						tagnum[has]++;
+					}
+			}
+		}
+	}
+	for(j = 0; j < tagsarr.length; j++) {
+		tagscon += "<li><a href='#' style='font-size:" + (12 + tagssize(tagnum[j])) + "px'><i class='icon-tag'></i> " + tagsarr[j] + "</a></li>";
+	}
+	$("#tags").append(tagscon);
+	
+	//判断并确定标签大小
+	function tagssize(n) {
+		if(n == undefined) {
+			return 0;
+		} else {
+			return n * 2;
+		}
+	}
+	
 	//知乎热文
 	/*
+	for(a = 0; a < tagsarr.length; a++) {
+				if(blogs[i].tags[t] == tagsarr[a]) {
+					has = true;
+					tagindex.put(a);
+					if(tagnum[a] == "" || tagnum[a] == null) {
+						tagnum[a] = 2;
+					} else {
+						tagnum[a]++;
+					}
+				}
+			}
+			
 	var myDate = new Date();
 			if((myDate.getMonth() + "").length == 1) {
 				month = "0" + (myDate.getMonth() + 1);
