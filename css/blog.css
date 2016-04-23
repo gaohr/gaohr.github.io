@@ -35,6 +35,7 @@ Blog Page
 .blogtopinfo {font-size:10px;color:#555;text-align:center !important}
 .blogtopinfo > span > a {margin-left:5px}
 .greencode {color:#080;}
+.blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
 
 .sidebar-tags  i {color:#d85546 !important;}
 .sidebar-tags  a {padding:3px;margin-left:5px;border-radius:5px}
