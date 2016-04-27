@@ -48,7 +48,7 @@ $(document).ready(function() {
 					"<a href=\"###\" target=\"_blank\" class=\"twitter\" style=\"margin:2px\"><i class=\"icon-twitter-sign\"></i></a>" +
 				"</div>" +
 				"<hr>" +
-					"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=7zTRRe3421Txxf4_cC0berN9WTmSoMpyyQNLqisACuo\"></script>" +
+					"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ\"></script>" +
 			"</div>");
 	var blogs = eval('bloglist');
 	//for(i = 0; i < blogs.length; i++) {
