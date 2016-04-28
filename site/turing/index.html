@@ -12,13 +12,19 @@
 	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="shortcut icon" href="../../img/mainicon.png">
-    <title>GaoHR | 知乎热门</title>
+    <title>GaoHR | 小浪机器人</title>
 	<style>
-		#content {padding:10px;background:rgba(255,255,255,0.2);width:100%;height:300px;overflow-y:scroll}
+		#content {padding:10px;margin-bottom:10px;background:rgba(255,255,255,0.8);width:100%;height:300px;overflow-y:scroll}
 		#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;text-decoration:none;border-left:5px solid #a55;border-radius:2px}
 		#content a:hover {color:#222}
 		#content p {height:auto;color:#f99;line-height:50%;font-size:12px;margin:5px}
-		.search {margin-left:15%}
+		.send {padding:5px 20px;background:rgba(0,100,215,0.9);color:#eee}
+		.send:hover {background:rgba(0,100,215,0.7);color:#fff}
+		#content .robotmes {font-size:1.2em;height:36px;line-height:36px;vertical-align:middle;padding:2px;clear:both}
+		#content .rt {background:rgba(200,100,0,0.8);color:#fff;padding:3px;border-radius:2px}
+		#content .humanmes {font-size:1.2em;height:36px;line-height:36px;vertical-align:middle;padding:2px;float:right;clear:both}
+		#content .ht {background:rgba(0,100,200,0.8);color:#fff;padding:3px;border-radius:2px}
+		
 	</style>
 </head>
 
@@ -77,21 +83,27 @@
 					<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ"></script>
 			</div>
 			</div>
-			<div class="span8">
+			<div class="span6">
 				<!--breadcrumb-->
-				<div class="block"></div>
 				<ol class="breadcrumb">
 					<li><a href="../../index.html"><i class="icon-home"></i> Home</a></li>
 					<i class="icon-angle-right"></i>
-					<li class="active">zhihu</li>
+					<li class="active">小浪机器人</li>
 				</ol>
 				<!--正文-->
-				<div style="font-family:黑体"><p style="color:#f66;font-size:0.8em;font-family:宋体;font-weight:bold">知乎热门</p></div>
-				<div class="search">日期：<input type="date" id="date"/><a id="search" class="btn" style="border-left:none;text-align:center">搜索</a></div>
-				<div id="content"></div> 
-			</div>
-			<div class="span2">
+				<div style="font-family:'黑体'"><p style="color:#f66;font-size:0.8em;font-family:宋体;font-weight:bold">小浪机器人</p></div>
 				
+				<div id="content"></div>
+				<div class="control-group">
+					<div class="controls">
+						<input type="text" id="sendtext" placeholder="跟小浪机器人说点什么吧~" class="span10 huge" />
+						<a id="send" href="###" class="send pull-right">发送</a>
+					</div>
+				</div>
+
+			</div>
+			<div class="span3">
+				<img src="robot.png" width="80%" style="margin-top:20%">
 			</div>
 		</div>
 	</div>
@@ -105,53 +117,22 @@
     <script src="../../js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			var myDate = new Date();
-			if((myDate.getMonth() + "").length == 1) {
-				month = "0" + (myDate.getMonth() + 1);
-			} else {
-				month = myDate.getMonth();
-			}
-			if((myDate.getDate() + "").length == 1) {
-				day = "0" + myDate.getDate();
-			} else {
-				day = myDate.getDate() - 1;
-			}
-			var date = myDate.getFullYear() + month + day;
-			//alert(myDate.getFullYear() + "-" + month + "-" + day);
-			$("#date").val(myDate.getFullYear() + "-" + month + "-" + day);
-			$.ajax({
-				url:"http://api.kanzhihu.com/getpostanswers/" + date + "/recent",
-				dataType:"json",
-				async:false,
-				success:function(data){
-					for(i = 0; i < data.answers.length; i++) {
-						$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><br><img src=\"" + data.answers[i].avatar + "\" style=\"width:24px;float:left\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
-					}
-				},
-				error:function(){alert("Error")}
-			});
-			
-			$("#search").click(function() {
-				var selectdate = $("#date").val();
-				selectdate = selectdate.substr(0,4) + selectdate.substr(5,2) + selectdate.substr(8,2);
-				if(selectdate != null && selectdate != "") {
-					$("#content").empty();
+			$("#content").append("<div class='robotmes'><img src='robothead.png' width='40px'><span class='rt'>你好，很高兴见到你！</span><div><br>");
+			$("#send").click(function() {
+				var sendtext = $("#sendtext").val();
+				$("#content").append("<div class='humanmes'><span class='ht'>" + sendtext + "</span><img src='peoplehead.png' width='40px' class='pull-right'><div><br>");
+				$("#sendtext").val("");
 					$.ajax({
-						url:"http://api.kanzhihu.com/getpostanswers/" + selectdate + "/recent",
+						url:"http://www.tuling123.com/openapi/api?key=879a6cb3afb84dbf4fc84a1df2ab7319&info=" + sendtext,
 						dataType:"json",
 						async:false,
 						success:function(data){
-							for(i = 0; i < data.answers.length; i++) {
-								$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><br><img src=\"" + data.answers[i].avatar + "\" style=\"width:24px;float:left\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><br>" );
-							}
+							$("#content").append("<div class='robotmes'><span class='rt'><img src='robothead.png' width='40px'>" + data.text + "</span><div><br>");
 						},
 						error:function(){alert("Error")}
 					});
-				} else {
-					alert("未选择日期！");
-				}
-			})
-		}) 
+			}) 
+		});
 	</script>
 </body>
 </html>
