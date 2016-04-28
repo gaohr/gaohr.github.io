@@ -15,16 +15,15 @@
     <title>GaoHR | 小浪机器人</title>
 	<style>
 		#content {padding:10px;margin-bottom:10px;background:rgba(255,255,255,0.8);width:100%;height:360px;overflow-y:scroll}
-		#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;text-decoration:none;border-left:5px solid #a55;border-radius:2px}
+		#content a {font-size:1em;background:rgba(255,255,255,.1);padding:2px 2px;color:#555;text-decoration:none;}
 		#content a:hover {color:#222}
 		#content p {height:auto;color:#f99;line-height:50%;font-size:12px;margin:5px}
 		.send {padding:5px 20px;background:rgba(0,100,215,0.9);color:#eee}
 		.send:hover {background:rgba(0,100,215,0.7);color:#fff}
-		#content .robotmes {font-size:1.2em;height:36px;line-height:36px;vertical-align:middle;padding:2px;clear:both}
-		#content .rt {background:rgba(200,100,0,0.8);color:#fff;padding:3px;border-radius:2px}
-		#content .humanmes {font-size:1.2em;height:36px;line-height:36px;vertical-align:middle;padding:2px;float:right;clear:both}
-		#content .ht {background:rgba(0,100,200,0.8);color:#fff;padding:3px;border-radius:2px}
-		
+		#content .robotmes {position:relative;background:rgba(200,100,0,0.2);font-size:1.2em;height:auto;width:auto;line-height:32px;vertical-align:middle;margin:2px;clear:both}
+		#content .rt {color:#333;padding:3px;border-radius:2px}
+		#content .humanmes {position:relative;background:rgba(0,100,200,0.2);font-size:1.2em;height:auto;width:auto;line-height:32px;vertical-align:middle;margin:2px;float:right;clear:both}
+		#content .ht {color:#333;padding:3px;border-radius:2px}
 	</style>
 </head>
 
@@ -48,6 +47,7 @@
 								<ul class="dropdown-menu">
 									<li><a href="../../index.html"><i class="icon-home"></i></a></li>
 									<li><a href="../../Blogs.html">博客</a></li>
+									<li><a href="../skills/index.html">图谱</a></li>
 									<li class="divider"></li>
 									<li><a href="../../About.html">关于</a></li>
 									<li><a href="../../Contact.html">留言</a></li>
@@ -68,6 +68,7 @@
 				</div>
 				<div class="sider-menu centerer-menu wrap-menu">
 					<a href="../../Blogs.html" class="btn-menu">博客</a>
+					<a href="../skills/index.html" class="btn-menu">图谱</a>
 					<a href="../../About.html" class="btn-menu">关于</a>
 					<a href="../../Contact.html" class="btn-menu">留言</a>
 				</div>
@@ -88,22 +89,24 @@
 				<ol class="breadcrumb">
 					<li><a href="../../index.html"><i class="icon-home"></i> Home</a></li>
 					<i class="icon-angle-right"></i>
-					<li class="active">小浪机器人</li>
+					<li class="active">浪花机器人</li>
 				</ol>
 				<!--正文-->
-				<div style="font-family:'黑体'"><p style="color:#f66;font-size:0.8em;font-family:宋体;font-weight:bold">小浪机器人</p></div>
+				<div style="font-family:'黑体'"><p style="color:#f66;font-size:1.2em;font-weight:bold">浪花机器人</p></div>
 				
 				<div id="content"></div>
 				<div class="control-group">
 					<div class="controls">
-						<input type="text" id="sendtext" placeholder="跟小浪机器人说点什么吧~" class="span10 huge" />
+						<input type="text" id="sendtext" placeholder="跟小机器人说点什么吧~" class="span10 huge" />
 						<a id="send" href="###" class="send pull-right">发送</a>
 					</div>
 				</div>
 
 			</div>
 			<div class="span3">
-				<img src="robot.png" width="80%" style="margin-top:20%">
+				<div id="lh">
+					<img src="robot.png" width="80%" style="margin-top:20%">
+				</div>
 			</div>
 		</div>
 	</div>
@@ -114,24 +117,49 @@
 	</footer>
     <!-- JavaScript -->
     <script src="../../js/jquery.min.js"></script>
+	<script src="../../js/jquery-ui.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			$("#content").append("<div class='robotmes'><img src='robothead.png' width='40px'><span class='rt'>你好，很高兴见到你！</span><div><br>");
+			function runEffect() {
+				var options = {};
+				$("#lh").show("shake", options, 1000, null);
+			};
+			$("#content").append("<div class='robotmes'><div class='rt'><img src='robothead.png' width='40px'>你好，我叫浪花，很高兴见到你！</div><div>");
 			$("#send").click(function() {
+				chat();
+			}); 
+			$(document).keyup(function(event){
+				if(event.keyCode == 13){
+					chat();
+				}
+			});
+			function chat() {
+				$("#lh").hide();
+				runEffect();
 				var sendtext = $("#sendtext").val();
-				$("#content").append("<div class='humanmes'><span class='ht'>" + sendtext + "</span><img src='peoplehead.png' width='40px' class='pull-right'><div><br>");
+				$("#content").append("<div class='humanmes'><div class='ht'>" + sendtext + "<img src='peoplehead.png' width='40px' class='pull-right'></div><div>");
 				$("#sendtext").val("");
 					$.ajax({
 						url:"http://www.tuling123.com/openapi/api?key=281741c93a7b392eb1421f7075af9ffb&info=" + sendtext,
 						dataType:"json",
 						async:false,
 						success:function(data){
-							$("#content").append("<div class='robotmes'><span class='rt'><img src='robothead.png' width='40px'>" + data.text + "</span><div><br>");
+							$("#content").append("<div class='robotmes'><div class='rt'><img src='robothead.png' width='40px'>" + data.text + "</div><div>");						
+							$.each(data ,function(key){
+								if(key == "url") {
+									$("#content").append("<div class='robotmes'><div class='rt'><a href='" + data.url + "'>" + sendtext + "</a></div><div>");
+								} else if(key == "list") {
+									for(j = 0; j < data.list.length; j++) {
+										$("#content").append("<div class='robotmes'><div class='rt'><a href='" + data.list[j].detailurl + "'>" + data.list[j].article + "</a></div><div>");
+									}
+								}
+							});
+							
 						},
 						error:function(){alert("Error")}
 					});
-			}) 
+			}
 		});
 	</script>
 </body>
