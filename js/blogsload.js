@@ -47,6 +47,8 @@ $(document).ready(function() {
 			$("#prose").append(addblog(blogs,i,tags));
 		} else if(blogs[i].type == "心情寄语") {
 			$("#emotion").append(addblog(blogs,i,tags));
+		} else if(blogs[i].type == "奇闻趣问") {
+			$("#interest").append(addblog(blogs,i,tags));
 		} else {}
 	}	
 	//add Blog
@@ -89,6 +91,8 @@ $(document).ready(function() {
 			return "tab_4_3";
 		} else if(type == "心情寄语") {
 			return "tab_4_4";
+		} else if(type == "奇闻趣问") {
+			return "tab_4_5";
 		} else {}
 	}
 	
@@ -124,75 +128,7 @@ $(document).ready(function() {
 		}
 	}
 	
-	//知乎热文
-	/*
-	for(a = 0; a < tagsarr.length; a++) {
-				if(blogs[i].tags[t] == tagsarr[a]) {
-					has = true;
-					tagindex.put(a);
-					if(tagnum[a] == "" || tagnum[a] == null) {
-						tagnum[a] = 2;
-					} else {
-						tagnum[a]++;
-					}
-				}
-			}
-			
-	var myDate = new Date();
-			if((myDate.getMonth() + "").length == 1) {
-				month = "0" + (myDate.getMonth() + 1);
-			} else {
-				month = myDate.getMonth();
-			}
-			if((myDate.getDate() + "").length == 1) {
-				day = "0" + myDate.getDate();
-			} else {
-				day = myDate.getDate() - 1;
-			}
-			var date = myDate.getFullYear() + month + day;
-			//alert(myDate.getFullYear() + "-" + month + "-" + day);
-			$("#date").val(myDate.getFullYear() + "-" + month + "-" + day);
-			$.ajax({
-				url:"http://api.kanzhihu.com/getpostanswers/" + date + "/recent",
-				dataType:"json",
-				async:false,
-				success:function(data){
-					//for(i = 0; i < data.answers.length; i++) {
-					for(i = 0; i < 5; i++) {
-						$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><span>" + data.answers[i].vote + "</span><i class=\"icon-thumbs-up\"></i><br><img src=\"" + data.answers[i].avatar + "\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><hr>" );
-					}
-				},
-				error:function(){alert("Error")}
-			});
-			
-			$("#refresh").click(function() {
-				var year = ["2014", "2015", "2016"];
-				var month = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
-				var day = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"];
-				var synum = Math.round(Math.random() * 2);
-				var smnum = Math.round(Math.random() * 11);
-				var sdnum = Math.round(Math.random() * 30);
-				selectdate = "" + year[synum] + month[smnum] + day[sdnum];
-				//alert(selectdate);
-				if(selectdate != null && selectdate != "") {
-					$("#content").empty();
-					$.ajax({
-						url:"http://api.kanzhihu.com/getpostanswers/" + selectdate + "/recent",
-						dataType:"json",
-						async:false,
-						success:function(data){
-							//for(i = 0; i < data.answers.length; i++) {
-							for(i = 0; i < 5; i++) {
-								$("#content").append("<a href=\"http://www.zhihu.com/question/" + data.answers[i].questionid + "\" target=\"_blank\">" + data.answers[i].title + "</a><span>" + data.answers[i].vote + "</span><i class=\"icon-thumbs-up\"></i><br><img src=\"" + data.answers[i].avatar + "\"><p>" + data.answers[i].authorname + "-" + data.answers[i].time + "</p><hr>" );
-							}
-						},
-						error:function(){alert("Error")}
-					});
-				} else {
-					alert("错误日期，请重新选择！");
-				}
-			})
-			*/
+	
 }) 
 	
 	
