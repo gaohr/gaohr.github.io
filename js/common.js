@@ -14,6 +14,7 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"<li><a href=\"site/food/index.html\" target=\"_blank\" title=\"菜谱查询\"><img alt=\"\" src=\"img/images/food.png\"></a></li>" +
 							"<li><a href=\"site/weixin/index.html\" target=\"_blank\" title=\"微信精选\"><img alt=\"\" src=\"img/images/Weixinhot.png\"></a></li>" +
 							"<li><a href=\"site/natgeo/index.html\" target=\"_blank\" title=\"国家地理百年典藏\"><img alt=\"\" src=\"img/images/NationalGeo.png\"></a></li>" +
+							"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"\" src=\"img/images/BBCWar2.png\"></a></li>" +
 							"</ul>" +
 							"<ul style=\"margin-top:5px;color:#555\">" +
 							"<li type=\"circle\">Resume online</li>" +
@@ -24,6 +25,7 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"<li type=\"circle\">Food</li>" +
 							"<li type=\"circle\">Hot topic in weixin</li>" +
 							"<li type=\"circle\">National Geographics</li>" +
+							"<li type=\"circle\">The World at War</li>" +
 							"</ul><hr>");
 	
 	
