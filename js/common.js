@@ -6,6 +6,7 @@
 
 //related links
 $("#relatedlinks").append("<ul class=\"blog-images\">" +
+							"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"\" src=\"img/images/SpecialTopics.png\"></a></li>" +
 							"<li><a href=\"###\" target=\"\" title=\"我的简历\"><img alt=\"\" src=\"img/images/resume.png\"></a></li>" +
 							"<li><a href=\"site/zhihu/index.html\" target=\"_blank\" title=\"知乎热门\"><img alt=\"\" src=\"img/images/zhihu.png\"></a></li>" +
 							"<li><a href=\"site/music/index.html\" target=\"_blank\" title=\"小花音乐盒\"><img alt=\"\" src=\"img/images/music.png\"></a></li>" +
@@ -17,6 +18,7 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"\" src=\"img/images/BBCWar2.png\"></a></li>" +
 							"</ul>" +
 							"<ul style=\"margin-top:5px;color:#555\">" +
+							"<li type=\"circle\">Special Topics</li>" +
 							"<li type=\"circle\">Resume online</li>" +
 							"<li type=\"circle\">Hot topic in Zhihu</li>" +
 							"<li type=\"circle\">Music：Free time</li>" +

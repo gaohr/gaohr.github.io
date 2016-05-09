@@ -4,8 +4,9 @@
 .topic a > p {font-size:1.2em;font-family:'Microsoft YaHei';margin:2px}
 
 .alltopics a {margin:5px;color:#933;}
-.alltopics a:hover {margin:5px;color:#369;}
-.alltopics a > p {font-size:1.1em;border-left:5px solid #a77;}
+.alltopics a:hover {color:#369;}
+.alltopics a > p {font-size:1.1em;border-left:5px solid rgba(0,0,0,0);}
+.alltopics a > p:hover {font-size:1.1em;border-left:5px solid #a77;}
 
 .topiccontent {color:#222;background:#eee;padding:10px}
 .topiccontent h2 {text-align:center}
