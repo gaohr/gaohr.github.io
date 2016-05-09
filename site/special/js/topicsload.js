@@ -116,7 +116,7 @@ $(document).ready(function() {
 	for(tr = 0; tr < 3; tr++) {
 		$("#topics-right").append(
 			"<div class='alltopics'>" +
-				"<a href='../" + topics[tr].href + "' style='float:right'><p>" + topics[tr].title + "</p></a>" +
+				"<a href='../" + topics[tr].href + "'><p>" + topics[tr].title + "</p></a>" +
 			"</div><br><hr>"
 		);
 	}
