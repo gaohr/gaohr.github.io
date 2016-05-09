@@ -3160,15 +3160,12 @@ Tiles(new in v1.1.1)
   float: left;
   height: 130px;
   width: 130px !important;
-  cursor: pointer;
   text-decoration: none;
   color: #ffffff;
   position: relative;
   font-weight: 300;
   font-size: 12px;
   letter-spacing: 0.02em;
-  line-height: 20px;
-  font-smooth: always;
   overflow: hidden;
   border: 4px solid transparent;
   margin: 0 10px 10px 0;
@@ -3181,19 +3178,19 @@ Tiles(new in v1.1.1)
 }
 
 .tile.double {
-  width: 278px !important;
+  width: 278px;
 }
 
 .tile.double-down {
-  height: 278px !important;
+  height: 278px;
 }
 
 .tile:active, .tile.selected {
-  border-color: #ccc;
+  border-color: #eeb9aa;
 }
 
 .tile:hover {
-  border-color: #aaa;
+  border-color: #ee8a6d;
 }
 
 .tile.selected .corner:after {  
@@ -3345,9 +3342,9 @@ Tiles(new in v1.1.1)
   margin-left: 10px;
   margin-right: 15px;
   font-weight: 400;
-  font-size: 13px;
-  font-smooth: always;
+  font-size: 14px;
   color: #ffffff;
+  text-shadow:1px 1px 1px #555;
 }
 
 .tile .tile-object > .name i {

@@ -128,7 +128,18 @@ $(document).ready(function() {
 		}
 	}
 	
-	
+	//Topics load
+	var topics = eval('topicslist');
+	for(t = 0; t < topics.length; t++) {
+		$("#topics").append(
+			"<div class='topicbody'>" +
+				"<a href='site/special/" + topics[t].href + "' title='" + topics[t].title + "'>" +
+					"<img src='site/special/" + topics[t].img + "'>" +
+					"<p><b>" + topics[t].title + "</b></p>" +
+				"</a>" +
+			"</div>"
+		);
+	}
 }) 
 	
 	

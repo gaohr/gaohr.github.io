@@ -11,7 +11,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
-.main-page {position:relative;margin-top:60px;background-color:#ddd;z-index:0}
+.main-page {position:relative;margin-top:60px;background-color:#ddd;z-index:0;height:auto}
 .host {width:100%;text-align:center}
 .host img {width:80%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
@@ -25,22 +25,12 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .links .weibo  {color:#e03b29}.links .github {color:#333}.links .google  {color:#3b8029}.links .twitter {color:#2366bb}.links .fb {color:#5366bb}
 .links a :hover{color:#236eb8}
 
-.centerpage {background-color:#eee;padding:10px}
+.centerpage {background-color:#eee;padding:10px;height:auto}
 .copyright{text-align:center;color:#555 !important;}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}
 .portlet .title b{padding:3px;color:#333;font-size:1.2em;border-bottom:3px solid #d85546;font-family:'Microsoft YaHei'}
 .portlet .title i{color:#333;padding:2px;font-size:1.2em;border-bottom:6px solid #d85546;}
-
-/*Zhihu*/
-#content {padding:10px;background:rgba(255,255,255,0.2);width:100%;}
-#content a {font-size:1.2em;background:rgba(255,255,255,.1);padding:5px 5px;color:#555;border-left:5px solid #a55;border-bottom:1px solid #a55;border-radius:2px;line-height:1.7em}
-#content a:hover {color:#522}
-#content img {width:24px;float:left;margin:5px}
-#content p {height:auto;color:#777;line-height:50%;font-size:12px;margin:10px}
-#content span{color:#fff;background:#a66;font-size:1em;margin:5px;padding:2px 5px;border-radius:10px}
-#content i{color:#a88;font-size:1.5em;margin:0px;}
-.zhihu p{color:#a33;font-size:2em;font-family:宋体;font-weight:bold;margin:2px;}
 
 /*About*/
 .info {font-family:'Microsoft YaHei'}
@@ -50,6 +40,13 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .moreinfo {color:#333}
 .moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:2px solid #f99186;}
 .moreinfo .infocontent{color:#444;margin-left:5%}
+
+/*专题*/
+.topic-top {font-size:1.6em;font-family:'宋体';color:#b83a00;font-weight:bold;}
+.topicbody {position:relative;float:left;margin:1.5%;width:22%;min-width:150px;border-top:5px solid rgba(0,0,0,0);border-bottom:5px solid rgba(0,0,0,0);text-align:center;transition:all 0.3s}
+.topicbody:hover {border-top:5px solid #bb573a;border-bottom:5px solid #bb573a}
+.topicbody img {}
+.topicbody p {margin-top:-15%;color:#fff;text-shadow:1px 1px 1px #555;font-size:1.2em;font-family:'Microsoft YaHei'}
 
 /*滚动条美化*/
 ::-webkit-scrollbar{width:10px;height:6px}
