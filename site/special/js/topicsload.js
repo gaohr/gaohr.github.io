@@ -35,9 +35,9 @@ $(document).ready(function() {
 					"<div id=\"text\"><a href=\"../../index.html\"><span class=\"spot\"></span><i class=\"icon-home\"></i></a></div>" +
 				"</div>" +
 				"<div class=\"sider-menu centerer-menu wrap-menu\">" +
-					"<a href=\"../../Blogs.html\" class=\"btn-menu menu-active\">博客</a>" +
+					"<a href=\"../../Blogs.html\" class=\"btn-menu\">博客</a>" +
 					"<a href=\"../skills/index.html\" class=\"btn-menu\">图谱</a>" +
-					"<a href=\"../special/index.html\" class=\"btn-menu\">专题</a>" +
+					"<a href=\"../special/index.html\" class=\"btn-menu menu-active\">专题</a>" +
 					"<a href=\"../../About.html\" class=\"btn-menu\">关于</a>" +
 					"<a href=\"../../Contact.html\" class=\"btn-menu\">留言</a>" +
 				"</div>" +
