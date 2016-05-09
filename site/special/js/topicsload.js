@@ -117,7 +117,7 @@ $(document).ready(function() {
 		$("#topics-right").append(
 			"<div class='alltopics'>" +
 				"<a href='../" + topics[tr].href + "'><p>" + topics[tr].title + "</p></a>" +
-			"</div><br><hr>"
+			"</div><hr>"
 		);
 	}
 })
