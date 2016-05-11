@@ -1,0 +1,36 @@
+var geojson_gulf = {
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "name": "寒冰湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -131.620248, 59.740253 ] } },
+{ "type": "Feature", "properties": { "name": "海豹湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -113.067837, 58.867731 ] } },
+{ "type": "Feature", "properties": { "name": "明焰湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -142.597782, 34.003820 ] } },
+{ "type": "Feature", "properties": { "name": "盐矛滩", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -137.957852, 34.423613 ] } },
+{ "type": "Feature", "properties": { "name": "咬人湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -113.692594, 33.741654 ] } },
+{ "type": "Feature", "properties": { "name": "铁民湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -132.425774, 20.750407 ] } },
+{ "type": "Feature", "properties": { "name": "螃蟹湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -109.593818, 17.494233 ] } },
+{ "type": "Feature", "properties": { "name": "喉道", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -110.093178, 9.255673 ] } },
+{ "type": "Feature", "properties": { "name": "黑水湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -113.627275, 7.491602 ] } },
+{ "type": "Feature", "properties": { "name": "神眼湖", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -123.151202, 12.295126 ] } },
+{ "type": "Feature", "properties": { "name": "破船湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -110.953076, -2.800975 ] } },
+{ "type": "Feature", "properties": { "name": "多恩海", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -119.178468, -10.208839 ] } },
+{ "type": "Feature", "properties": { "name": "低语湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -142.927416, -14.548994 ] } },
+{ "type": "Feature", "properties": { "name": "雷德温海峡", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -142.205114, -17.682111 ] } },
+{ "type": "Feature", "properties": { "name": "潘托斯湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -98.816807, 5.482530 ] } },
+{ "type": "Feature", "properties": { "name": "密尔海", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -99.214681, -5.669192 ] } },
+{ "type": "Feature", "properties": { "name": "罗拉斯湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -91.008840, 21.880840 ] } },
+{ "type": "Feature", "properties": { "name": "叹息之海", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -65.739395, -16.633848 ] } },
+{ "type": "Feature", "properties": { "name": "烟海", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -64.903191, -30.022885 ] } },
+{ "type": "Feature", "properties": { "name": "奴隶湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -53.406523, -16.240292 ] } },
+{ "type": "Feature", "properties": { "name": "悲痛海湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -55.574805, -31.714806 ] } },
+{ "type": "Feature", "properties": { "name": "吉斯卡利海峡", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -44.756876, -33.002349 ] } },
+{ "type": "Feature", "properties": { "name": "鲸鱼湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -24.066443, 38.781347 ] } },
+{ "type": "Feature", "properties": { "name": "獠牙湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -44.344726, 21.106037 ] } },
+{ "type": "Feature", "properties": { "name": "玉海之门", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -19.902993, -31.483233 ] } },
+{ "type": "Feature", "properties": { "name": "欢笑海", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -102.706097, -52.213594 ] } },
+{ "type": "Feature", "properties": { "name": "鹦鹉湾", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -96.190175, -58.652013 ] } },
+{ "type": "Feature", "properties": { "name": "靛青海峡", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -100.126324, -55.936258 ] } },
+{ "type": "Feature", "properties": { "name": "匕首湖", "Id": 0.000000 }, "geometry": { "type": "Point", "coordinates": [ -82.755841, -0.292493 ] } }
+]
+}

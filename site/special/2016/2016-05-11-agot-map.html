@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="stylesheet" type="text/css" href="../topics.css">
+	<link rel="shortcut icon" href="../../../img/mainicon.png" />
+	<style>
+        #map {width:100%;height:100%}
+    </style>
+	<link rel="stylesheet" href="./2016-05-11-agot-map/resources/ol.css" />
+    <link rel="stylesheet" href="./2016-05-11-agot-map/resources/ol3-layerswitcher.css">
+    <link rel="stylesheet" href="./2016-05-11-agot-map/resources/qgis2web.css">
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+    <script>proj4.defs('EPSG:4326','+proj=longlat +datum=WGS84 +no_defs');</script>
+    <script src="./2016-05-11-agot-map/resources/polyfills.js"></script>
+    <script src="./2016-05-11-agot-map/resources/ol.js"></script>
+    <script src="./2016-05-11-agot-map/resources/OSMBuildings-OL3.js"></script>
+    <script src="./2016-05-11-agot-map/resources/ol3-layerswitcher.js"></script>
+    <script src="./2016-05-11-agot-map/layers/ocean.js"></script><script src="./2016-05-11-agot-map/layers/Sothoryos.js"></script><script src="./2016-05-11-agot-map/layers/Essos.js"></script><script src="./2016-05-11-agot-map/layers/Westeros.js"></script><script src="./2016-05-11-agot-map/layers/TheWall.js"></script><script src="./2016-05-11-agot-map/layers/mountain.js"></script><script src="./2016-05-11-agot-map/layers/forest.js"></script><script src="./2016-05-11-agot-map/layers/mountain.js"></script><script src="./2016-05-11-agot-map/layers/place.js"></script><script src="./2016-05-11-agot-map/layers/relic.js"></script><script src="./2016-05-11-agot-map/layers/river.js"></script><script src="./2016-05-11-agot-map/layers/road.js"></script><script src="./2016-05-11-agot-map/layers/castles.js"></script><script src="./2016-05-11-agot-map/layers/cities.js"></script><script src="./2016-05-11-agot-map/layers/gulf.js"></script><script src="./2016-05-11-agot-map/layers/island.js"></script><script src="./2016-05-11-agot-map/layers/sea.js"></script><script src="./2016-05-11-agot-map/layers/forest.js"></script>
+    <script src="./2016-05-11-agot-map/styles/ocean_style.js"></script><script src="./2016-05-11-agot-map/styles/Sothoryos_style.js"></script><script src="./2016-05-11-agot-map/styles/Essos_style.js"></script><script src="./2016-05-11-agot-map/styles/Westeros_style.js"></script><script src="./2016-05-11-agot-map/styles/TheWall_style.js"></script><script src="./2016-05-11-agot-map/styles/mountain_style.js"></script><script src="./2016-05-11-agot-map/styles/forest_style.js"></script><script src="./2016-05-11-agot-map/styles/mountain_style.js"></script><script src="./2016-05-11-agot-map/styles/place_style.js"></script><script src="./2016-05-11-agot-map/styles/relic_style.js"></script><script src="./2016-05-11-agot-map/styles/river_style.js"></script><script src="./2016-05-11-agot-map/styles/road_style.js"></script><script src="./2016-05-11-agot-map/styles/castles_style.js"></script><script src="./2016-05-11-agot-map/styles/cities_style.js"></script><script src="./2016-05-11-agot-map/styles/gulf_style.js"></script><script src="./2016-05-11-agot-map/styles/island_style.js"></script><script src="./2016-05-11-agot-map/styles/sea_style.js"></script><script src="./2016-05-11-agot-map/styles/forest_style.js"></script>
+        <script src="./2016-05-11-agot-map/layers/layers.js" type="text/javascript"></script> 
+    <title>GaoHR | 冰与火之歌电子地图</title>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="topicmainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../site/special/index.html"> Topic</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="topicid" style="display:none" value="2016051101">
+				<div id="map">
+					<div id="popup" class="ol-popup">
+						<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+						<div id="popup-content"></div>
+					</div>
+					<div id="popup-c" class="ol-popup-c">
+						<a href="#" id="popup-closer-c" class="ol-popup-closer-c"></a>
+						<div id="popup-content-c"></div>
+					</div>
+				</div>
+				<!-- UY BEGIN-->
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>
+				<!-- Disqus
+				<div id="disqus_thread"></div>
+				<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//gaohraf.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript> -->
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>更多专题</b></p>
+					<br>
+					<div id="topics-right"></div>
+				</div>
+				<div style="width:80%;margin-left:10%">
+					<img src="./2016-05-11-agot-map/img/img01.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img02.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img03.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img04.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img05.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img06.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img07.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img08.jpg" style="border-radius:50%">
+					<img src="./2016-05-11-agot-map/img/img09.jpg" style="border-radius:50%">
+				</div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+	</div>
+	<!-- footer  --> 
+	<footer>
+		<p class="copyright">Copyright © 2016 GAO Huiran</a></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../js/topicslist.js"></script>
+	<script src="../js/topicsload.js"></script>
+	<script src="./2016-05-11-agot-map/resources/qgis2web.js"></script>
+    <script src="./2016-05-11-agot-map/resources/Autolinker.min.js"></script>
+</script>
+</body>
+</html>

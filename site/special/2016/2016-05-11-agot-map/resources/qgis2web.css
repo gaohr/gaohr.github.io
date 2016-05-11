@@ -1,0 +1,42 @@
+
+.ol-popup {
+    display: none;
+    position: absolute;
+    padding: 2px;
+    border-radius: 10px;
+    border: 1px solid #fff;
+    bottom: 0;  
+    height: auto;
+    width: 60px; 
+	background-image: url(../img/namebg.jpg);
+	text-align:center;
+	color:#fff;
+	font-family:'Microsoft YaHei';
+	text-shadow:5px 5px 5px #333
+}
+.ol-attribution a {
+    text-decoration: none;
+    color: #666;
+    font-family: sans-serif;
+    font-size: 100%;
+}
+.ol-popup-c {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    border-radius: 10px;
+    bottom: 5px;  
+    height: auto;
+    width: 190px; 
+	background-image: url(../img/textbg.png);
+}
+.ol-popup-c .name {font-size:1.2em;margin:30px 0 0 30px;color:#83331b;text-shadow:1px 1px 5px #eee}
+.ol-popup-c .info {font-size:0.8em;margin:10px 0 0 15px;color:#333;margin-bottom:20px}
+.ol-popup-closer-c {font-size:0.8em;text-decoration: none;position: absolute;top: 20px;right: 8px;background:#4d2d23;color:#fff;border-radius:50%;padding:1px 8px}
+.ol-popup-closer-c:after {content: "X";}
+.ol-attribution-c a {
+    text-decoration: none;
+    color: #666;
+    font-family: sans-serif;
+    font-size: 100%;
+}
