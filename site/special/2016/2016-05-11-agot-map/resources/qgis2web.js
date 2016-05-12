@@ -50,7 +50,7 @@ var ALL_FIELDS = 1
  * @param layer {ol.Layer} Layer to find field info about
  */
 function getPopupFields(layerList, layer) {
-    popupLayers = [0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0];
+    popupLayers = [0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0];
     // Determine the index that the layer will have in the popupLayers Array,
     // if the layersList contains more items than popupLayers then we need to
     // adjust the index to take into account the base maps group

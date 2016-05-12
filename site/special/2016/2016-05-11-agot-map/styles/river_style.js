@@ -24,7 +24,7 @@ var style_river = function(feature, resolution){
               offsetX: 5,
               offsetY: 3,
               fill: new ol.style.Fill({
-                color: "rgba(31, 120, 180, 0.5)"
+                color: "rgba(31, 120, 180, 0.8)"
               }),
             });
 			styleCache_river[key] = new ol.style.Style({"text": text})
