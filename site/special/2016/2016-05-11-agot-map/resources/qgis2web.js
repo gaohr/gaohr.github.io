@@ -35,7 +35,7 @@ var map = new ol.Map({
     overlays: [overlayPopup, overlayPopup_c],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 1, projection: 'EPSG:4326'
+         maxZoom: 28, minZoom: 2, projection: 'EPSG:4326'
     })
 });
 map.getView().fit([93.717497, -29.679874, 69.187273, 37.030766], map.getSize());
