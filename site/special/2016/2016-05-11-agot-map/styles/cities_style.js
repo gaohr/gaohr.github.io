@@ -8,7 +8,7 @@ var style_cities = function(feature, resolution){
 			anchor: [3, 3],
 			anchorXUnits: "pixels",
 			anchorYUnits: "pixels",
-			src: '../img/blue-marker.svg'
+			src: './img/blue-marker.svg'
 		})
 	})];
     if (feature.get("name") !== null) {
