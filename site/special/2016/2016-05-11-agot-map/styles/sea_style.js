@@ -24,9 +24,13 @@ var style_sea = function(feature, resolution){
               offsetX: 5,
               offsetY: 3,
               fill: new ol.style.Fill({
-                color: "rgba(255,255,255, 1.0)"
+                color: "rgba(55,105,155, 1.0)"
               }),
-            });
+			  stroke: new ol.style.Stroke({
+				color: '#fff',
+				width: 3
+			})
+        });
         styleCache_sea[key] = new ol.style.Style({"text": text})
     }
     var allStyles = [styleCache_sea[key]];

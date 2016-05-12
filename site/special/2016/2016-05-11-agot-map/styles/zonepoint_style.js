@@ -17,16 +17,21 @@ var style_zonepoint = function(feature, resolution){
 
     if (!styleCache_zonepoint[key]){
         var text = new ol.style.Text({
-              font: '18px Calibri,sans-serif',
+              font: '16px serif',
               text: labelText,
-              textBaseline: "center",
-              textAlign: "left",
+              textBaseline: "middle",
+              textAlign: "center",
               offsetX: 1,
               offsetY: 3,
+			  scale: 1,
               fill: new ol.style.Fill({
-                color: "rgba(255, 255, 255, 1)"
+                color: "rgba(200, 40, 40, 1)"
               }),
-            });
+			  stroke: new ol.style.Stroke({
+				color: '#fff',
+				width: 3
+			})
+        });
         styleCache_zonepoint[key] = new ol.style.Style({"text": text})
     }
     var allStyles = [styleCache_zonepoint[key]];
