@@ -5,7 +5,7 @@ var style_Westeros = function(feature, resolution){
     var value = ""
     var size = 0;
     var style = [ new ol.style.Style({
-        stroke: new ol.style.Stroke({color: "rgba(175,179,138,1.0)", lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}) , fill: new ol.style.Fill({color: "rgba(241,244,199,1.0)"})
+        stroke: new ol.style.Stroke({color: "rgba(255,255,199,1.0)", lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 1}) , fill: new ol.style.Fill({color: "rgba(238,217,171,1.0)"})
     })];
     if ("" !== null) {
         var labelText = String("");

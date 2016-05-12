@@ -17,14 +17,14 @@ var style_sea = function(feature, resolution){
 
     if (!styleCache_sea[key]){
         var text = new ol.style.Text({
-              font: '20px STKaiti',
+              font: '22px STKaiti',
               text: labelText,
               textBaseline: "center",
               textAlign: "left",
               offsetX: 5,
               offsetY: 3,
               fill: new ol.style.Fill({
-                color: "rgba(0, 61, 104, 255)"
+                color: "rgba(255,255,255, 1.0)"
               }),
             });
         styleCache_sea[key] = new ol.style.Style({"text": text})

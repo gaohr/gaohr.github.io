@@ -17,7 +17,7 @@ var style_mountain = function(feature, resolution){
 
     if (!styleCache_mountain[key]){
         var text = new ol.style.Text({
-              font: '9.1px Calibri,sans-serif',
+              font: '13px Calibri,sans-serif',
               text: labelText,
               textBaseline: "center",
               textAlign: "left",
