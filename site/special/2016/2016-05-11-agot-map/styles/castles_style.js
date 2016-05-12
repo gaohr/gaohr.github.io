@@ -9,8 +9,8 @@ var style_castles = function(feature, resolution){
         image: new ol.style.Circle({radius: 1,
             stroke: new ol.style.Stroke({color: "rgba(0,0,0,1.0)", lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}), fill: new ol.style.Fill({color: "rgba(255,255,255,1.0)"})})
     })];
-    if ("" !== null) {
-        var labelText = String("");
+    if (feature.get("name") !== null && resolution < 0.08) {
+        var labelText = String(feature.get("name"));
     } else {
         var labelText = ""
     }

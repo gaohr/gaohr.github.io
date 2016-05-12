@@ -28,16 +28,17 @@ var expandedAttribution = new ol.control.Attribution({
 
 var map = new ol.Map({
     controls: ol.control.defaults({attribution:false}).extend([
-        expandedAttribution,
-		new ol.control.ScaleLine({}),
-		new ol.control.LayerSwitcher({tipLabel: "Layers"})
+        expandedAttribution,new ol.control.ScaleLine({}),new ol.control.LayerSwitcher({tipLabel: "Layers"})
     ]),
     target: document.getElementById('map'),
     renderer: 'canvas',
-    overlays: [overlayPopup, overlayPopup_c],
-    layers: layersList
+    overlays: [overlayPopup],
+    layers: layersList,
+    view: new ol.View({
+         maxZoom: 28, minZoom: 1, projection: 'EPSG:4326'
+    })
 });
-map.getView().fit([-134.154198, 20.422332, -34.562537, -16.291231], map.getSize());
+map.getView().fit([13.717497, -59.679874, 149.187273, 77.030766], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1

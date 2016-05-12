@@ -9,7 +9,7 @@ var style_road = function(feature, resolution){
     }),new ol.style.Style({
         stroke: new ol.style.Stroke({color: "rgba(251,154,153,1.0)", lineDash: null, lineCap: 'square', lineJoin: 'round', width: 1})
     })];
-    if (feature.get("name") !== null) {
+    if (feature.get("name") !== null && resolution < 0.05) {
         var labelText = String(feature.get("name"));
     } else {
         var labelText = ""

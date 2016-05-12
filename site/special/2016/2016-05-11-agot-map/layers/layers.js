@@ -144,6 +144,5 @@ jsonSource_forest.addFeatures(features_forest);var lyr_forest = new ol.layer.Vec
                 style: style_forest,
                 title: "forest"
             });
-
 lyr_ocean.setVisible(true);lyr_Sothoryos.setVisible(true);lyr_Essos.setVisible(true);lyr_Westeros.setVisible(true);lyr_TheWall.setVisible(true);lyr_mountain.setVisible(true);lyr_forest.setVisible(true);lyr_mountain.setVisible(true);lyr_place.setVisible(true);lyr_relic.setVisible(true);lyr_river.setVisible(true);lyr_road.setVisible(true);lyr_castles.setVisible(true);lyr_cities.setVisible(true);lyr_gulf.setVisible(true);lyr_island.setVisible(true);lyr_sea.setVisible(true);lyr_forest.setVisible(true);
 var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_TheWall,lyr_mountain,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_forest];

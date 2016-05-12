@@ -2,15 +2,13 @@
 var styleCache_cities={}
 var style_cities = function(feature, resolution){
     var value = ""
-	var iconStyle = [ new ol.style.Style({
-		image: new ol.style.Icon({
-			size: [5, 5],
-			anchor: [3, 3],
-			anchorXUnits: "pixels",
-			anchorYUnits: "pixels",
-			src: './img/blue-marker.svg'
-		})
-	})];
+    var style = [ new ol.style.Style({
+        image: new ol.style.Circle({radius: 4,
+            stroke: new ol.style.Stroke({color: "rgba(0,0,0,1.0)", lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}), fill: new ol.style.Fill({color: "rgba(100,48,20,1.0)"})})
+    }),new ol.style.Style({
+        image: new ol.style.Circle({radius: 2,
+            stroke: new ol.style.Stroke({color: "rgba(0,0,0,1.0)", lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}), fill: new ol.style.Fill({color: "rgba(255,255,255,1.0)"})})
+    })];
     if (feature.get("name") !== null) {
         var labelText = String(feature.get("name"));
     } else {
@@ -32,6 +30,6 @@ var style_cities = function(feature, resolution){
         styleCache_cities[key] = new ol.style.Style({"text": text})
     }
     var allStyles = [styleCache_cities[key]];
-    allStyles.push.apply(allStyles, iconStyle);
+    allStyles.push.apply(allStyles, style);
     return allStyles;
 };
