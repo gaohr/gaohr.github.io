@@ -31,14 +31,38 @@ jsonSource_Westeros.addFeatures(features_Westeros);var lyr_Westeros = new ol.lay
                 source:jsonSource_Westeros, 
                 style: style_Westeros,
                 title: "Westeros"
+            });var format_texturesign = new ol.format.GeoJSON();
+var features_texturesign = format_texturesign.readFeatures(geojson_texturesign, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_texturesign = new ol.source.Vector();
+jsonSource_texturesign.addFeatures(features_texturesign);var lyr_texturesign = new ol.layer.Vector({
+                source:jsonSource_texturesign, 
+                style: style_texturesign,
+                title: "texture-sign"
+            });var format_texturem = new ol.format.GeoJSON();
+var features_texturem = format_texturem.readFeatures(geojson_texturem, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_texturem = new ol.source.Vector();
+jsonSource_texturem.addFeatures(features_texturem);var lyr_texturem = new ol.layer.Vector({
+                source:jsonSource_texturem, 
+                style: style_texturem,
+                title: "texture-m"
+            });var format_texturet = new ol.format.GeoJSON();
+var features_texturet = format_texturet.readFeatures(geojson_texturet, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_texturet = new ol.source.Vector();
+jsonSource_texturet.addFeatures(features_texturet);var lyr_texturet = new ol.layer.Vector({
+                source:jsonSource_texturet, 
+                style: style_texturet,
+                title: "texture-t"
             });var format_TheWall = new ol.format.GeoJSON();
-var features_TheWall = format_TheWall.readFeatures(geojson_TheWall, 
+var features_TheWall = format_TheWall.readFeatures(geojson_Thewall, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
 var jsonSource_TheWall = new ol.source.Vector();
 jsonSource_TheWall.addFeatures(features_TheWall);var lyr_TheWall = new ol.layer.Vector({
                 source:jsonSource_TheWall, 
                 style: style_TheWall,
-                title: "TheWall"
+                title: "绝境长城"
             });var format_zone = new ol.format.GeoJSON();
 var features_zone = format_zone.readFeatures(geojson_zone, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
@@ -160,5 +184,5 @@ jsonSource_zonepoint.addFeatures(features_zonepoint);var lyr_zonepoint = new ol.
                 style: style_zonepoint,
                 title: "zone-point"
             });
-lyr_ocean.setVisible(true);lyr_Sothoryos.setVisible(true);lyr_Essos.setVisible(true);lyr_Westeros.setVisible(true);lyr_TheWall.setVisible(true);lyr_zone.setVisible(true);lyr_mountain.setVisible(true);lyr_place.setVisible(true);lyr_relic.setVisible(true);lyr_river.setVisible(true);lyr_road.setVisible(true);lyr_castles.setVisible(true);lyr_cities.setVisible(true);lyr_gulf.setVisible(true);lyr_island.setVisible(true);lyr_sea.setVisible(true);lyr_forest.setVisible(true);lyr_zonepoint.setVisible(true);
-var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_TheWall,lyr_zone,lyr_mountain,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_forest,lyr_zonepoint];
+lyr_ocean.setVisible(true);lyr_Sothoryos.setVisible(true);lyr_Essos.setVisible(true);lyr_Westeros.setVisible(true);lyr_texturesign.setVisible(true);lyr_texturem.setVisible(true);lyr_texturet.setVisible(true);lyr_TheWall.setVisible(true);lyr_zone.setVisible(true);lyr_mountain.setVisible(true);lyr_place.setVisible(true);lyr_relic.setVisible(true);lyr_river.setVisible(true);lyr_road.setVisible(true);lyr_castles.setVisible(true);lyr_cities.setVisible(true);lyr_gulf.setVisible(true);lyr_island.setVisible(true);lyr_sea.setVisible(true);lyr_forest.setVisible(true);lyr_zonepoint.setVisible(true);
+var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_texturesign,lyr_texturem,lyr_texturet,lyr_TheWall,lyr_zone,lyr_mountain,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_forest,lyr_zonepoint];
