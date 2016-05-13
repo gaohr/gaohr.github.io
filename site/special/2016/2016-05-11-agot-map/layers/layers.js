@@ -1,4 +1,4 @@
- 
+//update 
 var format_ocean = new ol.format.GeoJSON();
 var features_ocean = format_ocean.readFeatures(geojson_ocean, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
