@@ -1,4 +1,4 @@
-
+ 
 var format_ocean = new ol.format.GeoJSON();
 var features_ocean = format_ocean.readFeatures(geojson_ocean, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
@@ -31,14 +31,6 @@ jsonSource_Westeros.addFeatures(features_Westeros);var lyr_Westeros = new ol.lay
                 source:jsonSource_Westeros, 
                 style: style_Westeros,
                 title: "维斯特洛"
-            });var format_texturesign = new ol.format.GeoJSON();
-var features_texturesign = format_texturesign.readFeatures(geojson_texturesign, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
-var jsonSource_texturesign = new ol.source.Vector();
-jsonSource_texturesign.addFeatures(features_texturesign);var lyr_texturesign = new ol.layer.Vector({
-                source:jsonSource_texturesign, 
-                style: style_texturesign,
-                title: "地物标记"
             });var format_texturem = new ol.format.GeoJSON();
 var features_texturem = format_texturem.readFeatures(geojson_texturem, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
@@ -184,5 +176,5 @@ jsonSource_zonepoint.addFeatures(features_zonepoint);var lyr_zonepoint = new ol.
                 style: style_zonepoint,
                 title: "地区"
             });
-lyr_ocean.setVisible(true);lyr_Sothoryos.setVisible(true);lyr_Essos.setVisible(true);lyr_Westeros.setVisible(true);lyr_texturesign.setVisible(true);lyr_texturem.setVisible(true);lyr_texturet.setVisible(true);lyr_TheWall.setVisible(true);lyr_zone.setVisible(true);lyr_mountain.setVisible(true);lyr_place.setVisible(true);lyr_relic.setVisible(true);lyr_river.setVisible(true);lyr_road.setVisible(true);lyr_castles.setVisible(true);lyr_cities.setVisible(true);lyr_gulf.setVisible(true);lyr_island.setVisible(true);lyr_sea.setVisible(true);lyr_forest.setVisible(true);lyr_zonepoint.setVisible(true);
-var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_texturesign,lyr_texturem,lyr_texturet,lyr_TheWall,lyr_zone,lyr_mountain,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_forest,lyr_zonepoint];
+lyr_ocean.setVisible(true);lyr_Sothoryos.setVisible(true);lyr_Essos.setVisible(true);lyr_Westeros.setVisible(true);lyr_texturem.setVisible(true);lyr_texturet.setVisible(true);lyr_TheWall.setVisible(true);lyr_zone.setVisible(true);lyr_mountain.setVisible(true);lyr_place.setVisible(true);lyr_relic.setVisible(true);lyr_river.setVisible(true);lyr_road.setVisible(true);lyr_castles.setVisible(true);lyr_cities.setVisible(true);lyr_gulf.setVisible(true);lyr_island.setVisible(true);lyr_sea.setVisible(true);lyr_forest.setVisible(true);lyr_zonepoint.setVisible(true);
+var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_texturem,lyr_texturet,lyr_TheWall,lyr_zone,lyr_mountain,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_forest,lyr_zonepoint];
