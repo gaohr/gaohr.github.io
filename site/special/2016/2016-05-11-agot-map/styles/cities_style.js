@@ -46,7 +46,7 @@ var style_cities = function(feature, resolution){
         }))
       })];
 	}
-	}  else {
+	} else {
     var style = [ new ol.style.Style({
         image: new ol.style.Circle({radius: 4,
             stroke: new ol.style.Stroke({color: "rgba(0,0,0,1.0)", lineDash: null, lineCap: 'butt', lineJoin: 'miter', width: 0}), fill: new ol.style.Fill({color: "rgba(100,48,20,1.0)"})})

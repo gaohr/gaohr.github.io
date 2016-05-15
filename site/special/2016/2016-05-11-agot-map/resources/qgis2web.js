@@ -50,7 +50,7 @@ var ALL_FIELDS = 1
  * @param layer {ol.Layer} Layer to find field info about
  */
 function getPopupFields(layerList, layer) {
-    popupLayers = [0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0];
+    popupLayers = [0,0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,0,1,1,1];
     // Determine the index that the layer will have in the popupLayers Array,
     // if the layersList contains more items than popupLayers then we need to
     // adjust the index to take into account the base maps group
@@ -102,7 +102,7 @@ var onPointerMove = function(evt) {
         }
     }
 };
-
+var ifcity;
 var onSingleClick = function(evt) {
 	container.style.display = 'none';
     closer.blur();
@@ -111,19 +111,39 @@ var onSingleClick = function(evt) {
     var popupText_c = '';
     var currentFeature_c;
     var currentFeatureKeys_c;
+	var city = true;
+	ifcity = true;
     map.forEachFeatureAtPixel(pixel_c, function(feature_c, layer) {
         currentFeature_c = feature_c;
         currentFeatureKeys_c = currentFeature_c.getKeys();
         var field_c = getPopupFields(layersList, layer);
         if (field_c == NO_POPUP) {
         } else if (field_c == ALL_FIELDS) {
+			for (var i=0; i<currentFeatureKeys_c.length; i++) {
+				if(currentFeatureKeys_c[i] == 'type') {
+						if(currentFeature_c.get(currentFeatureKeys_c[i]) == 'war') {
+							city = false;
+							ifcity = city;
+							break;
+						}
+					}
+			}
             for (var i=0; i<currentFeatureKeys_c.length; i++) {
                 if (currentFeatureKeys_c[i] != 'geometry') {
-					if (currentFeatureKeys_c[i] == 'name') {
-						popupText_c = '<p class=\"name\"><b>' + currentFeature_c.get(currentFeatureKeys_c[i]) + '</b></p>'
-					} else if(currentFeatureKeys_c[i] == 'info') {
-						popupText_c += '<p class=\"info\">' + currentFeature_c.get(currentFeatureKeys_c[i]) + '</p>'
+					if(city) {
+						if (currentFeatureKeys_c[i] == 'name') {
+							popupText_c = '<p class=\"name\"><b>' + currentFeature_c.get(currentFeatureKeys_c[i]) + '</b></p>'
+						} else if(currentFeatureKeys_c[i] == 'info') {
+							popupText_c += '<p class=\"info\">' + currentFeature_c.get(currentFeatureKeys_c[i]) + '</p>'
+						}
+					} else {
+						if (currentFeatureKeys_c[i] == 'name') {
+							popupText_c = '<p class=\"name-w\"><b>' + currentFeature_c.get(currentFeatureKeys_c[i]) + '</b></p>'
+						} else if(currentFeatureKeys_c[i] == 'info') {
+							popupText_c += '<p class=\"info-w\">' + currentFeature_c.get(currentFeatureKeys_c[i]) + '</p>'
+						}
 					}
+					
                    
                 }
             }
@@ -135,7 +155,14 @@ var onSingleClick = function(evt) {
             }  
         }          
     });
-
+	//alert(ifcity)
+	if(!ifcity) {
+		$("div#popup-c").attr("class", "ol-popup-w");
+		$("a#popup-closer-c").attr("class", "ol-popup-closer-w");
+	} else {
+		$("div#popup-c").attr("class", "ol-popup-c");
+		$("a#popup-closer-c").attr("class", "ol-popup-closer-c");
+	}
     if (popupText_c) {
         overlayPopup_c.setPosition(coord_c);
         content_c.innerHTML = popupText_c;

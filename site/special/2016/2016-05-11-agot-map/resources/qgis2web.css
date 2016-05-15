@@ -40,3 +40,24 @@
     font-family: sans-serif;
     font-size: 100%;
 }
+.ol-popup-w {
+    display: none;
+    position: absolute;
+    padding: 5px;
+    border-radius: 2px;
+    bottom: 5px;  
+    height: 140px;
+    width: 270px; 
+	background-image: url(../img/textbg-w.png);
+	background-repeat:no-repeat;
+}
+.ol-popup-w .name-w {font-size:1.2em;margin:0px 0 0 50px;color:#111;text-shadow:1px 1px 5px #fff}
+.ol-popup-w .info-w {font-size:0.8em;margin:10px 10px 0 0;color:#111;margin-bottom:20px;text-shadow:3px 3px 5px #fff;background:rgba(255,255,255,0.5);box-shadow:inset 1px 1px 2px #555;padding:2px}
+.ol-popup-closer-w {font-size:0.8em;text-decoration: none;position: absolute;top: 10px;right: 8px;background:#555;color:#fff;border-radius:10%;padding:1px 5px}
+.ol-popup-closer-w:after {content: "X";}
+.ol-attribution-w a {
+    text-decoration: none;
+    color: #666;
+    font-family: sans-serif;
+    font-size: 100%;
+}
