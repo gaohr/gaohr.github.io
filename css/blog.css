@@ -4,7 +4,7 @@ Blog Page
 
 /*--Block Article--*/
 .blog-top {margin-bottom:10px;font-size:1.6em;font-family:'宋体';color:#1868b8;font-weight:bold;}
-.blog-page {margin-top:10px;font-family:'Microsoft YaHei'}
+.blog-page {margin-top:10px;font-family:'Microsoft YaHei';padding:0 2% 0 2%}
 .blog-page p {color:#555;}
 .blog-article  .blog-title{font-size:1.5em;color:#222;}
 .blog-article .blog-title:hover{color:#306cb5;}
