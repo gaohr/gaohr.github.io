@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="shortcut icon" href="../../../img/mainicon.png" />
+    <title>GaoHR | ENVI中波段运算（BandMath）工具常用函数及运算符</title>
+	<style>
+		.bmath b {color:#00498a}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2016052701">
+				<div class="blogcontent">
+					<h2>ENVI中波段运算（Band Math）工具常用函数及运算符</h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p>ENVI Band Math是一个灵活的图像波段处理工具，由于每个用户都有独特的需求，利用此工具用户可以自己定义处理算法，应用到在ENVI打开的波段或整个图像中，用户可以根据需要自定义简单或复杂的处理程序。例如：可以对图像进行简单加、减、乘、除运算，或使用IDL编写更复杂的处理运算功能，Band Math工具使用函数都是基于IDL的数据组运算符。</p>
+					<p class="imginblog"><img src="2016-05-27-envi-band-math/image001.png" style="float:right;margin:10px"></p>
+					<p>ENVI Band运算符使用方便且功能强大，它们可以对每一个像元进行检验和处理，避免了FOR循环（不允许在波段运算中使用）的使用。数组运算符包含关系运算符（LT、LE、EQ、NE、GE、GT）、Boolean运算符（AND、OR、NOT、XOR）和最小值、最大值运算符（<、>）。这些特殊的运算符对图像中的每个像元同时进行处理，将结果返还到与输入图像具有相同维数的图像中。</p>
+					<p>例如：</p>
+					<pre>（b1 lt 0）*（-999）+（b1 ge 0）* b1</pre>
+					<p>关系运算符对真值（关系成立）返回值为1，对假值（关系不成立）返回值为0。系统读取表达式（b1 lt 0）部分后将返还一个与b1维数相同的数组，其中b1值为负的区域返回值为1；其他部分返回值为0，因此在乘以替换值-999时，相当于只对那些满足条件的像元有影响。第二个关系运算符（b1 ge 0）是对第一个的补充——找出那些值为正或0的像元，乘以它们的初始值，然后再加入替换值后的数组中。</p>
+					<p>下表中描述了BandMath工具中常用的IDL数组操作函数，详细介绍，请参阅<a href="2016-05-27-envi-band-math/IDLrefguide.pdf">《IDL Reference Guide》<small>（点击下载查看）</small></a>。</p>
+					<br>
+					<div class="portlet box grey">
+							<div class="portlet-title">
+								<div class="caption">BandMath工具中常用的IDL数组操作函数</div>
+							</div>
+							<div class="portlet-body">
+								<table class="table table-hover bmath">
+									<thead>
+										<tr>
+											<th>种类</th>
+											<th>操作函数</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>基本运算</td>
+											<td>加 <b>+</b>、减 <b>-</b>、乘 <b>*</b>、除 <b>/</b></td>
+										</tr>
+										<tr>
+											<td>三角函数</td>
+											<td>正弦 <b>sin（x）</b>、余弦 <b>cos（x）</b>、正切 <b>tan（x）</b><br>
+												反正弦 <b>asin（x）</b>、反余弦 <b>acos（x）</b>、反正切 <b>atan（x）</b><br>
+												双曲正弦 <b>sinh（x）</b>、双曲余弦 <b>cosh（x）</b>、双曲正切 <b>tanh（x）</b></td>
+										</tr>
+										<tr>
+											<td>关系和逻辑运算符</td>
+											<td>小于 <b>LT</b>、小于等于 <b>LE</b>、等于 <b>EQ</b>、不等于 <b>NE</b>、大于等于 <b>GE</b>、大于 <b>GT</b> <br>
+												<b>AND</b>、<b>OR</b>、<b>NOT</b>、<b>XOR</b><br>
+												最小值运算符 <b><</b> 、最大值运算符 <b>></b> </td>
+										</tr>
+										<tr>
+											<td>其他数学函数</td>
+											<td>指数 <b>^</b>、自然指数 <b>exp（x）</b><br>
+												自然对数 <b>alog（x）</b><br>
+												以10为底的对数 <b>alog10（x）</b><br>
+												整型取整 <b>round（x）</b>、<b>ceil（x）</b>、<b>floor（x）</b><br>
+												平方根 <b>sqrt（x）</b><br>
+												绝对值 <b>abs（x）</b></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					
+				</div>
+				<!-- UY BEGIN
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>-->
+				<!-- Disqus -->
+				<div id="disqus_thread"></div>
+				<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//gaohraf.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+	</div>
+	<!-- footer  --> 
+	<footer>
+		<p class="copyright">Copyright © 2016 GAO Huiran</a></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../blogsload.js"></script>
+</script>
+</body>
+</html>
