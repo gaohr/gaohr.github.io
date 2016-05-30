@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2016052901", "title":"EASE-Grid投影介绍及其在ArcGIS中使用的方法", "type":"专业技术", "content":"ENVI Band Math是一个灵活的图像波段处理工具，由于每个用户都有独特的需求，利用此工具用户可以自己定义处理算法，应用到在ENVI打开的波段或整个图像中，用户可以根据需要自定义简单或复杂的处理程序。", "img":"site/blogs/2016/images/EASEGrid.jpg", "date":"2016-05-29", "href":"site/blogs/2016/2016-05-29-ease-grid.html", "comments":"0", "tags":["ArcGIS", "投影", "EASE-Grid"]},
+
 {"blogid":"2016052701", "title":"ENVI中波段运算（BandMath）工具常用函数及运算符", "type":"专业技术", "content":"ENVI Band Math是一个灵活的图像波段处理工具，由于每个用户都有独特的需求，利用此工具用户可以自己定义处理算法，应用到在ENVI打开的波段或整个图像中，用户可以根据需要自定义简单或复杂的处理程序。", "img":"site/blogs/2016/images/BandMath.jpg", "date":"2016-05-27", "href":"site/blogs/2016/2016-05-27-envi-band-math.html", "comments":"0", "tags":["ENVI", "遥感", "波段运算"]},
 
 {"blogid":"2016042401", "title":"MongoDB启动成功但连接不上的问题", "type":"专业技术", "content":"MongoDB配置完成后，并且正常启动连接了，但有时候突然就连接不上了，重启也无效，尽管重启成功！......捉急", "img":"site/blogs/2016/images/MongoDB.jpg", "date":"2016-04-24", "href":"site/blogs/2016/2016-04-24-error-in-mongodb-config.html", "comments":"0", "tags":["MongoDB", "数据库"]},

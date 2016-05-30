@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="shortcut icon" href="../../../img/mainicon.png" />
+    <title>GaoHR | EASE-Grid投影介绍及其在ArcGIS中使用的方法</title>
+	<style>
+		.bmath b {color:#00498a}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2016052901">
+				<div class="blogcontent">
+					<h2>EASE-Grid投影介绍及其在ArcGIS中使用的方法</h2>
+					<h2><small>Importing EASE-Grid Data into ArcGIS</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p><b>EASE-Grid</b>是基于美国雪冰数据中心发展的数字地图和网格定义的理论发展而来的一种网格定义，而在常用GIS软件和遥感影像处理软件（如ArcGIS、ENVI等）中并无预设定义，因此使用起来很不方便。本文简要说明了EASE-Grid投影方式的定义，并主要介绍将EASE-Grid投影导入ArcGIS中，以及EASE-Grid投影数据在ArcGIS中的使用。</p>
+					<ul>
+						<li><a href="#ca">（一） EASE-Grid 投影介绍</a></li>
+						<li><a href="#cb">（二） EASE-Grid 投影导入ArcGIS中的方法</a></li>
+					</ul>
+					<p id="ca" style="font-size:1.2em"><b>（一） EASE-Grid 投影介绍</b></p>
+					<p>EASE-Grid是基于美国雪冰数据中心发展的数字地图和网格定义的理论发展而来的一种网格定义，这种理论建立了一个软件程序库，假设网格数据集完全被定义为地图投影和网格点的覆盖晶格。EASE-Grid包含有3种投影，并有无限种可能的网格定义，以便于扩展应用。因此，EASE-Grid是一个通用工具，便于用户处理全球尺度的网格数据。</p>
+					<p><b>1. 全球圆柱等积投影定义</b></p>
+					<p>The North azimuthal equal-area map is defined by the following equations:</p>
+					<pre>r = 2*R/C * sin(lambda) * sin(PI/4 - phi/2) + r0<br>s = 2*R/C * cos(lambda) * sin(PI/4 - phi/2) + s0<br>h = cos(PI/4 - phi/2)<br>k = sec(PI/4 - phi/2)</pre>
+					<p class="imginblog"><img src="2016-05-29-ease-grid/EASE-Grid_World.jpg"></p>
+					<p><b>2. 北半球方位角等积投影定义</b></p>
+					<p>The South azimuthal equal-area map is defined by the following equations:</p>
+					<div class="row-fluid">
+						<div class="span8">
+							<pre>r = 2*R/C * sin(lambda) * cos(PI/4 - phi/2) + r0<br>s = -2*R/C * cos(lambda) * cos(PI/4 - phi/2) + s0<br>h = sin(PI/4 - phi/2)<br>k = csc(PI/4 - phi/2)</pre>
+						</div>
+						<div class="span4">
+							<p class="imginblog"><img src="2016-05-29-ease-grid/north.png" style="width:50%"></p>
+						</div>
+					</div>
+					<p><b>3. 南半球方位角等积投影定义</b></p>
+					<p>The South azimuthal equal-area map is defined by the following equations:</p>
+					<div class="row-fluid">
+						<div class="span8">
+							<pre>r = 2*R/C * sin(lambda) * cos(PI/4 - phi/2) + r0<br>s = -2*R/C * cos(lambda) * cos(PI/4 - phi/2) + s0<br>h = sin(PI/4 - phi/2)<br>k = csc(PI/4 - phi/2)</pre>
+						</div>
+						<div class="span4">
+							<p class="imginblog"><img src="2016-05-29-ease-grid/south.png" style="width:50%"></p>
+						</div>
+					</div>
+					<div class="portlet box grey" style="width:60%;margin-left:20%;">
+							<div class="portlet-title">
+								<div class="caption">变量定义表</div>
+							</div>
+							<div class="portlet-body">
+								<table class="table table-hover bmath">
+									<thead><tr><th>Variable</th><th>Definition</th></tr></thead>
+									<tbody><tr><td>r</td><td>Column coordinate</td></tr><tr><td>s</td><td>Row coordinate</td></tr><tr><td>h</td><td>Particular scale along meridians</td></tr><tr><td>k</td><td>Particular scale along parallels</td></tr><tr><td>lambda</td><td>Longitude in radians</td></tr><tr><td>phi</td><td>Latitude in radians</td></tr><tr><td>R</td><td>Radius of the Earth = 6371.228 km</td></tr><tr><td>C</td><td>Nominal cell size</td></tr><tr><td>r0</td><td>Map origin column</td></tr><tr><td>s0</td><td>Map origin row</td></tr></tbody>
+								</table>
+							</div>
+					</div>
+					<p id="cb" style="font-size:1.2em"><b>（二） EASE-Grid 投影导入ArcGIS中的方法</b></p>
+					<p><b>1. 更改数据文件名</b></p>
+					<p>可通过<a href="ftp://sidads.colorado.edu/pub/DATASETS/nsidc0046_weekly_snow_seaice/data/">FTP</a>方式下载<a href="http://nsidc.org/data/nsidc-0046.html">Northern Hemisphere EASE-Grid 2.0 Weekly Snow Cover and Sea Ice Extent</a>数据，文件类型为<code>.bin</code>。为了能将这些数据导入ArcGIS，需要将<code>.bin</code>文件重命名为<code>.bsq（band-sequential）</code>文件。</p>
+					<p>比如：<a href="2016-05-29-ease-grid/EASE2_N25km.snowice.20140623-20140629.v04.bsq">EASE2_N25km.snowice.20140623-20140629.v04.bsq</a></p>
+					<p><b>2. 创建头文件（.hdr）</b></p>
+					<p>创建一个新文件，文件名与数据文件名相同（<b>必须一致</b>），后缀为<code>.hdr</code>，<code>.bsq </code>数据与<code>.hdr</code>文件应在同一个文件夹，然后在文本编辑器中打开<code>.hdr</code>文件写入以下内容：</p>
+					<pre style="width:60%;margin-left:20%">nrows 720<br>ncols 720<br>nbands 1<br>nbits 8<br>layout bsq<br>byteorder I<br>ulxmap -8987500<br>ulymap 8987500<br>xdim 25000<br>ydim 25000</pre>
+					<p>比如：<a href="2016-05-29-ease-grid/EASE2_N25km.snowice.20140623-20140629.v04.hdr">EASE2_N25km.snowice.20140623-20140629.v04.hdr</a></p>
+					<p><b>3. 将数据转为ArcGIS兼容的投影类型</b></p>
+					<p>打开ArcMap，在ArcToolbox中选择Conversion Tools --> To Raster --> Raster To Other Format (multiple)。在对话框中选择你的.bsq数据作为输入，选择TIFF作为输出栅格类型，点击OK。</p>
+					<p class="imginblog"><img src="2016-05-29-ease-grid/image001.png" style="width:80%"></p>
+					<p><b>4. 定义新的投影文件</b></p>
+					<p><ul><li>打开ArcToolbox，选择Data Management Tools --> Projections and Transformations --> Define Projection；</li><li>在对话框中，选择你的.bsq数据作为输入数据集；</li><li>输入坐标系统，选择新建投影；</li><li>输入投影名称；</li><li>在Projection下拉菜单中选择Lambert_Azimuthal_Equal_Area；</li><li>填写以下参数：</li></ul></p>
+					<pre style="width:60%;margin-left:20%">false_easting: 0.000000<br>false_northing: 0.000000<br>central_meridian: 0.000000<br>latitude_of_origin: 90.000000<br>Linear Unit: Meter<br>Meters per unit: 1</pre>
+					<p class="imginblog"><img src="2016-05-29-ease-grid/image002.png" style="width:80%"></p>
+					<br>
+					<p>至此，EASE-Grid投影导入ArcGIS完成，投影结果显示如下，然后可进行常用投影转换。</p>
+					<p class="imginblog"><img src="2016-05-29-ease-grid/image003.png" style="width:80%"></p>
+					<br>
+					<p>Fighting, GISer!</p>
+					
+
+
+
+
+					
+				</div>
+				<!-- UY BEGIN
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>-->
+				<!-- Disqus -->
+				<div id="disqus_thread"></div>
+				<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//gaohraf.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+	</div>
+	<!-- footer  --> 
+	<footer>
+		<p class="copyright">Copyright © 2016 GAO Huiran</a></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../blogsload.js"></script>
+</script>
+</body>
+</html>

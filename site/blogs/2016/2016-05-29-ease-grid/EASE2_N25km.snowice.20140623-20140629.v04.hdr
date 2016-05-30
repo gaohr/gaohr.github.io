@@ -1,0 +1,10 @@
+nrows 720 
+ncols 720 
+nbands 1 
+nbits 8 
+layout bsq 
+byteorder I 
+ulxmap -8987500 
+ulymap 8987500 
+xdim 25000
+ydim 25000

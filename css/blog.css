@@ -27,9 +27,9 @@ Blog Page
 .tab-title > li > a {color:#d85556}
 .tab-title > li > a:hover {color:#c83536}
 
-.blogcontent {color:#222;background:#eee;padding:10px}
+.blogcontent {color:#111;background:#eee;padding:10px}
 .blogcontent h2 {text-align:center}
-.blogcontent p {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
+.blogcontent p {font-size:14px;line-height:26px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent li {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent .imginblog {width:auto;text-align:center}
 .blogtopinfo {font-size:10px;color:#555;text-align:center !important}
