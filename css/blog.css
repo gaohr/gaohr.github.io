@@ -6,8 +6,8 @@ Blog Page
 .blog-top {margin-bottom:10px;font-size:1.6em;font-family:'宋体';color:#1868b8;font-weight:bold;}
 .blog-page {margin-top:10px;font-family:'Microsoft YaHei';padding:0 2% 0 2%}
 .blog-page p {color:#555;}
-.blog-article  .blog-title{font-size:1.5em;color:#222;}
-.blog-article .blog-title:hover{color:#306cb5;}
+.blog-article  .blog-title{font-size:1.5em;color:#306cb5;}
+.blog-article .blog-title:hover{color:#b5306c;}
 .blog-img {width:90%;margin-bottom:2px;margin-top:2px;margin-left:5%}
 .blog-page .blog-tag-data li {padding: 0;margin-left:5%}
 .blog-page .blog-tag-data li i {color: #d85546;}
