@@ -6,6 +6,31 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2016-06-10', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'img/201606101.jpg'}],
+		textcon:'吃披萨啦~',
+	},
+	{
+		title:'浪花', data:'2016-06-10', location:'• 天坛公园 北京', type:'image', 
+		src:[{url:'img/2016061001.jpg'}, {url:'img/2016061002.jpg'}, {url:'img/2016061003.jpg'}, {url:'img/2016061004.jpg'}, {url:'img/2016061005.jpg'}, {url:'img/2016061006.jpg'}, {url:'img/2016061007.jpg'}],
+		textcon:'天坛',
+	},
+	{
+		title:'浪花', data:'2016-05-29', location:'• 中科院地理所 北京', type:'image', 
+		src:[{url:'img/201605291.jpg'}, {url:'img/201605292.jpg'}],
+		textcon:'小花又来了',
+	},
+	{
+		title:'浪花', data:'2016-05-14', location:'• 中科院地理所 北京', type:'image', 
+		src:[{url:'img/201605141.jpg'}, {url:'img/201605142.jpg'}],
+		textcon:'小花来了',
+	},
+	{
+		title:'浪花', data:'2016-04-23', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'img/201604231.jpg'}, {url:'img/201604232.jpg'}, {url:'img/201604233.jpg'}, {url:'img/201604234.jpg'}, {url:'img/201604235.jpg'}],
+		textcon:'首师大的牡丹花',
+	},
+	{
 		title:'小花', data:'2016-04-21', location:'• 北京郊区', type:'image', 
 		src:[{url:'img/201604211.jpg'}, {url:'img/201604212.jpg'}],
 		textcon:'小花去游玩了~',
