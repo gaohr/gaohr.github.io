@@ -32,6 +32,8 @@ Blog Page
 .blogcontent p {font-size:14px;line-height:26px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent li {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent .imginblog {width:auto;text-align:center}
+.blogcontent .codeblock {background-color:#fff; border:1px solid #ccc; border-radius:5px}
+.blogcontent .codeblock p {line-height:9px !important;}
 .blogtopinfo {font-size:10px;color:#555;text-align:center !important}
 .blogtopinfo > span > a {margin-left:5px}
 .greencode {color:#080;}
