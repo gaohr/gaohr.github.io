@@ -2,7 +2,7 @@
 
 ----------
 
-***Click here*** [http://gaohr.win](http://gaohr.win "GaoHR Homepage") 
+***Click here*** [http://gaohr.win](http://gaohr.win "GaoHR Homepage")
 
 ----------
 

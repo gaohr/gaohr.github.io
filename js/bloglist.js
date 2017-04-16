@@ -16,6 +16,6 @@ var bloglist = [
 
 {"blogid":"2016041601", "title":"ArcGIS创建明确边界矩形矢量面", "type":"专业技术", "content":"现有研究区矢量边界图层，要求将该区域遥感影像裁剪，裁剪边界范围距离研究区上下左右范围十公里（10,000m）", "img":"site/blogs/2016/images/ArcGIS.jpg", "date":"2016-04-16", "href":"site/blogs/2016/2016-04-16-arcgis-clip-bound.html", "comments":"1", "tags":["ArcGIS", "矢量", "裁剪"]},
 
-{"blogid":"2016041501", "title":"使用Github和Disqus建立简单的个人博客", "type":"专业技术", "content":"Github+Disqus建立个人博客,简单实用", "img":"site/blogs/2016/images/Github.jpg", "date":"2016-04-15", "href":"#", "comments":"0", "tags":["Github", "博客", "Disqus"]},
+{"blogid":"2016041501", "title":"使用Github和Disqus建立简单的个人博客", "type":"专业技术", "content":"Github+Disqus建立个人博客,简单实用", "img":"site/blogs/2016/images/Github.jpg", "date":"2016-04-15", "href":"#", "comments":"0", "tags":["Github", "博客", "Disqus"]}
 
 ];

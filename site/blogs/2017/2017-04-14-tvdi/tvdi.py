@@ -101,8 +101,7 @@ if __name__ == "__main__":
     nRows = ReadRaster(NDVIpath).nRows
     geotrans = ReadRaster(NDVIpath).geotrans
     srs = ReadRaster(NDVIpath).srs
-	
+    
     ## 计算TVDI
     tvdi(dataDir, ndviMin, ndviMax)
     print "Finished!"
-
