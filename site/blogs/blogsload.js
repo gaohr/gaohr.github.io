@@ -66,12 +66,12 @@ $(document).ready(function() {
 	//add Blog
 	function addblog(blogs,n,tags) {
 		var blogcon = "<div class='blog-article'>" +
-			"<a href='../../../" + blogs[n].href + "' class='blog-title' style='font-size:1.2em'>" + blogs[n].title + "</a><br><br>" +
+			"<a href='../../../" + blogs[n].href + "' class='blog-title' style='font-size:1.0em'>" + blogs[n].title + "</a><br><br>" +
 			"</div>" +
 			"<div class='blog-tag-data'>" +
 			"<img src='../../../" + blogs[n].img + "' class='blog-img' style='width:60%;'>" +
 			"<ul class='unstyled inline' style='font-size:9px'>" +
-			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
+			//"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
 			"</ul>" +
 			"<ul class='unstyled inline blog-tags' style='font-size:9px'>" +
 			"<li type='circle'>" +
@@ -79,7 +79,7 @@ $(document).ready(function() {
 			"</li>" +
 			"</ul>" +
 			"</div>" +
-			"<a class='btn-blue' href='../../../" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			//"<a class='btn-blue' href='../../../" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"<hr>";
 			return blogcon;
 	}
