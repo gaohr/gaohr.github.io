@@ -1,6 +1,8 @@
 var bloglist = [
 
-{"blogid":"2017041401", "title":"温度植被干旱指数（TVDI）的计算及其Python程序实现", "type":"专业技术", "content":"温度植被干旱指数（Temperature Vegetation Dryness Index，TVDI）是一种基于光学与热红外遥感数据进行土壤水分反演的方法，对干旱监测方面有重要的意义，但目前的遥感软件中缺少计算TVDI的工具，本文主要介绍了TVDI的相关概念和计算方法，并基于Python语言实现了TVDI的计算。", "img":"site/blogs/2017/images/TVDI.jpg", "date":"2017-04-14", "href":"site/blogs/2017/2017-04-14-tvdi.html", "comments":"0", "tags":["TVDI", "Python"]},
+{"blogid":"2017041601", "title":"权力的游戏中的冷知识", "type":"奇闻趣问", "content":"《冰与火之歌》可不是一部简单的奇幻小说，它蕴含了很多方面的深刻思想。", "img":"site/blogs/2017/images/GameofThrones.jpg", "date":"2017-04-16", "href":"site/blogs/2017/2017-04-16-game-of-thrones-cold-knowledge.html", "comments":"0", "tags":["冰与火之歌", "冷知识"]},
+
+{"blogid":"2017041401", "title":"温度植被干旱指数（TVDI）的计算及其Python程序实现", "type":"专业技术", "content":"温度植被干旱指数（Temperature Vegetation Dryness Index，TVDI）是一种基于光学与热红外遥感数据进行土壤水分反演的方法，对干旱监测方面有重要的意义，但目前的遥感软件中缺少计算TVDI的工具，本文主要介绍了TVDI的相关概念和计算方法，并基于Python语言实现了TVDI的计算。", "img":"site/blogs/2017/images/TVDI.jpg", "date":"2017-04-14", "href":"site/blogs/2017/2017-04-14-tvdi.html", "comments":"1", "tags":["TVDI", "Python"]},
 
 {"blogid":"2016052901", "title":"EASE-Grid投影介绍及其在ArcGIS中使用的方法", "type":"专业技术", "content":"EASE-Grid是基于美国雪冰数据中心发展的数字地图和网格定义的理论发展而来的一种网格定义，本文主要介绍将EASE-Grid投影导入ArcGIS中，以及EASE-Grid投影数据在ArcGIS中的使用。", "img":"site/blogs/2016/images/EASEGrid.jpg", "date":"2016-05-29", "href":"site/blogs/2016/2016-05-29-ease-grid.html", "comments":"0", "tags":["ArcGIS", "投影", "EASE-Grid"]},
 
