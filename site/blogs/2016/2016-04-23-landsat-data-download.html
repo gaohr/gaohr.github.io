@@ -1,0 +1,1471 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="shortcut icon" href="../../../img/mainicon.png" />
+    <title>GaoHR | Landsat数据简介以及下载方法总结</title>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2016042301">
+				<div class="blogcontent">
+					<h2>Landsat系列遥感影像数据介绍及常用下载方法总结</h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p>美国NASA的陆地卫星(Landsat)计划，从1972年7月23日以来， 已发射8颗（第6颗发射失败）。目前Landsat1—4均相继失效，Landsat 5仍在超期运行（从1984年3月1日发射至今）。 Landsat 7 于1999年4月15日发射升空。 Landsat 8 于2013年2月11日发射升空， 经过100天测试运行后开始获取影像。</p>
+					<p>
+Landsat遥感卫星数据是目前遥感领域非常重要的遥感数据来源，其数据连续性好，分辨率适中，数据质量高，时间序列长，在国内外许多研究领域得到了广泛应用。</p>
+					<p>首先简单介绍一下Landsat系列卫星的主要参数。</p>
+					<p><b>1. 卫星参数</b></p>
+					<p>陆地卫星的轨道设计为与太阳同步的近极地圆形轨道，以确保北半球中纬度地区获得中等太阳高度角(25°~ 30°)的上午成像，而且卫星以同一地方时、同一方向通过同一地点．保证遥感观测条件的基本一致，利于图像的对比。如Landsat 4、5轨道高度705km．轨道倾角98.2°，卫星由北向南运行，地球自西向东旋转，卫星每天绕地球14．5圈，每天在赤道西移159km，每16天重复覆盖一次，穿过赤道的地方时为9点45分，覆盖地球范围N81°—S81．5°。</p>
+					<p><b>2. 主要传感器参数</b></p>
+					<p>现应用最多的Landsat系列卫星有Landsat 5、Landsat 7和Landsat 8，其携带的传感器主要为MSS、TM、ETM+和OLI。</p>
+					<div class="accordion">
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#accordion-element-2">MSS传感器</a>
+					</div>
+					<div id="accordion-element-2" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='background:white;border-collapse:collapse;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Landsat-1</span><span
+  style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:
+  Arial;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Landsat-4</span><span
+  style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:
+  Arial;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>5<o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>波长范围</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>/<span
+  class=SpellE>μm</span><o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>分辨率</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>/</span><span
+  style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:
+  Arial;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-4<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-1<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.5</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.6<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>78</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-5<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-2<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.6</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.7<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>78</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-6<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-3<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.7</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.8<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>78</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;mso-yfti-lastrow:yes;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-7<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>MSS-4<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.8</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>1.1<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>78</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#accordion-element-560600">TM传感器</a>
+					</div>
+					<div id="accordion-element-560600" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='background:white;border-collapse:collapse;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>波长范围</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>(<span
+  class=SpellE>μm</span>)<o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>分辨率</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>/</span><span
+  style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:
+  Arial;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.45</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.52<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.52</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.60<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.63</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.69<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>4<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.76</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.90<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>5<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>1.55</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>1.75<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>6<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>10.40</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>12.50<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>120&gt;</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;mso-yfti-lastrow:yes;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>7<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>2.08</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>2.35<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#accordion-element-3">ETM+传感器</a>
+					</div>
+					<div id="accordion-element-3" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='background:white;border-collapse:collapse;mso-yfti-tbllook:1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>波长范围</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>(<span
+  class=SpellE>μm</span>)<o:p></o:p></span></p>
+  </td>
+  <td style='border:solid #E6E6E6 1.0pt;border-left:none;mso-border-left-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>地面分辨率</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>/</span><span
+  style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:
+  Arial;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>1<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.450</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.515<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>2<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.525</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.605<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>3<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.630</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.690<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>4<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.775</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.900<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>5<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>1.550</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>1.750<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>6<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>10.40</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>12.50<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>60</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>7<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>2.090</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>2.350<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;mso-yfti-lastrow:yes;height:16.5pt'>
+  <td style='border:solid #E6E6E6 1.0pt;border-top:none;mso-border-top-alt:
+  solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>8<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.520</span><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>～</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>0.900<o:p></o:p></span></p>
+  </td>
+  <td style='border-top:none;border-left:none;border-bottom:solid #E6E6E6 1.0pt;
+  border-right:solid #E6E6E6 1.0pt;mso-border-top-alt:solid #E6E6E6 .75pt;
+  mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>15</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+						</div>
+					</div>
+				</div>
+				<div class="accordion-group">
+					<div class="accordion-heading">
+						 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion-1" href="#accordion-element-4">OLI传感器</a>
+					</div>
+					<div id="accordion-element-4" class="accordion-body collapse">
+						<div class="accordion-inner">
+							<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width="100%"
+ style='width:100.0%;background:white;border-collapse:collapse;mso-yfti-tbllook:
+ 1184'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:16.5pt'>
+  <td width=73 rowspan=10 style='width:54.75pt;border:solid #E6E6E6 1.0pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>OLI</span><span style='font-size:9.0pt;
+  font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>（陆地成像仪）</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border:solid #E6E6E6 1.0pt;border-left:
+  none;mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span class=SpellE><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>LandSat</span></span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'> 8<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border:solid #E6E6E6 1.0pt;border-left:
+  none;mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>类型</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border:solid #E6E6E6 1.0pt;border-left:
+  none;mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>波长（微米）</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border:solid #E6E6E6 1.0pt;border-left:
+  none;mso-border-left-alt:solid #E6E6E6 .75pt;mso-border-alt:solid #E6E6E6 .75pt;
+  padding:1.5pt 7.5pt 1.5pt 7.5pt;height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>分辨率</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'>/</span><span
+  style='font-size:9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:
+  Arial;mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>米</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band1<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>蓝色波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.433–0.453<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band2<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>蓝绿波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.450–0.515<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band3<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>绿波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.525–0.600<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band4<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>红波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.630–0.680<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band5<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>近红外</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.845–0.885<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band6<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>中红外</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>1.560–1.660<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band7<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>中红外</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>2.100–2.300<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band8<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>微米全色</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>0.500–0.680<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>15<o:p></o:p></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;mso-yfti-lastrow:yes;height:16.5pt'>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>Band9<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span style='font-size:
+  9.0pt;font-family:宋体;mso-ascii-font-family:Arial;mso-hansi-font-family:Arial;
+  mso-bidi-font-family:Arial;color:#333333;mso-font-kerning:0pt'>短波红外波段</span><span
+  lang=EN-US style='font-size:9.0pt;font-family:"Arial","sans-serif";
+  mso-fareast-font-family:宋体;color:#333333;mso-font-kerning:0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=132 style='width:99.0pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>1.360–1.390<o:p></o:p></span></p>
+  </td>
+  <td width=113 style='width:84.75pt;border-top:none;border-left:none;
+  border-bottom:solid #E6E6E6 1.0pt;border-right:solid #E6E6E6 1.0pt;
+  mso-border-top-alt:solid #E6E6E6 .75pt;mso-border-left-alt:solid #E6E6E6 .75pt;
+  mso-border-alt:solid #E6E6E6 .75pt;padding:1.5pt 7.5pt 1.5pt 7.5pt;
+  height:16.5pt'>
+  <p class=MsoNormal align=left style='text-align:left;line-height:18.0pt;
+  mso-pagination:widow-orphan;word-break:break-all'><span lang=EN-US
+  style='font-size:9.0pt;font-family:"Arial","sans-serif";mso-fareast-font-family:
+  宋体;color:#333333;mso-font-kerning:0pt'>30<o:p></o:p></span></p>
+  </td>
+ </tr>
+</table>
+
+						</div>
+					</div>
+				</div>
+			</div>
+					
+					<p>言归正传，下面介绍几个比较常用并且下载数据较方便的Landsat数据下载网站。</p>
+					<p><b>（一）地理空间数据云平台（<a href="http://www.gscloud.cn/">http://www.gscloud.cn/</a>）</b></p>
+					<p>2011年，中国科学院计算机网络信息中心科学数据中心在“国际科学数据服务平台”基础上开始建设“地理空间数据云平台”，于2013年1月正式对外投入使用。</p>
+					<p>新版“地理空间数据云平台”现已公布，首页如图所示。</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image001.png" width="70%"></p>
+					<p>1. 下载Landsat数据，点击免费数据中的“LANDSAT系列数据”，进入数据分类列表；</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image002.png" width="70%"></p>
+					<p>2. 选择需要下载的卫星数字产品，可查看该数据产品的<a class="btninblog ">详细信息</a>以及直接点击<a class="btninblog ">数据列表</a>下载数据；</p>
+					<p>3. 进入数据列表，可进行二次筛选，根据需要进行筛选；</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image003.png" width="70%"></p>
+					<p>对于数据显示“有”的数据可直接下载，如果显示“无”，则需要先进行收藏，然后进入个人中心预定,看图--></p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image004.png"></p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image005.png" width="70%"></p>
+					<p>这个比较简单。</p>
+					<p><b>（二）USGS Global（<a href="http://glovis.usgs.gov/">http://glovis.usgs.gov/</a>）</b></p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image006.jpg" width="70%"></p>
+					<p>1. 以下载北京的遥感影像为例，在左侧填写坐标信息，两种方式：WRS-2或Lat/Long，点击<a class="btninblog ">Go</a>，在右侧地图栏加载数据；</p>
+					<p>2. 然后便可根据日期选择合适的影像，一般云层密度在10%以下或不覆盖研究区的数据，然后右键点击影像，选择<a class="btninblog ">Add To Scene List</a>；</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image007.png"></p>
+					<p>3. 在左下角列表中会出现所选择的数据；</p>
+					<p>值得一提的是，2003 年5 月31 日(21:42:35 GMT)，Landsat-7ETM+ 机载扫描行校正器(ScanLinesCorrector, 简称SLC) 突然发生故障，导致获取的图像出现数据重叠和大约25% 的数据丢失，因此2003.5.31日之后Landsat 7的所有数据都是异常的，需要采用SLC-off模型校正。另外，2003.05.31 - 2003.07.14以及2003.07.03 - 2003.09.17之间的数据是没有获得。</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image008.png"></p>
+					<p>4. Send to Cart，将数据发送到购物车，放心此购物车不收费~，注意，有的浏览器会将即将弹出的页面当做广告弹窗进行拦截（如图），找到拦截窗口打开即可；</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image009.png"></p>
+					<p>然后点击下载按钮打开下载数据列表，选择需要的数据类型下载~</p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image010.png"></p>
+					<p class="imginblog"><img src="2016-04-23-landsat-data-download/image011.png"></p>
+					<p>~Done！</p>
+					<p><b>（三）其他方法</b></p>
+					<p>其他Landsat数据下载方法，比如EarthExplorer（<a href="http://earthexplorer.usgs.gov/">http://earthexplorer.usgs.gov/</a>）等，有需要自行学习，欢迎交流！</p>
+				</div>
+				<!-- UY BEGIN -->
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>
+				<!-- Disqus -->
+				<div id="disqus_thread"></div>
+				<script>
+					(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = '//gaohraf.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+					})();
+				</script>
+				<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+	</div>
+	<!-- footer  --> 
+	<footer>
+		<p class="copyright">Copyright © 2016 GAO Huiran</a></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../blogsload.js"></script>
+</script>
+</body>
+</html>

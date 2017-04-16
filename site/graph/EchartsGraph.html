@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0099)file:///C:/Users/dell/Desktop/Beautiful%20Line%20Effects%20with%20Color%20Changes_files/noframe.htm -->
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="utf-8">
+    <title>ECharts Graph</title>
+	<link href="bootstrap-2.3.1.min.css" rel="stylesheet" type="text/css"/>
+	<link href="bootstrap-combined.min.css" rel="stylesheet" type="text/css">
+	<style>
+		.mainGrid {height:600px;width:96%;padding:10px;border:2px solid #555;border-radius:10px;margin:10px}
+		.f {height:580px;width:100%;border:1px solid #aaa;border-radius:5px;padding:5px}
+		.echartdiv {min-height:560px;margin-left:-30px}
+		.divborder {padding:3px}
+		#functionList{height:120px;overflow-x:scroll}
+		.functionList{background-color:rgba(225, 225, 225, 0.5);padding:5px;margin:2px 20px}
+		.intro{padding:5px;color:#777;font-size:0.8em;height:200px;overflow-x:scroll}
+		/*滚动条美化*/
+		::-webkit-scrollbar{width:12px;height:6px}
+		::-webkit-scrollbar-button:vertical{display:none}
+		::-webkit-scrollbar-track:vertical{background-color:transparent;}
+		::-webkit-scrollbar-track-piece{background-color:transparent;}
+		::-webkit-scrollbar-thumb:vertical{background-color:#3792ef;border-radius:6px}
+		::-webkit-scrollbar-thumb:vertical:hover,
+		::-webkit-scrollbar-thumb:vertical:active {background-color: #2e86ef}
+  </style>
+</head>
+<body>
+	<div class="mainGrid">
+	<div class="row-fluid">
+		<div class="span3">
+			<div class="f">
+		<div style="font-size:18px;text-align:center"><b>ECharts 绘制函数</b></div><br>
+		<div class="accordion-inner">
+			<div class="accordion-inner divborder">
+				<b>公式</b>：<input value="x" id="formula" class="9">
+			</div>
+			<div class="accordion-inner divborder" style="font-size:0.8em;color:#CD6839">
+				X区间：<input value="-100" id="fxstart" class="span3">~<input value="100" id="fxend" class="span3">
+			</div>
+		</div>
+		<a href="#" id="clear" onclick="location.reload()" class="btn btn-danger pull-right">清空</a>
+		<a href="#" id="add" class="btn btn-primary pull-right"style="margin-right:5px">添加</a>
+		<hr>
+		<div id="functionList"></div>
+		<hr>
+		<div class="intro">
+			<p>一次函数：a*x+b</p>
+			<p>n次函数：Math.pow(x,n)+b</p>
+			<p>幂函数：Math.pow(x,n)</p>
+			<p>指数函数：Math.pow(n,x)</p>
+			<p>对数函数：Math.log(x)（底为e）</p>
+			<p>指数函数：Math.pow(n,x)</p>
+			<p>三角函数：Math.sin(x), cos(x), tan(x)</p>
+			<p>反三角函数：Math.asin(x), acos(x), atan(x)</p>
+			<p>指数函数：Math.pow(n,x)</p>
+		</div>
+	</div>
+		</div>
+		<div class="span9">
+			
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" class="echartdiv" style="width:100%;height:100%"></div>
+		</div>
+	</div>
+	
+</div>
+
+<script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="bootstrap.min.js"></script>
+<script type="text/javascript" src="echarts.js"></script>
+<script type="text/javascript" src="functions.js"></script>
+</body>
+</html>

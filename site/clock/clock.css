@@ -1,0 +1,47 @@
+/* onto the css now */
+
+#clock {position:relative;width:80px; height:80px;border-radius:50%;margin: 5px auto 0;}
+
+/* We'll use pseudo elements for cover's styling */
+
+#clock:before,
+#clock:after {
+	position: absolute;
+	border-radius: 50%;
+}
+
+#clock:before {
+	content: '';
+	top: -8px; bottom: -8px;
+	left: -8px; right: -8px;
+}
+
+#clock:after {
+	content: '';
+	border:1px solid #ccc;
+	top: -7px; bottom: -7px;
+	left: -7px; right: -7px;
+	box-shadow:1px 1px 1px #fff;
+}
+
+/* woohoo! things are coming along nicely.
+
+now we need to do the hands of the clock, i mean, style them. */
+
+.hands {width: 2px; height: 47%;position: absolute;border-radius: 50%;left: 50%; top: 3%;
+	/* We can use CSS3 tranforms to rotate the hands */
+	-webkit-transform: rotate(0deg);
+	/* in order to make sure that the hands rotate along the center of the clock, we'll have to set the transform origin. it works bro! */
+	-webkit-transform-origin: bottom; /* same as bottom */
+}
+
+/* Common styling for all :before of all hands */
+.hands:before {content: '';position: absolute;top: -2px; bottom: -2px;left: -2px; right: -2px;border-radius: 50%;z-index: -1;}
+#hour {width:4px;height:40%;position: absolute;left: 50%;top:10%;}
+#hour:before {background: linear-gradient(#f77,rgba(255,255,255,0) 90%);}
+#minute {}
+#minute:before {background: linear-gradient(#7c7,rgba(255,255,255,0) 90%);}
+#second {width:1px;height:52%;position: absolute;left: 51%;top:-0.5%;}
+#second:before {background: linear-gradient(#47d,rgba(255,255,255,0) 50%);}
+
+/* And we're done, right ? */

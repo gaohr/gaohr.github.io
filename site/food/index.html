@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="shortcut icon" href="../../img/mainicon.png">
+    <title>GaoHR | 菜谱查询</title>
+	<style>
+		.food {padding:10px;margin-bottom:10px;background:rgba(255,255,255,0.8);width:100%;min-height:320px;overflow-y:scroll}
+		.query {padding:10px 20px;background:rgba(0,100,215,0.9);color:#eee}
+		.query:hover {background:rgba(0,100,215,0.7);color:#fff}
+		#content {margin:0;line-height:150%}
+		#content .foodhead {font-size:1em;color:#a55;padding:2px;margin:2px;border-bottom:1px solid #ddd;clear:both}
+		#content .typename {font-size:1.2em;color:#333;margin-top:5px;}
+		#content .typename i {font-size:1em;color:#db6c00}
+		#content .typename span {font-size:1em;color:#fff;border-radius:2px}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../img/head.png" class="headimg">
+		<p><img src="../../img/welcome.png" class="welcome"></p>
+	</div>
+	<div class="main-page">
+	<div class="container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div class="menulist">
+					<div class="btn-group">
+						<ul class="nav nav-pills">
+							<li class="dropdown">
+								<a class="dropdown-toggle"data-toggle="dropdown"href="#"><i class="icon-list"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="../../index.html"><i class="icon-home"></i></a></li>
+									<li><a href="../../Blogs.html">博客</a></li>
+									<li><a href="../skills/index.html">图谱</a></li>
+									<li><a href="../special/index.html">专题</a></li>
+									<li class="divider"></li>
+									<li><a href="../../About.html">关于</a></li>
+									<li><a href="../../Contact.html">留言</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sider-bar">
+				<div class="host">
+					<img src="../../img/images/head-img.jpg" class="img-rounded"><br><br>
+					<i class="icon-user">&nbsp;&nbsp;斩之浪</i>
+				</div>
+				<!-- Navigation -->
+				<div class="svg-wrapper">
+					<span class="svg"><svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="shape" height="40" width="150"></rect></svg></span>
+					<div id="text"><a href="../../index.html"><span class="spot"></span><i class="icon-home"></i></a></div>
+				</div>
+				<div class="sider-menu centerer-menu wrap-menu">
+					<a href="../../Blogs.html" class="btn-menu">博客</a>
+					<a href="../skills/index.html" class="btn-menu">图谱</a>
+					<a href="../special/index.html" class="btn-menu">专题</a>
+					<a href="../../About.html" class="btn-menu">关于</a>
+					<a href="../../Contact.html" class="btn-menu">留言</a>
+				</div>
+				<hr>
+				<div class="links">
+					<a href="http://weibo.com/531239592" target="_blank" class="weibo"><i class="icon-weibo"></i></a>
+					<a href="https://github.com/gaohr" target="_blank" class="github"><i class="icon-github-sign"></i></a>
+					<a href="###" target="_blank" class="google"><i class=" icon-google-plus-sign"></i></a>
+					<a href="###" target="_blank" class="fb"><i class="icon-facebook-sign"></i></a>
+					<a href="###" target="_blank" class="twitter"><i class="icon-twitter-sign"></i></a>
+				</div>
+				<hr>
+					<script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ"></script>
+			</div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<li class="active">菜谱查询</li>
+				</ol>
+				<!--正文-->
+				<div style="font-family:'黑体'">
+					<p style="color:#f66;font-size:1.2em;font-weight:bold">菜谱查询</p>
+					<div class="control-group">
+					<div class="controls">
+						<input type="text" id="querytext" placeholder="请输入食材名称~" class="span4 huge"/>
+						<input type="text" id="querynum" placeholder="菜谱个数" value="5" class="span1 huge"/>
+						<a id="query" href="###" class="query">查询</a>
+					</div>
+				</div>
+				</div>
+				
+				<div class="food">
+					<div id="content"></div>
+				</div>
+				
+
+			</div>
+			<div class="span2">
+				<div id="lh" style="width:70%">
+					<img src="images/chushi.png" width="100%" style="margin-top:20%">
+				</div>
+				<div style="width:90%;text-align:center">
+					<img src="images/01.png" width="40%">
+					<img src="images/02.png" width="40%">
+					<img src="images/03.png" width="40%">
+					<img src="images/04.png" width="40%">
+					<img src="images/05.png" width="40%">
+				</div>
+				<div class="portlet">
+					<p class="title"><i class="icon-comments"></i><b> 评论</b></p>
+					<!-- UY BEGIN -->
+					<div id="uyan_frame"></div>
+					<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>
+					<!-- UY END -->
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+	<!-- footer  --> 
+	<footer>
+		<p class="copyright">Copyright © 2016 GAO Huiran</a></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../js/jquery.min.js"></script>
+	<script src="../../js/jquery-ui.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			function runEffect() {
+				var options = {};
+				$("#content").show("fold", options, 1000, null);
+			};
+			$("#query").click(function() {
+				food();
+			}); 
+			$(document).keyup(function(event){
+				if(event.keyCode == 13){
+					food();
+				}
+			});
+			function food() {
+				$("#content").empty();
+				$("#content").hide();
+				var querytext = $("#querytext").val();
+				var querynum = $("#querynum").val();
+				if(querytext != "" || uerytext != null) {
+					$("#content").append("<p class='foodhead'>食材名称：" + querytext + "，菜谱个数：" + querynum + "道</p>");
+						$.ajax({
+							url:"http://api.huceo.com/txapi/caipu/?key=eb4e451556c3ed7dcdb89092471ad998&word=" + querytext + "&num=" + querynum,
+							dataType:"json",
+							async:false,
+							success:function(data){
+								for(i = 0; i < data.newslist.length; i++) {
+									$("#content").append("<div class='typename'><i class='icon-bookmark'></i><b>" + data.newslist[i].type_name + "</b>---<span>" + data.newslist[i].cp_name + "</span></div><div style='color:#0d6100'><b>原料</b>：" + data.newslist[i].yuanliao + "</div><div style='color:#7a4200'><b>调料</b>：" + data.newslist[i].tiaoliao + "</div><div style='color:#00397a'><b>做法</b>：" + data.newslist[i].zuofa + "</div><div style='color:#9e5c00'><b>口感</b>：" + data.newslist[i].texing + "</div><div style='color:#9e2d00'><b>提示</b>：" + data.newslist[i].tishi + "</div><hr>");
+								}
+							},
+							error:function(){alert("Error")}
+					});
+				} else {
+					$("#content").append("<p class='foodhead'>关键字不能为空！</p>");
+				}
+				runEffect();
+			}
+		});
+	</script>
+</body>
+</html>
+

@@ -1,0 +1,109 @@
+/* onto the css now */
+
+#clock {
+	width: 80px; height: 80px;
+	border-radius: 50%;
+	margin: 35px auto 0;
+	background: rgba(0,0,0,0.2);
+	position: absolute;
+	top:3%;
+	left:90%;
+	box-shadow:
+		inset 3px 3px 3px rgba(110,103,97,0.8),
+		inset 3px 3px 1px rgba(110,103,97,0.35);
+}
+
+/* We'll use pseudo elements for cover's styling */
+
+#clock:before,
+#clock:after {
+	position: absolute;
+	border-radius: 50%;
+	
+	/* we do not want the pseudo elements to appear above */
+	z-index: -1;
+}
+
+#clock:before {
+	content: '';
+	
+	background: linear-gradient(135deg, #fff, #eee 15%, #fff);
+	
+	top: -8px; bottom: -8px;
+	left: -8px; right: -8px;
+	
+	/* some -webkit-box shadows would be nice */
+	box-shadow:
+		inset 1px 1px 0 rgba(255,255,255,0.4),
+		1px 1px 3px rgba(110,103,97,0.8),
+		3px 3px 1px rgba(110,103,97,0.3);
+}
+
+#clock:after {
+	content: '';
+	
+	background: linear-gradient(135deg, #fff, #ccc, #fff);
+	top: -4px; bottom: -4px;
+	left: -4px; right: -4px;
+}
+
+/* woohoo! things are coming along nicely.
+
+now we need to do the hands of the clock, i mean, style them. */
+
+.hands {
+	width: 3px; height: 47%;
+	background: white;
+	position: absolute;
+	border-radius: 50%;
+	left: 50%; top: 3%;
+	
+	/* We can use CSS3 tranforms to rotate the hands */
+	-webkit-transform: rotate(0deg);
+	/* in order to make sure that the hands rotate along the center of the clock, we'll have to set the transform origin. it works bro! */
+	-webkit-transform-origin: bottom; /* same as bottom */
+}
+
+
+/* Common styling for all :before of all hands */
+.hands:before {
+	content: '';
+	position: absolute;
+	top: -4px; bottom: -4px;
+	left: -4px; right: -4px;
+	border-radius: 50%;
+	z-index: -1;
+	opacity: 0.8;
+}
+
+
+.hands {
+	background: linear-gradient(
+		rgba(255,255,255,1),
+		rgba(255,255,255,0.2) 60%,
+		rgba(255,255,255,0)
+	);
+}
+
+#hour:before {
+	background: linear-gradient(
+		#faa,
+		rgba(255,255,255,0) 80%
+	);
+}
+
+#minute:before {
+	background: linear-gradient(
+		#afa,
+		rgba(255,255,255,0) 80%
+	);
+}
+
+#second:before {
+	background: linear-gradient(
+		#aaf,
+		rgba(255,255,255,0) 50%
+	);
+}
+
+/* And we're done, right ? */

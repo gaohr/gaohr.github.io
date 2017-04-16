@@ -1,0 +1,10 @@
+@font-face {
+font-family: 'TianNiu587232';
+src: url('TianNiu.eot');
+src: url('TianNiu.eot?#iefix') format('embedded-opentype'),
+     url('TianNiu.woff') format('woff'),
+     url('TianNiu.ttf') format('truetype'),
+     url('TianNiu.svg#TianNiu') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
