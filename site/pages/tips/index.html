@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!-- saved from url=(0064)http://www.17sucai.com/preview/1/2017-04-14/jQueryXyq/index.html -->
+<html><head lang="en"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+	<style type="text/css">
+		
+/*滚动条美化*/
+::-webkit-scrollbar{width:5px;height:3px}
+::-webkit-scrollbar-button:vertical{display:none}
+::-webkit-scrollbar-track:vertical{background-color:transparent;}
+::-webkit-scrollbar-track-piece{background-color:transparent;}
+::-webkit-scrollbar-thumb:vertical{background-color:#3792ef;border-radius:3px}
+::-webkit-scrollbar-thumb:vertical:hover,
+::-webkit-scrollbar-thumb:vertical:active {background-color: #2e86ef}
+
+		@font-face {font-family:xingshu; src: url("font_xingshu.ttf")} 
+	</style>
+    <style>
+        body {
+            margin: 0 auto;padding: 0px;font-size: 12px;
+            background: url(img/bg.gif) repeat center 36px;text-align: center;background-color: #c30230;
+        }
+        #content {margin: 0 auto; width: 960px; height: 627px; background: url(img/content_bg.jpg) no-repeat left top; position: relative;}
+
+        #content .tip1, #content .tip2, #content .tip3, #content .tip4, #content .tip5, #content .tip6, #content .tip7, #content .tip8 {
+            position:absolute; width:227px; left:200px; top:100px;}
+        #content .tip1 .tip_h {background: url(img/tip1_h.png) no-repeat left top;}
+        #content .tip1 .tip_h, #content .tip2 .tip_h, #content .tip3 .tip_h, #content .tip4 .tip_h, #content .tip5 .tip_h, #content .tip6 .tip_h, #content .tip7 .tip_h, #content .tip8 .tip_h {
+            width: 227px;padding-top: 45px;height: 23px;text-align: left;cursor: move;
+        }
+        #content .tip1 .tip_c {background: url(img/tip1_c.png) repeat-y;}
+        #content .tip1 .tip_c, #content .tip2 .tip_c, #content .tip3 .tip_c, #content .tip4 .tip_c, #content .tip5 .tip_c, #content .tip6 .tip_c, #content .tip7 .tip_c, #content .tip8 .tip_c {
+			font-family: 'xingshu';width: 200px;padding-left: 12px;padding-right: 15px;min-height: 40px;font-size:20px;text-align: left;
+            line-height: 20px;max-height: 160px;word-wrap: break-word;word-break: break-all;overflow: auto;
+        }
+        #content .tip1 .tip_f {background: url(img/tip1_f.png) no-repeat left top;}
+        #content .tip1 .tip_f, #content .tip2 .tip_f, #content .tip3 .tip_f, #content .tip4 .tip_f, #content .tip5 .tip_f, #content .tip6 .tip_f, #content .tip7 .tip_f, #content .tip8 .tip_f {width: 227px;height: 53px;padding-top: 20px;}
+        #content .close, #content .close2 {float: left;font-size: 12px;cursor: pointer;color: #555;}
+        .clr {clear: both;overflow: auto;display: block;height: 0px;}
+        #content .icon {float: left;width: 35px;padding-left: 15px;height: 35px;text-align: center;}
+        #content .name {font-family: 'xingshu';float: right;padding-right: 15px;text-align: right;font-size: 18px;line-height: 35px;color: #47d;}
+        #content .num {float: left;padding-left: 10px;width: 195px;color:#533}
+		#content .num span {font-size:14px; font-family:Microsoft YaHei}
+    </style>
+	
+</head>
+<body>
+
+    <!--纸条墙-->
+	<p style="color:#fff;font-size:48px;float:left;margin:20px;font-family:Microsoft YaHei">贴<br>纸<br>墙<br><i style="color:#ff9;font-size:18px;">By 浪花</i></p>
+	<div id="content"></div>
+	
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="tipslist.js"></script>
+    <script>
+
+    //需求1：模拟数据库获取信息，然后在页面上生成数组的长度个tip,然后分别问起内容进行修改。
+    //需求2：点击内容，提高层级；点击关闭按钮，删除tip标签；双击顶部，删除标签.....
+
+    //需求1：模拟数据库获取信息，然后在页面上生成数组的长度个tip,然后分别问起内容进行修改。
+    //步骤：
+        //获取相关元素
+        var content = document.getElementById("content");
+
+        //循环生成div标签，然后为innerHTML属性添加内容
+        for(var i=0;i<messages.length;i++){
+            //生成新标签
+            var newDiv = document.createElement("div");
+            //绑定类名和ID
+            newDiv.className = "tip1";
+            newDiv.id = "tip"+messages[i].id;
+            //改变位置
+            var topValue = parseInt(Math.random()*400);
+            var leftValue = parseInt(Math.random()*700);
+            newDiv.style.top = topValue+"px";
+            newDiv.style.left = leftValue+"px";
+            //赋值内容
+            newDiv.innerHTML = '<div class="tip_h" title="双击关闭纸条">'+
+                                        '<div class="num"><span>No.'+messages[i].id+'</span> -- '+messages[i].time+'</div>'+
+                                        '<div class="close" title="关闭纸条" >×</div>'+
+                                        '<div class="clr"></div>'+
+                                '</div>'+
+                                '<div class="tip_c">'+messages[i].content+'</div>'+
+                                '<div class="tip_f">'+
+                                    '<div class="icon">'+
+                                    '<img src="img/bpic_1.gif" alt="" title="">'+
+                                '</div>'+
+                                '<div class="name"><b>'+messages[i].name+'</b></div>'+
+                                    '<div class="clr"></div>'+
+                                '</div>';
+            //把新创建的元素放入content里面
+            content.appendChild(newDiv);
+
+
+            //绑定事件，提高层级
+            newDiv.onclick = fn;
+
+            //点击关闭按钮的时候关闭父盒子。
+            var closeDiv = newDiv.getElementsByClassName("close")[0];
+            closeDiv.onclick = function () {
+                //不能用newDiv，因为在页面加载的时候newDiv，已经变成最后一个了，当你点击的时候，用远关闭的是最后的那个div。
+//                content.removeChild(newDiv);
+                content.removeChild(this.parentNode.parentNode);
+            }
+
+            //双击关闭按钮类名叫做tip_h
+            var dbDiv = newDiv.getElementsByClassName("tip_h")[0];
+            dbDiv.ondblclick = function () {
+                //不能用newDiv，因为在页面加载的时候newDiv，已经变成最后一个了，当你点击的时候，用远关闭的是最后的那个div。
+//                content.removeChild(newDiv);
+                content.removeChild(this.parentNode);
+            }
+        }
+
+        var index = 1;
+        function fn(){
+            this.style.zIndex = index;
+            index++;
+        }
+		
+		$( function() {
+			for (var j=0;j<messages.length;j++){
+				idstr = "#tip" + messages[j].id
+				$(idstr).draggable();
+			}
+		} );
+    </script>
+</body></html>
