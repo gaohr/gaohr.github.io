@@ -66,10 +66,10 @@ $(document).ready(function() {
 	//add Blog
 	function addblog(blogs,n,tags) {
 		var blogcon = "<div class='blog-article'>" +
-			"<a href='../../../" + blogs[n].href + "' class='blog-title' style='font-size:1.0em'>" + blogs[n].title + "</a><br><br>" +
+			"<a href='" + blogs[n].href + "' class='blog-title' style='font-size:1.0em'>" + blogs[n].title + "</a><br><br>" +
 			"</div>" +
 			"<div class='blog-tag-data'>" +
-			"<img src='../../../" + blogs[n].img + "' class='blog-img' style='width:60%;'>" +
+			"<a href='" + blogs[n].href + "'><img src='../../../" + blogs[n].img + "' class='blog-img' style='width:60%;'></a>" +
 			"<ul class='unstyled inline' style='font-size:9px'>" +
 			//"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
 			"</ul>" +
