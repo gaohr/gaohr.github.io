@@ -58,7 +58,7 @@ $(document).ready(function() {
 			"<img src='" + blogs[n].img + "' class='blog-img'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
-			"<li type='circle'><i class='icon-comments'></i> <a href='" + blogs[n].href + "' id='uyan_count_unit'>0 Comments</a></li>" +
+			"<li type='circle'><i class='icon-comments'></i> <a href='" + blogs[n].href + "'>0 Comments</a></li>" +
 			"</ul>" +
 			"</div>" +
 			"<div class='span9 blog-article'>" +
