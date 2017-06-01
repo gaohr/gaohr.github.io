@@ -58,7 +58,7 @@ $(document).ready(function() {
 			"<img src='" + blogs[n].img + "' class='blog-img'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
-			"<li type='circle'><i class='icon-comments'></i> <a class='cloud-tie-join-count' href='" + blogs[n].href + "'><span class='join-count'>0</span><span class='join-text'>Comments</span></a></li>" +
+			"<li type='circle'><i class='icon-comments'></i> <a class='cloud-tie-join-count' href='javascript:void(0);'><span class='join-count'>0</span><span class='join-text'> Comments</span></a></li>" +
 			"</ul>" +
 			"</div>" +
 			"<div class='span9 blog-article'>" +
