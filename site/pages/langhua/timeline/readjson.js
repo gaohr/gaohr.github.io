@@ -41,7 +41,7 @@ for(i = 0; i < imgs.length; i++) {
 function getsrcnum(n) {
 	var imgsrc = "";
 	for(k = 0; k < imgs[n].src.length; k++) {
-		imgsrc += "<img class='imglh' onclick='imgdisplay(\"" + imgs[n].src[k].url + "\", " + n + ")' src='" + imgs[n].src[k].url + "'>_"
+		imgsrc += "<img class='imglh' onclick='imgdisplay(\"http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "\", " + n + ")' src='http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "'>_"
 	}
 	return imgsrc;
 }
