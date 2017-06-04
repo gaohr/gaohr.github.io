@@ -31,7 +31,7 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"<li type=\"circle\">National Geographics</li>" +
 							"<li type=\"circle\">The World at War</li>" +
 							"<li type=\"circle\">Echarts graph</li>" +
-							"<li type=\"circle\">Rainbow poster special effects</li>"
+							"<li type=\"circle\">Rainbow poster special effects</li>" +
 							"</ul><hr>");
 	
 	
