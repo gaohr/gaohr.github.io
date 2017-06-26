@@ -17,7 +17,7 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"<li><a href=\"site/natgeo/index.html\" target=\"_blank\" title=\"国家地理百年典藏\"><img alt=\"\" src=\"img/images/NationalGeo.png\"></a></li>" +
 							"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"\" src=\"img/images/BBCWar2.png\"></a></li>" +
 							"<li><a href=\"site/graph/index.html\" target=\"_blank\" title=\"函数绘图\"><img alt=\"\" src=\"img/images/Graph.png\"></a></li>" +
-							"<li><a href=\"site/rainbowposter/index.html\" target=\"_blank\" title=\"制作彩虹特效图片\"><img alt=\"\" src=\"img/images/Rainbowposter.png\"></a></li>" +
+							"<li><a href=\"site/rainbowposter/index.html\" target=\"_blank\" title=\"制作彩虹特效图片\"><img alt=\"\" src=\"img/images/RainbowPoster.png\"></a></li>" +
 							"</ul>" +
 							"<ul style=\"margin-top:5px;color:#555\">" +
 							"<li type=\"circle\">Special Topics</li>" +
