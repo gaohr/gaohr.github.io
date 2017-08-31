@@ -8,7 +8,7 @@ var style_event = function(feature, resolution){
 	var style = [ new ol.style.Style({
         image: new ol.style.Icon(/** @type {olx.style.IconOptions} */ ({
           src: './2016-05-11-agot-map/img/event.png',
-		  scale: 0.4
+		  scale: 0.5
         }))
       })];
 	} else {

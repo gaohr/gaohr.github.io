@@ -37,6 +37,7 @@ var geojson_cities = {
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "法罗丝", "info": "法罗丝（Faros）是大莫拉克岛的一座城市，位于该岛北部一条河流的河口处。当地居民信仰法罗丝石牛。" }, "geometry": { "type": "Point", "coordinates": [ 147.134484, -35.543814 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "莲花港", "info": "null" }, "geometry": { "type": "Point", "coordinates": [ 55.753885, -44.679699 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "檀头镇", "info": "null" }, "geometry": { "type": "Point", "coordinates": [ 63.723850, -50.051112 ] } },
-{ "type": "Feature", "properties": { "Id": 0.000000, "name": "临冬城", "info": "临冬城（Winterfell）是史塔克家族祖传的城堡和权力的中心，被认为是北境的首府。其坐落于七大王国北方省份的中心，国王大道将其与君临和长城连接起来。" }, "geometry": { "type": "Point", "coordinates": [ 36.396698, 52.809125 ] } }
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "临冬城", "info": "临冬城（Winterfell）是史塔克家族祖传的城堡和权力的中心，被认为是北境的首府。其坐落于七大王国北方省份的中心，国王大道将其与君临和长城连接起来。" }, "geometry": { "type": "Point", "coordinates": [ 36.396698, 52.809125 ] } },
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "凯岩城", "info": "凯岩城（Casterly Rock）是一座高大宏伟的岩石城堡，位于维斯特洛大陆西部沿海，俯瞰着对面的兰尼斯港和日落之海。它是西境首府，兰尼斯特家族的统治所在。" }, "geometry": { "type": "Point", "coordinates": [ 21.839829, 17.001817 ] } }
 ]
 }

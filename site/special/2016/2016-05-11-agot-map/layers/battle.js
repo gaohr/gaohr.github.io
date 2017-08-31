@@ -14,6 +14,8 @@ var geojson_battle = {
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "弥林之战", "info": "弥林之战（Siege of Meereen）， 是丹妮莉丝在奴隶湾进行的一系列战争之一。弥林人用焦土政策和插着奴隶儿童的竹竿来迎接丹妮莉丝和她的军队，而这显然激怒了丹妮。弥林城的勇士欧兹那克·佐·帕尔出城迎战", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 120.397991, -4.078598 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "渊凯之战", "info": "渊凯之战（Battle of Yunkai ），阿斯塔波之战后, 丹妮莉丝·坦格利安沿着海岸线向北，朝着第二大奴隶制城邦，沿海城市渊凯进军。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 117.732994, -7.746537 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "阿斯塔波攻防战", "info": "阿斯塔波攻防战（Siege of Astapor ），是发生於奴隶湾的一场战役。这场战役是渊凯奴隶主为了恢复奴隶湾旧貌，推翻丹妮莉丝·坦格利安的第一步行动。最后阿斯塔波被奴隶主联盟攻克，阿斯塔波自由民的政权倒台，渊凯消除受到南北夹攻的威胁。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 114.211392, -15.027688 ] } },
-{ "type": "Feature", "properties": { "Id": 0.000000, "name": "私生子之战", "info": "私生子之战（Battle of the Bastards）， 琼恩·雪诺与拉姆斯·波顿之间的私生子宿命之战，经此一役，临冬城终于再次飘起了冰原狼的旗帜。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 37.894390, 54.845434 ] } }
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "私生子之战", "info": "私生子之战（Battle of the Bastards）， 琼恩·雪诺与拉姆斯·波顿之间的私生子宿命之战，经此一役，临冬城终于再次飘起了冰原狼的旗帜。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 37.894390, 54.845434 ] } },
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "高庭之战", "info": "高庭之战（Battle of the HighGarden 狮子军大破高庭，“荆棘女王”被体面毒杀，“生生不息”Growing Strong的玫瑰家族自此覆灭。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 27.141269, 1.475834 ] } },
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "冰湖大战", "info": "冰湖大战（Battle of the IceLake）， 琼恩·雪诺率领捉鬼小队出塞抓捕尸鬼，途中不幸遭遇异鬼率领的大军，随即在冰天雪地之下展开一场艰难的求生之战。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 41.164781, 72.522693 ] } }
 ]
 }
