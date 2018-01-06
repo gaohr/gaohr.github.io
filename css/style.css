@@ -25,7 +25,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .links .weibo  {color:#e03b29}.links .github {color:#333}.links .google  {color:#3b8029}.links .twitter {color:#2366bb}.links .fb {color:#5366bb}
 .links a :hover{color:#236eb8}
 
-.centerpage {background-color:#eee;padding:10px;height:auto}
+.centerpage {background-color:#fafafa;padding:10px;height:auto}
 .copyright{text-align:center;color:#555 !important;}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}
