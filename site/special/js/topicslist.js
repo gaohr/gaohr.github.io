@@ -8,4 +8,6 @@ var topicslist = [
 
 {"topicid":"2017041701", "title":"冰与火之歌：九大家族", "type":"兴趣", "content":"A Song of Ice and Fire", "img":"2017/images/GameofThrones.jpg", "date":"2017-04-17", "href":"2017/2017-04-17-nine-families.html", "comments":"0"},
 
+{"topicid":"2018010801", "title":"兔毛？", "type":"其他", "content":"兔毛价格走势一览", "img":"2018/images/Rabbit.jpg", "date":"2018-01-08", "href":"2018/2018-01-04-price-of-rabbit.html", "comments":"0"},
+
 ];

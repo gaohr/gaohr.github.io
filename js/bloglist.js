@@ -1,4 +1,5 @@
 var bloglist = [
+{"blogid":"2018010801", "title":"使用Arcpy进行数据批处理", "type":"专业技术", "content":"伴随着时空大数据的到来，海量数据的处理是一个所有科研工作者都无法忽视的重要问题。本文以Arcpy为例，在Python语言开发环境下，通过实际的编程应用，简单介绍空间数据批处理的实现方法。", "img":"site/blogs/2018/images/Arcpy.jpg", "date":"2018-01-08", "href":"http://gaohr.win/site/blogs/2018/2018-01-08-batch-data-process-using-arcpy.html", "tags":["Arcpy", "Python", "数据"]},
 
 {"blogid":"2017041801", "title":"中国国家基础地理信息系统（GIS）数据", "type":"专业技术", "content":"中国国家基础地理信息系统（GIS）数据，包括世界行政边界图、中国省级、县级行政界线、河流水系、主要公路铁路等矢量数据", "img":"site/blogs/2017/images/GIS_China.jpg", "date":"2017-04-18", "href":"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html", "tags":["GIS", "数据", "中国"]},
 
@@ -12,7 +13,7 @@ var bloglist = [
 
 {"blogid":"2016042401", "title":"MongoDB启动成功但连接不上的问题", "type":"专业技术", "content":"MongoDB配置完成后，并且正常启动连接了，但有时候突然就连接不上了，重启也无效，尽管重启成功！......捉急", "img":"site/blogs/2016/images/MongoDB.jpg", "date":"2016-04-24", "href":"http://gaohr.win/site/blogs/2016/2016-04-24-error-in-mongodb-config.html", "tags":["MongoDB", "数据库"]},
 
-{"blogid":"2016042301", "title":"Landsat系列遥感影像数据介绍及常用下载方法总结", "type":"专业技术", "content":"美国NASA的陆地卫星(Landsat)计划，从1972年7月23日以来， 已发射8颗（第6颗发射失败）。目前Landsat1—4均相继失效，Landsat 5仍在超期运行（从1984年3月1日发射至今）。 Landsat 7 于1999年4月15日发射升空。 Landsat 8 于2013年2月11日发射升空， 经过100天测试运行后开始获取影像。Landsat遥感卫星数据是目前遥感领域非常重要的遥感数据来源，其数据连续性好，分辨率适中，数据质量高，时间序列长，在国内外许多研究领域得到了广泛应用。", "img":"site/blogs/2016/images/Landsat.jpg", "date":"2016-04-23", "href":"http://gaohr.win/site/blogs/2016/2016-04-23-landsat-data-download.html", "tags":["Landsat", "遥感", "数据"]},
+{"blogid":"2016042301", "title":"Landsat系列遥感影像数据介绍及常用下载方法总结", "type":"专业技术", "content":"美国NASA的陆地卫星(Landsat)计划，从1972年7月23日以来， 已发射8颗（第6颗发射失败）。目前Landsat1—4均相继失效，Landsat 5仍在超期运行（从1984年3月1日发射至今）。 Landsat 7 于1999年4月15日发射升空。Landsat 8 于2013年2月11日发射升空，经过100天测试运行后开始获取影像。Landsat遥感卫星数据是目前遥感领域非常重要的遥感数据来源，其数据连续性好，分辨率适中，数据质量高，时间序列长，在国内外许多研究领域得到了广泛应用。", "img":"site/blogs/2016/images/Landsat.jpg", "date":"2016-04-23", "href":"http://gaohr.win/site/blogs/2016/2016-04-23-landsat-data-download.html", "tags":["Landsat", "遥感", "数据"]},
 
 {"blogid":"2016042001", "title":"VAssistX的安装及在VS 2010中的使用", "type":"专业技术", "content":"有时候，我们要编码实现某个功能，或许如行云流水一气呵成，但就是懒得给这代码添注释。等需要改动的时候，那种费力耗时的再去重新理解的过程就不用描述了吧。所以说，规范的代码注释对于开发者来说意义重大，这时，我们的主角+好助手——VAssistX出现了", "img":"site/blogs/2016/images/VAssistX.jpg", "date":"2016-04-20", "href":"http://gaohr.win/site/blogs/2016/2016-04-20-VAssistX.html", "tags":["VAssistX", "VS", "编程"]},
 
