@@ -1,10 +1,110 @@
 ﻿
 var imglist = [
+	//2018
+	{
+		title:'division', data:'2018',
+	},
+	
+	{
+		title:'浪花', data:'2018-03-29', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201803291.jpg'},{url:'201803292.jpg'},{url:'201803293.jpg'},{url:'201803294.jpg'}],
+		textcon:'是夜，你发如青丝，笑靥娇',
+	},
+	{
+		title:'浪花', data:'2018-03-24', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201803241.jpg'}],
+		textcon:'一刻也不放松复习，加油！',
+	},
+	{
+		title:'浪花', data:'2018-02-10', location:'• 济南汽车东站 济南', type:'image', 
+		src:[{url:'201802101.jpg'},{url:'201802102.jpg'}],
+		textcon:'放假回家过年啦，开心吗？',
+	},
+	{
+		title:'浪花', data:'2018-02-06', location:'• 首都师范大学 北一区 北京', type:'image', 
+		src:[{url:'201802061.jpg'},{url:'201802062.jpg'}],
+		textcon:'北一图书馆遇到个小美女~',
+	},
+	{
+		title:'浪花', data:'2018-02-04', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201802041.jpg'},{url:'201802042.jpg'}],
+		textcon:'自拍下，秀个恩爱！',
+	},
+	{
+		title:'浪花', data:'2018-01-27', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201801271.jpg'},{url:'201801272.jpg'}],
+		textcon:'给，吃个虾，好好吃！',
+	},
+	{
+		title:'浪花', data:'2018-01-20', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201801201.jpg'},{url:'201801202.jpg'}],
+		textcon:'呷哺呷哺',
+	},
+	
 	//2017
 	{
 		title:'division', data:'2017',
 	},
-	
+	{
+		title:'浪花', data:'2017-12-02', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201712021.jpg'},{url:'201712022.jpg'},{url:'201712023.jpg'}],
+		textcon:'这个办公环境不错呦！',
+	},
+	{
+		title:'浪花', data:'2017-12-01', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201712011.jpg'},{url:'201712012.jpg'}],
+		textcon:'冬日休个闲',
+	},
+	{
+		title:'浪花', data:'2017-11-11', location:'• 红螺寺 北京', type:'image', 
+		src:[{url:'201711111.jpg'},{url:'201711112.jpg'},{url:'201711113.jpg'},{url:'201711114.jpg'},{url:'201711115.jpg'},{url:'201711116.jpg'}],
+		textcon:'我们来到了红螺寺......',
+	},
+	{
+		title:'浪花', data:'2017-11-04', location:'• 慈寿寺-首都师范大学 北京', type:'image', 
+		src:[{url:'201711041.jpg'},{url:'201711042.jpg'},{url:'201711043.jpg'},{url:'201711044.jpg'}],
+		textcon:'秋叶潇潇~',
+	},
+	{
+		title:'浪花', data:'2017-10-01', location:'• 上游村 莱芜', type:'image', 
+		src:[{url:'201710011.jpg'}],
+		textcon:'小公主，生日快乐！',
+	},
+	{
+		title:'浪花', data:'2017-09-29', location:'• 上游村 莱芜', type:'image', 
+		src:[{url:'201709291.jpg'},{url:'201709292.jpg'},{url:'201709293.jpg'}],
+		textcon:'上坡啦......',
+	},
+	{
+		title:'浪花', data:'2017-07-09', location:'• 太阳岛风景区 哈尔滨', type:'image', 
+		src:[{url:'201707091.jpg'},{url:'201707092.jpg'},{url:'201707093.jpg'},{url:'201707094.jpg'},{url:'201707095.jpg'},{url:'201707096.jpg'},{url:'201707097.jpg'},{url:'201707098.jpg'}],
+		textcon:'夏天来哈尔滨，别样的风情哈哈',
+	},
+	{
+		title:'浪花', data:'2017-07-08', location:'• 哈尔滨师范大学 哈尔滨', type:'image', 
+		src:[{url:'201707081.jpg'},{url:'201707082.jpg'},{url:'201707083.jpg'}],
+		textcon:'哈尔滨师范校园之旅......',
+	},
+	{
+		title:'浪花', data:'2017-06-25', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201706251.jpg'},{url:'201706252.jpg'},{url:'201706253.jpg'},{url:'201706254.jpg'}],
+		textcon:'I love CNU, I love U!',
+	},
+	{
+		title:'浪花', data:'2017-06-24', location:'• 清华大学 北京', type:'image', 
+		src:[{url:'201706241.jpg'},{url:'201706242.jpg'},{url:'201706243.jpg'}],
+		textcon:'我们在清华~',
+	},
+	{
+		title:'浪花', data:'2017-06-21', location:'• 中科院地理所 北京', type:'image', 
+		src:[{url:'201706211.jpg'},{url:'201706212.jpg'},{url:'201706213.jpg'},{url:'201706214.jpg'},{url:'201706215.jpg'},{url:'201706216.jpg'}],
+		textcon:'浪花毕业照，我们一起毕业吧！',
+	},
+	{
+		title:'小浪', data:'2017-06-20', location:'• 中科院地理所 北京', type:'image', 
+		src:[{url:'201706201.jpg'},{url:'201706202.jpg'},{url:'201706203.jpg'}],
+		textcon:'毕业照，毕业季，毕业啦！',
+	},
 	{
 		title:'浪花', data:'2017-06-01', location:'• 北戴河 秦皇岛', type:'image', 
 		src:[{url:'201706011.jpg'},{url:'201706012.jpg'},{url:'201706013.jpg'},{url:'201706014.jpg'},{url:'201706015.jpg'},{url:'201706016.jpg'},{url:'201706017.jpg'}],
