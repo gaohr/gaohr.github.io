@@ -145,14 +145,59 @@ var imglist = [
 		src:[{url:'201701021.jpg'}],
 		textcon:'开小灶，煮火锅',
 	},
+	
 	//2016
 	{
 		title:'division', data:'2016',
 	},
-	
+	{
+		title:'浪花', data:'2016-12-18', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201612181.jpg'}],
+		textcon:'开题，加油！',
+	},
+	{
+		title:'浪花', data:'2016-11-19', location:'• 拙政园• 寒山寺 苏州', type:'image', 
+		src:[{url:'201611191.jpg'},{url:'201611192.jpg'},{url:'201611193.jpg'},{url:'201611194.jpg'},{url:'201611195.jpg'},{url:'201611196.jpg'}],
+		textcon:'月落乌啼霜满天,<br>江枫渔火对愁眠。<br>姑苏城外寒山寺,<br>夜半钟声到客船。',
+	},
+	{
+		title:'浪花', data:'2016-11-18', location:'• 高铁上', type:'image', 
+		src:[{url:'201611181.jpg'},{url:'201611182.jpg'}],
+		textcon:'没有座位，自己创造',
+	},
+	{
+		title:'浪花', data:'2016-11-13', location:'• 新奥购物中心 北京', type:'image', 
+		src:[{url:'201611131.jpg'}],
+		textcon:'改善下伙食……',
+	},
+	{
+		title:'浪花', data:'2016-10-29', location:'• 地坛公园 北京', type:'image', 
+		src:[{url:'201610291.jpg'},{url:'201610292.jpg'},{url:'201610293.jpg'},{url:'201610294.jpg'}],
+		textcon:'银杏大道，落叶纷飞',
+	},
+	{
+		title:'浪花', data:'2016-08-11', location:'• 我家啦 菏泽', type:'image', 
+		src:[{url:'201608111.jpg'},{url:'201608112.jpg'}],
+		textcon:'乡村气息浓厚吧',
+	},
+	{
+		title:'浪花', data:'2016-08-06', location:'• 北京世界公园 北京', type:'image', 
+		src:[{url:'201608061.jpg'},{url:'201608062.jpg'},{url:'201608063.jpg'},{url:'201608064.jpg'},{url:'201608065.jpg'}],
+		textcon:'第一次骑马，看埃菲尔铁塔……',
+	},
+	{
+		title:'浪花', data:'2016-07-23', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201607231.jpg'},{url:'201607232.jpg'}],
+		textcon:'黑夜也遮挡不住你的美',
+	},
+	{
+		title:'浪花', data:'2016-06-26', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201606261.jpg'},{url:'201606262.jpg'},{url:'201606263.jpg'}],
+		textcon:'自己感受',
+	},
 	{
 		title:'浪花', data:'2016-06-10', location:'• 首都师范大学 北京', type:'image', 
-		src:[{url:'img/201606101.jpg'}],
+		src:[{url:'201606101.jpg'}],
 		textcon:'吃披萨啦~',
 	},
 	{
