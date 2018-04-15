@@ -24,6 +24,8 @@
 	<a class="imgnext" href="###" id="imgnext">›</a>
 	
 	<div class="yearsdiv">
+		<div class="years"><a href="#year2018" id="year2018">2018</a></div>
+		<div class="years"><a href="#year2017" id="year2017">2017</a></div>
 		<div class="years"><a href="#year2016" id="year2016">2016</a></div>
 		<div class="years"><a href="#year2015" id="year2015">2015</a></div>
 		<div class="years"><a href="#year2014" id="year2015">2014</a></div>
@@ -60,6 +62,12 @@
 				$(document).on("scroll", onScroll);
 			});
 		});
+	});
+	$(".imglh").hover(function(event){
+		n = parseInt(6 * Math.random());
+		$(this).css("border", "8px solid " + getColor_rdm(n));
+	},function(event){
+		$(this).css("border", "8px solid rgba(255, 255, 255, 0.9)");
 	});
 	</script>
 
