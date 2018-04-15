@@ -8,7 +8,7 @@ var imglist = [
 	{
 		title:'浪花', data:'2018-04-01', location:'• 玉渊潭 北京', type:'image', 
 		src:[{url:'201804011.jpg'},{url:'201804012.jpg'},{url:'201804013.jpg'},{url:'201804014.jpg'},{url:'201804015.jpg'},{url:'201804016.jpg'},{url:'201804017.jpg'},{url:'201804018.jpg'},{url:'201804019.jpg'},{url:'20180401a.jpg'}],
-		textcon:'又是一年樱花节......门票居然涨价了,
+		textcon:'又是一年樱花节......门票居然涨价了'
 	},
 	{
 		title:'浪花', data:'2018-03-31', location:'• 北方工业大学 北京', type:'image', 
