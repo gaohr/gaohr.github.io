@@ -108,6 +108,19 @@ function colorful(){
 }
 colorful();
 
+// 照片边框
+function getColor_rdm(n){
+	switch(n){ 
+		case 1:return "#ff0000";
+		case 2:return "#ff6600";
+		case 3:return "#3366cc";
+		case 4:return "#00cc66";
+		case 5:return "#cc66ff";
+		case 6:return "#3366ff";
+		default:return "gray";
+	}
+}
+
 //向后翻
 var imgnum = 0;
 $("#imgnext").click(function() {
