@@ -6,6 +6,21 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2018-04-01', location:'• 玉渊潭 北京', type:'image', 
+		src:[{url:'201804011.jpg'},{url:'201804012.jpg'},{url:'201804013.jpg'},{url:'201804014.jpg'},{url:'201804015.jpg'},{url:'201804016.jpg'},{url:'201804017.jpg'},{url:'201804018.jpg'},{url:'201804019.jpg'},{url:'20180401a.jpg'}],
+		textcon:'又是一年樱花节......门票居然涨价了,
+	},
+	{
+		title:'浪花', data:'2018-03-31', location:'• 北方工业大学 北京', type:'image', 
+		src:[{url:'201803314.jpg'},{url:'201803315.jpg'}],
+		textcon:'来办事，顺便赏玉兰',
+	},
+	{
+		title:'浪花', data:'2018-03-31', location:'• 五棵松 北京', type:'image', 
+		src:[{url:'201803311.jpg'},{url:'201803312.jpg'},{url:'201803313.jpg'}],
+		textcon:'自助烤肉，改善下生活，嘿嘿！',
+	},
+	{
 		title:'浪花', data:'2018-03-29', location:'• 首都师范大学 北京', type:'image', 
 		src:[{url:'201803291.jpg'},{url:'201803292.jpg'},{url:'201803293.jpg'},{url:'201803294.jpg'}],
 		textcon:'是夜，你发如青丝，笑靥娇',
