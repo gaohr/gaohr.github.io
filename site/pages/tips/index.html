@@ -40,6 +40,7 @@
         .clr {clear: both;overflow: auto;display: block;height: 0px;}
         #content .icon {float: left;width: 35px;padding-left: 15px;height: 35px;text-align: center;}
         #content .name {font-family: 'xingshu';float: right;padding-right: 15px;text-align: right;font-size: 18px;line-height: 35px;color: #47d;}
+		#content .time {float: right;padding-right: 15px;font-size: 10px;line-height: 15px;color: #47d;}
         #content .num {float: left;padding-left: 10px;width: 195px;color:#533}
 		#content .num span {font-size:14px; font-family:Microsoft YaHei}
     </style>
@@ -56,12 +57,6 @@
 	<script src="tipslist.js"></script>
     <script>
 
-    //需求1：模拟数据库获取信息，然后在页面上生成数组的长度个tip,然后分别问起内容进行修改。
-    //需求2：点击内容，提高层级；点击关闭按钮，删除tip标签；双击顶部，删除标签.....
-
-    //需求1：模拟数据库获取信息，然后在页面上生成数组的长度个tip,然后分别问起内容进行修改。
-    //步骤：
-        //获取相关元素
         var content = document.getElementById("content");
 
         //循环生成div标签，然后为innerHTML属性添加内容
@@ -78,16 +73,16 @@
             newDiv.style.left = leftValue+"px";
             //赋值内容
             newDiv.innerHTML = '<div class="tip_h" title="双击关闭纸条">'+
-                                        '<div class="num"><span>No.'+messages[i].id+'</span> -- '+messages[i].time+'</div>'+
-                                        '<div class="close" title="关闭纸条" >×</div>'+
-                                        '<div class="clr"></div>'+
+                                    '<div class="num"><b><span>'+messages[i].title+'</span></b></div>'+
+                                    '<div class="close" title="关闭纸条" >×</div>'+
+                                    '<div class="clr"></div>'+
                                 '</div>'+
                                 '<div class="tip_c">'+messages[i].content+'</div>'+
                                 '<div class="tip_f">'+
                                     '<div class="icon">'+
                                     '<img src="img/bpic_1.gif" alt="" title="">'+
                                 '</div>'+
-                                '<div class="name"><b>'+messages[i].name+'</b></div>'+
+                                '<div class="name"><b>'+messages[i].name+'</b><br><span class="time"> -- '+messages[i].time+'</span></div>'+
                                     '<div class="clr"></div>'+
                                 '</div>';
             //把新创建的元素放入content里面
