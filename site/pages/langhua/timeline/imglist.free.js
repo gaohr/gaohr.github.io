@@ -6,6 +6,31 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2018-06-18', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201806181.jpg'}, {url:'201806182.jpg'} {url:'201806183.jpg'}, {url:'201806184.jpg'}, {url:'201806185.jpg'}, {url:'201806186.jpg'}, {url:'201806187.jpg'}, {url:'201806188.jpg'}],
+		textcon:'属于你的毕业季！',
+	},
+	{
+		title:'浪花', data:'2018-06-17', location:'• 张家口坝上草原 河北', type:'image', 
+		src:[{url:'201806171.jpg'}, {url:'201806172.jpg'} {url:'201806173.jpg'}, {url:'201806174.jpg'}, {url:'201806175.jpg'}, {url:'201806176.jpg'}, {url:'201806177.jpg'}, {url:'201806178.jpg'}],
+		textcon:'坝上草原，蓝天，绿草，清水，骏马，野花，和...粪！',
+	},
+	{
+		title:'浪花', data:'2018-05-20', location:'• 中科院遥感所 北京', type:'image', 
+		src:[{url:'201805201.jpg'}, {url:'201805202.jpg'}],
+		textcon:'公寓里面的唱吧和健身房，给力！',
+	},
+	{
+		title:'浪花', data:'2018-05-13', location:'• 中科院遥感所 北京', type:'image', 
+		src:[{url:'201805131.jpg'}],
+		textcon:'没注意所门前也有一片月季盛开了',
+	},
+	{
+		title:'浪花', data:'2018-04-29', location:'• 中关村公园 北京', type:'image', 
+		src:[{url:'201804291.jpg'},{url:'201804292.jpg'}],
+		textcon:'来中关村公园录像，，，',
+	},
+	{
 		title:'浪花', data:'2018-04-01', location:'• 玉渊潭 北京', type:'image', 
 		src:[{url:'201804011.jpg'},{url:'201804012.jpg'},{url:'201804013.jpg'},{url:'201804014.jpg'},{url:'201804015.jpg'},{url:'201804016.jpg'},{url:'201804017.jpg'},{url:'201804018.jpg'},{url:'201804019.jpg'},{url:'20180401a.jpg'}],
 		textcon:'又是一年樱花节......门票居然涨价了'
