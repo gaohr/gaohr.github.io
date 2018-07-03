@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="shortcut icon" href="../../../img/mainicon.png" />
+    <title>GaoHR | 使用Arcpy进行数据批处理</title>
+	<style>
+		.bmath b {color:#00498a}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2018070301">
+				<div class="blogcontent alist">
+					<h2>GitHub安装与使用简明教程</h2>
+					<h2><small>A concise tutorial for GitHub installation and use</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p>作为当前最流行的开源代码库以及版本控制系统，GitHub已经成为了管理软件开发以及发现已有代码的首选方法，目前已托管430+万Git项目，不仅越来越多知名开源项目迁入GitHub，近年流行的开源库往往在GitHub首发。在GitHub中，用户可以十分方便地找到海量的开源代码。</p>
+					<p>本文不对GitHub作详细的讲解，主要介绍一下GitHub的安装以及简单的配置和使用。</p>
+					<ul>
+						<li><a href="#ca">1 安装Git</a></li>
+						<li><a href="#cb">2 从GitHub中克隆代码库</a></li>
+						<li><a href="#cc">3 克隆代码库到本地</a></li>
+						<li><a href="#cd">4 代码同步与更新</a></li>
+					</ul>
+					<p id="ca" style="font-size:1.2em"><b>1 安装Git</b></p>
+					<p>Windows版的Git，直接下载安装即可，安装完成后，从安装目录中找到Git <i class="icon-arrow-right"></i> Git Bash，出现一个类似命令行的窗口，说明Git安装成功了。</p>
+					<p class="imginblog"><img src="2018-07-03-github-install-and-use/img01.jpg"></p>
+					<p>安装完成后，在git bash 命令行里输入：</p>
+					<pre>$ git config --global user.name "Your Name"<br>$ git config --global user.email "email@example.com"</pre>
+					<p>这两行指令表示这台机器上的所有Git仓库都使用这个配置。当然，你也可以为不同的仓库配置不同的用户名，详情请参阅相关文档。</p>
+					<p id="cb" style="font-size:1.2em"><b>2 从GitHub中克隆代码库</b></p>
+					<p>配置好本地的Git环境之后，我们需要将代码库从GitHub上克隆到本地计算机。</p>
+					<p>首先在Github.com上注册一个账号。注册好之后，需要设置SSH key，在git bash中输入：</p>
+					<pre><code>ssh-keygen -t rsa -C youremail@example.com</code></pre>
+					<p>一路回车，如果顺利的话，在用户目录里能找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的密钥对，前者是私钥，后者是公钥。</p>
+					<p class="imginblog"><img src="2018-07-03-github-install-and-use/img02.jpg" width="50%"></p>
+					<p>然后，登录Github，打开 Account Settings，SSH key页面，点Add SSH Key，Title任意填，在Key文本框里填入id_rsa.pub的内容，点击Add key。目的是使它自动使用你的SSH密钥，而不用每次在<code>git pull</code>或者<code>push</code>时询问你的用户名和密码。</p>
+					<p id="cc" style="font-size:1.2em"><b>3 克隆代码库到本地</b></p>
+					<p>切换到目标路径：</p>
+					<pre>cd <destination folder><br>git clone <SSH key and passphrase from account></pre>
+					<p>比如：</p>
+					<pre>git clone git@github.com:gaohr/gaohr.github.io.git</pre>
+					<p>克隆结束后，切换到克隆目录，在这里可以添加上游远程仓库：</p>
+					<pre>git remote add upstream <SSH key and passphrase from upstream account></pre>
+					<p>比如：</p>
+					<pre>git remote add upstream git@github.com:PyESSI/PyESSI.git</pre>
+					<p>这样，我们就将远程代码克隆到了本地计算机一份。接下来，我们尝试对本地文件做一下修改，然后提交到远程库（你自己的），最后通过pull request命令提交给远程库代码拥有者。</p>
+					<p>为了测试，简单修改了一下README文件，然后使用<code>git status</code>命令查看本地和远程的差别，随后输入以下命令：</p>
+					<pre>git add README.md<br>git commit –m "some text”<br>git push –u origin master</pre>
+					<p>这样就把本地的本次修改提交到了远程库中。</p>
+					<p class="imginblog"><img src="2018-07-03-github-install-and-use/img03.jpg" width="70%"></p>
+					<p>在个人的GitHub目录下可以看到刚才提交的修改，如果想把这个修改提交到上游远程库，需要点击pull request按钮，然后点击Create pull request，就可以把本次修改提交完成了。而上游远程库拥有者就会收到新的pull request并处理了。</p>
+					<p id="cd" style="font-size:1.2em"><b>4 代码同步与更新</b></p>
+					<p>我们学习了如何将本地的修改提交到源代码库，接下来看看如何将远程代码库中的更新同步到本地库中。</p>
+					<p>比如我在远程库中修改了README.md文件，现在同步到本地。将源代码库更新的内容同步到本地，检查差异，然后再和本机分支合并，输入以下命令：</p>
+					<pre>git fetch upstream<br>git checkout master<br>git merge upstream/master</pre>
+					<p>多数情况下，git可以自动合并，如果出现冲突，则需手动处理（冲突内容），再commit提交。</p>
+					<p></p>
+					
+					<br>
+					<p>Fighting, GISer!</p>
+					
+					
+				</div>
+				<!-- UY BEGIN-->
+				<div id="uyan_frame"></div>
+				<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>
+				<!-- WY BEGIN 
+					<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+					<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+					<script>var cloudTieConfig = {url: document.location.href, sourceId: "",productKey: "6a955e9b82914396891c0ac58479b7c6",target: "cloud-tie-wrapper"};var yunManualLoad = true;Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);</script>
+				<!-- WY END -->
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"4","bdPos":"right","bdTop":"100"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+			</div>
+	</div>
+	<!-- footer  --> 
+	<footer>
+		<p class="copyright">Copyright © 2016 Gao Huiran</a></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../blogsload.js"></script>
+</script>
+</body>
+</html>

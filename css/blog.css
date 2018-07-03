@@ -30,6 +30,7 @@ Blog Page
 .blogcontent {color:#111;background:#fafafa;padding:10px}
 .blogcontent h2 {text-align:center}
 .blogcontent p {font-size:14px;line-height:26px;text-indent:2em;font-family:'Microsoft YaHei'}
+.blogcontent p > i {text-indent:0em;}
 .blogcontent li {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent .imginblog {width:auto;text-align:center}
 .blogcontent .codeblock {background-color:#fff; border:1px solid #ccc; border-radius:5px}
