@@ -1,5 +1,5 @@
 var bloglist = [
-{"blogid":"2018070301", "title":"GitHub安装与使用简明教程", "type":"专业技术", "content":"作为当前最流行的开源代码库以及版本控制系统，GitHub已经成为了管理软件开发以及发现已有代码的首选方法，不仅越来越多知名开源项目迁入GitHub，近年流行的开源库往往在GitHub首发。在GitHub中，用户可以十分方便地找到海量的开源代码。", "img":"site/blogs/2018/images/Github.jpg", "date":"2018-07-03", "href":"http://gaohr.win/site/blogs/2018/2018-07-03-github-install-and-use.html", "tags":["GitHub"]},
+{"blogid":"2018070301", "title":"GitHub安装与使用简明教程", "type":"专业技术", "content":"作为当前最流行的开源代码库以及版本控制系统，GitHub已经成为了管理软件开发以及发现已有代码的首选方法，不仅越来越多知名开源项目迁入GitHub，近年流行的开源库往往在GitHub首发。在GitHub中，用户可以十分方便地找到海量的开源代码。", "img":"site/blogs/2018/images/Github.jpg", "date":"2018-07-03", "href":"http://gaohr.win/site/blogs/2018/2018-07-03-github-install-and-use.html", "tags":["Git", "GitHub"]},
 
 {"blogid":"2018010801", "title":"使用Arcpy进行数据批处理", "type":"专业技术", "content":"伴随着时空大数据的到来，海量数据的处理是一个所有科研工作者都无法忽视的重要问题。本文以Arcpy为例，在Python语言开发环境下，通过实际的编程应用，简单介绍空间数据批处理的实现方法。", "img":"site/blogs/2018/images/Arcpy.jpg", "date":"2018-01-08", "href":"http://gaohr.win/site/blogs/2018/2018-01-08-batch-data-process-using-arcpy.html", "tags":["Arcpy", "Python", "数据"]},
 

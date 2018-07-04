@@ -92,7 +92,9 @@ $(document).ready(function() {
 		return tagslist;
 	}
 	
-})
+});
+
+$("#cltmap").append("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=012900&w=300&t=n&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=acdbfc&ct=ffffff&cmo=00ff66&cmn=ff3d00\"></script>");
 	
 	
 	
