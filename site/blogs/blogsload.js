@@ -50,7 +50,7 @@ $(document).ready(function() {
 					"<a href=\"###\" target=\"_blank\" class=\"twitter\" style=\"margin:2px\"><i class=\"icon-twitter-sign\"></i></a>" +
 				"</div>" +
 				"<hr>" +
-					"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=012900&t=n&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=94cef7&cmo=b0ffc6&cmn=ff5353&ct=ffffff\"></script>" +
+					"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=000000&w=300&t=n&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=7ac8ff&cmo=3acc3a&cmn=ff5353&ct=ffffff\"></script>" +
 			"</div>");
 	var blogs = eval('bloglist');
 	//for(i = 0; i < blogs.length; i++) {
