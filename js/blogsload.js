@@ -130,7 +130,8 @@ $(document).ready(function() {
 	
 	//Topics load
 	var topics = eval('topicslist');
-	for(t = 0; t < topics.length; t++) {
+	//for(t = 0; t < topics.length; t++) {
+	for(t = 0; t < 4; t++) {
 		$("#topics").append(
 			"<div class='topicbody'>" +
 				"<a href='site/special/" + topics[t].href + "' title='" + topics[t].title + "'>" +
