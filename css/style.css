@@ -32,6 +32,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .portlet .title b{padding:3px;color:#333;font-size:1.2em;border-bottom:3px solid #d85546;font-family:'Microsoft YaHei'}
 .portlet .title i{color:#333;padding:2px;font-size:1.2em;border-bottom:6px solid #d85546;}
 
+.cltmap {width:100%;}
+
 /*About*/
 .info {font-family:'Microsoft YaHei'}
 .info h4 {color:#da2e1b;}
