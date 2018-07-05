@@ -27,7 +27,7 @@ $("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cd
 $("#comments").html("");
 	
 // Da shang
-$("#dashang").html("<div class=\"shang_img\"></div>" +
+$("#dashang").html("<br><hr><div class=\"shang_img\"></div>" +
 					"<span class=\"tdcode\">" +
 						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
 						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
