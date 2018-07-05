@@ -35,8 +35,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .cltmap {width:100%;}
 .dashang {width:100%;height:auto;text-align:center}
 .shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;}
-.tdcode {width:400px;height:180px;display:none;padding:20px;background:#777;border:1px soild #d85546}
-.dashang img {margin:10px}
+.tdcode {width:400px;height:200px;display:none;padding:10px;background:#777;border:1px soild #d85546}
+.tdcode img {width:160px;margin:10px}
 
 /*About*/
 .info {font-family:'Microsoft YaHei'}
