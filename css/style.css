@@ -42,6 +42,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .moreinfo {color:#333}
 .moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:2px solid #f99186;}
 .moreinfo .infocontent{color:#444;margin-left:5%}
+.infocontent i {color:#d85546}
 
 /*专题*/
 .topic-top {font-size:1.6em;font-family:'宋体';color:#b83a00;font-weight:bold;}
