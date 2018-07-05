@@ -3,7 +3,8 @@
 *GaoHR
 *2016-04-19
 */
-$(document).ready(function() {
+
+// $(document).ready(function() {
 	
 	//load menu
 	$("#mainmenu").html("<div class=\"menulist\">" +
@@ -92,7 +93,7 @@ $(document).ready(function() {
 		return tagslist;
 	}
 	
-});
+// });
 	
 	
 	
