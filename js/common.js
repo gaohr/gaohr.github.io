@@ -27,11 +27,12 @@ $("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cd
 $("#comments").html("");
 	
 // Da shang
-$("#dashang").html("<br><hr><div class=\"shang_img\"></div>" +
+$("#dashang").append("<br><hr><div class=\"shang_img\"></div>" +
 					"<span class=\"tdcode\">" +
 						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
 						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
-					"</span>");
+					"</span><br>" + 
+					"<span class=\"paylist\"></span>");
 $(".shang_img").hover(function(){
     $(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");
 },function(){
@@ -40,6 +41,12 @@ $(".shang_img").hover(function(){
 $(".shang_img").click(function() {
 	$(".tdcode").toggle(500);
 });
+var pays = eval('paylist');
+for(i = 0; i < pays.length; i++) {
+	$(".paylist").append(
+		"<p><i class=\"icon-heart\"></i><span class=\"name\">" + pays[i].name + "</span>打赏了<span class=\"money\">￥<b>" + pays[i].amount + "</b>元</span><i class=\"date\">" + pays[i].date + "</i><span class=\"msg\" id=\"msg\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"" + pays[i].msg + "\"><i class=\"icon-comment\"></i></span></p>"
+)};
+$('#msg').tooltip();
 	
 // Copyright
 $("#copyright").html("<hr><br>Copyright © 2016-2018 Gao Huiran");
