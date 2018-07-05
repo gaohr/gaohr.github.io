@@ -5,7 +5,7 @@
 */
 
 //related links
-$("#relatedlinks").append("<ul class=\"blog-images\">" +
+$("#relatedlinks").html("<ul class=\"blog-images\">" +
 							"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"\" src=\"img/images/SpecialTopics.png\"></a></li>" +
 							"<li><a href=\"###\" target=\"\" title=\"我的简历\"><img alt=\"\" src=\"img/images/resume.png\"></a></li>" +
 							"<li><a href=\"site/zhihu/index.html\" target=\"_blank\" title=\"知乎热门\"><img alt=\"\" src=\"img/images/zhihu.png\"></a></li>" +
@@ -35,10 +35,10 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"</ul><hr>");
 	
 // ClustrMaps
-$("#cltmap").append("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
+$("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
 	
 // Comments
-$("comments").append("<div id=\"disqus_thread\"></div>" +
+$("#comments").html("<div id=\"disqus_thread\"></div>" +
 				"<script>" +
 					"(function() { // DON'T EDIT BELOW THIS LINE" +
 						"var d = document, s = d.createElement('script');" +
@@ -50,7 +50,7 @@ $("comments").append("<div id=\"disqus_thread\"></div>" +
 				"<noscript>Please enable JavaScript to view the <a href=\"https://disqus.com/?ref_noscript\" rel=\"nofollow\">comments powered by Disqus.</a></noscript>")
 	
 // Copyright
-$("#copyright").append("Copyright © 2016-2018 Gao Huiran")
+$("#copyright").html("Copyright © 2016-2018 Gao Huiran")
 	
 	
 	
