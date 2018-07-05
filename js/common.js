@@ -34,7 +34,7 @@ $("#relatedlinks").append("<ul class=\"blog-images\">" +
 							"<li type=\"circle\">Rainbow poster special effects</li>" +
 							"</ul><hr>");
 	
-$("#cltmap").append("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=000000&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=7ac8ff&cmo=00ff47&cmn=ff4d00&ct=ffffff\"></script>");
+$("#cltmap").append("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=0087d4\"></script>");
 	
 	
 	
