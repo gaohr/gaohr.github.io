@@ -3,8 +3,8 @@
 *GaoHR
 *2016-05-08
 */
-$(document).ready(function() {
-	
+
+// $(document).ready(function() {
 	//load menu
 	$("#mainmenu").html("<div class=\"menulist\">" +
 					"<div class=\"btn-group\">" +
@@ -50,7 +50,7 @@ $(document).ready(function() {
 					"<a href=\"###\" target=\"_blank\" class=\"twitter\" style=\"margin:2px\"><i class=\"icon-twitter-sign\"></i></a>" +
 				"</div>" +
 				"<hr>" +
-				"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ\"></script>" +
+				"<div id=\"cltmap\" class=\"cltmap\"></div>" +
 			"</div>");
 	var topics = eval('topicslist');
 	for(t = 0; t < topics.length; t++) {
@@ -120,7 +120,7 @@ $(document).ready(function() {
 			"</div>"
 		);
 	}
-})
+//})
 	
 	
 	

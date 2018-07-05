@@ -4,7 +4,7 @@
 *2016-04-21
 */
 
-//related links
+//Related links
 $("#relatedlinks").html("<ul class=\"blog-images\">" +
 							"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
 							"<li><a href=\"site/zhihu/index.html\" target=\"_blank\" title=\"知乎热门\"><img alt=\"\" src=\"img/images/zhihu.png\">知乎热门</a></li><br>" +
@@ -24,10 +24,25 @@ $("#relatedlinks").html("<ul class=\"blog-images\">" +
 $("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
 	
 // Comments
-$("#comments").html("")
+$("#comments").html("");
+	
+// Da shang
+$("#dashang").html("<div class=\"shang_img\"></div>" +
+					"<span class=\"tdcode\">" +
+						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
+						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
+					"</span>");
+$(".shang_img").hover(function(){
+    $(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");
+},function(){
+    $(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");
+});
+$(".shang_img").click(function() {
+	$(".tdcode").toggle(500);
+});
 	
 // Copyright
-$("#copyright").html("Copyright © 2016-2018 Gao Huiran")
+$("#copyright").html("<hr><br>Copyright © 2016-2018 Gao Huiran");
 	
 	
 	

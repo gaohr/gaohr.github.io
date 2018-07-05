@@ -6,7 +6,7 @@
 $(document).ready(function() {
 	var blogs = eval('bloglist');
 	//blog
-	for(i = 0; i < 3; i++) {
+	for(i = 0; i < 5; i++) {
 	//for(i = 0; i < blogs.length; i++) {
 		var tags = readtags(i);
 		$("#blog").append(

@@ -21,8 +21,9 @@ Blog Page
 .btn-blue {background-color:#2878c8;padding:5px;border-radius:3px;color:#fff}
 .btn-blue:hover {background-color:#295c8e;color:#eee}
 .btn-blue:active {background-color:#2878c8;}
+.blog-images li {margin-left:-5px}
 .blog-images a:hover {color:#d85546}
-.blog-images li > a > img{width:36px;margin-right:10px}
+.blog-images li > a > img{width:32px;margin-right:10px}
 .blog-page .blog-type {color:#eb493d;background:rgba(0,0,0,0);float:right;font-size:0.5em;margin-right:5px;border-radius:5px}
 .blog-page .blog-type:hover {color:#fff;background:rgba(238,39,39,0.7);}
 .tab-title > li > a {color:#d85556}
@@ -49,3 +50,21 @@ Blog Page
 @media (max-width: 560px) {
   .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}
 }
+
+/*--Topics--*/
+.topic {width:20%;margin:10px;text-align:center;float:left}
+.topic a > img {min-width:100px;opacity:1;border:1px solid rgba(0,0,0,0)}
+.topic a > img:hover {min-width:100px;opacity:0.8;border:1px solid #6af}
+.topic a > p {font-size:1.2em;font-family:'Microsoft YaHei';margin:2px}
+
+.alltopics a {color:#933;}
+.alltopics a:hover {color:#369;}
+.alltopics a > p {font-size:1.1em;border-left:5px solid rgba(0,0,0,0);}
+.alltopics a > p:hover {font-size:1.1em;border-left:5px solid #a77;}
+
+.topiccontent {color:#222;background:#eee;padding:10px}
+.topiccontent h2 {text-align:center}
+.topiccontent .date {font-size:10px;color:#555;text-align:center !important}
+.topiccontent p {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
+.topiccontent .imgintopic {width:auto;text-align:center}
+.topiccontent .pinfo {color:#777;text-align:center}

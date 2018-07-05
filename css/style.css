@@ -33,6 +33,10 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .portlet .title i{color:#333;padding:2px;font-size:1.2em;border-bottom:6px solid #d85546;}
 
 .cltmap {width:100%;}
+.dashang {width:100%;height:auto;text-align:center}
+.shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;}
+.tdcode {width:400px;height:180px;display:none;padding:20px;background:#777;border:1px soild #d85546}
+.dashang img {margin:10px}
 
 /*About*/
 .info {font-family:'Microsoft YaHei'}
