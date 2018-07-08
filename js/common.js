@@ -26,9 +26,21 @@ $("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cd
 // Comments
 $("#comments").append("<div class=\"portlet\">" +
 					"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
-					"<p>敬请期待......</p>" +
+					"<!-- 来必力City版安装代码 -->" +
+					"<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC8zNzkwMC8xNDQzMA==\">" +
+					"<script type=\"text/javascript\">" +
+					   "(function(d, s) {" +
+						   "var j, e = d.getElementsByTagName(s)[0];" +
+						   "if (typeof LivereTower === 'function') { return; }" +
+						   "j = d.createElement(s);" +
+						   "j.src = 'https://cdn-city.livere.com/js/embed.dist.js';" +
+						   "j.async = true;" +
+						   "e.parentNode.insertBefore(j, e);" +
+					   "})(document, 'script');" +
+					"</script>" +
+					"</div>" +
+					"<!-- City版安装代码已完成 -->" +
 				"</div>");
-
 	
 // Da shang
 $("#dashang").append("<br><hr><div class=\"shang_img\"></div>" +
