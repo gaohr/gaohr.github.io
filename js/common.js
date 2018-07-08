@@ -24,7 +24,10 @@ $("#relatedlinks").html("<ul class=\"blog-images\">" +
 $("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
 	
 // Comments
-$("#comments").html("");
+$("#comments").html("<div class=\"portlet\">" +
+					"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
+					"<p>敬请期待......</p>" +
+				"</div>");
 	
 // Da shang
 $("#dashang").append("<br><hr><div class=\"shang_img\"></div>" +
