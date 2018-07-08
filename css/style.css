@@ -46,6 +46,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .paylist p .date {color:#999}
 .paylist p .msg {color:#070}
 
+.warning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
+
 /*About*/
 .info {font-family:'Microsoft YaHei'}
 .info h4 {color:#da2e1b;}

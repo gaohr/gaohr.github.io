@@ -52,6 +52,8 @@ $('#msg').tooltip();
 $("#copyright").html("<hr><br>Copyright © 2016-2018 Gao Huiran");
 	
 	
+// Warning
+$("#warning").html("<br>(原创博客，转载请注明 <a href=\"http://gaohr.win\" class=\"warning\" title=\"GaoHR blogs\"><b>http://gaohr.win</b></a>)");
 	
 	
 	
