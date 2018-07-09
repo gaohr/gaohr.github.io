@@ -23,6 +23,9 @@ $("#relatedlinks").html("<ul class=\"blog-images\">" +
 // ClustrMaps
 $("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
 	
+// Copyright
+$("#copyright").html("<hr>Copyright © 2016-2018 Gao Huiran");
+	
 // Comments
 $("#comments").append("<div class=\"portlet\">" +
 					"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
@@ -63,9 +66,6 @@ for(i = 0; i < pays.length; i++) {
 		"<p><i class=\"icon-heart\"></i><span class=\"name\">" + pays[i].name + "</span>打赏了<span class=\"money\">￥<b>" + pays[i].amount + "</b>元</span><i class=\"date\">" + pays[i].date + "</i><span class=\"msg\" id=\"msg\" data-toggle=\"tooltip\" data-placement=\"top\" title=\"" + pays[i].msg + "\"><i class=\"icon-comment\"></i></span></p>"
 )};
 $('#msg').tooltip();
-	
-// Copyright
-$("#copyright").html("<hr><br>Copyright © 2016-2018 Gao Huiran");
 	
 	
 // Warning
