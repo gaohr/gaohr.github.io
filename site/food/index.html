@@ -120,18 +120,8 @@
 					<img src="images/04.png" width="40%">
 					<img src="images/05.png" width="40%">
 				</div>
-				<div class="portlet">
-					<p class="title"><i class="icon-comments"></i><b> 评论</b></p>
-					<!-- UY BEGIN -->
-					<div id="uyan_frame"></div>
-					<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>
-					<!-- UY END -->
-					 <!-- WY BEGIN -->
-					<div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-					<script src="https://img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
-					<script>var cloudTieConfig = {url: document.location.href, sourceId: "",productKey: "6a955e9b82914396891c0ac58479b7c6",target: "cloud-tie-wrapper"};var yunManualLoad = true;Tie.loader("aHR0cHM6Ly9hcGkuZ2VudGllLjE2My5jb20vcGMvbGl2ZXNjcmlwdC5odG1s", true);</script>
-				<!-- WY END -->
-				</div>
+				<!-- comments -->
+				<div id="comments"></div>
 			</div>
 		</div>
 	</div>
@@ -145,6 +135,7 @@
     <script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery-ui.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/common.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			function runEffect() {
@@ -167,7 +158,7 @@
 				if(querytext != "" || uerytext != null) {
 					$("#content").append("<p class='foodhead'>食材名称：" + querytext + "，菜谱个数：" + querynum + "道</p>");
 						$.ajax({
-							url:"http://api.huceo.com/txapi/caipu/?key=eb4e451556c3ed7dcdb89092471ad998&word=" + querytext + "&num=" + querynum,
+							url:"https://api.tianapi.com/txapi/caipu/?key=eb4e451556c3ed7dcdb89092471ad998&word=" + querytext + "&num=" + querynum,
 							dataType:"json",
 							async:false,
 							success:function(data){

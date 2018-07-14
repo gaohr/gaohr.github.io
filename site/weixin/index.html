@@ -122,13 +122,8 @@
 					<img src="images/04.png" width="40%">
 					<img src="images/05.png" width="40%">
 				</div>
-				<div class="portlet">
-					<p class="title"><i class="icon-comments"></i><b> 评论</b></p>
-					<!-- UY BEGIN -->
-					<div id="uyan_frame"></div>
-					<script type="text/javascript" src="http://v2.uyan.cc/code/uyan.js?uid=2096032"></script>
-					<!-- UY END -->
-				</div>
+				<!-- comments -->
+				<div id="comments"></div>
 			</div>
 		</div>
 	</div>
@@ -142,6 +137,7 @@
     <script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery-ui.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/common.js"></script>
 	<script type="text/javascript">
 		$(function(){
 			weixinc();
@@ -162,7 +158,7 @@
 				$("#jcontent").hide();
 				var weixinnum = $("#weixinnum").val();
 						$.ajax({
-							url:"http://api.huceo.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1",
+							url:"https://api.tianapi.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1",
 							dataType:"json",
 							async:false,
 							success:function(data){
@@ -171,7 +167,7 @@
 								}
 							},
 							error:function(){
-								$("#jcontent").append("请求<a href='http://api.huceo.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1' target='_blank'>http://api.huceo.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1</a>超时！");
+								$("#jcontent").append("请求<a href='https://api.tianapi.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1' target='_blank'>http://api.huceo.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1</a>超时！");
 							}
 					});
 					

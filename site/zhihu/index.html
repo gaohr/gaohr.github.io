@@ -121,8 +121,9 @@
 				day = myDate.getDate() - 1;
 			}
 			var date = myDate.getFullYear() + month + day;
-			//alert(myDate.getFullYear() + "-" + month + "-" + day);
+			// alert(myDate.getFullYear() + "-" + month + "-" + day);
 			$("#date").val(myDate.getFullYear() + "-" + month + "-" + day);
+			/*
 			$.ajax({
 				url:"http://api.kanzhihu.com/getpostanswers/" + date + "/recent",
 				dataType:"json",
@@ -155,7 +156,21 @@
 					alert("未选择日期！");
 				}
 			})
-		}) 
+			*/
+			// 知乎日报
+			$.ajax({
+				url:"https://news-at.zhihu.com/api/4/news/latest",
+				dataType:"json",
+				async:false,
+				success:function(data){
+					alert(data.stories.length);
+					for(i = 0; i < data.stories.length; i++) {
+						$("#content").append("<a href=\"https://news-at.zhihu.com/api/4/news/" + data.stories[i].id + "\" target=\"_blank\">" + data.stories[i].title + "</a><br><img src=\"" + data.stories[i].images[0] + "\" style=\"width:24px;float:left\"><p>" + data.stories[i].authorname + "-" + data.date + "</p><br>" );
+					}
+				},
+				error:function(){alert("Error")}
+			});
+		})
 	</script>
 </body>
 </html>
