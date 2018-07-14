@@ -163,7 +163,7 @@
 							async:false,
 							success:function(data){
 								for(i = 0; i < data.newslist.length; i++) {
-									$("#content").append("<div class='typename'><i class='icon-bookmark'></i><b>" + data.newslist[i].type_name + "</b>---<span>" + data.newslist[i].cp_name + "</span></div><div style='color:#0d6100'><b>原料</b>：" + data.newslist[i].yuanliao + "</div><div style='color:#7a4200'><b>调料</b>：" + data.newslist[i].tiaoliao + "</div><div style='color:#00397a'><b>做法</b>：" + data.newslist[i].zuofa + "</div><div style='color:#9e5c00'><b>口感</b>：" + data.newslist[i].texing + "</div><div style='color:#9e2d00'><b>提示</b>：" + data.newslist[i].tishi + "</div><hr>");
+									$("#content").append("<div class='typename'><i class='icon-bookmark'></i><b>" + data.newslist[i].cp_name + "</b>---<span>" + data.newslist[i].cp_name + "</span></div><div style='color:#0d6100'><b>原料</b>：" + data.newslist[i].yuanliao + "</div><div style='color:#7a4200'><b>调料</b>：" + data.newslist[i].tiaoliao + "</div><div style='color:#00397a'><b>做法</b>：" + data.newslist[i].zuofa + "</div><div style='color:#9e5c00'><b>口感</b>：" + data.newslist[i].texing + "</div><div style='color:#9e2d00'><b>提示</b>：" + data.newslist[i].tishi + "</div><hr>");
 								}
 							},
 							error:function(){alert("Error")}
