@@ -139,9 +139,9 @@ function Advertisement() {
 	return "<div id=\"advertisement\" class=\"advertisement\">" +
 			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
 			"<p class=\"ad-title\">编程开发服务</p>" +
-			"<p class=\"ad-content\">Python、Java、C、C++、C#、IDL开发，Web开发等<br>本人及团队成员具有较强的编程技术，利用闲暇之余承接计算机编程工作</p>" +
+			"<p class=\"ad-content\"><i class=\"icon-bullhorn\"></i> Python、Java、C、C++、C#、IDL开发，Web开发等<br><i class=\"icon-bullhorn\"></i> 本人及团队成员具有较强的编程技术，可利用闲暇之余承接计算机编程工作~<br><span class=\"pull-right\">欢迎交流 <a href=\"http://gaohr.win/About.html\"><i class=\"icon-envelope\"></i></a></span></p>" +
 		"</div>" +
-		"<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#advertisement\").show(500, callback);$(\"#ad-close\").click(function() {$(\"#advertisement\").hide(500);});function callback() {setTimeout(function() {$(\"#advertisement:visible\").removeAttr(\"style\").fadeOut();}, 30000);}</script>";
+		"<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#advertisement\").show(500, callback);$(\"#ad-close\").click(function() {$(\"#advertisement\").hide(500);});function callback() {setTimeout(function() {$(\"#advertisement:visible\").removeAttr(\"style\").fadeOut();}, 15000);}</script>";
 }
 	
 	
