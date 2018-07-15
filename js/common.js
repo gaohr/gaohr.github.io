@@ -52,6 +52,11 @@ if(document.getElementById("weather")) {
 }
 
 	
+// others -> Advertisement
+if(document.getElementById("others")) {
+	$("#others").append(Advertisement());
+}
+	
 	
 
 // Functions ****************************** Functions
@@ -118,7 +123,7 @@ function Weather() {
 		async:false,
 		success:function(data){
 			if(data.HeWeather6[0].status == "ok") {
-				re += "<b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";
+				re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";
 			} else {
 				re += "N/A";
 			}
@@ -127,10 +132,17 @@ function Weather() {
 			re += "N/A";
 		}
 	});
-	return re
+	return re;
 }
 	
-	
+function Advertisement() {
+	return "<div id=\"advertisement\" class=\"advertisement\">" +
+			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
+			"<p class=\"ad-title\">编程开发服务</p>" +
+			"<p class=\"ad-content\">Python、Java、C、C++、C#、IDL开发，Web开发等<br>本人及团队成员具有较强的编程技术，利用闲暇之余承接计算机编程工作</p>" +
+		"</div>" +
+		"<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#advertisement\").show(500, callback);$(\"#ad-close\").click(function() {$(\"#advertisement\").hide(500);});function callback() {setTimeout(function() {$(\"#advertisement:visible\").removeAttr(\"style\").fadeOut();}, 30000);}</script>";
+}
 	
 	
 	

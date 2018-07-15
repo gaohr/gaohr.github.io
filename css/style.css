@@ -3,10 +3,10 @@
 */
 body {background-color:#fff;overflow-x:hidden}
 a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
-.mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:9999}
+.mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:9999;max-height:40px}
 .mainlogo a{position:fixed;left:6%;margin:10px 0;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;}
 .mainlogo a:hover {color:#ff4444}
-.mainlogo .weather {float:right;background:rgba(255,255,255,0.2);padding:5px 10px;margin-right:20px;margin-top:-7px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff}
+.mainlogo .weather {height:40px;float:right;background:rgba(255,255,255,0.1);padding:5px 10px;margin-right:20px;margin-top:-15px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff}
 .mainlogo .weather img {width:24px;height:24px;background:rgba(255,255,255,1);border-radius:50%;margin:0 5px}
 .mainlogo .weather .tmp {margin:0 5px}
 .mainlogo .weather .wnd {margin:0 5px}
@@ -53,6 +53,12 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 
 .warning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
 
+.advertisement {position:fixed;bottom:10px;right:10px;width:320px;height:120px;color:#ccc;background:rgba(25,25,25,0.9);padding:10px;box-shadow:2px 2px 5px #555;display:none}
+.advertisement .ad-title {border-bottom:1px solid #ccc;padding:5px;font-size:1.1em}
+.advertisement .ad-content {padding:5px}
+.advertisement .ad-close span:before {content:"X"}
+.advertisement .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
+
 /*About*/
 .info {font-family:'Microsoft YaHei'}
 .info h4 {color:#da2e1b;}
@@ -84,12 +90,14 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 }
 @media (max-width: 560px) {
 	.main-page {position:relative;width:100%;margin:15% 0;}
+	.menulist {display:block;margin-top:10%;font-size:18px;}
+	.menulist a{color:#333 !important;}
+	
 	.svg {display:none}
 	.sider-bar {display:none}
 	.welcome {display:none}
-	.menulist {display:block;margin-top:10%;font-size:18px;}
-	.menulist a{color:#333 !important;}
 	.block {display:none}
+	.weather {display:none}
 }
 
 @media (max-width: 480px) {
