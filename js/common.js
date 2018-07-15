@@ -111,20 +111,23 @@ function Warning() {
 function Weather() {
 	loc = returnCitySN.cip;
 	key = "422ad66c7a314de9b05f91cf70ec2c18";
+	re = ""
 	$.ajax({
-		url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + weixinnum,
+		url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,
 		dataType:"json",
 		async:false,
 		success:function(data){
-			if(data.HeWeather6.status == "ok") {
-				$("#weather").append("<b>" + data.HeWeather6.basic.location + "</b><img src=\"img/weather/" + data.HeWeather6.daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6.daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6.daily_forecast[1].tmp_min + " ~ " + data.HeWeather6.daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6.daily_forecast[1].wind_dir + " " + data.HeWeather6.daily_forecast[1].wind_sc + "级</span>");
+			if(data.HeWeather6[0].status == "ok") {
+				re += "<b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";
+			} else {
+				re += "N/A";
 			}
 		},
 		error:function(){
-			$("#weather").append("N/A");
+			re += "N/A";
 		}
 	});
-	
+	return re
 }
 	
 	
