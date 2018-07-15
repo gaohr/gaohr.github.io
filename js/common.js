@@ -46,6 +46,12 @@ if(document.getElementById("warning")) {
 }
 
 	
+// Weather
+if(document.getElementById("weather")) {
+	$("#weather").html(Weather());
+}
+
+	
 	
 
 // Functions ****************************** Functions
