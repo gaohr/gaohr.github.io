@@ -102,6 +102,34 @@ function Warning() {
 	return "<br>(原创博客，转载请注明 <a href=\"http://gaohr.win\" class=\"warning\" title=\"GaoHR blogs\"><b>http://gaohr.win</b></a>)";
 }
 	
+function Weather() {
+	loc = returnCitySN.cip;
+	key = "422ad66c7a314de9b05f91cf70ec2c18";
+	$.ajax({
+		url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + weixinnum,
+		dataType:"json",
+		async:false,
+		success:function(data){
+			if(data.HeWeather6.status == "ok") {
+				$("#weather").append("<b>" + data.HeWeather6.basic.location + "</b><img src=\"img/weather/" + data.HeWeather6.daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6.daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6.daily_forecast[1].tmp_min + " ~ " + data.HeWeather6.daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6.daily_forecast[1].wind_dir + " " + data.HeWeather6.daily_forecast[1].wind_sc + "级</span>");
+			}
+		},
+		error:function(){
+			$("#weather").append("N/A");
+		}
+	});
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
