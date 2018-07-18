@@ -14,7 +14,7 @@
 								"<ul class=\"dropdown-menu\">" +
 									"<li><a href=\"../../index.html\"><i class=\"icon-home\"></i></a></li>" +
 									"<li><a href=\"../../Blogs.html\">博客</a></li>" +
-									"<li><a href=\"../skills/index.html\">图谱</a></li>" +
+									"<li><a href=\"../site/skills/index.html\">图谱</a></li>" +
 									"<li><a href=\"../special/index.html\">专题</a></li>" +
 									"<li class=\"divider\"></li>" +
 									"<li><a href=\"../../About.html\">关于</a></li>" +
