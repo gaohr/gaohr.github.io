@@ -99,6 +99,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 	.welcome {display:none}
 	.block {display:none}
 	.weather {display:none}
+	.advertisement {display:none}
 }
 
 @media (max-width: 480px) {
