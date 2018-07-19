@@ -1,6 +1,6 @@
 /* onto the css now */
 
-#clock {position:relative;width:80px; height:80px;border-radius:50%;margin: 5px auto 0;}
+#clock {position:relative;width:80px;height:80px;background:#fff;border-radius:50%;margin: 5px auto 0;}
 
 /* We'll use pseudo elements for cover's styling */
 
@@ -18,7 +18,7 @@
 
 #clock:after {
 	content: '';
-	border:1px solid #ccc;
+	border:2px solid #555;
 	top: -7px; bottom: -7px;
 	left: -7px; right: -7px;
 	box-shadow:1px 1px 1px #fff;
