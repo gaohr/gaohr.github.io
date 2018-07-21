@@ -29,7 +29,7 @@ Blog Page
 .tab-title > li > a {color:#d85556}
 .tab-title > li > a:hover {color:#c83536}
 
-.blogcontent {color:#111;background:#fafafa;padding:20px}
+.blogcontent {color:#111;background:#fafafa;padding:20px;min-height:500px}
 .blogcontent h2 {text-align:center}
 .blogcontent p {font-size:14px;line-height:26px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent p > i {text-indent:0em;}
@@ -72,7 +72,7 @@ Blog Page
 .alltopics a > p {font-size:1.1em;border-left:5px solid rgba(0,0,0,0);}
 .alltopics a > p:hover {font-size:1.1em;border-left:5px solid #a77;}
 
-.topiccontent {color:#222;background:#eee;padding:10px}
+.topiccontent {color:#222;background:#eee;padding:10px;min-height:500px}
 .topiccontent h2 {text-align:center}
 .topiccontent .date {font-size:10px;color:#555;text-align:center !important}
 .topiccontent p {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
