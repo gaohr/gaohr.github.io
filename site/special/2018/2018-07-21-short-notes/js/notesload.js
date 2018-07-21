@@ -1,6 +1,6 @@
 /*Load notes*/
 
-colors = ["#fbb", "#fdf", "#ffd", "#dff", "#ddf", "#dfd"]
+colors = ["#fdd", "#fdf", "#ffd", "#dff", "#ddf", "#dfd"]
 
 var notes = eval('noteslist');
 	for(i = 0; i < notes.length; i++) {
