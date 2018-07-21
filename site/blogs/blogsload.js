@@ -60,7 +60,7 @@
 		$("#blogs").append(addblog(blogs,i,tags));
 		var blogid = $("#blogid").val();
 		if(blogs[i].blogid == blogid) {
-			$("#blogtopinfo").append("[" + blogs[i].date + "]&nbsp;&nbsp; <i class='icon-tags'></i>" + tags );
+			$("#blogtopinfo").append("[" + blogs[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + blogs[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags + "<br><hr>");
 		}
 		
 	}	

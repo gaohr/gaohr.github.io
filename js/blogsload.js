@@ -128,7 +128,7 @@ $(document).ready(function() {
 		}
 	}
 	
-	//Topics load
+	//Topics
 	var topics = eval('topicslist');
 	//for(t = 0; t < topics.length; t++) {
 	for(t = 0; t < 4; t++) {
