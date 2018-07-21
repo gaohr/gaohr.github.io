@@ -14,9 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 	
-	<link href="2018-01-04-price-of-rabbit/css/ol.css" rel="stylesheet" type="text/css"/>
-	<link href="2018-01-04-price-of-rabbit/css/ol3-layerswitcher.css" rel="stylesheet" type="text/css"/>
-	<link href="2018-01-04-price-of-rabbit/css/layout.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="./2018-07-21-short-notes/css/style.css">
 	
 	<link rel="shortcut icon" href="../../../img/mainicon.png" />
     <title>GaoHR | 雾海拾珠</title>
@@ -46,9 +44,12 @@
 					<!--<li class="active">Blog</li>-->
 				</ol>
 				<!--正文-->
-				<input id="topicid" style="display:none" value="2018072101">
+				<span style="color:#f66;font-size:1.2em;font-weight:bold">雾海拾珠</span>
+				<span style="color:#955;line-height:9px"> -- 云雾人生，犹如沧海，听潮起潮落，见人往人来，用诗词绘出触动心灵的每一刻！</span>
 				<div class="topiccontent">
-					<p>敬请期待</p>
+					<div class="poster">
+						<ul id="zturn"></ul>
+					</div>
 				</div>
 				<!-- Da shang -->
 				<div id="dashang" class="dashang"></div>
@@ -80,5 +81,18 @@
 	<script src="../js/topicsload.js"></script>
 	<script src="../../../js/paylist.js"></script>
 	<script src="../../../js/common.js"></script>
+	
+	<script type="text/javascript" src="./2018-07-21-short-notes/js/noteslist.js"></script>
+	<script type="text/javascript" src="./2018-07-21-short-notes/js/notesload.js"></script>
+	<script type="text/javascript" src="./2018-07-21-short-notes/js/zturn.js"></script>
+	<script type="text/javascript">
+						var aa=new zturn({
+							id:"zturn",
+							opacity:0.9,
+							width:300,
+							Awidth:700,
+							scale:0.8
+						})
+	</script>
 </body>
 </html>
