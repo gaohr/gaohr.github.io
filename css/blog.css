@@ -52,11 +52,20 @@ Blog Page
   .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}
 }
 
+/*专题-index*/
+.topic-top {font-size:1.6em;font-family:'宋体';color:#b83a00;font-weight:bold}
+.topicbody {position:relative;float:left;margin:1.5%;width:22%;min-width:150px;border-top:5px solid rgba(0,0,0,0);border-bottom:5px solid rgba(0,0,0,0);text-align:center;transition:all 0.3s}
+.topicbody:hover {border-top:5px solid #bb573a;border-bottom:5px solid #bb573a}
+.topicbody img {position:relative;z-index:0}
+.topicbody p {position:relative;margin-top:-12%;background:rgba(0,0,0,0.8);border-radius:20%;color:#fff;text-shadow:1px 1px 5px #333;font-size:1.2em;font-family:'Microsoft YaHei';z-index:99}
+.topicbody span {color:#d50;font-family:'Microsoft YaHei'}
+
 /*--Topics--*/
-.topic {width:20%;margin:10px;text-align:center;float:left}
+.topic {width:20%;margin:10px;min-height:240px;text-align:center;float:left;font-family:'Microsoft YaHei'}
 .topic a > img {min-width:100px;opacity:1;border:1px solid rgba(0,0,0,0)}
 .topic a > img:hover {min-width:100px;opacity:0.8;border:1px solid #6af}
-.topic a > p {font-size:1.2em;font-family:'Microsoft YaHei';margin:2px}
+.topic a > p {font-size:1.2em;margin:2px}
+.topic span {color:#d50;margin:2px}
 
 .alltopics a {color:#933;}
 .alltopics a:hover {color:#369;}

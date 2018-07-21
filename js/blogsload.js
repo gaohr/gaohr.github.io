@@ -138,8 +138,8 @@ $(document).ready(function() {
 					"<img src='site/special/" + topics[t].img + "'>" +
 					"<p><b>" + topics[t].title + "</b></p>" +
 				"</a>" +
-			"</div>"
-		);
+				"<span>" + topics[t].content + "</span>" +
+			"</div>");
 	}
 	
 	

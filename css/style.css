@@ -70,13 +70,6 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .moreinfo .infocontent{color:#444;margin-left:5%}
 .infocontent i {color:#d85546}
 
-/*专题*/
-.topic-top {font-size:1.6em;font-family:'宋体';color:#b83a00;font-weight:bold;}
-.topicbody {position:relative;float:left;margin:1.5%;width:22%;min-width:150px;border-top:5px solid rgba(0,0,0,0);border-bottom:5px solid rgba(0,0,0,0);text-align:center;transition:all 0.3s}
-.topicbody:hover {border-top:5px solid #bb573a;border-bottom:5px solid #bb573a}
-.topicbody img {}
-.topicbody p {margin-top:-15%;color:#fff;text-shadow:1px 1px 1px #555;font-size:1.2em;font-family:'Microsoft YaHei'}
-
 /*滚动条美化*/
 ::-webkit-scrollbar{width:10px;height:6px}
 ::-webkit-scrollbar-button:vertical{display:none}

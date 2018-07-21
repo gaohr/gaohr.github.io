@@ -58,6 +58,7 @@
 			"<div class='topic'>" +
 				"<a href='" + topics[t].href + "'><img src='" + topics[t].img + "' title='" + topics[t].content + "'></a>" +
 				"<a href='" + topics[t].href + "'><p>" + topics[t].title + "</p></a>" +
+				"<span>" + topics[t].content + "</span>" +
 			"</div>"
 		);
 		//All topics
