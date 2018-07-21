@@ -1,0 +1,10 @@
+a {text-decoration:none}
+a:hover {text-decoration:none}
+
+.sec-list {border-right:3px solid #999;width:100%;min-height:300px;padding:5px}
+.sec-list a .section {font-size:1.2em;background:rgba(0,0,0,0.05);color:#333;text-align:right;padding-right:20px;margin:5px;box-shadow:1px 1px 1px #aaa;border-radius:5%;transition:all 0.5s}
+.sec-list a .section:hover {background:rgba(0,0,0,0.7);color:#eee;transition:all 0.5s}
+.sec-list a .section:active {background:rgba(255,255,255,1);color:#333;transition:all 0.1s}
+.sec-content {overflow-y:scroll}
+.sec-content p {font-size:1.2em}
+.sec-content .title {font-size:1.5em;font-weight:bold}

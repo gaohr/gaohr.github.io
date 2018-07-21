@@ -6,7 +6,7 @@ ul,ol,li,dl,dt,dd{text-decoration: none;list-style: none}
 .poster-item p {text-indent:0;}
 .poster-item:hover {box-shadow:1px 1px 15px #5af;transition:all 0.1s}
 .poster-item .title{font-size:24px;font-weight:600;margin-left:10px}
-.poster-item .label{color:#eee;font-size:9px;padding:0 2px;background:#555;border-radius:45%;float:right}
+.poster-item .label{color:#eee;font-size:9px;padding:0 2px;background:#555;border-radius:50%;float:right}
 .poster-item .info{color:#555;font-size:12px;margin:10px;text-align:center}
 .poster-item .info .info-author{margin-right:10px}
 .poster-item .info .info-loc{margin:0 10px}

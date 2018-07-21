@@ -11,7 +11,7 @@ var notes = eval('noteslist');
 			"	<p class=\"title\">" + notes[i].title + "</p>" +
 			"	<p class=\"label\">" + notes[i].type + "</p>" +
 				"<div class=\"info\"><span class=\"info-author\"><i class=\"icon-user\"></i>&nbsp;" + notes[i].author + "</span><small>于</small><span class=\"info-loc\">" + notes[i].loc + "</span><span class=\"info-date\">[" + notes[i].date + "]</span></div>" +
-				"<img src=\"./2018-07-21-short-notes/img/img" + m.toString() + ".jpg\">" +
+				"<img src=\"./2018-07-21-short-notes/img/img" + m + ".jpg\">" +
 				"<p class=\"content\" style=\"box-shadow:1px 1px 1px " + colors[n] + " inset\">" + notes[i].content + "</p>" +
 				"<div class=\"comment\">" + notes[i].comment + "</div>" +
 			"</li>");
