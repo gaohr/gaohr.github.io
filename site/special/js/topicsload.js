@@ -113,8 +113,13 @@
 				"<hr>" +
 				"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ\"></script>" +
 			"</div>");
-			
-	for(tr = 0; tr < 5; tr++) {
+	tn = 0
+	if(topics.length < 10) {
+		tn = topics.length;
+	} else {
+		tn = 10
+	}
+	for(tr = 0; tr < tn; tr++) {
 		$("#topics-right").append(
 			"<div class='alltopics'>" +
 				"<a href='../" + topics[tr].href + "'><p>" + topics[tr].title + "</p></a>" +
