@@ -52,18 +52,18 @@
 				"<hr>" +
 				"<div id=\"cltmap\" class=\"cltmap\"></div>" +
 			"</div>");
-	var topics = eval('topicslist');
-	for(t = 0; t < topics.length; t++) {
+			
+	for(t = 0; t < topicslist.length; t++) {
 		$("#topics").append(
 			"<div class='topic'>" +
-				"<a href='" + topics[t].href + "'><img src='" + topics[t].img + "' title='" + topics[t].content + "'></a>" +
-				"<a href='" + topics[t].href + "'><p>" + topics[t].title + "</p></a>" +
-				"<span>" + topics[t].content + "</span>" +
+				"<a href='" + topicslist[t].href + "'><img src='" + topicslist[t].img + "' title='" + topicslist[t].content + "'></a>" +
+				"<a href='" + topicslist[t].href + "'><p>" + topicslist[t].title + "</p></a>" +
+				"<span>" + topicslist[t].content + "</span>" +
 			"</div>"
 		);
 		//All topics
 		$("#alltopics").append(
-			"<a href='" + topics[t].href + "'><p>" + topics[t].title + "</p></a>"
+			"<a href='" + topicslist[t].href + "'><p>" + topicslist[t].title + "</p></a>"
 		);
 	}
 	
@@ -114,15 +114,15 @@
 				"<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?u=tEiY&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ\"></script>" +
 			"</div>");
 	tn = 0
-	if(topics.length < 10) {
-		tn = topics.length;
+	if(topicslist.length < 10) {
+		tn = topicslist.length;
 	} else {
 		tn = 10
 	}
 	for(tr = 0; tr < tn; tr++) {
 		$("#topics-right").append(
 			"<div class='alltopics'>" +
-				"<a href='../" + topics[tr].href + "'><p>" + topics[tr].title + "</p></a>" +
+				"<a href='../" + topicslist[tr].href + "'><p>" + topicslist[tr].title + "</p></a>" +
 			"</div>"
 		);
 	}

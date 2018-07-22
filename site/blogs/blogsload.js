@@ -53,26 +53,25 @@
 				"<hr>" +
 				"<div id=\"cltmap\" class=\"cltmap\"></div>" +
 			"</div>");
-	var blogs = eval('bloglist');
 	//for(i = 0; i < blogs.length; i++) {
 	for(i = 0; i < 3; i++) {
 		var tags = readtags(i);
-		$("#blogs").append(addblog(blogs,i,tags));
+		$("#blogs").append(addblog(bloglist,i,tags));
 		var blogid = $("#blogid").val();
-		if(blogs[i].blogid == blogid) {
-			$("#blogtopinfo").append("[" + blogs[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + blogs[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags + "<br><hr>");
+		if(bloglist[i].blogid == blogid) {
+			$("#blogtopinfo").append("[" + bloglist[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + bloglist[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags + "<br><hr>");
 		}
 		
 	}	
 	//add Blog
-	function addblog(blogs,n,tags) {
+	function addblog(bloglist,n,tags) {
 		var blogcon = "<div class='blog-article'>" +
-			"<a href='" + blogs[n].href + "' class='blog-title' style='font-size:1.0em'>" + blogs[n].title + "</a><br><br>" +
+			"<a href='" + bloglist[n].href + "' class='blog-title' style='font-size:1.0em'>" + bloglist[n].title + "</a><br><br>" +
 			"</div>" +
 			"<div class='blog-tag-data'>" +
-			"<a href='" + blogs[n].href + "'><img src='../../../" + blogs[n].img + "' class='blog-img' style='width:60%;'></a>" +
+			"<a href='" + bloglist[n].href + "'><img src='../../../" + bloglist[n].img + "' class='blog-img' style='width:60%;'></a>" +
 			"<ul class='unstyled inline' style='font-size:9px'>" +
-			//"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
+			//"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[n].date + "</a></li>" +
 			"</ul>" +
 			"<ul class='unstyled inline blog-tags' style='font-size:9px'>" +
 			"<li type='circle'>" +
@@ -80,15 +79,15 @@
 			"</li>" +
 			"</ul>" +
 			"</div>" +
-			//"<a class='btn-blue' href='../../../" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			//"<a class='btn-blue' href='../../../" + bloglist[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"<hr>";
 			return blogcon;
 	}
 	
 	function readtags(n) {
 		tagslist = "";
-		for(t = 0; t < blogs[n].tags.length; t++) {
-			tagslist += "<a href='#' style='font-size:9px !important'>" + blogs[n].tags[t] + "</a>";
+		for(t = 0; t < bloglist[n].tags.length; t++) {
+			tagslist += "<a href='#' style='font-size:9px !important'>" + bloglist[n].tags[t] + "</a>";
 		}
 		return tagslist;
 	}

@@ -106,7 +106,7 @@ function Dashang() {
 			"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
 			"</span><br>" + 
 			"<span class=\"paylist\"></span>" +
-			"<script type=\"text/javascript\">$(\".shang_img\").hover(function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang_hover.png)\");},function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang.png)\");});$(\".shang_img\").click(function() {$(\".tdcode\").toggle(500);});var pays = eval('paylist');for(i = 0; i < pays.length; i++) {$(\".paylist\").append(\"<p><i class='icon-heart'></i><span class='name'>\" + pays[i].name + \"</span>打赏了<span class='money'>￥<b>\" + pays[i].amount + \"</b>元</span><i class='date'>\" + pays[i].date + \"</i><span class='msg' id='msg' data-toggle='tooltip' data-placement='top' title='\" + pays[i].msg + \"'><i class='icon-comment'></i></span></p>\")};$('#msg').tooltip();</script>";
+			"<script type=\"text/javascript\">$(\".shang_img\").hover(function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang_hover.png)\");},function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang.png)\");});$(\".shang_img\").click(function() {$(\".tdcode\").toggle(500);});for(i = 0; i < paylist.length; i++) {$(\".paylist\").append(\"<p><i class='icon-heart'></i><span class='name'>\" + paylist[i].name + \"</span>打赏了<span class='money'>￥<b>\" + paylist[i].amount + \"</b>元</span><i class='date'>\" + paylist[i].date + \"</i><span class='msg' id='msg' data-toggle='tooltip' data-placement='top' title='\" + paylist[i].msg + \"'><i class='icon-comment'></i></span></p>\")};$('#msg').tooltip();</script>";
 }
 
 function Warning() {

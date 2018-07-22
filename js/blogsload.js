@@ -4,21 +4,20 @@
 *2016-04-16
 */
 $(document).ready(function() {
-	var blogs = eval('bloglist');
 	//blog
 	for(i = 0; i < 5; i++) {
-	//for(i = 0; i < blogs.length; i++) {
+	//for(i = 0; i < bloglist.length; i++) {
 		var tags = readtags(i);
 		$("#blog").append(
 			"<div class='row-fluid'>" +
 			"<div class='span12 blog-article'>" +
-			"<a href='" + blogs[i].href + "' class='blog-title'><i class=' icon-bookmark' style='color:#6a6'> </i>" + blogs[i].title + "</a>" +
-			"<a href='Blogs.html#" + blogtype(blogs[i].type) + "' class='blog-type'>[ " + blogs[i].type + " ]</a>" +
+			"<a href='" + bloglist[i].href + "' class='blog-title'><i class=' icon-bookmark' style='color:#6a6'> </i>" + bloglist[i].title + "</a>" +
+			"<a href='Blogs.html#" + blogtype(bloglist[i].type) + "' class='blog-type'>[ " + bloglist[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
 			"<div class='span3 blog-tag-data'>" +
-			"<img src='" + blogs[i].img + "' class='blog-img' style='width:80%;margin-left:10%'>" +
+			"<img src='" + bloglist[i].img + "' class='blog-img' style='width:80%;margin-left:10%'>" +
 			"<ul class='unstyled inline'>" +
-			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[i].date + "</a></li>" +
+			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[i].date + "</a></li>" +
 			"</ul>" +
 			"<ul class='unstyled inline blog-tags'>" +
 			"<li type='circle'>" +
@@ -27,8 +26,8 @@ $(document).ready(function() {
 			"</ul>" +
 			"</div>" +
 			"<div class='span9 blog-article'>" +
-			"<p>" + blogs[i].content + "</p>" +
-			"<a class='btn-blue' href='" + blogs[i].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			"<p>" + bloglist[i].content + "</p>" +
+			"<a class='btn-blue' href='" + bloglist[i].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
 			"</div>" +
 			"</div>" +
@@ -38,38 +37,38 @@ $(document).ready(function() {
 	}
 	//Blogs
 	//for(i = 0; i < 1; i++) {
-	for(i = 0; i < blogs.length; i++) {
+	for(i = 0; i < bloglist.length; i++) {
 		var tags = readtags(i);
-		$("#allblogs").append(addblog(blogs,i,tags));
-		if(blogs[i].type == "专业技术") {
-			$("#technology").append(addblog(blogs,i,tags));
-		} else if(blogs[i].type == "随笔小记") {
-			$("#prose").append(addblog(blogs,i,tags));
-		} else if(blogs[i].type == "心情寄语") {
-			$("#emotion").append(addblog(blogs,i,tags));
-		} else if(blogs[i].type == "奇闻趣问") {
-			$("#interest").append(addblog(blogs,i,tags));
+		$("#allblogs").append(addblog(bloglist,i,tags));
+		if(bloglist[i].type == "专业技术") {
+			$("#technology").append(addblog(bloglist,i,tags));
+		} else if(bloglist[i].type == "随笔小记") {
+			$("#prose").append(addblog(bloglist,i,tags));
+		} else if(bloglist[i].type == "心情寄语") {
+			$("#emotion").append(addblog(bloglist,i,tags));
+		} else if(bloglist[i].type == "奇闻趣问") {
+			$("#interest").append(addblog(bloglist,i,tags));
 		} else {}
 	}	
 	//add Blog
-	function addblog(blogs,n,tags) {
+	function addblog(bloglist,n,tags) {
 		var blogcon = "<div class='row-fluid'>" +
 			"<div class='span2 blog-tag-data'>" +
-			"<img src='" + blogs[n].img + "' class='blog-img'>" +
+			"<img src='" + bloglist[n].img + "' class='blog-img'>" +
 			"<ul class='unstyled inline'>" +
-			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + blogs[n].date + "</a></li>" +
-			"<li type='circle'><i class='icon-comments'></i> <a href='" + blogs[n].href + "#cloud-tie-wrapper'><span>Comments</span></a></li>" +
+			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[n].date + "</a></li>" +
+			"<li type='circle'><i class='icon-comments'></i> <a href='" + bloglist[n].href + "#cloud-tie-wrapper'><span>Comments</span></a></li>" +
 			"</ul>" +
 			"</div>" +
 			"<div class='span9 blog-article'>" +
-			"<a href='" + blogs[n].href + "' class='blog-title'>" + blogs[n].title + "</a>" +
+			"<a href='" + bloglist[n].href + "' class='blog-title'>" + bloglist[n].title + "</a>" +
 			"<ul class='unstyled inline blog-tags pull-right'>" +
 			"<li>" +
 			"<i class='icon-tags'></i>" + tags +
 			"</li>" +
 			"</ul>" +
-			"<p>" + blogs[n].content + "</p>" +
-			"<a class='btn-blue btn-mini' href='" + blogs[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			"<p>" + bloglist[n].content + "</p>" +
+			"<a class='btn-blue btn-mini' href='" + bloglist[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
 			"</div>" +
 			"<div style='background:#ddd;height:2px;margin:10px;'></div>";
@@ -78,8 +77,8 @@ $(document).ready(function() {
 	
 	function readtags(n) {
 		tagslist = "";
-		for(t = 0; t < blogs[n].tags.length; t++) {
-			tagslist += "<a href='#' style='font-size:9px !important'>" + blogs[n].tags[t] + "</a>";
+		for(t = 0; t < bloglist[n].tags.length; t++) {
+			tagslist += "<a href='#' style='font-size:9px !important'>" + bloglist[n].tags[t] + "</a>";
 		}
 		return tagslist;
 	}
@@ -100,11 +99,11 @@ $(document).ready(function() {
 	var tagscon = "";
 	var tagsarr = [];  //put tags into array
 	var tagnum = [];  //same tags numeber and index
-	for(i = 0; i < blogs.length; i++) {
-		for(t = 0; t < blogs[i].tags.length; t++) {
-			var has = tagsarr.indexOf(blogs[i].tags[t]);
+	for(i = 0; i < bloglist.length; i++) {
+		for(t = 0; t < bloglist[i].tags.length; t++) {
+			var has = tagsarr.indexOf(bloglist[i].tags[t]);
 			if(has == "-1") {
-				tagsarr.push(blogs[i].tags[t]);
+				tagsarr.push(bloglist[i].tags[t]);
 			} else {
 				if(tagnum[has] == undefined) {
 						tagnum[has] = 2;
