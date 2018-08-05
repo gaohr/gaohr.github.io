@@ -1,6 +1,6 @@
 /*Load noteslist*/
 
-colors = ["#fdd", "#fdf", "#ffd", "#dff", "#ddf", "#dfd"]
+colors = ["#fdd", "#fdf", "#ffd", "#dff", "#ddf", "#dfd", "#eee"]
 
 for(i = 0; i < noteslist.length; i++) {
 	n = parseInt(Math.random()*(colors.length), 10);
