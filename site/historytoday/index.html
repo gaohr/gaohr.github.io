@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min-2.3.1.css">
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
@@ -18,7 +19,7 @@
 		.query:hover {background:rgba(0,100,215,0.7);color:#fff}
 		.history {padding:10px;background:rgba(255,255,255,0.2);width:100%;height:360px;overflow-y:scroll}
 		.history .hhead {font-size:1.5em;color:#f66;line-height:50%;margin:5px}
-		.history .hcon {font-size:1.25em;background:rgba(255,255,255,.1);padding:2px;color:#333;box-shadow:1px 2px 2px #aaa;margin:0 20px}
+		.history .hcon {font-size:1.25em;background:rgba(255,255,255,.1);padding:5px;color:#333;box-shadow:1px 2px 2px #aaa;margin:2px 20px}
 		.history .hcon i {font-size:1.5em;color:#2b1d8c;margin-right:5px}
 		.history .hcon span {color:#f66}
 		.search {margin-left:15%}
@@ -98,9 +99,56 @@
 					<hr>
 					<div class="control-group">
 					<div class="controls">
-						月：<input type="text" id="month" placeholder="请输入月" value="1" class="span1"/>
+						月：
+						<select id="month" class="selectpicker span2" data-style="btn-info">
+							<option value="01" selected>1月</option>
+							<option value="02" selected>2月</option>
+							<option value="03" selected>3月</option>
+							<option value="04" selected>4月</option>
+							<option value="05" selected>5月</option>
+							<option value="06" selected>6月</option>
+							<option value="07" selected>7月</option>
+							<option value="08" selected>8月</option>
+							<option value="09" selected>9月</option>
+							<option value="10" selected>10月</option>
+							<option value="11" selected>11月</option>
+							<option value="12" selected>12月</option>
+						</select>
 						&nbsp;
-						日：<input type="text" id="day" placeholder="请输入日" value="1" class="span1"/>
+						日：
+						<select id="day" class="selectpicker span2" data-style="btn-info">
+							<option value="01" selected>1日</option>
+							<option value="02">2日</option>
+							<option value="03">3日</option>
+							<option value="04">4日</option>
+							<option value="05">5日</option>
+							<option value="06">6日</option>
+							<option value="07">7日</option>
+							<option value="08">8日</option>
+							<option value="09">9日</option>
+							<option value="10">10日</option>
+							<option value="11">11日</option>
+							<option value="12">12日</option>
+							<option value="13">13日</option>
+							<option value="14">14日</option>
+							<option value="15">15日</option>
+							<option value="16">16日</option>
+							<option value="17">17日</option>
+							<option value="18">18日</option>
+							<option value="19">19日</option>
+							<option value="20">20日</option>
+							<option value="21">21日</option>
+							<option value="22">22日</option>
+							<option value="23">23日</option>
+							<option value="24">24日</option>
+							<option value="25">25日</option>
+							<option value="26">26日</option>
+							<option value="27">27日</option>
+							<option value="28">28日</option>
+							<option value="29">29日</option>
+							<option value="30">30日</option>
+							<option value="31">31日</option>
+						</select>
 						<a id="query" href="###" class="query">查询</a>
 					</div>
 				</div>
@@ -136,6 +184,7 @@
     <script src="../../js/jquery.min.js"></script>
 	<script src="../../js/jquery-ui.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap-select.min.js"></script>
     <script src="../../js/common.js"></script>
 	<script type="text/javascript">
 		$(function(){
@@ -156,24 +205,23 @@
 				$("#content").hide();
 				var month = $("#month").val();
 				var day = $("#day").val();
-				if (parseInt(month) < 0 || parseInt(month) > 12 || parseInt(day) < 0 || parseInt(day) > 31) {
-					alert("请输入正确日期!");
-				} else {
-					key = "628c48c515094bb6adb1a6d4f7efe504"
+				date = month + day
+				key = "eb4e451556c3ed7dcdb89092471ad998"
 					$.ajax({
-						url:"http://api.avatardata.cn/HistoryToday/LookUp?key=" + key + "&yue=" + month + "&ri=" + day + "&type=1&page=1&rows=50",
+						url:"http://api.tianapi.com/txapi/lishi/?key=" + key + "&date=" + date,
 						dataType:"json",
 						async:false,
 						success:function(data){
-							alert(data);
-							for(i = 0; i < data.result.length; i++) {
-								$("#content").append("<p class='hcon'><i class='icon-time'></i><span>" + data.result[i].year + "年" + data.result[i].month + "月" + data.result[i].day + "日</span> - " + data.result[i].title + "</p>");
+							for(i = 0; i < data.newslist.length; i++) {
+								yearstr = data.newslist[i].lsdate.split("-")[0]
+								monthstr = data.newslist[i].lsdate.split("-")[1]
+								daystr = data.newslist[i].lsdate.split("-")[2]
+								$("#content").append("<p class='hcon'><i class='icon-time'></i><span>" + yearstr + "年" + monthstr + "月" + daystr + "日</span> - " + data.newslist[i].title + "</p>");
 							}
 						},
 						error:function(){alert("Error")}
 					});
-				}
-				runEffect();
+			runEffect();
 			}
 		});
 	</script>
