@@ -12,18 +12,16 @@
 	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 	<link rel="shortcut icon" href="../../img/mainicon.png">
-    <title>GaoHR | 微信精选</title>
+    <title>GaoHR | 历史上的今天</title>
 	<style>
-		.food {padding:10px;margin-bottom:10px;background:rgba(255,255,255,0.8);width:100%;min-height:360px;overflow-y:scroll}
 		.query {padding:10px 20px;background:rgba(0,100,215,0.9);color:#eee}
 		.query:hover {background:rgba(0,100,215,0.7);color:#fff}
-		.weixin {padding:10px;border-radius:2px}
-		.weixin:hover {background:rgba(0,0,0,0.05)}
-		.weixin a {font-size:1.5em;color:#333}
-		.weixin a:hover {color:#933 !important}
-		.weixin span {margin-left:10px;font-size:1em;color:#a63}
-		.wximg {width:20%;transition:all 0.5s}
-		.wximg:hover {width:50%;transition:all 0.5s}
+		.history {padding:10px;background:rgba(255,255,255,0.2);width:100%;height:360px;overflow-y:scroll}
+		.history .hhead {font-size:1.5em;color:#f66;line-height:50%;margin:5px}
+		.history .hcon {font-size:1.25em;background:rgba(255,255,255,.1);padding:2px;color:#333;box-shadow:1px 2px 2px #aaa;margin:0 20px}
+		.history .hcon i {font-size:1.5em;color:#2b1d8c;margin-right:5px}
+		.history .hcon span {color:#f66}
+		.search {margin-left:15%}
 	</style>
 </head>
 
@@ -59,8 +57,8 @@
 				</div>
 				<div class="sider-bar">
 				<div class="host">
-					<img src="../../img/images/head-img.jpg" class="img-rounded"><br><br>
-					<i class="icon-user">&nbsp;&nbsp;斩之浪</i>
+					<img src="../../img/mainicon.png" class="img-rounded"><br><br>
+					<i class="icon-user">&nbsp;&nbsp;小浪</i>
 				</div>
 				<!-- Navigation -->
 				<div class="svg-wrapper">
@@ -91,36 +89,37 @@
 				<ol class="breadcrumb">
 					<li><a href="../../index.html"><i class="icon-home"></i> Home</a></li>
 					<i class="icon-angle-right"></i>
-					<li class="active">微信精选</li>
+					<li class="active">历史上的今天</li>
 				</ol>
 				<!--正文-->
 				<div style="font-family:'黑体'">
-					<p style="color:#f66;font-size:1.2em;font-weight:bold">微信精选</p>
+					<span style="color:#f66;font-size:1.2em;font-weight:bold">历史上的今天</span>
+					<span style="color:#955;line-height:9px"> -- 以史为镜，可以知兴替。</span>
+					<hr>
 					<div class="control-group">
 					<div class="controls">
-						文章条数:
-						<input type="text" id="weixinnum" placeholder="文章条数（）" value="10" class="span2 huge"/>
-						<a id="query" href="###" class="query">换一批</a>
+						月：<input type="text" id="month" placeholder="请输入月" value="1" class="span1"/>
+						&nbsp;
+						日：<input type="text" id="day" placeholder="请输入日" value="1" class="span1"/>
+						<a id="query" href="###" class="query">查询</a>
 					</div>
 				</div>
 				</div>
 				
-				<div class="food">
-					<div id="jcontent"></div>
+				<div class="history">
+					<div id="content"></div>
 				</div>
 				
 
 			</div>
 			<div class="span2">
 				<div id="lh" style="width:70%">
-					<img src="images/chushi.png" width="100%" style="margin-top:20%">
+					<img src="images/01.jpg" width="100%" style="margin-top:20%">
 				</div>
 				<div style="width:90%;text-align:center">
-					<img src="images/01.png" width="40%">
-					<img src="images/02.png" width="40%">
-					<img src="images/03.png" width="40%">
-					<img src="images/04.png" width="40%">
-					<img src="images/05.png" width="40%">
+					<img src="images/02.jpg" width="40%">
+					<img src="images/03.jpg" width="40%">
+					<img src="images/04.jpg" width="40%">
 				</div>
 				<!-- comments -->
 				<div id="comments"></div>
@@ -140,37 +139,40 @@
     <script src="../../js/common.js"></script>
 	<script type="text/javascript">
 		$(function(){
-			weixinc();
 			function runEffect() {
 				var options = {};
-				$("#jcontent").show("fold", options, 1000, null);
+				$("#content").show("fold", options, 1000, null);
 			};
 			$("#query").click(function() {
-				weixinc();
+				history();
 			}); 
 			$(document).keyup(function(event){
 				if(event.keyCode == 13){
-					weixinc();
+					history();
 				}
 			});
-			function weixinc() {
-				$("#jcontent").empty();
-				$("#jcontent").hide();
-				var weixinnum = $("#weixinnum").val();
-						$.ajax({
-							url:"https://api.tianapi.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1",
-							dataType:"json",
-							async:false,
-							success:function(data){
-								for(i = 0; i < data.newslist.length; i++) {
-									$("#jcontent").append("<div class='weixin'><a href='" + data.newslist[i].url + "' target='_blank'><b>" + data.newslist[i].title + "</b></a><span>[" + data.newslist[i].description + "]</span><p style='color:#999;font-size:1em'>" + data.newslist[i].ctime + "</p><a href='" + data.newslist[i].url + "' target='_blank'><img class='wximg' src='" + data.newslist[i].picUrl + "'></a></div><hr>");
-								}
-							},
-							error:function(){
-								$("#jcontent").append("请求<a href='https://api.tianapi.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1' target='_blank'>http://api.huceo.com/wxnew/?key=eb4e451556c3ed7dcdb89092471ad998&num=" + weixinnum + "&rand=1</a>超时！");
+			function history() {
+				$("#content").empty();
+				$("#content").hide();
+				var month = $("#month").val();
+				var day = $("#day").val();
+				if (parseInt(month) < 0 || parseInt(month) > 12 || parseInt(day) < 0 || parseInt(day) > 31) {
+					alert("请输入正确日期!");
+				} else {
+					key = "628c48c515094bb6adb1a6d4f7efe504"
+					$.ajax({
+						url:"http://api.avatardata.cn/HistoryToday/LookUp?key=" + key + "&yue=" + month + "&ri=" + day + "&type=1&page=1&rows=50",
+						dataType:"json",
+						async:false,
+						success:function(data){
+							alert(data);
+							for(i = 0; i < data.result.length; i++) {
+								$("#content").append("<p class='hcon'><i class='icon-time'></i><span>" + data.result[i].year + "年" + data.result[i].month + "月" + data.result[i].day + "日</span> - " + data.result[i].title + "</p>");
 							}
+						},
+						error:function(){alert("Error")}
 					});
-					
+				}
 				runEffect();
 			}
 		});

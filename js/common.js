@@ -64,8 +64,7 @@ if(document.getElementById("others")) {
 function Relatedlinks() {
 	return "<ul class=\"blog-images\">" +
 			"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
-			"<li><a href=\"site/zhihu/index.html\" target=\"_blank\" title=\"知乎热门\"><img alt=\"\" src=\"img/images/zhihu.png\">知乎热门</a></li><br>" +
-			"<li><a href=\"site/music/index.html\" target=\"_blank\" title=\"音乐盒\"><img alt=\"\" src=\"img/images/music.png\">音乐盒:休闲时光</a></li><br>" +
+			"<li><a href=\"site/historytoday/index.html\" target=\"\" title=\"历史上的今天\"><img alt=\"\" src=\"img/images/History.png\">历史上的今天</a></li><br>" +
 			"<li><a href=\"site/skills/index.html\" target=\"_blank\" title=\"技能图谱\"><img alt=\"\" src=\"img/images/skills.png\">技能图谱</a></li><br>" +
 			"<li><a href=\"site/turing/index.html\" target=\"_blank\" title=\"图灵机器人\"><img alt=\"\" src=\"img/images/turing.png\">图灵-对话机器人</a></li><br>" +
 			"<li><a href=\"site/food/index.html\" target=\"_blank\" title=\"菜谱查询\"><img alt=\"\" src=\"img/images/food.png\">菜谱查询</a></li><br>" +
@@ -74,6 +73,8 @@ function Relatedlinks() {
 			"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"\" src=\"img/images/BBCWar2.png\">二战全史</a></li><br>" +
 			"<li><a href=\"site/graph/index.html\" target=\"_blank\" title=\"函数绘图\"><img alt=\"\" src=\"img/images/Graph.png\">函数绘图</a></li><br>" +
 			"<li><a href=\"site/rainbowposter/index.html\" target=\"_blank\" title=\"制作彩虹特效图片\"><img alt=\"\" src=\"img/images/RainbowPoster.png\">彩虹特效图片</a></li><br>" +
+			"<li><a href=\"site/zhihu/index.html\" target=\"_blank\" title=\"知乎热门\"><img alt=\"\" src=\"img/images/zhihu.png\">知乎热门</a></li><br>" +
+			"<li><a href=\"site/music/index.html\" target=\"_blank\" title=\"音乐盒\"><img alt=\"\" src=\"img/images/music.png\">音乐盒:休闲时光</a></li><br>" +
 			"<li><a href=\"http://remotesensing.top/\" target=\"_blank\" title=\"Remote Sensing\"><img alt=\"\" src=\"img/images/RS_Yi_logo.png\">RemoteSensing.TOP</a></li><br>" +
 			"</ul>";
 }
