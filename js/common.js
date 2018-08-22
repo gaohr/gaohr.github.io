@@ -54,7 +54,7 @@ if(document.getElementById("weather")) {
 	
 // others -> Advertisement
 if(document.getElementById("others")) {
-	$("#others").append(Advertisement());
+	//$("#others").append(Advertisement());
 }
 	
 	
