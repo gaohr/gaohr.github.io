@@ -79,7 +79,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 ::-webkit-scrollbar-thumb:vertical:hover,
 ::-webkit-scrollbar-thumb:vertical:active {background-color: #2e86ef}
 
-@media (max-width: 1660px) {
+@media (max-width: 2000px) {
 	.menulist {display:none;margin-left:10px}
 }
 @media (max-width: 560px) {

@@ -131,6 +131,9 @@ $(document).ready(function() {
 	var topics = eval('topicslist');
 	//for(t = 0; t < topics.length; t++) {
 	for(t = 0; t < 8; t++) {
+		if(t == 3) {
+			$("#topics").append("<br>");
+		}
 		$("#topics").append(
 			"<div class='topicbody'>" +
 				"<a href='site/special/" + topics[t].href + "' title='" + topics[t].title + "'>" +
@@ -140,8 +143,6 @@ $(document).ready(function() {
 				"<span>" + topics[t].content + "</span>" +
 			"</div>");
 	}
-	
-	
 }) 
 	
 	
