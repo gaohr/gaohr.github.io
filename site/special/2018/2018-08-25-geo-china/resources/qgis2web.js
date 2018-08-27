@@ -210,12 +210,12 @@ var onSingleClick = function(evt) {
 							"<div id='loc-city' class='loc-city'>" + province + " - " + city + "</div>" +
 							"<hr>" +
 							"<div id='loc-img' class='loc-img'>" +
-								"<img id='img-display' class='img-display' src='./2018-08-25-geo-china/imgs/" + img + "01.jpg'>" +
+								"<img id='img-display' class='img-display' src='./2018-08-25-geo-china/imgs/" + img + "01.jpg' onerror='nofind();'>" +
 								"<div class='container-fluid'>" +
 									"<div class='row-fluid'>" +
-										"<div class='span4'><a href='###' onclick=\"$('#img-display').attr('src', './2018-08-25-geo-china/imgs/" + img + "01.jpg')\"><img class='img-list' src='./2018-08-25-geo-china/imgs/" + img + "01.jpg'></a></div>" +
-										"<div class='span4'><a href='###' onclick=\"$('#img-display').attr('src', './2018-08-25-geo-china/imgs/" + img + "02.jpg')\"><img class='img-list' src='./2018-08-25-geo-china/imgs/" + img + "02.jpg'></a></div>" +
-										"<div class='span4'><a href='###' onclick=\"$('#img-display').attr('src', './2018-08-25-geo-china/imgs/" + img + "03.jpg')\"><img class='img-list' src='./2018-08-25-geo-china/imgs/" + img + "03.jpg'></a></div>" +
+										"<div class='span4'><a href='###' onclick=\"$('#img-display').attr('src', './2018-08-25-geo-china/imgs/" + img + "01.jpg')\"><img class='img-list' src='./2018-08-25-geo-china/imgs/" + img + "01.jpg' onerror='nofind();'></a></div>" +
+										"<div class='span4'><a href='###' onclick=\"$('#img-display').attr('src', './2018-08-25-geo-china/imgs/" + img + "02.jpg')\"><img class='img-list' src='./2018-08-25-geo-china/imgs/" + img + "02.jpg' onerror='nofind();'></a></div>" +
+										"<div class='span4'><a href='###' onclick=\"$('#img-display').attr('src', './2018-08-25-geo-china/imgs/" + img + "03.jpg')\"><img class='img-list' src='./2018-08-25-geo-china/imgs/" + img + "03.jpg' onerror='nofind();'></a></div>" +
 									"</div>" +
 								"</div>" +
 							"</div>" +
