@@ -1,4 +1,7 @@
 var bloglist = [
+
+{"blogid":"2018090301", "title":"栅格图像补偿简单处理方法", "type":"专业技术", "author":"小浪", "content":"栅格图像补偿处理的简单方法，采用8邻域（或24邻域）均值计算方法对待计算中心空值栅格进行数据补偿，利用Python程序实现。", "img":"site/blogs/2018/images/ImgComps.jpg", "date":"2018-09-03", "href":"http://gaohr.win/site/blogs/2018/2018-09-03-img-comps.html", "tags":["栅格", "Python"]},
+
 {"blogid":"2018070701", "title":"基于OpenLayers的WebGIS实例：添加标记要素", "type":"专业技术", "author":"小浪", "content":"OpenLayers——为WebGIS开发提供的JavaScript类库包，最好的开源地图引擎。本实例基于OpenLayers开发WebGIS，解决作图需求。", "img":"site/blogs/2018/images/OL.jpg", "date":"2018-07-07", "href":"http://gaohr.win/site/blogs/2018/2018-07-07-webgis-based-on-openlayers.html", "tags":["WebGIS", "OpenLayers"]},
 
 {"blogid":"2018070301", "title":"GitHub安装与使用简明教程", "type":"专业技术", "author":"小浪[整理], ZhuLJ", "content":"作为当前最流行的开源代码库以及版本控制系统，GitHub已经成为了管理软件开发以及发现已有代码的首选方法，不仅越来越多知名开源项目迁入GitHub，近年流行的开源库往往在GitHub首发。在GitHub中，用户可以十分方便地找到海量的开源代码。", "img":"site/blogs/2018/images/Github.jpg", "date":"2018-07-03", "href":"http://gaohr.win/site/blogs/2018/2018-07-03-github-install-and-use.html", "tags":["Git", "GitHub"]},
