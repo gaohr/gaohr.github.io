@@ -28,7 +28,15 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .links p {font-size:1.5em;font-family:'SimHei'}
 .links a {font-size:2.4em;}
 .links .weibo  {color:#e03b29}.links .github {color:#333}.links .google  {color:#3b8029}.links .twitter {color:#2366bb}.links .fb {color:#5366bb}
-.links a :hover{color:#236eb8}
+.links a:hover{color:#236eb8}
+.homepage-links {padding:2px;font-size:1.2em;font-family:'SimHei'}
+.homepage-links a {padding:5px;margin-right:5px}
+.homepage-links .rg {background:#4a9;color:#fff}
+.homepage-links .rg:hover{background:#297}
+.homepage-links .kyzx {background:#555;color:#fff}
+.homepage-links .kyzx:hover{background:#333}
+.homepage-links .gs {background:#4ac;color:#fff}
+.homepage-links .gs:hover{background:#48a}
 
 .centerpage {background-color:#fafafa;padding:10px;height:auto}
 .copyright{text-align:center;color:#555 !important;}
@@ -61,14 +69,15 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .advertisement .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 
 /*About*/
-.info {font-family:'Microsoft YaHei'}
-.info h4 {color:#da2e1b;}
+.info {font-family:'Microsoft YaHei';font-size:1.1em}
+.info h3 {color:#da2e1b;}
+.info span {padding:5px;margin:1px 3px}
 .info p {color:#333}
 .info .geyan {background-color:#eee;border-left:5px solid #d86666;padding:2px 5px;color:#555;margin-right:10%}
-.moreinfo {color:#333}
-.moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:2px solid #d86666;padding-left:10px}
+.moreinfo {color:#333;font-size:1.1em}
+.moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:5px solid #d86666;padding-left:10px}
 .moreinfo .infocontent{color:#444;margin-left:5%}
-.infocontent i {color:#d85546}
+.infocontent i {color:#d85546;font-size:1.1em}
 
 /*滚动条美化*/
 ::-webkit-scrollbar{width:10px;height:6px}
