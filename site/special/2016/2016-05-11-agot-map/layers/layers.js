@@ -270,3 +270,24 @@ $("#Essos").change(function(){if($("#Essos").prop("checked") == true) {lyr_Essos
 $("#Sothoryos").change(function(){if($("#Sothoryos").prop("checked") == true) {lyr_Sothoryos.setVisible(true);} else {lyr_Sothoryos.setVisible(false);}});
 
 var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_texturem,lyr_texturet,lyr_TheWall,lyr_zone,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_zonepoint,lyr_battle,lyr_event,lyr_wuwang];
+
+
+$("#layerslist").draggable();
+$("#lyrMgt").click(function() {
+	$("#layerslist").toggle("Scale", null, 500, null);
+	$("#close-layerslist").click(function() {
+		$("#layerslist").hide("Scale", null, 500, null);
+	});
+})
+
+$("#personae").draggable();
+$("#pRoute").click(function() {
+	$("#personae").toggle("Scale", null, 500, null);
+	$("#close-personae").click(function() {
+		$("#personae").hide("Scale", null, 500, null);
+	});
+})
+
+
+
+

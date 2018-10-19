@@ -38,6 +38,26 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .homepage-links .gs {background:#4ac;color:#fff}
 .homepage-links .gs:hover{background:#48a}
 
+.g-color-white {color:#fee !important}
+.g-color-black {color:#555 !important}
+.g-color-red {color:#f65 !important}
+.g-color-orange {color:#f82 !important}
+.g-color-yellow {color:#fc0 !important}
+.g-color-green {color:#4c0!important}
+.g-color-blue {color:#39e !important}
+.g-color-purple {color:#e0e !important}
+.g-color-gray {color:#888 !important}
+
+.bg-white {background-color:#fffdf7}
+.bg-black {background-color:#555}
+.bg-red {background-color:#f65}
+.bg-orange {background-color:#f82}
+.bg-yellow {background-color:#fc0}
+.bg-green {background-color:#4c0}
+.bg-blue {background-color:#39e}
+.bg-purple {background-color:#e0e}
+.bg-gray {background-color:#888}
+
 .centerpage {background-color:#fafafa;padding:10px;height:auto}
 .copyright{text-align:center;color:#555 !important;}
 
