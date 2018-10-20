@@ -26,6 +26,14 @@ var expandedAttribution = new ol.control.Attribution({
     collapsible: false
 });
 
+var view = new ol.View({
+	center: [60, 12],
+	zoom: 4,
+	maxZoom: 28, 
+	minZoom: 2, 
+	projection: 'EPSG:4326'
+});
+
 var map = new ol.Map({
     controls: ol.control.defaults({attribution:false}).extend([
         expandedAttribution,
@@ -36,11 +44,9 @@ var map = new ol.Map({
     renderer: 'canvas',
     overlays: [overlayPopup, overlayPopup_c],
     layers: layersList,
-    view: new ol.View({
-         maxZoom: 28, minZoom: 2, projection: 'EPSG:4326'
-    })
+    view: view
 });
-map.getView().fit([93.717497, -19.679874, 69.187273, 55.030766], map.getSize());
+//map.getView().fit([90, 0, 30, 40], map.getSize());
 
 var NO_POPUP = 0
 var ALL_FIELDS = 1
@@ -52,7 +58,7 @@ var ALL_FIELDS = 1
  * @param layer {ol.Layer} Layer to find field info about
  */
 function getPopupFields(layerList, layer) {
-    popupLayers = [0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,1,1,1];
+    popupLayers = [0,0,0,0,0,0,0,0,0,1,0,0,1,1,0,0,0,0,1,1,1,1,1];
     // Determine the index that the layer will have in the popupLayers Array,
     // if the layersList contains more items than popupLayers then we need to
     // adjust the index to take into account the base maps group
@@ -182,12 +188,104 @@ map.on('singleclick', function(evt) {
     onSingleClick(evt);
 });
 
-
-
-
 var attribution = document.getElementsByClassName('ol-attribution')[0];
 var attributionList = attribution.getElementsByTagName('ul')[0];
 var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
 var qgis2webAttribution = document.createElement('li');
 qgis2webAttribution.innerHTML = '<a href="https://github.com/tomchadwin/qgis2web">qgis2web</a>';
 attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
+
+
+
+/******/
+var vectorLayer = new ol.layer.Vector();
+features = [];
+
+function addRouteFeature(coord, color) {
+	var iconFeature = new ol.Feature({
+		geometry: new ol.geom.Point(coord),
+	});
+	var iconStyle = new ol.style.Style({
+		image: new ol.style.Icon(({
+			src: './2016-05-11-agot-map/img/personae/loc_' + color + '.png',
+			scale: 0.75
+		}))
+	});
+	iconFeature.setStyle(iconStyle);
+	features.push(iconFeature);
+	vectorLayer.setSource(new ol.source.Vector({features: features}));
+	map.addLayer(vectorLayer);
+}
+
+function movetoXY(coord) {
+	var pan = ol.animation.pan({
+		duration: 1000,
+		source: (view.getCenter())
+	});
+	map.beforeRender(pan);
+	view.setCenter(coord);
+}
+
+function moveToNext(coord, next, n) {
+	movetoXY(coord);
+	next(n);
+}
+
+function tourRoute(points, color) {
+	addRouteFeature(points[0], color);
+	var index = -1;
+	var n = true;
+	function next(more) {
+		if (more) {
+			++index;
+			if (index < points.length) {
+				if(index == points.length - 1) {
+					n = false;
+					index--;
+				}
+				setTimeout(function() {
+					moveToNext(points[index + 1], next, n);
+					if(!n){
+						addRouteFeature(points[index + 1], color);
+					} else {
+						addRouteFeature(points[index], color);
+					}
+					
+				}, 1500);
+			}
+		}
+	}
+	next(true);
+}
+
+function getColor() {
+	var colors = ["blue", "red", "green", "purple", "yellow"]
+	return colors[Math.floor(Math.random() * colors.length)];
+}
+
+$("#clearRoute").click(function() {
+	features = [];
+	vectorLayer.setSource(new ol.source.Vector({features: features}));
+	map.addLayer(vectorLayer);
+	lyr_pRoute_JonSnow.setVisible(false);
+	lyr_pRoute_Daenerys.setVisible(false);
+})
+
+$("#JonSnow").click(function() {
+	view.setZoom(3);var points = new Array();
+	for(i = 0; i < rJonSnow.points.length; i++) {points.push(rJonSnow.points[i].point);}
+	color = getColor();
+	tourRoute(points, color);
+	lyr_pRoute_JonSnow.setVisible(true);
+})
+
+$("#Daenerys").click(function() {
+	view.setZoom(3);var points = new Array();
+	for(i = 0; i < rDaenerys.points.length; i++) {points.push(rDaenerys.points[i].point);}
+	color = getColor();
+	tourRoute(points, color);
+	lyr_pRoute_Daenerys.setVisible(true);
+})
+
+
+

@@ -229,6 +229,26 @@ jsonSource_wuwang.addFeatures(features_wuwang);var lyr_wuwang = new ol.layer.Vec
                 title: "五王之战"
             });
 
+var format_pRoute_JonSnow = new ol.format.GeoJSON();
+var features_pRoute_JonSnow = format_pRoute_JonSnow.readFeatures(geojson_pRoute_JonSnow, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_pRoute_JonSnow = new ol.source.Vector();
+jsonSource_pRoute_JonSnow.addFeatures(features_pRoute_JonSnow);var lyr_pRoute_JonSnow = new ol.layer.Vector({
+                source:jsonSource_pRoute_JonSnow, 
+                style: style_pRoute_JonSnow,
+                title: "pRoute_JonSnow"
+            });
+
+var format_pRoute_Daenerys = new ol.format.GeoJSON();
+var features_pRoute_Daenerys = format_pRoute_Daenerys.readFeatures(geojson_pRoute_Daenerys, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:4326'});
+var jsonSource_pRoute_Daenerys = new ol.source.Vector();
+jsonSource_pRoute_Daenerys.addFeatures(features_pRoute_Daenerys);var lyr_pRoute_Daenerys = new ol.layer.Vector({
+                source:jsonSource_pRoute_Daenerys, 
+                style: style_pRoute_Daenerys,
+                title: "pRoute_Daenerys"
+            });
+
 if($("#wuwang").prop("checked") == true) {lyr_wuwang.setVisible(true);}
 if($("#event").prop("checked") == true) {lyr_event.setVisible(true);}
 if($("#battle").prop("checked") == true) {lyr_battle.setVisible(true);}
@@ -269,8 +289,12 @@ $("#Westeros").change(function(){if($("#Westeros").prop("checked") == true) {lyr
 $("#Essos").change(function(){if($("#Essos").prop("checked") == true) {lyr_Essos.setVisible(true);} else {lyr_Essos.setVisible(false);}});
 $("#Sothoryos").change(function(){if($("#Sothoryos").prop("checked") == true) {lyr_Sothoryos.setVisible(true);} else {lyr_Sothoryos.setVisible(false);}});
 
-var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_texturem,lyr_texturet,lyr_TheWall,lyr_zone,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_zonepoint,lyr_battle,lyr_event,lyr_wuwang];
+lyr_pRoute_JonSnow.setVisible(false);
+lyr_pRoute_Daenerys.setVisible(false);
 
+var layersList = [lyr_ocean,lyr_Sothoryos,lyr_Essos,lyr_Westeros,lyr_texturem,lyr_texturet,lyr_TheWall,lyr_zone,lyr_forest,lyr_mountain,lyr_place,lyr_relic,lyr_river,lyr_road,lyr_castles,lyr_cities,lyr_gulf,lyr_island,lyr_sea,lyr_zonepoint,lyr_battle,lyr_event,lyr_wuwang,lyr_pRoute_JonSnow,lyr_pRoute_Daenerys];
+
+//******//
 
 $("#layerslist").draggable();
 $("#lyrMgt").click(function() {
@@ -287,6 +311,8 @@ $("#pRoute").click(function() {
 		$("#personae").hide("Scale", null, 500, null);
 	});
 })
+
+
 
 
 
