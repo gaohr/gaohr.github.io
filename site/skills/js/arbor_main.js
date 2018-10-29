@@ -303,7 +303,6 @@
       },
 	  'essi': {
         'c': { weight: 5 },
-        'git': { weight: 1 },
         'f': { weight: 1 },
         'swat': { weight: 2 },
         'vc': { weight: 4 }
@@ -315,7 +314,11 @@
         'vs': { weight: 4 },
         'c': { weight: 5 },
         'py': { weight: 5 },
+        'swat': { weight: 2 },
         'mongodb': { weight: 3 }
+      },
+	  'swat': {
+        'f': { weight: 3 }
       },
 	  'web': {
         'js': { weight: 3 },
