@@ -37,6 +37,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .homepage-links .kyzx:hover{background:#333}
 .homepage-links .gs {background:#4ac;color:#fff}
 .homepage-links .gs:hover{background:#48a}
+.homepage-links .orcid {background:#ac4;color:#fff}
+.homepage-links .orcid:hover{background:#8a4}
 
 .g-color-white {color:#fee !important}
 .g-color-black {color:#555 !important}
