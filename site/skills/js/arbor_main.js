@@ -107,10 +107,10 @@
                 ctx.fillStyle = '#4F94CD';
                 break;
               case 'tool':
-                ctx.fillStyle = '#FF6A6A';
+                ctx.fillStyle = '#FF6A5A';
                 break;
-              case 'experience':
-                ctx.fillStyle = '#EEB422';
+              case 'model':
+                ctx.fillStyle = '#44CC00';
                 break;
               default:
                 ctx.fillStyle = '#333333';
@@ -265,81 +265,84 @@
       'js': { description: 'JavaScript', type: 'lang' },
       'java': { description: 'Java', type: 'lang' },
       'c': { description: 'C/C++', type: 'lang' },
-	  'py': { description: 'Python', type: 'lang' },
-	  'f': { description: 'Fortran', type: 'lang' },
-      'css': { description: 'css', type: 'lang' },
-      'html': { description: 'html5', type: 'lang' },
-      'git': { description: 'git', type: 'tool' },
+      'py': { description: 'Python', type: 'lang' },
+      'f': { description: 'Fortran', type: 'lang' },
+      'css': { description: 'CSS', type: 'lang' },
+      'html': { description: 'HTML5', type: 'lang' },
+      'matlab': { description: 'MatLab', type: 'lang' },
+      'r': { description: 'R', type: 'lang' },
+      'git': { description: 'GitHub', type: 'tool' },
       'mongodb': { description: 'MongoDB', type: 'tool' },
-      'jekyll': { description: 'jekyll', type: 'tool' },
-	  'arcgis': { description: 'ArcGIS', type: 'tool' },
+      'arcgis': { description: 'ArcGIS', type: 'tool' },
       'qgis': { description: 'QGIS', type: 'tool' },
       'spss': { description: 'SPSS', type: 'tool' },
-	  'ps': { description: 'PhotoShop', type: 'tool' },
-      'qgis': { description: 'QGIS', type: 'tool' },
-      'matlab': { description: 'MatLab', type: 'tool' },
-      'swat': { description: 'SWAT', type: 'tool' },
-      'seims': { description: 'SEIMS', type: 'tool' },
+      'ps': { description: 'PhotoShop', type: 'tool' },
       'envi': { description: 'ENVI', type: 'tool' },
       'eclipse': { description: 'Eclipse', type: 'tool' },
-      'esri': { description: 'ESRI制图大赛', type: 'experience' },
-      'dev': { description: 'Develope', type: 'experience' },
-      'dianxin': { description: '点心桌面设计', type: 'experience' },
-	  'blog': { description: 'GaoHR（博客）', type: 'experience' }
+      'pycharm': { description: 'PyCharm', type: 'tool' },
+      'vc': { description: 'VC', type: 'tool' },
+      'vs': { description: 'VS', type: 'tool' },
+      'swat': { description: 'SWAT', type: 'model' },
+      'seims': { description: 'SEIMS', type: 'model' },
+      'essi': { description: 'ESSI', type: 'model' },
+      'pyessi': { description: 'PyESSI', type: 'model' },
+      'web': { description: 'WebSite', type: 'other' },
+      'pro': { description: 'Project', type: 'other' },
+      'others': { description: 'Others', type: 'other' }
     };
 
     var edges = {
-      'blog': {
-        'jekyll': { weight: 1 },
-        'js': { weight: 3 },
-        'css': { weight: 3 },
-        'html': { weight: 3 },
-        'git': { weight: 2 }
-      },
-      'esri': {
-        'arcgis': { weight: 3 },
-        'envi': { weight: 2 },
-		'dev': { weight: 3 },
-		'matlab': { weight: 1 },
-		'dianxin': { weight: 1 }
-      },
-	  'mongodb': {
-       'c': { weight: 3 },
-        'js': { weight: 2 },
-        'py': { weight: 3 },
-        'html': { weight: 1 },
-        'qgis': { weight: 2 }
-      },
-	  'seims': {
-       'c': { weight: 3 },
-        'git': { weight: 2 },
-        'py': { weight: 3 },
-        'f': { weight: 1 },
+	  'pyessi': {
+        'c': { weight: 2 },
+        'py': { weight: 5 },
+        'git': { weight: 4 },
+        'pycharm': { weight: 2 },
+        'arcgis': { weight: 2 },
+        'mongodb': { weight: 3 },
         'swat': { weight: 2 }
       },
-	  'eclipse': {
-       'java': { weight: 1 },
+	  'essi': {
+        'c': { weight: 5 },
+        'git': { weight: 1 },
+        'f': { weight: 1 },
+        'swat': { weight: 2 },
+        'vc': { weight: 4 }
+      },
+	  'seims': {
+        'js': { weight: 2 },
+        'css': { weight: 2 },
+        'html': { weight: 2 },
+        'vs': { weight: 4 },
+        'c': { weight: 5 },
+        'py': { weight: 5 },
+        'mongodb': { weight: 3 }
+      },
+	  'web': {
         'js': { weight: 3 },
         'css': { weight: 3 },
         'html': { weight: 3 },
-        'qgis': { weight: 2 }
-      },
-	  'dianxin': {
-       'ps': { weight: 3 },
-        'css': { weight: 3 },
-        'html': { weight: 2 }
-      },
-	  'git': {
-        'js': { weight: 2 },
-        'css': { weight: 2 },
-        'html': { weight: 3 },
-		'blog': { weight: 2 },
-      },
-	  'dev': {
-        'spss': { weight: 1 },
         'java': { weight: 3 },
-        'c': { weight: 2 }
+        'qgis': { weight: 3 },
+        'eclipse': { weight: 3 },
+        'py': { weight: 2 }
       },
+	  'pro': {
+        'py': { weight: 4 },
+        'java': { weight: 2 },
+        'c': { weight: 3 },
+        'git': { weight: 3 },
+        'arcgis': { weight: 2 },
+        'pyessi': { weight: 2 },
+        'mongodb': { weight: 3 },
+        'others': { weight: 2 }
+      },
+	  'others': {
+        'r': { weight: 2 },
+        'ps': { weight: 2 },
+        'spss': { weight: 2 },
+        'envi': { weight: 2 },
+        'matlab': { weight: 3 }
+      }
     };
 
     for (var n1 in edges) {
