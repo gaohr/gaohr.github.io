@@ -95,13 +95,13 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .info h3 {color:#da2e1b;}
 .info span {padding:5px;margin:1px 3px}
 .info p {color:#333}
-.info .geyan {background-color:#eee;border-left:5px solid #d86666;padding:2px 5px;color:#555;margin-right:10%}
+.geyan {background-color:#eee;border-left:5px solid #d86666;border-right:5px solid #d86666;padding:2px 5px;color:#555;margin-right:10%;text-align:center}
 .moreinfo {color:#333;font-size:1.1em}
 .moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:5px solid #d86666;padding-left:10px}
-.moreinfo .infocontent{color:#444;margin-left:5%;margin-bottom:2%}
+.moreinfo .infocontent{color:#444;margin-left:5%;margin-bottom:2%;border:1px solid rgba(0,0,0,0)}
 .infocontent i {color:#d85546;font-size:1.2em;margin-right:1%}
 .infocontent:hover i {color:#55d846}
-.infocontent:hover {background-color: #eee}
+.infocontent:hover {background-color: #eee;border-bottom:1px solid rgba(0,0,0,0.3)}
 
 /*滚动条美化*/
 ::-webkit-scrollbar{width:10px;height:6px}
