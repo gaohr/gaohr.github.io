@@ -6,6 +6,41 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2018-10-13', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201810131.jpg'}],
+		textcon:'有没有食欲',
+	},
+	{
+		title:'浪花', data:'2018-10-05', location:'• 中科院遥感所 北京', type:'image', 
+		src:[{url:'201810051.jpg'},{url:'201810052.jpg'}],
+		textcon:'你的绿萝。不，是你的绿萝！',
+	},
+	{
+		title:'浪花', data:'2018-09-23', location:'• 中科院遥感所 北京', type:'image', 
+		src:[{url:'201809231.jpg'}],
+		textcon:'嗯，有范儿！',
+	},
+	{
+		title:'小浪', data:'2018-09-20', location:'• 西宁、张掖', type:'image', 
+		src:[{url:'201809201.jpg'},{url:'201809202.jpg'},{url:'201809203.jpg'},{url:'201809204.jpg'}],
+		textcon:'白云远山，高原牧场；祁连雪甸，丹霞流光……不虚此行！',
+	},
+	{
+		title:'小花', data:'2018-09-09', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201809091.jpg'},{url:'201809092.jpg'},{url:'201809093.jpg'}],
+		textcon:'新的起点 2018',
+	},
+	{
+		title:'浪花', data:'2018-08-15', location:'• 家 菏泽', type:'image', 
+		src:[{url:'201808151.jpg'}],
+		textcon:'俩狗子',
+	},
+	{
+		title:'浪花', data:'2018-06-19', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201806191.jpg'},{url:'201806192.jpg'},{url:'201806193.jpg'},{url:'201806194.jpg'}],
+		textcon:'吃瓜！',
+	},
+	{
 		title:'浪花', data:'2018-06-18', location:'• 首都师范大学 北京', type:'image', 
 		src:[{url:'201806181.jpg'},{url:'201806182.jpg'},{url:'201806183.jpg'},{url:'201806184.jpg'},{url:'201806185.jpg'},{url:'201806186.jpg'},{url:'201806187.jpg'},{url:'201806188.jpg'}],
 		textcon:'属于你的毕业季！',
