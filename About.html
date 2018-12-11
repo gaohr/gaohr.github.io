@@ -18,6 +18,12 @@
 	<style>
 		body {font-family:'Times New Roman' !important}
 		body p {font-family:'Times New Roman' !important}
+		.logindiv {padding:0 2% 0 2%;background-color:#fafafa;color:#555;font-size:24px;text-align:center;padding:20px;margin:50px;margin-left:20%;margin-right:20%;background:rgba(0,0,0,0.1);border-radius:10px}
+		.logindiv p {margin-top:10px;color:#a44;font-size:16px;}
+		.submit {background:rgba(255,255,255,0.5);padding:5px;color:#151;border-radius:10px;transition:0.5s}
+		.submit:hover {background:rgba(0,0,0,0.5);color:#fff;transition:0.5s}
+		.submit:active {background:rgba(0,0,0,0.8);color:#ddd;}
+		.errordiv {color:#911;font-size:36px;margin:50px;text-align:center;}
 	</style>
 </head>
 
@@ -90,78 +96,87 @@
 				</ol>
 				<!--正文-->
 				<p class="blog-top">关于我</p>
-				<div class="row-fluid" style="padding:0 2% 0 2%;background-color:#fafafa">
-					<div class="span7">
-						<div class="info">
-							<h4><b>高会然 (Huiran Gao)</b><small>&nbsp;&nbsp;小浪</small></h4>
-							<p><small>Ph.D. candidate in <a href="http://www.radi.ac.cn/" target="_blank">RADI</a>, <a href="http://www.ucas.ac.cn/" target="_blank">CAS</a>.</small></p>
-							<p><small>Master in <a href="http://www.lreis.ac.cn/sc/index.aspx" target="_blank">Lreis</a>, <a href="http://www.igsnrr.cas.cn/" target="_blank">IGSNRR</a>, <a href="http://www.ucas.ac.cn/" target="_blank">CAS</a>.</small></p>
-							<hr>
-							<span class="label label-success">水文</span>
-							<span class="label label-important">流域过程模拟</span>
-							<span class="label label-info">Python</span>
-							<span class="label label-warning">寒区冻土</span>
-							<span class="label label-inverse">GIS</span>
-							<span class="label label-success">遗传算法</span>
-							<span class="label label-inverse">情景分析</span>
-							<span class="label label-warning">全球变化</span>
-							<span class="label label-important">冰冻圈</span>
-							<span class="label label-info">遥感</span>
-							<hr>
-							<p>现从事生态-水文过程模拟、冻土水文、冰冻圈遥感和全球气候变化等研究工作</p>
-							<p>A doctoral candidate at Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences. Research interests are in the area of simulation of eco-hydrological process, hydrology in seasonal frozen regions and global climate change.</p>
-							<hr>
-							<p class="homepage-links">
-								<a href="https://www.researchgate.net/profile/Huiran_Gao" target="_blank" class="rg">Resaerch Gate</a>
-								<a href="http://www.escience.cn/people/gaohuiran/index.html" target="_blank" class="kyzx">科研在线</a>
-								<a href="https://scholar.google.com" target="_blank" class="gs">Google Scholar</a>
-								<a href="http://orcid.org/0000-0001-6437-7868" target="_blank" class="orcid">ORCID</a>
-							</p>
-							
-						</div>
-					</div>
-					<div class="span5">
-						<img src="img/images/ghr.jpg" class="img-rounded" style="width:88%;margin:5% 10%">
-						<p class="geyan">积极乐观 沉静洒脱 踏实认真 喜欢思考 言而有信 说到做到</p>
-						<br><br>
-						<p class="text-info" style="padding:0 50px">我们的欲望，把彩虹的颜色，借给那不过是云雾的人生！<small class="pull-right">---泰戈尔《飞鸟集》</small></p>
-					</div>
-					<div class="row-fluid">
-						<div class="span12">
-							<div class="moreinfo">
+				<div id="logindiv" class="logindiv">
+					浏览本页请输入口令:
+					<input type="text" id="keyword" placeholder="博主真实姓名">
+					<a href="###" id="submit" class="submit">提交</a>
+					<p>温馨提示：长恨春归无觅处，不知转入此中来</p>
+				</div>
+				<div id="errordiv" class="errordiv" style="display:none">123</div>
+				<div id="maininfo" style="display:none">
+					<div class="row-fluid" style="padding:0 2% 0 2%;background-color:#fafafa">
+						<div class="span7">
+							<div class="info">
+								<h4><b>高会然 (Huiran Gao)</b><small>&nbsp;&nbsp;小浪</small></h4>
+								<p><small>Ph.D. candidate in <a href="http://www.radi.ac.cn/" target="_blank">RADI</a>, <a href="http://www.ucas.ac.cn/" target="_blank">CAS</a>.</small></p>
+								<p><small>Master in <a href="http://www.lreis.ac.cn/sc/index.aspx" target="_blank">Lreis</a>, <a href="http://www.igsnrr.cas.cn/" target="_blank">IGSNRR</a>, <a href="http://www.ucas.ac.cn/" target="_blank">CAS</a>.</small></p>
 								<hr>
-								<p class="infotitle"> -教育经历-</p>
-								<p class="infocontent"><i class="icon-book"></i> 2017.9 - 至今  博士在读，地图学与地理信息系统，中国科学院 | 遥感与数字地球研究所</p>
-								<p class="infocontent"><i class="icon-book"></i> 2014.9 - 2017.7  理学硕士，农业信息化，中国科学院 | 地理科学与资源研究所</p>
-								<p class="infocontent"><i class="icon-book"></i> 2010.9 - 2014.7  理学学士，地理信息系统，山东农业大学 | 资源与环境学院</p>
+								<span class="label label-success">水文</span>
+								<span class="label label-important">流域过程模拟</span>
+								<span class="label label-info">Python</span>
+								<span class="label label-warning">寒区冻土</span>
+								<span class="label label-inverse">GIS</span>
+								<span class="label label-success">遗传算法</span>
+								<span class="label label-inverse">情景分析</span>
+								<span class="label label-warning">全球变化</span>
+								<span class="label label-important">冰冻圈</span>
+								<span class="label label-info">遥感</span>
 								<hr>
-								<p class="infotitle"> -参研项目-</p>
-								<p class="infocontent"><i class="icon-flag"></i> 国家重点研发计划全球变化及应对专项“中高纬度湿地系统对气候变化的响应研究”下设任务（课题二）“中高纬度湿地水文过程对气候变化的响应”（2016YFA0602302），2016.07-2021.06</p>
-								<p class="infocontent"><i class="icon-flag"></i> 水体污染控制与治理科技重大专项“南淝河流域农村有机废弃物及农田养分流失污染控制技术研究与示范”下设任务（课题四）“流域有机废弃物污染综合治理情景分析”（2013ZX07103006），2014.01-2017.12</p>
-								<p class="infocontent"><i class="icon-flag"></i> 国家科技支撑计划项目“南方红壤水土流失治理技术研究与示范”下设任务（课题三）“南方红壤区水土流失治理综合模拟与情景分析研究”（2013BAC08B03），2013.01-2015.12</p>
+								<p>现从事生态-水文过程模拟、冻土水文、冰冻圈遥感和全球气候变化等研究工作</p>
+								<p>A doctoral candidate at Institute of Remote Sensing and Digital Earth, Chinese Academy of Sciences. Research interests are in the area of simulation of eco-hydrological process, hydrology in seasonal frozen regions and global climate change.</p>
 								<hr>
-								<p class="infotitle"> -学术论文-</p>
-								<p class="infocontent"><i class="icon-file-alt"></i> <b>Gao H R</b>, Zhang W C, Chen H. An Improved Algorithm for Discriminating Soil Freezing and Thawing Using AMSR-E and AMSR2 Soil Moisture Products[J]. Remote Sensing, 2018, 10(11):1697. <a href="https://www.mdpi.com/2072-4292/10/11/1697" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
-								<p class="infocontent"><i class="icon-file-alt"></i> Chen H, Zhang W C, <b>Gao H R</b>, Nie N. Climate Change and Anthropogenic Impacts on Wetland and Agriculture in the Songnen and Sanjiang Plain, Northeast China[J]. Remote Sensing, 2018, 10(3):356. <a href="https://www.mdpi.com/2072-4292/10/3/356" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
-								<p class="infocontent"><i class="icon-file-alt"></i> Qin C Z, <b>Gao H R</b>, Zhu L J, Zhu A-X, Liu J Z, Wu H. Spatial optimization of watershed best management practices based on slope position units[J]. Journal of Soil and Water Conservation, 2018. <a href="https://www.researchgate.net/publication/323745666_Spatial_optimization_of_watershed_best_management_practices_based_on_slope_position_units" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
-								<p class="infocontent"><i class="icon-file-alt"></i> <b>高会然</b>,秦承志,朱良君,朱阿兴,刘军志,吴辉. 以坡位为空间配置单元的流域管理措施情景优化方法[J]. 地球信息科学学报,2018,20(06):781-790. <a href="http://www.cnki.com.cn/Article/CJFDTotal-DQXX201806010.htm" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
-								<p class="infocontent"><i class="icon-file-alt"></i> <b>高会然</b>,沈琳,刘军志,朱阿兴,秦承志,朱良君. 中国南方丘陵区非点源污染过程模拟研究进展[J]. 地球信息科学学报,2017,19(08):1080-1088. <a href="http://www.dqxxkx.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=39460" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
-								<hr>
-								<p class="infotitle"> -软著专利-</p>
-								<p class="infocontent"><i class="icon-sitemap"></i> B/S架构的红壤区小流域水土治理措施情景分析系统 [V1.0], [2016R11L041571]</p>
-								<hr>
-								<p class="infotitle"> -社会职务-</p>
-								<p class="infocontent"><i class="icon-road"></i></p>
-								<hr>
-								<p class="infotitle"> -联系方式-</p>
-								<p class="infocontent"><i class="icon-envelope"></i> gaohr.14s@igsnrr.ac.cn</p>
-								<p class="infocontent"><i class="icon-envelope"></i> gaohrgao@163.com</p>
-								<!--
-								<p class="infocontent">QQ 1255410957</p>
-								<p class="infocontent">扫我试试~<img src="img/images/weixin.png" width="20%"></p>
-								-->
+								<p class="homepage-links">
+									<a href="https://www.researchgate.net/profile/Huiran_Gao" target="_blank" class="rg">Resaerch Gate</a>
+									<a href="http://www.escience.cn/people/gaohuiran/index.html" target="_blank" class="kyzx">科研在线</a>
+									<a href="https://scholar.google.com" target="_blank" class="gs">Google Scholar</a>
+									<a href="http://orcid.org/0000-0001-6437-7868" target="_blank" class="orcid">ORCID</a>
+								</p>
+								
 							</div>
-							
+						</div>
+						<div class="span5">
+							<img src="img/images/ghr.jpg" class="img-rounded" style="width:88%;margin:5% 10%">
+							<p class="geyan">积极乐观 沉静洒脱 踏实认真 喜欢思考 言而有信 说到做到</p>
+							<br><br>
+							<p class="text-info" style="padding:0 50px">我们的欲望，把彩虹的颜色，借给那不过是云雾的人生！<small class="pull-right">---泰戈尔《飞鸟集》</small></p>
+						</div>
+						<div class="row-fluid">
+							<div class="span12">
+								<div class="moreinfo">
+									<hr>
+									<p class="infotitle"> -教育经历-</p>
+									<p class="infocontent"><i class="icon-book"></i> 2017.9 - 至今  博士在读，地图学与地理信息系统，中国科学院 | 遥感与数字地球研究所</p>
+									<p class="infocontent"><i class="icon-book"></i> 2014.9 - 2017.7  理学硕士，农业信息化，中国科学院 | 地理科学与资源研究所</p>
+									<p class="infocontent"><i class="icon-book"></i> 2010.9 - 2014.7  理学学士，地理信息系统，山东农业大学 | 资源与环境学院</p>
+									<hr>
+									<p class="infotitle"> -参研项目-</p>
+									<p class="infocontent"><i class="icon-flag"></i> 国家重点研发计划全球变化及应对专项“中高纬度湿地系统对气候变化的响应研究”下设任务（课题二）“中高纬度湿地水文过程对气候变化的响应”（2016YFA0602302），2016.07-2021.06</p>
+									<p class="infocontent"><i class="icon-flag"></i> 水体污染控制与治理科技重大专项“南淝河流域农村有机废弃物及农田养分流失污染控制技术研究与示范”下设任务（课题四）“流域有机废弃物污染综合治理情景分析”（2013ZX07103006），2014.01-2017.12</p>
+									<p class="infocontent"><i class="icon-flag"></i> 国家科技支撑计划项目“南方红壤水土流失治理技术研究与示范”下设任务（课题三）“南方红壤区水土流失治理综合模拟与情景分析研究”（2013BAC08B03），2013.01-2015.12</p>
+									<hr>
+									<p class="infotitle"> -学术论文-</p>
+									<p class="infocontent"><i class="icon-file-alt"></i> <b>Gao H R</b>, Zhang W C, Chen H. An Improved Algorithm for Discriminating Soil Freezing and Thawing Using AMSR-E and AMSR2 Soil Moisture Products[J]. Remote Sensing, 2018, 10(11):1697. <a href="https://www.mdpi.com/2072-4292/10/11/1697" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
+									<p class="infocontent"><i class="icon-file-alt"></i> Chen H, Zhang W C, <b>Gao H R</b>, Nie N. Climate Change and Anthropogenic Impacts on Wetland and Agriculture in the Songnen and Sanjiang Plain, Northeast China[J]. Remote Sensing, 2018, 10(3):356. <a href="https://www.mdpi.com/2072-4292/10/3/356" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
+									<p class="infocontent"><i class="icon-file-alt"></i> Qin C Z, <b>Gao H R</b>, Zhu L J, Zhu A-X, Liu J Z, Wu H. Spatial optimization of watershed best management practices based on slope position units[J]. Journal of Soil and Water Conservation, 2018. <a href="https://www.researchgate.net/publication/323745666_Spatial_optimization_of_watershed_best_management_practices_based_on_slope_position_units" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
+									<p class="infocontent"><i class="icon-file-alt"></i> <b>高会然</b>,秦承志,朱良君,朱阿兴,刘军志,吴辉. 以坡位为空间配置单元的流域管理措施情景优化方法[J]. 地球信息科学学报,2018,20(06):781-790. <a href="http://www.cnki.com.cn/Article/CJFDTotal-DQXX201806010.htm" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
+									<p class="infocontent"><i class="icon-file-alt"></i> <b>高会然</b>,沈琳,刘军志,朱阿兴,秦承志,朱良君. 中国南方丘陵区非点源污染过程模拟研究进展[J]. 地球信息科学学报,2017,19(08):1080-1088. <a href="http://www.dqxxkx.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=39460" target="_blank" title="Get full text"><i class="icon-external-link"></i>&nbsp;Full-text</a></p>
+									<hr>
+									<p class="infotitle"> -软著专利-</p>
+									<p class="infocontent"><i class="icon-sitemap"></i> B/S架构的红壤区小流域水土治理措施情景分析系统 [V1.0], [2016R11L041571]</p>
+									<hr>
+									<p class="infotitle"> -社会职务-</p>
+									<p class="infocontent"><i class="icon-road"></i></p>
+									<hr>
+									<p class="infotitle"> -联系方式-</p>
+									<p class="infocontent"><i class="icon-envelope"></i> gaohr.14s@igsnrr.ac.cn</p>
+									<p class="infocontent"><i class="icon-envelope"></i> gaohrgao@163.com</p>
+									<!--
+									<p class="infocontent">QQ 1255410957</p>
+									<p class="infocontent">扫我试试~<img src="img/images/weixin.png" width="20%"></p>
+									-->
+								</div>
+								
+							</div>
 						</div>
 					</div>
 				</div>
@@ -196,6 +211,21 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/common.js"></script>
-</script>
+	<script>
+		$("#submit").click(function() {
+		var key = $("#keyword").val();
+
+		if(key == "高会然") {
+			$("#maininfo").css('display', 'block');
+			$("#errordiv").css('display', 'none');
+			$("#logindiv").css('display', 'none');
+			
+		} else {
+			$("#errordiv").html("抱歉，口令“" + key + "”错误，无法浏览！");
+			$("#errordiv").css('display', 'block');
+		}
+
+	})
+	</script>
 </body>
 </html>
