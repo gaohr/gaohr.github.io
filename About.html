@@ -19,7 +19,7 @@
 		body {font-family:'Times New Roman' !important}
 		body p {font-family:'Times New Roman' !important}
 		.logindiv {padding:0 2% 0 2%;background-color:#fafafa;color:#555;font-size:24px;text-align:center;padding:20px;margin:50px;margin-left:20%;margin-right:20%;background:rgba(0,0,0,0.1);border-radius:10px}
-		.logindiv p {margin-top:10px;color:#a44;font-size:16px;}
+		.logindiv p {margin-top:10px;color:#a44;font-size:14px;text-align:left;margin-left:16%}
 		.submit {background:rgba(255,255,255,0.5);padding:5px;color:#151;border-radius:10px;transition:0.5s}
 		.submit:hover {background:rgba(0,0,0,0.5);color:#fff;transition:0.5s}
 		.submit:active {background:rgba(0,0,0,0.8);color:#ddd;}
@@ -100,7 +100,9 @@
 					浏览本页请输入口令:
 					<input type="text" id="keyword" placeholder="博主真实姓名">
 					<a href="###" id="submit" class="submit">提交</a>
-					<p>温馨提示：长恨春归无觅处，不知转入此中来</p>
+					<p>温馨提示1：白居易：长恨春归无觅处，不知转入此中来</p>
+					<p>温馨提示2：马克思：透过现象看本质</p>
+					<p>温馨提示3：让你害怕的不是未知的未来，而是不断重复着过去的错误</p>
 				</div>
 				<div id="errordiv" class="errordiv" style="display:none">123</div>
 				<div id="maininfo" style="display:none">
@@ -213,19 +215,19 @@
 	<script src="js/common.js"></script>
 	<script>
 		$("#submit").click(function() {
-		var key = $("#keyword").val();
-
-		if(key == "高会然") {
-			$("#maininfo").css('display', 'block');
-			$("#errordiv").css('display', 'none');
-			$("#logindiv").css('display', 'none');
-			
-		} else {
-			$("#errordiv").html("抱歉，口令“" + key + "”错误，无法浏览！");
-			$("#errordiv").css('display', 'block');
-		}
-
-	})
+			var key = $("#keyword").val();
+			// 转入此中来
+			// 这里就是本质
+			// 《Source code》
+			if(key == "高会然") {
+				$("#maininfo").css('display', 'block');
+				$("#errordiv").css('display', 'none');
+				$("#logindiv").css('display', 'none');
+			} else {
+				$("#errordiv").html("抱歉，口令“" + key + "”错误，无法浏览！");
+				$("#errordiv").css('display', 'block');
+			}
+		})
 	</script>
 </body>
 </html>
