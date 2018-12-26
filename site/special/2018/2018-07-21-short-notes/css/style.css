@@ -8,8 +8,8 @@ ul,ol,li,dl,dt,dd{text-decoration: none;list-style: none}
 .poster-item .title{font-size:24px;font-weight:600;margin-left:10px}
 .poster-item .label{color:#eee;font-size:9px;padding:0 2px;background:#555;border-radius:50%;float:right}
 .poster-item .info{color:#555;font-size:12px;margin:10px;text-align:center}
-.poster-item .info .info-author{margin-right:10px}
-.poster-item .info .info-loc{margin:0 10px}
+.poster-item .info .info-author{margin-right:2px}
+.poster-item .info .info-loc{margin:0 2px}
 .poster-item .info .info-date{font-size:0.8em}
 .poster-item img {max-height:120px;margin-bottom:10px}
 .poster-item .content {height:320px;color:#555;background:#fff;text-align:center;overflow-y:scroll}
