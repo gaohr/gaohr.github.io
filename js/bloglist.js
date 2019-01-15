@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019011501", "title":"利用ArcGIS制作水墨山水画风格地图", "type":"专业技术", "author":"小浪", "content":"中国传统的水墨山水画通常以自然山川为主要对象，通过特定的观察角度，结合灵活的着色手法，描绘出拥有深厚感和层次感的壮阔山水景观。在GIS工具中，利用合适的高程数据，通过一定的渲染方式和展现形式，就可以在某种程度上呈现中国传统水墨山水画中的笔墨感和立体感。", "img":"site/blogs/2019/images/Inkmap.jpg", "date":"2019-01-15", "href":"http://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html", "tags":["制图", "ArcGIS"]},
+
 {"blogid":"2018090301", "title":"栅格图像补偿简单处理方法", "type":"专业技术", "author":"小浪", "content":"栅格图像补偿处理的简单方法，采用8邻域（或24邻域）均值计算方法对待计算中心空值栅格进行数据补偿，利用Python程序实现。", "img":"site/blogs/2018/images/ImgComps.jpg", "date":"2018-09-03", "href":"http://gaohr.win/site/blogs/2018/2018-09-03-img-comps.html", "tags":["栅格", "Python"]},
 
 {"blogid":"2018070701", "title":"基于OpenLayers的WebGIS实例：添加标记要素", "type":"专业技术", "author":"小浪", "content":"OpenLayers——为WebGIS开发提供的JavaScript类库包，最好的开源地图引擎。本实例基于OpenLayers开发WebGIS，解决作图需求。", "img":"site/blogs/2018/images/OL.jpg", "date":"2018-07-07", "href":"http://gaohr.win/site/blogs/2018/2018-07-07-webgis-based-on-openlayers.html", "tags":["WebGIS", "OpenLayers"]},

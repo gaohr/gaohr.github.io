@@ -53,16 +53,24 @@
 				"<hr>" +
 				"<div id=\"cltmap\" class=\"cltmap\"></div>" +
 			"</div>");
-	//for(i = 0; i < blogs.length; i++) {
-	for(i = 0; i < 3; i++) {
+			
+	// 在正文中添加作者等信息
+	for(i = 0; i < bloglist.length; i++) {
+	//for(i = 0; i < 3; i++) {
 		var tags = readtags(i);
-		$("#blogs").append(addblog(bloglist,i,tags));
+		//$("#blogs").append(addblog(bloglist,i,tags));
 		var blogid = $("#blogid").val();
 		if(bloglist[i].blogid == blogid) {
 			$("#blogtopinfo").append("[" + bloglist[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + bloglist[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags + "<br><hr>");
 		}
-		
-	}	
+	}
+	
+	// 在侧栏中添加最新博客信息
+	for(i = 0; i < 3; i++) {
+		var tags = readtags(i);
+		$("#blogs").append(addblog(bloglist,i,tags));
+	}
+	
 	//add Blog
 	function addblog(bloglist,n,tags) {
 		var blogcon = "<div class='blog-article'>" +
