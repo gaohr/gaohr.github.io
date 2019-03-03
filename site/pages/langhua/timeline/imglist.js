@@ -1,10 +1,47 @@
 ﻿
 var imglist = [
+	//2019
+	{
+		title:'division', data:'2019',
+	},
+	
+	{
+		title:'浪花', data:'2019-01-20', location:'• 蓝色港湾 北京', type:'image', 
+		src:[{url:'201901201.jpg'}, {url:'201901202.jpg'}, {url:'201901203.jpg'}, {url:'201901204.jpg'}],
+		textcon:'蓝色港湾灯光节',
+	},
+	
 	//2018
 	{
 		title:'division', data:'2018',
 	},
 	
+	{
+		title:'浪花', data:'2018-12-24', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201812241.jpg'}],
+		textcon:'有没有人告诉你，鲜花与你很相配',
+	},
+	{
+		title:'浪花', data:'2018-12-08', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201812081.jpg'}, {url:'201812082.jpg'}],
+		textcon:'自拍一下',
+	},
+	
+	{
+		title:'浪花', data:'2018-12-01', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201812011.jpg'}, {url:'201812012.jpg'}],
+		textcon:'收获迷妹一枚',
+	},
+	{
+		title:'浪花', data:'2018-11-18', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201811181.jpg'}, {url:'201811182.jpg'}],
+		textcon:'考试周……',
+	},
+	{
+		title:'浪花', data:'2018-11-11', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201811111.jpg'}, {url:'201811112.jpg'}, {url:'201811113.jpg'}, {url:'201811114.jpg'}],
+		textcon:'小花与小花，哈哈哈哈哈',
+	},
 	{
 		title:'浪花', data:'2018-10-13', location:'• 中国人民大学 北京', type:'image', 
 		src:[{url:'201810131.jpg'}],
