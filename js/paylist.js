@@ -1,5 +1,6 @@
 var paylist = [
 
+{"name":"***毛", "amount":"5.00", "date":"2019-04-18", "msg":"加油！！！"},
 {"name":"***浩", "amount":"0.10", "date":"2019-04-13", "msg":"鼓励一下！"},
 {"name":"v***o", "amount":"1.00", "date":"2019-02-16", "msg":"Good!"},
 {"name":"***蓝", "amount":"0.10", "date":"2018-12-05", "msg":"Good!"},
