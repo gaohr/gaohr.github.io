@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019042102", "title":"RGB颜色选择器", "type":"专业技术", "author":"小浪", "content":"CSS RGB颜色选择器，以及常用颜色收藏，记录下来，省的以后半天找不到......", "img":"site/blogs/2019/images/ColorPicker.jpg", "date":"2019-04-21", "href":"http://gaohr.win/site/blogs/2019/2019-04-21-rgb-color-picker.html", "tags":["HTML", "CSS", "Web开发"]},
+
 {"blogid":"2019042101", "title":"栅格数据行列匹配处理", "type":"专业技术", "author":"小浪", "content":"在处理栅格数据时，尽管用同一个矢量文件裁剪栅格数据，不同数据来源的栅格行列数也会出现不一致的情况。如果忽略或解决不好，会导致后续数据处理出现意想不到的误差或错误，尤其是利用编程实现数据处理时。因此，应当首先对栅格行列不一致的数据进行匹配处理，以降低出现BUG的风险。", "img":"site/blogs/2019/images/MatchRaster.jpg", "date":"2019-04-21", "href":"http://gaohr.win/site/blogs/2019/2019-04-21-row-column-matching-for-raster-data.html", "tags":["栅格", "Python", "数据处理"]},
 
 {"blogid":"2019011501", "title":"利用ArcGIS制作水墨山水画风格地图", "type":"专业技术", "author":"小浪", "content":"中国传统的水墨山水画通常以自然山川为主要对象，通过特定的观察角度，结合灵活的着色手法，描绘出拥有深厚感和层次感的壮阔山水景观。在GIS工具中，利用合适的高程数据，通过一定的渲染方式和展现形式，就可以在某种程度上呈现中国传统水墨山水画中的笔墨感和立体感。", "img":"site/blogs/2019/images/Inkmap.jpg", "date":"2019-01-15", "href":"http://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html", "tags":["制图", "ArcGIS"]},
