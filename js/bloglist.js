@@ -22,6 +22,8 @@ var bloglist = [
 
 {"blogid":"2016052701", "title":"ENVI中波段运算（BandMath）工具常用函数及运算符", "type":"专业技术", "author":"小浪", "content":"ENVI Band Math是一个灵活的图像波段处理工具，由于每个用户都有独特的需求，利用此工具用户可以自己定义处理算法，应用到在ENVI打开的波段或整个图像中，用户可以根据需要自定义简单或复杂的处理程序。", "img":"site/blogs/2016/images/BandMath.jpg", "date":"2016-05-27", "href":"http://gaohr.win/site/blogs/2016/2016-05-27-envi-band-math.html", "tags":["ENVI", "遥感", "波段运算"]},
 
+{"blogid":"2016050801", "title":"动物界的母爱", "type":"心情寄语", "author":"（网转）", "content":"其实不止人类，动物间的母子情谊也是非常温馨感人的。所谓“舔犊情深”首先不就是形容动物的爱子之情吗？在母亲节到来之际，就让我们来一睹动物界的“母慈子孝”吧。", "img":"site/blogs/2016/images/Mothersday.jpg", "date":"2016-05-08", "href":"http://gaohr.win/site/blogs/2016/2016-05-08-maternal-love-in-animal-kingdom", "tags":["感怀", "亲情"]},
+
 {"blogid":"2016042401", "title":"MongoDB启动成功但连接不上的问题", "type":"专业技术", "author":"小浪", "content":"MongoDB配置完成后，并且正常启动连接了，但有时候突然就连接不上了，重启也无效，尽管重启成功！......捉急", "img":"site/blogs/2016/images/MongoDB.jpg", "date":"2016-04-24", "href":"http://gaohr.win/site/blogs/2016/2016-04-24-error-in-mongodb-config.html", "tags":["MongoDB", "数据库"]},
 
 {"blogid":"2016042301", "title":"Landsat系列遥感影像数据介绍及常用下载方法总结", "type":"专业技术", "author":"小浪", "content":"美国NASA的陆地卫星(Landsat)计划，从1972年7月23日以来， 已发射8颗（第6颗发射失败）。目前Landsat1—4均相继失效，Landsat 5仍在超期运行（从1984年3月1日发射至今）。 Landsat 7 于1999年4月15日发射升空。Landsat 8 于2013年2月11日发射升空，经过100天测试运行后开始获取影像。Landsat遥感卫星数据是目前遥感领域非常重要的遥感数据来源，其数据连续性好，分辨率适中，数据质量高，时间序列长，在国内外许多研究领域得到了广泛应用。", "img":"site/blogs/2016/images/Landsat.jpg", "date":"2016-04-23", "href":"http://gaohr.win/site/blogs/2016/2016-04-23-landsat-data-download.html", "tags":["Landsat", "遥感", "数据"]},
