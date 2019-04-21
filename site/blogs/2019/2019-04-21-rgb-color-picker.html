@@ -47,8 +47,9 @@
 				<div class="blogcontent alist">
 					<h2>RGB颜色选择器</h2>
 					<h2><small>RGB color picker for CSS</small></h2>
-					<!--
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					
+					<!--
 					<div id="picker"></div>
 					-->
 					<div class="container-fluid">
@@ -2395,6 +2396,7 @@
 	<script src="./2019-04-21-rgb-color-picker/tinycolor.min.js"></script>
 	<script src="./2019-04-21-rgb-color-picker/index.js"></script>
 	<script>
+		$(document).ready(function() {
 			$(".toolTable tr:gt(0)").each(function (){
 				var td = $(this).find("td");
 				td.eq(0).css("background-color",td.eq(3).html());
@@ -2402,6 +2404,7 @@
 				
 			});
 			$('#picker').farbtastic('#color');
+		});
 		
 		$('#picker').colpick({
 			flat:true,
