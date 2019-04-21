@@ -31,9 +31,9 @@ Blog Page
 
 .blogcontent {color:#111;background:#fafafa;padding:20px;min-height:500px}
 .blogcontent h2 {text-align:center}
-.blogcontent p {font-size:14px;line-height:26px;text-indent:2em;font-family:'Microsoft YaHei'}
+.blogcontent p {font-size:16px;line-height:26px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent p > i {text-indent:0em;}
-.blogcontent li {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
+.blogcontent li {font-size:16px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .blogcontent .imginblog {width:auto;text-align:center}
 .blogcontent .imginblog img {max-width:600px;}
 .blogcontent .codeblock {background-color:#fff; border:1px solid #ccc; border-radius:5px}
@@ -75,6 +75,6 @@ Blog Page
 .topiccontent {width:100%;color:#222;background:#fff;padding:10px;min-height:600px}
 .topiccontent h2 {text-align:center}
 .topiccontent .date {font-size:10px;color:#555;text-align:center !important}
-.topiccontent p {font-size:14px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
+.topiccontent p {font-size:16px;line-height:24px;text-indent:2em;font-family:'Microsoft YaHei'}
 .topiccontent .imgintopic {width:auto;text-align:center}
 .topiccontent .pinfo {color:#777;text-align:center}

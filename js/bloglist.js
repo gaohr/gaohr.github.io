@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019042101", "title":"栅格数据行列匹配处理", "type":"专业技术", "author":"小浪", "content":"在处理栅格数据时，尽管用同一个矢量文件裁剪栅格数据，不同数据来源的栅格行列数也会出现不一致的情况。如果忽略或解决不好，会导致后续数据处理出现意想不到的误差或错误，尤其是利用编程实现数据处理时。因此，应当首先对栅格行列不一致的数据进行匹配处理，以降低出现BUG的风险。", "img":"site/blogs/2019/images/MatchRaster.jpg", "date":"2019-04-21", "href":"http://gaohr.win/site/blogs/2019/2019-04-21-row-column-matching-for-raster-data.html", "tags":["栅格", "Python", "数据处理"]},
+
 {"blogid":"2019011501", "title":"利用ArcGIS制作水墨山水画风格地图", "type":"专业技术", "author":"小浪", "content":"中国传统的水墨山水画通常以自然山川为主要对象，通过特定的观察角度，结合灵活的着色手法，描绘出拥有深厚感和层次感的壮阔山水景观。在GIS工具中，利用合适的高程数据，通过一定的渲染方式和展现形式，就可以在某种程度上呈现中国传统水墨山水画中的笔墨感和立体感。", "img":"site/blogs/2019/images/Inkmap.jpg", "date":"2019-01-15", "href":"http://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html", "tags":["制图", "ArcGIS"]},
 
 {"blogid":"2018090301", "title":"栅格图像补偿简单处理方法", "type":"专业技术", "author":"小浪", "content":"栅格图像补偿处理的简单方法，采用8邻域（或24邻域）均值计算方法对待计算中心空值栅格进行数据补偿，利用Python程序实现。", "img":"site/blogs/2018/images/ImgComps.jpg", "date":"2018-09-03", "href":"http://gaohr.win/site/blogs/2018/2018-09-03-img-comps.html", "tags":["栅格", "Python"]},
@@ -26,6 +28,8 @@ var bloglist = [
 
 {"blogid":"2016042001", "title":"VAssistX的安装及在VS 2010中的使用", "type":"专业技术", "author":"小浪", "content":"有时候，我们要编码实现某个功能，或许如行云流水一气呵成，但就是懒得给这代码添注释。等需要改动的时候，那种费力耗时的再去重新理解的过程就不用描述了吧。所以说，规范的代码注释对于开发者来说意义重大，这时，我们的主角+好助手——VAssistX出现了", "img":"site/blogs/2016/images/VAssistX.jpg", "date":"2016-04-20", "href":"http://gaohr.win/site/blogs/2016/2016-04-20-VAssistX.html", "tags":["VAssistX", "VS", "编程"]},
 
+{"blogid":"2016041901", "title":"老树--百年枣树", "type":"随笔小记", "author":"小浪", "content":"这棵枣树，一百三十多岁了，已伴随了六代人的成长……在我家的院子里，有一棵枣树，枝桠茂盛，罩住了半个院子。树干有一抱粗，而且有些倾斜，在其一侧，有一条很深的沟痕，不知是何时何因留下的。树皮龟裂如龙鳞一般，好像在告诉我们它经历了悠久的岁月。……", "img":"site/blogs/2016/images/oldtree.jpg", "date":"2016-04-19", "href":"http://gaohr.win/site/blogs/2016/2016-04-19-the-old-tree.html", "tags":["感怀", "心情"]},
+
 {"blogid":"2016041601", "title":"ArcGIS创建明确边界矩形矢量面", "type":"专业技术", "author":"小浪", "content":"现有研究区矢量边界图层，要求将该区域遥感影像裁剪，裁剪边界范围距离研究区上下左右范围十公里（10,000m）", "img":"site/blogs/2016/images/ArcGIS.jpg", "date":"2016-04-16", "href":"http://gaohr.win/site/blogs/2016/2016-04-16-arcgis-clip-bound.html", "tags":["ArcGIS", "矢量", "裁剪"]},
 
 {"blogid":"2016041501", "title":"使用Github和Disqus建立简单的个人博客", "type":"专业技术", "author":"小浪", "content":"Github+Disqus建立个人博客,简单实用", "img":"site/blogs/2016/images/Github.jpg", "date":"2016-04-15", "href":"#", "tags":["Github", "博客", "Disqus"]}
@@ -33,4 +37,4 @@ var bloglist = [
 ];
 
 
-// {"blogid":"2016041901", "title":"老树--百年枣树", "type":"随笔小记", "author":"小浪", "content":"这棵枣树，一百三十多岁了，已伴随了六代人的成长……在我家的院子里，有一棵枣树，枝桠茂盛，罩住了半个院子。树干有一抱粗，而且有些倾斜，在其一侧，有一条很深的沟痕，不知是何时何因留下的。树皮龟裂如龙鳞一般，好像在告诉我们它经历了悠久的岁月。……", "img":"site/blogs/2016/images/oldtree.jpg", "date":"2016-04-19", "href":"http://gaohr.win/site/blogs/2016/2016-04-19-the-old-tree.html", "tags":["老树", "感怀", "心情"]},
+// 
