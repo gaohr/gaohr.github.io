@@ -16,6 +16,7 @@ var geojson_battle = {
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "阿斯塔波攻防战", "info": "阿斯塔波攻防战（Siege of Astapor ），是发生於奴隶湾的一场战役。这场战役是渊凯奴隶主为了恢复奴隶湾旧貌，推翻丹妮莉丝·坦格利安的第一步行动。最后阿斯塔波被奴隶主联盟攻克，阿斯塔波自由民的政权倒台，渊凯消除受到南北夹攻的威胁。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 114.211392, -15.027688 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "私生子之战", "info": "私生子之战（Battle of the Bastards）， 琼恩·雪诺与拉姆斯·波顿之间的私生子宿命之战，经此一役，临冬城终于再次飘起了冰原狼的旗帜。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 37.894390, 54.845434 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "高庭之战", "info": "高庭之战（Battle of the HighGarden 狮子军大破高庭，“荆棘女王”被体面毒杀，“生生不息”Growing Strong的玫瑰家族自此覆灭。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 27.141269, 1.475834 ] } },
-{ "type": "Feature", "properties": { "Id": 0.000000, "name": "冰湖大战", "info": "冰湖大战（Battle of the IceLake）， 琼恩·雪诺率领捉鬼小队出塞抓捕尸鬼，途中不幸遭遇异鬼率领的大军，随即在冰天雪地之下展开一场艰难的求生之战。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 41.164781, 72.522693 ] } }
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "冰湖大战", "info": "冰湖大战（Battle of the IceLake）， 琼恩·雪诺率领捉鬼小队出塞抓捕尸鬼，途中不幸遭遇异鬼率领的大军，随即在冰天雪地之下展开一场艰难的求生之战。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 41.164781, 72.522693 ] } },
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "终极决战", "info": "终极决战-守卫临冬城（The Final Battle），夜王与异鬼死亡军团大举进攻临冬城，琼恩与龙母率北境战士与无垢者军团等人类大军誓死抵抗，人类与异鬼爆发史上最为声势浩大且异常惨烈的终极大战，最终人类获胜，异鬼军团覆灭。", "type": "war" }, "geometry": { "type": "Point", "coordinates": [ 36.845434, 54.209125 ] } }
 ]
 }
