@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019052701", "title":"GIS地图制图的艺术之美", "type":"专业技术", "author":"小浪", "content":"随着大数据、云平台等新技术的发展，传统地图制图学遇到很大的挑战和机遇。面对形式复杂多样、内容丰富多彩的GIS信息，如何利用GIS新兴技术，结合传统的地图学知识和理论，高效制作具有其固有价值而又给人以美感的地图，是新时代GIS地图制图的趋势。", "img":"site/blogs/2019/images/ArcGIS_Art.jpg", "date":"2019-05-27", "href":"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html", "tags":["GIS", "地图", "制图"]},
+
 {"blogid":"2019042102", "title":"RGB颜色选择器", "type":"专业技术", "author":"小浪", "content":"CSS RGB颜色选择器，以及常用颜色收藏，记录下来，省的以后半天找不到......", "img":"site/blogs/2019/images/ColorPicker.jpg", "date":"2019-04-21", "href":"http://gaohr.win/site/blogs/2019/2019-04-21-rgb-color-picker.html", "tags":["HTML", "CSS", "Web开发"]},
 
 {"blogid":"2019042101", "title":"栅格数据行列匹配处理", "type":"专业技术", "author":"小浪", "content":"在处理栅格数据时，尽管用同一个矢量文件裁剪栅格数据，不同数据来源的栅格行列数也会出现不一致的情况。如果忽略或解决不好，会导致后续数据处理出现意想不到的误差或错误，尤其是利用编程实现数据处理时。因此，应当首先对栅格行列不一致的数据进行匹配处理，以降低出现BUG的风险。", "img":"site/blogs/2019/images/MatchRaster.jpg", "date":"2019-04-21", "href":"http://gaohr.win/site/blogs/2019/2019-04-21-row-column-matching-for-raster-data.html", "tags":["栅格", "Python", "数据处理"]},

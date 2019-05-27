@@ -72,14 +72,14 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;}
 .tdcode {width:400px;height:200px;display:none;padding:10px;background:#777;border:1px soild #d85546}
 .tdcode img {width:160px;margin:10px}
-.paylist {width:400px;height:320px;overflow-y:scroll;padding:5px}
-.paylist p {width:60%;margin:2px;border-bottom:1px dashed #aaa;margin:0 auto;padding:2px}
-.paylist p > i {color:#f40;margin-right:32px}
-.paylist p .name {color:#555;margin-right:32px;font-weight:bold}
-.paylist p .money {margin:0 32px;color:#f40}
-.paylist p .money b {font-size:1.2em}
-.paylist p .date {color:#999}
-.paylist p .msg {color:#070}
+.dshlist {width:60%;margin-left:20%;height:320px;overflow-y:scroll;padding:5px}
+.dshlist p {width:90%;margin-left:5%;margin:2px;border-bottom:1px dashed #aaa;margin:0 auto;padding:2px}
+.dshlist p > i {color:#f40;margin-right:32px}
+.dshlist p .name {color:#555;margin-right:32px;font-weight:bold}
+.dshlist p .money {margin:0 32px;color:#f40}
+.dshlist p .money b {font-size:1.2em}
+.dshlist p .date {color:#999}
+.dshlist p .msg {color:#070}
 
 .warning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
 
