@@ -12,7 +12,7 @@
 				currentLink.removeClass("active");
 			}
 		});
-	}  
+	}
 	
 var imgs = eval('imglist');
 var imgid;
@@ -29,8 +29,8 @@ for(i = 0; i < imgs.length; i++) {
 					"<h2>" + imgs[i].title + "</h2>" + 
 					"<a href='###'>" + getsrcnum(i) + "</a>" +
 					"<p class='textcon' id='p_" + i + "'><span class='yinhao'>" + yinhao_left(imgs[i].type) + "</span>" + imgs[i].textcon + "<span class='yinhao'>" + yinhao_right(imgs[i].type) + "</span></p>" + 
-					"<p style='color:#555'>" + imgs[i].location + "</p>" + 
-					"<span class='cd-date'><strong>" + imgs[i].data + "</strong></span>" + 
+					"<p style='color:#bbb'>" + imgs[i].location + "</p>" + 
+					"<span class='cd-date' style='color:#bbb'><strong>" + imgs[i].data + "</strong></span>" + 
 				"</div>" + 
 			"</div>"
 		);
@@ -41,7 +41,7 @@ for(i = 0; i < imgs.length; i++) {
 function getsrcnum(n) {
 	var imgsrc = "";
 	for(k = 0; k < imgs[n].src.length; k++) {
-		imgsrc += "<img class='imglh' onclick='imgdisplay(\"http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "\", " + n + ")' src='http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "'>_"
+		imgsrc += "<img class='imglh' onclick='imgdisplay(\"http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "\", " + n + ")' src='http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "'> "
 	}
 	return imgsrc;
 }
@@ -101,10 +101,10 @@ function getColor(){
 	}
 }
 function colorful(){
-	var o = document.getElementById('cd-timeline');
-	o.style.color = getColor();
+	var obj = document.getElementById('cd-timeline');
+	obj.style.color = getColor();
 	if(i == 6 ) i = 0;
-	setTimeout('colorful()', 1000);
+	setTimeout('colorful()', 2000);
 }
 colorful();
 
@@ -121,16 +121,24 @@ function getColor_rdm(n){
 	}
 }
 
+$(".imglh").hover(function(event){
+	n = parseInt(6 * Math.random());
+	$(this).css("border", "8px solid " + getColor_rdm(n));
+},function(event){
+	$(this).css("border", "8px solid rgba(255, 255, 255, 0.9)");
+});
+
 //向后翻
 var imgnum = 0;
 $("#imgnext").click(function() {
-	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgs[imgid].src[imgnum].url + "'>");
+	imgsrc = "http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	imgnum++;
 	if(imgnum == imgs[imgid].src.length){
 		imgid++;
 		imgnum = 0
 	}
-	if(imgid == imgs.length) { imgid = 0; }
+	if(imgid == imgs.length) {imgid = 0;}
 })
 //向前翻
 $("#imgpre").click(function() {
@@ -139,7 +147,8 @@ $("#imgpre").click(function() {
 		alert("前面没有照片啦！"); 
 		imgnum = 0;
 	} else {
-		$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgs[imgid].src[0].url + "'>");
+		imgsrc = "http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+		$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	}
 })
 
@@ -160,7 +169,7 @@ $("#imgpre").click(function() {
 		}
 		photoview();
 	})
-	  $("#keyword").keyup(function(){
+	$("#keyword").keyup(function(){
         if(event.keyCode == 13){
             var key = $("#keyword").val();
 			if(key == "love") {
@@ -173,25 +182,26 @@ $("#imgpre").click(function() {
 			}
 			photoview();
 		}
-    });
-	  	//照片浮出动态效果
-		function photoview(){
-		var $timeline_block = $('.cd-timeline-block');
-		//hide timeline blocks which are outside the viewport
+	});
+	
+//照片浮出动态效果
+function photoview(){
+var $timeline_block = $('.cd-timeline-block');
+	//hide timeline blocks which are outside the viewport
+	$timeline_block.each(function(){
+		if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
+			$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+		}
+	});
+	//on scolling, show/animate timeline blocks when enter the viewport
+	$(window).on('scroll', function(){
 		$timeline_block.each(function(){
-			if($(this).offset().top > $(window).scrollTop()+$(window).height()*0.75) {
-				$(this).find('.cd-timeline-img, .cd-timeline-content').addClass('is-hidden');
+			if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
+				$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
 			}
 		});
-		//on scolling, show/animate timeline blocks when enter the viewport
-		$(window).on('scroll', function(){
-			$timeline_block.each(function(){
-				if( $(this).offset().top <= $(window).scrollTop()+$(window).height()*0.75 && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) {
-					$(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
-				}
-			});
-		});
-	}
-	  
-	  
-	  
+	});
+}
+
+
+

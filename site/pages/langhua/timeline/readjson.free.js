@@ -29,7 +29,7 @@ for(i = 0; i < imgs.length; i++) {
 					"<h2>" + imgs[i].title + "</h2>" + 
 					"<a href='###'>" + getsrcnum(i) + "</a>" +
 					"<p class='textcon' id='p_" + i + "'><span class='yinhao'>" + yinhao_left(imgs[i].type) + "</span>" + imgs[i].textcon + "<span class='yinhao'>" + yinhao_right(imgs[i].type) + "</span></p>" + 
-					"<p style='color:#555'>" + imgs[i].location + "</p>" + 
+					"<p style='color:#aaa'>" + imgs[i].location + "</p>" + 
 					"<span class='cd-date'><strong>" + imgs[i].data + "</strong></span>" + 
 				"</div>" + 
 			"</div>"
@@ -124,7 +124,8 @@ function getColor_rdm(n){
 //向后翻
 var imgnum = 0;
 $("#imgnext").click(function() {
-	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgs[imgid].src[imgnum].url + "'>");
+	imgsrc = "http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	imgnum++;
 	if(imgnum == imgs[imgid].src.length){
 		imgid++;
@@ -139,7 +140,8 @@ $("#imgpre").click(function() {
 		alert("前面没有照片啦！"); 
 		imgnum = 0;
 	} else {
-		$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgs[imgid].src[0].url + "'>");
+		imgsrc = "http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	}
 })
 

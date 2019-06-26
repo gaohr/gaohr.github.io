@@ -1,10 +1,126 @@
 ﻿
 var imglist = [
+	//2019
+	{
+		title:'division', data:'2019',
+	},
+	
+	{
+		title:'浪花', data:'2019-06-01', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201906011.jpg'}, {url:'201906012.jpg'}],
+		textcon:'儿童节，我想要飞 ︿(￣︶￣)︿',
+	},
+	{
+		title:'浪花', data:'2019-05-25', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201905251.jpg'}, {url:'201905252.jpg'}, {url:'201905253.jpg'}],
+		textcon:'校园的喷泉',
+	},
+	{
+		title:'浪花', data:'2019-05-11', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201905111.jpg'}, {url:'201905112.jpg'}, {url:'201905113.jpg'}],
+		textcon:'你今天真好看',
+	},
+	{
+		title:'小花', data:'2019-04-21', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201904211.jpg'}, {url:'201904212.jpg'}, {url:'201904213.jpg'}],
+		textcon:'看这一大片牡丹',
+	},
+	{
+		title:'小花', data:'2019-04-16', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201904161.jpg'}, {url:'201904162.jpg'}, {url:'201904164.jpg'}, {url:'201904165.jpg'}],
+		textcon:'伴着夜色赏花',
+	},
+	{
+		title:'小花', data:'2019-04-06', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201904062.jpg'}, {url:'201904063.jpg'}, {url:'201904061.jpg'}],
+		textcon:'开心到模糊^o^',
+	},
+	{
+		title:'浪花', data:'2019-03-31', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201903311.jpg'}, {url:'201903312.jpg'}],
+		textcon:'今天天气真好，梅花也含苞待放',
+	},
+	{
+		title:'浪花', data:'2019-03-30', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201903301.jpg'}, {url:'201903302.jpg'}],
+		textcon:'阳光下',
+	},
+	{
+		title:'小花', data:'2019-03-24', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201903241.jpg'}, {url:'201903242.jpg'}],
+		textcon:'粉红外套粉红花',
+	},
+	{
+		title:'浪花', data:'2019-01-20', location:'• 蓝色港湾 北京', type:'image', 
+		src:[{url:'201901201.jpg'}, {url:'201901202.jpg'}, {url:'201901203.jpg'}, {url:'201901204.jpg'}],
+		textcon:'',
+	},
+	
 	//2018
 	{
 		title:'division', data:'2018',
 	},
 	
+	{
+		title:'浪花', data:'2018-12-24', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201812241.jpg'}],
+		textcon:'有没有人告诉你，鲜花与你很相配',
+	},
+	{
+		title:'浪花', data:'2018-12-08', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201812081.jpg'}, {url:'201812082.jpg'}],
+		textcon:'自拍一下',
+	},
+	{
+		title:'浪花', data:'2018-12-01', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201812011.jpg'}, {url:'201812012.jpg'}],
+		textcon:'收获迷妹一枚',
+	},
+	{
+		title:'浪花', data:'2018-11-18', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201811181.jpg'}, {url:'201811182.jpg'}],
+		textcon:'考试周……',
+	},
+	{
+		title:'浪花', data:'2018-11-11', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201811111.jpg'}, {url:'201811112.jpg'}, {url:'201811113.jpg'}, {url:'201811114.jpg'}],
+		textcon:'小花与小花，哈哈哈哈哈',
+	},
+	{
+		title:'浪花', data:'2018-10-13', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201810131.jpg'}],
+		textcon:'有没有食欲',
+	},
+	{
+		title:'浪花', data:'2018-10-05', location:'• 中科院遥感所 北京', type:'image', 
+		src:[{url:'201810051.jpg'},{url:'201810052.jpg'}],
+		textcon:'你的绿萝。不，是你的绿萝！',
+	},
+	{
+		title:'浪花', data:'2018-09-23', location:'• 中科院遥感所 北京', type:'image', 
+		src:[{url:'201809231.jpg'}],
+		textcon:'嗯，有范儿！',
+	},
+	{
+		title:'小浪', data:'2018-09-20', location:'• 西宁、张掖', type:'image', 
+		src:[{url:'201809201.jpg'},{url:'201809202.jpg'},{url:'201809203.jpg'},{url:'201809204.jpg'}],
+		textcon:'白云远山，高原牧场；祁连雪甸，丹霞流光……不虚此行！',
+	},
+	{
+		title:'小花', data:'2018-09-09', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201809091.jpg'},{url:'201809092.jpg'},{url:'201809093.jpg'}],
+		textcon:'新的起点 2018',
+	},
+	{
+		title:'浪花', data:'2018-08-15', location:'• 家 菏泽', type:'image', 
+		src:[{url:'201808151.jpg'}],
+		textcon:'俩狗子',
+	},
+	{
+		title:'浪花', data:'2018-06-19', location:'• 首都师范大学 北京', type:'image', 
+		src:[{url:'201806191.jpg'},{url:'201806192.jpg'},{url:'201806193.jpg'},{url:'201806194.jpg'}],
+		textcon:'吃瓜！',
+	},
 	{
 		title:'浪花', data:'2018-06-18', location:'• 首都师范大学 北京', type:'image', 
 		src:[{url:'201806181.jpg'},{url:'201806182.jpg'},{url:'201806183.jpg'},{url:'201806184.jpg'},{url:'201806185.jpg'},{url:'201806186.jpg'},{url:'201806187.jpg'},{url:'201806188.jpg'}],
