@@ -27,12 +27,12 @@ var imglist = [
 	},
 	{
 		title:'小花', data:'2019-04-16', location:'• 中国人民大学 北京', type:'image', 
-		src:[{url:'201904161.jpg'}, {url:'201904162.jpg'}, {url:'201904163.jpg'}, {url:'201904164.jpg'}, {url:'201904165.jpg'}],
+		src:[{url:'201904161.jpg'}, {url:'201904162.jpg'}, {url:'201904164.jpg'}, {url:'201904165.jpg'}],
 		textcon:'伴着夜色赏花',
 	},
 	{
 		title:'小花', data:'2019-04-06', location:'• 遥感所 北京', type:'image', 
-		src:[{url:'201904061.jpg'}, {url:'201904062.jpg'}, {url:'201904063.jpg'}],
+		src:[{url:'201904062.jpg'}, {url:'201904063.jpg'}, {url:'201904061.jpg'}],
 		textcon:'开心到模糊^o^',
 	},
 	{
