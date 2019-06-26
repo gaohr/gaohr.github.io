@@ -6,9 +6,54 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2019-06-01', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201906011.jpg'}, {url:'201906012.jpg'}],
+		textcon:'儿童节，我想要飞 ︿(￣︶￣)︿',
+	},
+	{
+		title:'浪花', data:'2019-05-25', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201905251.jpg'}, {url:'201905252.jpg'}, {url:'201905253.jpg'}],
+		textcon:'校园的喷泉',
+	},
+	{
+		title:'浪花', data:'2019-05-11', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201905111.jpg'}, {url:'201905112.jpg'}, {url:'201905113.jpg'}],
+		textcon:'你今天真好看',
+	},
+	{
+		title:'小花', data:'2019-04-21', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201904211.jpg'}, {url:'201904212.jpg'}, {url:'201904213.jpg'}],
+		textcon:'看这一大片牡丹',
+	},
+	{
+		title:'小花', data:'2019-04-16', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201904161.jpg'}, {url:'201904162.jpg'}, {url:'201904163.jpg'}, {url:'201904164.jpg'}, {url:'201904165.jpg'}],
+		textcon:'伴着夜色赏花',
+	},
+	{
+		title:'小花', data:'2019-04-06', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201904061.jpg'}, {url:'201904062.jpg'}, {url:'201904063.jpg'}],
+		textcon:'开心到模糊^o^',
+	},
+	{
+		title:'浪花', data:'2019-03-31', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201903311.jpg'}, {url:'201903312.jpg'}],
+		textcon:'今天天气真好，梅花也含苞待放',
+	},
+	{
+		title:'浪花', data:'2019-03-30', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201903301.jpg'}, {url:'201903302.jpg'}],
+		textcon:'阳光下',
+	},
+	{
+		title:'小花', data:'2019-03-24', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201903241.jpg'}, {url:'201903242.jpg'}],
+		textcon:'粉红外套粉红花',
+	},
+	{
 		title:'浪花', data:'2019-01-20', location:'• 蓝色港湾 北京', type:'image', 
 		src:[{url:'201901201.jpg'}, {url:'201901202.jpg'}, {url:'201901203.jpg'}, {url:'201901204.jpg'}],
-		textcon:'蓝色港湾灯光节',
+		textcon:'',
 	},
 	
 	//2018
@@ -26,7 +71,6 @@ var imglist = [
 		src:[{url:'201812081.jpg'}, {url:'201812082.jpg'}],
 		textcon:'自拍一下',
 	},
-	
 	{
 		title:'浪花', data:'2018-12-01', location:'• 中国人民大学 北京', type:'image', 
 		src:[{url:'201812011.jpg'}, {url:'201812012.jpg'}],
