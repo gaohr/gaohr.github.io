@@ -81,7 +81,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .dshlist p .date {color:#999}
 .dshlist p .msg {color:#070}
 
-.warning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
+.mywarning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
 
 .advertisement {position:fixed;bottom:10px;right:10px;width:360px;height:120px;color:#ccc;background:rgba(25,25,25,0.9);padding:10px;box-shadow:2px 2px 5px #555;display:none}
 .advertisement .ad-title {border-bottom:1px solid #ccc;padding:5px;font-size:1.1em}

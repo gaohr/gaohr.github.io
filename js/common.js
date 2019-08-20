@@ -36,7 +36,7 @@ if(document.getElementById("shareit")) {
 	
 // Dashang
 if(document.getElementById("dashang")) {
-	$("#dashang").append(Dashang());
+	$("#dashang").html(Dashang());
 }
 
 	
@@ -107,11 +107,11 @@ function Dashang() {
 			"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
 			"</span><br>" + 
 			"<div class=\"dshlist\"></div>" +
-			"<script type=\"text/javascript\">$(\".shang_img\").hover(function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang_hover.png)\");},function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang.png)\");});$(\".shang_img\").click(function() {$(\".tdcode\").toggle(500);});for(i = 0; i < paylist.length; i++) {$(\".dshlist\").append(\"<p><i class='icon-heart'></i><span class='name'>\" + paylist[i].name + \"</span>打赏了<span class='money'>￥<b>\" + paylist[i].amount + \"</b>元</span><i class='date'>\" + paylist[i].date + \"</i><span class='msg' id='msg' + paylist[i].id data-toggle='tooltip' data-placement='top' title='\" + paylist[i].msg + \"'><i class='icon-comment'></i></span></p>\")};$('#msg' + paylist[i].id).tooltip();</script>";
+			"<script type=\"text/javascript\">$(\".shang_img\").hover(function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang_hover.png)\");},function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang.png)\");});$(\".shang_img\").click(function() {$(\".tdcode\").toggle(500);});for(i = 0; i < paylist.length; i++) {$(\".dshlist\").append(\"<p><i class='icon-heart'></i><span class='name'>\" + paylist[i].name + \"</span>打赏了<span class='money'>￥<b>\" + paylist[i].amount + \"</b>元</span><i class='date'>\" + paylist[i].date + \"</i><span class='msg' title='\" + paylist[i].msg + \"'><i class='icon-comment'></i></span></p>\")};</script>";
 }
 
 function Warning() {
-	return "<br>(原创博客，转载请注明 <a href=\"http://gaohr.win\" class=\"warning\" title=\"GaoHR blogs\"><b>http://gaohr.win</b></a>)";
+	return "<br><p class=\"g-color-red\">(原创博客，转载请注明 <a href=\"http://gaohr.win\" class=\"mywarning\" title=\"GaoHR blogs\"><b>GaoHR blogs: http://gaohr.win</b></a>)</p>";
 }
 	
 function Weather() {
