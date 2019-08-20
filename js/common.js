@@ -55,6 +55,7 @@ if(document.getElementById("weather")) {
 // others -> Advertisement
 if(document.getElementById("others")) {
 	//$("#others").append(Advertisement());
+	$("#others").append(GreatChina());
 }
 	
 	
@@ -143,6 +144,14 @@ function Advertisement() {
 			"<p class=\"ad-content\"><i class=\"icon-bullhorn\"></i> Python、Java、C、C++、C#、IDL开发，Web开发等<br><i class=\"icon-bullhorn\"></i> 本人及团队成员具有较强的编程技术，可利用闲暇之余承接计算机编程任务~<br><span class=\"pull-right\">欢迎交流 <a href=\"http://gaohr.win/About.html\"><i class=\"icon-envelope\"></i></a></span></p>" +
 		"</div>" +
 		"<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#advertisement\").show(500, callback);$(\"#ad-close\").click(function() {$(\"#advertisement\").hide(500);});function callback() {setTimeout(function() {$(\"#advertisement:visible\").removeAttr(\"style\").fadeOut();}, 10000);}</script>";
+}
+	
+function GreatChina() {
+	return "<div id=\"greatChina\" class=\"greatChina\">" +
+			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
+			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.png\"></p>" +
+		"</div>" +
+		"<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});$(\"#greatChina\").draggable();</script>";
 }
 	
 	
