@@ -90,7 +90,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .advertisement .ad-close span:before {content:"X"}
 .advertisement .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 
-.greatChina {position:fixed;bottom:10px;right:10px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;box-shadow:2px 2px 5px #555;display:none}
+.greatChina {position:fixed;bottom:10px;right:10px;width:200px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;box-shadow:2px 2px 5px #555;display:none}
 .greatChina .ad-close span:before {content:"X"}
 .greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 

@@ -147,11 +147,12 @@ function Advertisement() {
 }
 	
 function GreatChina() {
-	return "<div id=\"greatChina\" class=\"greatChina\">" +
+	return "<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
+		"<div id=\"greatChina\" class=\"greatChina\">" +
 			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.png\"></p>" +
+			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\" height=\"50%\"></p>" +
 		"</div>" +
-		"<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});$(\"#greatChina\").draggable();</script>";
+		"<script type=\"text/javascript\">$(function() {$(\"#greatChina\").draggable();});$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});</script>";
 }
 	
 	

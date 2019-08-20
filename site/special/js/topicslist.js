@@ -9,7 +9,7 @@ var topicslist = [
 {"topicid":"2016070801", "title":"视频收藏", "type":"收藏", "content":"一些小视频", "img":"2016/images/Videos.jpg", "date":"2016-07-08", "href":"2016/2016-07-08-videos.html", "comments":"0"},
 
 {"topicid":"2018010801", "title":"兔毛价格走势图", "type":"其他", "content":"兔毛价格走势一览", "img":"2018/images/Rabbit.jpg", "date":"2018-01-08", "href":"2018/2018-01-04-price-of-rabbit.html", "comments":"0"},
-];
+]
 
 // {"topicid":"2018072102", "title":"第三场浮生", "type":"情怀", "content":"第一场是白天，第二场是黑夜，第三场属于他……！", "img":"2018/images/TheThirdLife.jpg", "date":"2018-07-21", "href":"2018/2018-07-21-the-third-life.html", "comments":"0"},
 
