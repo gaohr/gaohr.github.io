@@ -148,6 +148,7 @@ function Advertisement() {
 	
 function GreatChina() {
 	return "<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
+		"<img src=\"img/Flag_CN.gif\" class=\"flagimg\">" +
 		"<div id=\"greatChina\" class=\"greatChina\">" +
 			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
 			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\"></p>" +
