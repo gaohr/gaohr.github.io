@@ -152,7 +152,7 @@ function GreatChina() {
 			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
 			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\"></p>" +
 		"</div>" +
-		"<script type=\"text/javascript\">$(function() {$(\"#greatChina\").draggable();});$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});</script>";
+		"<script type=\"text/javascript\">$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});</script>";
 }
 	
 	
