@@ -1,15 +1,14 @@
 
-* {-webkit-transition: all 0.3s ease;transition: all 0.3s ease}
-
 .video-list {width:100%;height:auto;background:#fff;padding:5px;overflow:auto;}
 .video-list p {color:#5c2;font-size:1.2em;}
 .video-list p:hover {color:#eee;}
 .video-list video {width:100%;}
 .video-list .video-div {float:left;width:22%;padding:10px;margin-left:5px}
-.video-list .video-div:hover {width:25%;z-index:99;background:rgba(0,0,0,0.9);}
+.video-list .video-div:hover {width:25%;z-index:99;background:rgba(0,0,0,0.9);-webkit-transition: all 0.3s ease;transition: all 0.3s ease}
 
 
 
-@media (max-width: 768px) {
-	.video-div {width: 80%; margin-left:10%}
+@media (max-width: 560px) {
+	.video-list .video-div {width: 80%; margin-left:10%}
+	.video-list .video-div:hover {width: 80%; margin-left:10%}
 }
