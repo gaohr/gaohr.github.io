@@ -131,7 +131,7 @@ $(document).ready(function() {
 	var topics = eval('topicslist');
 	//for(t = 0; t < topics.length; t++) {
 	for(t = 0; t < 8; t++) {
-		if(t == 3) {
+		if(t == 4) {
 			$("#topics").append("<br>");
 		}
 		$("#topics").append(
