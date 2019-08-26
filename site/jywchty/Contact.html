@@ -1,0 +1,217 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>巨野万昌兔业欢迎您</title>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="icon" href="img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact-form.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.equalheights.js"></script>
+    <script src='js/modal.js'></script>
+    <script src='js/TMForm.js'></script>
+    <!--[if lt IE 9]>
+    <div style=' clear: both; text-align:center; position: relative;'>
+        <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
+            <img src="http://storage.ie6countdown.com/assets/100/img/banners/warning_bar_0000_us.jpg" border="0"
+                 height="42" width="820"
+                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/>
+        </a>
+    </div>
+    <script src="js/html5shiv.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/ie.css">
+    <![endif]-->
+</head>
+<body>
+<div class="page">
+    <!--========================================================
+                              HEADER
+    =========================================================-->
+    <header id="header">
+        <div id="stuck_container">
+            <div class="container">
+                <div class="row">
+                    <div class="grid_12">
+                        <div class="brand put-left">
+                        <img src="img/rabbit.png" width="50" alt="Logo"/>
+                            <h1>
+                                <a href="index.html">
+                                    <img src="img/logo.png" alt="Logo"/>
+                                </a>
+                            </h1>
+                        </div>
+                        <nav class="nav put-right">
+                            <ul class="sf-menu">
+                                <li><a href="index.html">首页</a></li>
+                                <li><a href="service.html">技术与服务</a></li>
+                                <li><a href="blog.html">园区记事本</a></li>
+                                <li class="current"><a href="contacts.html">联系我们</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--========================================================
+                              CONTENT
+    =========================================================-->
+    <section id="content"><div class="ic"></div>
+        <div class="container">
+            <div class="row wrap_17">
+                <div class="grid_12">
+                    <h2 class="header_2 indent_4">园区位置</h2>
+                </div>
+            </div>
+        </div>
+        <div class="bg_1 wrap_10">
+            <div class="container">
+                <div class="row">
+                    <div class="grid_12">
+                        <!--百度地图容器-->
+                        <div class="map" id="map"></div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="grid_6">
+                        <div class="wrap_7">
+                            <h2 class="header_2 indent_5">
+                                联系方式
+                            </h2>
+                            <address>
+                                <p class="text_6">
+                                    <a href="http://www.templatemonster.com/" rel="nofollow">巨野万昌兔业网站</a> 24/7 在线 <br/>
+                                    <br/>
+									如果您希望进行任何交流、合作、咨询等，请与我们通过以下方式联系。也可以通过右侧“留言板”或“发邮件”留言，我们将及时与您沟通！
+                                    <br/>
+                                    <hr/>
+                                    <span class="text_2">***巨野万昌兔业***</span> <br/>
+                                    园区地址：山东省巨野县营里镇田庙村 <br/>
+                                    移动电话: 15964641280 <br/>
+                                    E-mail: <a href="#">mail@demolink.org</a> <br/>
+                                    QQ: 1152370282 <br/>
+									微信: gao15964641280 <br/>
+									<img src="img/wechart.jpg"  width="200" alt="微信"/>
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <div class="grid_6">
+                        <div class="wrap_7">
+                            <h2 class="header_2 indent_2">
+                                留言板</h3>
+                            </h2>
+							<div class="portlet">
+								<!-- 来必力City版安装代码 -->
+								<div id="lv-container" data-id="city" data-uid="MTAyMC8zNzkwMC8xNDQzMA==">
+									<script type="text/javascript">(function(d, s) {var j, e = d.getElementsByTagName(s)[0];if (typeof LivereTower === 'function') { return; }j = d.createElement(s);j.src = 'https://cdn-city.livere.com/js/embed.dist.js';j.async = true;e.parentNode.insertBefore(j, e);})(document, 'script');</script>
+								</div><!-- City版安装代码已完成 -->
+							</div>
+                        </div>
+						<div class="wrap_7">
+                            <h2 class="header_2 indent_2">
+                                发邮件
+                            </h2>
+                            <form id="contact-form">
+                                <div class="contact-form-loader"></div>
+                                <fieldset>
+                                    <div class="row">
+                                        <div class="grid_2">
+                                            <label class="name">
+                                                <input type="text" name="name" placeholder="Name:" value=""
+                                                       data-constraints="@Required @JustLetters"/>
+                                                <span class="empty-message">* 此项必填</span>
+                                                <span class="error-message">* 姓名不合法</span>
+                                            </label>
+                                        </div>
+                                        <div class="grid_2">
+                                            <label class="email">
+                                                <input type="text" name="email" placeholder="E-mail:" value=""
+                                                       data-constraints="@Required @Email"/>
+                                                <span class="empty-message">* 此项必填</span>
+                                                <span class="error-message">* E-mail 不合法</span>
+                                            </label>
+                                        </div>
+                                        <div class="grid_2">
+                                            <label class="phone">
+                                                <input type="text" name="phone" placeholder="Phone:" value=""
+                                                       data-constraints="@JustNumbers"/>
+                                                <span class="empty-message">* 此项必填</span>
+                                                <span class="error-message">* 不是有效的手机号</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <label class="message">
+                                        <textarea name="message" placeholder="Message:"
+                                                  data-constraints='@Required @Length(min=20,max=999999)'></textarea>
+                                        <span class="empty-message">* 此项必填</span>
+                                        <span class="error-message">* 文字太少</span>
+                                    </label>
+                                    <div class="btn-wrap">
+                                        <a class="btn_3" href="#" data-type="reset">清除</a>
+                                        <a class="btn_3" href="#" data-type="submit">发送</a>
+                                    </div>
+                                </fieldset>
+                                <div class="modal fade response-message">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                        aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title">Modal title</h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                You message has been sent! We will be in touch soon.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row wrap_9 wrap_4 wrap_10">
+                <div class="grid_12">
+                    <div class="header_1 wrap_3 color_3">
+                        Get in Touch
+                    </div>
+                    <div class="box_3">
+                        <ul class="list_1">
+                            <li><a class="fa fa-twitter" href="#"></a></li>
+                            <li><a class="fa fa-facebook" href="#"></a></li>
+                            <li><a class="fa fa-google-plus" href="#"></a></li>
+                            <li><a class="fa fa-pinterest" href="#"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<!--========================================================
+                          FOOTER
+=========================================================-->
+<footer id="footer" class="color_9">
+    <div class="container">
+        <div class="row">
+            <div class="grid_12">
+                <p class="info text_4 color_4">
+                    © <span id="copyright-year"></span> | 巨野万昌兔业 | <a href="#">Privacy Policy</a> <br/>
+					山东省菏泽市巨野县营里镇田庙村 <br/>
+					Tel: +86 15964641280
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=Mg7kpAHAHtGSLtgR2wdGWDun"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
