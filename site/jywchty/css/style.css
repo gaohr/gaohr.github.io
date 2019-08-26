@@ -256,7 +256,7 @@ img {
     padding-bottom: 0;
   }
   .sf-menu {
-    display: none;
+    /* display: none; */
   }
   .select-menu {
     margin: 30px 0 20px;
