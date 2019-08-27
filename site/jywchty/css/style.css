@@ -108,6 +108,12 @@ img {
 .color_6 a {
   color: inherit;
 }
+.color_blue {
+  color: #1199ff;
+}
+.color_blue a {
+  color: inherit;
+}
 .top-border {
 	border-top: 5px solid #555;
 	padding-top: 15px
@@ -647,8 +653,16 @@ img {
   background: rgba(0, 0, 0, 0.43);
   padding: 8px 0 14px;
 }
-.box_6 .caption .blog {
-text-indent:2em;
+.box_6 .caption .blog_content p {
+  text-indent:2em;
+  line-height:32px;
+}
+.box_6 .caption .blog_content .image {
+  text-align:center;
+}
+.box_6 .caption .blog_newest {
+  font-size:16px;
+  color: #FF4500;
 }
 .box_6 .caption .text_2 + .text_3 {
   padding-top: 24px;
