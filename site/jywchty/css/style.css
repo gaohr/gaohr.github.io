@@ -691,6 +691,26 @@ img {
 .box_7 .img-wrap {
   text-align: center;
 }
+.box_7 .img-wrap img {
+	-webkit-transition:all 0.3s ease-in;
+	-webkit-transform:scale(1);
+	-moz-transition:all 0.3s ease-in;
+	-moz-transform:scale(1);
+	-ms-transition:all 0.3s ease-in;
+	-ms-transform:scale(1);
+	transition:all 0.3s ease-in;
+	transform:scale(1);
+}
+.box_7 .img-wrap img:hover {
+	-webkit-transition:all 0.2s ease-in;
+	-webkit-transform:scale(1.1);
+	-moz-transition:all 0.2s ease-in;
+	-moz-transform:scale(1.1);
+	-ms-transition:all 0.2s ease-in;
+	-ms-transform:scale(1.1);
+	transition:all 0.2s ease-in;
+	transform:scale(1.1);
+}
 .box_7 .caption {
   padding-top: 15px;
 }
