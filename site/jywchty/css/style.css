@@ -658,7 +658,10 @@ img {
   line-height:32px;
 }
 .box_6 .caption .blog_content .image {
+  text-indent:0;
   text-align:center;
+  width:80%;
+  margin-left:10%;
 }
 .box_6 .caption .blog_newest {
   font-size:16px;
@@ -779,6 +782,7 @@ img {
 .list_2 li {
   position: relative;
   padding-left: 31px;
+  margin-bottom: 10px;
 }
 .list_2 li:before {
   content: '';

@@ -103,10 +103,10 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .geyan {background-color:#eee;border-left:5px solid #d86666;border-right:5px solid #d86666;padding:2px 5px;color:#555;margin-right:10%;text-align:center}
 .moreinfo {color:#333;font-size:1.1em}
 .moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:5px solid #d86666;padding-left:10px}
-.moreinfo .infocontent{color:#444;margin-left:5%;margin-bottom:2%;border:1px solid rgba(0,0,0,0)}
+.moreinfo .infocontent{color:#444;padding:2px;margin-left:5%;margin-bottom:2%;border:1px solid rgba(0,0,0,0)}
 .infocontent i {color:#d85546;font-size:1.2em;margin-right:1%}
-.infocontent:hover i {color:#55d846}
-.infocontent:hover {background-color: #eee;border-bottom:1px solid rgba(0,0,0,0.3)}
+.moreinfo .infocontent:hover i {color:#55d846;-webkit-transition: all 0.3s ease;transition: all 0.3s ease}
+.moreinfo .infocontent:hover {padding:2px;background-color: #666;color:#fff;-webkit-transition: all 0.3s ease;transition: all 0.3s ease}
 
 /*滚动条美化*/
 ::-webkit-scrollbar{width:10px;height:6px}
