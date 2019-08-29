@@ -58,7 +58,8 @@ if(document.getElementById("others")) {
 	$("#others").append(GreatChina());
 }
 	
-	
+// Declare
+Declare();
 
 // Functions ****************************** Functions
 
@@ -154,6 +155,46 @@ function GreatChina() {
 			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\"></p>" +
 		"</div>" +
 		"<script type=\"text/javascript\">$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});</script>";
+}
+	
+
+function Declare() {
+	Date.prototype.Format = function (fmt) {
+		var o = {
+			"M+": this.getMonth() + 1, //月份 
+			"d+": this.getDate(), //日 
+			"H+": this.getHours(), //小时 
+			"m+": this.getMinutes(), //分 
+			"s+": this.getSeconds(), //秒 
+			"q+": Math.floor((this.getMonth() + 3) / 3), //季度 
+			"S": this.getMilliseconds() //毫秒 
+		};
+		if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+		for (var k in o)
+		if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+		return fmt;
+	}
+	var time = new Date().Format("yyyy-MM-dd HH:mm:ss");
+	$("#declareDiv").html("<p class=\"title\"><i class=\"icon-bullhorn\"></i><b> 博客主题</b></p>" +
+		"<div id=\"declare\">" +
+			"<div id=\"content\">" +
+				"<div id=\"code\">" +
+					"<span class=\"comments\">/**</span>" +
+					"<br>" +
+					"<span class=\"comments space\">* Author: GaoHR</span>" +
+					"<br>" +
+					"<span class=\"comments space\">* Date: " + time + "</span>" +
+					"<br>" +
+					"<span class=\"comments space\">*/</span>" +
+					"<br>" +
+					"<span class=\"var\">var</span> 博客主题 = <span class=\"string\">'GIS、遥感学科方向,个人综合类博客'</span>" +
+					"<br>" +
+					"<span class=\"var\">var</span> 网站主旨 = <span class=\"string\">'记录生活，记录学习'</span>" +
+					"<br> " +
+				"</div>" +
+			"</div>" +
+		"</div>" +
+		"<script type=\"text/javascript\">$.fn.typewriter = function() {this.each(function() {var $ele = $(this), str = $ele.html(), progress = 0;$ele.html('');var timer = setInterval(function() {var current = str.substr(progress, 1);if (current == '<') {progress = str.indexOf('>', progress) + 1;} else {progress++;}$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));if (progress >= str.length) {clearInterval(timer);}}, 75);});return this;};$(\"#code\").typewriter();</script>");
 }
 	
 	

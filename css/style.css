@@ -60,6 +60,13 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .bg-purple {background-color:#e0e}
 .bg-gray {background-color:#888}
 
+#declare{width:90%;margin:0 auto}
+#code{width:100%;height:160px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
+#code .space{margin-left:7px}
+#code .var{color:#0000ff}
+#code .string{color:#b22222}
+#code .comments{color:#3f7f5f}
+
 .centerpage {background-color:#fdfdfd;padding:10px;height:auto}
 .copyright{text-align:center;color:#555 !important;}
 
