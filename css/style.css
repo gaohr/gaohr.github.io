@@ -67,6 +67,10 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #code .string{color:#b22222}
 #code .comments{color:#3f7f5f}
 
+#gotoTop{display:none;position:fixed;top:90%;left:75%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
+#gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
+#gotoTop i {font-size:2em;line-height:40px;}
+
 .centerpage {background-color:#fdfdfd;padding:10px;height:auto}
 .copyright{text-align:center;color:#555 !important;}
 

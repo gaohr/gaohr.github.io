@@ -60,6 +60,9 @@ if(document.getElementById("others")) {
 	
 // Declare
 Declare();
+	
+// Scroll top
+gotoTop();
 
 // Functions ****************************** Functions
 
@@ -197,6 +200,25 @@ function Declare() {
 		"<script type=\"text/javascript\">$.fn.typewriter = function() {this.each(function() {var $ele = $(this), str = $ele.html(), progress = 0;$ele.html('');var timer = setInterval(function() {var current = str.substr(progress, 1);if (current == '<') {progress = str.indexOf('>', progress) + 1;} else {progress++;}$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));if (progress >= str.length) {clearInterval(timer);}}, 75);});return this;};$(\"#code\").typewriter();</script>");
 }
 	
+function gotoTop(min_height){
+	var gotoTop_html = '<div id="gotoTop"><i class=\"icon-double-angle-up\"></i></div>';
+	$("#others").append(gotoTop_html);
+	$("#gotoTop").click(
+		function(){$('html,body').animate({scrollTop:0},600);
+	}).hover(
+		function(){$(this).addClass("hover");$("#gotoTop").html('返回<br>顶部');},
+		function(){$(this).removeClass("hover");$("#gotoTop").html('<i class=\"icon-double-angle-up\"></i>');
+	});
+	min_height ? min_height = min_height : min_height = 600;
+	$(window).scroll(function(){
+		var s = $(window).scrollTop();
+		if(s > min_height){
+			$("#gotoTop").fadeIn(100);
+		}else{
+			$("#gotoTop").fadeOut(200);
+		};
+	});
+};
 	
 	
 	

@@ -10,6 +10,10 @@
     var canvas = $(canvas).get(0),
         ctx = canvas.getContext("2d"),
         particleSystem;
+		canvasdiv = document.getElementById("canvasdiv");
+        var contentWidth = window.getComputedStyle(canvasdiv).width;
+		canvas.width = contentWidth.split("px")[0];
+        canvas.height = 600;
     var gfx = arbor.Graphics(canvas);
 
     // helpers for figuring out where to draw arrows (thanks springy.js)
