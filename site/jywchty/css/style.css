@@ -941,3 +941,58 @@ a[data-type='lightbox']:hover img {
   }
 }
 /*Core variables and mixins*/
+
+#mask_shadow {
+      display: none;
+      opacity: 0;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, .5);
+}
+#popup {
+      display: none;
+      position: absolute;
+      z-index: 2;
+      top: 150px;
+      background-color: #aaa;
+      width: 60%;
+      height: auto;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+#popup .title {
+      position: relative;
+      width: 100%;
+      height: 55px;
+      background-color: #d65;
+      cursor: move;
+}
+#popup .title p {
+      padding-left: 14px;
+      line-height: 55px;
+      color: #fff;
+}
+#popup .title span {
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      width: 30px;
+      height: 30px;
+      color: #fff;
+      opacity: .8;
+      font-size: 16px;
+      cursor: pointer;
+      text-align: center;
+      border: 1px solid #fff;
+}
+#popup .title span:hover {
+      opacity: 1;
+      background-color: #aaa;
+}
+#popup .cont { width: auto; background-color: #fff;margin:0 10px;padding:10px}
+
+.item_cont {display:none}
+
