@@ -114,6 +114,12 @@ img {
 .color_blue a {
   color: inherit;
 }
+.color_red {
+  color: #cd2626;
+}
+.color_red a {
+  color: inherit;
+}
 .top-border {
 	border-top: 5px solid #555;
 	padding-top: 15px
@@ -192,8 +198,8 @@ img {
 .sf-menu > li.sfHover > a,
 .sf-menu > li.current > a,
 .sf-menu > li > a:hover {
-  background: #edecec;
-  color: #02918d;
+  background: #cd2626;
+  color: #efefef;
   text-decoration: none;
 }
 .sf-menu > li.sfHover > a:after,
@@ -205,7 +211,7 @@ img {
   left: 0;
   width: 100%;
   height: 3px;
-  background: #02918d;
+  background: #ffbbaa;
 }
 .sf-menu > li + li {
   margin-left: 39px;
@@ -272,7 +278,7 @@ img {
     width: 100%;
     height: 40px;
     border: 1px solid #dddddd;
-    background: #edecec url(../images/select.png) 99% center no-repeat;
+    background: #edecec url(../img/select.png) 99% center no-repeat;
     color: #000000;
     border-radius: 0;
     -webkit-appearance: none;
@@ -331,6 +337,7 @@ img {
   }
 }
 .header_2 {
+  text-align: center;
   font: 600 36px/30px 'Open Sans', sans-serif;
 }
 .header_2.indent_1 {
@@ -347,6 +354,21 @@ img {
 }
 .header_2.indent_5 {
   padding-bottom: 41px;
+}
+/*============  Ionicons  =============*/
+.service-list {}
+.service-list li {margin-bottom: 20px}
+.service-list li span {
+  color:#888888;
+  display: inline-block;
+ -webkit-transition-property: -webkit-transform;
+  animation: rotate 5s linear infinite;
+}
+@-webkit-keyframes rotate{from{-webkit-transform: rotate(0deg)}
+    to{-webkit-transform: rotate(360deg)}
+}
+@keyframes rotate{from{transform: rotate(0deg)}
+    to{transform: rotate(359deg)}
 }
 /*============  Wraps  =============*/
 .wrap_1 {
