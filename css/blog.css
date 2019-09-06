@@ -13,10 +13,10 @@ Blog Page
 .blog-page .blog-tag-data li i {color: #d85546;}
 .blog-page .blog-tag-data li a {padding: 0;color: #555;margin-right: 8px;}
 .blog-page .blog-tag-data {margin-bottom: 2px;}
-.blog-page .blog-tag-data ul.blog-tags a {background:#eee;padding:1px 2px;margin:2px;display:inline-block;}
-.blog-page .blog-tag-data ul.blog-tags a:hover {background:#ddd;text-decoration: none;}
-.blog-tags a {background:#ddd;padding:1px 2px;margin:2px;display:inline-block;color:#777;border-radius:5px}
-.blog-tags a:hover {background:#fff}
+.blog-page .blog-tag-data ul.blog-tags a {background:#777;color:#fff;margin:2px;display:inline-block;}
+.blog-page .blog-tag-data ul.blog-tags a:hover {text-decoration: none;}
+.blog-tags a {background:#777;border:1px solid #777;padding:0 1px;margin:2px;display:inline-block;color:#eee;border-radius:5px}
+.blog-tags a:hover {background:#fff;border:1px solid #777;color:#777}
 .blog-tags i {color:#d85546}
 .btn-blue {background-color:#2878c8;padding:5px;border-radius:3px;color:#fff}
 .btn-blue:hover {background-color:#295c8e;color:#eee}
