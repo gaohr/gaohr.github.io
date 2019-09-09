@@ -128,6 +128,62 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 ::-webkit-scrollbar-thumb:vertical:hover,
 ::-webkit-scrollbar-thumb:vertical:active {background-color: #2e86ef}
 
+/* Emoticon */
+.emo {width:30px}
+.emo-01-01 {content:url('../img/emoticon/01/01-01.png')}
+.emo-01-02 {content:url('../img/emoticon/01/01-02.png')}
+.emo-01-03 {content:url('../img/emoticon/01/01-03.png')}
+.emo-01-04 {content:url('../img/emoticon/01/01-04.png')}
+.emo-01-05 {content:url('../img/emoticon/01/01-05.png')}
+.emo-01-06 {content:url('../img/emoticon/01/01-06.png')}
+.emo-01-07 {content:url('../img/emoticon/01/01-07.png')}
+.emo-01-08 {content:url('../img/emoticon/01/01-08.png')}
+.emo-01-09 {content:url('../img/emoticon/01/01-09.png')}
+.emo-01-10 {content:url('../img/emoticon/01/01-10.png')}
+.emo-01-11 {content:url('../img/emoticon/01/01-11.png')}
+.emo-01-12 {content:url('../img/emoticon/01/01-12.png')}
+.emo-01-13 {content:url('../img/emoticon/01/01-13.png')}
+.emo-01-14 {content:url('../img/emoticon/01/01-14.png')}
+.emo-01-15 {content:url('../img/emoticon/01/01-15.png')}
+.emo-01-16 {content:url('../img/emoticon/01/01-16.png')}
+.emo-01-17 {content:url('../img/emoticon/01/01-17.png')}
+.emo-01-18 {content:url('../img/emoticon/01/01-18.png')}
+.emo-01-19 {content:url('../img/emoticon/01/01-19.png')}
+.emo-01-20 {content:url('../img/emoticon/01/01-20.png')}
+.emo-02-01 {content:url('../img/emoticon/02/02-01.png')}
+.emo-02-02 {content:url('../img/emoticon/02/02-02.png')}
+.emo-02-03 {content:url('../img/emoticon/02/02-03.png')}
+.emo-02-04 {content:url('../img/emoticon/02/02-04.png')}
+.emo-02-05 {content:url('../img/emoticon/02/02-05.png')}
+.emo-02-06 {content:url('../img/emoticon/02/02-06.png')}
+.emo-02-07 {content:url('../img/emoticon/02/02-07.png')}
+.emo-02-08 {content:url('../img/emoticon/02/02-08.png')}
+.emo-02-09 {content:url('../img/emoticon/02/02-09.png')}
+.emo-02-10 {content:url('../img/emoticon/02/02-10.png')}
+.emo-02-11 {content:url('../img/emoticon/02/02-11.png')}
+.emo-02-12 {content:url('../img/emoticon/02/02-12.png')}
+.emo-02-13 {content:url('../img/emoticon/02/02-13.png')}
+.emo-02-14 {content:url('../img/emoticon/02/02-14.png')}
+.emo-02-15 {content:url('../img/emoticon/02/02-15.png')}
+.emo-02-16 {content:url('../img/emoticon/02/02-16.png')}
+.emo-03-01 {content:url('../img/emoticon/03/03-01.png')}
+.emo-03-02 {content:url('../img/emoticon/03/03-02.png')}
+.emo-03-03 {content:url('../img/emoticon/03/03-03.png')}
+.emo-03-04 {content:url('../img/emoticon/03/03-04.png')}
+.emo-03-05 {content:url('../img/emoticon/03/03-05.png')}
+.emo-03-06 {content:url('../img/emoticon/03/03-06.png')}
+.emo-03-07 {content:url('../img/emoticon/03/03-07.png')}
+.emo-03-08 {content:url('../img/emoticon/03/03-08.png')}
+.emo-03-09 {content:url('../img/emoticon/03/03-09.png')}
+.emo-03-10 {content:url('../img/emoticon/03/03-10.png')}
+.emo-03-11 {content:url('../img/emoticon/03/03-11.png')}
+.emo-03-12 {content:url('../img/emoticon/03/03-12.png')}
+.emo-03-13 {content:url('../img/emoticon/03/03-13.png')}
+.emo-03-14 {content:url('../img/emoticon/03/03-14.png')}
+.emo-03-15 {content:url('../img/emoticon/03/03-15.png')}
+.emo-03-16 {content:url('../img/emoticon/03/03-16.png')}
+
+
 @media (max-width: 2000px) {
 	.menulist {display:none;margin-left:10px}
 }
@@ -155,3 +211,9 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 @media (max-width: 370px) {
 	
 }
+
+
+
+
+
+
