@@ -291,7 +291,7 @@ var canvas = document.getElementById("canvas"),
 
 var W = window.innerWidth,
 		H = window.innerHeight,
-		text = "仲艾芬",
+		text = "GaoHR",
 		skipCount = 4,
 		gravity = 0.2,
 		touched = false,
@@ -327,13 +327,13 @@ var Particle = function() {
 	
 	this.a = Math.random();
 	
-		rr = parseInt(Math.random() * 255);
-		gg = parseInt(Math.random() * 255);
-		bb = parseInt(Math.random() * 255);
 	// Function to draw them
 	this.draw = function() {
 		ctx.beginPath();
 		// Lets add random opacity
+		rr = parseInt(Math.random() * 255);
+		gg = parseInt(Math.random() * 255);
+		bb = parseInt(Math.random() * 255);
 		ctx.fillStyle = "rgba(" + rr + ", " + gg + ", " + bb + ", " + this.a + ")";
 		ctx.arc(this.x, this.y, this.r, 0, Math.PI*2, false);
 		ctx.fill();
