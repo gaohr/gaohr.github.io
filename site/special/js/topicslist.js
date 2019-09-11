@@ -4,7 +4,7 @@ var topicslist = [
 
 {"topicid":"2018082501", "title":"走遍中国", "type":"收藏", "content":"五岳奇景，桂林山水，传世建筑……组成了神州大地美不胜收的地理画卷！", "img":"2018/images/GeoChina.jpg", "date":"2018-08-25", "href":"2018/2018-08-25-geo-china.html", "comments":"0"},
 
-{"topicid":"2018072101", "title":"雾海拾珠", "type":"情怀", "content":"云雾人生，犹如沧海，听潮起潮落，见人往人来，用诗词绘出触动心灵的每一刻！", "img":"2018/images/ShortNotes.jpg", "date":"2018-07-21", "href":"2018/2018-07-21-short-notes.html", "comments":"0"},
+{"topicid":"2018072101", "title":"雾海拾珠", "type":"情怀", "content":"云雾人生，犹如沧海，听潮起潮落，见人往人来，铭记触动心灵的每一刻！", "img":"2018/images/ShortNotes.jpg", "date":"2018-07-21", "href":"2018/2018-07-21-short-notes.html", "comments":"0"},
 
 // {"topicid":"2018072102", "title":"第三场浮生", "type":"情怀", "content":"第一场是白天，第二场是黑夜，第三场属于他……！", "img":"2018/images/TheThirdLife.jpg", "date":"2018-07-21", "href":"2018/2018-07-21-the-third-life.html", "comments":"0"},
 

@@ -54,7 +54,7 @@ Blog Page
 
 /*专题-index*/
 .topic-top {font-size:1.6em;font-family:'宋体';color:#b83a00;font-weight:bold}
-.topicbody {position:relative;float:left;margin:1.5%;width:22%;min-width:150px;min-height:220px;border-top:5px solid rgba(0,0,0,0);border-bottom:5px solid rgba(0,0,0,0);text-align:center;transition:all 0.3s}
+.topicbody {position:relative;float:left;margin:1.5%;width:22%;min-width:150px;min-height:232px;border-top:5px solid rgba(0,0,0,0);border-bottom:5px solid rgba(0,0,0,0);text-align:center;transition:all 0.3s}
 .topicbody:hover {border-top:5px solid #bb573a;border-bottom:5px solid #bb573a}
 .topicbody img {position:relative;z-index:0}
 .topicbody p {position:relative;margin-top:-10%;background:rgba(0,0,0,0.8);border-radius:20%;color:#fff;text-shadow:1px 1px 5px #333;font-size:1.2em;font-family:'Microsoft YaHei';z-index:99}

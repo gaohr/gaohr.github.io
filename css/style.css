@@ -71,7 +71,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
 
-.centerpage {background-color:#fdfdfd;padding:10px;height:auto}
+.centerpage {background-color:#fdfdfd;padding:10px;height:auto;display:inline-block;margin-bottom:20px}
 .copyright{text-align:center;color:#555 !important;}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}
