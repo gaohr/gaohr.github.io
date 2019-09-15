@@ -22,6 +22,19 @@
 		.topiccontent p {font-size:14px;line-height:20px;text-indent:2em;font-family:'Microsoft YaHei'}
 		#map {width:100%;height:600px;padding:0;margin:0;}
 		.tips li {margin-bottom:5px;color:#555}
+		#data-list {text-align:center}
+		.data-selected {width:90%;background:#ddd;color:#333;padding:2px 10px;border-radius:5px;margin-bottom:5px;}
+		.data-selected:hover {background:#eef}
+		#mask_shadow {display: none;opacity: 0;position: fixed;z-index: 1;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, .5);}
+		#popup_link {display: none;position: absolute;z-index: 2;top: 120px;background-color: #aaa;width: 40%;height: 40%;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);}
+		#popup_link .title {position: relative;width: 100%;height: 55px;background-color: #038ab9;cursor: move;}
+		#popup_link .title p {padding-left: 14px;line-height: 55px;color: #fff;}
+		#popup_link .title span {position: absolute;top: 12px;right: 20px;width: 30px;height: 30px;color: #fff;opacity: .8;font-size: 16px;cursor: pointer;text-align: center;border: 1px solid #fff;}
+		#popup_link .title span:hover {opacity: 1;background-color: #aaa;}
+		#popup_link .cont { width: auto; background-color: #fff;margin:0 10px;padding:10px}
+		#popup_link .cont p {margin-bottom: 10px;font-size:16px}
+		#popup_link .cont span {color:#fff;background: #555;margin-right: 5px;padding:2px 5px;border-radius:5px}
+		#popup_link .cont a:hover {color:#c00;}
 	</style>
 </head>
 
@@ -50,12 +63,12 @@
 				</ol>
 				<!--正文-->
 				<input id="topicid" style="display:none" value="2019082301">
-				<span style="color:#333;font-size:1.5em;font-weight:bold">全国30m分辨率DEM数据 （开发中，敬请期待......）</span>
+				<span style="color:#333;font-size:1.5em;font-weight:bold">全国30m分辨率DEM数据</span>
 				<br>
 				<div class="topiccontent">
 					<p>DEM（Digital Elevation Model，数字高程模型）是研究分析地形、流域、地物识别的重要基础数据。</p>
 					<p>本站提供的30m空间分辨率的DEM数据来源于SRTM（shuttle radar topography mission，航天飞机雷达地形测绘任务)，源数据网址：<a href="http://srtm.csi.cgiar.org/srtmdata/">http://srtm.csi.cgiar.org/srtmdata/</a>。SRTM的数据组织方式为：每5度经纬度方格划分一个文件,共分为24行(-60至60度)和72列(-180至180度)。</p>
-					<p class="g-color-blue">为方便数据的下载与使用，本站收集了全国范围的SRTM DEM 30m分辨率数据，按省级行政区划边界拼接、裁剪，制作成<b>全国各省</b>30m分辨率DEM数据，在此提供数据检索和下载。<i class="emo-sm emo-03-16"></i></p>
+					<p class="g-color-red g-text-bg">为方便数据的下载与使用，本站按省级行政区划制作成<b>全国各省</b>30m分辨率DEM数据，在此提供数据检索和下载。<i class="emo-sm emo-03-16"></i></p>
 					<hr>
 					<div class="container-fluid">
 						<div class="row-fluid">
@@ -78,9 +91,31 @@
 										<li>点击“提交订单”获取数据下载链接</li>
 									</ul>
 								</div>
+								<div class="portlet box grey" style="height:320px;overflow-y:scroll;">
+									<div class="portlet-title">
+										<div><i class="icon-list"></i> 数据列表</div>
+									</div>
+									<div class="portlet-body">
+										<div id="data-list"></div>
+										
+									</div>
+								</div>
+								<a class='btn-blue' href='###' style="margin-left:10px" id="submit">提交订单 <i class='icon-circle-arrow-up'></i></a>
+								<a class='btn-orange' href='###' style="margin-left:10px" id="refresh">清空列表 <i class='icon-refresh'></i></a>
 							</div>
 						</div>
 					</div>
+					<div id="popup_link">
+						<div id="item_cont" class="item_cont">
+							<div class="title">
+								<p class="g-text-bg no-indent">数据下载链接</p>
+								<span class="close">X</span>
+							</div>
+							<div class="cont"></div>
+						</div>
+					</div>
+					<div id="mask_shadow"></div>
+					<p class="g-color-red">由于数据量较大，部分省区数据未上传，如需要请在下方评论区留言，并提供邮箱地址、QQ等联系方式，便于进一步交流。<i class="emo emo-01-16"></i></p>
 				</div>
 				<!-- Da shang -->
 				<div id="dashang" class="dashang"></div>
@@ -107,6 +142,7 @@
 	</footer>
     <!-- JavaScript -->
     <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/jquery-ui.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
 	<script src="../js/topicslist.js"></script>
 	<script src="../js/topicsload.js"></script>
@@ -120,6 +156,12 @@
     <script src="2019-09-14-dem-30m-cn/styles/province_cn_style.js"></script>
     <script src="2019-09-14-dem-30m-cn/layers/layers.js" type="text/javascript"></script> 
     <script src="2019-09-14-dem-30m-cn/resources/qgis2web.js"></script>
+	
+    <script src="2019-09-14-dem-30m-cn/popup.js"></script>
+	<script>
+		$('#popup_link').popup();
+		$('#popup_link').draggable();
+	</script>
 
 </body>
 </html>
