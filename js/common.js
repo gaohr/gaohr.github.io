@@ -56,6 +56,7 @@ if(document.getElementById("weather")) {
 if(document.getElementById("others")) {
 	//$("#others").append(Advertisement());
 	$("#others").append(GreatChina());
+	$("#others").append(HotTopic());
 }
 	
 // Declare
@@ -160,7 +161,17 @@ function GreatChina() {
 		"<script type=\"text/javascript\">$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});</script>";
 }
 	
-
+function HotTopic() {
+	return "<div class=\"notice\">" +
+			"<ul id=\"notice01\" class=\"noticTipTxt\">" +
+			"<li><a href=\"#\" target=\"_blank\">全国各省30m DEM数据检索、下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+			"<li><a href=\"#\" target=\"_blank\">中国地面气候资料数据提取 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+			"</ul>" +
+			"</div>" +
+			"<script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>" +
+			"<script type=\"text/javascript\">if(document.getElementById(\"notice01\")){var scrollup = new ScrollText(\"notice01\");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = \"down\";}</script>"
+}
+	
 function Declare() {
 	Date.prototype.Format = function (fmt) {
 		var o = {

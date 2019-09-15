@@ -110,6 +110,12 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 .flagimg {position:fixed;top:0px;left:50%;width:70px;z-index:9999}
 
+.notice{position:fixed;top:0px;left:55%;width:400px;height:36px;background-color:#aaa;background:url(http://gaohr.win/img/horn.png) no-repeat;}
+.noticTipTxt{background:rgba(255,255,255,0.1);color:#ff7300;height:36px;line-height:36px;overflow:hidden;margin:0;padding:0 0 0 40px;border-radius:20px}
+.noticTipTxt li{height:36px;line-height:36px;list-style-type:none;}
+.noticTipTxt a{color:#fff;font-size:14px;text-decoration:none;vertical-align:middle;}
+.noticTipTxt a:hover{color:#ff7300;text-decoration:underline;}
+
 /*About*/
 .info {font-family:'Microsoft YaHei';font-size:1.1em}
 .info h3 {color:#da2e1b;}
