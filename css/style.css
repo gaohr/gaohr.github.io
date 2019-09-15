@@ -211,6 +211,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 	.block {display:none}
 	.weather {display:none}
 	.advertisement {display:none}
+	.greatChina {display:none}
+	.notice {display:none}
 }
 
 @media (max-width: 480px) {
