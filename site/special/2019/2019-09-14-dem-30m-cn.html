@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <link rel="stylesheet" href="2019-09-14-dem-30m-cn/resources/ol.css" />
+    <link rel="stylesheet" href="2019-09-14-dem-30m-cn/resources/ol3-layerswitcher.css">
+    <link rel="stylesheet" href="2019-09-14-dem-30m-cn/resources/qgis2web.css">
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国30m分辨率DEM数据</title>
+	<style>
+		.topiccontent p {font-size:14px;line-height:20px;text-indent:2em;font-family:'Microsoft YaHei'}
+		#map {width:100%;height:600px;padding:0;margin:0;}
+		.tips li {margin-bottom:5px;color:#555}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="topicmainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../site/special/index.html"> Topic</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="topicid" style="display:none" value="2019082301">
+				<span style="color:#333;font-size:1.5em;font-weight:bold">全国30m分辨率DEM数据 （开发中，敬请期待......）</span>
+				<br>
+				<div class="topiccontent">
+					<p>DEM（Digital Elevation Model，数字高程模型）是研究分析地形、流域、地物识别的重要基础数据。</p>
+					<p>本站提供的30m空间分辨率的DEM数据来源于SRTM（shuttle radar topography mission，航天飞机雷达地形测绘任务)，源数据网址：<a href="http://srtm.csi.cgiar.org/srtmdata/">http://srtm.csi.cgiar.org/srtmdata/</a>。SRTM的数据组织方式为：每5度经纬度方格划分一个文件,共分为24行(-60至60度)和72列(-180至180度)。</p>
+					<p class="g-color-blue">为方便数据的下载与使用，本站收集了全国范围的SRTM DEM 30m分辨率数据，按省级行政区划边界拼接、裁剪，制作成<b>全国各省</b>30m分辨率DEM数据，在此提供数据检索和下载。<i class="emo-sm emo-03-16"></i></p>
+					<hr>
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span9">
+								<div id="map">
+									<div id="popup" class="ol-popup">
+										<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+										<div id="popup-content"></div>
+									</div>
+								</div>
+							</div>
+							<div class="span3">
+								<div class="alert">
+									<button type="button" class="close" data-dismiss="alert">&times;</button>
+									<b>使用说明</b>
+									<br>
+									<ul class="tips">
+										<li>点击地图，系统自动将对应省份DEM数据加入订单列表</li>
+										<li>在订单列表中可删除已选的数据</li>
+										<li>点击“提交订单”获取数据下载链接</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>更多专题</b></p>
+					<br>
+					<div id="topics-right"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../js/topicslist.js"></script>
+	<script src="../js/topicsload.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+    <script src="2019-09-14-dem-30m-cn/resources/polyfills.js"></script>
+    <script src="2019-09-14-dem-30m-cn/resources/ol.js"></script>
+    <script src="2019-09-14-dem-30m-cn/resources/ol3-layerswitcher.js"></script>
+    <script src="2019-09-14-dem-30m-cn/layers/province_cn.js"></script>
+    <script src="2019-09-14-dem-30m-cn/styles/province_cn_style.js"></script>
+    <script src="2019-09-14-dem-30m-cn/layers/layers.js" type="text/javascript"></script> 
+    <script src="2019-09-14-dem-30m-cn/resources/qgis2web.js"></script>
+
+</body>
+</html>

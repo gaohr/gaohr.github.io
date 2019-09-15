@@ -50,6 +50,10 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .g-color-purple {color:#e0e !important}
 .g-color-gray {color:#888 !important}
 
+.g-text-ms {font-size:0.8em !important}
+.g-text-bg {font-size:1.5em !important}
+.g-text-lg {font-size:2.0em !important}
+
 .bg-white {background-color:#fffdf7}
 .bg-black {background-color:#555}
 .bg-red {background-color:#f65}
@@ -130,6 +134,9 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 
 /* Emoticon */
 .emo {width:30px}
+.emo-sm {width:24px}
+.emo-bg {width:36px}
+.emo-lg {width:50px}
 .emo-01-01 {content:url('../img/emoticon/01/01-01.png')}
 .emo-01-02 {content:url('../img/emoticon/01/01-02.png')}
 .emo-01-03 {content:url('../img/emoticon/01/01-03.png')}

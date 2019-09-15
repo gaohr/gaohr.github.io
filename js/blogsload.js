@@ -73,11 +73,8 @@ $(document).ready(function() {
 	$("#tags").append(tagscon);
 	$("#tags").append("<br><li><a href='###' onclick=\"getAllBlogs()\" style='font-size:16px;'>显示全部</a></li>");
 	
-	
-	
 	//Topics
 	var topics = eval('topicslist');
-	//for(t = 0; t < topics.length; t++) {
 	for(t = 0; t < 8; t++) {
 		if(t == 4) {
 			$("#topics").append("<br>");
@@ -88,7 +85,8 @@ $(document).ready(function() {
 					"<img src='site/special/" + topics[t].img + "'>" +
 					"<p><b>" + topics[t].title + "</b></p>" +
 				"</a>" +
-				"<span>" + topics[t].content + "</span>" +
+				"<span class=\"topicbody-con\">" + topics[t].content + "</span>" +
+				"<span class=\"topicbody-type\">" + topics[t].type + "</span>" +
 			"</div>");
 	}
 })

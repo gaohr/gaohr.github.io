@@ -58,12 +58,13 @@
 			"<div class='topic'>" +
 				"<a href='" + topicslist[t].href + "'><img src='" + topicslist[t].img + "' title='" + topicslist[t].content + "'></a>" +
 				"<a href='" + topicslist[t].href + "'><p>" + topicslist[t].title + "</p></a>" +
-				"<span>" + topicslist[t].content + "</span>" +
+				"<span class=\"topic-con\">" + topicslist[t].content + "</span>" +
+				"<span class=\"topic-type\">" + topicslist[t].type + "</span>" +
 			"</div>"
 		);
 		//All topics
 		$("#alltopics").append(
-			"<a href='" + topicslist[t].href + "'><p>" + topicslist[t].title + "</p></a>"
+			"<a href='" + topicslist[t].href + "'><p><span class=\"alltopics-type\">" + topicslist[t].type + "</span> " + topicslist[t].title + "</p></a>"
 		);
 	}
 	
@@ -122,7 +123,7 @@
 	for(tr = 0; tr < tn; tr++) {
 		$("#topics-right").append(
 			"<div class='alltopics'>" +
-				"<a href='../" + topicslist[tr].href + "'><p>" + topicslist[tr].title + "</p></a>" +
+				"<a href='../" + topicslist[tr].href + "'><p><span class=\"alltopics-type\">" + topicslist[tr].type + "</span> " + topicslist[tr].title + "</p></a>" +
 			"</div>"
 		);
 	}
