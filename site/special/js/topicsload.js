@@ -27,7 +27,7 @@
 				"<div class=\"sider-bar\">" +
 				"<div class=\"host\">" +
 					"<img src=\"../../img/mainicon.png\" class=\"img-rounded\"><br><br>" +
-					"<i class=\"icon-user\">&nbsp;&nbsp;小浪</i>" +
+					"<i class=\"icon-user\">&nbsp;&nbsp;GaoHR个人博客</i>" +
 				"</div>" +
 				"<!-- Navigation -->" +
 				"<div class=\"svg-wrapper\">" +
@@ -89,7 +89,7 @@
 				"<div class=\"sider-bar\">" +
 				"<div class=\"host\">" +
 					"<img src=\"../../../img/mainicon.png\" class=\"img-rounded\"><br><br>" +
-					"<i class=\"icon-user\">&nbsp;&nbsp;小浪</i>" +
+					"<i class=\"icon-user\">&nbsp;&nbsp;GaoHR个人博客</i>" +
 				"</div>" +
 				"<!-- Navigation -->" +
 				"<div class=\"svg-wrapper\">" +

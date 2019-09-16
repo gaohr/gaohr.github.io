@@ -1,7 +1,8 @@
 /*
 *Common Elements
-*GaoHR
-*2016-04-21
+*Author: GaoHR
+*Create date: 2016-04-21
+*Update date: 2019-09-16
 */
 
 //Related links
@@ -36,7 +37,7 @@ if(document.getElementById("shareit")) {
 	
 // Dashang
 if(document.getElementById("dashang")) {
-	$("#dashang").html(Dashang());
+	Dashang();
 }
 
 	
@@ -54,9 +55,7 @@ if(document.getElementById("weather")) {
 	
 // others -> Advertisement
 if(document.getElementById("others")) {
-	//$("#others").append(Advertisement());
-	$("#others").append(GreatChina());
-	$("#others").append(HotTopic());
+	// $("#others").append(Advertisement());
 }
 	
 // Declare
@@ -64,6 +63,12 @@ Declare();
 	
 // Scroll top
 gotoTop();
+	
+// Great China
+GreatChina();
+	
+// Hot topics
+HotTopic();
 
 // Functions ****************************** Functions
 
@@ -107,13 +112,27 @@ function Share() {
 }
 
 function Dashang() {
-	return "<br><hr><div class=\"shang_img\"></div>" +
-			"<span class=\"tdcode\">" +
-			"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
-			"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
-			"</span><br>" + 
-			"<div class=\"dshlist\"></div>" +
-			"<script type=\"text/javascript\">$(\".shang_img\").hover(function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang_hover.png)\");},function(){$(\".shang_img\").css(\"background-image\",\"url(http://gaohr.win/img/pay/shang.png)\");});$(\".shang_img\").click(function() {$(\".tdcode\").toggle(500);});for(i = 0; i < paylist.length; i++) {$(\".dshlist\").append(\"<p><i class='icon-heart'></i><span class='name'>\" + paylist[i].name + \"</span>打赏了<span class='money'>￥<b>\" + paylist[i].amount + \"</b>元</span><i class='date'>\" + paylist[i].date + \"</i><span class='msg' title='\" + paylist[i].msg + \"'><i class='icon-comment'></i></span></p>\")};</script>";
+	$("#dashang").html("<br><hr><div class=\"shang_img\"></div>" +
+						"<span class=\"tdcode\">" +
+						"<p style='color:#fff'>非常感谢您的支持！</p>" +
+						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
+						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
+						"<p style='color:#fff'>扫码打赏，建议金额：1-10元</p>" +
+						"</span><br>" + 
+						"<div class=\"dshlist\"></div>");
+	
+
+			$(".shang_img").hover(function(){
+				$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");
+			}, function(){
+				$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");
+			});
+			$(".shang_img").click(function() {
+				$(".tdcode").toggle(500);
+			});
+			for(i = 0; i < paylist.length; i++) {
+				$(".dshlist").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'>￥<b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i><span class='msg' title='" + paylist[i].msg + "'><i class='icon-comment'></i></span></p>")
+			};
 }
 
 function Warning() {
@@ -152,27 +171,36 @@ function Advertisement() {
 }
 	
 function GreatChina() {
-	return "<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
-		"<img src=\"http://gaohr.win/img/Flag_CN.gif\" class=\"flagimg\">" +
-		"<div id=\"greatChina\" class=\"greatChina\">" +
-			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-			"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\"></p>" +
-		"</div>" +
-		"<script type=\"text/javascript\">$(\"#greatChina\").show(500);$(\"#ad-close\").click(function() {$(\"#greatChina\").hide(500);});</script>";
+	$("#others").append("<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
+						"<img src=\"http://gaohr.win/img/Flag_CN.gif\" class=\"flagimg\">" +
+						"<div id=\"greatChina\" class=\"greatChina\">" +
+							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
+							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\"></p>" +
+						"</div>");
+		$("#greatChina").show(500);
+		$("#ad-close").click(function() {$("#greatChina").hide(500);});
 }
 	
 function HotTopic() {
-	return "<div class=\"notice\">" +
-			"<ul id=\"notice01\" class=\"noticTipTxt\">" +
-			"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据检索、下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-			"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-			"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据空间分布数据 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-			"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-			"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：世界电子地图 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-			"</ul>" +
-			"</div>" +
-			"<script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>" +
-			"<script type=\"text/javascript\">if(document.getElementById(\"notice01\")){var scrollup = new ScrollText(\"notice01\");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = \"down\";}</script>"
+	$("#others").append("<div class=\"notice\">" +
+						"<ul id=\"notice01\" class=\"noticTipTxt\">" +
+						"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据检索、下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据空间分布数据 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：世界电子地图 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"</ul>" +
+						"</div>" + 
+						"<script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
+			
+	if(document.getElementById("notice01")){
+		var scrollup = new ScrollText("notice01");
+		scrollup.LineHeight = 36;
+		scrollup.Amount = 1;
+		scrollup.Delay = 20;
+		scrollup.Start();
+		scrollup.Direction = "down";
+	}
 }
 	
 function Declare() {
