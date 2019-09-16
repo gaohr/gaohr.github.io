@@ -10,6 +10,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .weather img {width:24px;height:24px;background:rgba(255,255,255,1);border-radius:50%;margin:0 5px}
 .mainlogo .weather .tmp {margin:0 5px}
 .mainlogo .weather .wnd {margin:0 5px}
+.mainlogo .welcome {display:none}
 
 .mainlogo p > img{float:right;color:#ddd;height:40px}
 .mainlogo .headimg {float:right;width:36px;margin-right:5%}
