@@ -214,7 +214,7 @@ function removeData(id) {
 
 $("#submit").click(function() {
 	$(".cont").html("<table class=\"table table-hover\">" +
-					"<thead><tr><th>省份</th><th>下载地址</th><th>提取码</th><th>空间范围</th><th>数据缩略图</th></tr></thead>" +
+					"<thead><tr><th>省份</th><th>下载地址</th><th>提取码</th><th>空间范围</th><th>数据缩略图</th><th>数据大小</th></tr></thead>" +
 					"<tbody id=\"data_table\" class=\"data_table\"></tbody>" +
 					"</table>");
 	// 读取数组，获取相应数据链接
@@ -224,9 +224,10 @@ $("#submit").click(function() {
 				for(var k = 0; k < select_data_id.length; k++) {
 					$("#data_table").append("<tr><td><span>" + data_links[select_data_id[k]][0] + "</span></td>" +
 												"<td><a href=\"" + data_links[select_data_id[k]][1] + "\" target=\"_blank\">" + data_links[select_data_id[k]][1] + "</a></td>" +
-												"<td><p>" + data_links[select_data_id[k]][2] + "</p></td>" +
+												"<td><p><b>" + data_links[select_data_id[k]][2] + "</b></p></td>" +
 												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + ".jpg\" width=\"80\"></td>" +
-												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + "-data.jpg\" width=\"80\" οnerrοr=\"this.src='2019-09-14-dem-30m-cn/imgs/no-img.jpg'\"></td></tr>");
+												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + "-data.jpg\" width=\"80\" οnerrοr=\"this.src='2019-09-14-dem-30m-cn/imgs/no-img.jpg'\"></td>" +
+												"<td><p>" + data_links[select_data_id[k]][4] + "</p></td></tr>");
 				}
 				
 			}, 1000);
@@ -245,40 +246,40 @@ $("#refresh").click(function() {
 });
 
 var data_links = {
-	"0":["浙江", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Zhejiang"],
-	"1":["云南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Yunnan"],
-	"2":["新疆", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xinjiang"],
-	"3":["香港", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xianggang"],
-	"4":["西藏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xizang"],
-	"5":["台湾", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Taiwan"],
-	"6":["四川", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Sichuan"],
-	"7":["陕西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi2"],
-	"8":["山西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi"],
-	"9":["山东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shandong"],
-	"10":["青海", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Qinghai"],
-	"11":["宁夏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Ningxia"],
-	"12":["内蒙古", "https://pan.baidu.com/s/17v_CvdcY_Z1C3T2g7IfmKA", "qk1t", "Neimenggu"],
-	"13":["辽宁", "https://pan.baidu.com/s/1ihgvCPb_joIu2GM88ikHVg", "nwy4", "Liaoning"],
-	"14":["江西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangxi"],
-	"15":["吉林", "https://pan.baidu.com/s/1EgYcdyPBdeDeDjiR1rCcrw", "kkvl", "Jilin"],
-	"16":["湖南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hunan"],
-	"17":["湖北", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hubei"],
-	"18":["黑龙江", "https://pan.baidu.com/s/1eFH2FPwGMs4MxZd__XCnIg", "f63s", "Heilongjiang"],
-	"19":["河南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Henan"],
-	"20":["北京市", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Beijing"],
-	"21":["天津市", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Tianjin"],
-	"22":["海南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hainan"],
-	"23":["贵州", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guizhou"],
-	"24":["广西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangxi"],
-	"25":["甘肃", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Gansu"],
-	"26":["福建", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Fujian"],
-	"27":["澳门", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Aomen"],
-	"28":["安徽", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Anhui"],
-	"29":["上海", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanghai"],
-	"30":["重庆", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Chongqing"],
-	"31":["江苏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangsu"],
-	"32":["广东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangdong"],
-	"33":["河北", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hebei"]
+	"0":["浙江", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Zhejiang", ""],
+	"1":["云南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Yunnan", ""],
+	"2":["新疆", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xinjiang", ""],
+	"3":["香港", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xianggang", ""],
+	"4":["西藏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xizang", ""],
+	"5":["台湾", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Taiwan", ""],
+	"6":["四川", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Sichuan", ""],
+	"7":["陕西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi2", ""],
+	"8":["山西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi", ""],
+	"9":["山东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shandong", ""],
+	"10":["青海", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Qinghai", ""],
+	"11":["宁夏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Ningxia", ""],
+	"12":["内蒙古", "https://pan.baidu.com/s/17v_CvdcY_Z1C3T2g7IfmKA", "qk1t", "Neimenggu", "2.21 GB"],
+	"13":["辽宁", "https://pan.baidu.com/s/1ihgvCPb_joIu2GM88ikHVg", "nwy4", "Liaoning", "325.27 MB"],
+	"14":["江西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangxi", ""],
+	"15":["吉林", "https://pan.baidu.com/s/1EgYcdyPBdeDeDjiR1rCcrw", "kkvl", "Jilin", "538.75 MB"],
+	"16":["湖南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hunan", ""],
+	"17":["湖北", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hubei", ""],
+	"18":["黑龙江", "https://pan.baidu.com/s/1eFH2FPwGMs4MxZd__XCnIg", "f63s", "Heilongjiang", "1.06 GB"],
+	"19":["河南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Henan", ""],
+	"20":["北京市", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Beijing", ""],
+	"21":["天津市", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Tianjin", ""],
+	"22":["海南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hainan", ""],
+	"23":["贵州", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guizhou", ""],
+	"24":["广西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangxi", ""],
+	"25":["甘肃", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Gansu", ""],
+	"26":["福建", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Fujian", ""],
+	"27":["澳门", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Aomen", ""],
+	"28":["安徽", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Anhui", ""],
+	"29":["上海", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanghai", ""],
+	"30":["重庆", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Chongqing", ""],
+	"31":["江苏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangsu", ""],
+	"32":["广东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangdong", ""],
+	"33":["河北", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hebei", ""]
 }
 
 
