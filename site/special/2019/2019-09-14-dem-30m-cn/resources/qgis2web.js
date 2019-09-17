@@ -213,7 +213,8 @@ function removeData(id) {
 }
 
 $("#submit").click(function() {
-	$(".cont").html("<table class=\"table table-hover\">" +
+	$(".cont").html("<p class=\"g-color-red g-text-sm\">* 右键点击链接，选择“在新标签页中打开链接”</p>" +
+					"<table class=\"table table-hover\">" +
 					"<thead><tr><th>省份</th><th>下载地址</th><th>提取码</th><th>空间范围</th><th>数据缩略图</th><th>数据大小</th></tr></thead>" +
 					"<tbody id=\"data_table\" class=\"data_table\"></tbody>" +
 					"</table>");
