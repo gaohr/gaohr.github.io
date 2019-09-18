@@ -213,7 +213,7 @@ function removeData(id) {
 }
 
 $("#submit").click(function() {
-	$(".cont").html("<p class=\"g-color-red g-text-sm\">* 右键点击链接，选择“在新标签页中打开链接”</p>" +
+	$(".cont").html("<p class=\"g-color-red g-text-sm\">* 右键点击链接，选择“在新标签页中打开链接”，输入对应提取码，即可下载数据。</p>" +
 					"<table class=\"table table-hover\">" +
 					"<thead><tr><th>省份</th><th>下载地址</th><th>提取码</th><th>空间范围</th><th>数据缩略图</th><th>数据大小</th></tr></thead>" +
 					"<tbody id=\"data_table\" class=\"data_table\"></tbody>" +
@@ -227,7 +227,7 @@ $("#submit").click(function() {
 												"<td><a href=\"" + data_links[select_data_id[k]][1] + "\" target=\"_blank\">" + data_links[select_data_id[k]][1] + "</a></td>" +
 												"<td><p><b>" + data_links[select_data_id[k]][2] + "</b></p></td>" +
 												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + ".jpg\" width=\"80\"></td>" +
-												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + "-data.jpg\" width=\"80\" οnerrοr=\"this.src='2019-09-14-dem-30m-cn/imgs/no-img.jpg'\"></td>" +
+												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + imgshow(select_data_id[k]) + ".jpg\" width=\"80\"></td>" +
 												"<td><p>" + data_links[select_data_id[k]][4] + "</p></td></tr>");
 				}
 				
@@ -246,6 +246,15 @@ $("#refresh").click(function() {
 	select_data_id = [];
 });
 
+function imgshow(id) {
+	if(data_links[id][2] == "") {
+		return "no-img";
+	} else {
+		return data_links[id][3] + "-data";
+	}
+}
+
+
 var data_links = {
 	"0":["浙江", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Zhejiang", ""],
 	"1":["云南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Yunnan", ""],
@@ -257,7 +266,7 @@ var data_links = {
 	"7":["陕西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi2", ""],
 	"8":["山西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi", ""],
 	"9":["山东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shandong", ""],
-	"10":["青海", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Qinghai", ""],
+	"10":["青海", "https://pan.baidu.com/s/17kANxxxxeJZNgutgrKFn-A", "smsp", "Qinghai", "1.47 GB"],
 	"11":["宁夏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Ningxia", ""],
 	"12":["内蒙古", "https://pan.baidu.com/s/17v_CvdcY_Z1C3T2g7IfmKA", "qk1t", "Neimenggu", "2.21 GB"],
 	"13":["辽宁", "https://pan.baidu.com/s/1ihgvCPb_joIu2GM88ikHVg", "nwy4", "Liaoning", "325.27 MB"],
