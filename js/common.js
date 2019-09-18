@@ -189,6 +189,7 @@ function HotTopic() {
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据空间分布数据 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：世界电子地图 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
 						"</ul>" +
 						"</div>" + 
 						"<script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
