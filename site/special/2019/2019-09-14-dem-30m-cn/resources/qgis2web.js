@@ -54,15 +54,6 @@ var featureOverlay = new ol.layer.Vector({
         features: collection,
         useSpatialIndex: false // optional, might improve performance
     }),
-    style: [new ol.style.Style({
-        stroke: new ol.style.Stroke({
-            color: '#f00',
-            width: 1
-        }),
-        fill: new ol.style.Fill({
-            color: 'rgba(255,0,0,0.1)'
-        }),
-    })],
     updateWhileAnimating: true, // optional, for instant visual feedback
     updateWhileInteracting: true // optional, for instant visual feedback
 });
@@ -119,12 +110,7 @@ var onPointerMove = function(evt) {
                 featureOverlay.getSource().removeFeature(highlight);
             }
             if (currentFeature) {
-                var styleDefinition = currentLayer.getStyle().toString();
-                highlightStyle = new ol.style.Style({
-                    fill: new ol.style.Fill({
-                        color: 'rgba(255,255,255,0.5)'
-                    })
-                })
+                highlightStyle = new ol.style.Style({fill: new ol.style.Fill({color: 'rgba(255,255,255,0.5)'})})
                 featureOverlay.getSource().addFeature(currentFeature);
                 featureOverlay.setStyle(highlightStyle);
             }
@@ -170,6 +156,11 @@ var onSingleClick = function(evt) {
             }
         }
     });
+	
+	// 点击后改变要素style
+	currentFeature.setStyle(new ol.style.Style({stroke: new ol.style.Stroke({color: 'rgba(255,255,255,1)', width: 1}), fill: new ol.style.Fill({color: 'rgba(35,145,255,0.5)'})}));
+	currentFeature.setId(p_id);
+	
 	if(select_data_id.indexOf(p_id) == -1) {
 		if(p_name != "") {
 			// 添加id
@@ -210,6 +201,10 @@ function removeData(id) {
 	$("#" + id).remove();
 	// 移除id
 	select_data_id.splice(select_data_id.indexOf(id), 1);
+	
+	// 还原要素style
+	selectedFeature = jsonSource_province_cn.getFeatureById(id);
+	selectedFeature.setStyle(style_province_cn_original);
 }
 
 $("#submit").click(function() {
@@ -244,6 +239,11 @@ $("#refresh").click(function() {
 	$("#data-list").html("");
 	// 清空数组
 	select_data_id = [];
+	
+	allFeatures = jsonSource_province_cn.getFeatures();
+	for (var f=0; f<allFeatures.length; f++) {
+		allFeatures[f].setStyle(style_province_cn_original);
+	}
 });
 
 function imgshow(id) {

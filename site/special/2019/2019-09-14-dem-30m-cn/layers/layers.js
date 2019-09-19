@@ -14,7 +14,8 @@ var format_province_cn = new ol.format.GeoJSON();
 var features_province_cn = format_province_cn.readFeatures(geojson_province_cn, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_province_cn = new ol.source.Vector();
-jsonSource_province_cn.addFeatures(features_province_cn);var lyr_province_cn = new ol.layer.Vector({
+jsonSource_province_cn.addFeatures(features_province_cn);
+var lyr_province_cn = new ol.layer.Vector({
                 source:jsonSource_province_cn, 
                 style: style_province_cn,
                 title: "省级行政区划"
