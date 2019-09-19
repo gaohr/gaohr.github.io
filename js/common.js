@@ -65,10 +65,11 @@ Declare();
 gotoTop();
 	
 // Great China
-GreatChina();
+//GreatChina();
+China70();
 	
 // Hot topics
-HotTopic();
+// HotTopic();
 
 // Functions ****************************** Functions
 
@@ -171,25 +172,53 @@ function Advertisement() {
 }
 	
 function GreatChina() {
-	$("#others").append("<script src=\"https://code.jquery.com/jquery-1.12.4.js\"></script><script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
-						"<img src=\"http://gaohr.win/img/Flag_CN.gif\" class=\"flagimg\">" +
+	$("#others").append("<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
+						"<img src=\"http://gaohr.win/img/others/Flag_CN.gif\" class=\"flagimg\">" +
 						"<div id=\"greatChina\" class=\"greatChina\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/GreatChina.jpg\"></p>" +
+							"<p class=\"ad-content\"><img src=\"../img/others/China70.jpg\"></p>" +
 						"</div>");
 		$("#greatChina").show(500);
 		$("#ad-close").click(function() {$("#greatChina").hide(500);});
 }
 	
+function China70() {
+	$("#others").append("<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
+						"<img src=\"http://gaohr.win/img/others/Flag_CN.gif\" class=\"flagimg\">" +
+						"<div id=\"China70\" class=\"greatChina\">" +
+							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
+							"<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
+							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
+						"</div>");
+		$("#China70").show(500);
+		$("#ad-close").click(function() {$("#China70").hide(500);});
+		
+		// 倒计时
+		const year = new Date().getFullYear();
+		const firstOfOct = new Date(year, 9, 1).getTime();
+		// countdown
+		let timer = setInterval(function() {
+			// get today's date
+			const today = new Date().getTime();
+			// get the difference
+			const diff = firstOfOct - today;
+			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
+			let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+			let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+			$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");
+		}, 1000);
+}
+	
 function HotTopic() {
 	$("#others").append("<div class=\"notice\">" +
 						"<ul id=\"notice01\" class=\"noticTipTxt\">" +
-						"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据检索、下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据空间分布数据 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：世界电子地图 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美 <img src=\"http://gaohr.win/img/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据检索、下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据空间分布数据 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"</ul>" +
 						"</div>" + 
 						"<script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
