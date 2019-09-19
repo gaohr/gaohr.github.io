@@ -17,6 +17,8 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
+.centerpage {background-color:#fdfdfd;padding:10px 50px;height:auto;display:inline-block;margin-bottom:20px}
+
 .main-page {position:relative;margin-top:60px;background-color:#efefef;z-index:0;height:auto;}
 .host {width:100%;text-align:center}
 .host img {width:60%;max-width:200px;margin-top:10%;}
@@ -76,7 +78,6 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
 
-.centerpage {background-color:#fdfdfd;padding:10px;height:auto;display:inline-block;margin-bottom:20px}
 .copyright{text-align:center;color:#555 !important;}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}

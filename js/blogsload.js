@@ -27,7 +27,7 @@ $(document).ready(function() {
 			"</div>" +
 			"<div class='span9 blog-article'>" +
 			"<p>" + bloglist[i].content + "</p>" +
-			"<a class='btn-blue' href='" + bloglist[i].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+			"<a class='btn-blue' href='" + bloglist[i].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
 			"</div>" +
 			"</div>" +
@@ -109,7 +109,7 @@ function addblog(bloglist,n,tags) {
 		"</li>" +
 		"</ul>" +
 		"<p>" + bloglist[n].content + "</p>" +
-		"<a class='btn-blue btn-mini' href='" + bloglist[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
+		"<a class='btn-blue btn-mini' href='" + bloglist[n].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 		"</div>" +
 		"</div>" +
 		"<div style='background:#ddd;height:2px;margin:10px;'></div>";
