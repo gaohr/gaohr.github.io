@@ -21,7 +21,7 @@
       var self = this;
 
       // this.$title_text.text(this.$title_text.attr('data-title'));
-      this.$elem.css({left: (this.page_w - this.$elem.width()) / 2});
+      this.$elem.css({left: '12%'});
       this.$elem.css({height: $(window).height() / 1.5});
       this.$cont.css({height: $(window).height() / 1.75});
 
