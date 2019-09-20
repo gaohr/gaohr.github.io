@@ -80,7 +80,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
 
-.copyright{text-align:center;color:#555 !important;}
+.copyright{text-align:center;color:#aaa !important;background:#222}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}
 .portlet .title b{padding:3px;color:#333;font-size:1.2em;border-bottom:3px solid #d85546;font-family:'Microsoft YaHei'}

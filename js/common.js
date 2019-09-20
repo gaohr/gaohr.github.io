@@ -127,7 +127,7 @@ function ClustrMaps() {
 }
 
 function Copyright() {
-	return "<hr>Copyright © 2016-2019 Gao Huiran";
+	return "<hr>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/mainicon.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a>";
 }
 
 function Comments() {
