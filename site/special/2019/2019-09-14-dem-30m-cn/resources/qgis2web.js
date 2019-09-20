@@ -254,8 +254,7 @@ function imgshow(id) {
 		return data_links[id][3] + "-data";
 	}
 }
-
-
+	
 var data_links = {
 	"0":["浙江", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Zhejiang", ""],
 	"1":["云南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Yunnan", ""],
@@ -292,15 +291,13 @@ var data_links = {
 	"32":["广东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangdong", ""],
 	"33":["河北", "https://pan.baidu.com/s/1vJ0Hbbyu535zQgTUmSeR9Q", "tv1u", "Hebei", "452.99 MB"]
 }
-
-
-
-
-
-
-
-
-
+	
+// 将有数据的省份列出来
+for(var key in data_links) {
+if(data_links[key][2] != "") {
+		$("#pd_list").append("<span class='label'>" + data_links[key][0] + "</span>");
+	}
+}
 
 
 
