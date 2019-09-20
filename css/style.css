@@ -70,7 +70,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .bg-gray {background-color:#888}
 
 #declare{width:100%;margin:0 auto}
-#code{width:100%;height:auto;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
+#code{width:100%;height:auto;min-height:120px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
 #code .space{margin-left:7px}
 #code .var{color:#0000ff}
 #code .string{color:#b22222}

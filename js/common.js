@@ -67,7 +67,7 @@ if($("#shareit")) {
 
 	
 // Dashang
-if($("#dashang")) {
+if(document.getElementById("dashang")) {
 	Dashang();
 }
 
