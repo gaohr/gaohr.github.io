@@ -5,6 +5,37 @@
 *Update date: 2019-09-16
 */
 
+/*鼠标点击特效*/
+var a_idx = 0;
+$(document).ready(function($) {
+   $("body").click(function(e) {
+       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+       var $i = $("<span/>").text(arrT[a_idx]);
+       a_idx = (a_idx + 1) % arrT.length;
+       var x = e.pageX,
+       y = e.pageY;
+       $i.css({
+           "z-index": 9999,
+           "top": y - 20,
+           "left": x,
+           "position": "absolute",
+           "font-weight": "bold",
+           "color": "#f65",
+           "font-size": "1.2em"
+       });
+       $("body").append($i);
+       $i.animate({
+           "top": y - 180,
+           "opacity": 0
+       },
+       1500,
+       function() {
+           $i.remove();
+       });
+   });
+});
+
+
 //Related links
 if(document.getElementById("relatedlinks")) {
 	$("#relatedlinks").html(Relatedlinks());
@@ -217,7 +248,7 @@ function HotTopic() {
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据空间分布数据 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"</ul>" +
 						"</div>" + 
@@ -254,18 +285,12 @@ function Declare() {
 		"<div id=\"declare\">" +
 			"<div id=\"content\">" +
 				"<div id=\"code\">" +
-					"<span class=\"comments\">/**</span>" +
-					"<br>" +
-					"<span class=\"comments space\">* Author: GaoHR</span>" +
-					"<br>" +
-					"<span class=\"comments space\">* Date: " + time + "</span>" +
-					"<br>" +
-					"<span class=\"comments space\">*/</span>" +
-					"<br>" +
-					"<span class=\"var\">var</span> 博客主题 = <span class=\"string\">'GIS、遥感学科方向,个人综合类博客'</span>" +
-					"<br>" +
-					"<span class=\"var\">var</span> 网站主旨 = <span class=\"string\">'记录生活，记录学习'</span>" +
-					"<br> " +
+					"<span class=\"comments\">/**</span><br>" +
+					"<span class=\"comments space\">* Author: GaoHR</span><br>" +
+					"<span class=\"comments space\">* Date: " + time + "</span><br>" +
+					"<span class=\"comments space\">*/</span><br>" +
+					"<span class=\"var\">var</span> 博客主题 = <span class=\"string\">'GIS、遥感学科方向,个人综合类博客'</span><br>" +
+					"<span class=\"var\">var</span> 网站主旨 = <span class=\"string\">'记录生活，记录学习'</span><br> " +
 				"</div>" +
 			"</div>" +
 		"</div>" +
