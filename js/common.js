@@ -37,55 +37,55 @@ $(document).ready(function($) {
 
 
 //Related links
-if(document.getElementById("relatedlinks")) {
+if($("#relatedlinks")) {
 	$("#relatedlinks").html(Relatedlinks());
 }
 
 	
 // ClustrMaps
-if(document.getElementById("cltmap")) {
+if($("#cltmap")) {
 	$("#cltmap").html(ClustrMaps());
 }
 
 	
 // Copyright
-if(document.getElementById("copyright")) {
+if($("#copyright")) {
 	$("#copyright").html(Copyright());
 }
 
 	
 // Comments
-if(document.getElementById("comments")) {
+if($("#comments")) {
 	$("#comments").append(Comments());
 }
 
 	
 // Share
-if(document.getElementById("shareit")) {
+if($("#shareit")) {
 	$("#shareit").append(Share());
 }
 
 	
 // Dashang
-if(document.getElementById("dashang")) {
+if($("#dashang")) {
 	Dashang();
 }
 
 	
 // Warning
-if(document.getElementById("warning")) {
+if($("#warning")) {
 	$("#warning").html(Warning());
 }
 
 	
 // Weather
-if(document.getElementById("weather")) {
+if($("#weather")) {
 	$("#weather").html(Weather());
 }
 
 	
 // others -> Advertisement
-if(document.getElementById("others")) {
+if($("#others")) {
 	// $("#others").append(Advertisement());
 }
 	

@@ -74,20 +74,21 @@ $(document).ready(function() {
 	$("#tags").append("<br><li><a href='###' onclick=\"getAllBlogs()\" style='font-size:16px;'>显示全部</a></li>");
 	
 	//Topics
-	var topics = eval('topicslist');
-	for(t = 0; t < 8; t++) {
-		if(t == 4) {
-			$("#topics").append("<br>");
+	if($("#topics")) {
+		for(t = 0; t < 8; t++) {
+			if(t == 4) {
+				$("#topics").append("<br>");
+			}
+			$("#topics").append(
+				"<div class='topicbody'>" +
+					"<a href='site/special/" + topicslist[t].href + "' title='" + topicslist[t].title + "'>" +
+						"<img src='site/special/" + topicslist[t].img + "'>" +
+						"<p><b>" + topicslist[t].title + "</b></p>" +
+					"</a>" +
+					"<span class=\"topicbody-con\">" + topicslist[t].content + "</span>" +
+					"<span class=\"topicbody-type\">" + topicslist[t].type + "</span>" +
+				"</div>");
 		}
-		$("#topics").append(
-			"<div class='topicbody'>" +
-				"<a href='site/special/" + topics[t].href + "' title='" + topics[t].title + "'>" +
-					"<img src='site/special/" + topics[t].img + "'>" +
-					"<p><b>" + topics[t].title + "</b></p>" +
-				"</a>" +
-				"<span class=\"topicbody-con\">" + topics[t].content + "</span>" +
-				"<span class=\"topicbody-type\">" + topics[t].type + "</span>" +
-			"</div>");
 	}
 })
 	

@@ -6,7 +6,7 @@ Blog Page
 .blog-top {margin-bottom:10px;font-size:1.6em;font-family:'宋体';color:#1868b8;font-weight:bold;}
 .blog-page {margin-top:10px;font-family:'Microsoft YaHei';padding:0 2% 0 2%}
 .blog-page p {color:#555;}
-.blog-article  .blog-title{font-size:1.5em;color:#306cb5;}
+.blog-article  .blog-title{font-size:1.5em;color:#306cb5;margin-bottom:5px;}
 .blog-article .blog-title:hover{color:#b5306c;}
 .blog-img {width:90%;margin-bottom:2px;margin-top:2px;margin-left:5%}
 .blog-page .blog-tag-data li {padding: 0;margin-left:5%}
@@ -31,7 +31,7 @@ Blog Page
 .btn-orange:hover {background-color:#cc3300;color:#fff}
 .btn-orange:active {background-color:#ee4400;}
 
-.blog-images li {margin-left:-5px}
+.blog-images li {margin-left:-5px !important;}
 .blog-images a:hover {color:#d85546}
 .blog-images li > a > img{width:32px;margin-right:10px}
 .blog-page .blog-type {color:#eb493d;background:rgba(0,0,0,0);float:right;font-size:0.5em;margin-right:5px;border-radius:5px}
