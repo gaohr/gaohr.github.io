@@ -100,7 +100,7 @@ gotoTop();
 China70();
 	
 // Hot topics
-// HotTopic();
+HotTopic();
 
 // Functions ****************************** Functions
 
@@ -214,9 +214,7 @@ function GreatChina() {
 }
 	
 function China70() {
-	$("#others").append("<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
-						"<img src=\"http://gaohr.win/img/others/Flag_CN.gif\" class=\"flagimg\">" +
-						"<div id=\"China70\" class=\"greatChina\">" +
+	$("#others").append("<div id=\"China70\" class=\"greatChina\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
 							"<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
 							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
@@ -293,8 +291,19 @@ function Declare() {
 					"<span class=\"var\">var</span> 网站主旨 = <span class=\"string\">'记录生活，记录学习'</span><br> " +
 				"</div>" +
 			"</div>" +
-		"</div>" +
-		"<script type=\"text/javascript\">$.fn.typewriter = function() {this.each(function() {var $ele = $(this), str = $ele.html(), progress = 0;$ele.html('');var timer = setInterval(function() {var current = str.substr(progress, 1);if (current == '<') {progress = str.indexOf('>', progress) + 1;} else {progress++;}$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));if (progress >= str.length) {clearInterval(timer);}}, 75);});return this;};$(\"#code\").typewriter();</script>");
+		"</div>");
+		$.fn.typewriter = function() {
+			this.each(function() {
+				var $ele = $(this), str = $ele.html(), progress = 0;
+				$ele.html('');
+				var timer = setInterval(function() {
+					var current = str.substr(progress, 1);
+					if (current == '<') {progress = str.indexOf('>', progress) + 1;} else {progress++;}$ele.html(str.substring(0, progress) + (progress & 1 ? '_' : ''));
+					if (progress >= str.length) {clearInterval(timer);}
+				}, 75);
+			});return this;
+		};
+		$("#code").typewriter();
 }
 	
 function gotoTop(min_height){
