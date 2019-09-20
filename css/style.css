@@ -18,7 +18,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fdfdfd}
-.main-page {position:relative;margin-top:60px;background-color:#efefef;z-index:0;height:auto;width:76%;margin-left:12%;}
+.main-page {position:relative;margin-top:60px;background-color:#efefef;z-index:0;height:auto;width:72%;margin-left:14%;}
 
 .centerpage {height:auto;background-color:#fdfdfd;padding:10px 50px;display:inline-block;margin-bottom:20px}
 
@@ -111,7 +111,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .advertisement .ad-close span:before {content:"X"}
 .advertisement .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 
-.greatChina {position:fixed;bottom:10px;right:10px;width:200px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;box-shadow:2px 2px 5px #555;display:none}
+.greatChina {position:fixed;bottom:10px;right:10px;width:180px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;box-shadow:2px 2px 5px #555;display:none}
 .greatChina .ad-close span:before {content:"X"}
 .greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 .flagimg {position:fixed;top:0px;left:30%;width:70px;z-index:9999}
