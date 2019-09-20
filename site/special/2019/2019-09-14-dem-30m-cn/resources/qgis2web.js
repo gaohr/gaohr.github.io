@@ -295,7 +295,7 @@ var data_links = {
 // 将有数据的省份列出来
 for(var key in data_links) {
 if(data_links[key][2] != "") {
-		$("#pd_list").append("<span class='label'>" + data_links[key][0] + "</span>");
+		$("#pd_list").append("<span>" + data_links[key][0] + "</span>");
 	}
 }
 
