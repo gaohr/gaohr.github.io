@@ -214,6 +214,10 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 @media (max-width: 2000px) {
 	.menulist {display:none;margin-left:10px}
 }
+@media (max-width: 1600px) {
+	.main-page {position:relative;margin-top:60px;background-color:#efefef;z-index:0;height:auto;width:100%;margin-left:0;}
+}
+
 @media (max-width: 560px) {
 	.main-page {position:relative;width:100%;margin:15% 0;}
 	.menulist {display:block;margin-top:10%;font-size:18px;}
