@@ -13,7 +13,6 @@
   width: 100%;
   overflow: hidden;
   padding:5px 0;
-  border: 1px solid #eee;
   -webkit-transition: .5s;
   transition: .5s;
 }
@@ -78,9 +77,10 @@
 #text a:hover{color:#0099ff}
 .svg-wrapper:hover #shape{stroke-dasharray:50 0;stroke-width:5px;stroke-dashoffset:0;stroke:#eee}
 
-
-
-
+/* 滚动监听，侧边菜单 */
+.centerer-menu-2 {position:fixed;top:15%;left:4%;width:10%;text-align:center;display:none;}
+.centerer-menu-2 a {width:60%;color:#39e;}
+.centerer-menu-2 a:hover {color:#f65}
 
 
 

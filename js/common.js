@@ -5,9 +5,9 @@
 *Update date: 2019-09-16
 */
 
-/*鼠标点击特效*/
-var a_idx = 0;
 $(document).ready(function($) {
+	/*鼠标点击特效*/
+	var a_idx = 0;
    $("body").click(function(e) {
        var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
        var $i = $("<span/>").text(arrT[a_idx]);
@@ -33,6 +33,31 @@ $(document).ready(function($) {
            $i.remove();
        });
    });
+   
+	/*滚动监听，显示侧边菜单*/
+	$(".span2:first").append("<div class='centerer-menu-2 g-text-lg'>" +
+							"<div class='host'>" +
+							"<img src='http://gaohr.win/img/mainicon.png' class='img-rounded'><br><br>" +
+							"<i class='icon-user'>&nbsp;&nbsp;GaoHR个人博客</i>" +
+							"</div><br>" +
+							"<a href='http://gaohr.win/index.html'>首页</a><br><br>" +
+							"<a href='http://gaohr.win/Blogs.html'>博客</a><br><br>" +
+							"<a href='http://gaohr.win/site/special/index.html'>专题</a><br><br>" +
+							"<a href='http://gaohr.win/About.html'>关于</a><br><br>" +
+							"<a href='http://gaohr.win/Contact.html'>留言</a>" +
+							"</div></div>");
+	
+	var min_height = 600;
+	$(window).scroll(function(){
+		var sh = $(window).scrollTop();
+		if($(window).width() > 900) {
+			if(sh > min_height){
+				$(".centerer-menu-2").fadeIn(500);
+			}else{
+				$(".centerer-menu-2").fadeOut(100);
+			};
+		};
+	});
 });
 
 
@@ -93,7 +118,7 @@ if($("#others")) {
 Declare();
 	
 // Scroll top
-gotoTop();
+gotoTop(600);
 	
 // Great China
 //GreatChina();
@@ -315,13 +340,12 @@ function gotoTop(min_height){
 		function(){$(this).addClass("hover");$("#gotoTop").html('返回<br>顶部');},
 		function(){$(this).removeClass("hover");$("#gotoTop").html('<i class=\"icon-double-angle-up\"></i>');
 	});
-	min_height ? min_height = min_height : min_height = 600;
 	$(window).scroll(function(){
 		var s = $(window).scrollTop();
 		if(s > min_height){
 			$("#gotoTop").fadeIn(100);
 		}else{
-			$("#gotoTop").fadeOut(200);
+			$("#gotoTop").fadeOut(500);
 		};
 	});
 };
