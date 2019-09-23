@@ -179,7 +179,7 @@ function Dashang() {
 						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
 						"<p style='color:#fff'>扫码打赏，建议金额：1-10元</p>" +
 						"</span><br>" + 
-						"<div class=\"dshlist\"></div>");
+						"<div class=\"dshlist\"></div><hr>");
 	
 
 			$(".shang_img").hover(function(){

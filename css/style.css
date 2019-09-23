@@ -89,12 +89,12 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .portlet .title i{color:#333;padding:2px;font-size:1.2em;border-bottom:6px solid #d85546;}
 
 .cltmap {width:100%;}
-.dashang {width:100%;height:auto;text-align:center}
+.dashang {width:100%;height:auto;text-align:center;}
 .shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;}
 .tdcode {width:400px;height:240px;display:none;padding:10px;background:#777;border:1px soild #d85546}
 .tdcode img {width:160px;margin:0 10px 10px 10px}
-.dshlist {background:#fefefe;width:60%;margin-left:20%;height:320px;overflow-y:scroll;padding:5px}
-.dshlist p {width:90%;margin-left:5%;margin:2px;border-bottom:1px dashed #aaa;margin:0 auto;padding:2px}
+.dshlist {background:#fefefe;width:98%;height:240px;overflow-y:scroll;padding:10px}
+.dshlist p {width:60%;margin-left:20%;margin:2px;border-bottom:1px dashed #aaa;margin:0 auto;padding:2px}
 .dshlist p > i {color:#f40;margin-right:32px}
 .dshlist p .name {color:#555;margin-right:32px;font-weight:bold}
 .dshlist p .money {margin:0 32px;color:#f40}
