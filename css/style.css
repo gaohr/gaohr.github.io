@@ -80,7 +80,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
 
-#comments {background:#fefefe}
+#comments {background:#fefefe;padding:10px;margin-top:10px}
 
 .copyright{text-align:center;color:#aaa !important;background:#222}
 
