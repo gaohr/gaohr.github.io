@@ -63,59 +63,48 @@ $(document).ready(function($) {
 	$("body").append("<script>(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(bp, s);})();</script>");
 });
 
-
 //Related links
 if($("#relatedlinks")) {
 	$("#relatedlinks").html(Relatedlinks());
 }
-
 	
 // ClustrMaps
 if($("#cltmap")) {
 	$("#cltmap").html(ClustrMaps());
 }
-
 	
 // Copyright
 if($("#copyright")) {
 	$("#copyright").html(Copyright());
 }
-
 	
 // Comments
 if($("#comments")) {
 	$("#comments").append(Comments());
 }
-
 	
 // Share
 if($("#shareit")) {
 	$("#shareit").append(Share());
 }
-
 	
 // Dashang
 if(document.getElementById("dashang")) {
 	Dashang();
 }
-
 	
 // Warning
 if($("#warning")) {
 	$("#warning").html(Warning());
 }
-
 	
 // Weather
 if($("#weather")) {
 	$("#weather").html(Weather());
 }
 
-	
-// others -> Advertisement
-if($("#others")) {
-	// $("#others").append(Advertisement());
-}
+// Search
+Search();
 	
 // Declare
 Declare();
@@ -129,6 +118,8 @@ China70();
 	
 // Hot topics
 HotTopic();
+
+
 
 // Functions ****************************** Functions
 
@@ -353,12 +344,80 @@ function gotoTop(min_height){
 	});
 };
 	
+function Search() {
+	$("body").append("<div id='popup-search' class='popup-search'><div class='title'><p id='p-title' class='g-text-bg no-indent'>查询结果</p><span class='close'>X</span></div><div id='pop-cont' class='cont'></div></div>");
+	// 屏幕居中
+	body_width = parseInt($(window).width());
+	body_height = parseInt($(window).height());
+	block_width = parseInt($("#popup-search").width());
+	block_height = parseInt($("#popup-search").height());
+
+	search_html = "<section class='g-search'><form><input id='input-value' type='search' placeholder='你想找什么？'><a id='g-search'><i class='icon-search g-text-bg'></i></a></form><p class='warning'>查询字段不能为空</p></section>"
+	$("#others").append(search_html);
 	
+	// 显示窗体
+	$("#g-search").click(function() {
+		var search_val = $("#input-value").val();
+		if(search_val != "") {
+			$("#p-title").html("查询 <i class='g-color-red'>" + search_val + "</i> 的结果");
+			top_position = parseInt((body_height / 2.25) - (block_height / 2.25) + $(window).scrollTop());
+			if (body_height < block_height) {
+				top_position = 0 + $(window).scrollTop();
+			};
+			$("#popup-search").show().animate({opacity: 1, top: top_position});
+			// $("#input-value").val("");
+			blogsSearch(search_val);
+		} else {
+			$('.warning').show();
+			setTimeout(function() {
+				$('.warning').hide();
+			}, 3000);
+		}
+	});
 	
+	// 关闭窗体
+	$(".close").click(function() {
+		$("#popup-search").animate({opacity:0, top:150}, function () {
+			$("#popup-search").hide();
+		});
+	});
+}
 	
+function blogsSearch(keyword) {
+	// 搜索博客
+	$("#pop-cont").html("");
+	for(b = 0; b < bloglist.length; b++) {
+		if(bloglist[b].title.indexOf(keyword) != -1 || bloglist[b].content.indexOf(keyword) != -1) {
+			$("#pop-cont").append(findblog(keyword, bloglist, b, 0));
+		}
+		
+	}
+	// 搜索专题
+	for(t = 0; t < topicslist.length; t++) {
+	if(topicslist[t].title.indexOf(keyword) != -1 || topicslist[t].content.indexOf(keyword) != -1) {
+			$("#pop-cont").append(findblog(keyword, topicslist, t, 1));
+		}
+		
+	}
+}
 	
-	
-	
+function findblog(key, bloglist,n, type) {
+	var type_mark = "";
+	if(type == 0) {
+		type_mark = "博客";
+	} else {
+		type_mark = "专题";
+	}
+	var blogcon = "<div class='blog-article'>" +
+		"<a href='" + bloglist[n].href + "' class='blog-title' target='_blank'><b>" + bloglist[n].title + "</b></a> " +
+		"<a class='pull-right btn-red btn-mini' href='" + bloglist[n].href + "' style='margin-right:2%' target='_blank'>" + type_mark + "</a>" +
+		"<p style='margin-right:7%'>" + bloglist[n].content + "</p>" +
+		"</div>" +
+		"<hr>";
+	var blogcon_new = blogcon.split(key);
+	res = blogcon_new.join('<span style="color:#f65;padding:0 2px;border-radius:2px">' + key + '</span>');
+	return res;
+}
 	
 	
 	

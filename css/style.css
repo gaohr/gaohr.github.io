@@ -17,10 +17,10 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
-.breadcrumb {background-color:#fdfdfd}
+.breadcrumb {background-color:#fefefe}
 .main-page {position:relative;margin-top:60px;background-color:#efefef;z-index:0;height:auto;width:72%;margin-left:14%;}
 
-.centerpage {height:auto;background-color:#fdfdfd;padding:10px 50px;display:inline-block;margin-bottom:20px}
+.centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px}
 
 .host {width:100%;text-align:center}
 .host img {width:60%;max-width:200px;margin-top:10%;}
@@ -80,7 +80,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 #gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
 
-#comments {background:#fefefe;padding:10px;margin-top:10px}
+#comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
 
 .copyright{text-align:center;color:#aaa !important;background:#222}
 
@@ -118,7 +118,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 .flagimg {position:fixed;top:0px;left:30%;width:70px;z-index:9999}
 
-.notice{position:fixed;top:60px;left:55%;width:320px;height:36px;background:url(http://gaohr.win/img/others/horn.png) no-repeat;z-index:9999;background-color:rgba(0,0,0,0.75);box-shadow:1px 1px 5px #aaa;border-radius:20px;}
+.notice{position:fixed;top:60px;left:45%;width:320px;height:36px;background:url(http://gaohr.win/img/others/horn.png) no-repeat;z-index:9999;background-color:rgba(0,0,0,0.75);box-shadow:1px 1px 5px #aaa;border-radius:20px;}
 .noticTipTxt{background:rgba(255,255,255,0.0);color:#ff7300;height:36px;line-height:36px;overflow:hidden;margin:0;padding:0 0 0 40px}
 .noticTipTxt li{height:36px;line-height:36px;list-style-type:none;}
 .noticTipTxt a{color:#fff;font-size:14px;text-decoration:none;vertical-align:middle;}
@@ -131,6 +131,33 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .days, .hours, .minutes, .seconds {display: inline-block;padding: 5px 10px;width: auto;margin-right:5px;border-radius: 5px;background: #F6F4F3;color: #183059;}
 .numbers {font-family: "Montserrat", sans-serif;color: #183059;font-size: 1.2em;font-weight:bold;}
 
+/* search */
+.g-search {position: fixed;top:14px;left:64%;text-align:center;z-index:99999}
+.g-search input {background:rgba(0,0,0,0.5);border:0;border-right:1px solid #fff;border-radius:20px 0 0 20px;color:#fff;display:block;float:left;font-size:12px;height:32px;margin:0;padding:0 10px;width:120px;}
+.g-search input::-webkit-input-placeholder {color: #fff;}
+.g-search input:-moz-placeholder {color: #fff;}
+.g-search input:focus {-webkit-animation: glow 800ms ease-out infinite alternate;-moz-animation: glow 800ms ease-out infinite alternate;animation: glow 800ms ease-out infinite alternate;background: rgba(255,255,255,0.9);color: #555;outline: none;}
+.g-search input:focus::-webkit-input-placeholder { color: #555;}
+.g-search input:focus:-moz-placeholder {color: #555;}
+.g-search a {background: rgba(0,0,0,0.5);border-left:0;border-radius:0 20px 20px 0;color: #fff;display: block;float: left;font-size: 12px;height: 32px;line-height: 32px;margin: 0;padding: 0;position: relative;width: 42px;text-decoration: none;transition: all 0.3s ease;}
+.g-search a:hover, .g-search a:focus {background: rgba(0,0,0,0.85);color: #5f5;transition: all 0.3s ease;}
+.g-search a:active {background: rgba(0,0,0,0.5)}
+.g-search .warning {display:none;width:100%;background:#f2eeee;color:#b94a48;margin-top:32px;border-color:#eed3d7;}
+@-webkit-keyframes glow {
+    0% {border-color: #fff;box-shadow: 0 0 5px rgba(0,255,0,0.1)}
+    100% {border-color: #6f6;box-shadow: 0 0 20px rgba(0,255,0,0.9)}
+}
+@-moz-keyframes glow {
+    0% {border-color: #fff;box-shadow: 0 0 5px rgba(0,255,0,0.1)}
+    100% {border-color: #6f6;box-shadow: 0 0 20px rgba(0,255,0,0.9)}
+}
+
+.popup-search {display:none;position:absolute;z-index:9999;width:50%;margin-left:25%;height:60%;background:#fff;box-shadow:0 10px 50px rgba(0,0,0,0.5)}
+.popup-search .title {position:relative;width:100%;height:55px;background:rgba(0,0,0,0.75);cursor:move;}
+.popup-search .title p {padding-left: 14px;line-height: 55px;color: #fff;}
+.popup-search .title span {position:absolute;top:12px;right:20px;width:30px;height:30px;color:#fff;opacity:0.7;font-size:16px;cursor:pointer;text-align:center;}
+.popup-search .title span:hover {opacity:1;}
+.popup-search .cont {padding:20px;font-size:12px;max-height:80%;overflow-y:scroll}
 
 /*About*/
 .info {font-family:'Microsoft YaHei';font-size:1.1em}
@@ -218,7 +245,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 }
 
 @media (max-width: 1600px) {
-	.main-page {position:relative;margin-top:60px;background-color:#efefef;z-index:0;height:auto;width:100%;margin-left:0;}
+	.main-page {width:98%;margin-left:0;padding-left:0;}
 }
 
 @media (max-width: 560px) {
@@ -234,6 +261,7 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 	.advertisement {display:none}
 	.greatChina {display:none}
 	.notice {display:none}
+	.g-search {display:none}
 }
 
 @media (max-width: 480px) {
