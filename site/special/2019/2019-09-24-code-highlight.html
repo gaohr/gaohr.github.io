@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	
+	<link rel="stylesheet" href="2019-09-24-code-highlight/basic.css">
+	<link id="css" rel="stylesheet" type="text/css" href="2019-09-24-code-highlight/shCoreDefault.css"/>
+	
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 在线代码着色高亮工具</title>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="topicmainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../site/special/index.html"> Topic</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="topicid" style="display:none" value="2019092401">
+				<p class="topic-title">在线代码着色高亮</p>
+				<div class="topiccontent">
+					<p class="g-color-blue">代码着色在线工具，采用<a id="syntaxhh" href="http://www.oschina.net/p/syntaxhighlighter" target="_blank">SyntaxHighlighter</a>实现，撰写精彩技术博客的必备工具  <i class="emo emo-02-14"></i></p>
+					<hr>
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div id="mainContent" class="tool_content wrapper">
+									<div class="row-fluid">
+										<div class="span8">
+											<div class="topBar">
+<textarea id="code_source">
+/* ---示例代码----*/
+function echo (){
+	var a="this is a example";
+	alert("hello world");
+}
+/* ---示例代码----*/
+</textarea>
+											</div>
+										</div>
+										<div class="span4">
+											<div class="alert">
+												<button type="button" class="close" data-dismiss="alert">&times;</button>
+												<b>使用说明</b>
+												<br>
+												<ul class="tips">
+													<li>将代码粘贴到左侧文本框中</li>
+													<li>选择相应的计算机语言</li>
+													<li>点击“代码着色”获取高亮代码</li>
+													<li>切换代码着色风格</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="operateTB">
+										<form class="form-inline">
+											<label class="g-color-red">选择语言：</label>
+											<select id="code_type" class="span3">
+												<option value="js">Javascript</option>
+												<option value="python">Python</option>
+												<option value="xml">HTML/XML</option>
+												<option value="java">Java</option>
+												<option value="css">CSS</option>
+												<option value="c">C/C++/Objectiv-C</option>
+												<option value="csharp">C#</option>
+												<option value="vb">VB</option>
+												<option value="php">PHP</option>
+												<option value="ruby">Ruby</option>
+												<option value="sql">SQL</option>
+												<option value="delphi">Delphi</option>
+												<option value="erlang">Erlang</option>
+												<option value="groovy">Groovy</option>
+												<option value="javafx">JavaFX</option>
+												<option value="perl">Perl</option>
+												<option value="powershell">PowerShell</option>
+												<option value="scala">Scala</option>
+												<option value="as3">AS3</option>
+												<option value="bash">Bash</option>
+												<option value="coldfusion">ColdFusion</option>
+												<option value="diff">Diff</option>
+												<option value="plain">Plain</option>
+												<option value="sass">Sass</option>
+											</select>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<label class="checkbox"><input type="checkbox" id="gutter" checked="checked"/>显示行号</label>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<label class="checkbox"><input type="checkbox" id="to_html" checked="checked"/>生成HTML</label>
+											&nbsp;&nbsp;&nbsp;&nbsp;
+											<a href="###" class="btn-red g-text-bg" onclick="render();"><i class="icon-chevron-left icon-white"></i> 代码着色 <i class="icon-chevron-right icon-white"></i></a>
+											<br>
+											<label class="radio"><input type="radio" name="higilight_style" checked="checked" value="default"/>默认样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="rdark"/>RDark样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="emacs"/>Emacs样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="eclipse"/>Eclipse样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="django"/>Django样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="fadetogrey"/>FadeToGrey样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="mdultra"/>MDUltra样式</label>
+											<label class="radio"><input type="radio" name="higilight_style" value="midnight"/>Midnight样式</label>
+										</form>
+									</div>
+									<div class="bottomBar clearfix">
+										<div id='html_div'>
+											<textarea id='html' onclick='this.focus();this.select();'></textarea>
+										</div>
+										<p class="alert alert-success g-text-bg" id="result_tap">代码生成成功，复制文本框中的代码到您的页面中，即可显示如下高亮效果。</p>
+										<div id="result_div">
+<pre class='brush: js;'>
+/* ---示例代码----*/
+function echo (){
+	var a="this is a example";
+	alert("hello world");
+}
+/* ---示例代码----*/
+</pre>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+					<p class="g-color-red g-text-bg">* 如果本站提供的工具对您有所帮助，请随意<b>打赏</b>——1元足够感动我 <i class="emo emo-01-16"></i></p>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>更多专题</b></p>
+					<br>
+					<div id="topics-right"></div>
+				</div>
+				<hr>
+				<!-- Share -->
+				<div id="shareit"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../js/topicslist.js"></script>
+	<script src="../js/topicsload.js"></script>
+	
+	<script type="text/javascript" src="2019-09-24-code-highlight/jquery.cookies.2.2.0.min.js"></script>
+	<script type="text/javascript" src="2019-09-24-code-highlight/shCore.js"></script>
+	<script type="text/javascript" src="2019-09-24-code-highlight/shBrushAll.js"></script>
+
+	<script>
+	 var cookieOptions = {
+		hoursToLive: 30 * 24
+	  }
+	var REGX_HTML_ENCODE = /"|&|'|<|>|[\x00-\x20]|[\x7F-\xFF]|[\u0100-\u2700]/g;
+	function encodeHtml(s){
+		  return (typeof s != "string") ? s :
+			  s.replace(REGX_HTML_ENCODE,
+						function($0){
+							var c = $0.charCodeAt(0), r = ["&#"];
+							c = (c == 0x20) ? 0xA0 : c;
+							r.push(c); r.push(";");
+							return r.join("");
+						});
+	}
+	//更改样式
+	function change(type){
+		var css = document.getElementById("css"); 
+		if ("default"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreDefault.css"); 
+		if ("emacs"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreEmacs.css"); 
+		if ("django"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreDjango.css");
+		if ("eclipse"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreEclipse.css");
+		if ("fadetogrey"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreFadeToGrey.css");
+		if ("mdultra"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreMDUltra.css");
+		if ("midnight"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreMidnight.css");
+		if ("rdark"==type)
+			css.setAttribute("href","2019-09-24-code-highlight/shCoreRDark.css");
+		render();
+	} 
+
+	$(document).ready(function (){
+		if(jQuery.cookies.get("lang_type")){
+			$("#code_type").val(jQuery.cookies.get("lang_type"));
+		}
+		$('#to_html').cookieFill(cookieOptions);
+		$('#gutter').cookieFill(cookieOptions);
+		if(jQuery.cookies.get("style_type")){
+			$(":radio").removeAttr("checked");
+			$(":radio[value=" + jQuery.cookies.get("style_type") + "]").attr("checked","checked");
+			change(jQuery.cookies.get("style_type"));
+		}
+		$("#html_div").hide();
+		$("#result_tap").hide();
+		SyntaxHighlighter.all();
+		$(":radio").click(function (){
+			change($(this).val());	
+		});
+		$("#to_html").click(function (){
+			if($("#to_html").attr("checked")){
+				toHTML();
+				$("#html_div").show();
+				$("#result_tap").show();
+			}
+			else{
+				$("#html_div").hide();
+				$("#result_tap").hide();
+			}
+		});
+		$("#gutter").click(function (){
+			render();
+		});
+		$('#to_html').cookieBind();
+		$('#gutter').cookieBind();
+	});
+
+	function render(){
+		$("#result_div").empty();
+		$("#result_div").prepend("<pre>"+encodeHtml($("#code_source").val())+"</pre>");
+		var class_v="brush :"+$("#code_type").val()+";";
+		if("checked"!=$("#gutter").attr("checked"))
+			class_v=class_v+"gutter: false;";
+		$("#result_div pre").addClass(class_v);
+		SyntaxHighlighter.highlight();
+		toHTML();
+		jQuery.cookies.set("style_type",$(':radio[checked="checked"]').val(),cookieOptions);
+		jQuery.cookies.set("lang_type",$('#code_type').val(),cookieOptions);
+	}
+	function toHTML(){
+		var html="<link rel='stylesheet' type='text/css' href='http://gaohr.win/site/special/2019/";
+		html=html+$("#css").attr("href");
+		html=html+"'/>";
+		html=html+$(".syntaxhighlighter").parent().html();
+		$("#html_div textarea").val(html);
+		if($("#to_html").attr("checked"))
+		{
+			$("#html_div").show();
+			$("#result_tap").show();
+		}
+		else{
+			$("#html_div").hide();
+			$("#result_tap").show();
+		}
+	}
+	</script>
+
+	<script src="../../../js/paylist.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../../js/common.js"></script>
+
+</body>
+</html>
