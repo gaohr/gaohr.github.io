@@ -298,7 +298,7 @@ function Declare() {
 		return fmt;
 	}
 	var time = new Date().Format("yyyy-MM-dd HH:mm:ss");
-	$("#declareDiv").html("<p class=\"title\"><i class=\"icon-bullhorn\"></i><b> 博客主题</b></p>" +
+	$("#declareDiv").html("<p class=\"title\"><i class=\"icon-bullhorn\"></i><b> 网站主题</b></p>" +
 		"<div id=\"declare\">" +
 			"<div id=\"content\">" +
 				"<div id=\"code\">" +
