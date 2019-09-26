@@ -135,7 +135,6 @@ function Relatedlinks() {
 			"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"二战全史\" src=\"img/images/BBCWar2.png\">二战全史</a></li><br>" +
 			"<li><a href=\"site/graph/index.html\" target=\"_blank\" title=\"函数绘图\"><img alt=\"函数绘图\" src=\"img/images/Graph.png\">函数绘图</a></li><br>" +
 			"<li><a href=\"site/rainbowposter/index.html\" target=\"_blank\" title=\"制作彩虹特效图片\"><img alt=\"彩虹特效图片\" src=\"img/images/RainbowPoster.png\">彩虹特效图片</a></li><br>" +
-			//"<li><a href=\"site/music/index.html\" target=\"_blank\" title=\"音乐盒\"><img alt=\"\" src=\"img/images/music.png\">音乐盒:休闲时光</a></li><br>" +
 			"<li><a href=\"http://wetlands.top\" target=\"_blank\" title=\"Wetland\"><img alt=\"Wetland\" src=\"img/images/Water.png\">Wetland专题</a></li><br>" +
 			"<li><a href=\"http://jpliu.top\" target=\"_blank\" title=\"LiuJP\"><img alt=\"LiuJP\" src=\"img/images/LiuJP.png\">LiuJP主页</a></li><br>" +
 			"</ul>";
@@ -152,6 +151,7 @@ function Copyright() {
 function Comments() {
 	return "<div class=\"portlet\">" +
 			"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
+			"<p class=\"g-color-red\">温馨提示：近期评论系统图标显示异常，可将鼠标停留在图标上片刻查看登录方式等操作</p>" +
 			"<!-- 来必力City版安装代码 -->" +
 			"<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC8zNzkwMC8xNDQzMA==\">" +
 			"<script type=\"text/javascript\">(function(d, s) {var j, e = d.getElementsByTagName(s)[0];if (typeof LivereTower === 'function') { return; }j = d.createElement(s);j.src = 'https://cdn-city.livere.com/js/embed.dist.js';j.async = true;e.parentNode.insertBefore(j, e);})(document, 'script');</script>" +
