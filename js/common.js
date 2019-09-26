@@ -151,7 +151,7 @@ function Copyright() {
 function Comments() {
 	return "<div class=\"portlet\">" +
 			"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
-			"<p class=\"g-color-red\">温馨提示：近期评论系统图标显示异常，可将鼠标停留在图标上片刻查看登录方式等操作</p>" +
+			"<p class=\"g-color-red\">温馨提示：如遇评论系统图标显示异常，可将鼠标停留在图标片刻查看登录方式等</p>" +
 			"<!-- 来必力City版安装代码 -->" +
 			"<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC8zNzkwMC8xNDQzMA==\">" +
 			"<script type=\"text/javascript\">(function(d, s) {var j, e = d.getElementsByTagName(s)[0];if (typeof LivereTower === 'function') { return; }j = d.createElement(s);j.src = 'https://cdn-city.livere.com/js/embed.dist.js';j.async = true;e.parentNode.insertBefore(j, e);})(document, 'script');</script>" +
