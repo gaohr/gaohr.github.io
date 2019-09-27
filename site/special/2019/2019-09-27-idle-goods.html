@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	
+	<link rel="stylesheet" href="2019-09-27-idle-goods/css/main.css">
+	
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 闲置物品交易</title>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="topicmainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../site/special/index.html"> Topic</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="topicid" style="display:none" value="2019092701">
+				<p class="topic-title">闲置物品交易平台</p>
+				<div style="background:#fff;padding:10px">
+					<p class="g-color-red">个人及周边一些闲置物品，可以交易、置换，不为有所图，只为曾经的所有，得其所哉~ <i class="emo-bg emo-02-06" style="margin-top:-10px"></i></p>
+					<hr>
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span12">
+								<div id="mainContent">
+									<main class="sortable">
+										<div class="container">
+										  <div class="wrapper">
+											<ul class="sortable_nav nav">
+											  <li><a data-sjslink="all" class="nav_link">所有</a></li>
+											  <li><a data-sjslink="cloth" class="nav_link">服饰</a></li>
+											  <li><a data-sjslink="eee" class="nav_link">电器</a></li>
+											  <li><a data-sjslink="life" class="nav_link">家居</a></li>
+											  <li><a data-sjslink="office" class="nav_link">办公</a></li>
+											  <li><a data-sjslink="book" class="nav_link">图书</a></li>
+											  <li><a data-sjslink="food" class="nav_link">食品</a></li>
+											  <li><a data-sjslink="funny" class="nav_link">创意</a></li>
+											</ul>
+											<div id="sortable" class="sjs-default"></div>
+										  </div>
+										</div>
+									</main>
+								</div>
+								<div id="outerdiv">
+									<div id="innerdiv">
+										<img id="bigimg" src="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<hr>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>更多专题</b></p>
+					<br>
+					<div id="topics-right"></div>
+				</div>
+				<hr>
+				<!-- Share -->
+				<div id="shareit"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../js/topicslist.js"></script>
+	<script src="../js/topicsload.js"></script>
+	
+	<script type="text/javascript" src="2019-09-27-idle-goods/js/sortable.min.js"></script>
+	<script type="text/javascript" src="2019-09-27-idle-goods/js/itemlist.js"></script>
+
+	<script>
+		for(var i = 0; i < itemlist.length; i++) {
+		$("#sortable").append("<div data-sjsel='" + itemlist[i].type + "'>" +
+								"<div class='card'>" +
+								"<p class='card_class'>" + itemlist[i].cls + "</p>" +
+								"<img id='" + itemlist[i].id + "' class='card_picture' src='2019-09-27-idle-goods/images/itemimg/" + itemlist[i].img[0] + ".jpg' alt=''>" +
+								"<div class='card-infos'>" +
+								"<p class='card_title'>" + itemlist[i].name + "<span class='card_price'>" + itemlist[i].price + "</span>元<span class='card_postage'>" + itemlist[i].postage + "</span></p>" +
+								"<div class='card_picture_small'>" + getImgs(itemlist[i].id, itemlist[i].img) + "</div><hr>" +
+								"<p class='card_text'>" + itemlist[i].describe + "</p>" +
+								"<p class='card_material'>材质：<span>" + itemlist[i].material + "</span></p>" +
+								"<p class='card_brand'>品牌：<span>" + itemlist[i].brand + "</span></p>" +
+								"<p class='card_new'>新度：<span>" + itemlist[i].hownew + "成新</span></p><hr>" +
+								"<p class='card_seller'>卖家：<img class='seller_avatar' src='2019-09-27-idle-goods/images/avatar/" + itemlist[i].avatar + ".jpg' alt=''><a class='btn-mini' href='###' data-toggle='popover' data-placement='top' title='微信号：<b>" + itemlist[i].seller + "</b>' data-html='true' data-content='微信二维码：<img class=\"card_seller_code\" src=\"2019-09-27-idle-goods/images/avatar/" + itemlist[i].avatar + ".jpg\">'>点击此处<br>加微信联系卖家</a></p>" +
+								"<span class='card_status'><img src='2019-09-27-idle-goods/images/" + itemlist[i].status + ".png' alt='' style='opacity:" + getOpacity(itemlist[i].status) + "'></span>" +
+								"</div>" +
+								"</div>" +
+							"</div>");
+	}
+	
+	function getOpacity(n) {
+		if(n == "sell") {
+			return 0.45
+		} else {
+			return 0.9
+		}
+	}
+	
+	function getImgs(id, imgs) {
+		var re = ""
+		var nImg = imgs.length;
+		for(var i = 0; i < nImg; i++) {
+			re += "<img onclick=\"changeImg('" + id + "', '" + imgs[i] + "')\" src='2019-09-27-idle-goods/images/itemimg/" + imgs[i] + ".jpg' alt=''>"
+		}
+		return re;
+	}
+	
+	function changeImg(id, img) {
+		$("#" + id).attr("src", "2019-09-27-idle-goods/images/itemimg/" + img + ".jpg")
+	}
+	// sortable
+	document.querySelector('#sortable').sortablejs();
+	
+	// 弹出信息
+	$(function () { 
+		$("[data-toggle='popover']").popover();
+	});
+	
+</script>
+<script>  
+    $(function(){  
+        $(".card_picture").click(function(){  
+            var _this = $(this);//将当前的pimg元素作为_this传入函数  
+            imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+        });  
+    });  
+
+    function imgShow(outerdiv, innerdiv, bigimg, _this){  
+        var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+        $(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+      
+            /*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+        $("<img/>").attr("src", src).load(function(){  
+            var windowW = $(window).width();//获取当前窗口宽度  
+            var windowH = $(window).height();//获取当前窗口高度  
+            var realWidth = this.width;//获取图片真实宽度  
+            var realHeight = this.height;//获取图片真实高度  
+            var imgWidth, imgHeight;  
+            var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+              
+            if(realHeight > windowH * scale) {//判断图片高度  
+                imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+                imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+                if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+                    imgWidth = windowW * scale;//再对宽度进行缩放  
+                }  
+            } else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+                imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+                imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+            } else {//如果图片真实高度和宽度都符合要求，高宽不变  
+                imgWidth = realWidth;  
+                imgHeight = realHeight;  
+            }  
+                    $(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+              
+            var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+            var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+            $(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+            $(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+        });  
+          
+        $(outerdiv).click(function(){//再次点击淡出消失弹出层  
+            $(this).fadeOut("fast");  
+        });  
+    }  
+	</script>
+
+	<script src="../../../js/paylist.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../../js/common.js"></script>
+
+</body>
+</html>
