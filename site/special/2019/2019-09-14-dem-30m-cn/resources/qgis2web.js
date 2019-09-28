@@ -32,6 +32,10 @@ map.getView().fit([5320697.062490, 1850319.243836, 18061099.299664, 6548967.5013
 var NO_POPUP = 0
 var ALL_FIELDS = 1
 
+if ($("#map").size() != 0) {
+	$("#loading").hide();
+}
+
 /**
  * Returns either NO_POPUP, ALL_FIELDS or the name of a single field to use for
  * a given layer

@@ -66,6 +66,7 @@
 											  <li><a data-sjslink="food" class="nav_link">食品</a></li>
 											  <li><a data-sjslink="funny" class="nav_link">创意</a></li>
 											</ul>
+											<i id="loading" class="loading-2"></i>
 											<div id="sortable" class="sjs-default"></div>
 										  </div>
 										</div>
@@ -118,7 +119,7 @@
 
 	<script>
 		for(var i = 0; i < itemlist.length; i++) {
-		$("#sortable").append("<div data-sjsel='" + itemlist[i].type + "'>" +
+			$("#sortable").append("<div data-sjsel='" + itemlist[i].type + "'>" +
 								"<div class='card'>" +
 								"<p class='card_class'>" + itemlist[i].cls + "</p>" +
 								"<img id='" + itemlist[i].id + "' class='card_picture' src='2019-09-27-idle-goods/images/itemimg/" + itemlist[i].img[0] + ".jpg' alt=''>" +
@@ -134,8 +135,7 @@
 								"</div>" +
 								"</div>" +
 							"</div>");
-	}
-	
+		}
 	function getOpacity(n) {
 		if(n == "sell") {
 			return 0.45
@@ -159,6 +159,11 @@
 	// sortable
 	document.querySelector('#sortable').sortablejs();
 	
+	if ($("#sortable").html() != "") {
+		$("#loading").hide();
+	}
+	
+	
 	// 弹出信息
 	$(function () { 
 		$("[data-toggle='popover']").popover();
@@ -166,7 +171,7 @@
 	
 </script>
 <script>  
-    $(function(){  
+    $(function(){
         $(".card_picture").click(function(){  
             var _this = $(this);//将当前的pimg元素作为_this传入函数  
             imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  

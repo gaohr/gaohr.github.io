@@ -239,6 +239,12 @@ a:hover {-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decora
 .emo-03-15 {content:url('../img/emoticon/03/03-15.png')}
 .emo-03-16 {content:url('../img/emoticon/03/03-16.png')}
 
+/* Loading */
+.loading-1 {content:url('../img/others/loading-1.gif');width:20%;margin-left:40%}
+.loading-2 {content:url('../img/others/loading-2.gif');width:60%;margin-left:20%}
+.loading-earth {content:url('../img/others/loading-earth.gif');width:30%;margin-left:35%}
+.loading-earth-s {content:url('../img/others/loading-earth-s.gif');width:20%;margin-left:40%}
+
 
 @media (max-width: 2000px) {
 	.menulist {display:none;margin-left:10px}
