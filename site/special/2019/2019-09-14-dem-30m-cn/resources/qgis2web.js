@@ -33,7 +33,7 @@ var NO_POPUP = 0
 var ALL_FIELDS = 1
 
 if ($("#map").size() != 0) {
-	$("#loading").hide();
+	$("#loading-map").hide();
 }
 
 /**
