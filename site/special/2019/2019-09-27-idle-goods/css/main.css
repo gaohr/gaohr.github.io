@@ -3,7 +3,6 @@
 }
 a{
   text-decoration: none;
-  color: #222;
   cursor: pointer;
 }
 hr {
@@ -20,6 +19,7 @@ hr {
 }
 
 .container{
+  color: #222;
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
