@@ -40,10 +40,10 @@ $(document).ready(function() {
 		$("#allblogs").append(addblog(bloglist,i,tags));
 		if(bloglist[i].type == "专业技术") {
 			$("#technology").append(addblog(bloglist,i,tags));
+		} else if(bloglist[i].type == "数据下载") {
+			$("#geodata").append(addblog(bloglist,i,tags));
 		} else if(bloglist[i].type == "随笔小记") {
 			$("#prose").append(addblog(bloglist,i,tags));
-		} else if(bloglist[i].type == "心情寄语") {
-			$("#emotion").append(addblog(bloglist,i,tags));
 		} else if(bloglist[i].type == "奇闻趣问") {
 			$("#interest").append(addblog(bloglist,i,tags));
 		} else {}
@@ -128,9 +128,9 @@ function readtags(n) {
 function blogtype(type) {
 	if(type == "专业技术") {
 		return "tab_4_2";
-	} else if(type == "随笔小记") {
+	} else if(type == "数据下载") {
 		return "tab_4_3";
-	} else if(type == "心情寄语") {
+	} else if(type == "随笔小记") {
 		return "tab_4_4";
 	} else if(type == "奇闻趣问") {
 		return "tab_4_5";
@@ -152,7 +152,7 @@ function getBlogs(tag) {
 	$("#allblogs").html("");
 	$("#technology").html("");
 	$("#prose").html("");
-	$("#emotion").html("");
+	$("#geodata").html("");
 	$("#interest").html("");
 	for(i = 0; i < bloglist.length; i++) {
 		var tags = readtags(i);
@@ -161,10 +161,10 @@ function getBlogs(tag) {
 				$("#allblogs").append(addblog(bloglist,i,tags));
 				if(bloglist[i].type == "专业技术") {
 					$("#technology").append(addblog(bloglist,i,tags));
+				} else if(bloglist[i].type == "数据下载") {
+					$("#geodata").append(addblog(bloglist,i,tags));
 				} else if(bloglist[i].type == "随笔小记") {
 					$("#prose").append(addblog(bloglist,i,tags));
-				} else if(bloglist[i].type == "心情寄语") {
-					$("#emotion").append(addblog(bloglist,i,tags));
 				} else if(bloglist[i].type == "奇闻趣问") {
 					$("#interest").append(addblog(bloglist,i,tags));
 				} else {}
@@ -178,17 +178,17 @@ function getAllBlogs() {
 	$("#allblogs").html("");
 	$("#technology").html("");
 	$("#prose").html("");
-	$("#emotion").html("");
+	$("#geodata").html("");
 	$("#interest").html("");
 	for(i = 0; i < bloglist.length; i++) {
 		var tags = readtags(i);
 		$("#allblogs").append(addblog(bloglist,i,tags));
 		if(bloglist[i].type == "专业技术") {
 			$("#technology").append(addblog(bloglist,i,tags));
+		} else if(bloglist[i].type == "数据下载") {
+			$("#geodata").append(addblog(bloglist,i,tags));
 		} else if(bloglist[i].type == "随笔小记") {
 			$("#prose").append(addblog(bloglist,i,tags));
-		} else if(bloglist[i].type == "心情寄语") {
-			$("#emotion").append(addblog(bloglist,i,tags));
 		} else if(bloglist[i].type == "奇闻趣问") {
 			$("#interest").append(addblog(bloglist,i,tags));
 		} else {}

@@ -1,8 +1,10 @@
 var bloglist = [
 
-{"blogid":"2019091301", "title":"中国土壤类型空间分布数据", "type":"专业技术", "author":"小浪", "content":"中国土壤类型空间分布数据根据全国土壤普查办公室1995年编制并出版的《1：100万中华人民共和国土壤图》数字化生成， 采用了传统的“土壤发生分类”系统，基本覆盖了全国各种类型土壤及其主要属性特征。", "img":"site/blogs/2019/images/SoilType.jpg", "date":"2019-09-13", "href":"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html", "tags":["土壤类型", "数据"]},
+{"blogid":"2019092901", "title":"2000-2013年全球夜间灯光数据", "type":"数据下载", "author":"小浪", "content":"2000年至2013年全球夜间灯光数据，数据来源于美国国防部的极轨卫星计划。DMSP/OLS卫星传感器在夜间工作，能探测到城市灯光甚至小规模居民地、车流等发出的低强度灯光，因此，DMSP/OLS夜间灯光影像成为人类活动研究的良好数据源。", "img":"site/blogs/2019/images/GlobalLight.jpg", "date":"2019-09-29", "href":"http://gaohr.win/site/blogs/2019/2019-09-29-global-light-dmsp.html", "tags":["遥感", "灯光指数", "全球"]},
 
-{"blogid":"2019082001", "title":"中国地面气候资料日值数据集(V3.0)数据提取", "type":"专业技术", "author":"小浪", "content":"中国地面气候资料日值数据集包含了1951年1月以来的气压、气温、降水量、蒸发量、相对湿度、风向风速、日照时数和0cm地温要素的逐日数据。该数据集是以TXT文本格式存储，使用时还需要进一步提取和处理，本文便是利用Python程序进行数据的快速提取。", "img":"site/blogs/2019/images/ClimateData.jpg", "date":"2019-08-20", "href":"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html", "tags":["气象数据", "数据提取", "Python"]},
+{"blogid":"2019091301", "title":"中国土壤类型空间分布数据", "type":"数据下载", "author":"小浪", "content":"中国土壤类型空间分布数据根据全国土壤普查办公室1995年编制并出版的《1：100万中华人民共和国土壤图》数字化生成， 采用了传统的“土壤发生分类”系统，基本覆盖了全国各种类型土壤及其主要属性特征。", "img":"site/blogs/2019/images/SoilType.jpg", "date":"2019-09-13", "href":"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html", "tags":["土壤类型", "数据"]},
+
+{"blogid":"2019082001", "title":"中国地面气候资料日值数据集(V3.0)数据提取", "type":"数据下载", "author":"小浪", "content":"中国地面气候资料日值数据集包含了1951年1月以来的气压、气温、降水量、蒸发量、相对湿度、风向风速、日照时数和0cm地温要素的逐日数据。该数据集是以TXT文本格式存储，使用时还需要进一步提取和处理，本文便是利用Python程序进行数据的快速提取。", "img":"site/blogs/2019/images/ClimateData.jpg", "date":"2019-08-20", "href":"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html", "tags":["气象数据", "数据提取", "Python"]},
 
 {"blogid":"2019052701", "title":"GIS地图制图的艺术之美", "type":"随笔小记", "author":"小浪", "content":"随着大数据、云平台等新技术的发展，传统地图制图学遇到很大的挑战和机遇。面对形式复杂多样、内容丰富多彩的GIS信息，如何利用GIS新兴技术，结合传统的地图学知识和理论，高效制作具有其固有价值而又给人以美感的地图，是新时代GIS地图制图的趋势。", "img":"site/blogs/2019/images/ArcGIS_Art.jpg", "date":"2019-05-27", "href":"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html", "tags":["GIS", "地图", "制图"]},
 
@@ -20,7 +22,7 @@ var bloglist = [
 
 {"blogid":"2018010801", "title":"使用Arcpy进行数据批处理", "type":"专业技术", "author":"小浪", "content":"伴随着时空大数据的到来，海量数据的处理是一个所有科研工作者都无法忽视的重要问题。本文以Arcpy为例，在Python语言开发环境下，通过实际的编程应用，简单介绍空间数据批处理的实现方法。", "img":"site/blogs/2018/images/Arcpy.jpg", "date":"2018-01-08", "href":"http://gaohr.win/site/blogs/2018/2018-01-08-batch-data-process-using-arcpy.html", "tags":["Arcpy", "Python", "数据"]},
 
-{"blogid":"2017041801", "title":"中国国家基础地理信息系统（GIS）数据", "type":"专业技术", "author":"小浪", "content":"中国国家基础地理信息系统（GIS）数据，包括世界行政边界图、中国省级、县级行政界线、河流水系、主要公路铁路等矢量数据", "img":"site/blogs/2017/images/GIS_China.jpg", "date":"2017-04-18", "href":"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html", "tags":["GIS", "数据", "中国"]},
+{"blogid":"2017041801", "title":"中国国家基础地理信息系统（GIS）数据", "type":"数据下载", "author":"小浪", "content":"中国国家基础地理信息系统（GIS）数据，包括世界行政边界图、中国省级、县级行政界线、河流水系、主要公路铁路等矢量数据", "img":"site/blogs/2017/images/GIS_China.jpg", "date":"2017-04-18", "href":"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html", "tags":["GIS", "数据", "中国"]},
 
 {"blogid":"2017041601", "title":"权力的游戏中的冷知识", "type":"奇闻趣问", "author":"小浪", "content":"《冰与火之歌》可不是一部简单的奇幻小说，它蕴含了很多方面的深刻思想。", "img":"site/blogs/2017/images/GameofThrones.jpg", "date":"2017-04-16", "href":"http://gaohr.win/site/blogs/2017/2017-04-16-game-of-thrones-cold-knowledge.html", "tags":["冰与火之歌", "冷知识"]},
 
@@ -30,7 +32,7 @@ var bloglist = [
 
 {"blogid":"2016052701", "title":"ENVI中波段运算（BandMath）工具常用函数及运算符", "type":"专业技术", "author":"小浪", "content":"ENVI Band Math是一个灵活的图像波段处理工具，由于每个用户都有独特的需求，利用此工具用户可以自己定义处理算法，应用到在ENVI打开的波段或整个图像中，用户可以根据需要自定义简单或复杂的处理程序。", "img":"site/blogs/2016/images/BandMath.jpg", "date":"2016-05-27", "href":"http://gaohr.win/site/blogs/2016/2016-05-27-envi-band-math.html", "tags":["ENVI", "遥感", "波段运算"]},
 
-{"blogid":"2016050801", "title":"动物界的母爱", "type":"心情寄语", "author":"（网转）", "content":"其实不止人类，动物间的母子情谊也是非常温馨感人的。所谓“舔犊情深”首先不就是形容动物的爱子之情吗？在母亲节到来之际，就让我们来一睹动物界的“母慈子孝”吧。", "img":"site/blogs/2016/images/Mothersday.jpg", "date":"2016-05-08", "href":"http://gaohr.win/site/blogs/2016/2016-05-08-maternal-love-in-animal-kingdom", "tags":["感怀", "亲情"]},
+{"blogid":"2016050801", "title":"动物界的母爱", "type":"随笔小记", "author":"（网转）", "content":"其实不止人类，动物间的母子情谊也是非常温馨感人的。所谓“舔犊情深”首先不就是形容动物的爱子之情吗？在母亲节到来之际，就让我们来一睹动物界的“母慈子孝”吧。", "img":"site/blogs/2016/images/Mothersday.jpg", "date":"2016-05-08", "href":"http://gaohr.win/site/blogs/2016/2016-05-08-maternal-love-in-animal-kingdom", "tags":["感怀", "亲情"]},
 
 {"blogid":"2016042401", "title":"MongoDB启动成功但连接不上的问题", "type":"专业技术", "author":"小浪", "content":"MongoDB配置完成后，并且正常启动连接了，但有时候突然就连接不上了，重启也无效，尽管重启成功！......捉急", "img":"site/blogs/2016/images/MongoDB.jpg", "date":"2016-04-24", "href":"http://gaohr.win/site/blogs/2016/2016-04-24-error-in-mongodb-config.html", "tags":["MongoDB", "数据库"]},
 
