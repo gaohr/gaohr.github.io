@@ -2,7 +2,7 @@
 *By GaoHR
 */
 body {background-color:#fff;overflow-x:hidden}
-hr {margin-top:10px;margin-bottom:10px}
+hr {margin-top:5px;margin-bottom:5px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/nation70_bg.jpg');background-size:100%;}
