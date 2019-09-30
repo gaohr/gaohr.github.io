@@ -11,7 +11,7 @@ $(document).ready(function() {
 		$("#blog").append(
 			"<div class='row-fluid'>" +
 			"<div class='span12 blog-article'>" +
-			"<a href='" + bloglist[i].href + "' class='blog-title'><i class=' icon-bookmark' style='color:#6a6'> </i>" + bloglist[i].title + "</a>" +
+			"<a href='" + bloglist[i].href + "' class='blog-title'><i class='icon-bookmark'></i> " + bloglist[i].title + "</a>" +
 			"<a href='Blogs.html#" + blogtype(bloglist[i].type) + "' class='blog-type'>[ " + bloglist[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
 			"<div class='span3 blog-tag-data'>" +
@@ -25,9 +25,9 @@ $(document).ready(function() {
 			"</small></li>" +
 			"</ul>" +
 			"</div>" +
-			"<div class='span9 blog-article'>" +
+			"<div class='span9'>" +
 			"<p>" + bloglist[i].content + "</p>" +
-			"<a class='btn-blue' href='" + bloglist[i].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
+			"<a class='btn-blue pull-right readmore' href='" + bloglist[i].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
 			"</div>" +
 			"</div>" +
@@ -110,7 +110,7 @@ function addblog(bloglist,n,tags) {
 		"</li>" +
 		"</ul>" +
 		"<p>" + bloglist[n].content + "</p>" +
-		"<a class='btn-blue btn-mini' href='" + bloglist[n].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
+		"<a class='btn-blue btn-mini pull-right readmore' href='" + bloglist[n].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 		"</div>" +
 		"</div>" +
 		"<div style='background:#ddd;height:2px;margin:10px;'></div>";
