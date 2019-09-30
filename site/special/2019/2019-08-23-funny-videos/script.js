@@ -1,4 +1,4 @@
-var videos = [
+var videos_1 = [
 	{"id":"000", "title":"1岁的年龄，30岁的表情，40岁的眼睛，<br>50岁的神情，60岁的头发，70岁的动作，<br>坐着90岁的轮椅"},
 	{"id":"001", "title":"2018年沙雕视频合集，看一次笑一次！！！"},
 	{"id":"002", "title":"2019年最佳BGM出炉了，<br>哈哈哈哈哈毫无违和感"},
@@ -19,6 +19,8 @@ var videos = [
 	{"id":"017", "title":"吕秀才与精灵王子"},
 	{"id":"018", "title":"猫：为了一口吃的"},
 	{"id":"019", "title":"猫老婆突然回来，猫小三见状立刻逃走"},
+]
+var videos_2 = [
 	{"id":"020", "title":"莫名其妙的鸭子"},
 	{"id":"021", "title":"那些动物教给我们的道理，快进来学习"},
 	{"id":"022", "title":"生活中的那些沙雕动物"},
@@ -35,9 +37,11 @@ var videos = [
 	{"id":"033", "title":"真·全自动鸭刷[允悲]"},
 	{"id":"034", "title":"真是一只硬核的小羊"},
 	{"id":"035", "title":"最蠢翻译官"},
-	{"id":"036", "title":"做作业全凭想象力合集，<br>哈哈哈，真是伤透脑"}
+	{"id":"036", "title":"做作业全凭想象力合集，<br>哈哈哈，真是伤透脑"},
+	{"id":"037", "title":"6个月大的胖橘猫跳到台上的样子"},
+	{"id":"038", "title":"敢抢我吃的，头都给你打飞"},
+	{"id":"039", "title":"哈哈哈哈不要顶狗了"},
 ]
-
 // 打乱数组
 function randomsort(a, b) {
     return Math.random()>.5 ? -1 : 1;
@@ -45,16 +49,22 @@ function randomsort(a, b) {
 }
 
 var index = new Array()
-for(k = 0; k < videos.length; k++) {
+for(k = 0; k < 20; k++) {
 	index.push(k)
 }
 index.sort(randomsort);
 
-for(i = 0; i < videos.length; i++) {
-	$("#video-list").append("<div class=\"video-div\">" +
-								"<p>" + videos[index[i]].title + "</p>" +
+for(i = 0; i < 20; i++) {
+	$("#video-list-1").append("<div class=\"video-div\">" +
+								"<p>" + videos_1[index[i]].title + "</p>" +
 								"<video controls>" +
-									"<source src=\"http://gaohr.win/MyImages/videos/funny_videos/" + videos[index[i]].id + ".mp4\" type='video/mp4'>" +
+									"<source src=\"http://gaohr.win/MyImages/videos/funny_videos/" + videos_1[index[i]].id + ".mp4\" type='video/mp4'>" +
+								"</video>" +
+							"</div>");
+	$("#video-list-2").append("<div class=\"video-div\">" +
+								"<p>" + videos_2[index[i]].title + "</p>" +
+								"<video controls>" +
+									"<source src=\"http://gaohr.win/MyImages/videos/funny_videos/" + videos_2[index[i]].id + ".mp4\" type='video/mp4'>" +
 								"</video>" +
 							"</div>");
 }	
