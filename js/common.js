@@ -235,12 +235,14 @@ function GreatChina() {
 function China70() {
 	$("#others").append("<div id=\"China70\" class=\"greatChina\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-							"<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
+							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
+							"<div class=\"timer-container\"><p>中华人民共和国<br>70周年华诞</p></div>" +
 							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
 						"</div>");
 		$("#China70").show(500);
 		$("#ad-close").click(function() {$("#China70").hide(500);});
 		
+		/*
 		// 倒计时
 		const year = new Date().getFullYear();
 		const firstOfOct = new Date(year, 9, 1).getTime();
@@ -256,6 +258,7 @@ function China70() {
 			let seconds = Math.floor((diff % (1000 * 60)) / 1000);
 			$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");
 		}, 1000);
+		*/
 }
 	
 function HotTopic() {
