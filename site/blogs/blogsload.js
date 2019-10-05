@@ -54,7 +54,6 @@
 			
 	// 在正文中添加作者等信息
 	for(i = 0; i < bloglist.length; i++) {
-	//for(i = 0; i < 3; i++) {
 		var tags = readtags(i);
 		//$("#blogs").append(addblog(bloglist,i,tags));
 		var blogid = $("#blogid").val();
@@ -64,7 +63,7 @@
 	}
 	
 	// 在侧栏中添加最新博客信息
-	for(i = 0; i < 3; i++) {
+	for(i = 0; i < 5; i++) {
 		var tags = readtags(i);
 		$("#blogs").append(addblog(bloglist,i,tags));
 	}
