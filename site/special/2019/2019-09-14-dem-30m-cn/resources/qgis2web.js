@@ -284,7 +284,7 @@ var data_links = {
 	"21":["天津市", "https://pan.baidu.com/s/1zvHhR7_EUs8hJ4d3V6awGA", "g0bz", "Tianjin", "50.23 MB"],
 	"22":["海南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Hainan", ""],
 	"23":["贵州", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guizhou", ""],
-	"24":["广西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangxi", ""],
+	"24":["广西", "https://pan.baidu.com/s/19QJBloTq4HAHj5Xub4q3lg", "jlf9", "Guangxi", "563.87 MB"],
 	"25":["甘肃", "https://pan.baidu.com/s/1zArxvVyOUsXhvlpvty25Rw", "3mzs", "Gansu", "1.10 GB"],
 	"26":["福建", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Fujian", ""],
 	"27":["澳门", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Aomen", ""],
