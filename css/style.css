@@ -1,7 +1,7 @@
 /*
 *By GaoHR
 */
-body {background-color:#fff;overflow-x:hidden;background-image:url('../img/bg-03.jpg');background-size:100%;}
+body {background-color:#fff;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-03.jpg');background-size:100%;}
 hr {margin-top:5px;margin-bottom:15px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
@@ -20,7 +20,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(239,239,239,0.8);z-index:0;height:auto;width:72%;margin-left:14%;}
+.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.8);z-index:0;height:auto;width:72%;margin-left:14%;}
 
 .centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px}
 
