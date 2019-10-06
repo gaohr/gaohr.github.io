@@ -1,7 +1,7 @@
 /*
 *By GaoHR
 */
-body {background-color:#fff;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-03.jpg');background-size:100%;}
+body {background-color:#fff;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-02.jpg');background-size:100%;background-attachment: fixed;}
 hr {margin-top:5px;margin-bottom:15px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
@@ -108,14 +108,14 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 
 .mywarning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
 
-.advertisement {position:fixed;bottom:10px;right:10px;width:360px;height:120px;color:#ccc;background:rgba(25,25,25,0.9);padding:10px;box-shadow:2px 2px 5px #555;display:none}
+.advertisement {position:fixed;bottom:10px;right:10px;width:360px;height:120px;color:#ccc;background:rgba(25,25,25,0.9);padding:10px;display:none}
 .advertisement .ad-title {border-bottom:1px solid #ccc;padding:5px;font-size:1.1em}
 .advertisement .ad-content {padding:5px}
 .advertisement .ad-content a{color:#fd8}
 .advertisement .ad-close span:before {content:"X"}
 .advertisement .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 
-.greatChina {position:fixed;bottom:10px;right:10px;width:180px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;box-shadow:2px 2px 5px #555;display:none}
+.greatChina {position:fixed;bottom:10px;right:10px;width:180px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;display:none}
 .greatChina .ad-close span:before {content:"X"}
 .greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 .flagimg {position:fixed;top:0px;left:30%;width:70px;z-index:9999}
