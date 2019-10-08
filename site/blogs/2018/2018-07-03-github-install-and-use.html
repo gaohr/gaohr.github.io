@@ -51,26 +51,20 @@
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p>作为当前最流行的开源代码库以及版本控制系统，GitHub已经成为了管理软件开发以及发现已有代码的首选方法，目前已托管430+万Git项目，不仅越来越多知名开源项目迁入GitHub，近年流行的开源库往往在GitHub首发。在GitHub中，用户可以十分方便地找到海量的开源代码。</p>
 					<p>本文不对GitHub作详细的讲解，主要介绍一下GitHub的安装以及简单的配置和使用。</p>
-					<ul>
-						<li><a href="#ca">1 安装Git</a></li>
-						<li><a href="#cb">2 从GitHub中克隆代码库</a></li>
-						<li><a href="#cc">3 克隆代码库到本地</a></li>
-						<li><a href="#cd">4 代码同步与更新</a></li>
-					</ul>
-					<p id="ca" style="font-size:1.2em"><b>1 安装Git</b></p>
+					<p id="ca" style="font-size:1.2em"><li><b>1 安装Git</b></li></p>
 					<p>Windows版的Git，直接下载安装即可，安装完成后，从安装目录中找到Git <i class="icon-arrow-right"></i> Git Bash，出现一个类似命令行的窗口，说明Git安装成功了。</p>
 					<p class="imginblog"><img src="2018-07-03-github-install-and-use/img01.jpg"></p>
 					<p>安装完成后，在git bash 命令行里输入：</p>
 					<pre>$ git config --global user.name "Your Name"<br>$ git config --global user.email "email@example.com"</pre>
 					<p>这两行指令表示这台机器上的所有Git仓库都使用这个配置。当然，你也可以为不同的仓库配置不同的用户名，详情请参阅相关文档。</p>
-					<p id="cb" style="font-size:1.2em"><b>2 从GitHub中克隆代码库</b></p>
+					<p id="cb" style="font-size:1.2em"><li><b>2 从GitHub中克隆代码库</b></li></p>
 					<p>配置好本地的Git环境之后，我们需要将代码库从GitHub上克隆到本地计算机。</p>
 					<p>首先在Github.com上注册一个账号。注册好之后，需要设置SSH key，在git bash中输入：</p>
 					<pre>ssh-keygen -t rsa -C youremail@example.com</pre>
 					<p>一路回车，如果顺利的话，在用户目录里能找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的密钥对，前者是私钥，后者是公钥。</p>
 					<p class="imginblog"><img src="2018-07-03-github-install-and-use/img02.jpg" width="50%"></p>
 					<p>然后，登录Github，打开 Account Settings，SSH key页面，点Add SSH Key，Title任意填，在Key文本框里填入id_rsa.pub的内容，点击Add key。目的是使它自动使用你的SSH密钥，而不用每次在<code>git pull</code>或者<code>push</code>时询问你的用户名和密码。</p>
-					<p id="cc" style="font-size:1.2em"><b>3 克隆代码库到本地</b></p>
+					<p id="cc" style="font-size:1.2em"><li><b>3 克隆代码库到本地</b></li></p>
 					<p>切换到目标路径：</p>
 					<pre>cd &lt;destination folder&gt;<br>git clone &lt;SSH key and passphrase from account&gt;</pre>
 					<p>比如：</p>
@@ -85,7 +79,7 @@
 					<p>这样就把本地的本次修改提交到了远程库中。</p>
 					<p class="imginblog"><img src="2018-07-03-github-install-and-use/img03.jpg" width="70%"></p>
 					<p>在个人的GitHub目录下可以看到刚才提交的修改，如果想把这个修改提交到上游远程库，需要点击pull request按钮，然后点击Create pull request，就可以把本次修改提交完成了。而上游远程库拥有者就会收到新的pull request并处理了。</p>
-					<p id="cd" style="font-size:1.2em"><b>4 代码同步与更新</b></p>
+					<p id="cd" style="font-size:1.2em"><li><b>4 代码同步与更新</b></li></p>
 					<p>我们学习了如何将本地的修改提交到源代码库，接下来看看如何将远程代码库中的更新同步到本地库中。</p>
 					<p>比如我在远程库中修改了README.md文件，现在同步到本地。将源代码库更新的内容同步到本地，检查差异，然后再和本机分支合并，输入以下命令：</p>
 					<pre>git fetch upstream<br>git checkout master<br>git merge upstream/master</pre>
