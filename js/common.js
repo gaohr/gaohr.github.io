@@ -9,7 +9,7 @@ $(document).ready(function($) {
 	/*鼠标点击特效*/
 	var a_idx = 0;
    $("body").click(function(e) {
-       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪");
        var $i = $("<span/>").text(arrT[a_idx]);
        a_idx = (a_idx + 1) % arrT.length;
        var x = e.pageX,
@@ -187,7 +187,7 @@ function Dashang() {
 }
 
 function Warning() {
-	return "<br><p class=\"g-color-red\">(原创博客，转载请注明 <a href=\"http://gaohr.win\" class=\"mywarning\" title=\"GaoHR blogs\"><b>GaoHR blogs: http://gaohr.win</b></a>)</p>";
+	return "<br><p class=\"g-color-red\">(原创博客，转载请注明 <a href=\"http://gaohr.win\" class=\"mywarning\" title=\"GaoHR blogs\"><b>GaoHR blogs: http://gaohr.win</b></a>)</p><br><p>关注新浪微博：<a href='http://weibo.com/531239592' target='_blank'>@斩之浪</a></p>";
 }
 	
 function Weather() {
