@@ -6,6 +6,56 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2019-10-05', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201910051.jpg'}, {url:'201910052.jpg'}, {url:'201910053.jpg'}],
+		textcon:'跳个皮筋，忆儿时的欢乐',
+	},
+	{
+		title:'浪花', data:'2019-09-30', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201909301.jpg'}, {url:'201909302.jpg'}, {url:'201909303.jpg'}, {url:'201909304.jpg'}, {url:'201909305.jpg'}],
+		textcon:'70年华诞，处处洋溢着欢畅，夜晚天桥景色不错',
+	},
+	{
+		title:'浪花', data:'2019-09-21', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201909211.jpg'}, {url:'201909212.jpg'}],
+		textcon:'喂猪套餐',
+	},
+	{
+		title:'浪花', data:'2019-09-14', location:'• 中关村公园 北京', type:'image', 
+		src:[{url:'201909141.jpg'}, {url:'201909142.jpg'}, {url:'201909143.jpg'}],
+		textcon:'傍晚出来放风筝，风筝，你怎么了，你起飞啊',
+	},
+	{
+		title:'浪花', data:'2019-09-10', location:'• 遥感所 北京', type:'image', 
+		src:[{url:'201909101.jpg'}, {url:'201909102.jpg'}],
+		textcon:'祝你生日快乐！',
+	},
+	{
+		title:'小浪', data:'2019-08-31', location:'• 南阳 河南', type:'image', 
+		src:[{url:'201908311.jpg'}, {url:'201908312.jpg'}],
+		textcon:'武侯祠一游',
+	},
+	{
+		title:'浪花', data:'2019-08-02', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'201908021.jpg'}, {url:'201908022.jpg'}],
+		textcon:'吃个蛋糕',
+	},
+	{
+		title:'小浪', data:'2019-07-22', location:'• 斯塔万格 挪威', type:'image', 
+		src:[{url:'201907221.jpg'}, {url:'201907222.jpg'}, {url:'201907223.jpg'}, {url:'201907224.jpg'}, {url:'201907225.jpg'}, {url:'201907226.jpg'}, {url:'201907227.jpg'}, {url:'201907228.jpg'}, {url:'201907229.jpg'}, {url:'2019072210.jpg'}],
+		textcon:'挪威滨海小城斯塔万格-Stavanger',
+	},
+	{
+		title:'浪花', data:'2019-07-06', location:'• 莲花池 北京', type:'image', 
+		src:[{url:'201907061.jpg'}, {url:'201907062.jpg'}, {url:'201907063.jpg'}],
+		textcon:'莲花池，微雨',
+	},
+	{
+		title:'浪花', data:'2019-06-29', location:'• 颐和园 北京', type:'image', 
+		src:[{url:'201906291.jpg'}, {url:'201906292.jpg'}, {url:'201906293.jpg'}, {url:'201906294.jpg'}, {url:'201906295.jpg'}, {url:'201906296.jpg'}, {url:'201906297.jpg'}],
+		textcon:'颐和园赏荷花、赏花',
+	},
+	{
 		title:'浪花', data:'2019-06-01', location:'• 遥感所 北京', type:'image', 
 		src:[{url:'201906011.jpg'}, {url:'201906012.jpg'}],
 		textcon:'儿童节，我想要飞 ︿(￣︶￣)︿',

@@ -29,8 +29,8 @@ for(i = 0; i < imgs.length; i++) {
 					"<h2>" + imgs[i].title + "</h2>" + 
 					"<a href='###'>" + getsrcnum(i) + "</a>" +
 					"<p class='textcon' id='p_" + i + "'><span class='yinhao'>" + yinhao_left(imgs[i].type) + "</span>" + imgs[i].textcon + "<span class='yinhao'>" + yinhao_right(imgs[i].type) + "</span></p>" + 
-					"<p style='color:#bbb'>" + imgs[i].location + "</p>" + 
-					"<span class='cd-date' style='color:#bbb'><strong>" + imgs[i].data + "</strong></span>" + 
+					"<p style='color:#fff'>" + imgs[i].location + "</p>" + 
+					"<span class='cd-date'><strong>" + imgs[i].data + "</strong></span>" + 
 				"</div>" + 
 			"</div>"
 		);
@@ -106,7 +106,7 @@ function colorful(){
 	if(i == 6 ) i = 0;
 	setTimeout('colorful()', 2000);
 }
-colorful();
+// colorful();
 
 // 照片边框
 function getColor_rdm(n){

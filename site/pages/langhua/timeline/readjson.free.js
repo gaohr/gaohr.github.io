@@ -29,7 +29,7 @@ for(i = 0; i < imgs.length; i++) {
 					"<h2>" + imgs[i].title + "</h2>" + 
 					"<a href='###'>" + getsrcnum(i) + "</a>" +
 					"<p class='textcon' id='p_" + i + "'><span class='yinhao'>" + yinhao_left(imgs[i].type) + "</span>" + imgs[i].textcon + "<span class='yinhao'>" + yinhao_right(imgs[i].type) + "</span></p>" + 
-					"<p style='color:#aaa'>" + imgs[i].location + "</p>" + 
+					"<p style='color:#fff'>" + imgs[i].location + "</p>" + 
 					"<span class='cd-date'><strong>" + imgs[i].data + "</strong></span>" + 
 				"</div>" + 
 			"</div>"
@@ -91,12 +91,12 @@ var i = 0;
 function getColor(){
 	i++;
 	switch(i){ 
-		case 1:return "#ff0000";
-		case 2:return "#ff6600";
-		case 3:return "#3366cc";
-		case 4:return "#00cc66";
-		case 5:return "#cc66ff";
-		case 6:return "#3366ff";
+		case 1:return "#990000";
+		case 2:return "#995500";
+		case 3:return "#005599";
+		case 4:return "#009955";
+		case 5:return "#550099";
+		case 6:return "#005599";
 		default:return "gray";
 	}
 }
@@ -106,7 +106,7 @@ function colorful(){
 	if(i == 6 ) i = 0;
 	setTimeout('colorful()', 1000);
 }
-colorful();
+// colorful();
 
 // 照片边框
 function getColor_rdm(n){

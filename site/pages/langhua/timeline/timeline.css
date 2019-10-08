@@ -208,9 +208,14 @@ header h1 {
 .cd-timeline-content {
   position: relative;
   margin-left: 60px;
-  background: rgba(0,0,0,0.75);
+  background: rgba(255,255,255,0.5);
   padding: 1em;
-  box-shadow: 3px 3px 5px #555;
+}
+.cd-timeline-content:hover {
+  background: rgba(255,255,255,0.75);
+}
+.cd-timeline-content:hover .cd-date {
+  color:#555;
 }
 .cd-timeline-content:after {
   content: "";
@@ -218,7 +223,7 @@ header h1 {
   clear: both;
 }
 .cd-timeline-content h2 {
-  color: #fee;
+  color: #a00;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 13px;
@@ -257,10 +262,12 @@ header h1 {
   }
   .cd-timeline-content .textcon {
     font-size: 1.5em;
+	color: #222
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 18px;
     font-size: 0.875rem;
+	color: #ccc
   }
 }
 
