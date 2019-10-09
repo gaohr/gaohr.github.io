@@ -261,7 +261,7 @@ function imgshow(id) {
 	
 var data_links = {
 	"0":["浙江", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Zhejiang", ""],
-	"1":["云南", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Yunnan", ""],
+	"1":["云南", "https://pan.baidu.com/s/1QxhHUpeA5KTG93T8JN3Ifw", "nchz", "Yunnan", "1.08 GB"],
 	"2":["新疆", "https://pan.baidu.com/s/1GcGRsm1CBlk1lSCXrvuiJA", "ts9c", "Xinjiang", "2.82 GB"],
 	"3":["香港", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xianggang", ""],
 	"4":["西藏", "https://pan.baidu.com/s/1TYEhrxlAfy3K3rebWxZnWA", "k8d4", "Xizang", "2.69 GB"],
@@ -288,7 +288,7 @@ var data_links = {
 	"25":["甘肃", "https://pan.baidu.com/s/1zArxvVyOUsXhvlpvty25Rw", "3mzs", "Gansu", "1.10 GB"],
 	"26":["福建", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Fujian", ""],
 	"27":["澳门", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Aomen", ""],
-	"28":["安徽", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Anhui", ""],
+	"28":["安徽", "https://pan.baidu.com/s/1A03CKmH__Awy8iQr2mMpFg", "1azd", "Anhui", "302.77 MB"],
 	"29":["上海", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanghai", ""],
 	"30":["重庆", "https://pan.baidu.com/s/12IX8cdN4sdiaUPIbQQ2iZA", "wvbn", "Chongqing", "375.78 MB"],
 	"31":["江苏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangsu", ""],
