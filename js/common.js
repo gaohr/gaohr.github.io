@@ -10,28 +10,11 @@ $(document).ready(function($) {
 	var a_idx = 0;
    $("body").click(function(e) {
        var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪");
-       var $i = $("<span/>").text(arrT[a_idx]);
-       a_idx = (a_idx + 1) % arrT.length;
-       var x = e.pageX,
-       y = e.pageY;
-       $i.css({
-           "z-index": 9999,
-           "top": y - 20,
-           "left": x,
-           "position": "absolute",
-           "font-weight": "bold",
-           "color": "#f65",
-           "font-size": "1.2em"
-       });
+       var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;
+       var x = e.pageX,y = e.pageY;
+       $i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});
        $("body").append($i);
-       $i.animate({
-           "top": y - 180,
-           "opacity": 0
-       },
-       1500,
-       function() {
-           $i.remove();
-       });
+       $i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
    });
    
 	/*滚动监听，显示侧边菜单*/
@@ -172,53 +155,21 @@ function Dashang() {
 						"</span><br>" + 
 						"<div class=\"row-fluid\"><div class=\"span8\"><div class=\"dshstatis\" id=\"dshstatis\"></div></div><div class=\"span4\"><div class=\"dshlist\"><p class=\"dshtext\"></p><hr><div class=\"dshcontent\"></div></div></div></div><hr>");
 	
-			
-	$(".shang_img").hover(function(){
-		$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");
-	}, function(){
-		$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");
-	});
-	$(".shang_img").click(function() {
-		$(".tdcode").toggle(500);
-	});
+	$(".shang_img").hover(
+		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");}, 
+		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");});
+	$(".shang_img").click(function() {$(".tdcode").toggle(300);});
 	var dsh_num = paylist.length;
 	$(".dshtext").append("共 <span><i>" + dsh_num + "</i></span> 人打赏");
-	for(i = 0; i < dsh_num; i++) {
-		$(".dshcontent").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'><b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i></p>");
-	}
-	$(".dshlist").append("<hr><p class=\"dshbottom\">非常感谢您的支持！</p>");
+	for(i = 0; i < dsh_num; i++) {$(".dshcontent").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'><b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i></p>");}
+	$(".dshlist").append("<hr><p class=\"dshbottom\">非常感谢您的支持！<i class=\"emo emo-02-16\" style=\"margin-top:-10px\"></i></p>");
 	var a1 = 0,a2 = 0, a3 = 0, a4 = 0, a5 = 0;
-	for(i = 0; i < dsh_num; i++) {
-		if(paylist[i].amount < 1) {a1 += 1;} else if(paylist[i].amount >= 1 && paylist[i].amount < 2) {a2 += 1;} else if(paylist[i].amount >= 2 && paylist[i].amount < 5) {a3 += 1;} else if(paylist[i].amount >= 5 && paylist[i].amount < 10) {a4 += 1;} else {a5 += 1;}
-	};
-			
+	for(i = 0; i < dsh_num; i++) {if(paylist[i].amount < 1) {a1 += 1;} else if(paylist[i].amount >= 1 && paylist[i].amount < 2) {a2 += 1;} else if(paylist[i].amount >= 2 && paylist[i].amount < 5) {a3 += 1;} else if(paylist[i].amount >= 5 && paylist[i].amount < 10) {a4 += 1;} else {a5 += 1;}};
 	var chart = echarts.init(document.getElementById('dshstatis'));
 	var colorList=['#fee', '#ea4', '#0d0', '#09f', '#f65'];
-		
-	chart.showLoading();
-	chart.hideLoading();
-
-	// 定义图标属性
-	chart.setOption(option = {
-		backgroundColor:"#333",
-		title: {text: '打赏统计',subtext: '打赏金额占比',textStyle: {fontSize:24,fontWeight:'normal',color: ['#fff']},subtextStyle: {color: '#ccc',fontSize: 16},},
-		grid: {bottom: 150,left: 0,right: '2%'},
-		tooltip: {trigger: 'item',formatter: "{b} : {c} ({d}%)"},
-		legend: {type: "scroll",orient: "vartical",top: "center",right: "0",itemWidth: 32,itemHeight: 16,itemGap: 16,textStyle: {color: '#fff',fontSize: 16,fontWeight: 0},data: ['< 1元', '1元 - 2元', '2元 - 5元', '5元 - 10元', '> 10元']},
-		series: [
-			// 主要展示层的
-			{
-				radius: ['30%', '75%'],center: ['42%', '50%'],type: 'pie',
-				itemStyle: {normal: {color: function(params) {return colorList[params.dataIndex]}}},
-				labelLine: {normal: {show:true,length:10,length2:10,lineStyle:{color:'#d3d3d3'},align:'right'},color: "#000",emphasis: {show: true}},
-				label: {normal: {show:true,formatter:"{d}%",textStyle:{fontSize:24}}},
-				data: [{name:'< 1元', value:a1},{name:'1元 - 2元', value:a2},{name:'2元 - 5元', value:a3},{name:'5元 - 10元', value:a4},{name:'> 10元', value:a5}],
-			},
-			// 边框的设置
-			{radius: ['50%', '51%'],center: ['42%', '50%'],type: 'pie',label: {normal: {show: false},emphasis: {show: false}},labelLine: {normal: {show: false},emphasis: {show: false}},animation: false,tooltip: {show: false},itemStyle: {normal: {color:'rgba(255,255,255,0.25)'}},data: [{value: 1,}],},
-			{radius: ['78%', '79%'],center: ['42%', '50%'],type: 'pie',label: {normal: {show: false},emphasis: {show: false}},labelLine: {normal: {show: false},emphasis: {show: false}},animation: false,tooltip: {show: false},itemStyle: {normal: {color:'rgba(255,0,255,0.75)'}},data: [{value: 1,}],}
-		]
-	});
+	chart.showLoading();chart.hideLoading();
+	// 定义图表属性
+	chart.setOption(option = {backgroundColor:"#333",title: {text: '打赏统计',subtext: '打赏金额占比',textStyle: {fontSize:24,fontWeight:'normal',color: ['#fff']},subtextStyle: {color: '#ccc',fontSize: 16},},grid: {bottom: 150,left: 0,right: '2%'},tooltip: {trigger: 'item',formatter: "{b} : {c} ({d}%)"},legend: {type: "scroll",orient: "vartical",top: "center",right: "0",itemWidth: 32,itemHeight: 16,itemGap: 16,textStyle: {color: '#fff',fontSize: 16,fontWeight: 0},data: ['< 1元', '1元 - 2元', '2元 - 5元', '5元 - 10元', '> 10元']},series: [{radius: ['30%', '75%'],center: ['42%', '50%'],type: 'pie',itemStyle: {normal: {color: function(params) {return colorList[params.dataIndex]}}},labelLine: {normal: {show:true,length:10,length2:10,lineStyle:{color:'#d3d3d3'},align:'right'},color: "#000",emphasis: {show: true}},label: {normal: {show:true,formatter:"{d}%",textStyle:{fontSize:24}}},data: [{name:'< 1元', value:a1},{name:'1元 - 2元', value:a2},{name:'2元 - 5元', value:a3},{name:'5元 - 10元', value:a4},{name:'> 10元', value:a5}],},{radius: ['50%', '51%'],center: ['42%', '50%'],type: 'pie',label: {normal: {show: false},emphasis: {show: false}},labelLine: {normal: {show: false},emphasis: {show: false}},animation: false,tooltip: {show: false},itemStyle: {normal: {color:'rgba(255,255,255,0.25)'}},data: [{value: 1,}],},{radius: ['78%', '79%'],center: ['42%', '50%'],type: 'pie',label: {normal: {show: false},emphasis: {show: false}},labelLine: {normal: {show: false},emphasis: {show: false}},animation: false,tooltip: {show: false},itemStyle: {normal: {color:'rgba(255,0,255,0.75)'}},data: [{value: 1,}],}]});
 }
 
 function Warning() {
@@ -229,21 +180,7 @@ function Weather() {
 	loc = returnCitySN.cip;
 	key = "422ad66c7a314de9b05f91cf70ec2c18";
 	re = ""
-	$.ajax({
-		url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,
-		dataType:"json",
-		async:false,
-		success:function(data){
-			if(data.HeWeather6[0].status == "ok") {
-				re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";
-			} else {
-				re += "N/A";
-			}
-		},
-		error:function(){
-			re += "N/A";
-		}
-	});
+	$.ajax({url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,dataType:"json",async:false,success:function(data){if(data.HeWeather6[0].status == "ok") {re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";} else {re += "N/A";}},error:function(){re += "N/A";}});
 	return re;
 }
 	
@@ -305,34 +242,16 @@ function HotTopic() {
 						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"</ul>" +
-						"</div>" + 
-						"<script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
-			
-	if(document.getElementById("notice01")){
-		var scrollup = new ScrollText("notice01");
-		scrollup.LineHeight = 36;
-		scrollup.Amount = 1;
-		scrollup.Delay = 20;
-		scrollup.Start();
-		scrollup.Direction = "down";
-	}
+						"</ul></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
+	
+	if(document.getElementById("notice01")){var scrollup = new ScrollText("notice01");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = "down";}
 }
 	
 function Declare() {
 	Date.prototype.Format = function (fmt) {
-		var o = {
-			"M+": this.getMonth() + 1, //月份 
-			"d+": this.getDate(), //日 
-			"H+": this.getHours(), //小时 
-			"m+": this.getMinutes(), //分 
-			"s+": this.getSeconds(), //秒 
-			"q+": Math.floor((this.getMonth() + 3) / 3), //季度 
-			"S": this.getMilliseconds() //毫秒 
-		};
-		if (/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
-		for (var k in o)
-		if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+		var o = {"M+": this.getMonth() + 1,"d+": this.getDate(),"H+": this.getHours(),"m+": this.getMinutes(),"s+": this.getSeconds(),"q+": Math.floor((this.getMonth() + 3) / 3),"S": this.getMilliseconds()};
+		if(/(y+)/.test(fmt)) fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+		for (var k in o)if (new RegExp("(" + k + ")").test(fmt)) fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
 		return fmt;
 	}
 	var time = new Date().Format("yyyy-MM-dd HH:mm:ss");
