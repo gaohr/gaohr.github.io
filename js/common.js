@@ -170,20 +170,55 @@ function Dashang() {
 						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
 						"<p style='color:#fff'>扫码打赏，建议金额：1-10元</p>" +
 						"</span><br>" + 
-						"<div class=\"dshlist\"></div><hr>");
+						"<div class=\"row-fluid\"><div class=\"span8\"><div class=\"dshstatis\" id=\"dshstatis\"></div></div><div class=\"span4\"><div class=\"dshlist\"><p class=\"dshtext\"></p><hr><div class=\"dshcontent\"></div></div></div></div><hr>");
 	
+			
+	$(".shang_img").hover(function(){
+		$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");
+	}, function(){
+		$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");
+	});
+	$(".shang_img").click(function() {
+		$(".tdcode").toggle(500);
+	});
+	var dsh_num = paylist.length;
+	$(".dshtext").append("共 <span><i>" + dsh_num + "</i></span> 人打赏");
+	for(i = 0; i < dsh_num; i++) {
+		$(".dshcontent").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'><b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i></p>");
+	}
+	$(".dshlist").append("<hr><p class=\"dshbottom\">非常感谢您的支持！</p>");
+	var a1 = 0,a2 = 0, a3 = 0, a4 = 0, a5 = 0;
+	for(i = 0; i < dsh_num; i++) {
+		if(paylist[i].amount < 1) {a1 += 1;} else if(paylist[i].amount >= 1 && paylist[i].amount < 2) {a2 += 1;} else if(paylist[i].amount >= 2 && paylist[i].amount < 5) {a3 += 1;} else if(paylist[i].amount >= 5 && paylist[i].amount < 10) {a4 += 1;} else {a5 += 1;}
+	};
+			
+	var chart = echarts.init(document.getElementById('dshstatis'));
+	var colorList=['#fee', '#ea4', '#0d0', '#09f', '#f65'];
+		
+	chart.showLoading();
+	chart.hideLoading();
 
-			$(".shang_img").hover(function(){
-				$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");
-			}, function(){
-				$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");
-			});
-			$(".shang_img").click(function() {
-				$(".tdcode").toggle(500);
-			});
-			for(i = 0; i < paylist.length; i++) {
-				$(".dshlist").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'>￥<b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i><span class='msg' title='" + paylist[i].msg + "'><i class='icon-comment'></i></span></p>")
-			};
+	// 定义图标属性
+	chart.setOption(option = {
+		backgroundColor:"#333",
+		title: {text: '打赏统计',subtext: '打赏金额占比',textStyle: {fontSize:24,fontWeight:'normal',color: ['#fff']},subtextStyle: {color: '#ccc',fontSize: 16},},
+		grid: {bottom: 150,left: 0,right: '2%'},
+		tooltip: {trigger: 'item',formatter: "{b} : {c} ({d}%)"},
+		legend: {type: "scroll",orient: "vartical",top: "center",right: "0",itemWidth: 32,itemHeight: 16,itemGap: 16,textStyle: {color: '#fff',fontSize: 16,fontWeight: 0},data: ['< 1元', '1元 - 2元', '2元 - 5元', '5元 - 10元', '> 10元']},
+		series: [
+			// 主要展示层的
+			{
+				radius: ['30%', '75%'],center: ['42%', '50%'],type: 'pie',
+				itemStyle: {normal: {color: function(params) {return colorList[params.dataIndex]}}},
+				labelLine: {normal: {show:true,length:10,length2:10,lineStyle:{color:'#d3d3d3'},align:'right'},color: "#000",emphasis: {show: true}},
+				label: {normal: {show:true,formatter:"{d}%",textStyle:{fontSize:24}}},
+				data: [{name:'< 1元', value:a1},{name:'1元 - 2元', value:a2},{name:'2元 - 5元', value:a3},{name:'5元 - 10元', value:a4},{name:'> 10元', value:a5}],
+			},
+			// 边框的设置
+			{radius: ['50%', '51%'],center: ['42%', '50%'],type: 'pie',label: {normal: {show: false},emphasis: {show: false}},labelLine: {normal: {show: false},emphasis: {show: false}},animation: false,tooltip: {show: false},itemStyle: {normal: {color:'rgba(255,255,255,0.25)'}},data: [{value: 1,}],},
+			{radius: ['78%', '79%'],center: ['42%', '50%'],type: 'pie',label: {normal: {show: false},emphasis: {show: false}},labelLine: {normal: {show: false},emphasis: {show: false}},animation: false,tooltip: {show: false},itemStyle: {normal: {color:'rgba(255,0,255,0.75)'}},data: [{value: 1,}],}
+		]
+	});
 }
 
 function Warning() {
