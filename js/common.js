@@ -394,7 +394,7 @@ function findblog(key, bloglist,n, type) {
 // Pageview statistics
 function PageViews() {
 	if($(".blogtopinfo")) {
-		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本文阅读量 <span class='g-color-green' id='busuanzi_value_page_pv'></span> 次</span><br><hr>");
+		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本文阅读量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span><br><hr>");
 	}
 	
 	if($(".topictopinfo")) {

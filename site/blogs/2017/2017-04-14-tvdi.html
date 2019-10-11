@@ -51,19 +51,14 @@
 					<h2><small>Temperature Vegetation Dryness Index(TVDI) and implementation based on Python program</small></h2>
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p><b>温度植被干旱指数（Temperature Vegetation Dryness Index，TVDI）</b>是一种基于光学与热红外遥感通道数据进行植被覆盖区域表层土壤水分反演的方法。作为同时与归一化植被指数(NDVI)和地表温度(LST)相关的温度植被干旱指数(TVDI)可用于干旱监测，尤其是监测特定年内某一时期整个区域的相对干旱程度，并可用于研究干旱程度的空间变化特征。</p>
-					<ul>
-						<li><a href="#ca">（一） TVDI计算公式</a></li>
-						<li><a href="#cb">（二） 干湿边拟合</a></li>
-						<li><a href="#cc">（三） TVDI计算的Python实现</a></li>
-					</ul>
-					<p id="ca" style="font-size:1.2em"><b>（一） TVDI计算公式</b></p>
+					<p><b><li>TVDI计算公式</li></b></p>
 					<p>温度植被干旱指数的公式如下：</p>
 					<p class="imginblog"><img src="2017-04-14-tvdi/eq_tvdi.png" style="width:45%"></p>
 					<p>其中，湿边方程<pre>LSTsmin = a * NDVI + b</pre>
 					<p>干边方程<pre>LSTsmax = c * NDVI + d</pre></p>
 					<p>TVDI的值域为[0, 1]。</p>
 					<p>TVDI的值越大，表示土壤湿度越低，TVDI越小，表示土壤湿度越高。</p>
-					<p id="cb" style="font-size:1.2em"><b>（二） 干湿边拟合</b></p>
+					<p><b><li>干湿边拟合</li></b></p>
 					<p>在TVDI指数计算的过程中，需要拟合干边方程和湿边方程，其中还需要用户自己设置参数，是比较重要的计算步骤。拟合的关键是怎么找到有效的NDVI（相当于自变量X）和LST（相当于因变量Y）这两组相对应的数据，本文针对干湿边的拟合过程做一下详细的说明。</p>
 					<p>根据输入的NDVI和LST数据，以NDVI为横坐标，LST为纵坐标，可以得到NDVI-LST的散点图。根据NDVI-LST的散点图，就能得到每个NDVI值对应的LST的最大最小值，也就是我们要求的干边和湿边。具体步骤如下：</p>
 					<p>1）将NDVI等分为100份，分别为0~0.01，0.01~0.02，，，，，0.99~1.0（可根据具体情况进行修改）；</p>
@@ -71,7 +66,7 @@
 					<p>3）将100份的LST栅格值分别求出最大值和最小值，就能得到NDVI-LST对应的干湿边的散点图，如下图所示；</p>
 					<p>4）设置NDVI的有效值范围（通常为0.2~0.8），选取有效范围内的数值进行线性拟合，得到干湿边方程。</p>
 					<p class="imginblog"><img src="2017-04-14-tvdi/dry_wet.jpg"></p>
-					<p id="cc" style="font-size:1.2em"><b>（三） Python实现TVDI计算</b></p>
+					<p><b><li>Python实现TVDI计算</li></b></p>
 					<p>TVDI模型对干旱监测方面有重要的意义，但是目前的GIS和遥感软件中缺少计算TVDI的工具，要实现这个模型需要编程，做起来十分麻烦。有人利用ENVI/IDL来计算TVDI，开发出了TVDI计算补丁，但用起来很不灵活，有时还会出现未知错误，给用户造成很多困扰。</p>
 					<p>因此，本博客基于Python语言实现了TVDI的计算，详细代码如下：</p>
 					<p>导入必要的库</p>

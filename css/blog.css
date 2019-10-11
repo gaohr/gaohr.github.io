@@ -50,7 +50,7 @@ Blog Page
 .blogcontent .imginblog img {max-width:800px;}
 .blogcontent .codeblock {background-color:#fff; border:1px solid #ccc; border-radius:5px}
 .blogcontent .codeblock p {line-height:9px !important;}
-.blogtopinfo {font-size:12px;color:#555;text-align:center !important}
+.blogtopinfo {font-size:14px;color:#555;text-align:center !important}
 .blogtopinfo > span > a {margin-left:5px}
 .greencode {color:#080;}
 .blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
