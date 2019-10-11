@@ -266,7 +266,7 @@ function Declare() {
 					"<span class=\"comments space\">* Date: " + time + "</span><br>" +
 					"<span class=\"comments space\">*/</span><br>" +
 					"<span class=\"var\">var</span> 博客主题 = <span class=\"string\">'GIS、遥感学科方向,个人综合类博客'</span><br>" +
-					"<span class=\"var\">var</span> 网站主旨 = <span class=\"string\">'记录生活，记录学习'</span><br> " +
+					"<span class=\"var\">var</span> 网站主旨 = <span class=\"string\">'记录生活，记录学习，分享快乐'</span><br> " +
 				"</div>" +
 			"</div>" +
 		"</div>");
@@ -394,11 +394,11 @@ function findblog(key, bloglist,n, type) {
 // Pageview statistics
 function PageViews() {
 	if($(".blogtopinfo")) {
-		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本文阅读量<span class='g-color-green' id='busuanzi_value_page_pv'></span>次</span><br><hr>");
+		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本文阅读量 <span class='g-color-green' id='busuanzi_value_page_pv'></span> 次</span><br><hr>");
 	}
 	
 	if($(".topictopinfo")) {
-		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本专题访问量<span class='g-color-green' id='busuanzi_value_page_pv'></span>次</span>");
+		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本专题访问量 <span class='g-color-green' id='busuanzi_value_page_pv'></span> 次</span>");
 	}
 }
 	

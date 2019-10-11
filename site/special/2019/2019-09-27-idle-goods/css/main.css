@@ -112,6 +112,7 @@ hr {
   top:0;
   right:10px;
   font-size: 1.2em;
+  text-indent: 0em !important;
   padding: 10px 5px;
   font-weight: 500;
   line-height: 1.5;
