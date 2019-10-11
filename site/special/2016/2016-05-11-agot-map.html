@@ -49,96 +49,96 @@
 				</ol>
 				<!--正文-->
 				<input id="topicid" style="display:none" value="2016051101">
-				<p class="topic-title">冰与火之歌世界电子地图</p>
-				<span class="topictopinfo pull-right"></span>
-				<img src="./2016-05-11-agot-map/img/trim.png">
-				<hr>
-				<div class="row-fluid">
-					<div class="span11">
-						<div id="map">
-							<div id="popup" class="ol-popup">
-								<a href="#" id="popup-closer" class="ol-popup-closer"></a>
-								<div id="popup-content"></div>
-							</div>
-							<div id="popup-c" class="">
-								<a href="#" id="popup-closer-c" class=""></a>
-								<div id="popup-content-c"></div>
-							</div>
-						</div>
-					</div>
-					<div class="span1">
-						<p>菜单选项</p>
-						<div class="lyrmenu">
-        					<nav id="gooey-v">
-								<input type="checkbox" class="menu-open" name="menu-open" id="menu-open" />
-								<label class="open-button" for="menu-open">
-									<span class="burger burger-1"></span>
-									<span class="burger burger-2"></span>
-									<span class="burger burger-3"></span>
-								</label>
-								<a id="lyrMgt" href="#" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="图层显示"><i class="icon-list-ul"></i></a>
-								<a id="pRoute" href="#" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="人物路线"><i class="icon-random"></i></a>
-								<a id="fullScreen" href="2016-05-11-agot-map-full-screen.html" target="_blank" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="全屏浏览"><i class="icon-resize-full"></i></a>
-								<a id="test" href="#" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="..."><i class=""></i></a>
-							</nav>
-        				</div>
-						<div class="panel" id="layerslist" style="display:none;z-index:100;position:absolute; top:24%; left:58%;">
-							<div class="panel-title"><i class="icon-list-ul"></i>&nbsp;&nbsp;图层显示 Layers contral<span id="close-layerslist"><i class="icon-remove"></i></span></div>
-							<div class="panel-body">
-								<div class="layerslist">
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="wuwang" id="wuwang">五王之战&nbsp;<img src="./2016-05-11-agot-map/img/wuwang.png" width="12"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="event" id="event">事件&nbsp;<img src="./2016-05-11-agot-map/img/event.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="battle" id="battle">战争&nbsp;<img src="./2016-05-11-agot-map/img/war.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="ocean" id="ocean">海洋&nbsp;<img src="./2016-05-11-agot-map/img/ocean.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="island" id="island">岛屿&nbsp;<img src="./2016-05-11-agot-map/img/island.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="gulf" id="gulf">海湾&nbsp;<img src="./2016-05-11-agot-map/img/gulf.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="cities" id="cities">城市&nbsp;<img src="./2016-05-11-agot-map/img/city.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="castles" id="castles">城堡&nbsp;<img src="./2016-05-11-agot-map/img/castle.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="road" id="road">道路&nbsp;<img src="./2016-05-11-agot-map/img/road.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="river" id="river">河流&nbsp;<img src="./2016-05-11-agot-map/img/river.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="relic" id="relic">遗迹&nbsp;<img src="./2016-05-11-agot-map/img/relic.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="place" id="place">地名&nbsp;<img src="./2016-05-11-agot-map/img/place.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="mountain" id="mountain">山脉&nbsp;<img src="./2016-05-11-agot-map/img/mountain.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="forest" id="forest">森林&nbsp;<img src="./2016-05-11-agot-map/img/forest.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="zone" id="zone">区域&nbsp;<img src="./2016-05-11-agot-map/img/zone.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="TheWall" id="TheWall">绝境长城&nbsp;<img src="./2016-05-11-agot-map/img/Wall.png" width="15"></label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="Westeros" id="Westeros">维斯特洛</label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="Essos" id="Essos">厄索斯</label></div>
-									<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="Sothoryos" id="Sothoryos">索斯罗斯</label></div>
+				<div class="topiccontent">
+					<p class="topic-title">冰与火之歌世界电子地图 <span class="topictopinfo"></span></p>
+					<img src="./2016-05-11-agot-map/img/trim.png">
+					<hr>
+					<div class="row-fluid">
+						<div class="span11">
+							<div id="map">
+								<div id="popup" class="ol-popup">
+									<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+									<div id="popup-content"></div>
+								</div>
+								<div id="popup-c" class="">
+									<a href="#" id="popup-closer-c" class=""></a>
+									<div id="popup-content-c"></div>
 								</div>
 							</div>
 						</div>
-						
-						<div class="panel" id="personae" style="display:none;z-index:100;position:absolute; top:30%; left:58%;">
-							<div class="panel-title"><i class="icon-user"></i>&nbsp;&nbsp;人物路线 Personae route<span id="close-personae"><i class="icon-remove"></i></span></div>
-							<div class="panel-body">
-								<div class="personae">
-									<div class="gridn"><figure class="effect-sadie" id="JonSnow"><img src="./2016-05-11-agot-map/img/personae/JonSnow.png"/><figcaption><h6>琼恩·雪诺<br>JonSnow</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Daenerys"><img src="./2016-05-11-agot-map/img/personae/Daenerys.png"/><figcaption><h6>丹妮莉丝<br>Daenerys</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Eddard"><img src="./2016-05-11-agot-map/img/personae/Eddard.png"/><figcaption><h6>艾德史塔克<br>Eddard</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Baelish"><img src="./2016-05-11-agot-map/img/personae/Baelish.png"/><figcaption><h6>贝里席<br>Baelish</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Tyrion"><img src="./2016-05-11-agot-map/img/personae/Tyrion.png"/><figcaption><h6>提利昂<br>Tyrion</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Cersei"><img src="./2016-05-11-agot-map/img/personae/Cersei.png"/><figcaption><h6>瑟曦<br>Cersei</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Jaime"><img src="./2016-05-11-agot-map/img/personae/Jaime.png"/><figcaption><h6>詹姆<br>Jaime</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Arya"><img src="./2016-05-11-agot-map/img/personae/Arya.png"/><figcaption><h6>艾莉亚<br>Arya</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Brandon"><img src="./2016-05-11-agot-map/img/personae/Brandon.png"/><figcaption><h6>布兰登<br>Brandon</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Sansa"><img src="./2016-05-11-agot-map/img/personae/Sansa.png"/><figcaption><h6>珊莎<br>Sansa</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Clegane"><img src="./2016-05-11-agot-map/img/personae/Clegane.png"/><figcaption><h6>克里冈<br>Clegane</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Brienne"><img src="./2016-05-11-agot-map/img/personae/Brienne.png"/><figcaption><h6>布雷妮<br>Brienne</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Theon"><img src="./2016-05-11-agot-map/img/personae/Theon.png"/><figcaption><h6>席恩<br>Theon</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Samwell"><img src="./2016-05-11-agot-map/img/personae/Samwell.png"/><figcaption><h6>山姆威尔<br>Samwell</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Ramsay"><img src="./2016-05-11-agot-map/img/personae/Ramsay.png"/><figcaption><h6>拉姆斯<br>Ramsay</h6></figcaption></figure></div>
-									<div class="gridn"><figure class="effect-sadie" id="Melisandre"><img src="./2016-05-11-agot-map/img/personae/Melisandre.png"/><figcaption><h6>梅丽珊卓<br>Melisandre</h6></figcaption></figure></div>
+						<div class="span1">
+							<p>菜单选项</p>
+							<div class="lyrmenu">
+								<nav id="gooey-v">
+									<input type="checkbox" class="menu-open" name="menu-open" id="menu-open" />
+									<label class="open-button" for="menu-open">
+										<span class="burger burger-1"></span>
+										<span class="burger burger-2"></span>
+										<span class="burger burger-3"></span>
+									</label>
+									<a id="lyrMgt" href="#" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="图层显示"><i class="icon-list-ul"></i></a>
+									<a id="pRoute" href="#" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="人物路线"><i class="icon-random"></i></a>
+									<a id="fullScreen" href="2016-05-11-agot-map-full-screen.html" target="_blank" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="全屏浏览"><i class="icon-resize-full"></i></a>
+									<a id="test" href="#" class="gooey-menu-item" data-toggle="tooltip" data-placement="left" title="..."><i class=""></i></a>
+								</nav>
+							</div>
+							<div class="panel" id="layerslist" style="display:none;z-index:100;position:absolute; top:24%; left:58%;">
+								<div class="panel-title"><i class="icon-list-ul"></i>&nbsp;&nbsp;图层显示 Layers contral<span id="close-layerslist"><i class="icon-remove"></i></span></div>
+								<div class="panel-body">
+									<div class="layerslist">
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="wuwang" id="wuwang">五王之战&nbsp;<img src="./2016-05-11-agot-map/img/wuwang.png" width="12"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="event" id="event">事件&nbsp;<img src="./2016-05-11-agot-map/img/event.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="battle" id="battle">战争&nbsp;<img src="./2016-05-11-agot-map/img/war.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="ocean" id="ocean">海洋&nbsp;<img src="./2016-05-11-agot-map/img/ocean.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="island" id="island">岛屿&nbsp;<img src="./2016-05-11-agot-map/img/island.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="gulf" id="gulf">海湾&nbsp;<img src="./2016-05-11-agot-map/img/gulf.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="cities" id="cities">城市&nbsp;<img src="./2016-05-11-agot-map/img/city.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="castles" id="castles">城堡&nbsp;<img src="./2016-05-11-agot-map/img/castle.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="road" id="road">道路&nbsp;<img src="./2016-05-11-agot-map/img/road.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="river" id="river">河流&nbsp;<img src="./2016-05-11-agot-map/img/river.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="relic" id="relic">遗迹&nbsp;<img src="./2016-05-11-agot-map/img/relic.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="place" id="place">地名&nbsp;<img src="./2016-05-11-agot-map/img/place.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="mountain" id="mountain">山脉&nbsp;<img src="./2016-05-11-agot-map/img/mountain.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="forest" id="forest">森林&nbsp;<img src="./2016-05-11-agot-map/img/forest.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="zone" id="zone">区域&nbsp;<img src="./2016-05-11-agot-map/img/zone.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="TheWall" id="TheWall">绝境长城&nbsp;<img src="./2016-05-11-agot-map/img/Wall.png" width="15"></label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="Westeros" id="Westeros">维斯特洛</label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="Essos" id="Essos">厄索斯</label></div>
+										<div class="checkbox layer-cb"><label><input type="checkbox" value="" checked="true" name="Sothoryos" id="Sothoryos">索斯罗斯</label></div>
+									</div>
 								</div>
 							</div>
-							<div class="panel-bottom"><a class="btn btn-warning btn-small" id="clearRoute"><i class="icon-repeat"></i>&nbsp;&nbsp;清空路径</a></div>
-						</div>
-						
-						
+							
+							<div class="panel" id="personae" style="display:none;z-index:100;position:absolute; top:30%; left:58%;">
+								<div class="panel-title"><i class="icon-user"></i>&nbsp;&nbsp;人物路线 Personae route<span id="close-personae"><i class="icon-remove"></i></span></div>
+								<div class="panel-body">
+									<div class="personae">
+										<div class="gridn"><figure class="effect-sadie" id="JonSnow"><img src="./2016-05-11-agot-map/img/personae/JonSnow.png"/><figcaption><h6>琼恩·雪诺<br>JonSnow</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Daenerys"><img src="./2016-05-11-agot-map/img/personae/Daenerys.png"/><figcaption><h6>丹妮莉丝<br>Daenerys</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Eddard"><img src="./2016-05-11-agot-map/img/personae/Eddard.png"/><figcaption><h6>艾德史塔克<br>Eddard</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Baelish"><img src="./2016-05-11-agot-map/img/personae/Baelish.png"/><figcaption><h6>贝里席<br>Baelish</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Tyrion"><img src="./2016-05-11-agot-map/img/personae/Tyrion.png"/><figcaption><h6>提利昂<br>Tyrion</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Cersei"><img src="./2016-05-11-agot-map/img/personae/Cersei.png"/><figcaption><h6>瑟曦<br>Cersei</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Jaime"><img src="./2016-05-11-agot-map/img/personae/Jaime.png"/><figcaption><h6>詹姆<br>Jaime</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Arya"><img src="./2016-05-11-agot-map/img/personae/Arya.png"/><figcaption><h6>艾莉亚<br>Arya</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Brandon"><img src="./2016-05-11-agot-map/img/personae/Brandon.png"/><figcaption><h6>布兰登<br>Brandon</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Sansa"><img src="./2016-05-11-agot-map/img/personae/Sansa.png"/><figcaption><h6>珊莎<br>Sansa</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Clegane"><img src="./2016-05-11-agot-map/img/personae/Clegane.png"/><figcaption><h6>克里冈<br>Clegane</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Brienne"><img src="./2016-05-11-agot-map/img/personae/Brienne.png"/><figcaption><h6>布雷妮<br>Brienne</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Theon"><img src="./2016-05-11-agot-map/img/personae/Theon.png"/><figcaption><h6>席恩<br>Theon</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Samwell"><img src="./2016-05-11-agot-map/img/personae/Samwell.png"/><figcaption><h6>山姆威尔<br>Samwell</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Ramsay"><img src="./2016-05-11-agot-map/img/personae/Ramsay.png"/><figcaption><h6>拉姆斯<br>Ramsay</h6></figcaption></figure></div>
+										<div class="gridn"><figure class="effect-sadie" id="Melisandre"><img src="./2016-05-11-agot-map/img/personae/Melisandre.png"/><figcaption><h6>梅丽珊卓<br>Melisandre</h6></figcaption></figure></div>
+									</div>
+								</div>
+								<div class="panel-bottom"><a class="btn btn-warning btn-small" id="clearRoute"><i class="icon-repeat"></i>&nbsp;&nbsp;清空路径</a></div>
+							</div>
+							
+							
 
+						</div>
 					</div>
 				</div>
-				
 				<!-- Da shang -->
 				<div id="dashang" class="dashang"></div>
 				<!-- Comments -->
