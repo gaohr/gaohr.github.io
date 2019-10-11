@@ -98,7 +98,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .dshstatis {width:100%;height:280px;padding:5px}
 .dshlist {background:#333;width:98%;height:280px;color:#aaa;padding:5px}
 .dshlist .dshtext {color:#eee;font-size:1.2em;border-bottom:0}
-.dshlist .dshbottom span {color:#f60;font-size:1.2em}
+.dshlist .dshtext span {color:#f60;font-size:1.2em}
 .dshlist .dshcontent {height:185px;overflow-y:scroll;}
 .dshlist .dshcontent p {width:96%;margin-left:2%;margin:2px;border-bottom:1px dashed #aaa;margin:0 2px}
 .dshlist .dshcontent p > i {color:#f40;margin-right:5px}
