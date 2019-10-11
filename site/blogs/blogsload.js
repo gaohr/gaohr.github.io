@@ -58,7 +58,7 @@
 		//$("#blogs").append(addblog(bloglist,i,tags));
 		var blogid = $("#blogid").val();
 		if(bloglist[i].blogid == blogid) {
-			$("#blogtopinfo").append("[" + bloglist[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + bloglist[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags + "<br><hr>");
+			$("#blogtopinfo").append("[" + bloglist[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + bloglist[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags);
 		}
 	}
 	
