@@ -160,7 +160,7 @@ function Dashang() {
 		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");});
 	$(".shang_img").click(function() {$(".tdcode").toggle(300);});
 	var dsh_num = paylist.length;
-	$(".dshtext").append("共 <span><i>" + dsh_num + "</i></span> 人打赏");
+	$(".dshtext").append("共 <span><i>" + dsh_num + "</i></span> 人次打赏");
 	for(i = 0; i < dsh_num; i++) {$(".dshcontent").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'><b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i></p>");}
 	$(".dshlist").append("<hr><p class=\"dshbottom\">非常感谢您的支持！<i class=\"emo emo-02-16\" style=\"margin-top:-10px\"></i></p>");
 	var a1 = 0,a2 = 0, a3 = 0, a4 = 0, a5 = 0;
