@@ -53,7 +53,7 @@ $(document).ready(function($) {
 				} else {
 					$("#busuanzi_value_page_pv").html((2121 + Math.floor(Math.random() * 200 - 100)).toString());
 				}
-	}, 2000);
+	}, 200);
 	
 });
 
