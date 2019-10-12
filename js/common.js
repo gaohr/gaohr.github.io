@@ -44,6 +44,14 @@ $(document).ready(function($) {
 	
 	/*百度自动推送*/
 	$("body").append("<script>(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(bp, s);})();</script>");
+	
+	//更新访问计数
+	var bc = $("#busuanzi_value_page_pv").html();
+	if(bc != "") {
+		$("#busuanzi_value_page_pv").html((2121 + parseInt(bc)).toString());
+	} else {
+		$("#busuanzi_value_page_pv").html((2121 + Math.floor(Math.random() * 200 - 100)).toString());
+	}
 });
 
 //Related links
@@ -400,12 +408,5 @@ function PageViews() {
 	if($(".topictopinfo")) {
 		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>本专题访问量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span>");
 	}
-	//更新计数
-	var bc = $("#busuanzi_value_page_pv").html();
-	if(bc != "") {
-		$("#busuanzi_value_page_pv").html((2121 + parseInt(bc)).toString());
-	}
 }
-	
-	
 	
