@@ -23,13 +23,13 @@ Blog Page
 .blog-tags a:hover {background:#fff;color:#777}
 .blog-tags i {color:#d85546}
 
-.btn-blue {background-color:#2878c8;padding:5px;border-radius:3px;color:#fff}
+.btn-blue {background-color:#2878c8;padding:3px;border-radius:3px;color:#fff;display:inline-block;}
 .btn-blue:hover {background-color:#295c8e;color:#fff}
 .btn-blue:active {background-color:#2878c8;}
-.btn-red {background-color:#cc0000;padding:5px;border-radius:3px;color:#fff}
+.btn-red {background-color:#cc0000;padding:3px;border-radius:3px;color:#fff;display:inline-block;}
 .btn-red:hover {background-color:#990000;color:#fff}
 .btn-red:active {background-color:#cc0000;}
-.btn-orange {background-color:#ee4400;padding:5px;border-radius:3px;color:#fff}
+.btn-orange {background-color:#ee4400;padding:3px;border-radius:3px;color:#fff;display:inline-block;}
 .btn-orange:hover {background-color:#cc3300;color:#fff}
 .btn-orange:active {background-color:#ee4400;}
 
