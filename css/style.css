@@ -84,13 +84,12 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 
 #comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
 
-.copyright{text-align:center;color:#fff;background:#222}
+body footer p {margin:0;}
 body footer {position:relative;background:#333;text-align:center;color:#fff;padding:20px 0 0 0;vertical-align:baseline;margin:0;}
 body footer a {color:#09f}
 body footer .footer-text {color: #9a9a9a;text-align: center;margin-top: 25px;line-height: 18px;font-size: 10px;}
 body footer .footer-text span {display: block}
 body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-top: 15px;text-align: center;padding-bottom: 15px;font-size:10px;padding-top:12px;}
-body footer .footer-copy .copyright{text-align:center;color:#aaa !important;background:#222}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}
 .portlet .title b{padding:3px;color:#333;font-size:1.2em;border-bottom:3px solid #d85546;font-family:'Microsoft YaHei'}
@@ -117,7 +116,7 @@ body footer .footer-copy .copyright{text-align:center;color:#aaa !important;back
 
 #others {position:absolute;z-index:9999}
 
-.mywarning {font-size:1.2em;color:#d85546;font-family:'Times New Roman'}
+.mywarning {font-size:1.2em;color:#f00;font-family:'Times New Roman'}
 
 .advertisement {position:fixed;bottom:10px;right:10px;width:360px;height:120px;color:#ccc;background:rgba(25,25,25,0.9);padding:10px;display:none}
 .advertisement .ad-title {border-bottom:1px solid #ccc;padding:5px;font-size:1.1em}
@@ -257,6 +256,12 @@ body footer .footer-copy .copyright{text-align:center;color:#aaa !important;back
 .loading-2 {content:url('../img/others/loading-2.gif');width:60%;margin-left:20%}
 .loading-earth {content:url('../img/others/loading-earth.gif');width:30%;margin-left:35%}
 .loading-earth-s {content:url('../img/others/loading-earth-s.gif');width:20%;margin-left:40%}
+
+/* Brand */
+.icon-qq {content:url('../img/brand/qq.png');width:32px;}
+.icon-wechat {content:url('../img/brand/wechat.png');width:32px;}
+.icon-sina {content:url('../img/brand/sina.png');width:32px;}
+.icon-github {content:url('../img/brand/github.png');width:32px;}
 
 
 @media (max-width: 2000px) {
