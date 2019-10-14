@@ -63,16 +63,6 @@ if($("#relatedlinks")) {
 	$("#relatedlinks").html(Relatedlinks());
 }
 	
-// ClustrMaps
-if($("#cltmap")) {
-	$("#cltmap").html(ClustrMaps());
-}
-	
-// Copyright
-if($("#copyright")) {
-	$("#copyright").html(Copyright());
-}
-	
 // Comments
 if($("#comments")) {
 	$("#comments").append(Comments());
@@ -97,7 +87,13 @@ if($("#warning")) {
 if($("#weather")) {
 	$("#weather").html(Weather());
 }
-
+	
+// ClustrMaps
+ClustrMaps();
+	
+// Copyright
+Copyright();
+	
 // Search
 Search();
 	
@@ -138,11 +134,11 @@ function Relatedlinks() {
 }
 
 function ClustrMaps() {
-	return "<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>";
+	$("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
 }
 
 function Copyright() {
-	return "<hr>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/mainicon.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a>";
+	$("#copyright").html("<hr><img class='footer-logo' src='http://gaohr.win/img/mainicon.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='###'> 公告专区 </a><span>|</span><a href='###'> 关于本站 </a><div class='footer-text'><span> 在线服务时间 10:00-15:00 </span><span> 地址:北京市海淀区邓庄南路9号 中国科学院遥感与数字地球研究所 </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/mainicon.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
 }
 
 function Comments() {
@@ -160,7 +156,7 @@ function Share() {
 }
 
 function Dashang() {
-	$("#dashang").html("<br><hr><div class=\"shang_img\"></div>" +
+	$("#dashang").html("<br><hr><span class='g-color-red'>点击打赏小钱钱</span><div class=\"shang_img\"></div>" +
 						"<span class=\"tdcode\">" +
 						"<p style='color:#fff'>非常感谢您的支持！</p>" +
 						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +

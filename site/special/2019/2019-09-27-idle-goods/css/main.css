@@ -136,6 +136,7 @@ hr {
   line-height: 1.5;
   margin-left:20px;
   margin-top: 10px;
+  text-indent:0;
   background: rgba(105,205,95,0.75);
   border-radius: 50%;
   color: #fff;

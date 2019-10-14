@@ -72,7 +72,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .bg-gray {background-color:#888}
 
 #declare{width:100%;margin:0 auto}
-#code{width:100%;height:auto;min-height:120px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
+#code{width:100%;height:auto;min-height:165px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
 #code .space{margin-left:7px}
 #code .var{color:#0000ff}
 #code .string{color:#b22222}
@@ -84,7 +84,13 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 
 #comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
 
-.copyright{text-align:center;color:#aaa !important;background:#222}
+.copyright{text-align:center;color:#fff;background:#222}
+body footer {position:relative;background:#333;text-align:center;color:#fff;padding:20px 0 0 0;vertical-align:baseline;margin:0;}
+body footer a {color:#09f}
+body footer .footer-text {color: #9a9a9a;text-align: center;margin-top: 25px;line-height: 18px;font-size: 10px;}
+body footer .footer-text span {display: block}
+body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-top: 15px;text-align: center;padding-bottom: 15px;font-size:10px;padding-top:12px;}
+body footer .footer-copy .copyright{text-align:center;color:#aaa !important;background:#222}
 
 .portlet {width:100%;margin:5px;margin-bottom:20px}
 .portlet .title b{padding:3px;color:#333;font-size:1.2em;border-bottom:3px solid #d85546;font-family:'Microsoft YaHei'}
