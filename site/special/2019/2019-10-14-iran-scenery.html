@@ -18,12 +18,16 @@
 		#innerdiv {position:absolute;}
 		#bigimg {border:3px solid #eee;}
 		.carousel img {cursor:pointer;}
-		.img-title {color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;width:100%;padding:15px 0;font-size:1.5em}
+		.img-title {color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;width:100%;padding:15px 0;font-size:1.2em}
+		.img-title span {color:#fff;background-color:rgba(255,105,80,0.75);padding:5px;font-size:1.2em;border-radius:5px;margin-left:5px}
 		.intro {text-align:center}
 		.hover_area {width:50%;border-radius:50%;border:5px solid #555;margin-left:25%;margin-bottom:10px;}
 		.hover_area_5{overflow: hidden;position: relative;}
 		.hover_img_5 img{transform: scale(1);transition: all .5s;}
 		.hover_area_5:hover .hover_img_5 img{transform: scale(1.5);}
+		.angle-down {font-size:1.5em;color:#555;margin:10px;text-align:center;vertical-align:middle;}
+		.angle-down i {font-size:1.5em;}
+		.tab-content {min-height:360px;}
 	</style>
 	
 	<link rel="shortcut icon" href="../../../img/logo.ico" />
@@ -67,98 +71,81 @@
 										<div id="myCarousel" class="carousel slide">
 											<!-- 轮播（Carousel）指标 -->
 											<ol class="carousel-indicators">
-												<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-												<li data-target="#myCarousel" data-slide-to="1"></li>
-												<li data-target="#myCarousel" data-slide-to="2"></li>
-												<li data-target="#myCarousel" data-slide-to="3"></li>
-												<li data-target="#myCarousel" data-slide-to="4"></li>
-												<li data-target="#myCarousel" data-slide-to="5"></li>
-												<li data-target="#myCarousel" data-slide-to="6"></li>
-												<li data-target="#myCarousel" data-slide-to="7"></li>
-												<li data-target="#myCarousel" data-slide-to="8"></li>
-												<li data-target="#myCarousel" data-slide-to="9"></li>
-												<li data-target="#myCarousel" data-slide-to="10"></li>
-												<li data-target="#myCarousel" data-slide-to="11"></li>
-												<li data-target="#myCarousel" data-slide-to="12"></li>
-												<li data-target="#myCarousel" data-slide-to="13"></li>
-												<li data-target="#myCarousel" data-slide-to="14"></li>
-												<li data-target="#myCarousel" data-slide-to="15"></li>
-												<li data-target="#myCarousel" data-slide-to="16"></li>
-												<li data-target="#myCarousel" data-slide-to="17"></li>
+												<li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li><li data-target="#myCarousel" data-slide-to="3"></li><li data-target="#myCarousel" data-slide-to="4"></li><li data-target="#myCarousel" data-slide-to="5"></li><li data-target="#myCarousel" data-slide-to="6"></li><li data-target="#myCarousel" data-slide-to="7"></li><li data-target="#myCarousel" data-slide-to="8"></li><li data-target="#myCarousel" data-slide-to="9"></li><li data-target="#myCarousel" data-slide-to="10"></li><li data-target="#myCarousel" data-slide-to="11"></li><li data-target="#myCarousel" data-slide-to="12"></li><li data-target="#myCarousel" data-slide-to="13"></li><li data-target="#myCarousel" data-slide-to="14"></li><li data-target="#myCarousel" data-slide-to="15"></li><li data-target="#myCarousel" data-slide-to="16"></li><li data-target="#myCarousel" data-slide-to="17"></li>
 											</ol>   
 											<!-- 轮播（Carousel）项目 -->
 											<div class="carousel-inner">
 												<div class="item active">
 													<img src="2019-10-14-iran-scenery/img/img001.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">林海雾原</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img002.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">皑皑雪山</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img003.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">天水一色</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img004.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">金色荒原</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img005.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">峡谷激流</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img006.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">山林原野</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img007.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">五彩斑斓</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img008.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">火红丘峦</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img009.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">高原绿野</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img010.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">绿地蓝天</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img011.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">星空灿烂</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img012.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">积雪寒山</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img013.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">落霞惊鸿</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img014.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">鸟语花香</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img015.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">群鹜齐飞</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img016.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">水岸相间</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img017.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">秀丽江流</span></div>
 												</div>
 												<div class="item">
 													<img src="2019-10-14-iran-scenery/img/img018.jpg" class="show_picture">
-													<div class="img-title carousel-caption">伊朗风情之XXX</div>
+													<div class="img-title carousel-caption">伊朗自然风情之<span class="g-text-bg">谁家新燕</span></div>
 												</div>
 											</div>
 											<!-- 轮播（Carousel）导航 -->
@@ -180,10 +167,42 @@
 											</div>
 										</div>
 										<p class="g-color-gray no-indent"><i class="icon-user">&nbsp;&nbsp;Masoud Jafari</i></p>
-										<p class="no-indent"><i class="icon-quote-left g-color-blue"></i> این صفحه با کمک دوست گرامی گائو ساخته شده تا به مردم کشور چین دید بهتری از ایران ارائه کنه. ایران برخلاف چیزی که خیلی ها فکر می کنن بیابان نیست. امیدوارم لذت ببرید! <i class="icon-quote-right g-color-blue"></i></p>
+										<p class="no-indent g-color-blue"><i class="icon-quote-left"></i> این صفحه با کمک دوست گرامی گائو ساخته شده تا به مردم کشور چین دید بهتری از ایران ارائه کنه. ایران برخلاف چیزی که خیلی ها فکر می کنن بیابان نیست. امیدوارم لذت ببرید! <i class="icon-quote-right g-color-blue"></i></p>
 									</div>
 								</div>
-								<p class="no-indent"><i class="icon-quote-left g-color-blue"></i> This web page was created with the help of my dearest friend <a href="../../../index.html">Mr Gao</a> to give Chinese people an insight into what Iran is really like. You see, Iran is not just desert after all. Enjoy! <i class="icon-quote-right g-color-blue"></i></p>
+								<p class="no-indent" style="font-family:'Times New Roman'"><i class="icon-quote-left g-color-blue"></i> This web page was created with the help of my dearest friend <a href="../../../index.html">Mr Gao</a> to give Chinese people an insight into what Iran is really like. You see, Iran is not just desert after all. Enjoy! <i class="icon-quote-right g-color-blue"></i> <span class="g-color-gray">------ From Masoud Jafari</span></p>
+								<hr>
+								<div class="angle-down"><i class="icon-double-angle-down"></i><i class="icon-double-angle-down"></i><i class="icon-double-angle-down"></i> 伊朗自然风光视频欣赏 <i class="icon-double-angle-down"></i><i class="icon-double-angle-down"></i><i class="icon-double-angle-down"></i></div>
+								<div class="tabbable tabbable-custom">
+									<ul class="nav nav-tabs tab-title">
+										<li class="active"><a href="#tab_6_1" data-toggle="tab">预览片</a></li>
+										<li ><a href="#tab_6_2" data-toggle="tab">瀑布飞流</a></li>
+										<li><a href="#tab_6_3" data-toggle="tab">金色荒原</a></li>
+										<li><a href="#tab_6_4" data-toggle="tab">凛冬仙境</a></li>
+										<li><a href="#tab_6_5" data-toggle="tab">阿尔伯兹山脉的春天</a></li>
+										<li><a href="#tab_6_6" data-toggle="tab">伊斯法罕大教堂</a></li>
+									</ul>
+									<div class="tab-content">
+										<div class="tab-pane active" id="tab_6_1">
+											<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=4d46dbcded97ef8535fe055ba5937513&tvId=43060190009&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="480"></iframe>
+										</div>
+										<div class="tab-pane " id="tab_6_2">
+											<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=f746bd8bc4ec64f1fe49cf535b991286&tvId=43060615309&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="480"></iframe>
+										</div>
+										<div class="tab-pane" id="tab_6_3">
+											<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=69dbfb93aaffb61757a00fcd3bf7c74b&tvId=43060099009&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="480"></iframe>
+										</div>
+										<div class="tab-pane" id="tab_6_4">
+											<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=8beddeb5a04aaf2ce45c370098d5b68e&tvId=43060261809&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="480"></iframe>
+										</div>
+										<div class="tab-pane" id="tab_6_5">
+											<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=212770a03432e9cec25dcb0db9851bbf&tvId=43061017709&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="480"></iframe>
+										</div>
+										<div class="tab-pane" id="tab_6_6">
+											<iframe src="http://open.iqiyi.com/developer/player_js/coopPlayerIndex.html?vid=21533983e4080e04744804bb737e0955&tvId=43061177909&accessToken=2.f22860a2479ad60d8da7697274de9346&appKey=3955c3425820435e86d0f4cdfe56f5e7&appId=1368&height=100%&width=100%" frameborder="0" allowfullscreen="true" width="100%" height="480"></iframe>
+										</div>
+									</div>
+								</div>
 							</div>
 							<hr>
 							<div class="row-fluid">
