@@ -1,5 +1,6 @@
 var paylist = [
 
+{"id":"30", "name":"*soud", "amount":"10.00", "date":"2019-10-14", "msg":"Very good"},
 {"id":"29", "name":"*志安", "amount":"5.00", "date":"2019-10-10", "msg":"谢谢~"},
 {"id":"28", "name":"*剑洪", "amount":"2.00", "date":"2019-10-08", "msg":"谢谢~"},
 {"id":"27", "name":"**油", "amount":"5.00", "date":"2019-09-22", "msg":"谢谢~"},
