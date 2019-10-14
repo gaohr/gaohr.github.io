@@ -47,14 +47,14 @@ $(document).ready(function($) {
 	
 	//更新访问计数
 	// 原因：计数器添加较晚，每页计数数值加上已有计数（总计数的平均值）
-	setTimeout(function() {
-				var bc = $("#busuanzi_value_page_pv").html();
-				if(bc != "") {
-					$("#busuanzi_value_page_pv").html((2121 + parseInt(bc)).toString());
-				} else {
-					$("#busuanzi_value_page_pv").html((2121 + Math.floor(Math.random() * 200 - 100)).toString());
-				}
-	}, 1000);
+	//setTimeout(function() {
+	//			var bc = $("#busuanzi_value_page_pv").html();
+	//			if(bc != "") {
+	//				$("#busuanzi_value_page_pv").html((2121 + parseInt(bc)).toString());
+	//			} else {
+	//				$("#busuanzi_value_page_pv").html((2121 + Math.floor(Math.random() * 200 - 100)).toString());
+	//			}
+	//}, 1000);
 	
 });
 
