@@ -45,6 +45,9 @@ $(document).ready(function($) {
 	/*百度自动推送*/
 	$("body").append("<script>(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(bp, s);})();</script>");
 	
+	/*百度统计*/
+	$("head").append("<script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = 'https://hm.baidu.com/hm.js?7c81b8e214184b45986721bd426be652';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);})();</script>");
+	
 	//更新访问计数
 	// 原因：计数器添加较晚，每页计数数值加上已有计数（总计数的平均值）
 	//setTimeout(function() {
