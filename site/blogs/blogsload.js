@@ -54,47 +54,32 @@
 			
 	// 在正文中添加作者等信息
 	for(i = 0; i < bloglist.length; i++) {
-		var tags = readtags(i);
-		//$("#blogs").append(addblog(bloglist,i,tags));
 		var blogid = $("#blogid").val();
 		if(bloglist[i].blogid == blogid) {
-			$("#blogtopinfo").append("[" + bloglist[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-user'></i> " + bloglist[i].author + "&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags);
+			var tags = readtags(i);
+			$("#blogtopinfo").append("<i class='icon-user'></i> " + bloglist[i].author + "&nbsp;&nbsp;&nbsp; [" + bloglist[i].date + "]&nbsp;&nbsp;&nbsp; <i class='icon-tags'></i>" + tags);
 		}
 	}
 	
 	// 在侧栏中添加最新博客信息
 	for(i = 0; i < 5; i++) {
-		var tags = readtags(i);
-		$("#blogs").append(addblog(bloglist,i,tags));
-	}
-	
-	//add Blog
-	function addblog(bloglist,n,tags) {
-		var blogcon = "<div class='blog-article'>" +
-			"<a href='" + bloglist[n].href + "' class='blog-title' style='font-size:1.0em'>" + bloglist[n].title + "</a><br><br>" +
-			"</div>" +
-			"<div class='blog-tag-data'>" +
-			"<a href='" + bloglist[n].href + "'><img src='../../../" + bloglist[n].img + "' class='blog-img' style='width:60%;'></a>" +
-			"<ul class='unstyled inline' style='font-size:9px'>" +
-			//"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[n].date + "</a></li>" +
-			"</ul>" +
-			"<ul class='unstyled inline blog-tags' style='font-size:9px'>" +
-			"<li type='circle'>" +
-			"<i class='icon-tags'></i>" + tags +
-			"</li>" +
-			"</ul>" +
-			"</div>" +
-			//"<a class='btn-blue' href='../../../" + bloglist[n].href + "'>Read more <i class='icon-circle-arrow-right'></i></a>" +
-			"<hr>";
-			return blogcon;
+		$("#blogs").append(addblog_right(bloglist,i));
 	}
 	
 	function readtags(n) {
 		tagslist = "";
 		for(t = 0; t < bloglist[n].tags.length; t++) {
-			tagslist += "<a href='#' style='font-size:9px !important'>" + bloglist[n].tags[t] + "</a>";
+			tagslist += "<a href='#'>" + bloglist[n].tags[t] + "</a>";
 		}
 		return tagslist;
+	}
+	
+	//add blog info to right side
+	function addblog_right(bloglist,n) {
+		var blogcon = "<div class='blog-article'>" +
+			"<a href='" + bloglist[n].href + "' class='blog-title' style='font-size:1.1em;line-height:12px;'><span class='bg-orange g-color-white'>" + bloglist[n].type + "</span>&nbsp;" + bloglist[n].title + "<br><img src='../../../" + bloglist[n].img + "' class='blog-img text-center' style='width:60%;'></a><br>" +
+			"</div><hr>";
+			return blogcon;
 	}
 	
 // });

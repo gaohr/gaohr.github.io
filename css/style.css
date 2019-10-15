@@ -1,8 +1,8 @@
 /*
 *By GaoHR
 */
-body {background-color:#fff;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-02.jpg');background-size:100%;background-attachment: fixed;}
-hr {margin-top:5px;margin-bottom:15px}
+body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-02.jpg');background-size:100%;background-attachment:fixed;}
+hr {margin-top:10px;margin-bottom:10px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/nation70_bg.jpg');background-size:100%;}
@@ -70,6 +70,8 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .bg-blue {background-color:#39e}
 .bg-purple {background-color:#e0e}
 .bg-gray {background-color:#888}
+
+.text-center {text-align:center;}
 
 #declare{width:100%;margin:0 auto}
 #code{width:100%;height:auto;min-height:165px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}

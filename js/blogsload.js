@@ -5,35 +5,31 @@
 */
 $(document).ready(function() {
 	//blog
-	for(i = 0; i < 5; i++) {
-	//for(i = 0; i < bloglist.length; i++) {
+	var blogs_index = "";
+	for(i = 0; i < 8; i++) {
 		var tags = readtags(i);
-		$("#blog").append(
-			"<div class='row-fluid'>" +
+		blogs_index += "<div class='row-fluid'>" +
 			"<div class='span12 blog-article'>" +
 			"<a href='" + bloglist[i].href + "' class='blog-title'><i class='icon-bookmark'></i> " + bloglist[i].title + "</a>" +
 			"<a href='Blogs.html#" + blogtype(bloglist[i].type) + "' class='blog-type'>[ " + bloglist[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
-			"<div class='span3 blog-tag-data'>" +
-			"<img src='" + bloglist[i].img + "' class='blog-img' style='width:80%;margin-left:10%'>" +
+			"<div class='span2 blog-tag-data'>" +
+			"<img src='" + bloglist[i].img + "' class='blog-img' style='width:60%;margin-left:10%'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[i].date + "</a></li>" +
 			"</ul><br><br>" +
-			"<ul class='unstyled inline blog-tags'>" +
-			"<li type='circle'>" +
-			"<i class='icon-tags'></i><small>" + tags +
-			"</small></li>" +
-			"</ul>" +
 			"</div>" +
-			"<div class='span9'>" +
+			"<div class='span10'>" +
 			"<p>" + bloglist[i].content + "</p>" +
 			"<a class='btn-blue pull-right readmore' href='" + bloglist[i].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
 			"</div>" +
 			"</div>" +
-			"</div><hr>"
-		);
+			"</div><hr>";
 	}
+	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-default btn-block'>>>>点击阅读更多博客<<<</a></div>"
+	$("#blog").append(blogs_index);
+	
 	//Blogs
 	for(i = 0; i < bloglist.length; i++) {
 		var tags = readtags(i);
@@ -95,7 +91,7 @@ $(document).ready(function() {
 //add Blog
 function addblog(bloglist,n,tags) {
 	var blogcon = "<div class='row-fluid'>" +
-		"<div class='span2 blog-tag-data'>" +
+		"<div class='span3 blog-tag-data'>" +
 		"<img src='" + bloglist[n].img + "' class='blog-img'>" +
 		"<ul class='unstyled inline'>" +
 		"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[n].date + "</a></li>" +
@@ -113,14 +109,14 @@ function addblog(bloglist,n,tags) {
 		"<a class='btn-blue btn-mini pull-right readmore' href='" + bloglist[n].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 		"</div>" +
 		"</div>" +
-		"<div style='background:#ddd;height:2px;margin:10px;'></div>";
+		"<hr>";
 		return blogcon;
 }
 	
 function readtags(n) {
 	tagslist = "";
 	for(t = 0; t < bloglist[n].tags.length; t++) {
-		tagslist += "<a href='#' style='font-size:9px !important'>" + bloglist[n].tags[t] + "</a>";
+		tagslist += "<a href='###' style='font-size:9px'>" + bloglist[n].tags[t] + "</a>";
 	}
 	return tagslist;
 }

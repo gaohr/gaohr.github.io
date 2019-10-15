@@ -12,15 +12,15 @@ Blog Page
 .blog-article:hover .blog-title {color:#08e;}
 .blog-article:hover .blog-title i {color:#08e;}
 .blog-article:hover .readmore {background:#cc3300;}
+.blog-article:hover .blog-tags a {background:#777}
+.blog-article:hover .readmore {background:#cc3300;}
 .blog-img {width:90%;margin-bottom:2px;margin-top:2px;margin-left:5%}
 .blog-page .blog-tag-data li {padding: 0;margin-left:5%}
 .blog-page .blog-tag-data li i {color: #d85546;}
 .blog-page .blog-tag-data li a {padding: 0;color: #555;margin-right: 8px;}
 .blog-page .blog-tag-data {margin-bottom: 2px;}
-.blog-page .blog-tag-data ul.blog-tags a {background:#aaa;color:#fff;margin:2px;display:inline-block;}
-.blog-page .blog-tag-data ul.blog-tags a:hover {text-decoration: none;}
-.blog-tags a {background:#aaa;padding:0 1px;margin:2px;display:inline-block;color:#eee;border-radius:5px}
-.blog-tags a:hover {background:#fff;color:#777}
+.blog-tags a {background:#999;padding:0 1px;margin:2px;display:inline-block;color:#fff;border-radius:5px}
+.blog-tags a:hover {background:#aaa}
 .blog-tags i {color:#d85546}
 
 .btn-blue {background-color:#2878c8;padding:3px;border-radius:3px;color:#fff;display:inline-block;}
