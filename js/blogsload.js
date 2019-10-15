@@ -14,7 +14,7 @@ $(document).ready(function() {
 			"<a href='Blogs.html#" + blogtype(bloglist[i].type) + "' class='blog-type'>[ " + bloglist[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
 			"<div class='span2 blog-tag-data'>" +
-			"<img src='" + bloglist[i].img + "' class='blog-img' style='width:60%;margin-left:10%'>" +
+			"<img src='" + bloglist[i].img + "' class='blog-img' style='width:80%;margin-left:10%'>" +
 			"<ul class='unstyled inline'>" +
 			"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[i].date + "</a></li>" +
 			"</ul><br><br>" +
