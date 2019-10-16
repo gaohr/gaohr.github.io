@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国精细铁路网矢量数据集</title>
+	<style>
+		.hover_area {border:2px solid #555;}
+		.hover_area_5{overflow: hidden;position: relative;}
+		.hover_img_5 img{transform: scale(1);transition: all .5s;}
+		.hover_area_5:hover .hover_img_5 img{transform: scale(1.5);}
+		.img-title {color:#fff;background-color:rgba(0,0,0,0.75);text-align:center;width:100%;padding:15px 0;font-size:1.25em;top:0;bottom:95%}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<p><img src="../../../img/welcome.png" class="welcome"></p>
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2019101601">
+				<div class="blogcontent alist">
+					<h2>全国精细铁路网矢量数据集</h2>
+					<h2><small>Vector data set of fine railway network of China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>数据概况</b></p>
+					<p>全国精细铁路网矢量数据集，包括城市间铁路线和市内地铁线，数据来源于<b>Open Street Map</b>，具有非常高的精细度（可查看数据预览图），数据属性相对完整。</p>
+					<div class="blog-quote">
+						<p><i class="icon-road"></i> 空间范围：全国（各省）</p>
+						<p><i class="icon-road"></i> 数据类型：矢量 | ESRI Shapefile</p>
+						<p><i class="icon-road"></i> 投影坐标：GCS WGS 1984</p>
+						<p><i class="icon-road"></i> 生产时间：2019年10月</p>
+					</div>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<p><li>总体预览图</li></p>
+					<div class="hover_area_5 hover_area width-percent-80">
+						<div class="hover_img_5">
+							<img src="2019-10-16-china-railway\img001.jpg">
+						</div>
+					</div>
+					<p><li>多图轮播预览</li></p>
+					<div id="myCarousel" class="carousel slide width-percent-80">
+						<!-- 轮播（Carousel）指标 -->
+						<ol class="carousel-indicators"><li data-target="#myCarousel" data-slide-to="0" class="active"></li><li data-target="#myCarousel" data-slide-to="1"></li><li data-target="#myCarousel" data-slide-to="2"></li><li data-target="#myCarousel" data-slide-to="3"></li><li data-target="#myCarousel" data-slide-to="4"></li><li data-target="#myCarousel" data-slide-to="5"></li></ol>
+						<!-- 轮播（Carousel）项目 -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="2019-10-16-china-railway\img002.jpg">
+								<div class="img-title carousel-caption">局部地区</div>
+							</div>
+							<div class="item">
+								<img src="2019-10-16-china-railway\img003.jpg">
+								<div class="img-title carousel-caption">京津冀地区</div>
+							</div>
+							<div class="item">
+								<img src="2019-10-16-china-railway\img004.jpg">
+								<div class="img-title carousel-caption">北京地区</div>
+							</div>
+							<div class="item">
+								<img src="2019-10-16-china-railway\img005.jpg">
+								<div class="img-title carousel-caption">北京市内铁路线</div>
+							</div>
+							<div class="item">
+								<img src="2019-10-16-china-railway\img006.jpg">
+								<div class="img-title carousel-caption">北京西站附近</div>
+							</div>
+							<div class="item">
+								<img src="2019-10-16-china-railway\img007.jpg">
+								<div class="img-title carousel-caption">图层属性表预览</div>
+							</div>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a data-slide="prev" href="#myCarousel" class="left carousel-control">‹</a>
+						<a data-slide="next" href="#myCarousel" class="right carousel-control">›</a>
+					</div>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p>目前可供下载的省、市、地区及相应数据列表如下，可按省份和地区查找、下载。</p>
+					<div class="tabbable tabbable-custom width-percent-80">
+						<ul class="nav nav-tabs tab-title">
+							<li class="active"><a href="#tab_6_1" data-toggle="tab">按省份</a></li>
+							<li ><a href="#tab_6_2" data-toggle="tab">按地区</a></li>
+						</ul>
+						<div class="tab-content">
+							<div class="tab-pane active" id="tab_6_1">
+								<div class="portlet box blue">
+									<div class="portlet-title">
+										<div class="caption">省级数据列表</div>
+									</div>
+									<div class="portlet-body">
+										<table class="table table-hover">
+											<thead><tr><th>编号</th><th>省级</th><th>类型</th><th>下载</th></tr></thead>
+											<tbody id="data-province"></tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane " id="tab_6_2">
+								<div class="portlet box blue">
+									<div class="portlet-title">
+										<div class="caption">地区数据列表</div>
+									</div>
+									<div class="portlet-body">
+										<table class="table table-hover">
+											<thead><tr><th>编号</th><th>地区</th><th>类型</th><th>下载</th></tr></thead>
+											<tbody id="data-city"></tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<p class="g-text-bg"><i class="icon-bullhorn g-text-bg g-color-red"></i> 本博客将不定期更新数据列表</p>
+					<p class="g-color-green g-text-bg"><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果需要的数据不在列表中，可以在页面下方评论区留言，说明需要的省份或地区即可！</p>
+					<p></p>
+					<hr>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+	<script src="2019-10-16-china-railway/datalist.js"></script>
+	<script>
+		for(var i = 0; i < datalist_province.length; i++) {
+			$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td>矢量</td><td><a href='http://gaohr.win/MyImages/data/OSM_map/"+ datalist_province[i].data +".rar'><img src='http://gaohr.win/img/others/zip_icon.png'></a></td></tr>");
+		}
+		
+		for(var j = 0; j < datalist_city.length; j++) {
+			$("#data-city").append("<tr><td>"+ datalist_city[j].id +"</td><td>"+ datalist_city[j].name +"</td><td>矢量</td><td><a href='http://gaohr.win/MyImages/data/OSM_map/"+ datalist_city[j].data +".rar'><img src='http://gaohr.win/img/others/zip_icon.png'></a></td></tr>");
+		}
+		
+		$('.carousel').carousel({
+			interval: 3000
+		})
+		
+	</script>
+</body>
+</html>

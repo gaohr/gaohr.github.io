@@ -52,18 +52,18 @@
 					<p>水墨山水画是中国文化的重要组成部分，它所传达的是东方“境生象外”的精神境界。水墨画家或细心染墨、巧妙勾勒，或浓淡有韵、泼墨润泽，或笔韵粗壮、墨韵浑厚。古人之法各自活用，各有所长，墨韵见笔，以形求神。</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img01.jpg"></p>
 					<p class="g-color-red">时至今日，作为GISer的我们，只得望着一幅幅传世之作，感叹文人艺术家们传神的画技。古人有古人之法，我们能否利用现代工具，制作出写意的水墨风格山水画作？</p>
-					<p><b>思路</b>：中国传统的水墨山水画通常以自然山川为主要对象，通过特定的观察角度，结合灵活的着色手法，描绘出拥有深厚感和层次感的壮阔山水景观。在GIS工具中，利用合适的高程数据，通过一定的渲染方式，就可以在某种程度上呈现中国传统水墨山水画中的笔墨感和立体感。ArcScene是ArcGIS软件桌面系统3D分析扩展模块的一部分，是一个可以展示三维透视场景的优秀平台。</p>
-					<p style="font-size:1.2em"><b>主要工具和材料</b></p>
+					<p class="blog-sub-title"><b>思路</b>：中国传统的水墨山水画通常以自然山川为主要对象，通过特定的观察角度，结合灵活的着色手法，描绘出拥有深厚感和层次感的壮阔山水景观。在GIS工具中，利用合适的高程数据，通过一定的渲染方式，就可以在某种程度上呈现中国传统水墨山水画中的笔墨感和立体感。ArcScene是ArcGIS软件桌面系统3D分析扩展模块的一部分，是一个可以展示三维透视场景的优秀平台。</p>
+					<p class="blog-sub-title"><b>主要工具和材料</b></p>
 					<ul>
 						<li>ArcGIS桌面软件</li>
 						<li>ArcScene模块</li>
 						<li>数字高程模型（DEM）数据</li>
 					</ul>
 					<p style="font-size:1.2em"><b>制作流程</b></p>
-					<p><b>1. 基础数据准备</b></p>
+					<p class="blog-sub-title"><b>1. 基础数据准备</b></p>
 					<p>基础数据包括高分辨率DEM栅格数据（空间分辨率30m即可），矢量点数据（制作红日）以及河流水系矢量数据。其中，需要注意的是，DEM数据尽量选择海拔起伏较大的多山地区，便于分层设色、制图美观等；点数据可以在ArcGIS中制作，可以画多个点，以便在角度调换时视野中有点存在；河流矢量数据可选，河网无需密集分布。</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img02.jpg"><br>图1 基础数据</p>
-					<p><b>2. ArcScene 3D模型制作</b></p>
+					<p class="blog-sub-title"><b>2. ArcScene 3D模型制作</b></p>
 					<p>将上述基础数据导入到ArcScene中，此时各个图层均为扁平图。然后对各个图层设置属性（图2）：</p>
 					<p>（1）在“Base Heights”选项卡中选中“Floating on a custom surface”，将路径设置为导入的DEM数据；</p>
 					<p>（2）注意更改单位转换系数，根据DEM数据投影确定，如不进行偏移设置，则进行下一步；</p>
@@ -73,7 +73,7 @@
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img03.jpg"></p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img04.jpg"><br>图2 图层属性设置</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img05.jpg"><br>图3 初步3D数字高程模型</p>
-					<p><b>3. 图层着色</b></p>
+					<p class="blog-sub-title"><b>3. 图层着色</b></p>
 					<p>图层着色是将3D模型呈现出水墨风格的重要步骤，该步骤主要着色的对象为DEM数据。流程如下：</p>
 					<p>（1）选择合适的角度，最好有远眺的视角；</p>
 					<p>（2）打开属性设置中的“Symbology”选项卡，更改Color Ramp为“白->黑”渐变色，更改Stretch type，使3D模型明暗适中，如图4，效果如图5，此时已有水墨质感和立体感；</p>
@@ -84,7 +84,7 @@
 					<p>色彩微调方式：双击颜色条，点击“More Colors…”，在原本的颜色基础上进行细微改动，通常选择RGB颜色进行修改，便于控制。</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img09.jpg"><br>图7 色彩微调</p>
 					<p>通过以上步骤，简单的水墨风格山水画便制作完成，想要得到更精美的画作，还需要耐心尝试与调色。尽管花了很大功夫，但水墨山水画仍显单一，毕竟作画素材简陋，毕竟水墨画博大精深，毕竟我们不是艺术家，毕竟……谨表敬意！</p>
-					<p>下图是利用本方法制作的多种风格的水墨山水画，敬请欣赏~</p>
+					<p class="blog-sub-title">下图是利用本方法制作的多种风格的水墨山水画，敬请欣赏~</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img10.jpg"><br>云雾山峦</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img11.jpg"><br>绿水青山</p>
 					<p class="imginblog"><img src="2019-01-15-arcgis-mapping-ink/img12.jpg"><br>长河落日圆</p>

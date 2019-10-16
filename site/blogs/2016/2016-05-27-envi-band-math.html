@@ -49,7 +49,7 @@
 					<h2>ENVI中波段运算（Band Math）工具常用函数及运算符</h2>
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p>ENVI Band Math是一个灵活的图像波段处理工具，由于每个用户都有独特的需求，利用此工具用户可以自己定义处理算法，应用到在ENVI打开的波段或整个图像中，用户可以根据需要自定义简单或复杂的处理程序。例如：可以对图像进行简单加、减、乘、除运算，或使用IDL编写更复杂的处理运算功能，Band Math工具使用函数都是基于IDL的数据组运算符。</p>
-					<p class="imginblog"><img src="2016-05-27-envi-band-math/image001.png" style="float:right;margin:10px"></p>
+					<p class="imginblog"><img src="2016-05-27-envi-band-math/image001.png"></p>
 					<p>ENVI Band运算符使用方便且功能强大，它们可以对每一个像元进行检验和处理，避免了FOR循环（不允许在波段运算中使用）的使用。数组运算符包含关系运算符（LT、LE、EQ、NE、GE、GT）、Boolean运算符（AND、OR、NOT、XOR）和最小值、最大值运算符（<、>）。这些特殊的运算符对图像中的每个像元同时进行处理，将结果返还到与输入图像具有相同维数的图像中。</p>
 					<p>例如：</p>
 					<pre>（b1 lt 0）*（-999）+（b1 ge 0）* b1</pre>

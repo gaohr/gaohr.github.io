@@ -36,7 +36,7 @@ $(document).ready(function() {
 		$("#allblogs").append(addblog(bloglist,i,tags));
 		if(bloglist[i].type == "专业技术") {
 			$("#technology").append(addblog(bloglist,i,tags));
-		} else if(bloglist[i].type == "数据下载") {
+		} else if(bloglist[i].type == "数据资源") {
 			$("#geodata").append(addblog(bloglist,i,tags));
 		} else if(bloglist[i].type == "随笔小记") {
 			$("#prose").append(addblog(bloglist,i,tags));
@@ -124,7 +124,7 @@ function readtags(n) {
 function blogtype(type) {
 	if(type == "专业技术") {
 		return "tab_4_2";
-	} else if(type == "数据下载") {
+	} else if(type == "数据资源") {
 		return "tab_4_3";
 	} else if(type == "随笔小记") {
 		return "tab_4_4";
@@ -157,7 +157,7 @@ function getBlogs(tag) {
 				$("#allblogs").append(addblog(bloglist,i,tags));
 				if(bloglist[i].type == "专业技术") {
 					$("#technology").append(addblog(bloglist,i,tags));
-				} else if(bloglist[i].type == "数据下载") {
+				} else if(bloglist[i].type == "数据资源") {
 					$("#geodata").append(addblog(bloglist,i,tags));
 				} else if(bloglist[i].type == "随笔小记") {
 					$("#prose").append(addblog(bloglist,i,tags));
@@ -181,7 +181,7 @@ function getAllBlogs() {
 		$("#allblogs").append(addblog(bloglist,i,tags));
 		if(bloglist[i].type == "专业技术") {
 			$("#technology").append(addblog(bloglist,i,tags));
-		} else if(bloglist[i].type == "数据下载") {
+		} else if(bloglist[i].type == "数据资源") {
 			$("#geodata").append(addblog(bloglist,i,tags));
 		} else if(bloglist[i].type == "随笔小记") {
 			$("#prose").append(addblog(bloglist,i,tags));
