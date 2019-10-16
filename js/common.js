@@ -248,6 +248,7 @@ function China70() {
 function HotTopic() {
 	$("#others").append("<div class=\"notice\">" +
 						"<ul id=\"notice01\" class=\"noticTipTxt\">" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-10-16-china-railway.html\" target=\"_blank\">全国精细铁路网矢量数据集 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据免费下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
