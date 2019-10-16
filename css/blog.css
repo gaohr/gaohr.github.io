@@ -46,6 +46,9 @@ Blog Page
 .blogcontent p {font-size:16px;line-height:26px;text-indent:2em;}
 .blogcontent p > i {text-indent:0em;}
 .blogcontent .blog-sub-title {font-size:16px;line-height:24px;text-indent:0em;padding:0 10px;margin-top:1.5em;border-top:1px solid #f65;border-bottom:1px solid #f65;border-left:10px solid #f65;border-right:10px solid #f65;display:inline-block}
+.blogcontent .blog-sub-title:before {content:"";position:relative;width:30%;height:1px;background-color:#f65;}
+.blogcontent .blog-sub-title:after {content:"";position:relative;width:30%;height:1px;background-color:#f65;}
+　　
 .blogcontent .blog-quote {font-size:0.9em;line-height:24px;padding:0 10px;margin-left:2em;border-left:5px solid #ccc;}
 .blogcontent .imginblog {width:auto;text-indent:0em;text-align:center}
 .blogcontent .imginblog img {max-width:800px;}

@@ -51,7 +51,7 @@
 				"<div id=\"cltmap\" class=\"cltmap\"></div>" +
 			"</div>");
 			
-	for(t = 0; t < topicslist.length; t++) {
+	for(var t = 0; t < topicslist.length; t++) {
 		$("#topics").append(
 			"<div class='topic'>" +
 				"<a href='" + topicslist[t].href + "'><img src='" + topicslist[t].img + "' title='" + topicslist[t].content + "'></a>" +
@@ -119,7 +119,7 @@
 	for(tr = 0; tr < tn; tr++) {
 		$("#topics-right").append(
 			"<div class='alltopics'>" +
-				"<a href='../" + topicslist[tr].href + "'><p><span class=\"alltopics-type\">" + topicslist[tr].type + "</span> " + topicslist[tr].title + "</p></a>" +
+				"<a href='" + topicslist[tr].href + "'><p><span class=\"alltopics-type\">" + topicslist[tr].type + "</span> " + topicslist[tr].title + "</p></a>" +
 			"</div>"
 		);
 	}

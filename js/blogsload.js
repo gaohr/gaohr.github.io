@@ -77,7 +77,7 @@ $(document).ready(function() {
 			}
 			$("#topics").append(
 				"<div class='topicbody'>" +
-					"<a href='site/special/" + topicslist[t].href + "' title='" + topicslist[t].title + "'>" +
+					"<a href='" + topicslist[t].href + "' title='" + topicslist[t].title + "'>" +
 						"<img src='site/special/" + topicslist[t].img + "'>" +
 						"<p><b>" + topicslist[t].title + "</b></p>" +
 					"</a>" +

@@ -354,14 +354,14 @@ function Search() {
 function blogsSearch(keyword) {
 	// 搜索博客
 	$("#pop-cont").html("");
-	for(b = 0; b < bloglist.length; b++) {
+	for(var b = 0; b < bloglist.length; b++) {
 		if(bloglist[b].title.indexOf(keyword) != -1 || bloglist[b].content.indexOf(keyword) != -1) {
 			$("#pop-cont").append(findblog(keyword, bloglist, b, 0));
 		}
 		
 	}
 	// 搜索专题
-	for(t = 0; t < topicslist.length; t++) {
+	for(var t = 0; t < topicslist.length; t++) {
 	if(topicslist[t].title.indexOf(keyword) != -1 || topicslist[t].content.indexOf(keyword) != -1) {
 			$("#pop-cont").append(findblog(keyword, topicslist, t, 1));
 		}
