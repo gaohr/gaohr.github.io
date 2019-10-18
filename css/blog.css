@@ -69,9 +69,10 @@ Blog Page
 .width-percent-80 {width:80%;margin-left:10%;}
 .width-percent-90 {width:90%;margin-left:5%;}
 
-
-.sidebar-tags  i {color:#d85546 !important;}
-.sidebar-tags  a {padding:3px;margin-left:5px;border-radius:5px}
+.sidebar-tags a {background:#fff !important;padding:3px;margin:5px;border-radius:5px}
+.sidebar-tags a:hover {background:#09f !important;color:#fff !important}
+.sidebar-tags a:hover i {color:#acf !important}
+.sidebar-tags i {color:#d85546 !important;}
 /*For Responsive*/
 @media (max-width: 560px) {
   .blog-page .blog-tag-data .blog-tag-data-inner {text-align: left;}
