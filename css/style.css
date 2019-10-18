@@ -1,7 +1,8 @@
 /*
 *By GaoHR
 */
-body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-02.jpg');background-size:100%;background-attachment:fixed;}
+/*body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/bg-02.jpg');background-size:100%;background-attachment:fixed;}*/
+body {background-color:#fff;font-size:14px;overflow-x:hidden;}
 hr {margin-top:10px;margin-bottom:10px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
@@ -20,7 +21,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.8);z-index:0;height:auto;width:72%;margin-left:14%;}
+.main-page {position:relative;margin-top:60px;background-color:rgba(235,235,235,0.5);z-index:0;height:auto;width:72%;margin-left:14%;}
 
 .centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px}
 
@@ -200,58 +201,9 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .emo-sm {width:24px}
 .emo-bg {width:36px}
 .emo-lg {width:50px}
-.emo-01-01 {content:url('../img/emoticon/01/01-01.png')}
-.emo-01-02 {content:url('../img/emoticon/01/01-02.png')}
-.emo-01-03 {content:url('../img/emoticon/01/01-03.png')}
-.emo-01-04 {content:url('../img/emoticon/01/01-04.png')}
-.emo-01-05 {content:url('../img/emoticon/01/01-05.png')}
-.emo-01-06 {content:url('../img/emoticon/01/01-06.png')}
-.emo-01-07 {content:url('../img/emoticon/01/01-07.png')}
-.emo-01-08 {content:url('../img/emoticon/01/01-08.png')}
-.emo-01-09 {content:url('../img/emoticon/01/01-09.png')}
-.emo-01-10 {content:url('../img/emoticon/01/01-10.png')}
-.emo-01-11 {content:url('../img/emoticon/01/01-11.png')}
-.emo-01-12 {content:url('../img/emoticon/01/01-12.png')}
-.emo-01-13 {content:url('../img/emoticon/01/01-13.png')}
-.emo-01-14 {content:url('../img/emoticon/01/01-14.png')}
-.emo-01-15 {content:url('../img/emoticon/01/01-15.png')}
-.emo-01-16 {content:url('../img/emoticon/01/01-16.png')}
-.emo-01-17 {content:url('../img/emoticon/01/01-17.png')}
-.emo-01-18 {content:url('../img/emoticon/01/01-18.png')}
-.emo-01-19 {content:url('../img/emoticon/01/01-19.png')}
-.emo-01-20 {content:url('../img/emoticon/01/01-20.png')}
-.emo-02-01 {content:url('../img/emoticon/02/02-01.png')}
-.emo-02-02 {content:url('../img/emoticon/02/02-02.png')}
-.emo-02-03 {content:url('../img/emoticon/02/02-03.png')}
-.emo-02-04 {content:url('../img/emoticon/02/02-04.png')}
-.emo-02-05 {content:url('../img/emoticon/02/02-05.png')}
-.emo-02-06 {content:url('../img/emoticon/02/02-06.png')}
-.emo-02-07 {content:url('../img/emoticon/02/02-07.png')}
-.emo-02-08 {content:url('../img/emoticon/02/02-08.png')}
-.emo-02-09 {content:url('../img/emoticon/02/02-09.png')}
-.emo-02-10 {content:url('../img/emoticon/02/02-10.png')}
-.emo-02-11 {content:url('../img/emoticon/02/02-11.png')}
-.emo-02-12 {content:url('../img/emoticon/02/02-12.png')}
-.emo-02-13 {content:url('../img/emoticon/02/02-13.png')}
-.emo-02-14 {content:url('../img/emoticon/02/02-14.png')}
-.emo-02-15 {content:url('../img/emoticon/02/02-15.png')}
-.emo-02-16 {content:url('../img/emoticon/02/02-16.png')}
-.emo-03-01 {content:url('../img/emoticon/03/03-01.png')}
-.emo-03-02 {content:url('../img/emoticon/03/03-02.png')}
-.emo-03-03 {content:url('../img/emoticon/03/03-03.png')}
-.emo-03-04 {content:url('../img/emoticon/03/03-04.png')}
-.emo-03-05 {content:url('../img/emoticon/03/03-05.png')}
-.emo-03-06 {content:url('../img/emoticon/03/03-06.png')}
-.emo-03-07 {content:url('../img/emoticon/03/03-07.png')}
-.emo-03-08 {content:url('../img/emoticon/03/03-08.png')}
-.emo-03-09 {content:url('../img/emoticon/03/03-09.png')}
-.emo-03-10 {content:url('../img/emoticon/03/03-10.png')}
-.emo-03-11 {content:url('../img/emoticon/03/03-11.png')}
-.emo-03-12 {content:url('../img/emoticon/03/03-12.png')}
-.emo-03-13 {content:url('../img/emoticon/03/03-13.png')}
-.emo-03-14 {content:url('../img/emoticon/03/03-14.png')}
-.emo-03-15 {content:url('../img/emoticon/03/03-15.png')}
-.emo-03-16 {content:url('../img/emoticon/03/03-16.png')}
+.emo-01-01 {content:url('../img/emoticon/01/01-01.png')}.emo-01-02 {content:url('../img/emoticon/01/01-02.png')}.emo-01-03 {content:url('../img/emoticon/01/01-03.png')}.emo-01-04 {content:url('../img/emoticon/01/01-04.png')}.emo-01-05 {content:url('../img/emoticon/01/01-05.png')}.emo-01-06 {content:url('../img/emoticon/01/01-06.png')}.emo-01-07 {content:url('../img/emoticon/01/01-07.png')}.emo-01-08 {content:url('../img/emoticon/01/01-08.png')}.emo-01-09 {content:url('../img/emoticon/01/01-09.png')}.emo-01-10 {content:url('../img/emoticon/01/01-10.png')}.emo-01-11 {content:url('../img/emoticon/01/01-11.png')}.emo-01-12 {content:url('../img/emoticon/01/01-12.png')}.emo-01-13 {content:url('../img/emoticon/01/01-13.png')}.emo-01-14 {content:url('../img/emoticon/01/01-14.png')}.emo-01-15 {content:url('../img/emoticon/01/01-15.png')}.emo-01-16 {content:url('../img/emoticon/01/01-16.png')}.emo-01-17 {content:url('../img/emoticon/01/01-17.png')}.emo-01-18 {content:url('../img/emoticon/01/01-18.png')}.emo-01-19 {content:url('../img/emoticon/01/01-19.png')}.emo-01-20 {content:url('../img/emoticon/01/01-20.png')}
+.emo-02-01 {content:url('../img/emoticon/02/02-01.png')}.emo-02-02 {content:url('../img/emoticon/02/02-02.png')}.emo-02-03 {content:url('../img/emoticon/02/02-03.png')}.emo-02-04 {content:url('../img/emoticon/02/02-04.png')}.emo-02-05 {content:url('../img/emoticon/02/02-05.png')}.emo-02-06 {content:url('../img/emoticon/02/02-06.png')}.emo-02-07 {content:url('../img/emoticon/02/02-07.png')}.emo-02-08 {content:url('../img/emoticon/02/02-08.png')}.emo-02-09 {content:url('../img/emoticon/02/02-09.png')}.emo-02-10 {content:url('../img/emoticon/02/02-10.png')}.emo-02-11 {content:url('../img/emoticon/02/02-11.png')}.emo-02-12 {content:url('../img/emoticon/02/02-12.png')}.emo-02-13 {content:url('../img/emoticon/02/02-13.png')}.emo-02-14 {content:url('../img/emoticon/02/02-14.png')}.emo-02-15 {content:url('../img/emoticon/02/02-15.png')}.emo-02-16 {content:url('../img/emoticon/02/02-16.png')}
+.emo-03-01 {content:url('../img/emoticon/03/03-01.png')}.emo-03-02 {content:url('../img/emoticon/03/03-02.png')}.emo-03-03 {content:url('../img/emoticon/03/03-03.png')}.emo-03-04 {content:url('../img/emoticon/03/03-04.png')}.emo-03-05 {content:url('../img/emoticon/03/03-05.png')}.emo-03-06 {content:url('../img/emoticon/03/03-06.png')}.emo-03-07 {content:url('../img/emoticon/03/03-07.png')}.emo-03-08 {content:url('../img/emoticon/03/03-08.png')}.emo-03-09 {content:url('../img/emoticon/03/03-09.png')}.emo-03-10 {content:url('../img/emoticon/03/03-10.png')}.emo-03-11 {content:url('../img/emoticon/03/03-11.png')}.emo-03-12 {content:url('../img/emoticon/03/03-12.png')}.emo-03-13 {content:url('../img/emoticon/03/03-13.png')}.emo-03-14 {content:url('../img/emoticon/03/03-14.png')}.emo-03-15 {content:url('../img/emoticon/03/03-15.png')}.emo-03-16 {content:url('../img/emoticon/03/03-16.png')}
 
 /* Loading */
 .loading-0 {content:url('../img/others/loading-0.gif');width:30%;margin-left:35%}
@@ -272,7 +224,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 }
 
 @media (max-width: 1600px) {
-	.main-page {width:98%;margin-left:0;padding-left:0;}
+	.main-page {width:98.5%;margin-left:0;padding-left:0;}
 	.blogcontent .imginblog img {max-width:640px;}
 }
 
@@ -281,6 +233,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 	.menulist {display:block;margin-top:10%;font-size:18px;}
 	.menulist a{color:#333 !important;}
 	.blogcontent .imginblog img {max-width:320px;}
+	.centerpage {padding:10px 20px;}
 	
 	.svg {display:none}
 	.sider-bar {display:none}
