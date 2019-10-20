@@ -291,7 +291,7 @@ var data_links = {
 	"28":["安徽", "https://pan.baidu.com/s/1A03CKmH__Awy8iQr2mMpFg", "1azd", "Anhui", "302.77 MB"],
 	"29":["上海", "https://pan.baidu.com/s/1vggMuCW4PEQpm0Np3TW8Mw", "1ny6", "Shanghai", "20.09 MB"],
 	"30":["重庆", "https://pan.baidu.com/s/12IX8cdN4sdiaUPIbQQ2iZA", "wvbn", "Chongqing", "375.78 MB"],
-	"31":["江苏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangsu", ""],
+	"31":["江苏", "https://pan.baidu.com/s/1kM6_dE2WdwFFtW2cl0gf1g&shfl=sharepset", "qjak", "Jiangsu", "161.06 MB"],
 	"32":["广东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangdong", ""],
 	"33":["河北", "https://pan.baidu.com/s/1vJ0Hbbyu535zQgTUmSeR9Q", "tv1u", "Hebei", "452.99 MB"]
 }
