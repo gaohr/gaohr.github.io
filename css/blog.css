@@ -60,7 +60,7 @@ Blog Page
 .blogtopinfo > span > a {margin-left:5px}
 .greencode {color:#080;}
 .blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
-.cmdblack {background:rgba(0,0,0,0.5);color:#fff;padding:0 2px;border-radius:2px}
+.cmdblack {background:rgba(0,0,0,0.75);color:#fff;padding:0 2px;border-radius:2px}
 .alist li > a:hover{color:#a30;}
 
 .width-percent-50 {width:50%;margin-left:25%;}
