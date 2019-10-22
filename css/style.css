@@ -26,6 +26,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px}
 
 .centerpage .carousel img {cursor:pointer;}
+.centerpage .carousel ol {top:90%;}
 .centerpage .carousel .img-title {color:#fff;background-color:rgba(0,0,0,0.75);width:100%;padding:20px;font-size:1.5em}
 .centerpage .carousel .img-title a {color:#fff;background-color:rgba(255,105,80,0.75);padding:3px;border-radius:5px;margin-left:10px}
 .centerpage .carousel .img-title a:hover {color:#fff;background-color:rgba(255,105,80,0.85);padding:3px;border-radius:5px;margin-left:10px}

@@ -263,10 +263,10 @@ var data_links = {
 	"0":["浙江", "https://pan.baidu.com/s/1PRkMHN2zMrNGdxib-Hoo4g", "ti5i", "Zhejiang", "248.35 MB"],
 	"1":["云南", "https://pan.baidu.com/s/1QxhHUpeA5KTG93T8JN3Ifw", "nchz", "Yunnan", "1.08 GB"],
 	"2":["新疆", "https://pan.baidu.com/s/1GcGRsm1CBlk1lSCXrvuiJA", "ts9c", "Xinjiang", "2.82 GB"],
-	"3":["香港", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Xianggang", ""],
+	"3":["香港", "https://pan.baidu.com/s/1X2kOe3xmDGRH9DeAAooYcA", "qjra", "Xianggang", "13.2 MB"],
 	"4":["西藏", "https://pan.baidu.com/s/1TYEhrxlAfy3K3rebWxZnWA", "k8d4", "Xizang", "2.69 GB"],
 	"5":["台湾", "https://pan.baidu.com/s/1R9E7glmuHe41QQ1kSPr4Rw", "16wu", "Taiwan", "50.84 MB"],
-	"6":["四川", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Sichuan", ""],
+	"6":["四川", "https://pan.baidu.com/s/16PH8fFcngankQri3fhR-iA", "xbav", "Sichuan", "1.26 GB"],
 	"7":["陕西", "https://pan.baidu.com/s/1oUQI96zIGLAcikO5Hc1mLA", "4qgj", "Shanxi2", "631.35 MB"],
 	"8":["山西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi", ""],
 	"9":["山东", "https://pan.baidu.com/s/1qnZcbh_ubIOY9z0TtSPjBQ", "371n", "Shandong", "220.58 MB"],
@@ -287,12 +287,12 @@ var data_links = {
 	"24":["广西", "https://pan.baidu.com/s/19QJBloTq4HAHj5Xub4q3lg", "jlf9", "Guangxi", "563.87 MB"],
 	"25":["甘肃", "https://pan.baidu.com/s/1zArxvVyOUsXhvlpvty25Rw", "3mzs", "Gansu", "1.10 GB"],
 	"26":["福建", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Fujian", ""],
-	"27":["澳门", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Aomen", ""],
+	"27":["澳门", "https://pan.baidu.com/s/1X2kOe3xmDGRH9DeAAooYcA", "qjra", "Aomen", "13.2 MB"],
 	"28":["安徽", "https://pan.baidu.com/s/1A03CKmH__Awy8iQr2mMpFg", "1azd", "Anhui", "302.77 MB"],
 	"29":["上海", "https://pan.baidu.com/s/1vggMuCW4PEQpm0Np3TW8Mw", "1ny6", "Shanghai", "20.09 MB"],
 	"30":["重庆", "https://pan.baidu.com/s/12IX8cdN4sdiaUPIbQQ2iZA", "wvbn", "Chongqing", "375.78 MB"],
 	"31":["江苏", "https://pan.baidu.com/s/1kM6_dE2WdwFFtW2cl0gf1g", "qjak", "Jiangsu", "161.06 MB"],
-	"32":["广东", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guangdong", ""],
+	"32":["广东", "https://pan.baidu.com/s/1rz3k9ZLiHt7OD1ScpBWCpw", "cd0l", "Guangdong", "331.46 MB"],
 	"33":["河北", "https://pan.baidu.com/s/1vJ0Hbbyu535zQgTUmSeR9Q", "tv1u", "Hebei", "452.99 MB"]
 }
 	
