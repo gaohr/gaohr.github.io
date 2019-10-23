@@ -222,7 +222,7 @@ function China70() {
 	var warm_alert = warmAlert(loc_city, loc_weather)
 	$("#others").append("<div id=\"China70\" class=\"greatChina\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-							"<div class=\"timer-container\"><p>" + warm_alert + "</p></div>" +
+							"<div class=\"timer-container\"><p class='ad-title'>" + warm_alert + "</p></div>" +
 							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p>中华人民共和国<br>70周年华诞</p></div>" +
 							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
