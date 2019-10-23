@@ -107,7 +107,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 
 .cltmap {width:100%;}
 .dashang {width:100%;height:auto;text-align:center;}
-.shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;}
+.shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;cursor:pointer;}
 .tdcode {width:400px;height:240px;display:none;padding:10px;background:#777;border:1px soild #d85546}
 .tdcode img {width:160px;margin:0 10px 10px 10px}
 .dshstatis {width:100%;height:280px;padding:5px}
