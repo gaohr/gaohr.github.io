@@ -188,11 +188,13 @@ function Warning() {
 	return "<br><p>关注新浪微博：<a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><br><p class='g-color-red'> (原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b>)</p>";
 }
 	
+var loc_city = "";
+var loc_weather = "";
 function Weather() {
 	loc = returnCitySN.cip;
 	key = "422ad66c7a314de9b05f91cf70ec2c18";
 	re = ""
-	$.ajax({url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,dataType:"json",async:false,success:function(data){if(data.HeWeather6[0].status == "ok") {re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";} else {re += "N/A";}},error:function(){re += "N/A";}});
+	$.ajax({url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,dataType:"json",async:false,success:function(data){if(data.HeWeather6[0].status == "ok") {re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";loc_city=data.HeWeather6[0].basic.location;loc_weather=data.HeWeather6[0].daily_forecast[1].cond_txt_n} else {re += "N/A";}},error:function(){re += "N/A";}});
 	return re;
 }
 	
@@ -217,10 +219,12 @@ function GreatChina() {
 }
 	
 function China70() {
+	var warm_alert = warmAlert(loc_city, loc_weather)
 	$("#others").append("<div id=\"China70\" class=\"greatChina\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
+							"<div class=\"timer-container\"><p>" + warm_alert + "</p></div>" +
 							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
-							"<div class=\"timer-container\"><p>中华人民共和国<br>70周年华诞</p></div>" +
+							// "<div class=\"timer-container\"><p>中华人民共和国<br>70周年华诞</p></div>" +
 							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
 						"</div>");
 		$("#China70").show(500);
@@ -243,6 +247,29 @@ function China70() {
 			$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");
 		}, 1000);
 		*/
+}
+	
+function warmAlert(city, weather) {
+	day = new Date( )
+	nge_Hour = day.getHours( )
+	var nge_warmprompt = "";
+	if (nge_Hour == 0){nge_warmprompt = "现在已经过凌晨了，身体是无价的，早点休息吧！"}
+	if (nge_Hour == 1){nge_warmprompt = "凌晨1点多了，工作是永远都做不完的，别熬坏身子！"}
+	if (nge_Hour == 2){nge_warmprompt = "该休息了，身体可是革命的本钱啊！啊？！！"}
+	if (nge_Hour == 3){nge_warmprompt = "夜深了，熬夜很容易导致身体内分泌失调，长痘痘的！"}
+	if (nge_Hour == 4){nge_warmprompt = "四点了，你是起了还是没睡？？？"}
+	if (nge_Hour == 5){nge_warmprompt = city + "凌晨5点的天空，你看看了吗？"}
+	if (nge_Hour == 6){nge_warmprompt = "清晨好，这么早就来看啦，嘿嘿？"}
+	if (nge_Hour == 7){nge_warmprompt = "新的一天又开始了，好好吃早饭，祝你过得快乐!"}
+	if (nge_Hour == 8){nge_warmprompt = "早上好，一天之际在于晨，又是美好的一天！"}
+	if ((nge_Hour == 9) || (nge_Hour ==10)){nge_warmprompt = "上午好！我觉得上午是一天中过的最快的时候，你觉得呢？"}
+	if (( nge_Hour == 11) || (nge_Hour == 12)){nge_warmprompt = "该吃午饭啦！有什么好吃的？您有午休的习惯吗？反正我没有~"}
+	if (( nge_Hour >= 13) && (nge_Hour <= 17)){nge_warmprompt = "下午好！今天天气好吗？记得" + city + "明天是" + weather + "天气"}
+	if (( nge_Hour >= 17) && (nge_Hour <= 18)){nge_warmprompt = "太阳落山了！快看看夕阳吧！如果外面下雨，就不必了 ^_^"}
+	if (( nge_Hour >= 18) && (nge_Hour <= 19)){nge_warmprompt = "晚上好，今天的心情怎么样，来博客给我留个言吧！"}
+	if (( nge_Hour >= 19) && (nge_Hour <= 21)){nge_warmprompt = "忙碌了一天，累了吧？玩个游戏，看个电影，放松下！"}
+	if (( nge_Hour >= 22) && (nge_Hour <= 23)){nge_warmprompt = "这么晚了，还在上网？早点洗洗睡吧，睡前记得洗洗脸！"}
+	return nge_warmprompt;
 }
 	
 function HotTopic() {
