@@ -41,7 +41,7 @@ for(i = 0; i < imgs.length; i++) {
 function getsrcnum(n) {
 	var imgsrc = "";
 	for(k = 0; k < imgs[n].src.length; k++) {
-		imgsrc += "<img class='imglh' onclick='imgdisplay(\"http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "\", " + n + ")' src='http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[n].src[k].url + "'>_"
+		imgsrc += "<img class='imglh' onclick='imgdisplay(\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[n].src[k].url + "\", " + n + ")' src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[n].src[k].url + "'>_"
 	}
 	return imgsrc;
 }
@@ -124,7 +124,7 @@ function getColor_rdm(n){
 //向后翻
 var imgnum = 0;
 $("#imgnext").click(function() {
-	imgsrc = "http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+	imgsrc = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
 	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	imgnum++;
 	if(imgnum == imgs[imgid].src.length){
@@ -140,7 +140,7 @@ $("#imgpre").click(function() {
 		alert("前面没有照片啦！"); 
 		imgnum = 0;
 	} else {
-		imgsrc = "http://gaohr.win/MyImages/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+		imgsrc = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
 	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	}
 })

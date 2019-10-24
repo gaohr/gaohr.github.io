@@ -58,13 +58,13 @@ for(i = 0; i < 20; i++) {
 	$("#video-list-1").append("<div class=\"video-div\">" +
 								"<p>" + videos_1[index[i]].title + "</p>" +
 								"<video controls>" +
-									"<source src=\"http://gaohr.win/MyImages/videos/funny_videos/" + videos_1[index[i]].id + ".mp4\" type='video/mp4'>" +
+									"<source src=\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/videos/funny/" + videos_1[index[i]].id + ".mp4\" type='video/mp4'>" +
 								"</video>" +
 							"</div>");
 	$("#video-list-2").append("<div class=\"video-div\">" +
 								"<p>" + videos_2[index[i]].title + "</p>" +
 								"<video controls>" +
-									"<source src=\"http://gaohr.win/MyImages/videos/funny_videos/" + videos_2[index[i]].id + ".mp4\" type='video/mp4'>" +
+									"<source src=\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/videos/funny/" + videos_2[index[i]].id + ".mp4\" type='video/mp4'>" +
 								"</video>" +
 							"</div>");
 }	

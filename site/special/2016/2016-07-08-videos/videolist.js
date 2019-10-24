@@ -1,6 +1,6 @@
 var videolist = [
 	{"id":"000", "title":"中国5000年历史版图演变", "mp4":"China_territory"},
-	{"id":"001", "title":"权力的游戏 360°全景", "mp4":"a_song_of_ice_and_fire_360C"},
+	{"id":"001", "title":"权力的游戏 360°全景", "mp4":"GameofThrone"},
 	{"id":"002", "title":"没有翅膀，却梦想飞翔", "mp4":"dream"},
 	{"id":"003", "title":"《迷雾花开》", "mp4":"TangsQiny"},
 	{"id":"004", "title":"我们的宇宙，了解一下", "mp4":"universe1"},
@@ -21,7 +21,7 @@ for(i = 0; i < videolist.length; i++) {
 	$("#videoDiv").append("<div class='span4' style='margin-left:0'>" +
 							"<p style='color:#f52;font-size:1.2em;margin-top:30px;text-indent:0'>" + videolist[i].title + "</p>" +
 							"<video id='my-video' class='video-js' controls preload='auto' width='240' height='200' poster='http://gaohr.win/site/special/2016/2016-07-08-videos/" + videolist[i].mp4 + ".jpg' data-setup='{}'>" +
-							"<source src='http://gaohr.win/MyImages/videos/blogs/" + videolist[i].mp4 + ".mp4' type='video/mp4'>" +
+							"<source src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/videos/favorite/" + videolist[i].mp4 + ".mp4' type='video/mp4'>" +
 							"</video>" +
 							"</div>");
 }
