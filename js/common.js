@@ -196,7 +196,7 @@ function Weather() {
 	loc = returnCitySN.cip;
 	key = "422ad66c7a314de9b05f91cf70ec2c18";
 	re = ""
-	$.ajax({url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,dataType:"json",async:false,success:function(data){if(data.HeWeather6[0].status == "ok") {re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";loc_city=data.HeWeather6[0].basic.location;loc_weather_today=data.HeWeather6[0].daily_forecast[0].cond_txt_n;loc_weather=data.HeWeather6[0].daily_forecast[1].cond_txt_n} else {re += "N/A";}},error:function(){re += "N/A";}});
+	$.ajax({url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,dataType:"json",async:false,success:function(data){if(data.HeWeather6[0].status == "ok") {re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";loc_city=data.HeWeather6[0].basic.location;loc_weather_today=data.HeWeather6[0].daily_forecast[0].cond_txt_d;loc_weather=data.HeWeather6[0].daily_forecast[1].cond_txt_n} else {re += "N/A";}},error:function(){re += "N/A";}});
 	return re;
 }
 	
@@ -265,10 +265,10 @@ function warmAlert(city, weather0, weather1) {
 	if (nge_Hour == 7){nge_warmprompt = "新的一天又开始了，好好吃早饭!今天天气好像是<b>" + weather0 + "</b>~"}
 	if (nge_Hour == 8){nge_warmprompt = "早上好，一天之际在于晨，今天天气好像是<b>" + weather0 + "</b>~"}
 	if ((nge_Hour >= 9) && (nge_Hour <= 10)){nge_warmprompt = "上午好！注意今天有<b>" + data.HeWeather6[0].daily_forecast[0].wind_dir + " " + data.HeWeather6[0].daily_forecast[0].wind_sc + "级</b>"}
-	if ((nge_Hour == 11)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '^'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "下雪天，总是那么诗意烂漫！冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
+	if ((nge_Hour == 11)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '_'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "下雪天，总是那么诗意烂漫！冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
 	if ((nge_Hour == 12)){nge_warmprompt = "吃午饭啦！有什么好吃的？您有午休的习惯吗？反正我没有~"}
 	if ((nge_Hour == 13)){nge_warmprompt = "下午好！今天工作、学习顺利吗？记得<b>" + city + "</b>明天是<b>" + weather1 + "</b>天气"}
-	if ((nge_Hour >= 14) && (nge_Hour < 17)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '^'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "午后的下雪天，还是那么诗意烂漫！冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗，留意一下明天的天气吧？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
+	if ((nge_Hour >= 14) && (nge_Hour < 17)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '_'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "午后的下雪天，还是那么诗意烂漫！冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗，留意一下明天的天气吧？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
 	if ((nge_Hour == 17)){nge_warmprompt = "太阳落山了！快看看夕阳吧！如果没下雨的话 ^_^"}
 	if ((nge_Hour == 18)){nge_warmprompt = "晚上好，今天的心情怎么样，来博客给我留个言吧！"}
 	if ((nge_Hour >= 19) && (nge_Hour < 21)){nge_warmprompt = "忙碌了一天，累了吧？玩个游戏，看个电影，放松下！"}
