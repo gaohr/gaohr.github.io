@@ -139,6 +139,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .greatChina .ad-close span:before {content:"X"}
 .greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
 .greatChina .ad-title {padding:5px 0;background:rgba(0,0,0,0.8)}
+.greatChina b {color:#ff0;margin:0 3px;}
 .flagimg {position:fixed;top:0px;left:30%;width:70px;z-index:9999}
 
 .notice{position:fixed;top:60px;left:45%;width:320px;height:36px;background:url(http://gaohr.win/img/others/horn.png) no-repeat;z-index:9999;background-color:rgba(0,0,0,0.75);box-shadow:1px 1px 5px #aaa;border-radius:20px;}
