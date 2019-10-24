@@ -7,7 +7,8 @@ var datalist_province = [
 	{"id":"005", "name":"新疆维吾尔族自治区", "data":"railways_Xinjiang_201910-osm-s3ryk87d"},
 	{"id":"006", "name":"上海市", "data":"railways_Shanghai_201910-osm-df635yj4"},
 	{"id":"007", "name":"重庆市", "data":"railways_Chongqing_201910-osm-srh489db"},
-	{"id":"007", "name":"江苏省", "data":"railways_Jiangsu_201910-osm-9lz1gse8"}
+	{"id":"008", "name":"江苏省", "data":"railways_Jiangsu_201910-osm-9lz1gse8"},
+	{"id":"009", "name":"黑龙江省", "data":"railways_Heilongjiang_201910-osm-aejr16sr"}
 ]
 
 var datalist_city = [
