@@ -10,7 +10,7 @@ var bloglist = [
 
 {"blogid":"2019091301", "title":"中国土壤类型空间分布数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国土壤类型空间分布数据根据全国土壤普查办公室1995年编制并出版的《1：100万中华人民共和国土壤图》数字化生成， 采用了传统的“土壤发生分类”系统，基本覆盖了全国各种类型土壤及其主要属性特征。", "img":"site/blogs/2019/images/SoilType.jpg", "date":"2019-09-13", "href":"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html", "tags":["土壤类型", "数据"]},
 
-{"blogid":"2019082001", "title":"中国地面气候资料日值数据集(V3.0)数据提取", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国地面气候资料日值数据集包含了1951年1月以来的气压、气温、降水量、蒸发量、相对湿度、风向风速、日照时数和0cm地温要素的逐日数据。该数据集是以TXT文本格式存储，使用时还需要进一步提取和处理，本文便是利用Python程序进行数据的快速提取。", "img":"site/blogs/2019/images/ClimateData.jpg", "date":"2019-08-20", "href":"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html", "tags":["气象数据", "数据提取", "Python"]},
+{"blogid":"2019082001", "title":"中国地面气候资料日值数据集(V3.0)数据提取", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国地面气候资料日值数据集包含了1951年1月以来的气压、气温、降水量、蒸发量、相对湿度、风向风速、日照时数和0cm地温要素的逐日数据。该数据集是以TXT文本格式存储，使用时还需要进一步提取和处理，本文便是利用Python程序进行数据的快速提取。", "img":"site/blogs/2019/images/ClimateData.jpg", "date":"2019-08-20", "href":"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html", "tags":["气象数据", "数据提取", "Python"]},
 
 {"blogid":"2019052701", "title":"GIS地图制图的艺术之美", "type":"随笔小记", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"随着大数据、云平台等新技术的发展，传统地图制图学遇到很大的挑战和机遇。面对形式复杂多样、内容丰富多彩的GIS信息，如何利用GIS新兴技术，结合传统的地图学知识和理论，高效制作具有其固有价值而又给人以美感的地图，是新时代GIS地图制图的趋势。", "img":"site/blogs/2019/images/ArcGIS_Art.jpg", "date":"2019-05-27", "href":"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html", "tags":["GIS", "地图", "制图"]},
 
