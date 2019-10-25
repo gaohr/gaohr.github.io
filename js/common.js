@@ -221,7 +221,7 @@ function GreatChina() {
 }
 	
 function China70() {
-	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather)
+	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
 	$("#others").append("<div id=\"China70\" class=\"greatChina\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
 							"<div class=\"timer-container\"><p class='ad-title'>" + warm_alert + "</p></div>" +
@@ -251,7 +251,7 @@ function China70() {
 		*/
 }
 	
-function warmAlert(city, weather0, weather1) {
+function warmAlert(city, weather0, weather1, wind) {
 	day = new Date( )
 	nge_Hour = day.getHours( )
 	var nge_warmprompt = "";
@@ -264,7 +264,7 @@ function warmAlert(city, weather0, weather1) {
 	if (nge_Hour == 6){nge_warmprompt = "清晨好，这么早就来看啦，嘿嘿？"}
 	if (nge_Hour == 7){nge_warmprompt = "新的一天又开始了，好好吃早饭!今天天气好像是<b>" + weather0 + "</b>~"}
 	if (nge_Hour == 8){nge_warmprompt = "早上好，一天之际在于晨，今天天气好像是<b>" + weather0 + "</b>~"}
-	if ((nge_Hour >= 9) && (nge_Hour <= 10)){nge_warmprompt = "上午好！注意今天有<b>" + loc_wind + "</b>"}
+	if ((nge_Hour >= 9) && (nge_Hour <= 10)){nge_warmprompt = "上午好！注意今天有<b>" + wind + "</b>"}
 	if ((nge_Hour == 11)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '_'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "下雪天，总是那么诗意烂漫！冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
 	if ((nge_Hour == 12)){nge_warmprompt = "吃午饭啦！有什么好吃的？您有午休的习惯吗？反正我没有~"}
 	if ((nge_Hour == 13)){nge_warmprompt = "下午好！今天工作、学习顺利吗？记得<b>" + city + "</b>明天天气是<b>" + weather1 + "</b>"}
