@@ -166,11 +166,11 @@
 	<script src="2019-10-16-china-railway/datalist.js"></script>
 	<script>
 		for(var i = 0; i < datalist_province.length; i++) {
-			$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td>ESRI Shapefile</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/"+ datalist_province[i].data +".rar'><img src='http://gaohr.win/img/others/zip_icon.png'></a></td></tr>");
+			$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td>ESRI Shapefile</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
 		}
 		
 		for(var j = 0; j < datalist_city.length; j++) {
-			$("#data-city").append("<tr><td>"+ datalist_city[j].id +"</td><td>"+ datalist_city[j].name +"</td><td>ESRI Shapefile</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/"+ datalist_city[j].data +".rar'><img src='http://gaohr.win/img/others/zip_icon.png'></a></td></tr>");
+			$("#data-city").append("<tr><td>"+ datalist_city[j].id +"</td><td>"+ datalist_city[j].name +"</td><td>ESRI Shapefile</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/"+ datalist_city[j].data +".rar'><i class='icon-download'></i></a></td></tr>");
 		}
 		
 		$('.carousel').carousel({

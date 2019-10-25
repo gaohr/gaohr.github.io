@@ -214,12 +214,13 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .emo-02-01 {content:url('../img/emoticon/02/02-01.png')}.emo-02-02 {content:url('../img/emoticon/02/02-02.png')}.emo-02-03 {content:url('../img/emoticon/02/02-03.png')}.emo-02-04 {content:url('../img/emoticon/02/02-04.png')}.emo-02-05 {content:url('../img/emoticon/02/02-05.png')}.emo-02-06 {content:url('../img/emoticon/02/02-06.png')}.emo-02-07 {content:url('../img/emoticon/02/02-07.png')}.emo-02-08 {content:url('../img/emoticon/02/02-08.png')}.emo-02-09 {content:url('../img/emoticon/02/02-09.png')}.emo-02-10 {content:url('../img/emoticon/02/02-10.png')}.emo-02-11 {content:url('../img/emoticon/02/02-11.png')}.emo-02-12 {content:url('../img/emoticon/02/02-12.png')}.emo-02-13 {content:url('../img/emoticon/02/02-13.png')}.emo-02-14 {content:url('../img/emoticon/02/02-14.png')}.emo-02-15 {content:url('../img/emoticon/02/02-15.png')}.emo-02-16 {content:url('../img/emoticon/02/02-16.png')}
 .emo-03-01 {content:url('../img/emoticon/03/03-01.png')}.emo-03-02 {content:url('../img/emoticon/03/03-02.png')}.emo-03-03 {content:url('../img/emoticon/03/03-03.png')}.emo-03-04 {content:url('../img/emoticon/03/03-04.png')}.emo-03-05 {content:url('../img/emoticon/03/03-05.png')}.emo-03-06 {content:url('../img/emoticon/03/03-06.png')}.emo-03-07 {content:url('../img/emoticon/03/03-07.png')}.emo-03-08 {content:url('../img/emoticon/03/03-08.png')}.emo-03-09 {content:url('../img/emoticon/03/03-09.png')}.emo-03-10 {content:url('../img/emoticon/03/03-10.png')}.emo-03-11 {content:url('../img/emoticon/03/03-11.png')}.emo-03-12 {content:url('../img/emoticon/03/03-12.png')}.emo-03-13 {content:url('../img/emoticon/03/03-13.png')}.emo-03-14 {content:url('../img/emoticon/03/03-14.png')}.emo-03-15 {content:url('../img/emoticon/03/03-15.png')}.emo-03-16 {content:url('../img/emoticon/03/03-16.png')}
 
+/* Download */
+.icon-download {content:url('../img/others/download-red.png');width:32px;}
+.icon-download:hover {content:url('../img/others/download-blue.png');width:32px;}
+
 /* Loading */
 .loading-0 {content:url('../img/others/loading-0.gif');width:30%;margin-left:35%}
-.loading-1 {content:url('../img/others/loading-1.gif');width:20%;margin-left:40%}
-.loading-2 {content:url('../img/others/loading-2.gif');width:60%;margin-left:20%}
-.loading-earth {content:url('../img/others/loading-earth.gif');width:30%;margin-left:35%}
-.loading-earth-s {content:url('../img/others/loading-earth-s.gif');width:20%;margin-left:40%}
+
 
 /* Brand */
 .icon-qq {content:url('../img/brand/qq.png');width:32px;}
