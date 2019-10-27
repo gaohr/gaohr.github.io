@@ -9,7 +9,8 @@ var datalist_province = [
 	{"id":"08", "name":"重庆市", "data":"railways_Chongqing_201910-osm-srh489db"},
 	{"id":"09", "name":"江苏省", "data":"railways_Jiangsu_201910-osm-9lz1gse8"},
 	{"id":"10", "name":"黑龙江省", "data":"railways_Heilongjiang_201910-osm-aejr16sr"},
-	{"id":"11", "name":"贵州省", "data":"railways_Guizhou_201910-osm-ae65grs5"}
+	{"id":"11", "name":"贵州省", "data":"railways_Guizhou_201910-osm-ae65grs5"},
+	{"id":"12", "name":"福建省", "data":"railways_Fujian_201910-osm-aze56r78"}
 ]
 
 var datalist_city = [
