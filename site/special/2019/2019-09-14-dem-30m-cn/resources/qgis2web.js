@@ -286,7 +286,7 @@ var data_links = {
 	"23":["贵州", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Guizhou", ""],
 	"24":["广西", "https://pan.baidu.com/s/19QJBloTq4HAHj5Xub4q3lg", "jlf9", "Guangxi", "563.87 MB"],
 	"25":["甘肃", "https://pan.baidu.com/s/1zArxvVyOUsXhvlpvty25Rw", "3mzs", "Gansu", "1.10 GB"],
-	"26":["福建", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Fujian", ""],
+	"26":["福建", "https://pan.baidu.com/s/13I96jLryzWaK9TIIqHKmbA", "fivg", "Fujian", "318.69 MB"],
 	"27":["澳门", "https://pan.baidu.com/s/1X2kOe3xmDGRH9DeAAooYcA", "qjra", "Aomen", "13.2 MB"],
 	"28":["安徽", "https://pan.baidu.com/s/1A03CKmH__Awy8iQr2mMpFg", "1azd", "Anhui", "302.77 MB"],
 	"29":["上海", "https://pan.baidu.com/s/1vggMuCW4PEQpm0Np3TW8Mw", "1ny6", "Shanghai", "20.09 MB"],
