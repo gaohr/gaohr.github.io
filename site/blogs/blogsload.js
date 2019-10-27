@@ -77,7 +77,7 @@
 	//add blog info to right side
 	function addblog_right(bloglist,n) {
 		var blogcon = "<div class='blog-article'>" +
-			"<a href='" + bloglist[n].href + "' class='blog-title' style='font-size:1.1em;line-height:12px;'><span class='bg-orange g-color-white'>" + bloglist[n].type + "</span>&nbsp;" + bloglist[n].title + "<br><img src='../../../" + bloglist[n].img + "' class='blog-img text-center' style='width:60%;'></a><br>" +
+			"<a href='" + bloglist[n].href + "' class='blog-title' style='font-size:1.15em;line-height:12px;'><span class='bg-gray g-color-white' style='padding:0 2px;border-radius:2px;'>" + bloglist[n].type + "</span>&nbsp;" + bloglist[n].title + "<br><img src='../../../" + bloglist[n].img + "' class='blog-img text-center' style='width:60%;'></a><br>" +
 			"</div><hr>";
 			return blogcon;
 	}
