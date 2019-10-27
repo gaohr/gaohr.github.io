@@ -42,10 +42,41 @@ var videos_2 = [
 	{"id":"038", "title":"敢抢我吃的，头都给你打飞"},
 	{"id":"039", "title":"哈哈哈哈不要顶狗了"},
 ]
+var videos_3 = [
+	{"id":"040", "title":"爸爸妈妈冷静点"},
+	{"id":"041", "title":"不要太高估自己的能力"},
+	{"id":"042", "title":"狗子扳回一局"},
+	{"id":"043", "title":"和亲戚独处的你"},
+	{"id":"044", "title":"会撒娇的鹅"},
+	{"id":"045", "title":"看到结尾想打人系列"},
+	{"id":"046", "title":"恐惧症患者的聚会"},
+	{"id":"047", "title":"李云龙吃鸡"},
+	{"id":"048", "title":"猫：我脸上有答案吗？！！快写！！！"},
+	{"id":"049", "title":"猫在想什么"},
+	{"id":"050", "title":"那一瞬间脑子不够用了"},
+	{"id":"051", "title":"企鹅大型翻车现场"},
+	{"id":"052", "title":"捅了马蜂窝，失误失误"},
+	{"id":"053", "title":"为了把蚂蚁窝端掉，先往里面喷杀虫剂然后再用火柴点燃……<br>效果简直拔群！"},
+	{"id":"054", "title":"我这暴脾气，我能惯着你？"},
+	{"id":"055", "title":"喜欢掀人裙子的痴汉鹦鹉"},
+	{"id":"056", "title":"小企鹅排队前进"},
+	{"id":"057", "title":"羊是一种脑回路清奇的动物"},
+	{"id":"058", "title":"一群沙雕男孩"},
+	{"id":"059", "title":"拯救地球？还是改变一下人类自己吧！"},
+]
 // 打乱数组
 function randomsort(a, b) {
     return Math.random()>.5 ? -1 : 1;
     //用Math.random()函数生成0~1之间的随机数与0.5比较，返回-1或1
+}
+
+function addcontent(videos) {
+	return "<div class=\"video-div\">" +
+				"<p>" + videos[index[i]].title + "</p>" +
+				"<video controls>" +
+					"<source src=\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/videos/funny/" + videos[index[i]].id + ".mp4\" type='video/mp4'>" +
+				"</video>" +
+			"</div>"
 }
 
 var index = new Array()
@@ -55,16 +86,7 @@ for(k = 0; k < 20; k++) {
 index.sort(randomsort);
 
 for(i = 0; i < 20; i++) {
-	$("#video-list-1").append("<div class=\"video-div\">" +
-								"<p>" + videos_1[index[i]].title + "</p>" +
-								"<video controls>" +
-									"<source src=\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/videos/funny/" + videos_1[index[i]].id + ".mp4\" type='video/mp4'>" +
-								"</video>" +
-							"</div>");
-	$("#video-list-2").append("<div class=\"video-div\">" +
-								"<p>" + videos_2[index[i]].title + "</p>" +
-								"<video controls>" +
-									"<source src=\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/videos/funny/" + videos_2[index[i]].id + ".mp4\" type='video/mp4'>" +
-								"</video>" +
-							"</div>");
+	$("#video-list-1").append(addcontent(videos_1));
+	$("#video-list-2").append(addcontent(videos_2));
+	$("#video-list-3").append(addcontent(videos_3));
 }	
