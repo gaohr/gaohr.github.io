@@ -10,7 +10,29 @@ var datalist_province = [
 	{"id":"09", "name":"江苏省", "data":"railways_Jiangsu_201910-osm-9lz1gse8"},
 	{"id":"10", "name":"黑龙江省", "data":"railways_Heilongjiang_201910-osm-aejr16sr"},
 	{"id":"11", "name":"贵州省", "data":"railways_Guizhou_201910-osm-ae65grs5"},
-	{"id":"12", "name":"福建省", "data":"railways_Fujian_201910-osm-aze56r78"}
+	{"id":"12", "name":"福建省", "data":"railways_Fujian_201910-osm-aze56r78"},
+	{"id":"13", "name":"河南省", "data":""},
+	{"id":"14", "name":"吉林省", "data":""},
+	{"id":"15", "name":"四川省", "data":""},
+	{"id":"16", "name":"云南省", "data":""},
+	{"id":"17", "name":"宁夏回族自治区", "data":""},
+	{"id":"18", "name":"广西壮族自治区", "data":""},
+	{"id":"19", "name":"台湾省", "data":""},
+	{"id":"20", "name":"湖南省", "data":""},
+	{"id":"21", "name":"湖北省", "data":""},
+	{"id":"22", "name":"江西省", "data":""},
+	{"id":"23", "name":"辽宁省", "data":""},
+	{"id":"24", "name":"青海省", "data":""},
+	{"id":"25", "name":"广东省", "data":""},
+	{"id":"26", "name":"香港特别行政区", "data":""},
+	{"id":"27", "name":"澳门特别行政区", "data":""},
+	{"id":"28", "name":"陕西省", "data":""},
+	{"id":"29", "name":"浙江省", "data":""},
+	{"id":"30", "name":"山西省", "data":""},
+	{"id":"31", "name":"内蒙古自治区", "data":""},
+	{"id":"32", "name":"安徽省", "data":""},
+	{"id":"33", "name":"西藏自治区", "data":""},
+	{"id":"34", "name":"海南省", "data":""}
 ]
 
 var datalist_city = [

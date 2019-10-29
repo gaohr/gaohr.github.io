@@ -97,7 +97,7 @@
 									</div>
 									<div class="portlet-body">
 										<table class="table table-hover">
-											<thead><tr><th>编号</th><th>省级</th><th>类型</th><th>下载</th></tr></thead>
+											<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>下载</th></tr></thead>
 											<tbody id="data-province"></tbody>
 										</table>
 									</div>
@@ -110,7 +110,7 @@
 									</div>
 									<div class="portlet-body">
 										<table class="table table-hover">
-											<thead><tr><th>编号</th><th>地区</th><th>类型</th><th>下载</th></tr></thead>
+											<thead><tr><th>编号</th><th>地区</th><th>数据类型</th><th>下载</th></tr></thead>
 											<tbody id="data-city"></tbody>
 										</table>
 									</div>
@@ -166,7 +166,11 @@
 	<script src="2019-10-16-china-railway/datalist.js"></script>
 	<script>
 		for(var i = 0; i < datalist_province.length; i++) {
-			$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td>ESRI Shapefile</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
+			if(datalist_province[i].data != "") {
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td>ESRI Shapefile</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
+			} else {
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td>ESRI Shapefile</td><td class='g-color-gray'>敬请期待</td></tr>");
+			} 
 		}
 		
 		for(var j = 0; j < datalist_city.length; j++) {
