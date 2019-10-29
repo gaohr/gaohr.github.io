@@ -134,7 +134,7 @@
 					<p class="g-color-blue"><i class="icon-bullhorn g-text-bg g-color-red"></i> 使用数据时需要注意，数据默认投影坐标为WGS84，若出现投影未定义情况时，可定义为WGS84坐标</p>
 					<p class="g-color-green"><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果遇到任何数据问题，如坐标不匹配、文件损坏等，请在下方评论区留言，我将及时更新，十分感谢您的支持~</p>
 					<hr>
-					<p>2015年全国各省行政区划矢量数据，比例尺为1:25万。</p>
+					<p><b class="g-text-bg g-color-purple">2015年</b>全国各省行政区划矢量数据，比例尺为1:25万。</p>
 					<div class="portlet box purple">
 						<div class="portlet-title">
 							<div class="caption">2015年省级区划数据列表</div>
@@ -201,10 +201,37 @@
 			{"id":"09", "name":"江苏省", "name_en":"Jiangsu", "data":"Jiangsu-2015-6k5l89s5"},
 			{"id":"10", "name":"黑龙江省", "name_en":"Heilongjiang", "data":"Heilongjiang-2015-5jk9fd89"},
 			{"id":"11", "name":"贵州省", "name_en":"Guizhou", "data":"Guizhou-2015-sd5v9k1e"},
-			{"id":"12", "name":"福建省", "name_en":"Fujian", "data":"Fujian-2015-s56jg894"}
+			{"id":"12", "name":"福建省", "name_en":"Fujian", "data":"Fujian-2015-s56jg894"},
+			{"id":"13", "name":"河南省", "name_en":"Henan", "data":"Henan-2015-ahd8879s"},
+			{"id":"14", "name":"吉林省", "name_en":"Jilin", "data":"Jilin-2015-5641s895"},
+			{"id":"15", "name":"四川省", "name_en":"Sichuan", "data":"Sichuan-2015-fnx16hd6"},
+			{"id":"16", "name":"云南省", "name_en":"Yunnan", "data":""},
+			{"id":"17", "name":"宁夏回族自治区", "name_en":"Ningxia", "data":""},
+			{"id":"18", "name":"广西壮族自治区", "name_en":"Guangxi", "data":""},
+			{"id":"19", "name":"台湾省", "name_en":"Taiwan", "data":""},
+			{"id":"20", "name":"湖南省", "name_en":"Hunan", "data":""},
+			{"id":"21", "name":"湖北省", "name_en":"Hubei", "data":""},
+			{"id":"22", "name":"江西省", "name_en":"Jiangxi", "data":""},
+			{"id":"23", "name":"辽宁省", "name_en":"Liaoning", "data":""},
+			{"id":"24", "name":"青海省", "name_en":"Qinghai", "data":""},
+			{"id":"25", "name":"广东省", "name_en":"Guangdong", "data":""},
+			{"id":"26", "name":"香港特别行政区", "name_en":"Xianggang", "data":""},
+			{"id":"27", "name":"澳门特别行政区", "name_en":"Aomen", "data":""},
+			{"id":"28", "name":"陕西省", "name_en":"Shanxi2", "data":""},
+			{"id":"29", "name":"浙江省", "name_en":"Zhejiang", "data":""},
+			{"id":"30", "name":"山西省", "name_en":"Shanxi", "data":""},
+			{"id":"31", "name":"内蒙古自治区", "name_en":"Neimenggu", "data":""},
+			{"id":"32", "name":"安徽省", "name_en":"Anhui", "data":""},
+			{"id":"33", "name":"西藏自治区", "name_en":"Xizang", "data":""},
+			{"id":"34", "name":"海南省", "name_en":"Hainan", "data":""}
 		]
 		for(var i = 0; i < datalist_province.length; i++) {
-			$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
+			if(datalist_province[i].data != "") {
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
+			} else {
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
+			}
+			
 		}
 	</script>
 </body>
