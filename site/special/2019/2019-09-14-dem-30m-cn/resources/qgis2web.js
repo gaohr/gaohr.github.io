@@ -175,7 +175,7 @@ var onSingleClick = function(evt) {
 				$("#loading").remove();
 				$("#data-list").append("<div id=\"" + p_id + "\" class=\"data-selected\">" +
 								"<button type=\"button\" class=\"close\" data-dismiss=\"alert\" onclick=\"removeData('" + p_id + "')\">&times;</button>" +
-								p_name + "-DEM-30m | TIFF" +
+								p_name + "-DEM-30m|TIFF" +
 								"</div>");
 			}, 2000);
 		}
