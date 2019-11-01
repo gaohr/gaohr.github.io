@@ -20,7 +20,6 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
-.row-fluid [class*="span"] {margin-left: 1.5%;}
 .breadcrumb {background-color:#fefefe}
 .main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.75);z-index:0;height:auto;width:80%;margin-left:9%;}
 
@@ -193,17 +192,22 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .popup-search .cont {padding:20px;font-size:12px;max-height:80%;overflow-y:scroll}
 
 /*About*/
-.info {font-family:'Microsoft YaHei';font-size:1.1em}
+#maininfo01 {background-color:#fff;padding:20px;}
+#maininfo01 p {font-size:1.15em;line-height:2em;}
+#maininfo01 .quote {padding:0 10px;margin:2em;border-left:5px solid #6af;}
+#maininfo {background-color:#fff;padding:20px;}
+.info {font-family:'Microsoft YaHei';font-size:1.15em;}
 .info h3 {color:#da2e1b;}
 .info span {padding:5px;margin:1px 3px}
 .info p {color:#333}
 .geyan {background-color:#eee;border-left:5px solid #d86666;border-right:5px solid #d86666;padding:2px 5px;color:#555;margin-right:10%;text-align:center}
-.moreinfo {color:#333;font-size:1.1em}
+.moreinfo {color:#333;}
 .moreinfo .infotitle {color:#236eb8;font-weight:bold;font-size:18px;border-left:5px solid #d86666;padding-left:10px}
-.moreinfo .infocontent{color:#444;padding:2px;margin-left:5%;margin-bottom:2%;border:1px solid rgba(0,0,0,0)}
-.infocontent i {color:#d85546;font-size:1.2em;margin-right:1%}
-.moreinfo .infocontent:hover i {color:#55d846;-webkit-transition: all 0.3s ease;transition: all 0.3s ease}
-.moreinfo .infocontent:hover {padding:2px;background-color: #666;color:#fff;-webkit-transition: all 0.3s ease;transition: all 0.3s ease}
+.moreinfo .infocontent{color:#444;width:90%;padding:2px;margin-left:2%;margin-bottom:2%;border:1px solid rgba(0,0,0,0)}
+.moreinfo .infocontent b {color:#f65}
+.moreinfo .infocontent i {color:#d85546;font-size:1.2em;margin-right:1%}
+.moreinfo .infocontent:hover i {color:#55d846;-webkit-transition: all 0.3s ease;transition: all 0.1s ease}
+/*.moreinfo .infocontent:hover {padding:2px;background-color: #666;color:#fff;-webkit-transition: all 0.1s ease;transition: all 0.1s ease}*/
 
 /*滚动条美化*/
 ::-webkit-scrollbar{width:10px;height:6px}
