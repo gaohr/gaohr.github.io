@@ -9,23 +9,24 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/nation70_bg.jpg');background-size:100%;}
 .mainlogo a{position:fixed;left:6%;margin:10px 0;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;}
 .mainlogo a:hover {color:#ff4444}
-.mainlogo .weather {height:40px;float:right;background:rgba(255,255,255,0.1);padding:5px 10px;margin-right:20px;margin-top:-15px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff}
+.mainlogo .weather {height:40px;float:right;background:rgba(255,255,255,0.1);padding:5px 10px;margin-right:20px;margin-top:-5px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff}
 .mainlogo .weather img {width:24px;height:24px;background:rgba(255,255,255,1);border-radius:50%;margin:0 5px}
 .mainlogo .weather .tmp {margin:0 5px}
 .mainlogo .weather .wnd {margin:0 5px}
-.mainlogo .welcome {display:none}
+.mainlogo .head-tool {float:right;height:auto;margin-right:32px;}
 
 .mainlogo p > img{float:right;color:#ddd;height:40px}
 .mainlogo .headimg {float:right;width:36px;margin-right:5%}
 .mainlogo .g-left {font-size:1.5em;font-family:'Broadway';}
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
+.row-fluid [class*="span"] {margin-left: 1.5%;}
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.75);z-index:0;height:auto;width:72%;margin-left:14%;}
+.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.75);z-index:0;height:auto;width:80%;margin-left:9%;}
 
 .centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px}
 
-.centerpage .carousel img {cursor:pointer;}
+.centerpage .carousel img {cursor:pointer;width:100%;}
 .centerpage .carousel ol {top:90%;}
 .centerpage .carousel .img-title {color:#fff;background-color:rgba(0,0,0,0.75);width:100%;padding:20px;font-size:1.5em}
 .centerpage .carousel .img-title a {color:#fff;background-color:rgba(255,105,80,0.75);padding:3px;border-radius:5px;margin-left:10px}
@@ -35,7 +36,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .host {width:100%;text-align:center}
 .host img {width:60%;max-width:200px;margin-top:10%;}
 .host i {font-size:16px;color:#555;}
-.sider-menu {font-size:20px;margin-top:10%;text-align:center;font-family:'Microsoft YaHei'}
+.sider-menu {font-size:20px;margin-top:10%;text-align:center;font-family:'Microsoft YaHei';font-weight:normal;}
 .menu-active {color:#e03b29}
 .block {margin-top:5%;width:100%;}
 .hr {position:relative;width:100%;height:3px;background:#ccc;margin-top:20px;border-bottom:1px solid #fff}
@@ -80,6 +81,19 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .bg-gray {background-color:#888}
 
 .text-center {text-align:center;}
+.shadow-sm {box-shadow: 1px 3px 5px rgba(195,195,195,0.5)}
+.shadow-md {box-shadow: 2px 4px 8px rgba(195,195,195,0.75)}
+.shadow-lg {box-shadow: 5px 5px 10px rgba(195,195,195,1)}
+
+.percent-50 {width:50%;margin-left:25%;}
+.percent-60 {width:60%;margin-left:20%;}
+.percent-70 {width:70%;margin-left:15%;}
+.percent-80 {width:80%;margin-left:10%;}
+.percent-90 {width:90%;margin-left:5%;}
+
+#comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
+
+#others {position:absolute;z-index:9999}
 
 #declare{width:100%;margin:0 auto}
 #code{width:100%;height:auto;min-height:165px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
@@ -91,8 +105,6 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 #gotoTop{display:none;position:fixed;top:90%;left:75%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
 #gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
-
-#comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
 
 body footer p {margin:0;}
 body footer {position:relative;background:#333;text-align:center;color:#fff;padding:20px 0 0 0;vertical-align:baseline;margin:0;}
@@ -107,7 +119,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 
 .cltmap {width:100%;}
 .dashang {width:100%;height:auto;text-align:center;}
-.shang_img {width:80px;height:80px;background-image: url(../img/pay/shang.png);background-size:100% 100%;margin:auto;cursor:pointer;}
+.shang_img {width:80px;height:80px;background-image: url(http://gaohr.win/img/pay/shang.png);background-size:100% 100%;margin:auto;cursor:pointer;}
 .tdcode {width:400px;height:240px;display:none;padding:10px;background:#777;border:1px soild #d85546}
 .tdcode img {width:160px;margin:0 10px 10px 10px}
 .dshstatis {width:100%;height:280px;padding:5px}
@@ -124,23 +136,20 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .dshlist .dshcontent p .msg {color:#070}
 .dshlist .dshbottom {color:#eee;font-size:1.2em}
 
-#others {position:absolute;z-index:9999}
-
 .mywarning {font-size:1.2em;color:#f00;font-family:'Times New Roman'}
 
-.advertisement {position:fixed;bottom:10px;right:10px;width:360px;height:120px;color:#ccc;background:rgba(25,25,25,0.9);padding:10px;display:none}
-.advertisement .ad-title {border-bottom:1px solid #ccc;padding:5px;font-size:1.1em}
-.advertisement .ad-content {padding:5px}
-.advertisement .ad-content a{color:#fd8}
-.advertisement .ad-close span:before {content:"X"}
-.advertisement .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
+/* ads */
+.leftad {width:100%;}
+.leftad .ad-close span:before {content:"X"}
+.leftad .ad-close {color:#555;float:right;background:rgba(255,255,255,1);border-radius:50%;padding:0 5px}
+.leftad .ad-close:hover {color:#fff;background:rgba(0,0,0,0.5)}
+.leftad .ad-title {padding:5px 0;background:rgba(0,0,0,0.8)}
+.leftad b {color:#ff0;margin:0 3px;}
 
-.greatChina {position:fixed;bottom:10px;right:10px;width:180px;color:#ccc;background:rgba(25,25,25,0.75);padding:10px;display:none}
-.greatChina .ad-close span:before {content:"X"}
-.greatChina .ad-close {color:#555;float:right;font-size:1.1em;background:rgba(255,255,255,1);border-radius:50%;padding:0 8px}
-.greatChina .ad-title {padding:5px 0;background:rgba(0,0,0,0.8)}
-.greatChina b {color:#ff0;margin:0 3px;}
-.flagimg {position:fixed;top:0px;left:30%;width:70px;z-index:9999}
+.rightad {width:100%;}
+.rightad .ad-close span:before {content:"X"}
+.rightad .ad-close {color:#555;float:right;background:rgba(255,255,255,1);border-radius:50%;padding:0 5px}
+.rightad .ad-close:hover {color:#fff;background:rgba(0,0,0,0.5)}
 
 .notice{position:fixed;top:60px;left:45%;width:320px;height:36px;background:url(http://gaohr.win/img/others/horn.png) no-repeat;z-index:9999;background-color:rgba(0,0,0,0.75);box-shadow:1px 1px 5px #aaa;border-radius:20px;}
 .noticTipTxt{background:rgba(255,255,255,0.0);color:#ff7300;height:36px;line-height:36px;overflow:hidden;margin:0;padding:0 0 0 40px}
@@ -151,19 +160,19 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 /* timer */
 .timer-container {position: relative;margin:auto;overflow: hidden;width:100%;text-align: center;}
 .timer-container p {color: #fff;font-size:1.2em}
-#timer {color: #F6F4F3;text-align: center;margin-top: 5ps;}
+.timer {color: #F6F4F3;text-align: center;margin-top: 5ps;}
 .days, .hours, .minutes, .seconds {display: inline-block;padding: 5px 10px;width: auto;margin-right:5px;border-radius: 5px;background: #F6F4F3;color: #183059;}
 .numbers {font-family: "Montserrat", sans-serif;color: #183059;font-size: 1.2em;font-weight:bold;}
 
 /* search */
-.g-search {position: fixed;top:14px;right:28%;text-align:center;z-index:99999}
+.g-search {margin:-15px 0 0 0;padding:0;text-align:center;z-index:99999}
 .g-search input {background:rgba(255,255,255,0.2);border:0;border-right:1px solid #fff;border-radius:20px 0 0 20px;color:#fff;display:block;float:left;font-size:12px;height:32px;margin:0;padding:0 10px;width:120px;}
 .g-search input::-webkit-input-placeholder {color: #fff;}
 .g-search input:-moz-placeholder {color: #fff;}
 .g-search input:focus {-webkit-animation: glow 800ms ease-out infinite alternate;-moz-animation: glow 800ms ease-out infinite alternate;animation: glow 800ms ease-out infinite alternate;background: rgba(255,255,255,0.9);color: #555;outline: none;}
 .g-search input:focus::-webkit-input-placeholder { color: #555;}
 .g-search input:focus:-moz-placeholder {color: #555;}
-.g-search a {background: rgba(255,255,255,0.2);border-left:0;border-radius:0 20px 20px 0;color: #fff;display: block;float: left;font-size: 12px;height: 32px;line-height: 32px;margin: 0;padding: 0;position: relative;width: 42px;text-decoration: none;transition: all 0.3s ease;}
+.g-search a {background:rgba(255,255,255,0.2);border-left:0;border-radius:0 20px 20px 0;color:#fff;float:left;font-size:12px;height:32px;line-height:32px;margin:0;margin-left:-10px;padding:0;position:relative;width:42px;text-decoration:none;transition:all 0.3s ease;}
 .g-search a:hover, .g-search a:focus {background: rgba(255,255,255,0.5);color: #5f5;transition: all 0.3s ease;}
 .g-search a:active {background: rgba(255,255,255,0.2)}
 .g-search .warning {display:none;width:100%;background:#f2eeee;color:#b94a48;margin-top:32px;border-color:#eed3d7;}
@@ -238,7 +247,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 }
 
 @media (max-width: 1600px) {
-	.main-page {width:98.5%;margin-left:0;padding-left:0;}
+	.main-page {width:100%;margin-left:0;padding-left:0;}
 	.blogcontent .imginblog img {max-width:640px;}
 }
 

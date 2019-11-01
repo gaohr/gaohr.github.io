@@ -59,64 +59,62 @@ $(document).ready(function($) {
 	//			}
 	//}, 1000);
 	
-});
 
-//Related links
-if($("#relatedlinks")) {
-	$("#relatedlinks").html(Relatedlinks());
-}
+	//Related links
+	if($("#relatedlinks").length > 0) {
+		$("#relatedlinks").html(Relatedlinks());
+	}
+		
+	// Comments
+	if($("#comments").length > 0) {
+		$("#comments").append(Comments());
+	}
+		
+	// Share
+	if($("#shareit").length > 0) {
+		$("#shareit").append(Share());
+	}
+		
+	// Dashang
+	if($("#dashang").length > 0) {
+		Dashang();
+	}
+		
+	// Warning
+	if($("#warning").length > 0) {
+		$("#warning").html(Warning());
+	}
+		
+	// Weather
+	if($("#weather").length > 0) {
+		$("#weather").html(Weather());
+	}
+		
+	// ClustrMaps
+	ClustrMaps();
+		
+	// Copyright
+	Copyright();
+		
+	// Search
+	Search();
+		
+	// Declare
+	Declare();
+		
+	// Visitors statistic
+	PageViews();
+		
+	// Scroll top
+	gotoTop(600);
+		
+	// Left ad
+	LeftAD();
+		
+	// Hot topics
+	HotTopic();
 	
-// Comments
-if($("#comments")) {
-	$("#comments").append(Comments());
-}
-	
-// Share
-if($("#shareit")) {
-	$("#shareit").append(Share());
-}
-	
-// Dashang
-if(document.getElementById("dashang")) {
-	Dashang();
-}
-	
-// Warning
-if($("#warning")) {
-	$("#warning").html(Warning());
-}
-	
-// Weather
-if($("#weather")) {
-	$("#weather").html(Weather());
-}
-	
-// ClustrMaps
-ClustrMaps();
-	
-// Copyright
-Copyright();
-	
-// Search
-Search();
-	
-// Declare
-Declare();
-	
-// Visitors statistic
-PageViews();
-	
-// Scroll top
-gotoTop(600);
-	
-// Great China
-//GreatChina();
-China70();
-	
-// Hot topics
-HotTopic();
-	
-	
+});
 // Functions ****************************** Functions
 
 function Relatedlinks() {
@@ -170,7 +168,7 @@ function Dashang() {
 	$(".shang_img").hover(
 		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");}, 
 		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");});
-	$(".shang_img").click(function() {$(".tdcode").toggle(300);});
+	$(".shang_img").click(function() {$(".tdcode").toggle(200);});
 	var dsh_num = paylist.length;
 	$(".dshtext").append("共 <span><i>" + dsh_num + "</i></span> 人次打赏");
 	for(i = 0; i < dsh_num; i++) {$(".dshcontent").append("<p><i class='icon-heart'></i><span class='name'>" + paylist[i].name + "</span>打赏了<span class='money'><b>" + paylist[i].amount + "</b>元</span><i class='date'>" + paylist[i].date + "</i></p>");}
@@ -200,55 +198,20 @@ function Weather() {
 	return re;
 }
 	
-function Advertisement() {
-	return "<div id=\"advertisement\" class=\"advertisement\">" +
-			"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-			"<p class=\"ad-title\">编程开发服务</p>" +
-			"<p class=\"ad-content\"><i class=\"icon-bullhorn\"></i> Python、Java、C、C++、C#、IDL开发，Web开发等<br><i class=\"icon-bullhorn\"></i> 本人及团队成员具有较强的编程技术，可利用闲暇之余承接计算机编程任务~<br><span class=\"pull-right\">欢迎交流 <a href=\"http://gaohr.win/About.html\"><i class=\"icon-envelope\"></i></a></span></p>" +
-		"</div>" +
-		"<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script><script type=\"text/javascript\">$(\"#advertisement\").show(500, callback);$(\"#ad-close\").click(function() {$(\"#advertisement\").hide(500);});function callback() {setTimeout(function() {$(\"#advertisement:visible\").removeAttr(\"style\").fadeOut();}, 10000);}</script>";
-}
 	
-function GreatChina() {
-	$("#others").append("<script src=\"https://code.jquery.com/ui/1.12.1/jquery-ui.js\"></script>" +
-						"<img src=\"http://gaohr.win/img/others/Flag_CN.gif\" class=\"flagimg\">" +
-						"<div id=\"greatChina\" class=\"greatChina\">" +
-							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
-							"<p class=\"ad-content\"><img src=\"../img/others/China70.jpg\"></p>" +
-						"</div>");
-		$("#greatChina").show(500);
-		$("#ad-close").click(function() {$("#greatChina").hide(500);});
-}
-	
-function China70() {
+function LeftAD() {
 	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
-	$("#others").append("<div id=\"China70\" class=\"greatChina\">" +
+	$("#leftad").append("<div id=\"China70\" style=\"margin:0 auto;padding:5px;background:rgba(255,255,255,0.75);box-shadow: 2px 4px 8px rgba(195,195,195,0.75);\">" +
 							"<p class=\"ad-close\" id=\"ad-close\"><span></span></p>" +
 							"<div class=\"timer-container\"><p class='ad-title'>" + warm_alert + "</p></div>" +
-							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\"></div></div><br>" +
+							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p>中华人民共和国<br>70周年华诞</p></div>" +
 							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
 						"</div>");
-		$("#China70").show(500);
-		$("#ad-close").click(function() {$("#China70").hide(500);});
-		
-		/*
-		// 倒计时
-		const year = new Date().getFullYear();
-		const firstOfOct = new Date(year, 9, 1).getTime();
-		// countdown
-		let timer = setInterval(function() {
-			// get today's date
-			const today = new Date().getTime();
-			// get the difference
-			const diff = firstOfOct - today;
-			let days = Math.floor(diff / (1000 * 60 * 60 * 24));
-			let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-			let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-			let seconds = Math.floor((diff % (1000 * 60)) / 1000);
-			$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");
-		}, 1000);
-		*/
+	$("#China70").show(500);
+	$("#ad-close").click(function() {$("#China70").hide(500);});
+	
+	/*const year = new Date().getFullYear();const firstOfOct = new Date(year, 9, 1).getTime();let timer = setInterval(function() {const today = new Date().getTime();const diff = firstOfOct - today;let days = Math.floor(diff / (1000 * 60 * 60 * 24));let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));let seconds = Math.floor((diff % (1000 * 60)) / 1000);$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");}, 1000);*/
 }
 	
 function warmAlert(city, weather0, weather1, wind) {
@@ -287,7 +250,7 @@ function HotTopic() {
 						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"</ul></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
-	if(document.getElementById("notice01")){var scrollup = new ScrollText("notice01");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = "down";}
+	if($("#notice01").length > 0){var scrollup = new ScrollText("notice01");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = "down";}
 }
 	
 function Declare() {
@@ -353,7 +316,7 @@ function Search() {
 	block_height = parseInt($("#popup-search").height());
 
 	search_html = "<section class='g-search'><form><input id='input-value' type='search' placeholder='你想找什么？'><a id='g-search'><i class='icon-search g-text-bg'></i></a></form><p class='warning'>查询字段不能为空</p></section>"
-	$("#others").append(search_html);
+	$("#head-tool").append(search_html);
 	
 	// 显示窗体
 	$("#g-search").click(function() {
@@ -433,11 +396,11 @@ function findblog(key, bloglist,n, type) {
 	
 // Pageview statistics
 function PageViews() {
-	if($(".blogtopinfo")) {
+	if($(".blogtopinfo").length > 0) {
 		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span><br><hr>");
 	}
 	
-	if($(".topictopinfo")) {
+	if($(".topictopinfo").length > 0) {
 		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>专题访问量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span>");
 	}
 }
