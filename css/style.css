@@ -142,8 +142,10 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .leftad .ad-close span:before {content:"X"}
 .leftad .ad-close {color:#555;float:right;background:rgba(255,255,255,1);border-radius:50%;padding:0 5px}
 .leftad .ad-close:hover {color:#fff;background:rgba(0,0,0,0.5)}
-.leftad .ad-title {padding:5px 0;background:rgba(0,0,0,0.8)}
-.leftad b {color:#ff0;margin:0 3px;}
+.leftad .ad-title {color:#fff;padding:5px 0;background:rgba(0,0,0,0.5)}
+.leftad .warm-alert {color:#0af;font-size:1.15em;padding:5px;background:rgba(255,255,255,0.75)}
+.leftad .warm-alert:hover {background:rgba(255,255,255,1)}
+.leftad .warm-alert b {color:#f65;margin:0 3px;}
 
 .rightad {width:100%;margin-top:20px;}
 .rightad .ad-close span:before {content:"X"}
