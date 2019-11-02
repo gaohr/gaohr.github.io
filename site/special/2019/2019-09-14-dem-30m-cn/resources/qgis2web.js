@@ -271,7 +271,7 @@ var data_links = {
 	"8":["山西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Shanxi", ""],
 	"9":["山东", "https://pan.baidu.com/s/1qnZcbh_ubIOY9z0TtSPjBQ", "371n", "Shandong", "220.58 MB"],
 	"10":["青海", "https://pan.baidu.com/s/17kANxxxxeJZNgutgrKFn-A", "smsp", "Qinghai", "1.47 GB"],
-	"11":["宁夏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Ningxia", ""],
+	"11":["宁夏", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Ningxia", "149.33 MB"],
 	"12":["内蒙古", "https://pan.baidu.com/s/17v_CvdcY_Z1C3T2g7IfmKA", "qk1t", "Neimenggu", "2.21 GB"],
 	"13":["辽宁", "https://pan.baidu.com/s/1ihgvCPb_joIu2GM88ikHVg", "nwy4", "Liaoning", "325.27 MB"],
 	"14":["江西", "抱歉，暂无该省区DEM数据，请在评论区留言定制数据！", "", "Jiangxi", ""],
