@@ -252,17 +252,17 @@
 		]
 		for(var i = 0; i < datalist_province.length; i++) {
 			if(datalist_province[i].data != "") {
-				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
 			} else {
-				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
 			}
 			
 		}
 		for(var c = 0; c < datalist_province.length; c++) {
 			if(datalist_province[c].data_cpl != "") {
-				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +"-data-cpl.jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl/"+ datalist_province[c].data_cpl +".rar'><i class='icon-download'></i></a></td></tr>");
+				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +"-data-cpl.jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl/"+ datalist_province[c].data_cpl +".rar'><i class='icon-download'></i></a></td></tr>");
 			} else {
-				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='50' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
+				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
 			}
 			
 		}
