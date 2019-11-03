@@ -14,7 +14,7 @@ var datalist_province = [
 	{"id":"13", "name":"河南省", "data":"railways_Henan_201910-osm-asg564sd64"},
 	{"id":"14", "name":"吉林省", "data":"railways_Jilin_201910-osm-z86g48ds"},
 	{"id":"15", "name":"四川省", "data":"railways_Sichuan_201910-osm-35dzf4g5"},
-	{"id":"16", "name":"云南省", "data":""},
+	{"id":"16", "name":"云南省", "data":"railways_Yunnan_201910-osm-s6jxfjt6"},
 	{"id":"17", "name":"宁夏回族自治区", "data":""},
 	{"id":"18", "name":"广西壮族自治区", "data":""},
 	{"id":"19", "name":"台湾省", "data":""},
