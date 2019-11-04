@@ -16,8 +16,9 @@
 	<link rel="shortcut icon" href="../../../img/logo.ico" />
     <title>GaoHR | 中国国家基础地理信息系统（GIS）数据</title>
 	<style>
-		.bmath b {color:#00498a}
-		.alist li:hover{color:#712; font-size:1.2em}
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
 	</style>
 </head>
 
@@ -64,68 +65,68 @@
 										<tbody>
 											<tr>
 												<td style="color:#921;font-size:1.2em">世界行政区划</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/world.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/world.JPG" width="120px" class="picture-show"/></td>
 												<td>ESRI Shapefile | Polygon</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/World.rar"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">中国省级行政区划</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/sheng.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/sheng.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polygon</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Province.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">中国地市级行政区划</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/shi.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/shi.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polygon</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/City.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">中国县级行政界线</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/xian.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/xian.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polygon</td>
 												<!-- <td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl.rar"><i class='icon-download'></i></a></td> -->
 												<td><a href="#County_pl">前往下载</a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">中国县级居民点</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/xian_points.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/xian_points.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Point</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pt.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">南海诸岛及九段线</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/South_sea.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/South_sea.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polyine</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/SouthSea.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">一级河流</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/r1.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/r1.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polygon<br>ESRI Shapefile | Polyline</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/R1.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">三级河流</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/r3.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/r3.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polygon<br>ESRI Shapefile | Polyline</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/R3.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">五级河流</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/r5.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/r5.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polygon</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/R5.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">主要铁路</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/train.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/train.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polyline</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Train.zip"><i class='icon-download'></i></a></td>
 											</tr>
 											<tr>
 												<td style="color:#921;font-size:1.2em">主要公路</td>
-												<td><img src="2017-04-18-GIS-basic-data-of-China/roads.JPG" width="120px"></td>
+												<td><img src="2017-04-18-GIS-basic-data-of-China/roads.JPG" width="120px" class="picture-show"></td>
 												<td>ESRI Shapefile | Polyline</td>
 												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Roads.zip"><i class='icon-download'></i></a></td>
 											</tr>
@@ -170,6 +171,11 @@
 					<p class="g-color-blue"><i class="icon-bullhorn g-text-bg g-color-red"></i> 全国县级行政区划矢量数据，不定时制作上传，持续更新中……</p>
 					<p class="g-text-bg"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 如果需要的数据不在列表中，可以在页面下方评论区<span class="g-color-green"><b>留言</b></span>，说明需要的省份或地区，<span class="g-color-green"><b>优先上传</b></span>！</p>
 					<p class="g-text-bg"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 如果需要全国的县级行政区划数据，可以留下<span class="g-color-green"><b>邮箱地址</b></span>，将数据发送至您的邮箱！</p>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
 					<br>
 					<hr>
 					<p>Fighting, GISer!</p>
@@ -252,7 +258,7 @@
 		]
 		for(var i = 0; i < datalist_province.length; i++) {
 			if(datalist_province[i].data != "") {
-				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg' class='picture-show'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/"+ datalist_province[i].data +".rar'><i class='icon-download'></i></a></td></tr>");
 			} else {
 				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
 			}
@@ -260,12 +266,57 @@
 		}
 		for(var c = 0; c < datalist_province.length; c++) {
 			if(datalist_province[c].data_cpl != "") {
-				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +"-data-cpl.jpg'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl/"+ datalist_province[c].data_cpl +".rar'><i class='icon-download'></i></a></td></tr>");
+				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +"-data-cpl.jpg' class='picture-show'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl/"+ datalist_province[c].data_cpl +".rar'><i class='icon-download'></i></a></td></tr>");
 			} else {
 				$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>敬请等待</td></tr>");
 			}
 			
 		}
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
 	</script>
 </body>
 </html>
