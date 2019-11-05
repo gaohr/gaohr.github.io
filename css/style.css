@@ -233,6 +233,14 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 /* Download */
 .icon-download {content:url('../img/others/download-red.png');width:32px;height:32px;}
 .icon-download:hover {content:url('../img/others/download-blue.png');width:32px;height:32px;}
+.icon-download-green {content:url('../img/others/download-green.png');width:32px;height:32px;}
+.icon-download-green:hover {content:url('../img/others/download-blue.png');width:32px;height:32px;}
+.icon-download-purple {content:url('../img/others/download-purple.png');width:32px;height:32px;}
+.icon-download-purple:hover {content:url('../img/others/download-blue.png');width:32px;height:32px;}
+.icon-download-orange {content:url('../img/others/download-orange.png');width:32px;height:32px;}
+.icon-download-orange:hover {content:url('../img/others/download-blue.png');width:32px;height:32px;}
+.icon-download-blue {content:url('../img/others/download-blue.png');width:32px;height:32px;}
+.icon-download-blue:hover {content:url('../img/others/download-red.png');width:32px;height:32px;}
 
 /* Loading */
 .loading-0 {content:url('../img/others/loading-0.gif');width:30%;margin-left:35%}
