@@ -190,7 +190,7 @@ function Dashang() {
 }
 
 function Warning() {
-	return "<br><p>关注新浪微博：<a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><br><p class='g-color-red'> (原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b>)</p>";
+	return "<br><p>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><br><p class='g-color-red'> (原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b>)</p>";
 }
 	
 var loc_city = "";
