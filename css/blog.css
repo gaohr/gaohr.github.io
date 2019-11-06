@@ -7,9 +7,8 @@ Blog Page
 .blog-page {margin-top:10px;font-family:'Microsoft YaHei';padding:0 2% 0 2%}
 .blog-page p {color:#555;}
 .blog-article {padding:0;}
-.blog-article .blog-title{font-size:1.5em;color:#05a;line-height:36px;}
+.blog-article .blog-title{font-size:1.5em;line-height:36px;}
 .blog-article .blog-title i {color:#888;}
-.blog-article:hover .blog-title {color:#08e;}
 .blog-article:hover .blog-title i {color:#08e;}
 .blog-article:hover .readmore {background:#cc3300;}
 .blog-article:hover .blog-tags a {background:#777}
