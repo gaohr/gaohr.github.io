@@ -18,19 +18,9 @@ $(document).ready(function($) {
    });
    
 	/*滚动监听，显示侧边菜单*/
-	$(".span2:first").append("<div class='centerer-menu-2 g-text-lg'>" +
-							"<div class='host'>" +
-							"<img src='http://gaohr.win/img/mainicon.png' class='img-rounded'><br><br>" +
-							"<i class='icon-user'>&nbsp;&nbsp;GaoHR个人博客</i>" +
-							"</div><br>" +
-							"<a href='http://gaohr.win/index.html'>首页</a><br><br>" +
-							"<a href='http://gaohr.win/Blogs.html'>博客</a><br><br>" +
-							"<a href='http://gaohr.win/site/special/index.html'>专题</a><br><br>" +
-							"<a href='http://gaohr.win/About.html'>关于</a><br><br>" +
-							"<a href='http://gaohr.win/Contact.html'>留言</a>" +
-							"</div></div>");
+	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'><img src='http://gaohr.win/img/mainicon.png' class='img-rounded'></a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
 	
-	var min_height = 600;
+	var min_height = 2000;
 	$(window).scroll(function(){
 		var sh = $(window).scrollTop();
 		if($(window).width() > 900) {
@@ -42,6 +32,9 @@ $(document).ready(function($) {
 		};
 	});
 	
+	// 滚动监听
+	ScrollDivFixed('leftad');
+	
 	/*百度自动推送*/
 	$("body").append("<script>(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(bp, s);})();</script>");
 	
@@ -49,7 +42,6 @@ $(document).ready(function($) {
 	$("head").append("<script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = 'https://hm.baidu.com/hm.js?7c81b8e214184b45986721bd426be652';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);})();</script>");
 	
 	//更新访问计数
-	// 原因：计数器添加较晚，每页计数数值加上已有计数（总计数的平均值）
 	//setTimeout(function() {
 	//			var bc = $("#busuanzi_value_page_pv").html();
 	//			if(bc != "") {
@@ -114,9 +106,24 @@ $(document).ready(function($) {
 	// Hot topics
 	HotTopic();
 	
+	
+	
 });
-// Functions ****************************** Functions
 
+// Functions ****************************** Functions
+	
+function ScrollDivFixed(id) {
+	var div001 = $('#' + id);
+	var pos_div =  div001.offset();// offset() 获得div1当前的位置，左上角坐标(x,y)
+	$(window).scroll(function () { //滚动条滚动事件
+		if ($(this).scrollTop() > pos_div.top - 60) {
+			div001.css('top', $(this).scrollTop() - pos_div.top + 60);
+		} else if ($(this).scrollTop() <=  pos_div.top ) {
+			div001.css('position', 'relative').css('top', 0);
+		}
+	})
+}
+	
 function Relatedlinks() {
 	return "<ul class=\"blog-images\">" +
 			"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"专题栏目\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
