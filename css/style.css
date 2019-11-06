@@ -84,11 +84,11 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .shadow-md {box-shadow: 2px 4px 8px rgba(195,195,195,0.75)}
 .shadow-lg {box-shadow: 5px 5px 10px rgba(195,195,195,1)}
 
-.percent-50 {width:50%;margin-left:25%;}
-.percent-60 {width:60%;margin-left:20%;}
-.percent-70 {width:70%;margin-left:15%;}
-.percent-80 {width:80%;margin-left:10%;}
-.percent-90 {width:90%;margin-left:5%;}
+.percent-50 {width:50% !important;margin-left:25% !important;}
+.percent-60 {width:60% !important;margin-left:20% !important;}
+.percent-70 {width:70% !important;margin-left:15% !important;}
+.percent-80 {width:80% !important;margin-left:10% !important;}
+.percent-90 {width:90% !important;margin-left:5% !important;}
 
 #comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
 
