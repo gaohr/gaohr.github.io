@@ -116,8 +116,8 @@ function ScrollDivFixed(id) {
 	var div001 = $('#' + id);
 	var pos_div =  div001.offset();// offset() 获得div1当前的位置，左上角坐标(x,y)
 	$(window).scroll(function () { //滚动条滚动事件
-		if ($(this).scrollTop() > pos_div.top - 185) {
-			div001.css('top', $(this).scrollTop() - pos_div.top + 185);
+		if ($(this).scrollTop() > pos_div.top + 60) {
+			div001.css('top', $(this).scrollTop() - pos_div.top - 60);
 		} else if ($(this).scrollTop() <=  pos_div.top ) {
 			div001.css('position', 'relative').css('top', 0);
 		}
