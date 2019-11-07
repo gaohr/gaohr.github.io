@@ -60,6 +60,7 @@ $(document).ready(function($) {
 	// Comments
 	if($("#comments").length > 0) {
 		$("#comments").append(Comments());
+		gotoComment(600);
 	}
 		
 	// Share
@@ -297,13 +298,13 @@ function Declare() {
 }
 	
 function gotoTop(min_height){
-	var gotoTop_html = '<div id="gotoTop"><i class=\"icon-double-angle-up\"></i></div>';
+	var gotoTop_html = "<div id='gotoTop'><i class='icon-double-angle-up'></i></div>";
 	$("#others").append(gotoTop_html);
 	$("#gotoTop").click(
-		function(){$('html,body').animate({scrollTop:0},600);
+		function(){$('html,body').animate({scrollTop:0}, 600);
 	}).hover(
 		function(){$(this).addClass("hover");$("#gotoTop").html('返回<br>顶部');},
-		function(){$(this).removeClass("hover");$("#gotoTop").html('<i class=\"icon-double-angle-up\"></i>');
+		function(){$(this).removeClass("hover");$("#gotoTop").html("<i class='icon-double-angle-up'></i>");
 	});
 	$(window).scroll(function(){
 		var s = $(window).scrollTop();
@@ -311,6 +312,25 @@ function gotoTop(min_height){
 			$("#gotoTop").fadeIn(100);
 		}else{
 			$("#gotoTop").fadeOut(500);
+		};
+	});
+};
+	
+function gotoComment(min_height){
+	var gotoTop_html = "<div id='gotoComment'><i class='icon-comments'></i></div>";
+	$("#others").append(gotoTop_html);
+	$("#gotoComment").click(
+		function(){$('html,body').animate({scrollTop: $("#comments").offset().top}, 600);
+	}).hover(
+		function(){$(this).addClass("hover");$("#gotoComment").html('评论<br>留言');},
+		function(){$(this).removeClass("hover");$("#gotoComment").html("<i class='icon-comments'></i>");
+	});
+	$(window).scroll(function(){
+		var s = $(window).scrollTop();
+		if(s > min_height){
+			$("#gotoComment").fadeIn(100);
+		}else{
+			$("#gotoComment").fadeOut(500);
 		};
 	});
 };
