@@ -32,9 +32,6 @@ $(document).ready(function($) {
 		};
 	});
 	
-	// 滚动监听
-	ScrollDivFixed('leftad');
-	
 	/*百度自动推送*/
 	$("body").append("<script>(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(bp, s);})();</script>");
 	
@@ -51,7 +48,10 @@ $(document).ready(function($) {
 	//			}
 	//}, 1000);
 	
-
+	
+	// 滚动监听
+	ScrollDivFixed('leftad');
+	
 	//Related links
 	if($("#relatedlinks").length > 0) {
 		$("#relatedlinks").html(Relatedlinks());
