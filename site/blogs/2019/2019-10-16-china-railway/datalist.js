@@ -28,7 +28,7 @@ var datalist_province = [
 	{"id":"27", "name":"澳门特别行政区", "data":""},
 	{"id":"28", "name":"陕西省", "data":"railways_Shanxi02_201910-osm-6d5h44sd"},
 	{"id":"29", "name":"浙江省", "data":""},
-	{"id":"30", "name":"山西省", "data":""},
+	{"id":"30", "name":"山西省", "data":"railways_Shanxi_201910-osm-4zjd886k"},
 	{"id":"31", "name":"内蒙古自治区", "data":""},
 	{"id":"32", "name":"安徽省", "data":""},
 	{"id":"33", "name":"西藏自治区", "data":""},
