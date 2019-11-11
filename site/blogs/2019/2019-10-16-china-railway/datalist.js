@@ -21,7 +21,7 @@ var datalist_province = [
 	{"id":"20", "name":"湖南省", "data":""},
 	{"id":"21", "name":"湖北省", "data":""},
 	{"id":"22", "name":"江西省", "data":""},
-	{"id":"23", "name":"辽宁省", "data":""},
+	{"id":"23", "name":"辽宁省", "data":"railways_Liaoning_201910-osm-zn318frs"},
 	{"id":"24", "name":"青海省", "data":""},
 	{"id":"25", "name":"广东省", "data":""},
 	{"id":"26", "name":"香港特别行政区", "data":""},
@@ -29,7 +29,7 @@ var datalist_province = [
 	{"id":"28", "name":"陕西省", "data":"railways_Shanxi02_201910-osm-6d5h44sd"},
 	{"id":"29", "name":"浙江省", "data":""},
 	{"id":"30", "name":"山西省", "data":"railways_Shanxi_201910-osm-4zjd886k"},
-	{"id":"31", "name":"内蒙古自治区", "data":""},
+	{"id":"31", "name":"内蒙古自治区", "data":"railways_Neimenggu_201910-osm-zd3rh456"},
 	{"id":"32", "name":"安徽省", "data":""},
 	{"id":"33", "name":"西藏自治区", "data":""},
 	{"id":"34", "name":"海南省", "data":""}
