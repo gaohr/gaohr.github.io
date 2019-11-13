@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 不得不了解的中国基本地理国情</title>
+	<style>
+		.hover_area {border:2px solid #555;margin-bottom:10px;}
+		.hover_area_5{overflow: hidden;position: relative;}
+		.hover_img_5 img{transform: scale(1);transition: all .5s;}
+		.hover_area_5:hover .hover_img_5 img{transform: scale(1.25);}
+		
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+		
+		div#canvas-frame {border: none;cursor: pointer;width: 100%;height: 100vh;background-color: #EEEEEE;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2019111101">
+				<div class="blogcontent">
+					<h2>GIS Day 特别篇：不得不了解的中国基本地理国情</h2>
+					<h2><small>Basic geographical conditions of China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>引言</b></p>
+					<div class="row-fluid">
+						<div class="span6">
+						<p>中国是世界四大文明古国之一，是以华夏文明为源泉、中华文化为基础，并以汉族为主体民族的多民族国家。汉族与少数民族被统称为“中华民族”，又自称为炎黄子孙、龙的传人。</p>
+						<p class="g-color-red">中国不但历史悠久，而且疆域辽阔。</p>
+						<p>中国领土南北跨越的纬度近50°，东西跨越经度超过60°，陆地面积约960万平方公里，领海约470万平方公里。作为一名地理学科学生、学者、工作者，祖国的基本地理国情，不得不了解一下。</p>
+						</div>
+						<div class="span6">
+							<iframe src="./2019-11-11-geographical-situation-of-cn/index.html" width="100%" height="240" frameborder="0"></iframe>
+						</div>
+					</div>
+					<hr>
+					<p class="blog-sub-title"><b>位置领土</b></p>
+					<div class="row-fluid">
+						<div class="span6">
+							<p>中国的海陆位置：<span class="no-indent label label-success">亚洲东部</span>&nbsp;<span class="no-indent label label-info">太平洋西岸</span></p>
+							<p>中国半球位置：<span class="no-indent label label-inverse">东半球</span>&nbsp;<span class="no-indent label label-inverse">北半球</span></p>
+							<p>中国领土辽阔广大，陆地总面积<b class="g-color-red">963.4057万平方公里</b>，仅次于俄罗斯、加拿大，居世界第3位</p>
+							<p>中国南北相距<b class="g-color-red">5500公里</b>（跨越纬度近50°），东西相距<b>5200公里</b>（跨越经度超60°）</p>
+						</div>
+						<div class="span6">
+							<div id="canvas-frame" style="width:100%; height:240px"></div>
+						</div>
+					</div>
+					<hr>
+					<p class="blog-sub-title"><b>边疆至点</b></p>
+					<div class="row-fluid">
+						<div class="span12">
+							<div style="width:33%;height:80px;display:inline-block"></div><div style="width:33%;height:80px;display:inline-block"><p>最北端</p><span class="g-color-purple">黑龙江省漠河以北黑龙江主航道中心线上（53°33′ N）</span></div><div style="width:33%;height:80px;display:inline-block"></div>
+							<div style="width:33%;height:80px;display:inline-block"><p>最西端</p><span class="g-color-purple">新疆维吾尔自治区乌恰县以西的帕米尔高原（73°29'59.79" E）</span></div><div style="width:33%;height:80px;display:inline-block"><p class="imginblog"><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="80%" style="margin-top:-20px" class="picture-show"></p></div><div style="width:33%;height:80px;display:inline-block"><p>最东端</p><span class="g-color-purple">黑龙江省抚远县境内黑龙江与乌苏里江主航道中心线汇流处（135°2′30" E）</span></div>
+							<div style="width:33%;height:80px;display:inline-block"></div><div style="width:33%;height:80px;display:inline-block"><p>最南端</p><span class="g-color-purple">南海南沙群岛中的曾母暗沙南侧（3°31′00″ N）</span></div><div style="width:33%;height:80px;display:inline-block"></div>
+						</div>
+					</div>
+					<hr>
+					<p class="blog-sub-title"><b>行政区划</b></p>
+					<p>中国现行政区基本划分为省（自治区、直辖市）、县（县级市、自治县）和乡（镇）三级，中国有34个省级行政区，包括23个省、5个自治区、4个直辖市、2个特别行政区。</p>
+					<div class="row-fluid">
+						<div class="span6">
+							<p>东北三省 <span class="no-indent label label-info">辽宁省</span>&nbsp;<span class="no-indent label label-info">吉林省</span>&nbsp;<span class="no-indent label label-info">黑龙江省</span></p>
+							<p>北部边疆自治区 <span class="no-indent label">内蒙古自治区</span></p>
+							<p>黄河中下游六省、直辖市</p><p><span class="no-indent label label-success">河北省</span>&nbsp;<span class="no-indent label label-success">山西省</span>&nbsp;<span class="no-indent label label-success">河南省</span>&nbsp;<span class="no-indent label label-success">山东省</span>&nbsp;<span class="no-indent label label-success">北京市</span>&nbsp;<span class="no-indent label label-success">天津市</span></p>
+							<p>长江中下游七省、直辖市</p><p><span class="no-indent label label-warning">湖南省</span>&nbsp;<span class="no-indent label label-warning">湖北省</span>&nbsp;<span class="no-indent label label-warning">江苏省</span>&nbsp;<span class="no-indent label label-warning">浙江省</span>&nbsp;<span class="no-indent label label-warning">安徽省</span>&nbsp;<span class="no-indent label label-warning">江西省</span>&nbsp;<span class="no-indent label label-warning">上海市</span></p>
+							<p>南部沿海七省、特别行政区</p><p><span class="no-indent label label-important">广东省</span>&nbsp;<span class="no-indent label label-important">广西壮族自治区</span>&nbsp;<span class="no-indent label label-important">海南省</span>&nbsp;<span class="no-indent label label-important">香港特别行政区</span>&nbsp;<span class="no-indent label label-important">澳门特别行政区</span>&nbsp;<span class="no-indent label label-important">福建省</span>&nbsp;<span class="no-indent label label-important">台湾省</span></p>
+							<p>西北五省、自治区</p><p><span class="no-indent label label-info">陕西省</span>&nbsp;<span class="no-indent label label-info">甘肃省</span>&nbsp;<span class="no-indent label label-info">青海省</span>&nbsp;<span class="no-indent label label-info">宁夏回族自治区</span>&nbsp;<span class="no-indent label label-info">新疆维吾尔自治区</span></p>
+							<p>西南五省、直辖市</p><p><span class="no-indent label label-inverse">四川省</span>&nbsp;<span class="no-indent label label-inverse">重庆市</span>&nbsp;<span class="no-indent label label-inverse">贵州省</span>&nbsp;<span class="no-indent label label-inverse">云南省</span>&nbsp;<span class="no-indent label label-inverse">西藏自治区</span></p>
+						</div>
+						<div class="span6">
+							<p class="imginblog"><img src="./2019-11-11-geographical-situation-of-cn/imgs/img002.jpg" width="80%" class="picture-show"></p>
+						</div>
+					</div>
+					
+					<hr>
+					<p class="blog-sub-title"><b>边界邻国</b></p>
+					<div class="row-fluid">
+						<div class="span6">
+							<p>中国陆地边界长达<b>2.28万公里</b>，大陆海岸线长达<b>1.8万公里</b>，自北向南濒临的近海有渤海、黄海、东海和南海。</p>
+							<p>中国的领海，是指从海岸基线向海上延伸到12海里的海域。沿海分布有台湾岛、海南岛、崇明岛、舟山群岛、南海诸岛等5000多个大大小小的岛屿。</p>
+							<p>陆上邻国：朝鲜、俄罗斯、蒙古、哈萨克斯坦、吉尔吉斯斯坦、塔吉克斯坦、阿富汗、巴基斯坦、印度、不丹、尼泊尔、缅甸、老挝、越南共14个。</p>
+							<p>海上邻国：日本、韩国、菲律宾、文莱、马来西亚、印尼。</p>
+						</div>
+						<div class="span6">
+							<div id="globeArea" style="width:100%; height:240px"></div>
+						</div>
+					</div>
+					<hr>
+					<p class="blog-sub-title"><b>地形地貌</b></p>
+					<p></p>
+					<div class="portlet box grey">
+						<div class="portlet-title">
+							<div class="caption">四大高原</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>区位</th><th>特征</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-text-bg">青藏高原</td><td>中国西南部</td><td>①地势高，多雪山冰川<br>②面积广<br>③世界屋脊</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-qzgy.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">内蒙古高原</td><td>中国北部</td><td>①山脉少<br>②多草原、戈壁、沙漠</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-nmggy.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">黄土高原</td><td>中国中部</td><td>①世界黄土分布最广<br>②千沟万壑<br>③植被少，水土流失</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-htgy.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">云贵高原</td><td>中国西南部</td><td>①地势崎岖不平<br>②多峡谷，多盆地<br>③喀斯特地貌</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-yggy.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box grey">
+						<div class="portlet-title">
+							<div class="caption">四大盆地</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>区位</th><th>特征</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-text-bg">塔里木盆地</td><td>新疆南部</td><td>①面积最大<br>②沙漠广<br>③地势西高东低，边缘有绿洲</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-tlmpd.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">准噶尔盆地</td><td>新疆北部</td><td>①塞北江南<br>②多风蚀地形<br>③地势东高西低</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-zgepd.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">柴达木盆地</td><td>青海省西北部</td><td>①地势高<br>②东南多盐湖沼泽<br>③矿藏聚宝盆</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-cdmpd.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">四川盆地</td><td>四川东部</td><td>①北高南低<br>②河流众多<br>③紫色盆地</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-scpd.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box grey">
+						<div class="portlet-title">
+							<div class="caption">三大平原</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>区位</th><th>特征</th><th>组成</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-text-bg">东北平原</td><td>中国东北部</td><td>①中国最大的平原<br>②海拔多在200米以下</td><td>三江平原<br>松嫩平原<br>辽河平原</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-dbpy.jpg" width="200px" class="picture-show"></div></td></tr>
+									<tr><td class="g-text-bg">华北平原</td><td>中国东部偏北</td><td>①中国第二大平原<br>②地表平坦</td><td>海河平原<br>黄淮平原</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-hbpy.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">长江中下游平原</td><td>中国中、东部</td><td>①地势低平<br>②河网密布</td><td>江汉平原<br>洞庭湖平原<br>鄱阳湖平原<br>江淮平原<br>长江三角洲</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-cjzxypy.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box grey">
+						<div class="portlet-title">
+							<div class="caption">主要山脉</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>走向</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-text-bg">天山-阴山-燕山</td><td>东-西</td><td><div style="display:flex;height:100px;overflow:hidden;"><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-ts.jpg" width="120px" class="picture-show">&nbsp;<img src="./2019-11-11-geographical-situation-of-cn/imgs/img-yins.jpg" width="120px" class="picture-show">&nbsp;<img src="./2019-11-11-geographical-situation-of-cn/imgs/img-yans.jpg" width="120px" class="picture-show"></div></td></tr>
+									<tr><td class="g-text-bg">昆仑山-秦岭</td><td>东-西</td><td><div style="display:flex;height:100px;overflow:hidden;"><img src="./2019-11-11-geographical-situation-of-cn/imgs/img-kls.jpg" width="120px" class="picture-show">&nbsp;<img src="./2019-11-11-geographical-situation-of-cn/imgs/img-ql.jpg" width="120px" class="picture-show"></div></td></tr>
+									<tr><td class="g-text-bg">南岭</td><td>东-西</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">大兴安岭-太行山-巫山-雪峰山</td><td>东北-西南</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">长白山-武夷山</td><td>东北-西南</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">台湾山脉</td><td>东北-西南</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">贺兰山</td><td>南-北</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">横断山</td><td>南-北</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">阿尔泰山</td><td>西北-东南</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">祁连山</td><td>西北-东南</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">喜马拉雅山</td><td>西北-东南</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box grey">
+						<div class="portlet-title">
+							<div class="caption">著名地貌</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>特征</th><th>典型</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-text-bg">喀斯特地貌</td><td>又叫岩溶地貌，由水对可溶性岩石进行溶蚀形成</td><td>湖南张家界<br>云南石林<br>黄果树瀑布<br>四川九寨沟<br>广西桂林山水</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">丹霞地貌</td><td>新疆北部</td><td>福建武夷山<br>广东丹霞山<br>贵州赤水<br>甘肃张掖</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">雅丹地貌</td><td>风蚀地貌</tb><td>青海柴达木盆地的魔鬼城</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-text-bg">冰川地貌</td><td>有冰川作用塑造的地貌，广泛分布</td><td>北起阿尔泰山、天山、帕米尔<br>南至青藏高原、横断山区</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<hr>
+					<p class="blog-sub-title"><b>河流湖泊</b></p>
+					<p>中国流域面积超过1000平方千米的河流有1500多条。</p>
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">长江黄河</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>特征</th><th>流经</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-color-blue g-text-bg">长江</td><td>①长江源包括昆仑山至唐古拉山间的广阔地域<br>②自西而东横贯中国中部<br>③全长6300余公里<br>④流域面积约180万平方公里<br>⑤居世界第三位</td><td>青海省<br>西藏自治区<br>四川省<br>云南省<br>重庆市<br>湖北省<br>湖南省<br>江西省<br>安徽省<br>江苏省<br>上海市</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">黄河</td><td>①中国北部大河<br>②青海省玛多县多石峡以上地区为黄河源区<br>③全长约5464公里<br>④流域面积约75万平方公里<br>⑤中国第二长河</td><td>青海省<br>四川省<br>甘肃省<br>宁夏回族自治区<br>内蒙古自治区<br>陕西省<br>山西省<br>河南省<br>山东省</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">主要水系</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>组成</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-color-blue g-text-bg">太平洋水系</td><td>黑龙江 松花江 嫩江 乌苏里江<br>绥芬河 图们江 鸭绿江 辽河<br>滦河 海河 黄河 洮河 大黑河<br>汾河 渭河 沂河<br>淮河 长江 雅砻江 大渡河 岷江 嘉陵江<br>乌江 澧水 沅江 资水<br>湘江 汉水 赣江 钱塘江 瓯江 闽江<br>九龙江 韩江 浊水溪 下淡水溪<br>珠江 柳江 郁江 桂江 北江 东江 鉴江<br>南渡河 元江 澜沧江</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">印度洋水系</td><td>怒江 雅鲁藏布江</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">北冰洋水系</td><td>额尔齐斯河</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">内流河</td><td>乌伦古河 伊犁河 玛纳斯河 阿克苏河 塔里木河 喀什噶尔河<br>叶尔羌河 和田河 车尔臣河 格尔木河 疏勒河</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">淡水湖</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>区位</th><th>特征</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-color-blue g-text-bg">太湖</td><td>江苏省南部、长江中下游</td><td>①湖泊面积2428平方公里<br>②西侧和西南侧为丘陵山地<br>③东侧以平原及水网为主<br>④盛行东南风，温和多雨</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">鄱阳湖</td><td>江西省北部，长江中下游南岸</td><td>①湖泊面积3150平方公里<br>②中国第一大淡水湖<br>③光能资源丰富</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">洞庭湖</td><td>湖南北部，长江中游荆江河段以南</td><td>①湖泊面积2579平方公里<br>②中国传统文化发源地，湖区名胜繁多<br>③五湖之首</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">洪泽湖</td><td>江苏省西部淮河下游</td><td>①湖泊面积2069平方公里<br>②历史悠久，资源丰富</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">巢湖</td><td>中国安徽省中部</td><td>①湖泊面积825平方公里<br>②湖面由西岸、南岸微向北岸和东岸倾斜<br>③“天下有事是必争之地”<br></td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<div class="portlet box blue">
+						<div class="portlet-title">
+							<div class="caption">咸水湖</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>区位</th><th>特征</th><th>风景</th></tr></thead>
+								<tbody>
+									<tr><td class="g-color-blue g-text-bg">青海湖</td><td>青藏高原东北部、青海省境内</td><td>①中国最大的内陆湖<br>②湖泊面积4435.69平方公里</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">纳木错</td><td>西藏自治区中部</td><td>①世界海拔最高的大型湖泊<br>②湖泊面积2015平方公里<br>③古象雄文明发祥地</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+									<tr><td class="g-color-blue g-text-bg">艾丁湖</td><td>新疆维吾尔自治区吐鲁番市</td><td>①中国陆地的最低点<br>②湖泊面积150平方公里<br>③湖面比海平面低154.31米</td><td><img src="./2019-11-11-geographical-situation-of-cn/imgs/img001.jpg" width="200px" class="picture-show"></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<hr>
+					<p class="blog-sub-title"><b>气候特征</b></p>
+					<p>温度带</p>
+					<div class="portlet box yellow">
+						<div class="portlet-title">
+							<div class="caption">温度带</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>积温</th><th>范围</th><th>耕作</th><th>作物</th></tr></thead>
+								<tbody>
+									<tr><td class="g-color-orange g-text-bg">热带</td><td>&gt;8000℃</td><td>海南全省和滇、粤、台三省南部</td><td>水稻一年三熟</td><td>水稻、甘蔗、天然橡胶等</td></tr>
+									<tr><td class="g-color-orange g-text-bg">亚热带</td><td>4500℃—8000℃</td><td>秦岭—淮河以南，青藏高原以东</td><td>一年二至三熟</td><td>水稻、冬麦、棉花、油菜等</td></tr>
+									<tr><td class="g-color-orange g-text-bg">暖温带</td><td>3400℃—4500℃</td><td>黄河中下游大部分地区及南疆</td><td>一年一熟至两年三熟</td><td>冬麦、玉米、棉花、花生等</td></tr>
+									<tr><td class="g-color-orange g-text-bg">中温带</td><td>1600℃—3400℃</td><td>东北、内蒙古大部分及北疆	一年一熟</td><td>春麦、玉米、亚麻、大豆、甜菜等</td></tr>
+									<tr><td class="g-color-orange g-text-bg">寒温带</td><td><1600℃</td><td>黑龙江省北部及内蒙古东北部</td><td>一年一熟</td><td>春麦、马铃薯等</td></tr>
+									<tr><td class="g-color-orange g-text-bg">青藏高原区</td><td>&lt;2000℃</td><td>青藏高原</td><td>部分地区一年一熟</td><td>青稞等</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<p>干湿划分</p>
+					<div class="portlet box yellow">
+						<div class="portlet-title">
+							<div class="caption">干湿划分</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>名称</th><th>水量（mm）</th><th>干湿</th><th>分布</th><th>农业</th></tr></thead>
+								<tbody>
+									<tr><td class="g-color-orange g-text-bg">湿润区</td><td>&gt;800</td><td>降水量&gt;蒸发量</td><td>秦岭—淮河以南、青藏高原南部、内蒙古东北部、东北三省东部</td><td>以水田为主的农业</td></tr>
+									<tr><td class="g-color-orange g-text-bg">半湿润区</td><td>&gt;400</td><td>降水量&gt;蒸发量</td><td>东北平原、华北平原、黄土高原大部、青藏高原东南部</td><td>旱地为主的农业</td></tr>
+									<tr><td class="g-color-orange g-text-bg">半干旱区</td><td>&lt;400</td><td>降水量&lt;蒸发量</td><td>内蒙古高原、黄土高原的一部分、青藏高原大部</td><td>草原牧业、灌溉农业</td></tr>
+									<tr><td class="g-color-orange g-text-bg">干旱区</td><td>&lt;200</td><td>降水量&lt;蒸发量</td><td>新疆、内蒙古高原西部、青藏高原西北部</td><td>高山牧业、绿洲灌溉农业</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<hr>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+	
+    <script src="../../../js/three.min.js"></script>
+    <script src="./2019-11-11-geographical-situation-of-cn/OrbitControls.js"></script>
+    <script src="./2019-11-11-geographical-situation-of-cn/gio.min.js"></script>
+    <script src="./2019-11-11-geographical-situation-of-cn/three.earth.js"></script>
+	
+	<script>
+		var container = document.getElementById("globeArea");
+		var controller = new GIO.Controller(container);
+		controller.configure({color: {selected:0xaa2200, background:0x002233, halo:0x0055aa, surface:0xffff00}});
+		controller.disableUnmentioned(true);
+		controller.init();
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+	</script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019111101", "title":"不得不了解的中国基本地理国情", "type":"奇闻趣问", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"[GIS day 特别篇] 中国领土南北跨越的纬度近50度，东西跨越经度超过60度，陆地面积约960万平方公里，领海约470万平方公里。作为一名地理学科学生、学者、工作者，祖国的基本地理国情，不得不了解一下", "img":"site/blogs/2019/images/ChinaGeo.jpg", "date":"2019-11-13", "href":"http://gaohr.win/site/blogs/2019/22019-11-11-geographical-situation-of-cn.html", "tags":["中国", "地理", "国情"]},
+
 {"blogid":"2019101601", "title":"全国铁路网矢量数据集（精细）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国精细铁路网矢量数据集，数据来源于OSM，质量较好，属性完整，供免费下载", "img":"site/blogs/2019/images/Railways.jpg", "date":"2019-10-16", "href":"http://gaohr.win/site/blogs/2019/2019-10-16-china-railway.html", "tags":["数据", "矢量", "铁路网"]},
 
 {"blogid":"2019100801", "title":"利用Matplotlib实现数据动态可视化", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"Matplotlib是Python中功能全面的绘图库，利用Matplotlib绘制动态图时，通常选择使用Matplotlib的animation模块，但是该模块的函数使用比较繁琐，不易学习。本文介绍一种相对比较简单的办法，使用动态绘图和暂停功能来实现", "img":"site/blogs/2019/images/Matplotlib.jpg", "date":"2019-10-08", "href":"http://gaohr.win/site/blogs/2019/2019-10-08-dynamic-plot-matplotlib.html", "tags":["Matplotlib", "Python", "数据可视化"]},
