@@ -22,8 +22,8 @@ var style_province_cn = function(feature, resolution){
               text: labelText,
               textBaseline: "center",
               textAlign: "left",
-              offsetX: 5,
-              offsetY: 3,
+              offsetX: -5,
+              offsetY: 5,
               fill: new ol.style.Fill({
                 color: 'rgba(255, 255, 255, 1)'
               }),
