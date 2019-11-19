@@ -40,6 +40,8 @@ Blog Page
 .tab-title > li > a {color:#d85556}
 .tab-title > li > a:hover {color:#c83536}
 
+.share-level {padding:5px;border:1px solid #4c0;border-left:5px solid #4c0}
+
 .blogcontent {color:#111;background:#fefefe;padding:20px 50px;min-height:500px;overflow:auto;}
 .blogcontent h2 {text-align:center}
 .blogcontent p {font-size:16px;line-height:26px;text-indent:2em;}

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 中国土地利用遥感监测数据</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2019111901">
+				<div class="blogcontent">
+					<h2>中国土地利用遥感监测数据</h2>
+					<h2><small>Remotely sensed data of land use in China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>数据概况</b></p>
+					<p>中国土地利用遥感监测数据来源于中国多时相土地利用现状数据库，该数据库是在国家科技支撑计划、中国科学院知识创新工程等多项重大科技项目的支持下，经过多年的积累而建立的覆盖全国陆地区域的数据库。</p>
+					<p class="g-color-red">本站提供的数据集包括1970年代末期（1980年）、1980年代末期（1990年）、1995年、2000年、2005年、2010年、2015年和2018年等8期数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成，数据可靠、质量较高。</p>
+					<p>本站提供1km空间分辨率的数据，另外有100m、30m空间分辨率的栅格数据和矢量数据（有偿），可以访问<a href="http://www.resdc.cn/" target="_blank">中国科学院资源环境科学数据中心</a></p>
+					<div class="blog-quote">
+						<p><i class="icon-info-sign"></i> 空间范围：全国（各省）</p>
+						<p><i class="icon-info-sign"></i> 数据类型：栅格 | ESRI GRID</p>
+						<p><i class="icon-info-sign"></i> 空间分辨率：1 km</p>
+						<p><i class="icon-info-sign"></i> 投影坐标：GCS WGS 1984</p>
+						<p><i class="icon-info-sign"></i> 生产时间：1980年、1990年、1995年、2000年、2005年、2010年、2015年、2018年</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<div class="row-fluid">
+						<div class="span1"></div>
+						<div class="span3"><img src="2019-11-19-china-lulc/img-1980lulc.jpg" class="picture-show"></div>
+						<div class="span3"><img src="2019-11-19-china-lulc/img-2000lulc.jpg" class="picture-show"></div>
+						<div class="span3"><img src="2019-11-19-china-lulc/img-2015lulc.jpg" class="picture-show"></div>
+					</div>
+					<hr>
+					<p class="blog-sub-title"><b>分类系统说明</b></p>
+					<p>土地利用类型包括耕地、林地、草地、水域、居民地和未利用土地等6个一级类型以及25个二级类型。</p>
+					<p><a href="2019-11-19-china-lulc/土地利用类型分类系统说明.docx">（点击下载word版）</a></p>
+					<div class="portlet box green percent-80">
+						<div class="portlet-title">
+							<div class="caption">分类系统说明表</div>
+						</div>
+						<div class="portlet-body" style="max-height:800px;overflow-y:scroll;">
+							<table class="table table-hover">
+								<thead><tr><th>代码编号</th><th>地类名称</th><th>代码编号</th><th>地类名称</th><th width='50%'>含义说明</th></tr></thead>
+								<tbody>
+									<tr><td>1</td><td>耕地</td><td></td><td></td><td>种植农作物的土地，包括熟耕地、新开荒地、休闲地、轮歇地、草田轮作物地；以种植农作物为主的农果、农桑、农林用地；耕种三年以上的滩地和海涂。</td></tr>
+									<tr><td></td><td></td><td>11</td><td>水田</td><td>有水源保证和灌溉设施，在一般年景能正常灌溉，用以种植水稻，莲藕等水生农作物的耕地，包括实行水稻和旱地作物轮种的耕地。<br>111山地水田112丘陵水田113平原水田114 >25度坡地水田</td></tr>
+									<tr><td></td><td></td><td>12</td><td>旱地</td><td>无灌溉水源及设施，靠天然将水生长作物的耕地；有水源和浇灌设施，在一般年景下能正常灌溉的旱作物耕地；以种菜为主的耕地；正常轮作的休闲地和轮歇地。<br>121山地旱地122丘陵旱地123平原旱地124>25度坡地旱地</td></tr>
+									<tr><td>2</td><td>林地</td><td></td><td></td><td>生长乔木、灌木、竹类、以及沿海红树林地等林业用地。</td></tr>
+									<tr><td></td><td></td><td>21</td><td>有林地</td><td>郁闭度>30%的天然林和人工林。包括用材林、经济林、防护林等成片林地。</td></tr>
+									<tr><td></td><td></td><td>22</td><td>灌木林</td><td>郁闭度>40%、高度在2米以下的矮林地和灌丛林地。</td></tr>
+									<tr><td></td><td></td><td>23</td><td>疏林地</td><td>林木郁闭度为10-30%的林地。</td></tr>
+									<tr><td></td><td></td><td>24</td><td>其他林地</td><td>未成林造林地、迹地、苗圃及各类园地（果园、桑园、茶园、热作林园等）。</td></tr>
+									<tr><td>3</td><td>草地</td><td></td><td></td><td>以生长草本植物为主，覆盖度在5%以上的各类草地，包括以牧为主的灌丛草地和郁闭度在10%以下的疏林草地。</td></tr>
+									<tr><td></td><td></td><td>31</td><td>高覆盖度草地</td><td>覆盖>50%的天然草地、改良草地和割草地。此类草地一般水分条件较好，草被生长茂密。</td></tr>
+									<tr><td></td><td></td><td>32</td><td>中覆盖度草地</td><td>覆盖度在>20-50%的天然草地和改良草地，此类草地一般水分不足，草被较稀疏。</td></tr>
+									<tr><td></td><td></td><td>33</td><td>低覆盖度草地</td><td>覆盖度在5-20%的天然草地。此类草地水分缺乏，草被稀疏，牧业利用条件差。</td></tr>
+									<tr><td>4</td><td>水域</td><td></td><td></td><td>天然陆地水域和水利设施用地。</td></tr>
+									<tr><td></td><td></td><td>41</td><td>河渠</td><td>天然形成或人工开挖的河流及主干常年水位以下的土地。人工渠包括堤岸。</td></tr>
+									<tr><td></td><td></td><td>42</td><td>湖泊</td><td>天然形成的积水区常年水位以下的土地。</td></tr>
+									<tr><td></td><td></td><td>43</td><td>水库坑塘</td><td>人工修建的蓄水区常年水位以下的土地。</td></tr>
+									<tr><td></td><td></td><td>44</td><td>永久性冰川雪地</td><td>常年被冰川和积雪所覆盖的土地。</td></tr>
+									<tr><td></td><td></td><td>45</td><td>滩涂</td><td>沿海大潮高潮位与低潮位之间的潮浸地带。</td></tr>
+									<tr><td></td><td></td><td>46</td><td>滩地</td><td>河、湖水域平水期水位与洪水期水位之间的土地。</td></tr>
+									<tr><td>5</td><td>城乡工矿居民用地</td><td></td><td></td><td>城乡居民点及其以外的工矿、交通等用地。</td></tr>
+									<tr><td></td><td></td><td>51</td><td>城镇用地</td><td>大、中、小城市及县镇以上建成区用地。</td></tr>
+									<tr><td></td><td></td><td>52</td><td>农村居民点</td><td>独立于城镇以外的农村居民点。</td></tr>
+									<tr><td></td><td></td><td>53</td><td>其它建设用地</td><td>厂矿、大型工业区、油田、盐场、采石场等用地以及交通道路、机场及特殊用地。</td></tr>
+									<tr><td>6</td><td>未利用土地</td><td></td><td></td><td>目前还未利用的土地，包括难利用的土地。</td></tr>
+									<tr><td></td><td></td><td>61</td><td>沙地</td><td>地表为沙覆盖，植被覆盖度在5％以下的土地，包括沙漠，不包括水系中的沙漠。</td></tr>
+									<tr><td></td><td></td><td>62</td><td>戈壁</td><td>地表以碎砾石为主，植被覆盖度在5%以下的土地。</td></tr>
+									<tr><td></td><td></td><td>63</td><td>盐碱地</td><td>地表盐碱聚集，植被稀少，只能生长强耐盐碱植物的土地。</td></tr>
+									<tr><td></td><td></td><td>64</td><td>沼泽地</td><td>地势平坦低洼，排水不畅，长期潮湿，季节性积水或常年积水，表层生长湿生植物的土地。</td></tr>
+									<tr><td></td><td></td><td>65</td><td>裸土地</td><td>地表土质覆盖，植被覆盖度在5％以下的土地。</td></tr>
+									<tr><td></td><td></td><td>66</td><td>裸岩石质地</td><td>地表为岩石或石砾，其覆盖面积>5％的土地。</td></tr>
+									<tr><td></td><td></td><td>67</td><td>其它</td><td>其它未利用土地，包括高寒荒漠，苔原等。</td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+						
+					<hr>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p>可供下载数据的省份、地区列表如下，目前仅提供<b class="g-color-orange">省级范围</b>数据下载。</p>
+					<p>中国省级、地市级行政区划可以参考 <a href="http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html" target="_blank">国家基础GIS数据</a></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<br>
+					<div class="blog-quote">
+						<p class="g-color-gray" style="font-size:2em">正在准备，敬请等待……</p>
+					</div>
+					<br>
+					<p class="g-text-bg"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 本博客将不定期上传数据，数据列表持续更新中......</p>
+					<p class="g-text-bg"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 如果需要的数据不在列表中，可以在页面下方评论区<span class="g-color-orange"><b>留言</b></span>，说明需要的<b>省份或地区</b>，<span class="g-color-orange"><b>优先上传</b></span>！</p>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<hr>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+	<script src="2019-11-15-china-roads/datalist.js"></script>
+	<script>
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+}
+		
+	</script>
+</body>
+</html>

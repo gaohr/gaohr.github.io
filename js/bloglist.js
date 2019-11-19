@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019111901", "title":"1980-2018年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年和2018年等8期土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},
+
 // {"blogid":"2019111501", "title":"全国道路网矢量数据集（精细）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国道路网矢量数据集，包括高速、国道、省道、县道、乡村小道等，数据来源于OSM，十分精细，属性完整，提供免费下载", "img":"site/blogs/2019/images/Roads.jpg", "date":"2019-11-15", "href":"http://gaohr.win/site/blogs/2019/2019-11-15-china-roads.html", "tags":["数据", "矢量", "道路网"]},
 
 {"blogid":"2019111101", "title":"不得不了解的中国基本地理国情", "type":"奇闻趣问", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"[GIS day 特别篇] 中国领土南北跨越的纬度近50度，东西跨越经度超过60度，陆地面积约960万平方公里，领海约470万平方公里。作为一名地理学科学生、学者、工作者，祖国的基本地理国情，不得不了解一下", "img":"site/blogs/2019/images/ChinaGeo.jpg", "date":"2019-11-13", "href":"http://gaohr.win/site/blogs/2019/2019-11-11-geographical-situation-of-cn.html", "tags":["中国", "地理", "国情"]},
