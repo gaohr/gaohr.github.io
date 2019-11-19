@@ -10,7 +10,7 @@ var bloglist = [
 
 // {"blogid":"2019100201", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2019/images/PythonWeb.jpg", "date":"2019-10-02", "href":"http://gaohr.win/site/blogs/2019/2019-10-02-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
 
-{"blogid":"2019092901", "title":"2008-2013年全球夜间灯光数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"2000年至2013年全球夜间灯光数据，数据来源于美国国防部的极轨卫星计划。DMSP/OLS卫星传感器在夜间工作，能探测到城市灯光甚至小规模居民地、车流等发出的低强度灯光，因此，DMSP/OLS夜间灯光影像成为人类活动研究的良好数据源。", "img":"site/blogs/2019/images/GlobalLight.jpg", "date":"2019-09-29", "href":"http://gaohr.win/site/blogs/2019/2019-09-29-global-light-dmsp.html", "tags":["遥感", "灯光指数", "全球", "数据"]},
+{"blogid":"2019092901", "title":"2000-2013年全球夜间灯光数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"2000年至2013年全球夜间灯光数据，数据来源于美国国防部的极轨卫星计划。DMSP/OLS卫星传感器在夜间工作，能探测到城市灯光甚至小规模居民地、车流等发出的低强度灯光，因此，DMSP/OLS夜间灯光影像成为人类活动研究的良好数据源。", "img":"site/blogs/2019/images/GlobalLight.jpg", "date":"2019-09-29", "href":"http://gaohr.win/site/blogs/2019/2019-09-29-global-light-dmsp.html", "tags":["遥感", "灯光指数", "全球", "数据"]},
 
 {"blogid":"2019091301", "title":"中国土壤类型空间分布数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国土壤类型空间分布数据根据全国土壤普查办公室1995年编制并出版的《1：100万中华人民共和国土壤图》数字化生成， 采用了传统的“土壤发生分类”系统，基本覆盖了全国各种类型土壤及其主要属性特征。", "img":"site/blogs/2019/images/SoilType.jpg", "date":"2019-09-13", "href":"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html", "tags":["土壤类型", "数据"]},
 
