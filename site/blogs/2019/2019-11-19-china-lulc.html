@@ -54,8 +54,8 @@
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p class="blog-sub-title"><b>数据概况</b></p>
 					<p>中国土地利用遥感监测数据来源于中国多时相土地利用现状数据库，该数据库是在国家科技支撑计划、中国科学院知识创新工程等多项重大科技项目的支持下，经过多年的积累而建立的覆盖全国陆地区域的数据库。</p>
-					<p class="g-color-red">本站提供的数据集包括1970年代末期（1980年）、1980年代末期（1990年）、1995年、2000年、2005年、2010年、2015年和2018年等8期数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成，数据可靠、质量较高。</p>
-					<p>本站提供1km空间分辨率的数据，另外有100m、30m空间分辨率的栅格数据和矢量数据（有偿），可以访问<a href="http://www.resdc.cn/" target="_blank">中国科学院资源环境科学数据中心</a></p>
+					<p class="g-color-blue">本站提供的数据集包括1970年代末期（1980年）、1980年代末期（1990年）、1995年、2000年、2005年、2010年、2015年和2018年等8期数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成，数据可靠、质量较高。</p>
+					<p>本站提供1km空间分辨率的数据，另外有100m、30m空间分辨率的栅格数据和矢量数据（有偿），可以访问<a href="http://www.resdc.cn/" target="_blank">中国科学院资源环境科学数据中心 （点击访问）</a></p>
 					<div class="blog-quote">
 						<p><i class="icon-info-sign"></i> 空间范围：全国（各省）</p>
 						<p><i class="icon-info-sign"></i> 数据类型：栅格 | ESRI GRID</p>
@@ -245,7 +245,7 @@
 			linkStr = ""
 			for(var j = 0; j < pdata.data.length; j++) {
 				if(pdata.data[j] != "") {
-					linkStr += "<a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/LULC/lulc_1km/2018/lulc_" + pdata.name_en + "_" + pdata.data[j] + ".rar' data-toggle='tooltip' title='" + pdata.data[j] + "' data-content='' data-html='true' data-placement='top' class='tip-top-" + pdata.data[j] + "'><i class='icon-download'></i></a>"
+					linkStr += "<a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/LULC/lulc_1km/2018/lulc_" + pdata.name_en + "_" + pdata.data[j] + ".rar' data-toggle='tooltip' title='" + pdata.data[j] + "' data-content='' data-html='true' data-placement='top' class='tip-top-" + pdata.data[j] + "'><i class='icon-download-blue'></i></a>"
 				} else {
 					linkStr += "<span class='g-color-gray'>......</span>"
 				}
