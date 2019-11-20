@@ -164,7 +164,7 @@ function Share() {
 }
 
 function Dashang() {
-	$("#dashang").html("<br><hr><span class='g-color-red'>点击打赏小钱钱</span><div class=\"shang_img\"></div>" +
+	$("#dashang").html("<br><hr><span class='g-color-red'>点击打赏支持</span><div class=\"shang_img\"></div>" +
 						"<span class=\"tdcode\">" +
 						"<p style='color:#fff'>非常感谢您的支持！</p>" +
 						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
