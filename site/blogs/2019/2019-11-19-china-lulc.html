@@ -60,7 +60,7 @@
 						<p><i class="icon-info-sign"></i> 空间范围：全国（各省）</p>
 						<p><i class="icon-info-sign"></i> 数据类型：栅格 | ESRI GRID</p>
 						<p><i class="icon-info-sign"></i> 空间分辨率：1 km</p>
-						<p><i class="icon-info-sign"></i> 投影坐标：GCS WGS 1984</p>
+						<p><i class="icon-info-sign"></i> 投影坐标：Krasovsky 1940 Albers</p>
 						<p><i class="icon-info-sign"></i> 生产时间：1980年、1990年、1995年、2000年、2005年、2010年、2015年、2018年</p>
 						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					</div>
@@ -81,7 +81,7 @@
 						</div>
 						<div class="portlet-body" style="max-height:800px;overflow-y:scroll;">
 							<table class="table table-hover">
-								<thead><tr><th>代码编号</th><th>地类名称</th><th>代码编号</th><th>地类名称</th><th width='50%'>含义说明</th></tr></thead>
+								<thead><tr><th>代码编号</th><th>地类名称</th><th>代码编号</th><th>地类名称</th><th width='60%'>含义说明</th></tr></thead>
 								<tbody>
 									<tr><td>1</td><td>耕地</td><td></td><td></td><td>种植农作物的土地，包括熟耕地、新开荒地、休闲地、轮歇地、草田轮作物地；以种植农作物为主的农果、农桑、农林用地；耕种三年以上的滩地和海涂。</td></tr>
 									<tr><td></td><td></td><td>11</td><td>水田</td><td>有水源保证和灌溉设施，在一般年景能正常灌溉，用以种植水稻，莲藕等水生农作物的耕地，包括实行水稻和旱地作物轮种的耕地。<br>111山地水田112丘陵水田113平原水田114 >25度坡地水田</td></tr>
@@ -125,8 +125,16 @@
 					<p>中国省级、地市级行政区划可以参考 <a href="http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html" target="_blank">国家基础GIS数据</a></p>
 					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					<br>
-					<div class="blog-quote">
-						<p class="g-color-gray" style="font-size:2em">正在准备，敬请等待……</p>
+					<div class="portlet box blue percent-80">
+						<div class="portlet-title">
+							<div class="caption">中国土地利用数据列表</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>下载<br>1980 | 1990 | 1995 | 2000 | 2005 | 2010 | 2015 | 2018</th></tr></thead>
+								<tbody id="data-province"></tbody>
+							</table>
+						</div>
 					</div>
 					<br>
 					<p class="g-text-bg"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 本博客将不定期上传数据，数据列表持续更新中......</p>
@@ -179,7 +187,7 @@
 	<script src="../blogsload.js"></script>
 	<script src="../../../js/common.js"></script>
 	
-	<script src="2019-11-15-china-roads/datalist.js"></script>
+	<script src="2019-11-19-china-lulc/datalist.js"></script>
 	<script>
 		$(".picture-show").click(function(){  
 			var _this = $(this);//将当前的pimg元素作为_this传入函数  
@@ -223,8 +231,41 @@
 			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
 				$(this).fadeOut("fast");  
 			});  
-}
+		}
 		
+		for(var i = 0; i < datalist.length; i++) {
+			if(datalist[i].data != "") {
+				$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td>" + datalist[i].name + "</td><td>ESRI GRID</td><td>" + getLink(datalist[i]) + "</td></tr>");
+			} else {
+				$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td>" + datalist[i].name + "</td><td>ESRI Shapefile</td><td class='g-color-gray'>敬请期待</td></tr>");
+			} 
+		}
+		
+		function getLink(pdata) {
+			linkStr = ""
+			for(var j = 0; j < pdata.data.length; j++) {
+				if(pdata.data[j] != "") {
+					linkStr += "<a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/LULC/lulc_1km/2018/lulc_" + pdata.name_en + "_" + pdata.data[j] + ".rar' data-toggle='tooltip' title='" + pdata.data[j] + "' data-content='' data-html='true' data-placement='top' class='tip-top-" + pdata.data[j] + "'><i class='icon-download'></i></a>"
+				} else {
+					linkStr += "<span class='g-color-gray'>......</span>"
+				}
+				if(j != pdata.data.length - 1) {
+					linkStr += " | ";
+				} else {
+					linkStr += "";
+				}
+			}
+			return linkStr
+		}
+		
+		$(".tip-top-1980").tooltip();
+		$(".tip-top-1990").tooltip();
+		$(".tip-top-1995").tooltip();
+		$(".tip-top-2000").tooltip();
+		$(".tip-top-2005").tooltip();
+		$(".tip-top-2010").tooltip();
+		$(".tip-top-2015").tooltip();
+		$(".tip-top-2018").tooltip();
 	</script>
 </body>
 </html>
