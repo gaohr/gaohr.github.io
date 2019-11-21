@@ -41,12 +41,14 @@ Blog Page
 .tab-title > li > a:hover {color:#c83536}
 
 .share-level {padding:5px;border:1px solid #4c0;border-left:5px solid #4c0}
+.picture-show {border-bottom:3px solid rgba(0,0,0,0);cursor:pointer;}
+.picture-show:hover {border-bottom:3px solid rgba(0,105,255,0.5);opacity:0.85;cursor:pointer;}
 
 .blogcontent {color:#111;background:#fefefe;padding:20px 50px;min-height:500px;overflow:auto;}
 .blogcontent h2 {text-align:center}
 .blogcontent p {font-size:16px;line-height:26px;text-indent:2em;}
 .blogcontent p > a, span, i {text-indent:0;}
-.blogcontent .icon-question-sign {margin-left:10px;cursor:pointer;}
+.blogcontent .icon-question-sign {margin-left:10px;}
 .blogcontent .blog-sub-title {font-size:16px;line-height:24px;text-indent:0;padding:0 10px;margin-top:1.5em;border-left:10px solid #f65;display:inline-block}
 .blogcontent .blog-sub-title b {padding:5px 0;border-top:1px solid #f65;border-bottom:1px solid #f65;}
 .blogcontent .blog-sub-title:before {display:inline-block;position:relative;top:-5px;right:5px;content:"";width:30px;height:1px;background:#f65}
