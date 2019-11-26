@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国10m分辨率DEM数据产品</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2019112601">
+				<div class="blogcontent">
+					<h2>全国10m分辨率DEM数据产品</h2>
+					<h2><small>Remotely sensed data of land use in China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>数据简介</b></p>
+					<p>数字高程模型(Digital Elevation Model，DEM)是研究分析地形、流域、地物识别的重要基础资料。由于DEM描述的是地面高程信息，它在测绘、水文、气象、地貌、地质、土壤、工程建设、通讯、军事等国民经济和国防建设以及人文和自然科学领域有着广泛的应用。</p>
+					<p>本站提供的<span class="g-color-red">10m分辨率DEM数据产品</span>，是以<b>合成孔径雷达（SAR）</b>数据提取的相位信息为信息源，通过数据聚焦、基线估算、干涉图去平、滤波和生成相干系数图、相位解缠、轨道重定义、高程转换和地理编码等一系列算法处理，获取地表的三维信息制作而成，精度较高，质量可靠，具体可参考下文10m分辨率SAR DEM 和30m分辨率ASTER DEM的对比。</p>
+					<div class="blog-quote">
+						<p><i class="icon-info-sign"></i> 空间范围：全国</p>
+						<p><i class="icon-info-sign"></i> 数据类型：栅格 | TIFF</p>
+						<p><i class="icon-info-sign"></i> 空间分辨率：10 m</p>
+						<p><i class="icon-info-sign"></i> 投影坐标：GCS WGS 1984</p>
+						<p><i class="icon-info-sign"></i> 生产时间：2010年</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-red"><b>非共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果要下载30m分辨率的ASTER DEM数据，可以访问<a href="http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html" target="_blank">全国各省30m分辨率DEM数据 （点击进入）</a></p>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<p>本站提供的10m分辨率SAR DEM与30m分辨率ASTER DEM的对比，以<span class="g-color-green">北京市昌平区</span>为例</p>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4 text-center"><span class="g-text-lg">10m SAR DEM</span></div>
+						<div class="span4 text-center"><span class="g-text-lg">30m ASTER DEM</span></div>
+						<div class="span2"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span4"></div>
+						<div class="span2 text-center"><img src="2019-11-26-dem-10m-cn/legend-10m.jpg" width="50%"></div>
+						<div class="span2 text-center"><img src="2019-11-26-dem-10m-cn/legend-30m.jpg" width="50%"></div>
+						<div class="span4"></div>
+					</div>
+					<br>
+					<br>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4 text-center"><span class="g-text-bg">10m SAR DEM<br><span class="g-color-gray">1:25万</span></span></div>
+						<div class="span4 text-center"><span class="g-text-bg">30m ASTER DEM<br><span class="g-color-gray">1:25万</span></span></div>
+						<div class="span2"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img001-10m.jpg" class="picture-show"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img001-30m.jpg" class="picture-show"></div>
+						<div class="span2"></div>
+					</div>
+					<br>
+					<br>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4 text-center"><span class="g-text-bg">10m SAR DEM<br><span class="g-color-gray">1:5万</span></span></div>
+						<div class="span4 text-center"><span class="g-text-bg">30m ASTER DEM<br><span class="g-color-gray">1:5万</span></span></div>
+						<div class="span2"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img002-10m.jpg" class="picture-show"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img002-30m.jpg" class="picture-show"></div>
+						<div class="span2"></div>
+					</div>
+					<br>
+					<br>
+					<div class="row-fluid">
+						<div class="span3"></div>
+						<div class="span3 text-center"><span class="g-text-bg">10m SAR DEM<br><span class="g-color-gray">1:2.5万</span></span></div>
+						<div class="span3 text-center"><span class="g-text-bg">30m ASTER DEM<br><span class="g-color-gray">1:2.5万</span></span></div>
+						<div class="span3"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img003-10m.jpg" class="picture-show"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img003-30m.jpg" class="picture-show"></div>
+						<div class="span2"></div>
+					</div>
+					<br>
+					<br>
+					<div class="row-fluid">
+						<div class="span3"></div>
+						<div class="span3 text-center"><span class="g-text-bg">10m SAR DEM<br><span class="g-color-gray">1:1万</span></span></div>
+						<div class="span3 text-center"><span class="g-text-bg">30m ASTER DEM<br><span class="g-color-gray">1:1万</span></span></div>
+						<div class="span3"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img004-10m.jpg" class="picture-show"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img004-30m.jpg" class="picture-show"></div>
+						<div class="span2"></div>
+					</div>
+					<br>
+					<br>
+					<div class="row-fluid">
+						<div class="span3"></div>
+						<div class="span3 text-center"><span class="g-text-bg">10m SAR DEM<br><span class="g-color-gray">1:5000</span></span></div>
+						<div class="span3 text-center"><span class="g-text-bg">30m ASTER DEM<br><span class="g-color-gray">1:5000</span></span></div>
+						<div class="span3"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span2"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img005-10m.jpg" class="picture-show"></div>
+						<div class="span4"><img src="2019-11-26-dem-10m-cn/img005-30m.jpg" class="picture-show"></div>
+						<div class="span2"></div>
+					</div>
+					<br>
+					<br>
+					<hr>
+					<p class="blog-sub-title"><b>数据获取方式</b></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-red"><b>非共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p>该数据产品为非共享数据，暂不提供免费下载链接，如有需要，请联系:</p>
+					<div class="blog-quote">
+						<div class="row-fluid">
+							<div class="span3"><p class="no-indent"><i class="icon-qq emo-sm"></i> 2090096969<br><span data-toggle='tooltip' title='点击放大' data-placement='right' class='tip-right'><img src="2019-11-26-dem-10m-cn/yiyaning-qq.jpg" class="picture-show" width="80%"></span></p></div>
+							<div class="span1"><p class="no-indent g-text-bg g-color-gray">或</p></div>
+							<div class="span3"><p class="no-indent"><i class="icon-wechat emo-sm"></i> xingmengyunzhuang<br><span data-toggle='tooltip' title='点击放大' data-placement='right' class='tip-right'><img src="2019-11-26-dem-10m-cn/yiyaning-wechat.jpg" class="picture-show" width="80%"></span></p></div>
+						</div>
+					</div>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<hr>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+	<script>
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		$(".tip-right").tooltip();
+	</script>
+</body>
+</html>
