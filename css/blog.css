@@ -60,12 +60,13 @@ Blog Page
 .blogcontent .codeblock {background-color:#fff; border:1px solid #ccc; border-radius:5px}
 .blogcontent .codeblock p {line-height:9px !important;}
 .blogcontent .no-indent {text-indent:0}
+.blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
+.blogcontent .blog-important-part {line-height:24px;text-indent:0;padding:10px;margin:1.2em;border:1px solid #6af;border-bottom:7px solid #6af;display:inline-block}
 .blogtopinfo {font-size:14px;color:#555;text-align:center !important}
 .blogtopinfo > span > a {margin-left:5px}
-.greencode {color:#080;}
-.blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
 .cmdblack {background:rgba(0,0,0,0.75);color:#fff;padding:0 2px;border-radius:2px}
 .alist li > a:hover{color:#a30;}
+.greencode {color:#080;}
 
 .width-percent-50 {width:50%;margin-left:25%;}
 .width-percent-60 {width:60%;margin-left:20%;}
