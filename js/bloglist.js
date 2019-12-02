@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019120201", "title":"全球1:100万基础地理数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全球1:100万基础地理数据，包括七大洲范围、全球国家边界、全球省级行政边界、全球主要道路、全球铁路、全球面状水系、全球线状水系以及1度经纬网等矢量数据。", "img":"site/blogs/2019/images/WorldGIS.jpg", "date":"2019-12-02", "href":"http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html", "tags":["数据", "GIS", "全球"]},
+
 // {"blogid":"2019112601", "title":"全国10m分辨率DEM数据产品", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国10m分辨率DEM数据，以合成孔径雷达（SAR）数据提取的相位信息为信息源，通过数据聚焦、基线估算、干涉图去平、滤波和生成相干系数图、相位解缠、轨道重定义、高程转换和地理编码等一系列算法处理，获取地表的三维信息制作而成", "img":"site/blogs/2019/images/ChinaDEM.jpg", "date":"2019-11-26", "href":"http://gaohr.win/site/blogs/2019/2019-11-26-dem-10m-cn.html", "tags":["DEM", "高分辨率", "全国"]},
 
 {"blogid":"2019111901", "title":"1980-2018年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年和2018年等8期土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},

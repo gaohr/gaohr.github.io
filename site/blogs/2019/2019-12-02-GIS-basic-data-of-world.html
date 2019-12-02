@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全球1:100万基础地理数据</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2019120201">
+				<div class="blogcontent alist">
+					<h2>全球1:100万基础地理数据</h2>
+					<h2><small>Geographic Information System (GIS) Basic Data of the Global</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>基础GIS数据</b></p>
+					<p>全球1:100万基础地理数据，包括七大洲范围、全球国家边界、全球省级行政边界、全球主要道路、全球铁路、全球面状水系、全球线状水系以及1度经纬网等矢量数据。</p>
+					<div class="blog-quote">
+						<p><i class="icon-info-sign"></i> 空间范围：全球</p>
+						<p><i class="icon-info-sign"></i> 数据类型：矢量 | ESRI Shapefile</p>
+						<p><i class="icon-info-sign"></i> 数据比例尺：1：100万</p>
+						<p><i class="icon-info-sign"></i> 投影坐标：GCS_WGS_1984</p>
+						<p><i class="icon-info-sign"></i> 生产时间：2018年</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果要下载全国基础地理数据，可以访问<a href="http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html" target="_blank">全国基础地理数据 （点击进入）</a></p>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<div class="portlet box grey percent-80">
+						<div class="portlet-title">
+							<div class="caption">基础GIS数据列表</div>
+						</div>
+						<div class="portlet-body">
+									<table class="table table-hover bmath">
+										<thead>
+											<tr><th>数据名称</th><th>缩略图</th><th>数据类型</th><th>数据下载</th></tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td style="color:#921;font-size:1.2em">七大洲范围</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/continent.jpg" width="120px" class="picture-show"/></td>
+												<td>ESRI Shapefile | Polygon</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/continent.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">全球国家边界</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/country_world.jpg" width="120px" class="picture-show"></td>
+												<td>ESRI Shapefile | Polygon</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/country_world.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">全球省级行政边界</td>
+												<td>--</td>
+												<td>ESRI Shapefile | Polygon</td>
+												<td><span class="g-color-gray">敬请等待</span></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">全球主要道路</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/roads_world.jpg" width="120px" class="picture-show"></td>
+												<td>ESRI Shapefile | Polyline</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/road_world.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">全球铁路</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/train_world.jpg" width="120px" class="picture-show"></td>
+												<td>ESRI Shapefile | Polyline</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/railway_world.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">全球面状水系</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/water_a_world.jpg" width="120px" class="picture-show"></td>
+												<td>ESRI Shapefile | Polygon</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/water_a_world.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">全球线状水系</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/water_l_world.jpg" width="120px" class="picture-show"></td>
+												<td>ESRI Shapefile | Polyline</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/water_l_world.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+											<tr>
+												<td style="color:#921;font-size:1.2em">1度经纬网</td>
+												<td><img src="2019-12-02-GIS-basic-data-of-world/latlon.jpg" width="120px" class="picture-show"></td>
+												<td>ESRI Shapefile | Polyline</td>
+												<td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/GIS_world/latlon.rar"><i class='icon-download-gray'></i></a></td>
+											</tr>
+										</tbody>
+									</table>
+						</div>
+					</div>
+					<p class="g-color-blue"><i class="icon-bullhorn g-text-bg g-color-red"></i> 使用数据时需要注意，数据默认投影坐标为WGS84，若出现投影未定义情况时，可定义为WGS84坐标</p>
+					<p class="g-color-green"><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果遇到任何数据问题，如坐标不匹配、文件损坏等，请在下方评论区留言，我将及时更新，十分感谢您的支持~</p>
+					<br>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<hr>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+					
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script>
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+	</script>
+</body>
+</html>

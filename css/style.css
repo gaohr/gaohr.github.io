@@ -246,6 +246,8 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .icon-download-orange:hover {content:url('../img/others/download-blue.png');width:32px;height:32px;}
 .icon-download-blue {content:url('../img/others/download-blue.png');width:32px;height:32px;}
 .icon-download-blue:hover {content:url('../img/others/download-red.png');width:32px;height:32px;}
+.icon-download-gray {content:url('../img/others/download-gray.png');width:32px;height:32px;}
+.icon-download-gray:hover {content:url('../img/others/download-blue.png');width:32px;height:32px;}
 
 /* Loading */
 .loading-0 {content:url('../img/others/loading-0.gif');width:30%;margin-left:35%}
