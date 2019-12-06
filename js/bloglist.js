@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
+
 {"blogid":"2019120201", "title":"全球1:100万基础地理数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全球1:100万基础地理数据，包括七大洲范围、全球国家边界、全球省级行政边界、全球主要道路、全球铁路、全球面状水系、全球线状水系以及1度经纬网等矢量数据。", "img":"site/blogs/2019/images/WorldGIS.jpg", "date":"2019-12-02", "href":"http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html", "tags":["数据", "GIS", "全球"]},
 
 // {"blogid":"2019112601", "title":"全国10m分辨率DEM数据产品", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国10m分辨率DEM数据，以合成孔径雷达（SAR）数据提取的相位信息为信息源，通过数据聚焦、基线估算、干涉图去平、滤波和生成相干系数图、相位解缠、轨道重定义、高程转换和地理编码等一系列算法处理，获取地表的三维信息制作而成", "img":"site/blogs/2019/images/ChinaDEM.jpg", "date":"2019-11-26", "href":"http://gaohr.win/site/blogs/2019/2019-11-26-dem-10m-cn.html", "tags":["DEM", "高分辨率", "全国"]},
