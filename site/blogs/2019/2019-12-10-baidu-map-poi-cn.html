@@ -14,6 +14,9 @@
 	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 	<link rel='stylesheet' type='text/css' href='http://gaohr.win/site/special/2019/2019-09-24-code-highlight/shCoreDefault.css'/>
+    <link rel="stylesheet" href="2019-12-10-baidu-map-poi-cn/resources/ol.css" />
+    <link rel="stylesheet" href="2019-12-10-baidu-map-poi-cn/resources/ol3-layerswitcher.css">
+    <link rel="stylesheet" href="2019-12-10-baidu-map-poi-cn/resources/qgis2web.css">
 	<link rel="shortcut icon" href="../../../img/logo.ico" />
     <title>GaoHR | 全国城市兴趣点（POI）数据</title>
 	<style>
@@ -58,7 +61,7 @@
 					<p>POI的采集是一个非常耗时费力的工作，因此，POI的数量在一定程度代表着其本身的价值。</p>
 					<p class="imginblog"><img src="2019-12-10-baidu-map-poi-cn/img001.jpg" width="60%"></p>
 					<p class="blog-sub-title"><b>POI数据</b></p>
-					<p>本站提供的POI数据源自<a href="http://lbsyun.baidu.com/index.php?title=webapi" target="_blank">百度Web服务API</a>，如果有一定编程基础，可以尝试自己编程抓取，网上有很多使用地图API抓取数据的教程，本文就不再多做介绍。</p>
+					<p>本站提供的POI数据源自<a href="http://lbsyun.baidu.com/index.php?title=webapi" target="_blank">百度Web服务API</a>，如果有一定编程基础，可以尝试自己编程抓取，网络上有很多使用地图API抓取数据的博客或教程，本文就不再多做介绍。</p>
 					<p>POI数据简单介绍：</p>
 					<div class="blog-quote">
 						<p><i class="icon-info-sign"></i> 空间范围：全国（各市）</p>
@@ -68,6 +71,14 @@
 						<p><i class="icon-info-sign"></i> 投影坐标：WGS 1984</p>
 						<p><i class="icon-info-sign"></i> 生产时间：2019年</p>
 						<p><span class="share-level">数据共享等级：<span class="g-color-orange"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p>POI数据示例：</p>
+					<p>北京市主城区部分类型POI数据</p>
+					<div class="row-fluid">
+						<div class="span1"></div>
+						<div class="span3"><img src="2019-12-10-baidu-map-poi-cn/img-subway.jpg" class="picture-show"></div>
+						<div class="span3"><img src="2019-12-10-baidu-map-poi-cn/img-hospital.jpg" class="picture-show"></div>
+						<div class="span3"><img src="2019-12-10-baidu-map-poi-cn/img-company.jpg" class="picture-show"></div>
 					</div>
 					<p>POI分类介绍：</p>
 					<div class="portlet box grey percent-90">
@@ -101,12 +112,46 @@
 							</table>
 						</div>
 					</div>
-					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 补充说明：该表作为参考，POI数据只分一级行业类别，没有二级分类属性</p>
-					<p></p>
-					<p></p>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 补充说明：一级行业类别的POI数据中没有二级分类属性，但可以单独获取二级行业类别的POI数据</p>
 					<p class="blog-sub-title"><b>数据下载</b></p>
-					<p></p>
-					<p></p>
+					<p>目前仅提供<span class="g-color-green"><b>市级地区</b></span>的POI数据下载</p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-orange"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 该数据为“有限共享”数据，不提供直接数据下载链接，需发起数据共享申请，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
+					<div class="alert">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<b>使用说明</b>
+						<br>
+							<li>确定想要下载数据的地区所在的省份</li>
+							<li>点击左侧地图上的省份，该省份对应的市级地区将在右侧框中显示</li>
+							<li>找到想要下载数据的地区，填写共享口令，点击“下载”获取下载链接</li>
+					</div>
+					<div class="container-fluid">
+						<div class="row-fluid">
+							<div class="span7">
+								<i id="loading-map" class="loading-earth" style="margin-top:20%"></i>
+								<div id="map">
+									<div id="popup" class="ol-popup">
+										<a href="#" id="popup-closer" class="ol-popup-closer"></a>
+										<div id="popup-content"></div>
+									</div>
+								</div>
+							</div>
+							<div class="span5">
+								<div class="portlet box grey">
+									<div class="portlet-title">
+										<div id="portlet-title-province"><i class="icon-list"></i> 地市列表</div>
+									</div>
+									<div class="portlet-body" id="data-body" style="position:relative;height:348px;overflow-y:scroll;padding:0">
+										<img src="2019-12-10-baidu-map-poi-cn/img-city-bg.jpg" style="position:absolute;bottom:5px;width:100%;z-index:-1">
+										<table class="table table-hover">
+											<thead><tr><th width="25%">地区</th><th width="50%">共享口令</th><th width="25%">下载</th></tr></thead>
+											<tbody id="data-list"></tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
 					<p></p>
 					<p></p>
 					<p><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果遇到任何数据问题，如坐标不匹配、文件损坏等，请在下方评论区留言，我将及时答疑或更新，十分感谢您的支持~</p>
@@ -159,6 +204,15 @@
 	<script src="../../../js/paylist.js"></script>
 	<script src="../blogsload.js"></script>
 	<script src="../../../js/common.js"></script>
+	
+    <script src="2019-12-10-baidu-map-poi-cn/resources/polyfills.js"></script>
+    <script src="2019-12-10-baidu-map-poi-cn/resources/ol.js"></script>
+    <script src="2019-12-10-baidu-map-poi-cn/resources/ol3-layerswitcher.js"></script>
+    <script src="2019-12-10-baidu-map-poi-cn/layers/province_cn.js"></script>
+    <script src="2019-12-10-baidu-map-poi-cn/styles/province_cn_style.js"></script>
+    <script src="2019-12-10-baidu-map-poi-cn/layers/layers.js" type="text/javascript"></script> 
+    <script src="2019-12-10-baidu-map-poi-cn/resources/qgis2web.js"></script>
+	
 	<script>
 		$(".picture-show").click(function(){  
 			var _this = $(this);//将当前的pimg元素作为_this传入函数  
