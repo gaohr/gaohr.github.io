@@ -304,7 +304,3 @@ for(var key in data_links) {
 		$("#pd_list").append("<span class='data-no'>" + data_links[key][0] + "</span>");
 	}
 }
-
-
-
-

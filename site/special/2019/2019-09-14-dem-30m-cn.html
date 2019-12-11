@@ -202,6 +202,10 @@
     <script src="../../../js/jquery-ui.js"></script>
     <script src="2019-09-14-dem-30m-cn/popup.js"></script>
 	<script>
+		// 弹出窗口
+		$('#popup_link').popup();
+		// $('#popup_link').draggable();
+		
 		function openDownloadWin(id, name) {
 			var key = $("#" + id).val();
 			if(key == "" || key == null) {
