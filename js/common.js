@@ -214,8 +214,8 @@ function LeftAD() {
 							"<p class=\"ad-close\" id=\"ad-close-left\"><span></span></p>" +
 							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							// "<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
-							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/Day-12-13.jpg\"></p>" +
+							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/China70.jpg\"></p>" +
+							// "<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/Day-12-13.jpg\"></p>" +
 						"</div>");
 	$("#China70").show(500);
 	$("#ad-close-left").click(function() {$("#China70").hide(500);});
