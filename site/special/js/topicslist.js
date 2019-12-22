@@ -21,7 +21,7 @@ var topicslist = [
 {"topicid":"2016070801", "title":"视频收藏", "type":"收藏", "content":"一些个人喜欢的小视频", "img":"2016/images/Videos.jpg", "date":"2016-07-08", "href":"http://gaohr.win/site/special/2016/2016-07-08-videos.html", "comments":"0"},
 
 /* others */
-{"topicid":"2019092701", "title":"闲置物品交易", "type":"其他", "content":"个人及周边闲置物品，置换、交易", "img":"2019/images/IdleGoods.jpg", "date":"2019-09-27", "href":"http://gaohr.win/site/special/2019/2019-09-27-idle-goods.html", "comments":"0"},
+// {"topicid":"2019092701", "title":"闲置物品交易", "type":"其他", "content":"个人及周边闲置物品，置换、交易", "img":"2019/images/IdleGoods.jpg", "date":"2019-09-27", "href":"http://gaohr.win/site/special/2019/2019-09-27-idle-goods.html", "comments":"0"},
 
 {"topicid":"2018010801", "title":"兔毛价格走势图", "type":"其他", "content":"兔毛价格走势一览", "img":"2018/images/Rabbit.jpg", "date":"2018-01-08", "href":"http://gaohr.win/site/special/2018/2018-01-04-price-of-rabbit.html", "comments":"0"},
 ]
