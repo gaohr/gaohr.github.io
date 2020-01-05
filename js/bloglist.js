@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020010601", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2020/images/PythonWeb.jpg", "date":"2020-01-06", "href":"http://gaohr.win/site/blogs/2020/2020-01-06-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
+
 {"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
 
 {"blogid":"2019120201", "title":"全球1:100万基础地理数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全球1:100万基础地理数据，包括七大洲范围、全球国家边界、全球省级行政边界、全球主要道路、全球铁路、全球面状水系、全球线状水系以及1度经纬网等矢量数据。", "img":"site/blogs/2019/images/WorldGIS.jpg", "date":"2019-12-02", "href":"http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html", "tags":["数据", "GIS", "全球"]},
@@ -15,8 +17,6 @@ var bloglist = [
 {"blogid":"2019101601", "title":"全国铁路网矢量数据集（精细）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国精细铁路网矢量数据集，数据来源于OSM，质量较好，属性完整，提供免费下载", "img":"site/blogs/2019/images/Railways.jpg", "date":"2019-10-16", "href":"http://gaohr.win/site/blogs/2019/2019-10-16-china-railway.html", "tags":["数据", "矢量", "铁路网"]},
 
 {"blogid":"2019100801", "title":"利用Matplotlib实现数据动态可视化", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"Matplotlib是Python中功能全面的绘图库，利用Matplotlib绘制动态图时，通常选择使用Matplotlib的animation模块，但是该模块的函数使用比较繁琐，不易学习。本文介绍一种相对比较简单的办法，使用动态绘图和暂停功能来实现", "img":"site/blogs/2019/images/Matplotlib.jpg", "date":"2019-10-08", "href":"http://gaohr.win/site/blogs/2019/2019-10-08-dynamic-plot-matplotlib.html", "tags":["Matplotlib", "Python", "数据可视化"]},
-
-// {"blogid":"2019100201", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2019/images/PythonWeb.jpg", "date":"2019-10-02", "href":"http://gaohr.win/site/blogs/2019/2019-10-02-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
 
 {"blogid":"2019092901", "title":"2000-2013年全球夜间灯光数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"2000年至2013年全球夜间灯光数据，数据来源于美国国防部的极轨卫星计划。DMSP/OLS卫星传感器在夜间工作，能探测到城市灯光甚至小规模居民地、车流等发出的低强度灯光，因此，DMSP/OLS夜间灯光影像成为人类活动研究的良好数据源。", "img":"site/blogs/2019/images/GlobalLight.jpg", "date":"2019-09-29", "href":"http://gaohr.win/site/blogs/2019/2019-09-29-global-light-dmsp.html", "tags":["遥感", "灯光指数", "全球", "数据"]},
 

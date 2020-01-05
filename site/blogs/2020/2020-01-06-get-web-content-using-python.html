@@ -45,7 +45,7 @@
 					<!--<li class="active">Blog</li>-->
 				</ol>
 				<!--正文-->
-				<input id="blogid" style="display:none" value="2019100201">
+				<input id="blogid" style="display:none" value="2020010601">
 				<div class="blogcontent alist">
 					<h2>Python网络爬虫IP被限制的解决方法</h2>
 					<h2><small>Solutions to IP Restriction in Web Page Crawling with Python</small></h2>
@@ -54,14 +54,14 @@
 					<p>但是，网络爬虫的难点并不在于网络爬虫本身，而在于网页的分析与爬虫的反爬攻克问题。高强度、高频率地爬取网页信息常常会给网站的服务器带来巨大压力，因此在利用Python进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。</p>
 					<p class="g-color-red">本文不再具体介绍Python爬虫和网页分析的技术，网上教程资源很多，主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。</p>
 					<p class="blog-sub-title"><b>反爬虫示例</b></p>
-					<p>以某房产网站为例，爬虫抓取网站内容时会出现以下错误页面，导致爬虫无法继续抓取原始页面数据。</p>
-					<p class="imginblog"><img src="2019-10-02-get-web-content-using-python\img001.jpg"></p>
+					<p>举个例子，爬虫抓取网站内容时可能会出现以下错误页面，导致爬虫无法继续抓取原始页面数据。</p>
+					<p class="imginblog"><img src="2020-01-06-get-web-content-using-python\img001.jpg"></p>
 					<p class="blog-sub-title"><b>常用的解决方法</b></p>
 					<p><b>1. 模拟浏览器访问</b></p>
 					<p>网上经常会看到有些爬虫代码会设置<code>headers</code>变量，这是用来模拟浏览器上网用的，因为有些网站设置的反爬虫机制，需要使用浏览器上网才可以访问。</p>
 					<p><code>headers</code>的设置也非常简单。</p>
 					<p>首先，打开调试面板，找到自己浏览器发送请求时的<code>headers</code>，其中，<code>User-agent</code>是用来表示请求者的信息，可以搜集<code>User-agent</code>并保存，爬取过程中动态更换在<code>User-agent</code>，伪装成浏览器的形式。如下图所示。</p>
-					<p class="imginblog"><img src="2019-10-02-get-web-content-using-python\img002.jpg"></p>
+					<p class="imginblog"><img src="2020-01-06-get-web-content-using-python\img002.jpg"></p>
 					<p>然后，在爬虫代码中加入<code>headers</code>变量</p>
 					<div id="highlighter_796187" class="syntaxhighlighter  python"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="python keyword">import</code>&nbsp;<code class="python plain">requests</code></div><div class="line number2 index1 alt1"><code class="python plain">url&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python string">"&lt;url&gt;"</code></div><div class="line number3 index2 alt2"><code class="python plain">headers&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">{</code><code class="python string">'User-Agent'</code><code class="python plain">:&nbsp;</code><code class="python string">'Mozilla/5.0&nbsp;(Windows&nbsp;NT&nbsp;6.3;&nbsp;WOW64)&nbsp;AppleWebKit/537.36&nbsp;(KHTML,&nbsp;like&nbsp;Gecko)&nbsp;Chrome/55.0.2883.87&nbsp;Safari/537.36'</code><code class="python plain">}</code></div><div class="line number4 index3 alt1"><code class="python plain">web_data&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">requests.get(url,&nbsp;headers</code><code class="python keyword">=</code><code class="python plain">headers)</code></div></div></td></tr></tbody></table></div>
 					<p>这样就能成功的爬取到部分网站的网页信息了。</p>
@@ -70,7 +70,7 @@
 					<p class="g-color-red">所以设置动态IP代理进行访问成为一种反爬虫的更好策略，即通过其他的IP代替自己的IP进行网站访问。</p>
 					<p>免费的代理IP网站有很多，虽然这种网站都不会提供太多的代理IP，但足够我们使用了。本文以西刺代理的免费IP代理网站（<a href="www.xicidaili.com/nn/" target="_blank">www.xicidaili.com/nn/</a>）为例，介绍一下在python中如何使用动态IP代理。</p>
 					<p>打开网站，可以看到这里有很多代理IP列表，总共超过30万条代理IP地址。</p>
-					<p class="imginblog"><img src="2019-10-02-get-web-content-using-python\img003.jpg"></p>
+					<p class="imginblog"><img src="2020-01-06-get-web-content-using-python\img003.jpg"></p>
 					<p>设置IP代理需要修改<code>proxies</code>变量，<code>proxies</code>变量的格式是一个字典：{'http': 'http://xx.xx.xx.xx:xxxx'}，需要注意的是，<code>proxises</code>有http与https两种，在爬取不同网站时我们需要选用不同类型的网站时选用不同的<code>proxise</code>。</p>
 					<div id="highlighter_908520" class="syntaxhighlighter  python"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="python comments">#&nbsp;http型：</code></div><div class="line number2 index1 alt1"><code class="python plain">{</code><code class="python string">'http'</code><code class="python plain">:&nbsp;</code><code class="python string">'<a href="http://xx.xx.xx.xx:xxxx">http://xx.xx.xx.xx:xxxx</a>'</code><code class="python plain">}</code></div><div class="line number3 index2 alt2"><code class="python comments">#&nbsp;https型：</code></div><div class="line number4 index3 alt1"><code class="python plain">{</code><code class="python string">'https'</code><code class="python plain">:&nbsp;</code><code class="python string">'<a href="http://xx.xx.xx.xx:xxxx">http://xx.xx.xx.xx:xxxx</a>'</code><code class="python plain">}</code></div></div></td></tr></tbody></table></div>
 					<p>然后，从代理IP列表随机抓取IP地址，组成<code>proxies</code>，代码如下。</p>
