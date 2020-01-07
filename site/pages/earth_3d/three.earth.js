@@ -38,25 +38,23 @@ document.addEventListener('DOMContentLoaded', function () {
         scene = new THREE.Scene();
     }
 
-    // 太阳
+    // 太阳与光源
     var sunMesh;
     function initSun() {
 		bulbLight = new THREE.PointLight(0xffffff);
-		var bulbGeometry = new THREE.SphereBufferGeometry(100, 100, 100);
-		bulbMat = new THREE.MeshStandardMaterial({
-			alphaMap: new THREE.TextureLoader().load('http://gaohr.win/site/pages/earth_3d/sun.jpg'),
-            transparent: true,
-            opacity: 0.5,
-			emissive: 0xffee88,
-			emissiveIntensity: 1,
-			color: 0x000000,
-		} );
-		bulbLight.add(new THREE.Mesh(bulbGeometry, bulbMat));
 		bulbLight.position.set(3000, 3000, -3000);
 		bulbLight.castShadow = true;
 		scene.add(bulbLight);
+		
+		var sunGeo = new THREE.SphereGeometry(100, 100, 100);
+        var sunMater = new THREE.MeshBasicMaterial({
+			map: THREE.ImageUtils.loadTexture('https://raw.githubusercontent.com/gaohr/gaohr.github.io/master/site/pages/earth_3d/sun.jpg')
+		});
+		sunMesh = new THREE.Mesh(sunGeo, sunMater);
+		sunMesh.position.set(3000, 3000, -3000);
+		scene.add(sunMesh);
     }
-
+	
     // 地球
     var earthMesh;
     function initEarth() {
@@ -74,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initMoon() {
         var moonGeo = new THREE.SphereGeometry(20, 100, 100);
         var moonMater = new THREE.MeshPhongMaterial({
-            map: new THREE.TextureLoader().load('http://gaohr.win/site/pages/earth_3d/moon.jpg'),
+            map: new THREE.TextureLoader().load('https://raw.githubusercontent.com/gaohr/gaohr.github.io/master/site/pages/earth_3d/moon.jpg'),
             side: THREE.DoubleSide
         });
         moonMesh = new THREE.Mesh(moonGeo, moonMater);
