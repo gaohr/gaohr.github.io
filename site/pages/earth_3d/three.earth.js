@@ -38,13 +38,23 @@ document.addEventListener('DOMContentLoaded', function () {
         scene = new THREE.Scene();
     }
 
-    // 光源
-    var light;
-    function initLight() {
-        // 平行光 模拟太阳光照
-        light = new THREE.DirectionalLight(0xffffff, 1);
-        light.position.set(1, 1, -1);
-        scene.add(light);
+    // 太阳
+    var sunMesh;
+    function initSun() {
+		bulbLight = new THREE.PointLight(0xffffff);
+		var bulbGeometry = new THREE.SphereBufferGeometry(100, 100, 100);
+		bulbMat = new THREE.MeshStandardMaterial({
+			alphaMap: new THREE.TextureLoader().load('http://gaohr.win/site/pages/earth_3d/sun.jpg'),
+            transparent: true,
+            opacity: 0.5,
+			emissive: 0xffee88,
+			emissiveIntensity: 1,
+			color: 0x000000,
+		} );
+		bulbLight.add(new THREE.Mesh(bulbGeometry, bulbMat));
+		bulbLight.position.set(3000, 3000, -3000);
+		bulbLight.castShadow = true;
+		scene.add(bulbLight);
     }
 
     // 地球
@@ -58,6 +68,20 @@ document.addEventListener('DOMContentLoaded', function () {
         earthMesh = new THREE.Mesh(earthGeo, earthMater);
         scene.add(earthMesh);
     }
+	
+    // 月球
+    var moonMesh;
+    function initMoon() {
+        var moonGeo = new THREE.SphereGeometry(20, 100, 100);
+        var moonMater = new THREE.MeshPhongMaterial({
+            map: new THREE.TextureLoader().load('http://gaohr.win/site/pages/earth_3d/moon.jpg'),
+            side: THREE.DoubleSide
+        });
+        moonMesh = new THREE.Mesh(moonGeo, moonMater);
+		moonMesh.position.set(240, 100, 100);
+        scene.add(moonMesh);
+    }
+
 
     // 云
     var cloudsMesh;
@@ -77,19 +101,20 @@ document.addEventListener('DOMContentLoaded', function () {
         initThree();
         initCamera();
         initScene();
-        initLight();
+        initSun();
         initEarth();
+        initMoon();
         initClouds();
         // 载入控制器
         controls = new THREE.OrbitControls(camera, renderer.domElement);
         renderer.clear();
         animate();
     }
-
+			
     function animate() {
         controls.update();
         // 地球自转
-        earthMesh.rotation.y -= 0.002;
+        earthMesh.rotation.y += 0.002;
 
         // 云层漂浮效果
         cloudsMesh.rotation.y -= 0.005;
@@ -99,3 +124,15 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(animate);
 		stats.update();
     }
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
