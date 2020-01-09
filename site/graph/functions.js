@@ -7,8 +7,8 @@ var xend = parseInt($("#fxend").val());
 var functionArr = [];
 var dataArr = [];
 var xx = [];
-	for (var x = xstart; x < xend; x+=0.05) {
-		xx.push(parseInt(x));
+	for (var x = xstart; x < xend; x+=0.005) {
+		xx.push(x);
 	}
 	
 var legendData = [];
