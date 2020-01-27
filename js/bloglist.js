@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020012701", "title":"全国各省固定资本存量（1978-2015）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"", "img":"site/blogs/2020/images/EconomicData.jpg", "date":"2020-01-27", "href":"http://gaohr.win/site/blogs/2020/2020-01-27-socio-economic-data-fixed-capital-stocks.html", "tags":["社会经济", "数据"]},
+
 {"blogid":"2020010601", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2020/images/PythonWeb.jpg", "date":"2020-01-06", "href":"http://gaohr.win/site/blogs/2020/2020-01-06-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
 
 {"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
