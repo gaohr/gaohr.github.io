@@ -1,6 +1,6 @@
 var bloglist = [
 
-{"blogid":"2020012701", "title":"全国各省固定资本存量（1978-2015）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"", "img":"site/blogs/2020/images/EconomicData.jpg", "date":"2020-01-27", "href":"http://gaohr.win/site/blogs/2020/2020-01-27-socio-economic-data-fixed-capital-stocks.html", "tags":["社会经济", "数据"]},
+{"blogid":"2020012701", "title":"全国各省固定资本存量（1978-2015）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"根据张军和单豪杰估算方法计算全国31个省、直辖市1978年至2015年固定资本存量。数据来源：《中国国内生产总值核算历史资料1952-1995》、《中国国内生产总值历史资料1952-2004》、《中国统计年鉴（2004-2016）》等。", "img":"site/blogs/2020/images/EconomicData.jpg", "date":"2020-01-27", "href":"http://gaohr.win/site/blogs/2020/2020-01-27-socio-economic-data-fixed-capital-stocks.html", "tags":["社会经济", "数据"]},
 
 {"blogid":"2020010601", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2020/images/PythonWeb.jpg", "date":"2020-01-06", "href":"http://gaohr.win/site/blogs/2020/2020-01-06-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
 
