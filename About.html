@@ -113,7 +113,7 @@
 							<tr>
 								<td>（3）</td>
 								<td><span class="g-color-orange">交换共享</span></td>
-								<td><span class="g-color-gray">需要先联系、申请，经过数据交换共享，再提供下载的共享数据</span><br><span class="g-color-gray">数据共享申请流程（试行）：<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>i</b>. 下载<a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/docs/data-share-application-form-gaohr.win.docx">交换共享申请表（点击下载）</a>，完整填写申请表并签字，<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>ii</b>. 将申请表发送至邮箱<span class="g-color-red">gaohr@radi.ac.cn</span>，<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>iii</b>. 我们审核通过后，会回复确认表同意数据共享，<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>iv</b>. 您收到确认表后，可以将您提供的共享数据打包发送至我们的邮箱<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>v</b>. 我们确认数据后，会把共享数据（或共享口令）发送至您提供的电子邮箱，完成数据共享</span><br>（也可通过打赏兑换~）</td>
+								<td><span class="g-color-gray">需要先联系、申请，经过数据交换共享，再提供下载的共享数据</span><br><span class="g-color-gray">数据共享申请流程（试行）：<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>i</b>. 下载<a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/docs/data-share-application-form-gaohr.win.docx">交换共享申请表（点击下载）</a>，完整填写申请表并签字，<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>ii</b>. 将申请表发送至邮箱<span class="g-color-red">gaohr@radi.ac.cn</span>，<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>iii</b>. 我们审核通过后，会回复确认表同意数据共享，<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>iv</b>. 您收到确认表后，可以将您提供的共享数据打包发送至我们的邮箱<br>&nbsp;&nbsp;&nbsp;&nbsp;<b>v</b>. 我们确认数据后，会把共享数据（或共享口令）发送至您提供的电子邮箱，完成数据共享<br>（也可通过打赏兑换~）</span></td>
 							</tr>
 							<tr>
 								<td>（4）</td>
@@ -123,7 +123,11 @@
 						<tbody>
 					</table>
 					</div>
-					<p class="quote">关于本站<b>打赏功能</b><br>&nbsp;&nbsp;&nbsp;&nbsp;由于本站分享的部分数据资源，存放在存储稳定和外链流量速度快商业存储云上，可以大大提升用户体验，因此需要大家的打赏支持，十分感谢。<span class="g-color-gray">其次，打赏功能可以增加网站人气，提高本人更新网站积极性。</span>*´∀`) 另外，本站某些“非共享数据”可以通过打赏支付~.~</p>
+					<hr>
+					<p class="quote">关于本站<b>打赏功能</b><br>&nbsp;&nbsp;&nbsp;&nbsp;由于本站分享的部分数据资源，存放在存储稳定和外链流量速度快商业存储云上，可以大大提升用户体验，因此需要大家的打赏支持，十分感谢。<span class="g-color-gray">其次，打赏功能可以增加网站人气，提高本人更新网站积极性。</span>*´∀`) 另外，本站某些“非共享数据”可以通过打赏支付~.~<br>&nbsp;&nbsp;&nbsp;&nbsp;打赏按钮位于博客正文下方：</p>
+					<!-- Da shang -->
+					<div id="dashang00" class="dashang"></div>
+					<hr>
 					<p class="quote">关于本站<b>评论功能</b><br>&nbsp;&nbsp;&nbsp;&nbsp;没有评论功能的网站冷冷清清，无法和大家交流沟通，更无法了解大家的看法，有想法不能共享，有问题无处问询，因此，添加评论功能增强网站活力、提高网站人气和活跃度，和大家共同交流、学习。希望多多评论留言~</p>
 					<p>联系邮箱：<span class="g-text-bg g-color-purple"><b>gaohr@radi.ac.cn</b></span></p>
 				</div>
@@ -257,6 +261,19 @@
 	<script src="site/special/js/topicslist.js"></script>
 	<script src="js/common.js"></script>
 	<script>
+	$("#dashang00").html("<span class='g-color-red'>点击打赏支持</span><div class=\"shang_img\"></div>" +
+						"<span class=\"tdcode\">" +
+						"<p style='color:#fff'>非常感谢您的支持！</p>" +
+						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
+						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
+						"<p style='color:#fff'>扫码打赏，建议金额：1-10元</p>" +
+						"</span>");
+	
+	$(".shang_img").hover(
+		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");}, 
+		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");});
+	$(".shang_img").click(function() {$(".tdcode").toggle(200);});
+	
 		$("#submit").click(function() {
 			var key = $("#keyword").val();
 			// 转入此中来
