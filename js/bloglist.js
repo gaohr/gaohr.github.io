@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020022001", "title":"全国道路网矢量数据集", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国道路网矢量数据集，包括高速、国道、省道、县道、乡村小道等，数据来源于OSM，十分精细，属性完整，提供免费下载", "img":"site/blogs/2020/images/Roads.jpg", "date":"2020-02-20", "href":"http://gaohr.win/site/blogs/2020/2020-02-20-china-roads.html", "tags":["数据", "矢量", "道路网"]},
+
 {"blogid":"2020012701", "title":"全国各省固定资本存量（1978-2015）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"根据张军和单豪杰估算方法计算全国31个省、直辖市1978年至2015年固定资本存量。数据来源：《中国国内生产总值核算历史资料1952-1995》、《中国国内生产总值历史资料1952-2004》、《中国统计年鉴（2004-2016）》等。", "img":"site/blogs/2020/images/EconomicData.jpg", "date":"2020-01-27", "href":"http://gaohr.win/site/blogs/2020/2020-01-27-socio-economic-data-fixed-capital-stocks.html", "tags":["社会经济", "数据"]},
 
 {"blogid":"2020010601", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2020/images/PythonWeb.jpg", "date":"2020-01-06", "href":"http://gaohr.win/site/blogs/2020/2020-01-06-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
@@ -12,11 +14,9 @@ var bloglist = [
 
 {"blogid":"2019111901", "title":"1980-2018年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年和2018年等8期土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},
 
-// {"blogid":"2019111501", "title":"全国道路网矢量数据集（精细）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国道路网矢量数据集，包括高速、国道、省道、县道、乡村小道等，数据来源于OSM，十分精细，属性完整，提供免费下载", "img":"site/blogs/2019/images/Roads.jpg", "date":"2019-11-15", "href":"http://gaohr.win/site/blogs/2019/2019-11-15-china-roads.html", "tags":["数据", "矢量", "道路网"]},
-
 {"blogid":"2019111101", "title":"不得不了解的中国基本地理国情", "type":"奇闻趣问", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"[GIS day 特别篇] 中国领土南北跨越的纬度近50度，东西跨越经度超过60度，陆地面积约960万平方公里，领海约470万平方公里。作为一名地理学科学生、学者、工作者，祖国的基本地理国情，不得不了解一下", "img":"site/blogs/2019/images/ChinaGeo.jpg", "date":"2019-11-13", "href":"http://gaohr.win/site/blogs/2019/2019-11-11-geographical-situation-of-cn.html", "tags":["中国", "地理", "国情"]},
 
-{"blogid":"2019101601", "title":"全国铁路网矢量数据集（精细）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国精细铁路网矢量数据集，数据来源于OSM，质量较好，属性完整，提供免费下载", "img":"site/blogs/2019/images/Railways.jpg", "date":"2019-10-16", "href":"http://gaohr.win/site/blogs/2019/2019-10-16-china-railway.html", "tags":["数据", "矢量", "铁路网"]},
+{"blogid":"2019101601", "title":"全国精细铁路网矢量数据集", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国精细铁路网矢量数据集，数据来源于OSM，质量较好，属性完整，提供免费下载", "img":"site/blogs/2019/images/Railways.jpg", "date":"2019-10-16", "href":"http://gaohr.win/site/blogs/2019/2019-10-16-china-railway.html", "tags":["数据", "矢量", "铁路网"]},
 
 {"blogid":"2019100801", "title":"利用Matplotlib实现数据动态可视化", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"Matplotlib是Python中功能全面的绘图库，利用Matplotlib绘制动态图时，通常选择使用Matplotlib的animation模块，但是该模块的函数使用比较繁琐，不易学习。本文介绍一种相对比较简单的办法，使用动态绘图和暂停功能来实现", "img":"site/blogs/2019/images/Matplotlib.jpg", "date":"2019-10-08", "href":"http://gaohr.win/site/blogs/2019/2019-10-08-dynamic-plot-matplotlib.html", "tags":["Matplotlib", "Python", "数据可视化"]},
 
