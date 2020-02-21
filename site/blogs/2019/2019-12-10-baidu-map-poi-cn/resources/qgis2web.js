@@ -190,8 +190,7 @@ function openDownloadWin(id) {
 	if(key == "" || key == null) {
 		alert("口令不能为空");
 	} else {
-		curyear = "2020"
-		window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/POI/baidu_map_" + curyear + "/poi_" + id + "-" + key + ".rar";
+		window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/POI/poi_" + id + "-" + key + ".rar";
 	}
 }
 	
