@@ -192,11 +192,14 @@ var onSingleClick = function(evt) {
 	
 function openDownloadWin(id) {
 	var key = $("#" + id).val();
+	idArr = id.split("_");
+	if(idArr[0] == idArr[1]) {
+		id = idArr[0]
+	}
 	if(key == "" || key == null) {
 		alert("口令不能为空");
 	} else {
-		curyear = "2020"
-		window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/POI/baidu_map_" + curyear + "/poi_" + id + "-" + key + ".rar";
+		window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Roads_data/roads_" + id + "_" + key + ".rar";
 	}
 }
 	
@@ -251,8 +254,3 @@ var province_cities = {
 	"31": [["江苏", "Jiangsu"], ["南京", "Nanjing"], ["苏州", "Suzhou"], ["扬州", "Yangzhou"], ["无锡", "Wuxi"], ["镇江", "Zhenjiang"], ["常州", "Changzhou"], ["南通", "Nantong"], ["泰州", "Taizhou"], ["盐城", "Yancheng"], ["淮安", "Huaian"], ["宿迁", "Suqian"], ["徐州", "Xuzhou"], ["连云港", "Lianyungang"]], 
 	"32": [["广东", "Guangdong"], ["广州", "Guangzhou"], ["深圳", "Shenzhen"], ["珠海", "Zhuhai"], ["中山", "Zhongshan"], ["佛山", "Foshan"], ["东莞", "Dongguan"], ["惠州", "Huizhou"], ["肇庆", "Zhaoqing"], ["云浮", "Yunfu"], ["茂名", "Maoming"], ["湛江", "Zhanjiang"], ["阳江", "Yangjiang"], ["江门", "Jiangmen"], ["清远", "Qingyuan"], ["韶关", "Shaoguan"], ["河源", "Heyuan"], ["梅州", "Meizhou"], ["汕尾", "Shanwei"], ["汕头", "Shantou"], ["揭阳", "Jieyang"], ["潮州", "Chaozhou"]], 
 	"33": [["河北", "Hebei"], ["石家庄", "Shijiazhuang"], ["保定", "Baoding"], ["承德", "Chengde"], ["唐山", "Tangshan"], ["廊坊", "Langfang"], ["衡水", "Hengshui"], ["邢台", "Xingtai"], ["沧州", "Cangzhou"], ["邯郸", "Handan"], ["秦皇岛", "Qinhuangdao"], ["张家口", "Zhangjiakou"]]}
-
-
-
-
-
