@@ -9,7 +9,8 @@ $(document).ready(function($) {
 	/*鼠标点击特效*/
 	var a_idx = 0;
    $("body").click(function(e) {
-       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪", "战疫");
+       // var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪", "战疫");
+       var arrT = new Array("战疫", "武汉加油", "中国加油", "坚持", "必胜");
        var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;
        var x = e.pageX,y = e.pageY;
        $i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});

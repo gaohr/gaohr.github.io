@@ -6,7 +6,7 @@ body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:ur
 hr {margin-top:10px;margin-bottom:10px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
-.mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/bg_top_newyear_fu.jpg');background-size:100%;}
+.mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/bg_top_fu_2.jpg');background-size:100% 100%;;}
 .mainlogo a{position:fixed;left:6%;margin:10px 0;font-size:3em;font-family:'Microsoft YaHei';color:#ddd;}
 .mainlogo a:hover {color:#ff4444}
 .mainlogo .weather {height:40px;float:right;background:rgba(255,255,255,0.1);padding:5px 10px;margin-right:20px;margin-top:-5px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff}
