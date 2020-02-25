@@ -27,7 +27,7 @@ $(document).ready(function() {
 			"</div>" +
 			"</div><hr>";
 	}
-	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-default btn-block'>>>>点击阅读更多博客<<<</a></div>"
+	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-default btn-block'><b>>>> 点 击 阅 读 更 多 博 客 <<<</b></a></div>"
 	$("#blog").append(blogs_index);
 	
 	//Blogs
@@ -138,7 +138,7 @@ function tagssize(n) {
 	if(n == undefined) {
 		return 0;
 	} else {
-		return n * 3;
+		return n * 2;
 	}
 }
 	
