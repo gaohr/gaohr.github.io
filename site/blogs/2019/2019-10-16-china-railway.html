@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
 	<link rel="shortcut icon" href="../../../img/logo.ico" />
-    <title>GaoHR | 全国精细铁路网矢量数据集</title>
+    <title>GaoHR | 全国铁路网矢量数据集</title>
 	<style>
 		.hover_area {border:2px solid #777;margin-bottom:10px;}
 		.hover_area_5{overflow: hidden;position: relative;}
@@ -53,16 +53,17 @@
 				<!--正文-->
 				<input id="blogid" style="display:none" value="2019101601">
 				<div class="blogcontent">
-					<h2>全国精细铁路网矢量数据集</h2>
+					<h2>全国铁路网矢量数据集</h2>
 					<h2><small>Vector data set of fine railway network of China</small></h2>
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p class="blog-sub-title"><b>数据概况</b></p>
-					<p>全国精细铁路网矢量数据集，包括城市间铁路线和市内地铁线，数据来源于<b>Open Street Map</b>，具有非常高的精细度（可查看数据预览图），数据属性相对完整。</p>
+					<p>全国铁路网矢量数据集，包括城市间铁路线和市内地铁线等，数据来源于<b>国家地理信息中心</b>和<b>Open Street Map</b>，其中，国家基础地理信息中心的数据比例尺为1:100万，OSM的数据为开源数据，均具有非常高的精细度（可查看数据预览图），数据属性相对完整。</p>
 					<div class="blog-quote">
-						<p><i class="icon-road"></i> 空间范围：全国（各省）</p>
-						<p><i class="icon-road"></i> 数据类型：矢量 | ESRI Shapefile</p>
-						<p><i class="icon-road"></i> 投影坐标：GCS WGS 1984</p>
-						<p><i class="icon-road"></i> 生产时间：2019年10月</p>
+						<p><i class="icon-info-sign"></i> 空间范围：全国（各省）</p>
+						<p><i class="icon-info-sign"></i> 数据类型：矢量 | ESRI Shapefile</p>
+						<p><i class="icon-info-sign"></i> 投影坐标：1:100万（2000国家大地坐标系）  OSM（GCS WGS 1984）</p>
+						<p><i class="icon-info-sign"></i> 生产时间：1:100万（2012|2015|2017） OSM（2017|2019|2020）</p>
+						<p><i class="icon-info-sign"></i> 保密等级：公开</p>
 						<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					</div>
 					<p class="blog-sub-title"><b>数据预览</b></p>
@@ -104,7 +105,7 @@
 					<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 该数据为“有限共享”数据，不提供直接数据下载链接，需申请数据共享，获取共享口令，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
 					<p> 该数据比较精细，并不一定适用于所有研究，因此，请在申请表中填写具体应用或使用目的，我会根据申请人填写的内容判断是否提供下载口令。如果是全国尺度的研究，请前往下载1:100万的数据<a href="http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html" target="_blank">（点击进入）</a>。</p>
-					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 仅提供省级或地区数据的申请和下载，填写申请表时请标明省份或地区，否则不提供下载口令~(´▽｀)。</p>
+					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 仅提供省级或市级地区数据的申请和下载，填写申请表时请标明省份或地区，以及数据年份和类型，否则无法提供下载口令~(´▽｀)。</p>
 					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 如果省份超过2个，另行商议~</p>
 					<div class="tabbable tabbable-custom width-percent-80">
 						<ul class="nav nav-tabs tab-title">
@@ -254,7 +255,7 @@
 			if(key == "" || key == null) {
 				alert("口令不能为空");
 			} else {
-				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/OSM_map/OSM_railways_2019/railways_" + name + "_201910-osm-" + key + ".rar";
+				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Railways_data/railways_" + name + "_" + key + ".rar";
 			}
 		}
 	</script>
