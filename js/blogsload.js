@@ -191,13 +191,84 @@ function getAllBlogs() {
 	}
 }
 	
+var check = [1, 0, 0, 0, 0]
+$("#icon-blog-all").click (function () {
+	check = [1, 0, 0, 0, 0];
+})
+$("#icon-blog-tech").click (function () {
+	check = [0, 1, 0, 0, 0];
+})
+$("#icon-blog-data").click (function () {
+	check = [0, 0, 1, 0, 0];
+})
+$("#icon-blog-prose").click (function () {
+	check = [0, 0, 0, 1, 0];
+})
+$("#icon-blog-interest").click (function () {
+	check = [0, 0, 0, 0, 1];
+})
 	
+$("#icon-blog-all").hover(
+	function () {
+		if(!check[0]) {
+			$(this).attr("src", "img/others/blog_type_all_check.png");
+		}
+	},
+	function () {
+		if(!check[0]) {
+			$(this).attr("src", "img/others/blog_type_all.png");
+		}
+	}
+);
 	
+$("#icon-blog-tech").hover(
+	function () {
+		if(!check[1]) {
+			$(this).attr("src", "img/others/blog_type_tech_check.png");
+		}
+	},
+	function () {
+		if(!check[1]) {
+			$(this).attr("src", "img/others/blog_type_tech.png");
+		}
+	}
+);
 	
+$("#icon-blog-data").hover(
+	function () {
+		if(!check[2]) {
+			$(this).attr("src", "img/others/blog_type_data_check.png");
+		}
+	},
+	function () {
+		if(!check[2]) {
+			$(this).attr("src", "img/others/blog_type_data.png");
+		}
+	}
+);
 	
+$("#icon-blog-prose").hover(
+	function () {
+		if(!check[3]) {
+			$(this).attr("src", "img/others/blog_type_prose_check.png");
+		}
+	},
+	function () {
+		if(!check[3]) {
+			$(this).attr("src", "img/others/blog_type_prose.png");
+		}
+	}
+);
 	
-	
-	
-	
-	
-	
+$("#icon-blog-interest").hover(
+	function () {
+		if(!check[4]) {
+			$(this).attr("src", "img/others/blog_type_interest_check.png");
+		}
+	},
+	function () {
+		if(!check[4]) {
+			$(this).attr("src", "img/others/blog_type_interest.png");
+		}
+	}
+);
