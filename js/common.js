@@ -6,19 +6,17 @@
 */
 
 $(document).ready(function($) {
-	// 粒子特效
-	//ParticleEffect();
 	/*鼠标点击特效*/
 	var a_idx = 0;
-   //$("body").click(function(e) {
-    //   // var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪", "战疫");
-    //   var arrT = new Array("战疫", "武汉加油", "中国加油", "坚持", "必胜");
-    //   var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;
-    //   var x = e.pageX,y = e.pageY;
-    //   $i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});
-    //   $("body").append($i);
-   //    $i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
-   //});
+   $("body").click(function(e) {
+       // var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪", "战疫");
+       var arrT = new Array("战疫", "武汉加油", "中国加油", "坚持", "必胜");
+       var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;
+       var x = e.pageX,y = e.pageY;
+       $i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});
+       $("body").append($i);
+       $i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
+   });
    
 	/*滚动监听，显示侧边菜单*/
 	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'><img src='http://gaohr.win/img/mainicon.png' class='img-rounded'></a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
@@ -109,7 +107,6 @@ $(document).ready(function($) {
 		
 	// Hot topics
 	HotTopic();
-	
 	
 });
 
@@ -436,4 +433,5 @@ function PageViews() {
 		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>专题访问量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span>");
 	}
 }
+	
 	
