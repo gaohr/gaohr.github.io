@@ -6,6 +6,9 @@
 */
 
 $(document).ready(function($) {
+	/*粒子特效*/
+	ParticalEffect();
+	
 	/*鼠标点击特效*/
 	var a_idx = 0;
    $("body").click(function(e) {
@@ -434,4 +437,9 @@ function PageViews() {
 	}
 }
 	
-	
+function ParticalEffect() {
+	$(".mainlogo").append("<div id='particle-effect' style='position:fixed;top:0;left:0;right:0;height:60px;z-index:-1'></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/particaleffect.js\"></script>")
+}
+
+
+
