@@ -2,27 +2,27 @@ var size = 0;
 var categories_earthquackcnquick = {
 "3": [ new ol.style.Style({
         image: new ol.style.Circle({radius: 1.0 + size,
-            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(255,235,155,0.6)"})})
+            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(255,235,155,0.1)"})})
     })],
 "4": [ new ol.style.Style({
         image: new ol.style.Circle({radius: 3.0 + size,
-            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(255,175,115,0.5)"})})
+            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(255,175,115,0.15)"})})
     })],
 "5": [ new ol.style.Style({
         image: new ol.style.Circle({radius: 5.0 + size,
-            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(255,125,75,0.4)"})})
+            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(255,125,75,0.2)"})})
     })],
 "6": [ new ol.style.Style({
         image: new ol.style.Circle({radius: 7.0 + size,
-            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(235,95,55,0.3)"})})
+            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(235,95,55,0.25)"})})
     })],
 "7": [ new ol.style.Style({
         image: new ol.style.Circle({radius: 9.0 + size,
-            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(215,55,30,0.2)"})})
+            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(215,55,30,0.3)"})})
     })],
 "8": [ new ol.style.Style({
         image: new ol.style.Circle({radius: 11.0 + size,
-            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(155,15,15,0.1)"})})
+            stroke: new ol.style.Stroke({color: "rgba(255,255,255,0.5)", width: 0.5}), fill: new ol.style.Fill({color: "rgba(155,15,15,0.35)"})})
     })]};
 var styleCache_earthquackcnquick={}
 var style_earthquackcnquick = function(feature, resolution){

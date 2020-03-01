@@ -38,15 +38,12 @@ th, td {
     font-size: 100%;
 }
 
-.css_animation{
-    height:36px;
-    width:36px;
-    border-radius: 25px;
-    background: rgba(255, 0, 0, 1);
-    transform: scale(0);
-    animation: animation 2s;
-    animation-iteration-count: infinite;
-}
+.css_animation_3{height:16px;width:16px;border-radius: 100%;background: rgba(255, 0, 0, 1);transform: scale(0);animation: animation 2s;animation-iteration-count: infinite;}
+.css_animation_4{height:24px;width:24px;border-radius: 100%;background: rgba(255, 0, 0, 1);transform: scale(0);animation: animation 2s;animation-iteration-count: infinite;}
+.css_animation_5{height:32px;width:32px;border-radius: 100%;background: rgba(255, 0, 0, 1);transform: scale(0);animation: animation 2s;animation-iteration-count: infinite;}
+.css_animation_6{height:40px;width:40px;border-radius: 100%;background: rgba(255, 0, 0, 1);transform: scale(0);animation: animation 2s;animation-iteration-count: infinite;}
+.css_animation_7{height:48px;width:48px;border-radius: 100%;background: rgba(255, 0, 0, 1);transform: scale(0);animation: animation 2s;animation-iteration-count: infinite;}
+.css_animation_8{height:56px;width:56px;border-radius: 100%;background: rgba(255, 0, 0, 1);transform: scale(0);animation: animation 2s;animation-iteration-count: infinite;}
  
 @keyframes animation{
     to{
