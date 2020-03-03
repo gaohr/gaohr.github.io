@@ -276,6 +276,24 @@
 		$('.popup-left').tooltip();
 		$('.popup-right').tooltip();
 		
+		$("#get-xiang-point-2015").click(function () {
+			var key = $("#data-key-xiang-point-2015").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/CN-Vallige-2015-" + key + ".rar";
+			}
+		})
+		
+		$("#get-cun-point-2015").click(function () {
+			var key = $("#data-key-cun-point-2015").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/CN-Vallige-2015-" + key + ".rar";
+			}
+		})
+		
 		$("#get-xian2012").click(function () {
 			var key = $("#data-key-xian2012").val();
 			if(key == "" || key == null) {

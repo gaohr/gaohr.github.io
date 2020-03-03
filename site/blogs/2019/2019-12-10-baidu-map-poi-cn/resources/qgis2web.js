@@ -179,7 +179,7 @@ var onSingleClick = function(evt) {
 		$("#loading").remove();
 		for(var i = 1; i < province_cities[p_id].length; i++) {
 			c_id = province_cities[p_id][0][1] + "_" + province_cities[p_id][i][1]
-			$("#data-list").append("<tr><td><span class='g-color-purple'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-purple'></i></a></td></tr>");
+			$("#data-list").append("<tr><td><span class='g-color-purple'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-purple'></i></a></td></tr>");
 		}
 	}, 500);
 	
@@ -211,41 +211,40 @@ attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
 /**********************************************************************/
 	
 var province_cities = {
-	"0":[["浙江", "zhejiang"], ["杭州", ""], ["嘉兴", ""], ["湖州", ""], ["绍兴", ""], ["宁波", ""], ["舟山", ""], ["衢州", "quzhou"], ["温州", ""], ["丽水", ""], ["金华", ""], ["台州", ""]],
-	"1":[["云南", "yunnan"], ["昆明", ""], ["曲靖", ""], ["玉溪", ""], ["保山", ""], ["临沧", ""], ["思茅", ""], ["昭通", ""], ["楚雄", ""], ["怒江", ""], ["大理", ""], ["文山", ""], ["红河", ""], ["德宏", ""], ["迪庆", ""], ["西双版纳", ""]],
-	"2":[["新疆", "xinjiang"], ["乌鲁木齐", ""], ["克拉玛依", ""], ["吐鲁番", ""], ["喀什", ""], ["巴音郭楞", ""], ["和田", ""], ["哈密", ""], ["阿勒泰", ""], ["塔城", ""], ["博尔塔", ""], ["阿克苏", ""], ["昌吉", ""], ["伊犁", ""], ["克孜勒", ""]],
-	"3":[["香港", "xianggang"], ["香港", ""]],
-	"4":[["西藏", "xizang"], ["拉萨", ""], ["那曲", ""], ["林芝", ""], ["昌都", ""], ["日喀则", ""], ["山南", ""], ["阿里", ""]],
-	"5":[["台湾", "taiwan"], ["台湾", ""]],
-	"6":[["四川", "sichuan"], ["成都", ""], ["资阳", ""], ["乐山", ""], ["自贡", ""], ["内江", ""], ["眉山", ""], ["雅安", ""], ["绵阳", ""], ["德阳", ""], ["遂宁", ""], ["宜宾", ""], ["南充", ""], ["广安", ""], ["广元", ""], ["巴中", ""], ["达州", ""], ["攀枝花", ""], ["泸州", ""], ["凉山", ""], ["阿坝", ""], ["甘孜", ""]],
-	"7":[["陕西", "shanxi02"], ["西安", ""], ["咸阳", ""], ["铜川", ""], ["渭南", ""], ["延安", ""], ["宝鸡", ""], ["商洛", ""], ["榆林", ""], ["汉中", ""], ["安康", ""]],
-	"8":[["山西", "shanxi"], ["太原", ""], ["晋中", ""], ["临汾", ""], ["吕梁", ""], ["大同", ""], ["阳泉", ""], ["朔州", ""], ["忻州", ""], ["长治", ""], ["晋城", ""], ["运城", ""]],
-	"9":[["山东", "shandong"], ["济南", "jinan"], ["青岛", "qingdao"], ["菏泽", "heze"], ["济宁", "jining"], ["莱芜", "laiwu"], ["枣庄", "zaozhuang"], ["临沂", "linyi"], ["日照", "rizhao"], ["淄博", "zibo"], ["滨州", "binzhou"], ["东营", "dongying"], ["聊城", "liaocheng"], ["德州", "dezhou"], ["潍坊", "weifang"], ["烟台", "yantai"], ["威海", "weihai"], ["泰安", "taian"]],
-	"10":[["青海", "qinghai"], ["西宁", ""], ["海东", ""], ["海西", ""], ["海南", ""], ["海北", ""], ["玉树", ""], ["黄南", ""], ["果洛", ""]],
-	"11":[["宁夏", "ningxia"], ["银川", ""], ["中卫", ""], ["吴忠", ""], ["固原", ""], ["石嘴山", ""]],
-	"12":[["内蒙古", "neimenggu"], ["呼和浩特", ""], ["乌兰察布", ""], ["包头", ""], ["阿拉善", ""], ["鄂尔多斯", ""], ["乌海", ""], ["锡林郭勒", ""], ["呼伦贝尔", ""], ["赤峰", ""], ["通辽", ""], ["兴安", ""]],
-	"13":[["辽宁", "ningxia"], ["沈阳", ""], ["大连", ""], ["锦州", ""], ["辽阳", ""], ["本溪", ""], ["鞍山", ""], ["丹东", ""], ["营口", ""], ["盘锦", ""], ["阜新", ""], ["铁岭", ""], ["抚顺", ""], ["朝阳", ""], ["葫芦岛", ""]],
-	"14":[["江西", "jiangxi"], ["南昌", ""], ["九江", ""], ["赣州", ""], ["吉安", ""], ["抚州", ""], ["宜春", ""], ["新余", ""], ["萍乡", ""], ["上饶", ""], ["鹰潭", ""], ["景德镇", ""]],
-	"15":[["吉林", "jilin"], ["长春", ""], ["吉林", ""], ["白山", ""], ["四平", ""], ["松原", ""], ["白城", ""], ["通化", ""], ["辽源", ""], ["延边", ""]],
-	"16":[["湖南", "hunan"], ["长沙", ""], ["岳阳", ""], ["衡阳", ""], ["湘潭", ""], ["永州", ""], ["株洲", ""], ["郴州", "chenzhou"], ["邵阳", "shaoyang"], ["怀化", ""], ["娄底", ""], ["益阳", ""], ["常德", ""], ["张家界", ""], ["湘西", ""]],
-	"17":[["湖北", "hubei"], ["武汉", ""], ["襄阳", ""], ["荆门", ""], ["荆州", ""], ["孝感", ""], ["黄冈", ""], ["黄石", ""], ["宜昌", ""], ["十堰", ""], ["随州", ""], ["鄂州", ""], ["恩施", ""], ["省直辖", ""]],
-	"18":[["黑龙江", "heilongjiang"], ["哈尔滨", ""], ["齐齐哈尔", ""], ["大庆", ""], ["绥化", ""], ["黑河", ""], ["伊春", ""], ["鹤岗", ""], ["七台河", ""], ["牡丹江", ""], ["鸡西", ""], ["双鸭山", ""], ["佳木斯", ""], ["大兴安岭", ""]],
-	"19":[["河南", "henan"], ["郑州", ""], ["许昌", ""], ["平顶山", ""], ["开封", ""], ["商丘", ""], ["新乡", ""], ["焦作", ""], ["洛阳", ""], ["南阳", ""], ["驻马店", ""], ["三门峡", ""], ["漯河", ""], ["周口", ""], ["鹤壁", ""], ["安阳", ""], ["濮阳", ""], ["信阳", ""]],
-	"20":[["北京", "beijing"], ["北京", "beijing"]],
-	"21":[["天津", "tianjin"], ["天津", ""]],
-	"22":[["海南", "hainan"], ["海口", ""], ["三亚", ""]],
-	"23":[["贵州", "guizhou"], ["贵阳", ""], ["遵义", ""], ["铜仁", ""], ["六盘水", ""], ["毕节", ""], ["安顺", ""], ["黔东南", ""], ["黔南", ""], ["黔西南", ""]],
-	"24":[["广西", "guangxi"], ["南宁", ""], ["桂林", ""], ["柳州", ""], ["来宾", ""], ["河池", ""], ["白色", ""], ["贺州", ""], ["梧州", ""], ["钦州", ""], ["贵港", ""], ["防城港", ""], ["北海", ""], ["玉林", ""], ["崇左", ""]],
-	"25":[["甘肃", "gansu"], ["兰州", ""], ["白银", ""], ["定西", ""], ["天水", ""], ["庆阳", ""], ["平凉", ""], ["陇南", ""], ["武威", ""], ["金昌", ""], ["张掖", ""], ["酒泉", ""], ["嘉峪关", ""], ["临夏", ""], ["甘南", ""]],
-	"26":[["福建", "fujian"], ["福州", ""], ["厦门", ""], ["泉州", ""], ["龙岩", ""], ["莆田", "putian"], ["三明", ""], ["宁德", ""], ["南平", ""], ["漳州", ""]],
-	"27":[["澳门", "aomen"], ["澳门", "aomen"]],
-	"28":[["安徽", "anhui"], ["合肥", ""], ["淮北", ""], ["宿州", ""], ["蚌埠", ""], ["六安", ""], ["阜阳", ""], ["亳州", ""], ["芜湖", ""], ["安庆", ""], ["宣城", ""], ["马鞍山", ""], ["淮南", ""], ["铜陵", ""], ["池州", ""], ["滁州", ""], ["黄山", ""]],
-	"29":[["上海", "shanghai"], ["上海", ""]],
-	"30":[["重庆", "chongqing"], ["重庆", ""]],
-	"31":[["江苏", "jiangsu"], ["南京", ""], ["苏州", ""], ["扬州", ""], ["无锡", ""], ["镇江", ""], ["常州", ""], ["南通", ""], ["泰州", ""], ["盐城", ""], ["淮安", ""], ["宿迁", ""], ["徐州", ""], ["连云港", ""]],
-	"32":[["广东", "guangdong"], ["广州", ""], ["深圳", ""], ["珠海", ""], ["中山", ""], ["佛山", ""], ["东莞", ""], ["惠州", ""], ["肇庆", ""], ["云浮", ""], ["茂名", ""], ["湛江", ""], ["阳江", ""], ["江门", ""], ["清远", ""], ["韶关", ""], ["河源", ""], ["梅州", ""], ["汕尾", ""], ["汕头", ""], ["揭阳", ""], ["潮州", ""]],
-	"33":[["河北", "hebei"], ["石家庄", ""], ["保定", ""], ["承德", ""], ["唐山", ""], ["廊坊", ""], ["衡水", ""], ["邢台", ""], ["沧州", ""], ["邯郸", ""], ["秦皇岛", ""], ["张家口", ""]]
-}
+	"0": [["浙江", "Zhejiang"], ["杭州", "Hangzhou"], ["嘉兴", "Jiaxing"], ["湖州", "Huzhou"], ["绍兴", "Shaoxing"], ["宁波", "Ningbo"], ["舟山", "Zhoushan"], ["衢州", "Quzhou"], ["温州", "Wenzhou"], ["丽水", "Lishui"], ["金华", "Jinhua"], ["台州", "Taizhou"]], 
+	"1": [["云南", "Yunnan"], ["昆明", "Kunming"], ["曲靖", "Qujing"], ["玉溪", "Yuxi"], ["保山", "Baoshan"], ["临沧", "Lincang"], ["思茅", "Simao"], ["昭通", "Zhaotong"], ["楚雄", "Chuxiong"], ["怒江", "Nujiang"], ["大理", "Dali"], ["文山", "Wenshan"], ["红河", "Honghe"], ["德宏", "Dehong"], ["迪庆", "Diqing"], ["西双版纳", "Xishuangbanna"]], 
+	"2": [["新疆", "Xinjiang"], ["乌鲁木齐", "Wulumuqi"], ["克拉玛依", "Kelamayi"], ["吐鲁番", "Tulufan"], ["喀什", "Kashen"], ["巴音郭楞", "Bayinguoleng"], ["和田", "Hetian"], ["哈密", "Hami"], ["阿勒泰", "Aletai"], ["塔城", "Tacheng"], ["博尔塔", "Boerta"], ["阿克苏", "Akesu"], ["昌吉", "Changji"], ["伊犁", "Yili"], ["克孜勒", "Kezile"]], 
+	"3": [["香港", "Xianggang"], ["香港", "Xianggang"]], 
+	"4": [["西藏", "Xicang"], ["拉萨", "Lasa"], ["那曲", "Naqu"], ["林芝", "Linzhi"], ["昌都", "Changdu"], ["日喀则", "Rikaze"], ["山南", "Shannan"], ["阿里", "Ali"]], 
+	"5": [["台湾", "Taiwan"], ["台湾", "Taiwan"]], 
+	"6": [["四川", "Sichuan"], ["成都", "Chengdu"], ["资阳", "Ziyang"], ["乐山", "Leshan"], ["自贡", "Zigong"], ["内江", "Neijiang"], ["眉山", "Meishan"], ["雅安", "Yaan"], ["绵阳", "Mianyang"], ["德阳", "Deyang"], ["遂宁", "Suining"], ["宜宾", "Yibin"], ["南充", "Nanchong"], ["广安", "Guangan"], ["广元", "Guangyuan"], ["巴中", "Bazhong"], ["达州", "Dazhou"], ["攀枝花", "Panzhihua"], ["泸州", "Luzhou"], ["凉山", "Liangshan"], ["阿坝", "Aba"], ["甘孜", "Ganzi"]], 
+	"7": [["陕西", "Shanxi"], ["西安", "Xian"], ["咸阳", "Xianyang"], ["铜川", "Tongchuan"], ["渭南", "Weinan"], ["延安", "Yanan"], ["宝鸡", "Baoji"], ["商洛", "Shangluo"], ["榆林", "Yulin"], ["汉中", "Hanzhong"], ["安康", "Ankang"]], 
+	"8": [["山西", "Shanxi"], ["太原", "Taiyuan"], ["晋中", "Jinzhong"], ["临汾", "Linfen"], ["吕梁", "Lvliang"], ["大同", "Datong"], ["阳泉", "Yangquan"], ["朔州", "Shuozhou"], ["忻州", "Xinzhou"], ["长治", "Changzhi"], ["晋城", "Jincheng"], ["运城", "Yuncheng"]], 
+	"9": [["山东", "Shandong"], ["济南", "Jinan"], ["青岛", "Qingdao"], ["菏泽", "Heze"], ["济宁", "Jining"], ["莱芜", "Laiwu"], ["枣庄", "Zaozhuang"], ["临沂", "Linyi"], ["日照", "Rizhao"], ["淄博", "Zibo"], ["滨州", "Binzhou"], ["东营", "Dongying"], ["聊城", "Liaocheng"], ["德州", "Dezhou"], ["潍坊", "Weifang"], ["烟台", "Yantai"], ["威海", "Weihai"], ["泰安", "Taian"]], 
+	"10": [["青海", "Qinghai"], ["西宁", "Xining"], ["海东", "Haidong"], ["海西", "Haixi"], ["海南", "Hainan"], ["海北", "Haibei"], ["玉树", "Yushu"], ["黄南", "Huangnan"], ["果洛", "Guoluo"]], 
+	"11": [["宁夏", "Ningxia"], ["银川", "Yinchuan"], ["中卫", "Zhongwei"], ["吴忠", "Wuzhong"], ["固原", "Guyuan"], ["石嘴山", "Shizuishan"]], 
+	"12": [["内蒙古", "Neimenggu"], ["呼和浩特", "Huhehaote"], ["乌兰察布", "Wulanchabu"], ["包头", "Baotou"], ["阿拉善", "Alashan"], ["鄂尔多斯", "Eerduosi"], ["乌海", "Wuhai"], ["锡林郭勒", "Xilinguole"], ["呼伦贝尔", "Hulunbeier"], ["赤峰", "Chifeng"], ["通辽", "Tongliao"], ["兴安", "Xingan"]], 
+	"13": [["辽宁", "Liaoning"], ["沈阳", "Shenyang"], ["大连", "Dalian"], ["锦州", "Jinzhou"], ["辽阳", "Liaoyang"], ["本溪", "Benxi"], ["鞍山", "Anshan"], ["丹东", "Dandong"], ["营口", "Yingkou"], ["盘锦", "Panjin"], ["阜新", "Fuxin"], ["铁岭", "Tieling"], ["抚顺", "Fushun"], ["朝阳", "Zhaoyang"], ["葫芦岛", "Huludao"]], 
+	"14": [["江西", "Jiangxi"], ["南昌", "Nanchang"], ["九江", "Jiujiang"], ["赣州", "Ganzhou"], ["吉安", "Jian"], ["抚州", "Fuzhou"], ["宜春", "Yichun"], ["新余", "Xinyu"], ["萍乡", "Pingxiang"], ["上饶", "Shangrao"], ["鹰潭", "Yingtan"], ["景德镇", "Jingdezhen"]], 
+	"15": [["吉林", "Jilin"], ["长春", "Changchun"], ["吉林", "Jilin"], ["白山", "Baishan"], ["四平", "Siping"], ["松原", "Songyuan"], ["白城", "Baicheng"], ["通化", "Tonghua"], ["辽源", "Liaoyuan"], ["延边", "Yanbian"]], 
+	"16": [["湖南", "Hunan"], ["长沙", "Changsha"], ["岳阳", "Yueyang"], ["衡阳", "Hengyang"], ["湘潭", "Xiangtan"], ["永州", "Yongzhou"], ["株洲", "Zhuzhou"], ["郴州", "Chenzhou"], ["邵阳", "Shaoyang"], ["怀化", "Huaihua"], ["娄底", "Loudi"], ["益阳", "Yiyang"], ["常德", "Changde"], ["张家界", "Zhangjiajie"], ["湘西", "Xiangxi"]], 
+	"17": [["湖北", "Hubei"], ["武汉", "Wuhan"], ["襄阳", "Xiangyang"], ["荆门", "Jingmen"], ["荆州", "Jingzhou"], ["孝感", "Xiaogan"], ["黄冈", "Huanggang"], ["黄石", "Huangshi"], ["宜昌", "Yichang"], ["十堰", "Shiyan"], ["随州", "Suizhou"], ["鄂州", "Ezhou"], ["恩施", "Enshi"], ["省直辖", "Shengzhixia"]], 
+	"18": [["黑龙江", "Heilongjiang"], ["哈尔滨", "Haerbin"], ["齐齐哈尔", "Qiqihaer"], ["大庆", "Daqing"], ["绥化", "Suihua"], ["黑河", "Heihe"], ["伊春", "Yichun"], ["鹤岗", "Hegang"], ["七台河", "Qitaihe"], ["牡丹江", "Mudanjiang"], ["鸡西", "Jixi"], ["双鸭山", "Shuangyashan"], ["佳木斯", "Jiamusi"], ["大兴安岭", "Daxinganling"]], 
+	"19": [["河南", "Henan"], ["郑州", "Zhengzhou"], ["许昌", "Xuchang"], ["平顶山", "Pingdingshan"], ["开封", "Kaifeng"], ["商丘", "Shangqiu"], ["新乡", "Xinxiang"], ["焦作", "Jiaozuo"], ["洛阳", "Luoyang"], ["南阳", "Nanyang"], ["驻马店", "Zhumadian"], ["三门峡", "Sanmenxia"], ["漯河", "Tahe"], ["周口", "Zhoukou"], ["鹤壁", "Hebi"], ["安阳", "Anyang"], ["濮阳", "Puyang"], ["信阳", "Xinyang"]], 
+	"20": [["北京", "Beijing"], ["北京", "Beijing"]], 
+	"21": [["天津", "Tianjin"], ["天津", "Tianjin"]], 
+	"22": [["海南", "Hainan"], ["海口", "Haikou"], ["三亚", "Sanya"]], 
+	"23": [["贵州", "Guizhou"], ["贵阳", "Guiyang"], ["遵义", "Zunyi"], ["铜仁", "Tongren"], ["六盘水", "Liupanshui"], ["毕节", "Bijie"], ["安顺", "Anshun"], ["黔东南", "Qiandongnan"], ["黔南", "Qiannan"], ["黔西南", "Qianxinan"]], 
+	"24": [["广西", "Guangxi"], ["南宁", "Nanning"], ["桂林", "Guilin"], ["柳州", "Liuzhou"], ["来宾", "Laibin"], ["河池", "Hechi"], ["白色", "Baise"], ["贺州", "Hezhou"], ["梧州", "Wuzhou"], ["钦州", "Qinzhou"], ["贵港", "Guigang"], ["防城港", "Fangchenggang"], ["北海", "Beihai"], ["玉林", "Yulin"], ["崇左", "Chongzuo"]], 
+	"25": [["甘肃", "Gansu"], ["兰州", "Lanzhou"], ["白银", "Baiyin"], ["定西", "Dingxi"], ["天水", "Tianshui"], ["庆阳", "Qingyang"], ["平凉", "Pingliang"], ["陇南", "Longnan"], ["武威", "Wuwei"], ["金昌", "Jinchang"], ["张掖", "Zhangye"], ["酒泉", "Jiuquan"], ["嘉峪关", "Jiayuguan"], ["临夏", "Linxia"], ["甘南", "Gannan"]], 
+	"26": [["福建", "Fujian"], ["福州", "Fuzhou"], ["厦门", "Shamen"], ["泉州", "Quanzhou"], ["龙岩", "Longyan"], ["莆田", "Futian"], ["三明", "Sanming"], ["宁德", "Ningde"], ["南平", "Nanping"], ["漳州", "Zhangzhou"]], 
+	"27": [["澳门", "Aomen"], ["澳门", "Aomen"]], 
+	"28": [["安徽", "Anhui"], ["合肥", "Hefei"], ["淮北", "Huaibei"], ["宿州", "Suzhou"], ["蚌埠", "Bangbu"], ["六安", "Liuan"], ["阜阳", "Fuyang"], ["亳州", "Bozhou"], ["芜湖", "Wuhu"], ["安庆", "Anqing"], ["宣城", "Xuancheng"], ["马鞍山", "Maanshan"], ["淮南", "Huainan"], ["铜陵", "Tongling"], ["池州", "Chizhou"], ["滁州", "Chuzhou"], ["黄山", "Huangshan"]], 
+	"29": [["上海", "Shanghai"], ["上海", "Shanghai"]], 
+	"30": [["重庆", "Zhongqing"], ["重庆", "Zhongqing"]], 
+	"31": [["江苏", "Jiangsu"], ["南京", "Nanjing"], ["苏州", "Suzhou"], ["扬州", "Yangzhou"], ["无锡", "Wuxi"], ["镇江", "Zhenjiang"], ["常州", "Changzhou"], ["南通", "Nantong"], ["泰州", "Taizhou"], ["盐城", "Yancheng"], ["淮安", "Huaian"], ["宿迁", "Suqian"], ["徐州", "Xuzhou"], ["连云港", "Lianyungang"]], 
+	"32": [["广东", "Guangdong"], ["广州", "Guangzhou"], ["深圳", "Shenzhen"], ["珠海", "Zhuhai"], ["中山", "Zhongshan"], ["佛山", "Foshan"], ["东莞", "Dongguan"], ["惠州", "Huizhou"], ["肇庆", "Zhaoqing"], ["云浮", "Yunfu"], ["茂名", "Maoming"], ["湛江", "Zhanjiang"], ["阳江", "Yangjiang"], ["江门", "Jiangmen"], ["清远", "Qingyuan"], ["韶关", "Shaoguan"], ["河源", "Heyuan"], ["梅州", "Meizhou"], ["汕尾", "Shanwei"], ["汕头", "Shantou"], ["揭阳", "Jieyang"], ["潮州", "Chaozhou"]], 
+	"33": [["河北", "Hebei"], ["石家庄", "Shijiazhuang"], ["保定", "Baoding"], ["承德", "Chengde"], ["唐山", "Tangshan"], ["廊坊", "Langfang"], ["衡水", "Hengshui"], ["邢台", "Xingtai"], ["沧州", "Cangzhou"], ["邯郸", "Handan"], ["秦皇岛", "Qinhuangdao"], ["张家口", "Zhangjiakou"]]}
 	
 
 
