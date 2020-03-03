@@ -190,7 +190,7 @@ function openDownloadWin(id) {
 	if(key == "" || key == null) {
 		alert("口令不能为空");
 	} else {
-		window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/POI/poi_" + id + "-" + key + ".rar";
+		window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/POI/poi_" + id + "-" + key + ".rar");
 	}
 }
 	

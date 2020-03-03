@@ -163,14 +163,14 @@
 	<script>
 		var yearlist = ["2000", "2001", "2002", "2003", "2004", "2005", "2006", "2007", "2008", "2009", "2010", "2011", "2012", "2013"];
 		for(var i = 0; i < yearlist.length; i++) {
-			$("#data-list").append("<tr><td>"+ (i + 1) +"</td><td>" + yearlist[i] + "年夜间灯光指数</td><td>全球</td><td>栅格|ESRI Grid</td><td><form class='form-search'><input id='data-key-" + yearlist[i] + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a href='###' onclick=\"openDownloadWin('data-key-" + yearlist[i] + "\")><i class='icon-download'></i></a></td></tr>");
+			$("#data-list").append("<tr><td>"+ (i + 1) +"</td><td>" + yearlist[i] + "年夜间灯光指数</td><td>全球</td><td>栅格|ESRI Grid</td><td><form class='form-search'><input id='data-key-" + yearlist[i] + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('data-key-" + yearlist[i] + "\")><i class='icon-download'></i></a></td></tr>");
 		}
 		function openDownloadWin(id) {
 			var key = $(id).val();
 			if(key == "" || key == null) {
 				alert("口令不能为空");
 			} else {
-				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/DMSP/dmsp2013-" + key + ".rar";
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/DMSP/dmsp2013-" + key + ".rar");
 			}
 		}
 	</script>

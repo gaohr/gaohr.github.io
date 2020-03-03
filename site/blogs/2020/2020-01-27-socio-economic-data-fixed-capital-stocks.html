@@ -93,8 +93,8 @@
 							<table class="table table-hover">
 								<thead><tr><th>数据名称</th><th>估算方法</th><th>数据类型</th><th>下载口令</th><th>数据下载</th></tr></thead>
 								<tbody>
-									<tr><td style="color:#921;font-size:1.2em">固定资本存量</td><td>张军（2004）</td><td>Excel | xlsx</td><td><form class='form-search'><input id="data-key-01" type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a href="###" id="get-data-01" target="_blank"><i class='icon-download-purple'></i></a></td></tr>
-									<tr><td style="color:#921;font-size:1.2em">固定资本存量</td><td>单豪杰（2008）</td><td>Excel | xlsx</td><td><form class='form-search'><input id="data-key-02" type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a href="###" id="get-data-02" target="_blank"><i class='icon-download-purple'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">固定资本存量</td><td>张军（2004）</td><td>Excel | xlsx</td><td><form class='form-search'><input id="data-key-01" type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a href="###" id="get-data-01"><i class='icon-download-purple'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">固定资本存量</td><td>单豪杰（2008）</td><td>Excel | xlsx</td><td><form class='form-search'><input id="data-key-02" type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a href="###" id="get-data-02"><i class='icon-download-purple'></i></a></td></tr>
 								</tbody>
 							</table>
 						</div>
@@ -197,7 +197,7 @@
 			if(key == "" || key == null) {
 				alert("口令不能为空");
 			} else {
-				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/excel/%E5%9B%BA%E5%AE%9A%E8%B5%84%E6%9C%AC%E5%AD%98%E9%87%8F-%E5%BC%A0%E5%86%9B-" + key + ".xlsx";
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/excel/%E5%9B%BA%E5%AE%9A%E8%B5%84%E6%9C%AC%E5%AD%98%E9%87%8F-%E5%BC%A0%E5%86%9B-" + key + ".xlsx");
 			}
 		})
 		$("#get-data-02").click(function () {
@@ -205,7 +205,7 @@
 			if(key == "" || key == null) {
 				alert("口令不能为空");
 			} else {
-				window.location.href = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/excel/%E5%9B%BA%E5%AE%9A%E8%B5%84%E6%9C%AC%E5%AD%98%E9%87%8F-%E5%8D%95%E8%B1%AA%E6%9D%B0-" + key + ".xlsx";
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/excel/%E5%9B%BA%E5%AE%9A%E8%B5%84%E6%9C%AC%E5%AD%98%E9%87%8F-%E5%8D%95%E8%B1%AA%E6%9D%B0-" + key + ".xlsx");
 			}
 		})
 	</script>
