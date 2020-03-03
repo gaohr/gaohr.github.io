@@ -16,6 +16,7 @@
   -webkit-transition: .5s;
   transition: .5s;
 }
+
 .btn-menu:before {
   content: '';
   width: 0;
