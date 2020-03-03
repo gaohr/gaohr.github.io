@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		
 		var sunGeo = new THREE.SphereGeometry(100, 100, 100);
         var sunMater = new THREE.MeshBasicMaterial({
-			map: THREE.ImageUtils.loadTexture('https://raw.githubusercontent.com/gaohr/gaohr.github.io/master/site/pages/earth_3d/sun.jpg')
+			map: THREE.ImageUtils.loadTexture('http://gaohr.win/site/pages/earth_3d/sun.jpg')
 		});
 		sunMesh = new THREE.Mesh(sunGeo, sunMater);
 		sunMesh.position.set(3000, 3000, -3000);
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function initMoon() {
         var moonGeo = new THREE.SphereGeometry(20, 100, 100);
         var moonMater = new THREE.MeshPhongMaterial({
-            map: new THREE.TextureLoader().load('https://raw.githubusercontent.com/gaohr/gaohr.github.io/master/site/pages/earth_3d/moon.jpg'),
+            map: new THREE.TextureLoader().load('http://gaohr.win/site/pages/earth_3d/moon.jpg'),
             side: THREE.DoubleSide
         });
         moonMesh = new THREE.Mesh(moonGeo, moonMater);
