@@ -100,44 +100,23 @@
 						<div class="span3"><img src="2019-10-16-china-railway/img007.jpg" class="picture-show"></div>
 					</div>
 					<p class="blog-sub-title"><b>数据下载</b></p>
-					<p>目前可供下载的省、市、地区及相应数据列表如下，可按省份和地区查找、下载。</p>
+					<p>目前可供下载的省份或地区及相应数据列表如下，可按省级单位查找、下载。</p>
 					<p>中国省级行政区划可以参考 <a href="http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html" target="_blank">国家基础GIS数据</a></p>
 					<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 该数据为“有限共享”数据，不提供直接数据下载链接，需申请数据共享，获取共享口令，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
 					<p> 该数据比较精细，并不一定适用于所有研究，因此，请在申请表中填写具体应用或使用目的，我会根据申请人填写的内容判断是否提供下载口令。如果是全国尺度的研究，请前往下载1:100万的数据<a href="http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html" target="_blank">（点击进入）</a>。</p>
-					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 仅提供省级或市级地区数据的申请和下载，填写申请表时请标明省份或地区，以及数据年份和类型，否则无法提供下载口令~(´▽｀)。</p>
+					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 仅提供省级地区数据的申请和下载，填写申请表时请标明省份或地区，以及数据年份和类型，否则无法提供下载口令~(´▽｀)。</p>
 					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 如果省份超过2个，另行商议~</p>
-					<div class="tabbable tabbable-custom width-percent-80">
-						<ul class="nav nav-tabs tab-title">
-							<li class="active"><a href="#tab_6_1" data-toggle="tab">按省份</a></li>
-							<li ><a href="#tab_6_2" data-toggle="tab">按地区</a></li>
-						</ul>
-						<div class="tab-content">
-							<div class="tab-pane active" id="tab_6_1">
-								<div class="portlet box blue">
-									<div class="portlet-title">
-										<div class="caption">省级数据列表</div>
-									</div>
-									<div class="portlet-body">
-										<table class="table table-hover">
-											<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>共享口令</th><th>下载</th></tr></thead>
-											<tbody id="data-province"></tbody>
-										</table>
-									</div>
-								</div>
+					<div class="tabbable tabbable-custom width-percent-90">
+						<div class="portlet box blue">
+							<div class="portlet-title">
+								<div class="caption">省级数据列表</div>
 							</div>
-							<div class="tab-pane " id="tab_6_2">
-								<div class="portlet box blue">
-									<div class="portlet-title">
-										<div class="caption">地区数据列表</div>
-									</div>
-									<div class="portlet-body">
-										<table class="table table-hover">
-											<thead><tr><th>编号</th><th>地区</th><th>数据类型</th><th>共享口令</th><th>下载</th></tr></thead>
-											<tbody id="data-city"></tbody>
-										</table>
-									</div>
-								</div>
+							<div class="portlet-body">
+								<table class="table table-hover">
+									<thead><tr><th>编号</th><th>省级单位</th><th>缩略图</th><th>数据类型</th><th>共享口令</th><th>下载</th></tr></thead>
+									<tbody id="data-province"></tbody>
+								</table>
 							</div>
 						</div>
 					</div>
@@ -192,8 +171,25 @@
 	<script src="../blogsload.js"></script>
 	<script src="../../../js/common.js"></script>
 	
-	<script src="2019-10-16-china-railway/datalist.js"></script>
+	<script src="./2019-10-16-china-railway/datalist.js"></script>
 	<script>
+		for(var i = 0; i < datalist_province.length; i++) {
+			if(datalist_province[i].data != "") {
+				$("#data-province").append("<tr><td>" + datalist_province[i].id + "</td><td style='color:#921;font-size:1.2em'><b>"+ datalist_province[i].name +"</b></td><td><img src='./2019-10-16-china-railway/imgs/" + datalist_province[i].name_en + ".jpg' width='80px' class='picture-show'></td><td>ESRI Shapefile</td><td><form class='form-search'><input id='data-key-" + datalist_province[i].id + "' type='text' class='input-medium' placeholder='请先输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + datalist_province[i].id + "', '" + datalist_province[i].name_en + "')\"><i class='icon-download-blue'></i></a></td></tr>");
+			} else {
+				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>" + datalist_province[i].name + "</td><td>ESRI Shapefile</td><td class='g-color-gray'>敬请期待</td></tr>");
+			} 
+		}
+		
+		function openDownloadWin(id, name) {
+			var key = $("#data-key-" + id).val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Railways_data/railways_" + name + "_" + key + ".rar");
+			}
+		}
+		
 		$(".picture-show").click(function(){  
 			var _this = $(this);//将当前的pimg元素作为_this传入函数  
 			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
@@ -238,26 +234,6 @@
 			});  
 		}
 		
-		for(var i = 0; i < datalist_province.length; i++) {
-			if(datalist_province[i].data != "") {
-				$("#data-province").append("<tr><td>" + datalist_province[i].id + "</td><td>"+ datalist_province[i].name +"</td><td>ESRI Shapefile</td><td><form class='form-search'><input id='data-key-" + datalist_province[i].id + "' type='text' class='input-medium' placeholder='请先输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + datalist_province[i].id + "', '" + datalist_province[i].name_en + "')\"><i class='icon-download-blue'></i></a></td></tr>");
-			} else {
-				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>" + datalist_province[i].name + "</td><td>ESRI Shapefile</td><td class='g-color-gray'>敬请期待</td></tr>");
-			} 
-		}
-		
-		for(var j = 0; j < datalist_city.length; j++) {
-			$("#data-city").append("<tr><td>"+ datalist_city[j].id +"</td><td>" + datalist_city[j].name + "</td><td>ESRI Shapefile</td><td><form class='form-search'><input id='data-key-city' type='text' class='span8 input-medium' placeholder='请先输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + datalist_city[i].id + "', '" + datalist_city[i].name_en + "')\"><i class='icon-download-blue'></i></a></td></tr>");
-		}
-		
-		function openDownloadWin(id, name) {
-			var key = $("#data-key-" + id).val();
-			if(key == "" || key == null) {
-				alert("口令不能为空");
-			} else {
-				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Railways_data/railways_" + name + "_" + key + ".rar");
-			}
-		}
 	</script>
 </body>
 </html>

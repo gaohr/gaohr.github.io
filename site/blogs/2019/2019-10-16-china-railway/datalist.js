@@ -34,10 +34,3 @@ var datalist_province = [
 	{"id":"33", "name":"西藏自治区", "name_en":"Xizang", "data":"railways_Xizang_201910-osm-"},
 	{"id":"34", "name":"海南省", "name_en":"Hainan", "data":"railways_Hainan_201910-osm-"}
 ]
-
-var datalist_city = [
-	{"id":"001", "name":"北京市", "data":"railways_Beijing_201910-osm-"},
-	{"id":"002", "name":"天津市", "data":"railways_Tianjin_201910-osm-"},
-	{"id":"003", "name":"上海市", "data":"railways_Shanghai_201910-osm-"},
-	{"id":"004", "name":"重庆市", "data":"railways_Chongqing_201910-osm-"}
-]
