@@ -20,7 +20,7 @@ var topicslist = [
 
 {"topicid":"2017041701", "title":"冰与火之歌：九大家族", "type":"兴趣", "content":"A Song of Ice and Fire", "img":"2017/images/GameofThrones.jpg", "date":"2017-04-17", "href":"http://gaohr.win/site/special/2017/2017-04-17-nine-families.html", "comments":"0"},
 
-{"topicid":"2016070801", "title":"视频收藏", "type":"收藏", "content":"一些个人喜欢的小视频", "img":"2016/images/Videos.jpg", "date":"2016-07-08", "href":"http://gaohr.win/site/special/2016/2016-07-08-videos.html", "comments":"0"},
+// {"topicid":"2016070801", "title":"视频收藏", "type":"收藏", "content":"一些个人喜欢的小视频", "img":"2016/images/Videos.jpg", "date":"2016-07-08", "href":"http://gaohr.win/site/special/2016/2016-07-08-videos.html", "comments":"0"},
 
 /* others */
 // {"topicid":"2019092701", "title":"闲置物品交易", "type":"其他", "content":"个人及周边闲置物品，置换、交易", "img":"2019/images/IdleGoods.jpg", "date":"2019-09-27", "href":"http://gaohr.win/site/special/2019/2019-09-27-idle-goods.html", "comments":"0"},
