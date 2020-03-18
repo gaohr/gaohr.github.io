@@ -57,7 +57,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .homepage-links .orcid {background:#ac4;color:#fff}
 .homepage-links .orcid:hover{background:#8a4}
 
-.g-color-white {color:#fee !important}
+.g-color-white {color:#fefefe !important}
 .g-color-black {color:#555 !important}
 .g-color-red {color:#f65 !important}
 .g-color-orange {color:#f80 !important}
@@ -121,6 +121,8 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .portlet {width:100%;margin:5px;margin-bottom:20px}
 .portlet .title b{padding:3px;color:#333;font-size:1.2em;border-bottom:3px solid #d85546;font-family:'Microsoft YaHei'}
 .portlet .title i{color:#333;padding:2px;font-size:1.2em;border-bottom:6px solid #d85546;}
+
+.container-fluid {padding-right: 5px;padding-left: 5px;}
 
 .cltmap {width:100%;}
 .dashang {width:100%;height:auto;text-align:center;}

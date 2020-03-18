@@ -7,7 +7,7 @@
 
 $(document).ready(function($) {
 	/*粒子特效*/
-	// ParticalEffect();
+	ParticalEffect();
 	
 	/*鼠标点击特效*/
 	var a_idx = 0;

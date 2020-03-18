@@ -23,7 +23,7 @@ var map = new ol.Map({
     overlays: [overlayPopup],
     layers: layersList,
     view: new ol.View({
-         maxZoom: 28, minZoom: 4
+         maxZoom: 5, minZoom: 3.5
     })
 });
 

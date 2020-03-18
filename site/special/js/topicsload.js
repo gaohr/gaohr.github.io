@@ -68,10 +68,10 @@
 	}
 	
 	tn = 0
-	if(topicslist.length < 10) {
+	if(topicslist.length < 8) {
 		tn = topicslist.length;
 	} else {
-		tn = 10
+		tn = 8
 	}
 	for(tr = 0; tr < tn; tr++) {
 		$("#topics-right").append(
