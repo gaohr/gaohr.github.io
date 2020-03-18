@@ -1,5 +1,7 @@
 var topicslist = [
 
+{"topicid":"2020031501", "title":"国内新冠疫情动态地图", "type":"地图", "content":"动态展示自2020年1月25日以来国内各地市新冠肺炎疫情", "img":"2020/images/FightNCOV.jpg", "date":"2020-03-15", "href":"http://gaohr.win/site/special/2020/2020-03-15-covid-19-cn.html", "comments":"0"},
+
 {"topicid":"2019091401", "title":"全国30m DEM数据", "type":"数据", "content":"全国30m分辨率DEM数据检索、下载", "img":"2019/images/ChinaDEM.jpg", "date":"2019-09-14", "href":"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html", "comments":"0"},
 
 {"topicid":"2020022901", "title":"全球地震速报", "type":"地图", "content":"国内3级以上和国外5级以上历史和最新地震记录展示", "img":"2020/images/Earthquake.jpg", "date":"2020-02-29", "href":"http://gaohr.win/site/special/2020/2020-02-29-earthquake-info.html", "comments":"0"},

@@ -87,7 +87,7 @@ var onPointerMove = function(evt) {
 						popupField += '<span>' + currentFeature.get(currentFeatureKeys[i]) + '</span>'
 					} else if (currentFeatureKeys[i] == "SHI") {
 						if(code_keys.indexOf(String(parseInt(currentFeature.get(currentFeatureKeys[i])))) > -1) {
-							popupField += '&nbsp;&nbsp;<span>' + ncov_data[String(parseInt(currentFeature.get(currentFeatureKeys[i])))]["cityConfirmed"][20] + '</span><br>'
+							popupField += '&nbsp;&nbsp;<span>' + ncov_data[String(parseInt(currentFeature.get(currentFeatureKeys[i])))]["cityConfirmed"][sliderVal] + '</span><br>'
 						} else {
 							popupField += '&nbsp;&nbsp;<span>0</span><br>'
 						}
@@ -177,21 +177,16 @@ var onSingleClick = function(evt) {
         var field = popupLayers[layersList.indexOf(layer) - 1];
         if (field == NO_POPUP) {          
         } else if (field == ALL_FIELDS) {
-            popupText = '<table>';
-            for (var i=0; i<currentFeatureKeys.length; i++) {
-                if (currentFeatureKeys[i] != 'geometry') {
-                    popupField = '<th>' + currentFeatureKeys[i] + ':</th><td>'
-                    popupField += (currentFeature.get(currentFeatureKeys[i]) != null ? Autolinker.link(String(currentFeature.get(currentFeatureKeys[i]))) + '</td>' : '');
-                    popupText = popupText + '<tr>' + popupField + '</tr>';
-                }
-            }
-            popupText = popupText + '</table>';
+			$('#intro-text').hide();
+			$('#ncov-trend').show();
+			chart_option.title[0].text = currentFeature.get("1") + "疫情趋势";
+			chart_option.series[0].data = ncov_data[String(parseInt(currentFeature.get("SHI")))]["cityConfirmed"];
+			chart_option.series[1].data = ncov_data[String(parseInt(currentFeature.get("SHI")))]["cityCured"];
+			chart_option.series[2].data = ncov_data[String(parseInt(currentFeature.get("SHI")))]["cityDead"];
+			ncov_trend_chart.setOption(chart_option);
+			
         } else {
-            var value = feature.get(field);
-            if (value) {
-                popupText = '<strong>' + field + ':</strong> '+ value;
-            }  
-        }          
+        }  
     });
 
     if (popupText) {
@@ -212,11 +207,166 @@ map.on('singleclick', function(evt) {
 });
 
 
-
-
 var attribution = document.getElementsByClassName('ol-attribution')[0];
 var attributionList = attribution.getElementsByTagName('ul')[0];
 var firstLayerAttribution = attributionList.getElementsByTagName('li')[0];
 var qgis2webAttribution = document.createElement('li');
 qgis2webAttribution.innerHTML = '<a href="http://gaohr.win">GaoHR</a>';
 attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
+
+
+// 日期选择
+function addDate(date, days){
+	var d = new Date(date); 
+	d.setDate(d.getDate() + days);
+	var mon = d.getMonth() + 1;
+	var day = d.getDate();
+	var dd = "";
+	var mm = "";
+	if(day < 10){
+		dd = "0" + day;
+	} else {
+		dd = "" + day;
+	}
+	if(mon < 10){
+		mm = "0" + mon;
+	} else {
+		mm = "" + mon;
+	}
+	return d.getFullYear() + '-' + mm + '-' + dd;
+}
+
+var timer;
+var initDate = "2020-01-25";
+var curDate = initDate;
+var sliderVal = 0;
+var s_min = 0;
+var s_max = ncov_data["110108"]['cityDead'].length - 1;
+
+//创建日期字符数组
+var dateArr = new Array();
+for(var i = s_min; i < s_max; i++){
+	dateArr.push(addDate(initDate, i))
+}
+
+var dateShow = $("#date-selected");
+$("#date-slider").slider({
+	range: "min",
+	min: s_min,
+	max: s_max,
+	create: function(){
+		dateShow.text(initDate, 0);
+	},
+	slide: function(event, ui){
+		curDate = addDate(initDate, ui.value);
+		dateShow.text(curDate);
+		sliderVal = ui.value;
+		updateStyle(sliderVal);
+	}
+});
+
+$("#date-plus").click(function(){
+	sliderVal += 1;
+	$("#date-slider").slider("value", sliderVal);
+	curDate = addDate(initDate, sliderVal);
+	dateShow.text(curDate);
+	updateStyle(sliderVal);
+});
+
+$("#date-minus").click(function(){
+	sliderVal -= 1;
+	$("#date-slider").slider("value", sliderVal);
+	curDate = addDate(initDate, sliderVal);
+	dateShow.text(curDate);
+	updateStyle(sliderVal);
+});
+
+function Playing(){
+	if(sliderVal < s_max) {
+		updateStyle(sliderVal);
+		sliderVal += 1;
+		$("#date-slider").slider("value", sliderVal);
+		curDate = addDate(initDate, sliderVal);
+		dateShow.text(curDate);
+	} else {
+		// 暂停播放
+		clearInterval(timer);
+		sliderVal = 0;
+		$("#date-slider").slider("value", sliderVal);
+		ifplay = true;
+		$("#date-play").css("color","#fff");
+		$("#date-play").html("<i class='ion ion-play'></i>");
+	}
+}
+
+var ifplay = true;
+var intv_ms = 1000;
+timer = setInterval("Playing()", intv_ms);
+ifplay = false;
+$("#date-play").css("color","#fa7");
+$("#date-play").html("<i class='ion ion-pause'></i>");
+
+
+$("#date-play").click(function(){
+	if(ifplay){
+		// 开始播放
+		timer = setInterval("Playing()", intv_ms);
+		ifplay = false;
+		$("#date-play").css("color","#fa7");
+		$("#date-play").html("<i class='ion ion-pause'></i>");
+	} else {
+		// 暂停播放
+		clearInterval(timer);
+		ifplay = true;
+		$("#date-play").css("color","#fff");
+		$("#date-play").html("<i class='ion ion-play'></i>");
+	}
+})
+
+// Echart
+var ncov_trend_chart = echarts.init(document.getElementById('ncov-trend'));
+var colorList=['#f65', '#6f6', '#999'];
+ncov_trend_chart.showLoading();
+ncov_trend_chart.hideLoading();
+var chart_option = {
+    backgroundColor: "#333",
+    color: ['#f65', '#6f6', '#999'],
+    title: [{text: '疫情趋势',left: '1%',top: '1%',textStyle: {fontSize:16,fontWeight:'normal',color: '#fff'}}],
+    tooltip: {trigger: 'axis'},
+    legend: {left: "center",top: '15%',textStyle: {color: '#eee',},data: ['累计确诊', '累计治愈', '累计死亡']},
+    grid: {left: '1%',right: '1%',top: '30%',bottom: '5%',containLabel: true},
+    toolbox: {'color': '#aaa', "show": true,feature: {saveAsImage: {},magicType: {type: ['line', 'bar']},restore: {},dataView: {}}},
+    xAxis: {
+        type: 'category',
+        "axisLine": {lineStyle: {color: '#fff'}},
+        axisLabel: {textStyle: {color: '#fff'}},
+        boundaryGap: false,
+        data: dateArr
+    },
+    yAxis: {
+        "axisLine": {lineStyle: {color: '#fff'}},
+        splitLine: {show: true,lineStyle: {color: '#aaa'}},
+        axisLabel: {textStyle: {color: '#fff'}},type: 'value'},
+    series: [{
+        name: '累计确诊',
+        smooth: true,
+        type: 'line',
+        symbolSize: 5,
+      	symbol: 'circle',
+        data: []
+    }, {
+        name: '累计治愈',
+        smooth: true,
+        type: 'line',
+        symbolSize: 5,
+      	symbol: 'circle',
+        data: []
+    }, {
+        name: '累计死亡',
+        smooth: true,
+        type: 'line',
+        symbolSize: 5,
+      	symbol: 'circle',
+        data: []
+    }]
+}

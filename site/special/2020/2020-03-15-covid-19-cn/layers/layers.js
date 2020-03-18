@@ -59,5 +59,4 @@ function updateStyle(t) {
 						});
 }
 
-updateStyle(20);
 

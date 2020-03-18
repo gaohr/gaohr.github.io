@@ -36,3 +36,16 @@
     font-family: sans-serif;
     font-size: 100%;
 }
+
+.date-slider {margin-top:10px;width:92%;margin-left:4%}
+.date-slider .ui-slider-range {background:#fa6;}
+.date-selected {width:100px;background-color:rgba(0,0,0,0.5);font-size:1.2em;color:#3f3;font-weight:bold;padding:2px;border:solid 1px #777;display:inline-block;text-align:center}
+
+/* Slider */
+.r-slider {width:120px;height:20px;background:#eee;border:5px solid #eee;}
+.r-slider-button {background:#eee;box-shadow:1px 1px 1px #aaa;border-radius:100%;text-align:center;}
+.r-slider-button:before {content:"";position:absolute;height:10px;width:10px;top:5px;left:5px;border-radius:100%;background:#777;}
+.r-slider-line {background:#aaa;border-radius:16px;}
+.r-slider-fill {background:#fc9b00;border-radius:16px;}
+.r-slider-number {line-height:20px;text-align:center;color:#eee;font-size:12px;}
+.r-slider-label {color:rgba(0,0,0,0);}
