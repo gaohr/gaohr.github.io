@@ -1,6 +1,7 @@
 #map {
     width: 100%;
     height: 420px;
+	position:relative;
 }
 
 .ol-popup {
@@ -49,3 +50,8 @@
 .r-slider-fill {background:#fc9b00;border-radius:16px;}
 .r-slider-number {line-height:20px;text-align:center;color:#eee;font-size:12px;}
 .r-slider-label {color:rgba(0,0,0,0);}
+
+.map-legend {position:absolute; width:100px; height:auto; bottom:0.5%; right:0.5%; text-align:center; background:rgba(255,255,255,0.5); z-index:999}
+.map-legend label {font-size:9px; color:#555; text-align:center; width:100%; margin:0; font-family:'Times New Roman'}
+.map-legend span {display:block; width:100%; margin:0}
+.map-legend td {height:12px}
