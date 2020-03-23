@@ -26,18 +26,21 @@
 		.data-selected {width:90%;background:#ddd;color:#333;padding:2px 10px;border-radius:5px;margin-bottom:5px;}
 		.data-selected:hover {background:#eef}
 		#mask_shadow {display: none;opacity: 0;position: fixed;z-index: 1;left: 0;top: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);}
-		#popup_link {display: none;position: absolute;z-index: 2;top: 120px;background-color: #fff;width: 72%;height: 40%;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)}
-		#popup_link .title {position: relative;width: 100%;height: 55px;background-color: #038ab9;cursor: move;}
+		#popup_link {display: none;position: absolute;z-index: 2;top: 120px;background-color: #fff;width: 72%;height: 36%;box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5)}
+		#popup_link .title {position: relative;width: 100%;height: 45px;background-color: #038ab9;cursor: move;}
 		#popup_link .title p {padding-left: 14px;line-height: 55px;color: #fff;}
 		#popup_link .title span {position: absolute;top: 12px;right: 20px;width: 30px;height: 30px;color: #fff;opacity: .8;font-size: 16px;cursor: pointer;text-align: center;}
 		#popup_link .title span:hover {opacity: 1;background-color: #07a;}
-		#popup_link .cont { width: auto; background-color: #fff;margin:0 5px;padding:20px;font-size:16px;overflow-y:scroll}
+		#popup_link .cont {width: auto; height:auto; background-color: #fff;margin:0;padding:10px;font-size:16px;overflow-y:scroll}
 		#popup_link .cont p {margin-bottom: 10px;text-indent:0}
 		#popup_link .cont span {color:#fff;background: #555;margin-right: 5px;padding:2px 5px;border-radius:5px}
 		#popup_link .cont a:hover {color:#c00;}
 		#pd_list span {padding:2px 5px;margin:5px;border-radius:5px;font-weight:normal;display:inline-block}
 		#pd_list .data-has {background:#393;color:#fff;}
 		#pd_list .data-no {background:#aaa;color:#fff;}
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
 	</style>
 </head>
 
@@ -117,7 +120,7 @@
 					<br>
 					<hr>
 					<p class="topic-title">全国SRTM DEM数据一幅图</p>
-					<p>利用SRTM V4.1 30m数据经过重采样生成1km、500m和250m分辨率的全国数据，数据为WGS84投影。</p>
+					<p>利用SRTM V4.1 30m数据经过重采样生成1km、500m和250m分辨率的全国数据，数据为WGS84投影，数据来源于中科院环境资源数据中心。</p>
 					<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 该数据为“有限共享”数据，不提供直接数据下载链接，需申请数据共享，获取共享口令，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
 					<div class="portlet box grey percent-80">
@@ -148,6 +151,11 @@
 						</div>
 					</div>
 					<div id="mask_shadow"></div>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
 				</div>
 				<!-- Da shang -->
 				<div id="dashang" class="dashang"></div>
@@ -216,6 +224,50 @@
 			} else {
 				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/DEM/SRTM/srtm_dem_" + name + "-" + key + ".rar");
 			}
+		}
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		});
+
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+					var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+					$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+				  
+						/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+					$("<img/>").attr("src", src).load(function(){  
+						var windowW = $(window).width();//获取当前窗口宽度  
+						var windowH = $(window).height();//获取当前窗口高度  
+						var realWidth = this.width;//获取图片真实宽度  
+						var realHeight = this.height;//获取图片真实高度  
+						var imgWidth, imgHeight;  
+						var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+						  
+						if(realHeight > windowH * scale) {//判断图片高度  
+							imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+							imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+							if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+								imgWidth = windowW * scale;//再对宽度进行缩放  
+							}  
+						} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+							imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+							imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+						} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+							imgWidth = realWidth;  
+							imgHeight = realHeight;  
+						}  
+								$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+						  
+						var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+						var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+						$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+						$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+					});  
+			
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
 		}
 	</script>
 

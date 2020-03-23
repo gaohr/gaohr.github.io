@@ -226,8 +226,8 @@ $("#submit").click(function() {
 					$("#data_table").append("<tr><td><span>" + data_links[select_data_id[k]][0] + "</span></td>" +
 												"<td><a href=\"" + data_links[select_data_id[k]][1] + "\" target=\"_blank\">" + data_links[select_data_id[k]][1] + "</a></td>" +
 												"<td><p><b>" + data_links[select_data_id[k]][2] + "</b></p></td>" +
-												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + ".jpg\" width=\"80\"></td>" +
-												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + imgshow(select_data_id[k]) + ".jpg\" width=\"80\"></td>" +
+												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + data_links[select_data_id[k]][3] + ".jpg\" width=\"80\"  class=\"picture-show\"></td>" +
+												"<td><img src=\"2019-09-14-dem-30m-cn/imgs/" + imgshow(select_data_id[k]) + ".jpg\" width=\"80\"  class=\"picture-show\"></td>" +
 												"<td><p>" + data_links[select_data_id[k]][4] + "</p></td></tr>");
 				}
 				
@@ -304,3 +304,4 @@ var data_links = {
 //		$("#pd_list").append("<span class='data-no'>" + data_links[key][0] + "</span>");
 //	}
 //}
+
