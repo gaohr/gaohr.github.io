@@ -297,10 +297,10 @@ var data_links = {
 }
 	
 // 将有数据的省份列出来
-for(var key in data_links) {
-	if(data_links[key][2] != "") {
-		$("#pd_list").append("<span class='data-has'>" + data_links[key][0] + "</span>");
-	} else {
-		$("#pd_list").append("<span class='data-no'>" + data_links[key][0] + "</span>");
-	}
-}
+//for(var key in data_links) {
+//	if(data_links[key][2] != "") {
+//		$("#pd_list").append("<span class='data-has'>" + data_links[key][0] + "</span>");
+//	} else {
+//		$("#pd_list").append("<span class='data-no'>" + data_links[key][0] + "</span>");
+//	}
+//}
