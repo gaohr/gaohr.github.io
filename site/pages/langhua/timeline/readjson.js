@@ -121,6 +121,7 @@ function getColor_rdm(n){
 	}
 }
 
+var zkdhaurm = "love";
 $(".imglh").hover(function(event){
 	n = parseInt(6 * Math.random());
 	$(this).css("border", "8px solid " + getColor_rdm(n));

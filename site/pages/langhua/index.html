@@ -53,9 +53,8 @@
 	<script type="text/javascript" src="timeline/imglist.js"></script>
 	<script type="text/javascript" src="timeline/readjson.js"></script>
 	<script>
-		$(document).ready(function () {
 		var pw = $.cookie('pw'); // 读取 cookie;
-		if (pw == "love") {
+		if (pw == zkdhaurm) {
 			$("#cd-timeline").css('display', 'block');
 			$("#errordiv").css('display', 'none');
 			$("#logindiv").css('display', 'none');
@@ -79,8 +78,6 @@
 			});
 		});
 		
-	});
-	
 	$(".imglh").hover(function(event){
 		n = parseInt(6 * Math.random());
 		$(this).css("border", "8px solid " + getColor_rdm(n));
