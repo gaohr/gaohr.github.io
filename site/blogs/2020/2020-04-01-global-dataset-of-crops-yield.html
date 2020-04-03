@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+    <title>GaoHR | 全球粮食产量数据集（1981-2016）</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html"><span class="g-left">G</span>aoHR</a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2020040101">
+				<div class="blogcontent">
+					<h2>全球粮食产量数据集（1981-2016）</h2>
+					<h2><small>The global dataset of historical yields for major crops 1981–2016</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>数据概况</b></p>
+					<p>了解主要作物的历史产量模式，包括趋势和年际变化，对于了解在粮食需求和气候变化日益增长的情况下粮食生产的现状、潜力和风险至关重要。该数据集是农业普查统计（粮农组织报告的国家产量统计数据）和卫星遥感（遥感反演的作物指数）的混合数据产品，主要有四种粮食作物：玉米、水稻、小麦和大豆。</p>
+					<p>全球粮食产量数据集，来源于<b>Scientific Data</b>，作者：<b>Toshichika Iizumi & Toru Sakai</b></p>
+					<div class="blog-quote">
+						<p><i class="icon-info-sign"></i> 空间范围：全球</p>
+						<p><i class="icon-info-sign"></i> 空间分辨率：0.5（DEG）</p>
+						<p><i class="icon-info-sign"></i> 时间范围：1981-2016</p>
+						<p><i class="icon-info-sign"></i> 时间分辨率：1年</p>
+						<p><i class="icon-info-sign"></i> 数据类型：栅格 | TIFF & NetCDF</p>
+						<p><i class="icon-info-sign"></i> 投影坐标：WGS_84</p>
+						<p><i class="icon-info-sign"></i> 生产时间：2020年</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p><b>关于数据的一些说明</b></p>
+					<p>玉米(maize)和水稻（rice）有两个生长季节，以“主要（major）”/“次要（second）”区分。“冬（winter）”和“春（spring）”被用作小麦（wheat）的生长季节类别。大豆（soybean）只有“主要（major）”生长季节。</p>
+					<p>数据数值单位：吨/公顷</p>
+					<p><b>引用方式：</b></p>
+					<p class="g-color-green">T Iizumi & T Sakai. The global dataset of historical yields for major crops 1981–2016. Scientific Data. 2020, 7, 97.</p>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<p>以2016年粮食产量数据为例展示空间分布</p>
+					<div class="row-fluid">
+						<div class="span1"></div>
+						<div class="span5 text-center"><span class="g-text-bg">2016年玉米产量</span></div>
+						<div class="span5 text-center"><span class="g-text-bg">2016年水稻产量</span></div>
+						<div class="span1"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span1"></div>
+						<div class="span5 text-center"><img src="2020-04-01-global-dataset-of-crops-yield/img001.jpg" class="picture-show"></div>
+						<div class="span5 text-center"><img src="2020-04-01-global-dataset-of-crops-yield/img002.jpg" class="picture-show"></div>
+						<div class="span1"></div>
+					</div>
+					<br>
+					<br>
+					<div class="row-fluid">
+						<div class="span1"></div>
+						<div class="span5 text-center"><span class="g-text-bg">2016年大豆产量</span></div>
+						<div class="span5 text-center"><span class="g-text-bg">2016年小麦产量</span></div>
+						<div class="span1"></div>
+					</div>
+					<div class="row-fluid">
+						<div class="span1"></div>
+						<div class="span5 text-center"><img src="2020-04-01-global-dataset-of-crops-yield/img003.jpg" class="picture-show"></div>
+						<div class="span5 text-center"><img src="2020-04-01-global-dataset-of-crops-yield/img004.jpg" class="picture-show"></div>
+						<div class="span1"></div>
+					</div>
+					<br>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p>提供全球粮食产量数据下载，每个压缩文件中包含所有年份（1981-2016）的数据</p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<div class="portlet box yellow percent-90">
+						<div class="portlet-title">
+							<div class="caption">全球粮食产量数据列表</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>编号</th><th>数据类型</th><th>空间范围</th><th>时间范围</th><th>TIF格式</th><th>NC格式</th></tr></thead>
+								<tbody>
+									<tr><td>1</td><td style="color:#921;font-size:1.2em">玉米</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/maize.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/maize.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>2</td><td style="color:#921;font-size:1.2em">玉米（主要）</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/maize_major.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/maize_major.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>3</td><td style="color:#921;font-size:1.2em">玉米（次要）</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/maize_second.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/maize_second.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>4</td><td style="color:#921;font-size:1.2em">水稻</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/rice.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/rice.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>5</td><td style="color:#921;font-size:1.2em">水稻（主要）</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/rice_major.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/rice_major.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>6</td><td style="color:#921;font-size:1.2em">水稻（次要）</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/rice_second.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/rice_second.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>7</td><td style="color:#921;font-size:1.2em">大豆</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/soybean.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/soybean.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>8</td><td style="color:#921;font-size:1.2em">小麦</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/wheat.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/wheat.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>9</td><td style="color:#921;font-size:1.2em">小麦（春季）</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/wheat_spring.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/wheat_spring.rar"><i class='icon-download'></i></a></td></tr>
+									<tr><td>10</td><td style="color:#921;font-size:1.2em">小麦（冬季）</td><td>全球</td><td>1981-2016</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/tif/wheat_winter.rar"><i class='icon-download-green'></i></a></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Raster/crops_field/nc4/wheat_winter.rar"><i class='icon-download'></i></a></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<p><i class="icon-bullhorn g-text-bg g-color-red"></i> 如果遇到任何数据问题，如数据下载问题、解压问题、数据投影坐标问题、文件损坏等，请在下方评论区留言，或邮件联系，我将及时答疑或更新，十分感谢您的支持~</p>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<br>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<hr>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+	<script>
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+}
+		
+	</script>
+</body>
+</html>
