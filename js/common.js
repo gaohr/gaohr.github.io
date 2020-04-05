@@ -216,7 +216,7 @@ function LeftAD() {
 							"<p class=\"ad-close\" id=\"ad-close-left\"><span></span></p>" +
 							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/left_ad_qingming_2020.4.4.jpg\"></p>" +
+							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/left_ad_nCov2020.jpg\"></p>" +
 						"</div>");
 	$("#China70").show(500);
 	$("#ad-close-left").click(function() {$("#China70").hide(500);});
