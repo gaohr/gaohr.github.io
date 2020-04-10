@@ -25,7 +25,7 @@
 				"</div>" +
 				"<div class='sider-bar'>" +
 				"<div class='host'>" +
-					"<img src='http://gaohr.win/img/mainicon.png' class='img-rounded'><br><br>" +
+					"<img src='http://gaohr.win/img/blog_logo_main.png'><br><br>" +
 					"<i class='icon-user'>&nbsp;&nbsp;GaoHR个人博客</i>" +
 				"</div>" +
 				"<!-- Navigation -->" +

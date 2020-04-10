@@ -6,6 +6,9 @@
 */
 
 $(document).ready(function($) {
+	/*LOGO*/
+	$(".g-blog-logo").html("<img src='http://gaohr.win/img/blog_logo.png'>");
+	
 	/*粒子特效*/
 	ParticalEffect();
 	
@@ -22,7 +25,7 @@ $(document).ready(function($) {
    });
    
 	/*滚动监听，显示侧边菜单*/
-	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'><img src='http://gaohr.win/img/mainicon.png' class='img-rounded'></a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
+	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'><img src='http://gaohr.win/img/blog_logo_main.png'></a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
 	
 	var min_height = 2000;
 	$(window).scroll(function(){
@@ -148,7 +151,7 @@ function ClustrMaps() {
 }
 
 function Copyright() {
-	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/mainicon.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><div class='footer-text'><span> 在线服务时间 10:00-15:00 </span><span> 地址:北京市海淀区邓庄南路9号 中国科学院遥感与数字地球研究所 </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/mainicon.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
+	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><div class='footer-text'><span> 在线服务时间 10:00-15:00 </span><span> 地址:北京市海淀区邓庄南路9号 中国科学院遥感与数字地球研究所 </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
 }
 
 function Comments() {
