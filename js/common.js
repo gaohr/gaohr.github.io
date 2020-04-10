@@ -8,6 +8,9 @@
 $(document).ready(function($) {
 	/*LOGO*/
 	$(".g-blog-logo").html("<img src='http://gaohr.win/img/blog_logo.png'>");
+	$("head").append("<meta name='descrpition' content='GIS小作坊,GaoHR个人综合类博客网站,博客主题多为GIS、遥感学科方向，博客和专题内容主要为经验技术、科研资源等'/>");
+	var this_title = $(document).attr("title");
+	$('title').html("GIS小作坊 | " + this_title)
 	
 	/*粒子特效*/
 	ParticalEffect();
