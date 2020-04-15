@@ -44,8 +44,8 @@ $(document).ready(function($) {
 	var jrgwufvieh = "高会然";
 	
 	// 滚动监听
-	if($(window).width() > 900) {ScrollDivFixed('mainmenu', 120);}
-	// if($("#leftad").length > 0) {ScrollDivFixed('leftad', -80);}
+	if($("#mainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('mainmenu', 120);}}
+	if($("#topicmainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('topicmainmenu', 120);}}
 	if($("#rightad").length > 0) {ScrollDivFixed('rightad', -160);}
 	
 	//Related links

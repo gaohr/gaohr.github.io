@@ -82,7 +82,7 @@
 //})
 	
 // 滚动监听
-ScrollDivFixed('topics-right', 160);
+if($("#topics-right").length > 0) {if($(window).width() > 900) {ScrollDivFixed('topics-right', 120);}}
 	
 function ScrollDivFixed(id, h) {
 	var div001 = $('#' + id);

@@ -74,7 +74,7 @@
 .svg-wrapper{margin-top:10%;border-radius:3px;text-align:center}
 #shape{stroke-width:10px;fill:transparent;stroke:#777;stroke-dasharray:85 240;stroke-dashoffset:-220;transition:1s all ease}
 #text{margin-top:-40px;text-align:center}
-#text a{color:#222;text-decoration:none;font-size:2em}
+#text a{color:#222;text-decoration:none;font-size:2.5em}
 #text a:hover{color:#0099ff}
 .svg-wrapper:hover #shape{stroke-dasharray:50 0;stroke-width:5px;stroke-dashoffset:0;stroke:#eee}
 
