@@ -2,8 +2,8 @@
 *By GaoHR
 */
 /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}*/
-body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/background/bg-05.jpg');background-size:100%;background-attachment:fixed;}
-/*body {background-color:#fff;font-size:14px;overflow-x:hidden;}*/
+/*body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/background/bg-05.jpg');background-size:100%;background-attachment:fixed;}*/
+body {background-color:#aaa;font-size:14px;overflow-x:hidden;}
 hr {margin-top:10px;margin-bottom:10px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
@@ -124,7 +124,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 
 .container-fluid {padding-right: 5px;padding-left: 5px;}
 
-.cltmap {width:100%;}
+.cltmap {width:100%;height:115px;}
 .dashang {width:100%;height:auto;text-align:center;}
 .shang_img {width:80px;height:80px;background-image: url(http://gaohr.win/img/pay/shang.png);background-size:100% 100%;margin:auto;cursor:pointer;}
 .tdcode {width:400px;height:240px;display:none;padding:10px;background:#777;border:1px soild #d85546}
@@ -156,7 +156,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 .leftad .ad-close:hover {color:#fff;background:rgba(0,0,0,0.5)}
 .leftad .ad-title {color:#fff;padding:5px 0;background:rgba(0,0,0,0.5)}
 
-.rightad {width:100%;margin-top:20px;}
+.rightad {width:100%;}
 .rightad .ad-close span:before {content:"X"}
 .rightad .ad-close {color:#555;float:right;background:rgba(255,255,255,1);border-radius:50%;padding:0 5px}
 .rightad .ad-close:hover {color:#fff;background:rgba(0,0,0,0.5)}

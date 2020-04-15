@@ -20,21 +20,16 @@ $(document).ready(function($) {
    $("body").click(function(e) {
        // var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "GaoHR", "@斩之浪", "战疫");
        var arrT = new Array("战疫", "武汉加油", "中国加油", "坚持", "必胜");
-       var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;
-       var x = e.pageX,y = e.pageY;
-       $i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});
-       $("body").append($i);
-       $i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
+	   var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
    });
    
 	/*滚动监听，显示侧边菜单*/
-	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'><img src='http://gaohr.win/img/blog_logo_main.png'></a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
+	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'>首页</a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
 	
-	var min_height = 2000;
 	$(window).scroll(function(){
 		var sh = $(window).scrollTop();
 		if($(window).width() > 900) {
-			if(sh > min_height){
+			if(sh > 800){
 				$(".centerer-menu-2").fadeIn(500);
 			}else{
 				$(".centerer-menu-2").fadeOut(100);
@@ -48,19 +43,17 @@ $(document).ready(function($) {
 	/*百度统计*/
 	$("head").append("<script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = 'https://hm.baidu.com/hm.js?7c81b8e214184b45986721bd426be652';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);})();</script>");
 	
-	//更新访问计数
-	//setTimeout(function() {
-	//			var bc = $("#busuanzi_value_page_pv").html();
-	//			if(bc != "") {
-	//				$("#busuanzi_value_page_pv").html((2121 + parseInt(bc)).toString());
-	//			} else {
-	//				$("#busuanzi_value_page_pv").html((2121 + Math.floor(Math.random() * 200 - 100)).toString());
-	//			}
-	//}, 1000);
-	
+	var jrgwufvieh = "高会然";
 	
 	// 滚动监听
-	ScrollDivFixed('leftad');
+	ScrollDivFixed('cltmap', 60);
+	
+	if($("#leftad").length > 0) {
+		ScrollDivFixed('leftad', -80);
+	}
+	if($("#rightad").length > 0) {
+		ScrollDivFixed('rightad', -160);
+	}
 	
 	//Related links
 	if($("#relatedlinks").length > 0) {
@@ -111,8 +104,8 @@ $(document).ready(function($) {
 	// Scroll top
 	gotoTop(600);
 		
-	// Left ad
-	LeftAD();
+	// Blog ad
+	BlogAD();
 		
 	// Hot topics
 	HotTopic();
@@ -121,12 +114,12 @@ $(document).ready(function($) {
 
 // Functions ****************************** Functions
 	
-function ScrollDivFixed(id) {
+function ScrollDivFixed(id, h) {
 	var div001 = $('#' + id);
 	var pos_div =  div001.offset();// offset() 获得div1当前的位置，左上角坐标(x,y)
 	$(window).scroll(function () { //滚动条滚动事件
-		if ($(this).scrollTop() > pos_div.top + 60) {
-			div001.css('top', $(this).scrollTop() - pos_div.top - 60);
+		if ($(this).scrollTop() > pos_div.top + h) {
+			div001.css('top', $(this).scrollTop() - pos_div.top - h);
 		} else if ($(this).scrollTop() <=  pos_div.top ) {
 			div001.css('position', 'relative').css('top', 0);
 		}
@@ -215,18 +208,17 @@ function Weather() {
 }
 	
 	
-function LeftAD() {
+function BlogAD() {
 	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
 	$("#leftad").append("<p class='warm-alert'>" + warm_alert + "</p>");
-	$("#leftad").append("<div id=\"China70\" style=\"margin:0 auto;padding:5px;background:rgba(255,255,255,0.75);box-shadow: 2px 4px 8px rgba(195,195,195,0.75);\">" +
-							"<p class=\"ad-close\" id=\"ad-close-left\"><span></span></p>" +
+	$("#rightad").append("<div id='rightad-con' style='margin:0 auto;padding:5px;background:rgba(255,255,255,0.75);box-shadow: 2px 4px 8px rgba(195,195,195,0.75);'>" +
+							"<p class='ad-close' id='ad-close-left'><span></span></p>" +
 							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							"<p class=\"ad-content\"><img src=\"http://gaohr.win/img/others/left_ad_nCov2020.jpg\"></p>" +
+							"<p class='ad-content'><img src='http://gaohr.win/img/others/left_ad_nCov2020.jpg'></p>" +
 						"</div>");
-	$("#China70").show(500);
-	$("#ad-close-left").click(function() {$("#China70").hide(500);});
-	
+	$("#rightad-con").show(500);
+	$("#ad-close-left").click(function() {$("#rightad-con").hide(500);});
 	/*const year = new Date().getFullYear();const firstOfOct = new Date(year, 9, 1).getTime();let timer = setInterval(function() {const today = new Date().getTime();const diff = firstOfOct - today;let days = Math.floor(diff / (1000 * 60 * 60 * 24));let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));let seconds = Math.floor((diff % (1000 * 60)) / 1000);$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");}, 1000);*/
 }
 	
@@ -446,6 +438,3 @@ function PageViews() {
 function ParticalEffect() {
 	$(".mainlogo").append("<div id='particle-effect' style='position:fixed;top:0;left:0;right:0;height:60px;z-index:-1'></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/particaleffect.js\"></script>")
 }
-
-
-

@@ -83,14 +83,14 @@
 //})
 	
 // 滚动监听
-ScrollDivFixed('topics-right');
+ScrollDivFixed('topics-right', 160);
 	
-function ScrollDivFixed(id) {
+function ScrollDivFixed(id, h) {
 	var div001 = $('#' + id);
 	var pos_div =  div001.offset();// offset() 获得div1当前的位置，左上角坐标(x,y)
 	$(window).scroll(function () { //滚动条滚动事件
-		if ($(this).scrollTop() > pos_div.top + 160) {
-			div001.css('top', $(this).scrollTop() - pos_div.top - 160);
+		if ($(this).scrollTop() > pos_div.top + h) {
+			div001.css('top', $(this).scrollTop() - pos_div.top - h);
 		} else if ($(this).scrollTop() <=  pos_div.top ) {
 			div001.css('position', 'relative').css('top', 0);
 		}
