@@ -24,8 +24,6 @@ $(document).ready(function($) {
    });
    
 	/*滚动监听，显示侧边菜单*/
-	$("#leftad").append("<div class='centerer-menu-2 g-text-lg'><a href='http://gaohr.win/index.html'>首页</a><br><br><a href='http://gaohr.win/Blogs.html'>博客</a><br><br><a href='http://gaohr.win/site/special/index.html'>专题</a><br><br><a href='http://gaohr.win/About.html'>关于</a><br><br><a href='http://gaohr.win/Contact.html'>留言</a></div></div><hr>");
-	
 	$(window).scroll(function(){
 		var sh = $(window).scrollTop();
 		if($(window).width() > 900) {
@@ -46,14 +44,9 @@ $(document).ready(function($) {
 	var jrgwufvieh = "高会然";
 	
 	// 滚动监听
-	ScrollDivFixed('cltmap', 60);
-	
-	if($("#leftad").length > 0) {
-		ScrollDivFixed('leftad', -80);
-	}
-	if($("#rightad").length > 0) {
-		ScrollDivFixed('rightad', -160);
-	}
+	if($(window).width() > 900) {ScrollDivFixed('mainmenu', 120);}
+	// if($("#leftad").length > 0) {ScrollDivFixed('leftad', -80);}
+	if($("#rightad").length > 0) {ScrollDivFixed('rightad', -160);}
 	
 	//Related links
 	if($("#relatedlinks").length > 0) {

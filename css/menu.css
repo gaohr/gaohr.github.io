@@ -78,13 +78,5 @@
 #text a:hover{color:#0099ff}
 .svg-wrapper:hover #shape{stroke-dasharray:50 0;stroke-width:5px;stroke-dashoffset:0;stroke:#eee}
 
-/* 滚动监听，侧边菜单 */
-.centerer-menu-2 {position:relative;top:20px;padding:5px;margin-bottom:20px;text-align:center;display:none;}
-.centerer-menu-2 i {color:#555 !important}
-.centerer-menu-2 a {width:60%;color:#39e;}
-.centerer-menu-2 a > img {width:50%;}
-.centerer-menu-2 a > img:hover {opacity:0.75;}
-.centerer-menu-2 a:hover {color:#f65}
-
 
 
