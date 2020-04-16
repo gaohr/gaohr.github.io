@@ -18,7 +18,7 @@
 	<link href="2018-01-04-price-of-rabbit/css/ol3-layerswitcher.css" rel="stylesheet" type="text/css"/>
 	<link href="2018-01-04-price-of-rabbit/css/layout.css" rel="stylesheet" type="text/css"/>
 	
-	<link rel="shortcut icon" href="../../../img/mainicon.png" />
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
     <title>GaoHR | 山东兔毛价格走势</title>
 </head>
 
@@ -48,8 +48,8 @@
 				<!--正文-->
 				<input id="topicid" style="display:none" value="2018010401">
 				<div class="topiccontent">
-					<h2>山东省兔毛月均价格（2009至今）走势</h2>
-					<span class="topictopinfo"></span>
+					<p class="topic-title">山东省兔毛月均价格（2009至今）走势<span class="topictopinfo"></span></p>
+					<hr>
 					<div id="price_graph" style="width:100%; height:400px"></div>
 					<p>
 						<li>滚动鼠标或拖动下方按钮可以进行图形缩放；</li>
@@ -72,7 +72,6 @@
 					<br>
 					<div id="topics-right"></div>
 				</div>
-				<div id="map" class="map"></div>
 				<!-- Share -->
 				<div id="shareit"></div>
 				<!-- right ad  -->
@@ -96,12 +95,6 @@
 	<script src="../../../js/bloglist.js"></script>
 	<script src="../../../js/common.js"></script>
 	
-	<script src="2018-01-04-price-of-rabbit/js/Openlayers-2.0.js" type="text/javascript"></script>
-	<script src="2018-01-04-price-of-rabbit/js/map/example-behaviour.js" type="text/javascript"></script>
-    <script src="2018-01-04-price-of-rabbit/js/map/loader.js" type="text/javascript"></script>
-	<script type="text/javascript" src="2018-01-04-price-of-rabbit/js/map/ol.js"></script>
-	<script type="text/javascript" src="2018-01-04-price-of-rabbit/js/map/simple.js"></script>
-	
 	<script src="2018-01-04-price-of-rabbit/js/echarts/echarts.min.js"></script>
 	<script src="2018-01-04-price-of-rabbit/js/echarts/dark.js"></script>
 	
@@ -121,7 +114,8 @@
 		'2016/1','2016/2','2016/3','2016/4','2016/5','2016/6','2016/7','2016/8','2016/9','2016/10','2016/11','2016/12',
 		'2017/1','2017/2','2017/3','2017/4','2017/5','2017/6','2017/7','2017/8','2017/9','2017/10','2017/11','2017/12',
 		'2018/1','2018/2','2018/3','2018/4','2018/5','2018/6','2018/7','2018/8','2018/9','2018/10','2018/11','2018/12',
-		'2019/1','2019/2','2019/3','2019/4','2019/5','2019/6','2019/7','2019/8'];
+		'2019/1','2019/2','2019/3','2019/4','2019/5','2019/6','2019/7','2019/8','2019/9','2019/10','2019/11','2019/12',
+		'2020/1','2020/2','2020/3','2020/4'];
 
 		var data = [50,49,52,63,65,60,61,70,70,71,
 		71,80,80,78,79,80,78,78,80,90,95,106,
@@ -133,7 +127,8 @@
 		66,63,61,67,70,68,64,60,60,62,61,65,
 		58,66,72,71,68,65,65,61,64,70,75,87,
 		90,92,96,82,86,90,86,90,86,80,73,70,
-		72,70,72,71,65,60,64,66];
+		72,70,72,71,65,60,64,66,65,66,71,67,
+		66,66,65,66];
 
 
 		// 定义图标属性
