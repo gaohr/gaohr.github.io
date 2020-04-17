@@ -1,8 +1,10 @@
 var bloglist = [
 
+{"blogid":"2020041701", "title":"中国自然资源图集（高清大图）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国自然资源高清大图，包括中国卫星影像图、中国黑土地分布图、中国河流与天然湖泊分布图、中国湿地分布图、中国石漠化土地分布图、中国荒漠化土地分布图、中国冰川变迁图、中国土壤养分质量等级分布图、中国地下水资源分布图等。", "img":"site/blogs/2020/images/NaturalResource.jpg", "date":"2020-04-17", "href":"http://gaohr.win/site/blogs/2020/2020-04-17-maps-of-natural-resources-in-china.html", "tags":["自然资源", "图集", "高清"]},
+
 {"blogid":"2020040101", "title":"全球粮食产量数据集（1981-2016）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"主要作物的历史产量模式，包括趋势和年际变化，对于了解在粮食需求和气候变化日益增长的情况下粮食生产的现状、潜力和风险至关重要。该数据集是农业普查统计和卫星遥感的混合数据产品，主要有四种粮食作物：玉米、水稻、小麦和大豆。", "img":"site/blogs/2020/images/CropsYield.jpg", "date":"2020-04-01", "href":"http://gaohr.win/site/blogs/2020/2020-04-01-global-dataset-of-crops-yield.html", "tags":["全球", "粮食产量", "数据"]},
 
-{"blogid":"2020022001", "title":"全国道路网矢量数据集", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国道路网矢量数据集，包括高速、国道、省道、县道、乡村小道等，数据来源于OSM，十分精细，属性完整，提供免费下载", "img":"site/blogs/2020/images/Roads.jpg", "date":"2020-02-20", "href":"http://gaohr.win/site/blogs/2020/2020-02-20-china-roads.html", "tags":["数据", "矢量", "道路网"]},
+{"blogid":"2020022001", "title":"全国道路网矢量数据集", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国道路网矢量数据集，包括高速、国道、省道、县道、乡村小道等，数据来源于国家地理信息中心和OSM，十分精细，属性完整，提供咨询和下载", "img":"site/blogs/2020/images/Roads.jpg", "date":"2020-02-20", "href":"http://gaohr.win/site/blogs/2020/2020-02-20-china-roads.html", "tags":["数据", "矢量", "道路网"]},
 
 {"blogid":"2020012701", "title":"全国各省固定资本存量（1978-2015）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"根据张军和单豪杰估算方法计算全国31个省、直辖市1978年至2015年固定资本存量。数据来源：《中国国内生产总值核算历史资料1952-1995》、《中国国内生产总值历史资料1952-2004》、《中国统计年鉴（2004-2016）》等。", "img":"site/blogs/2020/images/EconomicData.jpg", "date":"2020-01-27", "href":"http://gaohr.win/site/blogs/2020/2020-01-27-socio-economic-data-fixed-capital-stocks.html", "tags":["社会经济", "数据"]},
 
