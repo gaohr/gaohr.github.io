@@ -3,7 +3,7 @@
 */
 /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}*/
 /*body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/background/bg-05.jpg');background-size:100%;background-attachment:fixed;}*/
-body {background-color:#aaa;font-size:14px;overflow-x:hidden;}
+body {background-color:#fefefe;font-size:14px;overflow-x:hidden;}
 hr {margin-top:10px;margin-bottom:10px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
@@ -21,7 +21,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.75);z-index:0;height:auto;width:80%;margin-left:9%;}
+.main-page {position:relative;margin-top:60px;background-color:rgba(225,225,225,0.75);z-index:0;height:auto;width:80%;margin-left:9%;}
 .main-page .span2 {margin-left:10px}
 
 .main-div {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
@@ -34,16 +34,16 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .centerpage .carousel .img-title a:hover {color:#fff;background-color:rgba(255,105,80,0.85);padding:3px;border-radius:5px;margin-left:10px}
 .centerpage .carousel .carousel-caption span {color:#fc0}
 
-.host {width:100%;text-align:center}
-.host img {width:90%;max-width:200px;min-height:120px;margin-left:5%;margin-top:36px;}
+.host {width:100%;text-align:center;min-height:120px;}
+.host img {width:90%;max-width:200px;margin-left:5%;margin-top:36px;}
 .host i {font-size:16px;color:#555;}
 .sider-menu {font-size:20px;margin-top:10%;text-align:center;font-family:'Microsoft YaHei';font-weight:normal;}
 .menu-active {color:#e03b29}
 .block {margin-top:5%;width:100%;}
 .hr {position:relative;width:100%;height:3px;background:#ccc;margin-top:20px;border-bottom:1px solid #fff}
 .links {padding:5px;color:#236eb8;text-align:center}
-.links p {font-size:1.5em;font-family:'SimHei'}
-.links a {font-size:2.4em;}
+.links p {font-size:1.25em;font-family:'SimHei'}
+.links a {font-size:2.0em;}
 .links .weibo  {color:#e03b29}.links .github {color:#333}.links .google  {color:#3b8029}.links .twitter {color:#2366bb}.links .fb {color:#5366bb}
 .links a:hover{color:#236eb8}
 .homepage-links {padding:2px;font-size:1.2em;font-family:'SimHei'}
@@ -277,7 +277,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 	.menulist {display:none;margin-left:10px}
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1560px) {
 	.main-page {width:100%;margin-left:0;padding-left:0;}
 	.blogcontent .imginblog img {max-width:640px;}
 }
