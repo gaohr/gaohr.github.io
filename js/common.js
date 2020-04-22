@@ -23,18 +23,6 @@ $(document).ready(function($) {
 	   var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
    });
    
-	/*滚动监听，显示侧边菜单*/
-	$(window).scroll(function(){
-		var sh = $(window).scrollTop();
-		if($(window).width() > 900) {
-			if(sh > 800){
-				$(".centerer-menu-2").fadeIn(500);
-			}else{
-				$(".centerer-menu-2").fadeOut(100);
-			};
-		};
-	});
-	
 	/*百度自动推送*/
 	$("body").append("<script>(function(){var bp = document.createElement('script');var curProtocol = window.location.protocol.split(':')[0];if (curProtocol === 'https') {bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';}else {bp.src = 'http://push.zhanzhang.baidu.com/push.js';}var s = document.getElementsByTagName(\"script\")[0];s.parentNode.insertBefore(bp, s);})();</script>");
 	
@@ -44,8 +32,8 @@ $(document).ready(function($) {
 	var jrgwufvieh = "高会然";
 	
 	// 滚动监听
-	if($("#mainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('mainmenu', 120);}}
-	if($("#topicmainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('topicmainmenu', 120);}}
+	if($("#mainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('mainmenu', 180);}}
+	if($("#topicmainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('topicmainmenu', 180);}}
 	if($("#rightad").length > 0) {ScrollDivFixed('rightad', -160);}
 	
 	//Related links
