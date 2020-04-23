@@ -128,7 +128,7 @@ function ClustrMaps() {
 }
 
 function Copyright() {
-	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><div class='footer-text'><span> 在线服务时间 10:00-15:00 </span><span> 地址:北京市海淀区邓庄南路9号 中国科学院遥感与数字地球研究所 </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
+	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><div class='footer-text'><span> 在线服务时间 17:00-22:00 </span><span> 地址:北京市海淀区邓庄南路9号 中国科学院遥感与数字地球研究所 </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2019 <a href='http://gaohr.win/' target='_blank'>GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
 }
 
 function Comments() {
@@ -173,7 +173,7 @@ function Dashang() {
 }
 
 function Warning() {
-	return "<br><p>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><br><p class='g-color-red'> (原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b>)</p>";
+	return "<hr><br><p><span class='g-color-red'>*** </span>由于工作原因，可能白天不会及时回复邮件，但我会及时回复和处理的~~</p><p><span class='g-color-red'>*** </span>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><br><p class='g-color-red'> (原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b>)</p>";
 }
 	
 var loc_city = "";
