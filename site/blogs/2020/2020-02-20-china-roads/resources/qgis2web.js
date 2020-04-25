@@ -180,9 +180,9 @@ var onSingleClick = function(evt) {
 		for(var i = 0; i < province_cities[p_id].length; i++) {
 			c_id = province_cities[p_id][0][1] + "_" + province_cities[p_id][i][1]
 			if(i == 0){
-				$("#data-list").append("<tr><td><span class='g-color-red g-text-bg'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download'></i></a></td></tr>");
+				$("#data-list").append("<tr><td><span class='g-color-red g-text-bg'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download'></i></a></td></tr>");
 			} else {
-				$("#data-list").append("<tr><td><span class='g-color-purple'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-purple'></i></a></td></tr>");
+				$("#data-list").append("<tr><td><span class='g-color-purple'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-purple'></i></a></td></tr>");
 			}
 			
 		}

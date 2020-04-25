@@ -175,7 +175,7 @@
 	<script>
 		for(var i = 0; i < datalist_province.length; i++) {
 			if(datalist_province[i].data != "") {
-				$("#data-province").append("<tr><td>" + datalist_province[i].id + "</td><td style='color:#921;font-size:1.2em'><b>"+ datalist_province[i].name +"</b></td><td><img src='./2019-10-16-china-railway/imgs/" + datalist_province[i].name_en + ".jpg' width='80px' class='picture-show'></td><td>ESRI Shapefile</td><td><form class='form-search'><input id='data-key-" + datalist_province[i].id + "' type='text' class='input-medium' placeholder='请先输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + datalist_province[i].id + "', '" + datalist_province[i].name_en + "')\"><i class='icon-download-blue'></i></a></td></tr>");
+				$("#data-province").append("<tr><td>" + datalist_province[i].id + "</td><td style='color:#921;font-size:1.2em'><b>"+ datalist_province[i].name +"</b></td><td><img src='./2019-10-16-china-railway/imgs/" + datalist_province[i].name_en + ".jpg' width='80px' class='picture-show'></td><td>ESRI Shapefile</td><td><form class='form-search'><input id='data-key-" + datalist_province[i].id + "' type='text' class='input-medium' placeholder='请先输入口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + datalist_province[i].id + "', '" + datalist_province[i].name_en + "')\"><i class='icon-download-blue'></i></a></td></tr>");
 			} else {
 				$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td>" + datalist_province[i].name + "</td><td>ESRI Shapefile</td><td class='g-color-gray'>敬请期待</td></tr>");
 			} 
