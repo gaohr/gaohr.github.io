@@ -14,7 +14,7 @@
 	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 	<link rel="shortcut icon" href="../../../img/logo.ico">
-    <title>GaoHR | 支付 | Pay</title>
+    <title>GaoHR | 特殊定制需求 | Special needs</title>
 </head>
 
 <body>
@@ -78,22 +78,25 @@
 			<div class="span8">
 				<!--breadcrumb-->
 				<ol class="breadcrumb">
-					<li><i class="icon-yen"></i><a href="###"> 支付</a></li>
+					<li><i class="icon-yen"></i><a href="###"> 定制需求</a></li>
 					<!--<li class="active">Data</li>-->
 				</ol>
 				<!--正文-->
 				<hr>
-				<div class="main-div text-center">
-					<span class="g-text-lg">GIS 大饼 </span><span class="g-text-lg">GaoHR</span>
-					<img src="pay.jpg" class="img-rounded" width="32%">
-					<span class="g-text-lg">GaoHR </span><span class="g-text-lg">GIS 大饼</span>
+				<div class="main-div">
+					<p class="g-text-lg">特殊定制数据下载</p>
+					<p class="g-color-red">特殊定制数据均未在博客中公布，此页面是唯一下载通道。</p>
 					<br>
-					<p style="font-size:2.5em;line-height:1em">欢迎使用<span class="g-color-blue">支付宝</span> | <span class="g-color-green">微信</span>付款</p>
-					<br>
-					<img src="../../../img/pay/alipay.png" class="img-rounded" width="32%">
-					&nbsp;&nbsp;&nbsp;&nbsp;
-					<img src="../../../img/pay/wechat.png" class="img-rounded" width="32%">
+					<table class="table table-hover">
+						<thead><tr><th>编号</th><th>下载口令</th><th>数据下载</th></tr></thead>
+						<tbody>
+							<tr><td>1</td><td><form class='form-search'><input id="data-key-special" type='text' class='input-large' placeholder='在此输入口令'></form></td><td><a href="###" id="get-special" target="_blank" style="margin-left:20px"><i class='icon-download'></i></a></td></tr>
+						</tbody>
+					</table>
+					<hr>
 				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
 				<!-- -->
 			</div>
 			<div class="span2">
@@ -101,7 +104,7 @@
 				<div class="portlet" id="declareDiv"></div>
 				<div class="block"></div>
 				<div class="portlet">
-					<a href="#" style="margin:0 auto"><img src="justpay.jpg" width="100%"></a>
+					
 				</div>
 				<!-- right ad  -->
 				<div id="rightad" class="rightad"></div>
@@ -117,6 +120,18 @@
     <!-- JavaScript -->
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/paylist.js"></script>
 	<script src="../../../js/common.js"></script>
+	<script>
+		$("#get-special").click(function () {
+			var key = $("#data-key-special").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/" + key + ".rar");
+			}
+		})
+	</script>
 </body>
 </html>
