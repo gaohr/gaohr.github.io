@@ -222,9 +222,9 @@ attributionList.insertBefore(qgis2webAttribution, firstLayerAttribution);
 var province_cities = {
 	"0": [["浙江", "Zhejiang"], ["杭州", "Hangzhou"], ["嘉兴", "Jiaxing"], ["湖州", "Huzhou"], ["绍兴", "Shaoxing"], ["宁波", "Ningbo"], ["舟山", "Zhoushan"], ["衢州", "Quzhou"], ["温州", "Wenzhou"], ["丽水", "Lishui"], ["金华", "Jinhua"], ["台州", "Taizhou"]], 
 	"1": [["云南", "Yunnan"], ["昆明", "Kunming"], ["曲靖", "Qujing"], ["玉溪", "Yuxi"], ["保山", "Baoshan"], ["临沧", "Lincang"], ["思茅", "Simao"], ["昭通", "Zhaotong"], ["楚雄", "Chuxiong"], ["怒江", "Nujiang"], ["大理", "Dali"], ["文山", "Wenshan"], ["红河", "Honghe"], ["德宏", "Dehong"], ["迪庆", "Diqing"], ["西双版纳", "Xishuangbanna"]], 
-	"2": [["新疆", "Xinjiang"], ["乌鲁木齐", "Wulumuqi"], ["克拉玛依", "Kelamayi"], ["吐鲁番", "Tulufan"], ["喀什", "Kashen"], ["巴音郭楞", "Bayinguoleng"], ["和田", "Hetian"], ["哈密", "Hami"], ["阿勒泰", "Aletai"], ["塔城", "Tacheng"], ["博尔塔", "Boerta"], ["阿克苏", "Akesu"], ["昌吉", "Changji"], ["伊犁", "Yili"], ["克孜勒", "Kezile"]], 
+	"2": [["新疆", "Xinjiang"], ["乌鲁木齐", "Wulumuqi"], ["克拉玛依", "Kelamayi"], ["吐鲁番", "Tulufan"], ["喀什", "Kashi"], ["巴音郭楞", "Bayinguoleng"], ["和田", "Hetian"], ["哈密", "Hami"], ["阿勒泰", "Aletai"], ["塔城", "Tacheng"], ["博尔塔", "Boerta"], ["阿克苏", "Akesu"], ["昌吉", "Changji"], ["伊犁", "Yili"], ["克孜勒", "Kezile"]], 
 	"3": [["香港", "Xianggang"], ["香港", "Xianggang"]], 
-	"4": [["西藏", "Xicang"], ["拉萨", "Lasa"], ["那曲", "Naqu"], ["林芝", "Linzhi"], ["昌都", "Changdu"], ["日喀则", "Rikaze"], ["山南", "Shannan"], ["阿里", "Ali"]], 
+	"4": [["西藏", "Xizang"], ["拉萨", "Lasa"], ["那曲", "Naqu"], ["林芝", "Linzhi"], ["昌都", "Changdu"], ["日喀则", "Rikaze"], ["山南", "Shannan"], ["阿里", "Ali"]], 
 	"5": [["台湾", "Taiwan"], ["台湾", "Taiwan"]], 
 	"6": [["四川", "Sichuan"], ["成都", "Chengdu"], ["资阳", "Ziyang"], ["乐山", "Leshan"], ["自贡", "Zigong"], ["内江", "Neijiang"], ["眉山", "Meishan"], ["雅安", "Yaan"], ["绵阳", "Mianyang"], ["德阳", "Deyang"], ["遂宁", "Suining"], ["宜宾", "Yibin"], ["南充", "Nanchong"], ["广安", "Guangan"], ["广元", "Guangyuan"], ["巴中", "Bazhong"], ["达州", "Dazhou"], ["攀枝花", "Panzhihua"], ["泸州", "Luzhou"], ["凉山", "Liangshan"], ["阿坝", "Aba"], ["甘孜", "Ganzi"]], 
 	"7": [["陕西", "Shaanxi"], ["西安", "Xian"], ["咸阳", "Xianyang"], ["铜川", "Tongchuan"], ["渭南", "Weinan"], ["延安", "Yanan"], ["宝鸡", "Baoji"], ["商洛", "Shangluo"], ["榆林", "Yulin"], ["汉中", "Hanzhong"], ["安康", "Ankang"]], 
@@ -250,7 +250,7 @@ var province_cities = {
 	"27": [["澳门", "Aomen"], ["澳门", "Aomen"]], 
 	"28": [["安徽", "Anhui"], ["合肥", "Hefei"], ["淮北", "Huaibei"], ["宿州", "Suzhou"], ["蚌埠", "Bangbu"], ["六安", "Liuan"], ["阜阳", "Fuyang"], ["亳州", "Bozhou"], ["芜湖", "Wuhu"], ["安庆", "Anqing"], ["宣城", "Xuancheng"], ["马鞍山", "Maanshan"], ["淮南", "Huainan"], ["铜陵", "Tongling"], ["池州", "Chizhou"], ["滁州", "Chuzhou"], ["黄山", "Huangshan"]], 
 	"29": [["上海", "Shanghai"], ["上海", "Shanghai"]], 
-	"30": [["重庆", "Zhongqing"], ["重庆", "Zhongqing"]], 
+	"30": [["重庆", "Chongqing"], ["重庆", "Chongqing"]], 
 	"31": [["江苏", "Jiangsu"], ["南京", "Nanjing"], ["苏州", "Suzhou"], ["扬州", "Yangzhou"], ["无锡", "Wuxi"], ["镇江", "Zhenjiang"], ["常州", "Changzhou"], ["南通", "Nantong"], ["泰州", "Taizhou"], ["盐城", "Yancheng"], ["淮安", "Huaian"], ["宿迁", "Suqian"], ["徐州", "Xuzhou"], ["连云港", "Lianyungang"]], 
 	"32": [["广东", "Guangdong"], ["广州", "Guangzhou"], ["深圳", "Shenzhen"], ["珠海", "Zhuhai"], ["中山", "Zhongshan"], ["佛山", "Foshan"], ["东莞", "Dongguan"], ["惠州", "Huizhou"], ["肇庆", "Zhaoqing"], ["云浮", "Yunfu"], ["茂名", "Maoming"], ["湛江", "Zhanjiang"], ["阳江", "Yangjiang"], ["江门", "Jiangmen"], ["清远", "Qingyuan"], ["韶关", "Shaoguan"], ["河源", "Heyuan"], ["梅州", "Meizhou"], ["汕尾", "Shanwei"], ["汕头", "Shantou"], ["揭阳", "Jieyang"], ["潮州", "Chaozhou"]], 
 	"33": [["河北", "Hebei"], ["石家庄", "Shijiazhuang"], ["保定", "Baoding"], ["承德", "Chengde"], ["唐山", "Tangshan"], ["廊坊", "Langfang"], ["衡水", "Hengshui"], ["邢台", "Xingtai"], ["沧州", "Cangzhou"], ["邯郸", "Handan"], ["秦皇岛", "Qinhuangdao"], ["张家口", "Zhangjiakou"]]}
