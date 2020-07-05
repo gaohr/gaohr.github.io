@@ -18,7 +18,7 @@ $(document).ready(function($) {
 	/*鼠标点击特效*/
 	var a_idx = 0;
    $("body").click(function(e) {
-       // var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "@斩之浪");
+       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "@斩之浪");
        var arrT = new Array("战疫", "中国加油", "坚持", "不松懈", "必胜");
 	   var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
    });
@@ -193,13 +193,13 @@ function BlogAD() {
 	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
 	$("#leftad").append("<p class='warm-alert'>" + warm_alert + "</p>");
 	$("#rightad").append("<div id='rightad-con' style='margin:0 auto;padding:5px;background:rgba(255,255,255,0.75);box-shadow: 2px 4px 8px rgba(195,195,195,0.75);'>" +
-							"<p class='ad-close' id='ad-close-left'><span></span></p>" +
+							"<p class='ad-close' id='ad-close-right'><span></span></p>" +
 							// "<div class=\"timer-container\"><p>70周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							"<p class='ad-content'><img src='http://gaohr.win/img/others/left_ad_nCov2020.jpg'></p>" +
+							"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='http://gaohr.win/img/others/left_ad_nCov2020.jpg'></p>" +
 						"</div>");
 	$("#rightad-con").show(500);
-	$("#ad-close-left").click(function() {$("#rightad-con").hide(500);});
+	$("#ad-close-right").click(function() {$("#rightad-con").hide(500);});
 	/*const year = new Date().getFullYear();const firstOfOct = new Date(year, 9, 1).getTime();let timer = setInterval(function() {const today = new Date().getTime();const diff = firstOfOct - today;let days = Math.floor(diff / (1000 * 60 * 60 * 24));let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));let seconds = Math.floor((diff % (1000 * 60)) / 1000);$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");}, 1000);*/
 }
 	
