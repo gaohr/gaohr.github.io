@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 国家生态景观园林等空间分布与统计数据</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2020071301">
+				<div class="blogcontent alist">
+					<h2>国家生态景观园林等空间分布与统计数据</h2>
+					<h2><small>Spatial distribution and statistical data of national ecological landscape</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>数据介绍</b></p>
+					<p>国家生态、景观、园林等空间分布点数据与统计数据，主要包括国家5A级旅游景区、国家地质公园、国家级森林公园、国家自然保护区、全国风景名胜、全国文保单位等，数据来源于文化和旅游部等官方网站发布的相关信息，通过地理编码等处理，制作形成空间分布矢量数据点。</p>
+					<p class="g-color-red">使用时要注意时效性。</p>
+					<p class="blog-sub-title"><b>数据属性</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国</p>
+						<p>时间范围：2016-2017年</p>
+						<p>空间分辨率：---</p>
+						<p>数据类型：矢量|ESRI shapefile point</p>
+						<p>投影坐标：GCS地理坐标系统(大地2000)</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p class="blog-sub-title"><b>数据示例图</b></p>
+					<table class="table table-hover percent-90">
+						<tbody>
+							<tr><td><img src="2020-07-13-national-ecology-landscape/aaaaa.jpg" class="picture-show"></td><td><img src="2020-07-13-national-ecology-landscape/ziranbaohuqu.jpg" class="picture-show"></td><td><img src="2020-07-13-national-ecology-landscape/senlingongyuan.jpg" class="picture-show"></td><</td></tr>
+							<tr><td><img src="2020-07-13-national-ecology-landscape/aaaaa-attr.jpg" class="picture-show"><td><img src="2020-07-13-national-ecology-landscape/ziranbaohuqu-attr.jpg" class="picture-show"></td><td><img src="2020-07-13-national-ecology-landscape/senlingongyuan-attr.jpg" class="picture-show"></td></tr>
+						</tbody>
+					</table>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p>国家生态、景观、园林等空间分布与统计数据</p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 该数据为“有限共享”数据，不提供直接数据下载链接，需申请数据共享，获取共享口令，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
+					<div class="portlet box green percent-90">
+						<div class="portlet-title">
+							<div class="caption">数据列表</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>编号</th><th>名称</th><th>时间</th><th>示例图</th><th>数量</th><th>共享口令</th><th>下载</th></tr></thead>
+								<tbody id="data-list"></tbody>
+							</table>
+						</div>
+					</div>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+	<script>
+		var namelist = ["国家5A级旅游景区", "国家地质公园", "国家级森林公园", "国家自然保护区", "全国风景名胜", "全国文保单位"];
+		// 6pakd5oczm lg0akfm40d 5slg02kxa8 6l30vkaif3 5lfiaofnxe 6ls01mcjal
+		var imglist = ["aaaaa", "dizhigongyuan", "senlingongyuan", "ziranbaohuqu", "fengjingmingsheng", "wenbaodanwei"];
+		var timelist = ["2017", "2017", "2017", "2016", "2017", "2017"]
+		var nptlist = ["247", "241", "827", "341", "250", "2356"]
+		for(var i = 0; i < namelist.length; i++) {
+			$("#data-list").append("<tr><td>"+ (i + 1) +"</td><td style='color:#921;font-size:1.2em'>" + namelist[i] + "</td><td>" + timelist[i] + "年</td><td><img src='2020-07-13-national-ecology-landscape/" + imglist[i] + ".jpg' class='picture-show' width='120'></td><td>" + nptlist[i] + "</td><td><form class='form-search'><input id='data-key-" + imglist[i] + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + namelist[i] + "', 'data-key-" + imglist[i] + "')\"><i class='icon-download-green'></i></a></td></tr>");
+		}
+		function openDownloadWin(name, id) {
+			var key = $(id).val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/Ecology/" + name + "-" + key + ".rar");
+			}
+		}
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
+	</script>
+</body>
+</html>
