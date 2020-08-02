@@ -144,7 +144,7 @@
 			$("#data-list").append("<tr><td>"+ (i + 1) +"</td><td style='color:#921;font-size:1.2em'>" + namelist[i] + "</td><td>" + timelist[i] + "年</td><td><img src='2020-07-13-national-ecology-landscape/" + imglist[i] + ".jpg' class='picture-show' width='120'></td><td>" + nptlist[i] + "</td><td><form class='form-search'><input id='data-key-" + imglist[i] + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + namelist[i] + "', 'data-key-" + imglist[i] + "')\"><i class='icon-download-green'></i></a></td></tr>");
 		}
 		function openDownloadWin(name, id) {
-			var key = $(id).val();
+			var key = $("#" + id).val();
 			if(key == "" || key == null) {
 				alert("口令不能为空");
 			} else {
