@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2019）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
+
 {"blogid":"2020071301", "title":"国家生态景观等空间分布与统计数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"国家5A级旅游景区、国家地质公园、国家级森林公园、国家自然保护区、全国风景名胜、全国文保单位等空间分布与统计数据，来源于文化和旅游部等官方网站发布的相关信息，通过地理编码等处理，制作形成空间分布矢量数据点。", "img":"site/blogs/2020/images/NationalEco.jpg", "date":"2020-07-13", "href":"http://gaohr.win/site/blogs/2020/2020-07-13-national-ecology-landscape.html", "tags":["生态", "景观", "旅游"]},
 
 {"blogid":"2020060601", "title":"全国1:100万河流水系分布数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"水系是指流域内的河流、湖泊等各种水体组成的水网系统。中国境内七大水系均为河流构成，分别是珠江水系、长江水系、黄河水系、淮河水系、辽河水系、海河水系和松花江水系。提供全国各省1:100万河流水系矢量数据下载。", "img":"site/blogs/2020/images/RiversCN.jpg", "date":"2020-06-06", "href":"http://gaohr.win/site/blogs/2020/2020-06-06-china-rivers.html", "tags":["全国", "自然资源", "河流水系"]},
@@ -52,7 +54,7 @@ var bloglist = [
 
 {"blogid":"2018010801", "title":"使用Arcpy进行数据批处理", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"伴随着时空大数据的到来，海量数据的处理是一个所有科研工作者都无法忽视的重要问题。本文以Arcpy为例，在Python语言开发环境下，通过实际的编程应用，简单介绍空间数据批处理的实现方法。", "img":"site/blogs/2018/images/Arcpy.jpg", "date":"2018-01-08", "href":"http://gaohr.win/site/blogs/2018/2018-01-08-batch-data-process-using-arcpy.html", "tags":["Arcpy", "Python", "数据"]},
 
-{"blogid":"2017041801", "title":"中国国家基础地理信息系统（GIS）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国国家基础地理信息系统（GIS）数据，包括世界行政边界图、中国省级、县级行政界线、河流水系、主要公路铁路等矢量数据", "img":"site/blogs/2017/images/GIS_China.jpg", "date":"2017-04-18", "href":"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html", "tags":["GIS", "数据", "中国"]},
+{"blogid":"2017041801", "title":"中国国家基础地理信息系统（GIS）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国国家基础地理信息系统（GIS）数据，包括世界行政边界图、中国省级、县级行政界线、河流水系、主要公路铁路等矢量数据", "img":"site/blogs/2017/images/GIS_China.jpg", "date":"2017-04-18", "href":"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html", "tags":["GIS", "数据", "全国"]},
 
 {"blogid":"2017041601", "title":"权力的游戏中的冷知识", "type":"奇闻趣问", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"《冰与火之歌》可不是一部简单的奇幻小说，它蕴含了很多方面的深刻思想。", "img":"site/blogs/2017/images/GameofThrones.jpg", "date":"2017-04-16", "href":"http://gaohr.win/site/blogs/2017/2017-04-16-game-of-thrones-cold-knowledge.html", "tags":["冰与火之歌", "冷知识"]},
 
