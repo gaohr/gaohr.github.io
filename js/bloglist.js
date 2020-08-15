@@ -1,6 +1,6 @@
 var bloglist = [
 
-{"blogid":"2020081501", "title":"[深度学习] Tensorflow中Attention机制和测试实验", "type":"专业技术", "author":"<a href='###'>也无风雨也无晴</a>", "content":"", "img":"site/blogs/2020/images/TensorFlowDL.jpg", "date":"2020-08-15", "href":"http://gaohr.win/site/blogs/2020/2020-08-15-deep-learning-tensorflow-and-attention.html", "tags":["深度学习", "Tensorflow", "Python"]},
+{"blogid":"2020081501", "title":"[深度学习] Tensorflow中Attention机制和测试实验", "type":"专业技术", "author":"<a href='###'>也无风雨也无晴</a>", "content":"Attention机制在近几年的深度学习模型中可谓是刷分利器，万物皆可Attention。那么在卷积神经网络（CNN）中，Attention是怎么工作的呢？", "img":"site/blogs/2020/images/TensorFlowDL.jpg", "date":"2020-08-15", "href":"http://gaohr.win/site/blogs/2020/2020-08-15-deep-learning-tensorflow-and-attention.html", "tags":["深度学习", "Tensorflow", "Python"]},
 
 {"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2019）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
