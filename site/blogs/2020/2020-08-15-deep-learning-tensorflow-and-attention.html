@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | [深度学习] Tensorflow中Attention机制和测试实验</title>
+
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2020081501">
+				<div class="blogcontent alist">
+					<h2>[深度学习] Tensorflow中Attention机制和测试实验</h2>
+					<h2><small>[Deep learning] Attention mechanism and testing in Tensorflow</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="g-color-green">今天在写Attention结构时，突然想知道tensorflow内部点乘法（非矩阵乘法）的具体实现，于是自己写了一段代码测试，并结合代码解释下。</p>
+					<p class="blog-sub-title"><b>Attention机制</b></p>
+					<p>首先简单讲解下<b>Attention机制</b>。</p>
+					<p class="g-color-red">Attention机制在近几年的深度学习模型中可谓是刷分利器，万物皆可Attention。那么在卷积神经网络（CNN）中，Attention是怎么工作的呢？</p>
+					<p>在深度学习模型中，一般从深度和宽度两个方面增加模型的复杂度，深度自然是指模型层数，在Resnet框架出来之后，目前模型可以叠到1000多层（针对大型数据集，小型数据集容易出现过拟合）。而宽度指的是每层卷积核的个数，如Res-34最后一层卷积核为512，Res-50，101，152等最后一层为2048。在CNN中，卷积被用于提取图像特征，然后各个卷积核提取到的特征并未有区别化。</p>
+					<p>比如人眼看下图时（图片来源于网络，别在意内容），会自动聚焦到人物轮廓上，即赋予人物较大权重，实际上卷积就是一种赋权方式，也有论文基于此提出Spatial Attention结构。本文所讲的是<b>通道Attention结构</b>。</p>
+					<div class="row-fluid">
+						<div class="span4"></div><div class="span4"><img class="imginblog" src="2020-08-15-deep-learning-tensorflow-and-attention/img001.jpg"></div><div class="span4"></div>
+					</div>
+					<br>
+					<p><b>所谓通道Attention，即对不同特征图像赋予不同的权重。</b></p>
+					<p>如下图所示，左侧每层不同颜色表示不同的特征图，右侧表示不同权重，每种颜色代表一个权重值。通过左右相乘，得到不同的特征权重。计算过程中使用到了广播，左边一层特征图大小为<i>w*h</i>（二维张量），右边一层为单一标量（一个数值），相乘即左边每个元素与右边标量相乘。</p>
+					<div class="row-fluid">
+						<div class="span4"></div><div class="span4"><img class="imginblog" src="2020-08-15-deep-learning-tensorflow-and-attention/img002.jpg"></div><div class="span4"></div>
+					</div>
+					<br>
+					<p class="blog-sub-title"><b>Tensorflow中attention的实现机制</b></p>
+					<p>设某个卷积我们得到的张量形状为<i>T（b, w, h, d）</i>, b为batch_size，w和h为特征图T的长和宽，d为特征图个数，即为深度。</p>
+					<p><span class='badge badge-info'>1</span> 使用（b, w, h, c）形状的池化核对特征图T进行池化，得到（b, 1, 1, c）类似于全连接的层，c为全连接神经元个数;</p>
+					<p><span class='badge badge-info'>2</span> 再通过一层全连接将全连接层映射回（b, d），并reshape成<i>F（b, 1, 1, d）</i>，并使用softmax或者sigmoid等函数对F进行归一化;</p>
+					<p><span class='badge badge-info'>3</span> 最后使用tensorflow点乘T*F得到与原特征图大小一致的Attention图<i>A（b , w, h, d）</i>。</p>
+					<p class="blog-sub-title"><b>Tensorflow实例</b></p>
+					<p>代码：</p>
+					<div id="highlighter_229853" class="syntaxhighlighter  python"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="python comments">#attention</code></div><div class="line number2 index1 alt1"><code class="python keyword">def</code>&nbsp;<code class="python plain">multiply():</code></div><div class="line number3 index2 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">tem_list&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">[x&nbsp;</code><code class="python keyword">for</code>&nbsp;<code class="python plain">x&nbsp;</code><code class="python keyword">in</code>&nbsp;<code class="python functions">range</code><code class="python plain">(</code><code class="python value">36</code><code class="python plain">)]</code></div><div class="line number4 index3 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">c1&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">tf.constant(tem_list,&nbsp;shape</code><code class="python keyword">=</code><code class="python plain">[</code><code class="python value">3</code><code class="python plain">,</code><code class="python value">2</code><code class="python plain">,</code><code class="python value">2</code><code class="python plain">,</code><code class="python value">3</code><code class="python plain">])</code></div><div class="line number5 index4 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">c2&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">tf.constant([</code><code class="python value">0</code><code class="python plain">,</code><code class="python value">1</code><code class="python plain">,</code><code class="python value">2</code><code class="python plain">,</code><code class="python value">3</code><code class="python plain">,</code><code class="python value">4</code><code class="python plain">,</code><code class="python value">5</code><code class="python plain">,</code><code class="python value">6</code><code class="python plain">,</code><code class="python value">7</code><code class="python plain">,</code><code class="python value">8</code><code class="python plain">],shape</code><code class="python keyword">=</code><code class="python plain">[</code><code class="python value">3</code><code class="python plain">,</code><code class="python value">1</code><code class="python plain">,</code><code class="python value">1</code><code class="python plain">,</code><code class="python value">3</code><code class="python plain">])</code></div><div class="line number6 index5 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">tensor1&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">c1</code><code class="python keyword">*</code><code class="python plain">c2</code></div><div class="line number7 index6 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">sess</code><code class="python keyword">=</code><code class="python plain">tf.Session()</code></div><div class="line number8 index7 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">with&nbsp;sess.as_default():</code></div><div class="line number9 index8 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python functions">print</code><code class="python plain">(</code><code class="python string">'c1:'</code><code class="python plain">,&nbsp;c1.</code><code class="python functions">eval</code><code class="python plain">())</code></div><div class="line number10 index9 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python functions">print</code><code class="python plain">(</code><code class="python string">'c1:'</code><code class="python plain">,&nbsp;c2.</code><code class="python functions">eval</code><code class="python plain">())</code></div><div class="line number11 index10 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python functions">print</code><code class="python plain">(</code><code class="python string">'结果是：'</code><code class="python plain">,&nbsp;tensor1.</code><code class="python functions">eval</code><code class="python plain">())</code></div></div></td></tr></tbody></table></div>
+					<p>首先吹一波python的优雅，建立一个序数列表只需要一行代码<span class="codeblock">tem_list = [x for x in range(36)]</span>。</p>
+					<p>此程序的运行结果为：</p>
+					<div class="row-fluid">
+						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-15-deep-learning-tensorflow-and-attention/img003.jpg"></div><div class="span3"></div>
+					</div>
+					<p>为了复现2中的计算过程，我创建了一个大小为（3, 2, 2, 3）的张量C1，同时创建了一个（3, 1, 1 ,3）的张量C2，两者进行点乘得到结果tensor1。</p>
+					<p class="g-color-green">解释一下上图结果，我们首先抛开第一个维度3，只关注后面三维的数据，红框圈出的表示一个bacth中的C1，C2，C3数据，其中C1维度是（2,2,3），C2（1, 1,3）,tensor1（2,2,3）,对于这个数据点乘计算是，8*35, 8*32, 8*29, 8*26 。其含义是用标量8*维度为（2,2）的二维特征图，其他维度依次类推，便可得到tensor1的结果。</p>
+					<p>对于矩阵不熟悉的建议多输出矩阵，多看数据与形状之间的关系便可了解。</p>
+					<p class="blog-sub-title"><b>结语</b></p>
+					<p>这篇博客主要是讲Attention机制的理解及其在Tensorflow中的实现，并辅助代码理解tensorflow中张量点乘的实例计算方法。本博客仅仅代表作者个人理解，不具备任何教学和其他作用。如有错误，欢迎留言指正，也欢迎使用邮箱交流。如有转载，请注明出处。</p>
+					<p></p>
+					<p></p>
+					<p></p>
+					<p></p>
+					
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript </script>-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js">
+	
+</body>
+</html>

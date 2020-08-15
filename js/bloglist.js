@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020081501", "title":"[深度学习] Tensorflow中Attention机制和测试实验", "type":"专业技术", "author":"<a href='###'>也无风雨也无晴</a>", "content":"", "img":"site/blogs/2020/images/TensorFlowDL.jpg", "date":"2020-08-15", "href":"http://gaohr.win/site/blogs/2020/2020-08-15-deep-learning-tensorflow-and-attention.html", "tags":["深度学习", "Tensorflow", "Python"]},
+
 {"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2019）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2020071301", "title":"国家生态景观等空间分布与统计数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"国家5A级旅游景区、国家地质公园、国家级森林公园、国家自然保护区、全国风景名胜、全国文保单位等空间分布与统计数据，来源于文化和旅游部等官方网站发布的相关信息，通过地理编码等处理，制作形成空间分布矢量数据点。", "img":"site/blogs/2020/images/NationalEco.jpg", "date":"2020-07-13", "href":"http://gaohr.win/site/blogs/2020/2020-07-13-national-ecology-landscape.html", "tags":["生态", "景观", "旅游"]},
