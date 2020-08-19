@@ -27,7 +27,7 @@ $(document).ready(function() {
 			"</div>" +
 			"</div><hr>";
 	}
-	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-default btn-block'><b>>>> 点 击 阅 读 更 多 博 客 <<<</b></a></div>"
+	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-block'><b>>>> 点 击 阅 读 更 多 博 客 <<<</b></a></div>"
 	$("#blog").append(blogs_index);
 	
 	//Blogs
