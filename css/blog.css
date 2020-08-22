@@ -46,7 +46,7 @@ Blog Page
 .picture-show {border-bottom:3px solid rgba(0,0,0,0);cursor:pointer;}
 .picture-show:hover {border-bottom:3px solid rgba(0,105,255,0.5);opacity:0.85;cursor:pointer;}
 
-.blogcontent {color:#111;background:#fefefe;padding:20px 50px;min-height:500px;overflow:auto;}
+.blogcontent {color:#111;background:#fefefe;padding:20px 50px;min-height:500px;overflow:auto;box-shadow:0 10px 20px rgba(0, 0, 0, 0.1)}
 .blogcontent h2 {text-align:center}
 .blogcontent p {font-size:16px;line-height:32px;text-indent:2em;}
 .blogcontent p > a, span, i {text-indent:0;}

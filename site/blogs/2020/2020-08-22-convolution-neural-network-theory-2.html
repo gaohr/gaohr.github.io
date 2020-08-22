@@ -16,7 +16,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/style.css">
 	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
 	<link rel="shortcut icon" href="../../../img/logo.ico" />
-    <title>GaoHR | [深度学习] 卷积神经网络那点事儿----理论篇（一）</title>
+    <title>GaoHR | [深度学习] 卷积神经网络那点事儿----理论篇（二）</title>
 	<style>
 		.i_style {color:#00f;}
 	</style>
@@ -47,78 +47,72 @@
 					<!--<li class="active">Blog</li>-->
 				</ol>
 				<!--正文-->
-				<input id="blogid" style="display:none" value="2020082201">
+				<input id="blogid" style="display:none" value="2020082202">
 				<div class="blogcontent alist">
-					<h2>[深度学习] 卷积神经网络那点事儿----理论篇（一）</h2>
+					<h2>[深度学习] 卷积神经网络那点事儿----理论篇（二）</h2>
 					<h2><small>[Deep learning] Convolution neural network theory</small></h2>
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p class="blog-sub-title"><b>1. 引言</b></p>
-					<p>深度学习是一系列算法的统称，包括卷积神经网络（CNN），循环神经网络（RNN），自编码器（AE），深度置信网络（DBN），生成对抗模型（GAN）等。由于各算法的网络结构不同，被运用到的领域也不尽相同。卷积神经网络常被用于图像处理，如图像分类，语义分割，目标识别等领域。相比于传统的算法，深度学习能够自动构建特征，并联合这些特征完成相应任务。</p>
-					<p class="blog-sub-title"><b>2. 卷积神经网络</b></p>
-					<p><b>2.1 分类模型</b></p>
-					<p class="g-color-green">卷积神经网络常被用于图像分类任务中。在图像分类任务中，模型更倾向于找到图像的主要语义特征，如手写数字集中的几何特征，imagenet数据集中的主体的纹理和颜色特征等。</p>
-					<p>LeCun（1989）提出了第一个<b>卷积神经网络LeNet</b>，并将其用于数字识别，且取得了较好的成绩。该文章首次提出了权值共享(weight sharing)和特征图像(feature map)的概念。模型包括一个输入层，三个隐藏层，一个输入层。隐藏层包括两层卷积，一层全连接。激活函数使用了双曲正切(tanh)函数，损失函数使用了均方误差函数，网络训练采用了反向传播算法。特征图像指的是卷积层通过在被提取层上滑动计算，得到的结果图。权值共享是指在一个卷积核在卷积过程时共享相同的参数，即一个卷积核对应一种特征图。反向传播算法是1986年Hinton提出用于训练浅层神经网络的算法，该算法能够通过计算神经元的梯度，优化神经元权值，从而得到最佳的神经网络模型。</p>
-					<p>自2012年，Hinton等提出<b>AlexNet模型</b>以来，卷积神经网络一直围绕以下几个方面进行优化：</p>
-					<p><span class='badge badge-success'>1</span>卷积核尺寸及多尺寸卷积核的研究；</p>
-					<p><span class='badge badge-success'>2</span>反向传播算法时出现的梯度消失问题；</p>
-					<p><span class='badge badge-success'>3</span>模型体量大小的优化问题；</p>
-					<p><span class='badge badge-success'>4</span>低层特征与高层特征融合问题。</p>
-					<p>AlexNet首次使用<b>Relu激活函数</b>在一定程度上解决了sigmoid和tanh等激活函数存在的梯度弥散问题，同时在全连接层使用了dropout随机忽略部分神经元，避免模型的过拟合，在Relu激活函数后使用了局部响应归一化函数增强较大值的神经元，抑制较小的神经元，使模型更加契合于分类任务。然而AlexNet使用了 <i class="i_style">11*11</i> 和 <i class="i_style">5*5</i> 的几百个大卷积核进行特征的提取，最后使用全连接层作为模型的分类器，这种大尺寸和数量的卷积核及全连接层大大增加了模型的计算量。</p>
-					<p>VGGNet继承了AlexNet的卷积-池化-全连接层的思想，并使用了多个 <i class="i_style">3*3</i> 的卷积核叠加，提高了卷积层的感受野的同时，减少了神经元数量。例如，两个3*3卷积层的串联相当于1个 <i class="i_style">5*5</i> 的卷积层，3个 <i class="i_style">3*3</i> 的卷积层串联相当于1个 <i class="i_style">7*7</i> 的卷积层，即3个 <i class="i_style">3*3</i> 卷积层的感受野大小相当于1个 <i class="i_style">7*7</i> 的卷积层。但是3个 <i class="i_style">3*3</i> 的卷积层参数量只有 <i class="i_style">7*7</i> 的一半左右。但是VGGNet由于使用了大量的卷积核及全连接层，所以计算量更为巨大。</p>
+					<p>在<a href="./2020-08-22-convolution-neural-network-theory-2.html" target="_blank">理论篇（一）</a>中，我们介绍了几种常用的分类模型框架，如VGGNet，GoogleNet，和ResNet，并且介绍了几种简单的分割模型。如FCN，UNet，SegNet和Deeplab。从深度学习兴起到现在，模型一直朝着以下几个方向发展：</p>
+					<p><span class='badge badge-success'>1</span>模型特征提取能力；</p>
+					<p><span class='badge badge-success'>2</span>深层次模型构建问题；</p>
+					<p><span class='badge badge-success'>3</span>模型效率和模型体量问题。</p>
+					<p class="blog-sub-title"><b>2. 分割模型</b></p>
+					<p><b>1. Deeplab系列</b></p>
+					<p><a href="./2020-08-22-convolution-neural-network-theory-2.html" target="_blank">理论篇（一）</a>中，我们介绍了Deeplab-v1版本，Deeplab-v1使用了空洞卷积，减少池化层的同时，扩大模型的感受野，可以在很大程度上还原了图像的低层特征。</p>
+					<p>在Deeplab-v2中，受到SPP-Net的金字塔结构启发，采用多级金字塔结构，使用多尺度空洞卷积，构成ASPP结构，在v1和v2结构中，还使用了条件随机场CRF来优化分割结果。Deeplab-v3优化了ASPP结构，在v2版本中，由于空洞卷积的rate设置过大（论文中使用的是6，12，18），3×3的空洞卷积未能考虑邻域信息，会退化成1×1的卷积核。于是v3版本中加入了一个并行1×1的卷积核分支，再加上原来rate=6，12，18的卷积核并行，最后使用concat函数进行特征融合。<b>在Deeplab-v3+中，传统卷积网络被替换成了深度可分离卷积，Encoder继续使用了Deeplab-v3的编码器，在后面又加入了传统分割的上升采样Decoder结构</b>。</p>
+					<p>在传统卷积计算中，每个卷积核与输入层特征图相乘后再相加，输出特征图是由卷积核个数决定，如此实现特征提取。深度可分离卷积的卷积核个数和输入特征图相等，每个卷积核和相对应的特征图相乘，即输入特征图与输出特征图相等，如此减少了相乘后相加的操作，大大减少了计算量。<b>在框架上，Deeplab-v3+使用了Xception结构，并用步长为2的深度分离卷积替代了最大池化层，减少特征的损失</b>。</p>
 					<div class="row-fluid">
-						<div class="span4"></div><div class="span4"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img001.jpg"></div><div class="span4"></div>
+						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img001.jpg"></div><div class="span2"></div>
 					</div>
-					<p>GoogleNet提出了一种<b>Inception结构</b>，这种结构使用了 <i class="i_style">1*1</i>，<i class="i_style">3*3</i> 和 <i class="i_style">5*5</i> 的卷积核进行特征提取，并使用了 <i class="i_style">1*1</i> 的卷积核对大卷积核进行降维，减少计算量的同时，丰富了特征空间。值得一提的是，GoogleNet使用了 <i class="i_style">7*7</i> 的卷积层取代了传统的全连接层，进一步提高了模型的效率。然而无论是VGGNet还是GoogleNet，随着模型层数的增加，分类性能并没有提高，反而收敛速度越来越慢，进而出现梯度消失的问题。</p>
 					<div class="row-fluid">
-						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img002.jpg"></div><div class="span2"></div>
+						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img002.jpg"></div><div class="span2"></div>
 					</div>
-					<p>ResNet是何凯明等在2015年提出深度卷积神经网络模型，他们发现深层次模型在训练时，有些层对网络的分类能力并没有正面反馈，反而会降低模型的精度。所以他们提出了<b>Shortcut Connection</b>的结构，上层网络的输出为X，在下一层网络的变换映射下变为F(x)，假设目前网络已达到最优，F(x)层为使模型退化的卷积层，我们的目的是将F(x)训练成恒等变换层。传统累加模型在训练时，很少能将F(x)自动训练成恒等变换层，ResNet提出的残差网络解决了这个问题，模型直接使用上层输出X及映射层F(x)的和作为模型的训练目标，何凯明等人通过大量实验发现将G(x)中的F(x)训练为0比将F(x)训练成恒等映射容易得多。从直观上来理解，SC结构中，每一层都能接收到上一层的信息，如此在链式求导时使每一项多出1（即X的求导项）。</p>
+					<p><b>2. Global Convolutional Network（GCN）</b></p>
+					<p>为了解决感受野问题，GCN参考了FCN的网络结构，在每个池化层操作后，GCN使用了与特征图大小一致的卷积核进行全局卷积，并与经过反卷积的特征图融合。全局卷积操作在池化之前，扩大了模型的感受野，并借助FCN的思想，将全局感受野与反卷积结果融合，减少信息损失的同时，增强了分割结果图的细节信息。<b>然而，FCN参数过多，训练较慢，GCN加入的大卷积操作会进一步增大计算量，影响模型的效率</b>。</p>
 					<div class="row-fluid">
-						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img003.jpg"></div><div class="span3"></div>
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img003.jpg"></div><div class="span1"></div>
 					</div>
-					<p>目前主流的卷积神经网络，都采用了ResNet的SC结构。在以后的模型中，大多都借鉴了ResNet的思想，深层的卷积都联合了浅层特征，加强了特征的重用，缓解了梯度消失问题。典型的网络如DenseNet所有层之间密集连接，每层卷积层都接受来自前N-1个卷积层的结果，这种结构加大了特征的重用，减少了神经元的数量。简单来说，ResNet在很大程度上解决了上面提出的四个问题：首先，ResNet里面的每个SC结构里吸收了VGGNet的精华，都是 <i class="i_style">3*3</i> 的卷积核嵌套。其次ResNet解决了深层次网络存在的梯度消失的问题，大大增加了网络的深度，如何凯明等已完成了一千多层的ResNet，并且分类性能并未下降。然后针对模型的体量问题，ResNet参考了GoogleNet的 <i class="i_style">1*1</i> 卷积核思想，对高维特征进行了降维。最后，SC结构考虑了前一层的特征图，综合了前层的特征，这一思想为以后的模型构建提出了一种新的思路。</p>
-					<p><span class="g-color-red">近年来，各种模型在体量上已经能够满足绝大多数特征的提取，然而这些特征对分类结果的影响是否相同？</span>如在VGG-19中，最后一层一共有512个特征图，但是并不是每个特征图对最后的分类结果都有正面的贡献，那么如何区分这些特征的的贡献度呢？Google团队在RNN上首先使用了attention机制。Attention机制来源于人在观察事物并不是关注事物的整体，而是事物的某些突出的特征，即赋予突出特征较大权重。在CNN中，这一机制是通过卷积实现的：假设我们在某一层的特征图大小为 <i class="i_style">W*H*D</i> （W和H代表特征图大小，D为特征图深度），首先使用深度为D，大小为W*H卷积核进行卷积，得到 <i class="i_style">1*1*D</i> 的贡献度矩阵，并使用sigmoid函数进行归一化，得到的结果与原 <i class="i_style">W*H*D</i> 直接相乘（<b>不是矩阵乘法</b>），这样每个特征图所占的权重就不一样了。目前，attention机制已经广泛运用到深度学习的各种模型中。</p>
-					<p>另一方面，卷积神经网络模型也朝着高效率，高精度的方向发展。无论是Google公司提出的轻量级网络MobileNet（2017）、EfficientNet（2019），还是Momenta公司提出的SENet(2017)，都将研究方向放在如何在提高精度的前提下，尽量减少模型的体量，去除冗余网络分支。</p>
-					<p>从以上的模型发展可以看出，一个好的模型不仅能够保证其易于训练，拟合任务的数据集，以较小的体量充分地提取到图像特征，并且能够将多级特征联合，注重各级特征的语义，以便更好地完成分类任务，这些都是是以后我们构建模型所要考虑的问题。</p>
-					<p><b>2.2 分割模型</b></p>
-					<p class="g-color-green">分割任务是将图像上的按预定义好的像素类别精确分割出来。相比于分类模型注重于图像主体特征的联合，分割模型更加注重于图像的细节特征的恢复。</p>
-					<p>2015年，Long等人首次提出了基于像素的语义分割模型全卷积神经网络(FCN)。FCN继承了CNN前5层卷积-池化操作，并将全连接层替换成了反卷积层。经过前5层卷积池化操作，分别得到原图1/2，1/4，1/8，1/16，1/32大小的特征图。若直接使用1/32特征图进行32倍反卷积，得到的模型为FCN-32；使用1/32的特征图进行2倍反卷积，得到1/16的热度图，再与1/16的特征图进行融合，最后对融合结果进行16倍反卷积，得到的模型为FCN-16。以此类推，文章还训练了FCN-8。由于FCN-8融合了1/8特征图，所以其细节上的效果要好于FCN-16和FCN-32。然而FCN还是存在以下缺点：</p>
-					<p><span class='badge badge-danger'>1</span>由于经过了几次池化操作，使得图像细节丢失，所以FCN的结果不够平滑与精细；</p>
-					<p><span class='badge badge-danger'>2</span>FCN是对逐像素进行分类，这导致每个像素被当做独立的个体，割裂了像素间的空间关系，缺乏空间一致性；</p>
-					<p><span class='badge badge-danger'>3</span>FCN直接使用了8倍、16倍、32倍反卷积，由于反卷积步长太大，难以训练达到原标签的分割效果。</p>
+					<p class="blog-sub-title"><b>3. Discriminative Feature Network（DFN）</b></p>
+					<p><b>DFN主体框架是ResNet，主要包括两个子网络SmoothNetwork和BorderNetwork</b>。SmoothNetwork网络负责解决类内不一致问题，即类内部出现一些噪音和错误。BorderNetwork网络用于判别类间差距，强化类别间判别效果。在SmoothNetwork网络中，使用了改进的Residual模块进行训练。BorderNetwork中加入了Attention模块，优化了各个通道的权重，提高了特征分类的准确性。对于网络训练，两个模块的loss同时计算，通过一个参数K调整其占的权重。</p>
 					<div class="row-fluid">
-						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img004.jpg"></div><div class="span2"></div>
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img004.jpg"></div><div class="span1"></div>
 					</div>
-					<p><b>U-Net是FCN的改进模型之一</b>，最开始被用于医学影像的分割。相比于FCN，U-Net使用了最经典的编码-解码结构。编码即为CNN特征提取的过程，在解码时，U-Net不仅使用了反卷积，还融合了每个卷积-池化层的特征图，并在解码时使用了卷积层进行训练，所以严格意义上讲，U-net才是第一个在上采样时经过训练的分割网络模型。其联合底层的特征与分类模型的思想也有异曲同工之妙。然而U-net还是具有传统分割神经网络模型的缺点：最大池化问题。大部分神经网络模型在进行特征提取时都会使用最大池化来减小网络体量，突出主要特征。然而这种方法在分割时忽略了细节，并且丢失了主体特征的空间位置信息，直接对这种特征图进行上采样容易出现特征位置的不对应。</p>
+					<p><b>4. ExFuse架构</b></p>
+					<p>在之前的网络结构中，低级特征并不具有语义信息，而一般的模型直接将不具备语义信息的低级特征和经过多层卷积的高级语义特征进行融合，这种方式虽然在一定程度上考虑了低级特征，缺没有顾及到低级特征和高级特征融合时存在的特征不一致问题。ExFuse在结构上参考了U-net的编码-解码结构，在编码结构中，每层低级特征中引入多层语义监督（SS）模块，在编码前期使用辅助监督的方式完善低级特征。在特征融合模块，使用了高级语义嵌入（SEB）模块，将高层语义信息进行上采样并与低层特征图进行点乘融合，使得特征图既具有语义的同时，还具备低层特征的细节信息。在经过特征融合后，加入了GCN，提高感受野的同时嵌入更多的邻域信息。</p>
 					<div class="row-fluid">
-						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img005.jpg"></div><div class="span2"></div>
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img005.jpg"></div><div class="span1"></div>
 					</div>
-					<p><b>SegNet改进了U-Net的上采样结构</b>。SegNet在编码-解码时使用的是VGG模型，只是在池化的过程中记录了每个最大池化特征的索引，在模型上采样时，通过这些索引将这些特征还原到原来位置。这种方法略去了FCN和U-Net的反卷积操作，直接使用值为0的padding进行上采样，所以模型比上述两种容易训练，体量也更小。然而由于池化层的存在，SegNet在小物体分割方面远不如大物体。</p>
+					<p><b>5. Bilateral Segmentation Network（BiseNet）</b></p>
+					<p>分割网络一直在探究低层特征和高层特征的融合问题。在BiseNet中，提取全局细节信息的Spatial Path的模块和提取语义信息的Context Path模块并不是通过简单的相加进行融合，而是通过一个Feature Fusion Module（FFM）模块整合后接入一个训练模型，让其进行自训练，从而达到融合效果。在特征融合后，同样引入了注意力机制。特别地，在Loss function中，Context Path的Loss是作为辅助判别函数来进行计算。</p>
 					<div class="row-fluid">
-						<div class="span4"></div><div class="span4"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img006.jpg"></div><div class="span4"></div>
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img006.jpg"></div><div class="span1"></div>
 					</div>
-					<p>---</p>
+					<p><b>6. Deep Feature Aggregation Network（DFANet）</b></p>
+					<p>DFANet是一种轻量级网络结构，在Encode结构中，同样使用的深度可分离卷积网络减少卷积参数。整个DFANet的特征处理网络有两种方法：子网特征聚合和子阶段聚合。子网特征聚合负责将每个backbone（图中虚线框）输入到下一个backbone进行特征聚合。子阶段聚合负责将本阶段经上采样后高级语义特征和本阶段正常下采样的特征聚合（图中C字母部分）。为了维持模型的感受野， 在模型的fc-attention模块，使用的是分类模型的预训练参数。此操作的原因是分类数据集远远多于分割数据集，因此全连接参数训练得更为彻底。</p>
 					<div class="row-fluid">
-						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img007.jpg"></div><div class="span2"></div>
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img007.jpg"></div><div class="span1"></div>
 					</div>
-					<p>为了减少池化层带来的信息损失，Deeplab将VGG最后两层池化的步长减少为1，同时增加了1层padding，如此可以保留细节信息。然而更改了VGG的池化层后，原模型的感受野变小，Deeplab提出了一种带孔卷积增加了模型的感受野，图a中是dilated＝1的带孔卷积，就是普通卷积。图b中是dilated＝2的带孔卷积，红点表示参与计算的点，未参与计算的带孔点由0补充，如此达到扩大感受野的目的，通过合适的步长，可以让特征图上所有点参与到卷积中。带孔卷积在不增加计算量的前提下，增大了分割模型的感受野，同时减少了池化层，让模型更加聚焦于细节特征。</p>
+					<p><b>7. RefineNet</b></p>
+					<p>RefineNet在总体结构上延续了Unet的思路，但是在特征融合上并不是像U-net网络中直接将下采样的特征图和上采样后的语义特征图进行特征融合，而是使用了一个Refine模块进行处理。在RefineNet的下采样阶段使用了ResNet作为模型的框架，对于每次下采样后，都会有一个Refine模块进行特征融合处理。Refine模块总共包括三个子模块：第一个RCU模块用于预训练调整权重；MRF模块则是特征融合模块，主要作用是将经过预训练的特征图和上采样模块的特征进行融合。CRP模块是为了通过大池化窗口捕捉语义信息，最后通过一个RCU模型进行融合训练。</p>
 					<div class="row-fluid">
-						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-1/img008.jpg"></div><div class="span3"></div>
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img008.jpg"></div><div class="span1"></div>
 					</div>
 					<p class="blog-sub-title"><b>3. 总结</b></p>
-					<p>在卷积神经网络模型中，还有一种用于目标检测和识别的网络如RCNN，该网络主要包括分类和回归两种任务，分类主要是描述任务主体的类别，回归主要是找出任务主体的具体位置，这里不再展开讨论。</p>
-					<p>从LeNet到AlexNet，是模型体量的增加和训练方法的优化。从AlexNet到VGGNet，是卷积方法的优化和特征图的泛化。而GoogleNet更多的是压缩模型结构，去除冗余。ResNet则是卷积神经网络突破层数限制的重大创新。在以后的模型中，研究者们更加注重特征的含义和模型的效率，Attention机制提出了“不同特征不同权重”的新研究方向，DenseNet给出特征的重复利用的研究路线。SENet和EfficientNet则更注重于网络体量的压缩与优化。所以，解释各层特征的含义，了解模型在训练时具体的过程，优化模型体量，增加分类精度，是卷积神经网络研究的重点和难点。</p>
+					<p>本篇主要讲了各种分割模型的优缺点，深度学习中每年会有模型的创新，但是在其思想上还是会有类似的地方，理解这些模型的内核思想，是了解深度学习模型，构建自己模型的重要方法。</p>
 					<p></p>
 					<p><b>参考文献</b></p>
-					<p class="g-color-blue">Badrinarayanan V , Kendall A , Cipolla R . SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation[J]. 2015.</p>
-					<p class="g-color-blue">Chen L C , Papandreou G , Kokkinos I , et al. DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs[J]. IEEE transactions on pattern analysis and machine intelligence, 2018, 40(4):834.</p>
-					<p class="g-color-blue">He, K, Zhang X, Ren S, et al. Deep Residual Learning for Image Recognition[J]. IEEE Conference on Computer Vision and Pattern Recognition. 2016. p. 770-778.</p>
-					<p class="g-color-blue">Krizhevsky A , Sutskever I , Hinton G . Imagenet classification with deep convolutional neural networks[C]. NIPS. Curran Associates Inc. 2012.</p>
-					<p class="g-color-blue">Long J , Shelhamer E , Darrell T . Fully Convolutional Networks for Semantic Segmentation[J]. IEEE Transactions on Pattern Analysis & Machine Intelligence, 2014, 39(4):640-651.</p>
-					<p class="g-color-blue">Ronneberger O , Fischer P , Brox T . U-Net: Convolutional Networks for Biomedical Image Segmentation[J]. 2015.</p>
-					<p class="g-color-blue">Simonyan K , Zisserman A . Very Deep Convolutional Networks for Large-Scale Image Recognition[J]. Computer Science, 2014.</p>
-					<p class="g-color-blue">Szegedy C , Liu N W , Jia N Y , et al. Going deeper with convolutions[C].2015 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). IEEE Computer Society, 2015.</p>
-					
+					<p class="g-color-blue">Lin G , Milan A , Shen C , et al. RefineNet: Multi-Path Refinement Networks for High-Resolution Semantic Segmentation[J]. 2016.</p>
+					<p class="g-color-blue">Hanchao Li , Pengfei Xiong , et al. DFANet: Deep Feature Aggregation for Real-Time Semantic Segmentation.2019.</p>
+					<p class="g-color-blue">Changqian Yu , Jingbo Wang , et al.BiSeNet: Bilateral Segmentation Network for Real-time Semantic Segmentation[J],2018.</p>
+					<p class="g-color-blue">Zhenli Zhang , Xiangyu , et al. ExFuse: Enhancing Feature Fusion for Semantic Segmentation.2018.</p>
+					<p class="g-color-blue">Yu C , Wang J , Peng C , et al. Learning a Discriminative Feature Network for Semantic Segmentation[C]. Conference on Computer Vision and Pattern Recognition (CVPR). IEEE, 2018.</p>
+					<p class="g-color-blue">Peng C , Zhang X , Yu G , et al. Large Kernel Matters -- Improve Semantic Segmentation by Global Convolutional Network[J]. 2017.</p>
+					<p class="g-color-blue">Chen L C , Papandreou G , Kokkinos I , et al. Semantic Image Segmentation with Deep Convolutional Nets and Fully Connected CRFs[J]. Computer ence, 2014(4):357-361.</p>
+					<p class="g-color-blue">Chen L C , Papandreou G , Kokkinos I , et al. DeepLab: Semantic Image Segmentation with Deep Convolutional Nets, Atrous Convolution, and Fully Connected CRFs[J]. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2018, 40(4):834-848.</p>
+					<p class="g-color-blue">Chen L C , Papandreou G , Schroff F , et al. Rethinking Atrous Convolution for Semantic Image Segmentation[J]. 2017.</p>
+					<p class="g-color-blue">Chen L C , Papandreou G , Schroff F , et al. Encoder-Decoder with Atrous Separable Convolution for Semantic Image Segmentation. 2017.</p>
+					<hr>
 					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 以上均为作者个人观点，欢迎批评指正，也欢迎使用邮箱交流。如有转载，请注明出处。</p>
 					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
 					<br>
