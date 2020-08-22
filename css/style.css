@@ -21,12 +21,11 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(225,225,225,0.75);z-index:0;height:auto;width:80%;margin-left:9%;}
+.main-page {position:relative;margin-top:60px;background-color:rgba(235,235,235,0.5);z-index:0;height:auto;width:80%;margin-left:9%;box-shadow:0 0 5px rgba(0, 0, 0, 0.1)}
 .main-page .span2 {margin-left:10px}
 
 .main-div {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
-.centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px}
-
+.centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px;box-shadow:0 10px 20px rgba(0, 0, 0, 0.1)}
 .centerpage .carousel img {cursor:pointer;width:100%;}
 .centerpage .carousel ol {top:90%;}
 .centerpage .carousel .img-title {color:#fff;background-color:rgba(0,0,0,0.75);width:100%;padding:20px;font-size:1.5em}
