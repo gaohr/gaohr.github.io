@@ -73,7 +73,7 @@
 					<div class="row-fluid">
 						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img003.jpg"></div><div class="span1"></div>
 					</div>
-					<p class="blog-sub-title"><b>3. Discriminative Feature Network（DFN）</b></p>
+					<p><b>3. Discriminative Feature Network（DFN）</b></p>
 					<p><b>DFN主体框架是ResNet，主要包括两个子网络SmoothNetwork和BorderNetwork</b>。SmoothNetwork网络负责解决类内不一致问题，即类内部出现一些噪音和错误。BorderNetwork网络用于判别类间差距，强化类别间判别效果。在SmoothNetwork网络中，使用了改进的Residual模块进行训练。BorderNetwork中加入了Attention模块，优化了各个通道的权重，提高了特征分类的准确性。对于网络训练，两个模块的loss同时计算，通过一个参数K调整其占的权重。</p>
 					<div class="row-fluid">
 						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-22-convolution-neural-network-theory-2/img004.jpg"></div><div class="span1"></div>
