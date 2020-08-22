@@ -42,12 +42,12 @@ $(document).ready(function($) {
 	}
 	
 	/*暂停右键功能*/
-	$(document).bind("contextmenu",function(e){
-		//构建个性右键化菜单
-		var arrT = new Array("啊哦，右键功能不能用");
-		var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","color": "#666","font-size": "1.em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
-		return false;
-	});
+	//$(document).bind("contextmenu",function(e){
+	//	//构建个性右键化菜单
+	//	var arrT = new Array("啊哦，右键功能不能用");
+	//	var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","color": "#666","font-size": "1.em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
+	//	return false;
+	//});
 		
 	// Comments
 	if($("#comments").length > 0) {
