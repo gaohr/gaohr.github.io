@@ -1,5 +1,34 @@
 ﻿
 var imglist = [
+	//2020
+	{
+		title:'division', data:'2020',
+	},
+	
+	{
+		title:'小花', data:'2020-07-27', location:'• 小浪家', type:'image', 
+		src:[{url:'2020072701.jpg'}, {url:'2020072702.jpg'}],
+		textcon:'瞧瞧她做了什么！',
+	},
+	
+	{
+		title:'小花', data:'2020-07-20', location:'• 莱芜To巨野', type:'image', 
+		src:[{url:'2020072001.jpg'}, {url:'2020072002.jpg'}, {url:'2020072003.jpg'}],
+		textcon:'无论环境多不合适，都不是不做运动的理由！',
+	},
+	
+	{
+		title:'小花', data:'2020-07-13', location:'• 小花家', type:'image', 
+		src:[{url:'2020071301.jpg'}, {url:'2020071302.jpg'}],
+		textcon:'打印了几张照片，收藏起来',
+	},
+	
+	{
+		title:'小浪', data:'2020-02-10', location:'• 小浪家', type:'image', 
+		src:[{url:'2020021001.jpg'}, {url:'2020021002.jpg'}, {url:'2020021003.jpg'}, {url:'2020021004.jpg'}],
+		textcon:'今年家里新来的小成员，欢迎你们哦',
+	},
+	
 	//2019
 	{
 		title:'division', data:'2019',
