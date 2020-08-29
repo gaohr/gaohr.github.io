@@ -64,14 +64,14 @@
 					<p><span class='badge badge-success'>2</span>PROJ6官方下载地址为<a href="https://proj.org/download.html", target="_blank">https://proj.org/download.html</a>，我下载的版本为<i class="i_style">proj-6.3.2</i></p>
 					<p><span class='badge badge-success'>3</span>SQLite3的官方下载地址为<a href="https://www.sqlite.org/download.html", target="_blank">https://www.sqlite.org/download.html</a>，打开网址，下载Source Code下的<i class="i_style">sqlite-amalgamation-3330000.zip</i>，和Precompiled Binaries for Windows下的<i class="i_style">sqlite-dll-win64-x64-3330000.zip</i> 和<i class="i_style">sqlite-tools-win32-x86-3330000.zip</i></p>
 					<p><span class='badge badge-success'>4</span>CMAKE的官方下载地址为<a href="https://cmake.org/download/", target="_blank">https://cmake.org/download/</a>，我下载的是<i class="i_style">cmake-3.18.1-win64-x64.msi</i>文件，下载后可直接双击安装。安装之后添加系统环境变量，以便在CMD命令行中使用。</p>
-					<p>为了文件组织清晰且方便编译，将下载的文件分别解压在<code>C盘</code>的根目录<code>GDAL</code>、<code>PROJ</code>、<code>SQLite</code>文件夹内，其中，SQLite的三个文件解压在SQLite文件夹中。</p>
+					<p>为了文件组织清晰且方便编译，将下载的文件分别解压在<span class="forld">C盘</span>的根目录<span class="forld">GDAL</span>、<span class="forld">PROJ</span>、<span class="forld">SQLite</span>文件夹内，其中，SQLite的三个文件解压在<span class="forld">SQLite</span>文件夹中。</p>
 					<p><b>注意事项和补充说明</b></p>
 					<p>---- 下载的版本最好与自己的系统版本一致，比如我的电脑是64位，我下载的都是64位的版本。</p>
 					<p>---- CMAKE是一个软件工具，用作源码编译，PROJ6源码中有cmake指令文件，可直接用CMAKE软件编译。</p>
 					<p class="blog-sub-title"><b>3. 编译和安装</b></p>
 					<p><b>3.1 编译SQLite静态库</b></p>
 					<p>在SQLite目录下创建一个新的VS项目，创建时选择“空项目”。</p>
-					<p>项目创建完成之后，将<code>SQLite</code>文件夹中的<code>sqlite3.c</code>、<code>sqlite3.h</code>、<code>sqlite3ext.h</code>、<code>sqlite3.def</code>四个文件添加到项目中，添加位置如下图所示。</p>
+					<p>项目创建完成之后，将<span class="forld">SQLite</span>文件夹中的<code>sqlite3.c</code>、<code>sqlite3.h</code>、<code>sqlite3ext.h</code>、<code>sqlite3.def</code>四个文件添加到项目中，添加位置如下图所示。</p>
 					<div class="row-fluid">
 						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img001.jpg"></div><div class="span3"></div>
 					</div>
@@ -109,13 +109,13 @@ SQLITE_ENABLE_UNLOCK_NOTIFY
 					</div>
 					<br>
 					<p>最后，生成解决方案，我以<b>Debug</b>版本为例。</p>
-					<p>在<code>C:\SQLite\SQLite3\x64\Debug</code>文件夹可以看到<code>SQLite3.lib</code>静态库和<code>SQLite3.exe</code>。</p>
-					<p>(Release版在<code>F:\SQLite\SQLite3\x64\Release</code>文件夹中)。</p>
-					<p>在<code>SQLite</code>目录中分别创建<code>include</code>和<code>lib</code>和<code>bin</code>文件夹,将刚才生成的<code>.lib</code>文件放入<code>lib</code>文件夹中,将<code>sqlite3.h</code>、<code>sqlite3ext.h</code>放入<code>include</code>中，将<i class="i_style">sqlite-tools-win32-x86-3280000.zip</i>中的<code>sqlite3.exe</code>放在<code>bin</code>文件夹中。</p>
+					<p>在<span class="forld">C:\SQLite\SQLite3\x64\Debug</span>文件夹可以看到<code>SQLite3.lib</code>静态库和<code>SQLite3.exe</code>。</p>
+					<p>(Release版在<span class="forld">F:\SQLite\SQLite3\x64\Release</span>文件夹中)。</p>
+					<p>在<span class="forld">SQLite</span>目录中分别创建<span class="forld">include</span>和<span class="forld">lib</span>和<span class="forld">bin</span>文件夹,将刚才生成的<code>.lib</code>文件放入<span class="forld">lib</span>文件夹中,将<code>sqlite3.h</code>、<code>sqlite3ext.h</code>放入<span class="forld">include</span>中，将<i class="i_style">sqlite-tools-win32-x86-3280000.zip</i>中的<code>sqlite3.exe</code>放在<span class="forld">bin</span>文件夹中。</p>
 					<p><b>注意事项</b></p>
 					<p>---- 如果在这里生成Debug版本，那后后续编译GDAL也需要选择Debug，如果需要Release版本需要重新编译GDAL版本，反之亦然。</p>
 					<p><b>3.2 编译PROJ6</b></p>
-					<p>首先，将下载好的<i class="i_style">proj-6.3.1</i>解压到<code>PROJ</code>文件夹内，在源码目录中创建<code>build</code>文件夹。</p>
+					<p>首先，将下载好的<i class="i_style">proj-6.3.1</i>解压到<span class="forld">PROJ</span>文件夹内，在源码目录中创建<span class="forld">build</span>文件夹。</p>
 					<p>然后，打开cmake软件，添加source code和build路径，如下图所示。</p>
 					<div class="row-fluid">
 						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img006.jpg"></div><div class="span3"></div>
@@ -135,15 +135,13 @@ SQLITE_ENABLE_UNLOCK_NOTIFY
 					</div>
 					<br>
 					<p>重新点击Configure，完成后会在下方提示Configuring done。</p>
-					<p>点击Generate，这时可以看到<code>build</code>文件夹里有<code>PROJ4.sln</code>。</p>
+					<p>点击Generate，这时可以看到<span class="forld">build</span>文件夹里有<code>PROJ4.sln</code>。</p>
 					<p><b>注意事项</b></p>
-					<p>---- cmake完成后会创建文件生成目录，我设置的是<code>C:/OSGeo4W</code>。</p>
+					<p>---- cmake完成后会创建文件生成目录，我设置的是<span class="forld">C:/OSGeo4W</span>。</p>
 					<p>打开x64 Native Tools Command Prompt for VS 2019（一般在开始菜单安装VS2019的文件夹里能找到），cd到build文件夹。</p>
 					<p>然后输入命令（分别输入，第一个运行完，输入第二个运行）</p>
-					<pre>
-msbuild ALL_BUILD.vcxproj /p:Configuration="Debug"
-msbuild INSTALL.vcxproj /p:Configuration="Debug"
-					</pre>
+					<p class="codeblock">msbuild ALL_BUILD.vcxproj /p:Configuration="Debug"<br>msbuild INSTALL.vcxproj /p:Configuration="Debug"
+					</p>
 					<p>开始编译（编译Release版是将上述命令中引号里面的Debug改为Release）。</p>
 					<div class="row-fluid">
 						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img009.jpg"></div><div class="span2"></div>
@@ -154,7 +152,7 @@ msbuild INSTALL.vcxproj /p:Configuration="Debug"
 					</div>
 					<br>
 					<p>这时，可以在设置的文件生成目录中找到生成的文件，并检查是否生成成功。</p>
-					<p><code>bin</code>中有各种可执行exe文件、<code>include</code>中有头文件、<code>lib</code>中是静态库文件等。</p>
+					<p><span class="forld">bin</span>中有各种可执行exe文件、<span class="forld">include</span>中有头文件、<span class="forld">lib</span>中是静态库文件等。</p>
 					<div class="row-fluid">
 						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img011.jpg"></div><div class="span2"></div>
 					</div>
@@ -176,17 +174,12 @@ msbuild INSTALL.vcxproj /p:Configuration="Debug"
 					<p><b>注意事项</b></p>
 					<p>---- 上述行数，不同版本不一样，但位置接近，也可以搜索寻找。</p>
 					<p>修改完成后，打开x64 Native Tools Command Prompt for VS 2019，cd进入库文件夹，输入以下命令（Debug版）：</p>
-					<pre>
-nmake /f makefile.vc WIN64=YES DEBUG=1
-nmake /f makefile.vc install
-nmake /f makefile.vc devinstall
-					</pre>
+					<p class="codeblock">nmake /f makefile.vc WIN64=YES DEBUG=1<br>nmake /f makefile.vc install<br>nmake /f makefile.vc devinstall
+					</p>
 					<p>如果是Release版，可输入以下命令：</p>
-					<pre>
-nmake /f makefile.vc
-nmake /f makefile.vc devinstall
-					</pre>
-					<p>编译和安装完成后，可以在GDAL文件夹下看到5个文件夹：<code>bin</code>、<code>data</code>、<code>html</code>、<code>include</code>和<code>lib</code>。</p>
+					<p class="codeblock">nmake /f makefile.vc<br>nmake /f makefile.vc devinstall
+					</p>
+					<p>编译和安装完成后，可以在GDAL文件夹下看到5个文件夹：<span class="forld">bin</span>、<span class="forld">data</span>、<span class="forld">html</span>、<span class="forld">include</span>和<span class="forld">lib</span>。</p>
 					<p><b>至此，GDAL编译完成，恭喜恭喜!</b></p>
 					<p class="blog-sub-title"><b>4. 使用和测试</b></p>
 					<p>在VS项目中使用GDAL，只需要在项目属性中添加GDAL目录，并引用.h头文件即可。</p>

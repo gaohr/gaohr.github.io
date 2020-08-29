@@ -59,8 +59,10 @@ Blog Page
 .blogcontent .blog-quote {font-size:0.9em;line-height:24px;padding:0 10px;margin-left:2em;border-left:5px solid #ccc;}
 .blogcontent .imginblog {width:auto;text-align:center}
 .blogcontent .imginblog img {max-width:800px;}
-.blogcontent .codeblock {background-color:#534; color:#0e0; padding:1px 5px}
+.blogcontent .codeblock {background-color:#222; color:#0ef; padding:1px 5px;text-indent:0;}
 .blogcontent .codeblock p {line-height:9px !important;}
+.blogcontent code {font-size:1.05em;}
+.blogcontent .forld{background-color:#fed;color:#333;font-size:1.05em;border:1px solid #eca;border-radius:5%;padding:0 5px;}
 .blogcontent .no-indent {text-indent:0}
 .blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
 .blogcontent .blog-important-part {line-height:24px;text-indent:0;padding:10px;margin:1.2em;border:1px solid #6af;border-bottom:7px solid #6af;display:inline-block}
