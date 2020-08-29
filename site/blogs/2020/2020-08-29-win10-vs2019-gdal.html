@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | WIN10和VS2019环境下编译GDAL详细步骤</title>
+	<style>
+		.i_style {color:#05a;}
+	</style>
+
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2020082901">
+				<div class="blogcontent alist">
+					<h2>WIN10和VS2019环境下编译GDAL详细步骤</h2>
+					<h2><small>Detailed steps of compiling GDAL under win10 and vs2019 environment</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>1. 引言</b></p>
+					<p><b>对于很多GIS、遥感等地学专业的同学来说，GDAL并不陌生。</b></p>
+					<p>GDAL(Geospatial Data Abstraction Library)是一个开源的栅格或矢量空间数据转换库，提供对多种栅格数据的支持，包括ASC，GeoTiff，IMG等。它可以利用抽象数据模型来表达所支持的各种文件格式，有一系列函数功能库来进行数据处理。在这里不再详细介绍GDAL，如果想了解更多，可参考GDAL官方网站<a href="https://gdal.org/", target="_blank">https://gdal.org/</a>。</p>
+					<p class="g-color-red">因为GDAL是个开源库，应用环境多样，所以官方并不提供各种应用环境下的编译版本，仅提供源码。如果需要使用GDAL，则必须在用户当前系统环境下进行编译。这便是<span class="g-color-green">本文主要介绍的内容，<b>如何成功编译GDAL！</b></span></p>
+					<p class="g-color-green">本文介绍编译GDAL的环境：<b>WIN10 x64</b>、<b>VS2019</b>；GDAL版本：<b>GDAL3.0</b>。</p>
+					<p>当然，有同学怕麻烦，从网上直接找懒人包（已编译好的GDAL版本），但是，在这里我要提醒一下，<b>懒人包不一定香</b>。正如前面介绍的，为什么GDAL需要自行编译，就是因为应用环境多样，网络上并不一定能找到合适自己系统环境的GDAL编译版本。如果没找到对的（很大概率），先不说无法使用，就算可以使用了，难免会遇到各种因版本不兼容而导致的问题，不如“<b>自己动手，丰衣足食</b>”。</p>
+					<p class="blog-sub-title"><b>2. 准备与下载</b></p>
+					<p><b>GDAL3.0</b>编译依赖<b>PROJ6投影库</b>，PROJ6要求<b>SQLite3环境</b>。所以在编译GDAL之前，需要先编译SQLite和PROJ6。除了下载所需要的源码，还有一个很重要的编译工具，<b>CMAKE</b>。</p>
+					<p><span class='badge badge-success'>1</span>GDAL官方下载地址为<a href="https://gdal.org/download.html", target="_blank">https://gdal.org/download.html</a>，我下载的版本是<i class="i_style">gdal-3.0.0</i></p>
+					<p><span class='badge badge-success'>2</span>PROJ6官方下载地址为<a href="https://proj.org/download.html", target="_blank">https://proj.org/download.html</a>，我下载的版本为<i class="i_style">proj-6.3.2</i></p>
+					<p><span class='badge badge-success'>3</span>SQLite3的官方下载地址为<a href="https://www.sqlite.org/download.html", target="_blank">https://www.sqlite.org/download.html</a>，打开网址，下载Source Code下的<i class="i_style">sqlite-amalgamation-3330000.zip</i>，和Precompiled Binaries for Windows下的<i class="i_style">sqlite-dll-win64-x64-3330000.zip</i> 和<i class="i_style">sqlite-tools-win32-x86-3330000.zip</i></p>
+					<p><span class='badge badge-success'>4</span>CMAKE的官方下载地址为<a href="https://cmake.org/download/", target="_blank">https://cmake.org/download/</a>，我下载的是<i class="i_style">cmake-3.18.1-win64-x64.msi</i>文件，下载后可直接双击安装。安装之后添加系统环境变量，以便在CMD命令行中使用。</p>
+					<p>为了文件组织清晰且方便编译，将下载的文件分别解压在<code>C盘</code>的根目录<code>GDAL</code>、<code>PROJ</code>、<code>SQLite</code>文件夹内，其中，SQLite的三个文件解压在SQLite文件夹中。</p>
+					<p><b>注意事项和补充说明</b></p>
+					<p>---- 下载的版本最好与自己的系统版本一致，比如我的电脑是64位，我下载的都是64位的版本。</p>
+					<p>---- CMAKE是一个软件工具，用作源码编译，PROJ6源码中有cmake指令文件，可直接用CMAKE软件编译。</p>
+					<p class="blog-sub-title"><b>3. 编译和安装</b></p>
+					<p><b>3.1 编译SQLite静态库</b></p>
+					<p>在SQLite目录下创建一个新的VS项目，创建时选择“空项目”。</p>
+					<p>项目创建完成之后，将<code>SQLite</code>文件夹中的<code>sqlite3.c</code>、<code>sqlite3.h</code>、<code>sqlite3ext.h</code>、<code>sqlite3.def</code>四个文件添加到项目中，添加位置如下图所示。</p>
+					<div class="row-fluid">
+						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img001.jpg"></div><div class="span3"></div>
+					</div>
+					<p>设置预定义处理，打开项目属性窗口，C/C++ -> 预处理器 -> 预处理器定义，替换为以下内容：</p>
+					<pre>
+_USRDLL
+SQLITE_ENABLE_RTREE
+SQLITE_ENABLE_COLUMN_METADATA
+SQLITE_ENABLE_FTS5
+SQLITE_ENABLE_UNLOCK_NOTIFY
+					</pre>
+					<div class="row-fluid">
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img002.jpg"></div><div class="span1"></div>
+					</div>
+					<br>
+					<p>设置模块定义文件</p>
+					<p>打开项目属性窗口，链接器 -> 输入 -> 模块定义文件：<code>sqlite3.def</code></p>
+					<p><b>注意事项</b></p>
+					<p>---- 这里要输入绝对路径，否则后续过程容易出错。</p>
+					<div class="row-fluid">
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img003.jpg"></div><div class="span1"></div>
+					</div>
+					<br>
+					<p>修改模块定义文件</p>
+					<p>打开<code>sqlite3.def</code>，在最后追加一行：</p>
+					<pre>sqlite3_unlock_notify</pre>
+					<div class="row-fluid">
+						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img004.jpg"></div><div class="span3"></div>
+					</div>
+					<br>
+					<p>项目配置类型改为静态库lib</p>
+					<p>打开项目属性窗口，配置属性 -> 常规。</p>
+					<div class="row-fluid">
+						<div class="span1"></div><div class="span10"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img005.jpg"></div><div class="span1"></div>
+					</div>
+					<br>
+					<p>最后，生成解决方案，我以<b>Debug</b>版本为例。</p>
+					<p>在<code>C:\SQLite\SQLite3\x64\Debug</code>文件夹可以看到<code>SQLite3.lib</code>静态库和<code>SQLite3.exe</code>。</p>
+					<p>(Release版在<code>F:\SQLite\SQLite3\x64\Release</code>文件夹中)。</p>
+					<p>在<code>SQLite</code>目录中分别创建<code>include</code>和<code>lib</code>和<code>bin</code>文件夹,将刚才生成的<code>.lib</code>文件放入<code>lib</code>文件夹中,将<code>sqlite3.h</code>、<code>sqlite3ext.h</code>放入<code>include</code>中，将<i class="i_style">sqlite-tools-win32-x86-3280000.zip<i>中的<code>sqlite3.exe</code>放在<code>bin</code>文件夹中。</p>
+					<p><b>注意事项</b></p>
+					<p>---- 如果在这里生成Debug版本，那后后续编译GDAL也需要选择Debug，如果需要Release版本需要重新编译GDAL版本，反之亦然。</p>
+					<p><b>3.2 编译PROJ6</b></p>
+					<p>首先，将下载好的<i class="i_style">proj-6.3.1</i>解压到<code>PROJ</code>文件夹内，在源码目录中创建<code>build</code>文件夹。</p>
+					<p>然后，打开cmake软件，添加source code和build路径，如下图所示。</p>
+					<div class="row-fluid">
+						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img006.jpg"></div><div class="span3"></div>
+					</div>
+					<br>
+					<p>点击Configure,弹出版本选择窗口.</p>
+					<p>选择vs2019版本，编译64位，点击“Finish”。</p>
+					<div class="row-fluid">
+						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img007.jpg"></div><div class="span3"></div>
+					</div>
+					<br>
+					<p>之后开始创建，在这过程中，会弹出错误窗口，如下图所示。</p>
+					<p><b>莫慌，正常</b>。</p>
+					<p>点击“OK”，找到列表中Name为<code>EXE_SQLITE3</code>、<code>SQLITE3_INCLUDE_DIR</code>和<code>SQLITE3_LIBRARY</code>的三个属性，可以看到现在它们的Value值都为NOTFOUND状态，也就是SQLite环境为空。这时，需要将<code>SQLite3.exe</code>、<code>include</code>和<code>SQLite3.lib</code>的路径分别赋给这三个属性。</p>
+					<div class="row-fluid">
+						<div class="span3"></div><div class="span6"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img008.jpg"></div><div class="span3"></div>
+					</div>
+					<br>
+					<p>重新点击Configure，完成后会在下方提示Configuring done。</p>
+					<p>点击Generate，这时可以看到<code>build</code>文件夹里有<code>PROJ4.sln</code>。</p>
+					<p><b>注意事项</b></p>
+					<p>---- cmake完成后会创建文件生成目录，我设置的是<code>C:/OSGeo4W</code>。</p>
+					<p>打开x64 Native Tools Command Prompt for VS 2019（一般在开始菜单安装VS2019的文件夹里能找到），cd到build文件夹。</p>
+					<p>然后输入命令（分别输入，第一个运行完，输入第二个运行）</p>
+					<pre>
+msbuild ALL_BUILD.vcxproj /p:Configuration="Debug"
+msbuild INSTALL.vcxproj /p:Configuration="Debug"
+					</pre>
+					<p>开始编译（编译Release版是将上述命令中引号里面的Debug改为Release）。</p>
+					<div class="row-fluid">
+						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img009.jpg"></div><div class="span2"></div>
+					</div>
+					<br>
+					<div class="row-fluid">
+						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img010.jpg"></div><div class="span2"></div>
+					</div>
+					<br>
+					<p>这时，可以在设置的文件生成目录中找到生成的文件，并检查是否生成成功。</p>
+					<p><code>bin</code>中有各种可执行exe文件、<code>include</code>中有头文件、<code>lib</code>中是静态库文件等。</p>
+					<div class="row-fluid">
+						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img011.jpg"></div><div class="span2"></div>
+					</div>
+					<br>
+					<p>至此，PROJ编译完成！</p>
+					<p><b>3.3 编译GDAL</b></p>
+					<p>安装好GDAL的依赖环境后，开始编译和安装GDAL。</p>
+					<p>首先，将下载的<i class="i_style">GDAL3.0.0</i>压缩包解压到GDAL文件夹内。</p>
+					<p>进入<i class="i_style">GDAL3.0.0</i>库文件夹中，找到<code>nmake.opt</code>文件，用VS2019打开，或者文本编辑器（我习惯用Notepad++，推荐），修改GDAL相关配置，比如添加PROJ、SQLite环境（路径）。</p>
+					<pre>
+第45行左右，MSVC_VER=，设置为1921(VS2019版本)；
+第59行左右，GDAL_HOME=，将生成GDAL文件的路径设置为你要存放GDAL的位置，我设置的是"C:\GDAL"；
+第189行左右，找到WIN64=YES，如果生成64位版本，取消注释，反之亦然；
+第227行，左右找到DLLBUILD=， 1启动动态编译、0为静态编译。我进行静态编译，设置DLLBUILD=0；
+第249行左右，找到PROJ_INCLUDE和PROJ_LIBRARY，分别设置成你刚才生成PROJ时的include和lib文件夹， 在PROJ_INCLUDE的“-I”后修改地址，并将.lib的名称对应修改为你的lib名。
+第495行左右，找到SQLITE_INC和SQLITE_LIB，同样的方式，设置SQLite路径。
+					</pre>
+					<p>设置完成后，保存文件。</p>
+					<p><b>注意事项</b></p>
+					<p>---- 上述行数，不同版本不一样，但位置接近，也可以搜索寻找。</p>
+					<p>修改完成后，打开x64 Native Tools Command Prompt for VS 2019，cd进入库文件夹，输入以下命令（Debug版）：</p>
+					<pre>
+nmake /f makefile.vc WIN64=YES DEBUG=1
+nmake /f makefile.vc install
+nmake /f makefile.vc devinstall
+					</pre>
+					<p>如果是Release版，可输入以下命令：</p>
+					<pre>
+nmake /f makefile.vc
+nmake /f makefile.vc devinstall
+					</pre>
+					<p>编译和安装完成后，可以在GDAL文件夹下看到5个文件夹：<code>bin</code>、<code>data</code>、<code>html</code>、<code>include</code>和<code>lib</code>。</p>
+					<p><b>至此，GDAL编译完成，恭喜恭喜!</b></p>
+					<p class="blog-sub-title"><b>4. 使用和测试</b></p>
+					<p>在VS项目中使用GDAL，只需要在项目属性中添加GDAL目录，并引用.h头文件即可。</p>
+					<div class="row-fluid">
+						<div class="span2"></div><div class="span8"><img class="imginblog" src="2020-08-29-win10-vs2019-gdal/img012.jpg"></div><div class="span2"></div>
+					</div>
+					<br>
+					<link rel='stylesheet' type='text/css' href='http://gaohr.win/site/special/2019/2019-09-24-code-highlight/shCoreEmacs.css'/><div id="highlighter_881349" class="syntaxhighlighter  c"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c preprocessor">#include&nbsp;&lt;gdal.h&gt;</code></div><div class="line number2 index1 alt1"><code class="c preprocessor">#include&nbsp;&lt;gdal_priv.h&gt;</code></div></div></td></tr></tbody></table></div>
+					<p>测试代码</p>
+					<div id="highlighter_191212" class="syntaxhighlighter c"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div><div class="line number27 index26 alt2">27</div><div class="line number28 index27 alt1">28</div><div class="line number29 index28 alt2">29</div><div class="line number30 index29 alt1">30</div><div class="line number31 index30 alt2">31</div><div class="line number32 index31 alt1">32</div><div class="line number33 index32 alt2">33</div><div class="line number34 index33 alt1">34</div><div class="line number35 index34 alt2">35</div><div class="line number36 index35 alt1">36</div><div class="line number37 index36 alt2">37</div><div class="line number38 index37 alt1">38</div><div class="line number39 index38 alt2">39</div><div class="line number40 index39 alt1">40</div><div class="line number41 index40 alt2">41</div><div class="line number42 index41 alt1">42</div><div class="line number43 index42 alt2">43</div><div class="line number44 index43 alt1">44</div><div class="line number45 index44 alt2">45</div><div class="line number46 index45 alt1">46</div><div class="line number47 index46 alt2">47</div><div class="line number48 index47 alt1">48</div><div class="line number49 index48 alt2">49</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="c comments">/*&nbsp;GDAL&nbsp;GeoTiff*/</code></div><div class="line number2 index1 alt1"><code class="c keyword bold">void</code>&nbsp;<code class="c plain">readRaster()</code></div><div class="line number3 index2 alt2"><code class="c plain">{</code></div><div class="line number4 index3 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//&nbsp;支持中文路径</code></div><div class="line number5 index4 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">CPLSetConfigOption(</code><code class="c string">"GDAL_FILENAME_IS_UTF8"</code><code class="c plain">,&nbsp;</code><code class="c string">"NO"</code><code class="c plain">); </code></div><div class="line number6 index5 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//注册所有的驱动&nbsp;</code></div><div class="line number7 index6 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">GDALAllRegister();</code></div><div class="line number8 index7 alt1">&nbsp;</div><div class="line number9 index8 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//GDAL数据集&nbsp;</code></div><div class="line number10 index9 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">GDALDataset*&nbsp;dataset;</code></div><div class="line number11 index10 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">dataset&nbsp;=&nbsp;(GDALDataset*)GDALOpen(inRaster,&nbsp;GA_ReadOnly);</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c keyword bold">if</code>&nbsp;<code class="c plain">(dataset&nbsp;==&nbsp;NULL)</code></div><div class="line number14 index13 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">{</code></div><div class="line number15 index14 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">cout&nbsp;&lt;&lt;&nbsp;</code><code class="c string">"Failed&nbsp;in&nbsp;open&nbsp;files!!!"</code>&nbsp;<code class="c plain">&lt;&lt;&nbsp;endl;</code></div><div class="line number16 index15 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c keyword bold">throw</code><code class="c plain">;</code></div><div class="line number17 index16 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">}</code></div><div class="line number18 index17 alt1">&nbsp;</div><div class="line number19 index18 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//&nbsp;获取数据行列数&nbsp;</code></div><div class="line number20 index19 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">nRows&nbsp;=&nbsp;dataset-&gt;GetRasterYSize();</code></div><div class="line number21 index20 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">nCols&nbsp;=&nbsp;dataset-&gt;GetRasterXSize();</code></div><div class="line number22 index21 alt1">&nbsp;</div><div class="line number23 index22 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//获取坐标变信息</code></div><div class="line number24 index23 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">dataset-&gt;GetGeoTransform(geotrans);</code></div><div class="line number25 index24 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">dx&nbsp;=&nbsp;geotrans[1];</code></div><div class="line number26 index25 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">xMin&nbsp;=&nbsp;geotrans[0];</code></div><div class="line number27 index26 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">xMax&nbsp;=&nbsp;geotrans[0]&nbsp;-&nbsp;nCols&nbsp;*&nbsp;geotrans[1];</code></div><div class="line number28 index27 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">yMax&nbsp;=&nbsp;geotrans[3];</code></div><div class="line number29 index28 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">yMin&nbsp;=&nbsp;geotrans[3]&nbsp;-&nbsp;nRows&nbsp;*&nbsp;geotrans[5];</code></div><div class="line number30 index29 alt1">&nbsp;</div><div class="line number31 index30 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//获取投影信息</code></div><div class="line number32 index31 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">srs&nbsp;=&nbsp;dataset-&gt;GetProjectionRef();</code></div><div class="line number33 index32 alt2">&nbsp;</div><div class="line number34 index33 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//获取波段&nbsp;</code></div><div class="line number35 index34 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">GDALRasterBand*&nbsp;band;</code></div><div class="line number36 index35 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">band&nbsp;=&nbsp;dataset-&gt;GetRasterBand(1);</code></div><div class="line number37 index36 alt2">&nbsp;</div><div class="line number38 index37 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//&nbsp;No&nbsp;data&nbsp;value</code></div><div class="line number39 index38 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">noDataValue&nbsp;=&nbsp;band-&gt;GetNoDataValue();</code></div><div class="line number40 index39 alt1">&nbsp;</div><div class="line number41 index40 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//读取数据&nbsp;</code></div><div class="line number42 index41 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//scanline&nbsp;=&nbsp;new&nbsp;BYTE[nRows&nbsp;*&nbsp;nCols];</code></div><div class="line number43 index42 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">dataLine&nbsp;=&nbsp;(</code><code class="c color1 bold">float</code><code class="c plain">*)CPLMalloc(</code><code class="c keyword bold">sizeof</code><code class="c plain">(</code><code class="c color1 bold">float</code><code class="c plain">)&nbsp;*&nbsp;(nCols)&nbsp;*&nbsp;(nRows));</code></div><div class="line number44 index43 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">band-&gt;RasterIO(GF_Read,&nbsp;0,&nbsp;0,&nbsp;nCols,&nbsp;nRows,&nbsp;dataLine,&nbsp;nCols,&nbsp;nRows,&nbsp;GDALDataType(band-&gt;GetRasterDataType()),&nbsp;0,&nbsp;0);</code></div><div class="line number45 index44 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//band-&gt;RasterIO(GF_Read,&nbsp;0,&nbsp;0,&nbsp;nCols,&nbsp;nRows,&nbsp;scanline,&nbsp;nCols,&nbsp;nRows,&nbsp;GDT_Float64,&nbsp;0,&nbsp;0);</code></div><div class="line number46 index45 alt1">&nbsp;</div><div class="line number47 index46 alt2"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c comments">//&nbsp;关闭数据集</code></div><div class="line number48 index47 alt1"><code class="c spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="c plain">GDALClose(dataset);&nbsp;</code></div><div class="line number49 index48 alt2"><code class="c plain">}</code></div></div></td></tr></tbody></table></div>
+					<p><b>注意事项</b></p>
+					<p>---- 以上代码为GDAL测试代码类函数的定义部分，不能直接运行，如果参考可自行修改补充！</p>
+					<hr>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	
+</body>
+</html>

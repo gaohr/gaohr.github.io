@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020082901", "title":"GDAL编译详细步骤与注意事项（精讲）", "type":"专业技术", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"GDAL是个开源库，应用环境多样，所以官方并不提供各种应用环境下的编译版本，仅提供源码。如果需要使用GDAL，则必须在用户当前系统环境下进行编译。这便是本文主要介绍的内容，如何成功编译GDAL！", "img":"site/blogs/2020/images/GDAL.jpg", "date":"2020-08-29", "href":"http://gaohr.win/site/blogs/2020/2020-08-29-win10-vs2019-gdal.html", "tags":["GDAL", "C++", "编译"]},
+
 {"blogid":"2020082202", "title":"[深度学习] 卷积神经网络那点事儿----理论篇（二）", "type":"专业技术", "author":"<a href='###'>也无风雨也无晴</a>", "content":"主要介绍了各种分割模型的优缺点，深度学习中每年会有模型的创新，但是在其思想上还是会有类似的地方，理解这些模型的内核思想，是了解深度学习模型，构建自己模型的重要方法。", "img":"site/blogs/2020/images/DeepLearning.jpg", "date":"2020-08-22", "href":"http://gaohr.win/site/blogs/2020/2020-08-22-convolution-neural-network-theory-2.html", "tags":["深度学习", "卷积神经网络", "理论"]},
 
 {"blogid":"2020082201", "title":"[深度学习] 卷积神经网络那点事儿----理论篇（一）", "type":"专业技术", "author":"<a href='###'>也无风雨也无晴</a>", "content":"深度学习是一系列算法的统称，包括卷积神经网络（CNN），循环神经网络（RNN），自编码器（AE），深度置信网络（DBN），生成对抗模型（GAN）等。由于各算法的网络结构不同，被运用到的领域也不尽相同。卷积神经网络常被用于图像处理，如图像分类，语义分割，目标识别等领域。", "img":"site/blogs/2020/images/DeepLearning.jpg", "date":"2020-08-22", "href":"http://gaohr.win/site/blogs/2020/2020-08-22-convolution-neural-network-theory-1.html", "tags":["深度学习", "卷积神经网络", "理论"]},
