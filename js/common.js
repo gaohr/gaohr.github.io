@@ -132,7 +132,8 @@ function Relatedlinks() {
 }
 
 function ClustrMaps() {
-	$("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
+	//$("#cltmap").html("<script type=\"text/javascript\" id=\"clustrmaps\" src=\"//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>");
+	$("#cltmap").html(<script type=\"text/javascript\" id=\"clstr_globe\" src=\"//cdn.clustrmaps.com/globe.js?d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&cmo=cf2500&cmn=00bf00&co=00365c\"></script>);
 }
 
 function Copyright() {
