@@ -132,8 +132,8 @@ function Relatedlinks() {
 }
 
 function ClustrMaps() {
-	//$("#cltmap").html("<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=00365c&ct=ffffff&cmo=00bf00&cmn=cf2500'></script>");
-	$("#cltmap").html("<div class='row-fluid'><div class='span1'></div><div class='span10'><script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ'></script></div><div class='span1'></div></div>");
+	$("#cltmap").html("<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=00365c&ct=ffffff&cmo=00bf00&cmn=cf2500'></script>");
+	//$("#cltmap").html("<div class='row-fluid'><div class='span1'></div><div class='span10'><script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ'></script></div><div class='span1'></div></div>");
 }
 
 
