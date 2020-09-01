@@ -29,8 +29,6 @@ $(document).ready(function($) {
 	/*百度统计*/
 	$("head").append("<script>var _hmt = _hmt || [];(function() {var hm = document.createElement('script');hm.src = 'https://hm.baidu.com/hm.js?7c81b8e214184b45986721bd426be652';var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(hm, s);})();</script>");
 	
-	var jrgwufvieh = "高会然";
-	
 	// 滚动监听
 	if($("#mainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('mainmenu', 180);}}
 	if($("#topicmainmenu").length > 0) {if($(window).width() > 900) {ScrollDivFixed('topicmainmenu', 180);}}
@@ -133,7 +131,7 @@ function Relatedlinks() {
 
 function ClustrMaps() {
 	//$("#cltmap").html("<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=00365c&ct=ffffff&cmo=00bf00&cmn=cf2500'></script>");
-	$("#cltmap").html("<div class='row-fluid'><div class='span1'></div><div class='span10'><script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ'></script></div><div class='span1'></div></div>");
+	$("#cltmap").html("<div class='row-fluid'><div class='span2'></div><div class='span8'><script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ'></script></div><div class='span2'></div></div>");
 }
 
 
@@ -198,6 +196,7 @@ function Weather() {
 	return re;
 }
 	
+var jrgwufvieh = "高会然";
 	
 function BlogAD() {
 	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
