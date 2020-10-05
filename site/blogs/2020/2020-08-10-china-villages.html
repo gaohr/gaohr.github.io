@@ -220,7 +220,7 @@
 		}
 		
 		for(var k = 0; k < provinces.length; k++) {
-			$("#data-list-shp").append("<tr><td>" + provinces[k].id + "</td><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "</td><td><img src='./2020-08-10-china-villages/img-" + provinces[k].name_en + ".jpg' class='picture-show' width='120'></td><td><select id='year-select-" + provinces[k].id + "' class='selectpicker' data-width='80' data-style='btn-warning'><option>2017</option><option>2018</option><option>2019</option></select> <span class='badge badge-important'>选</span></td><td><form class='form-search'><input id='data-key-" + provinces[k].id + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + provinces[k].name_en + "', '" + provinces[k].id + "')\"><i class='icon-download-blue'></i></a></td></tr>");
+			$("#data-list-shp").append("<tr><td>" + provinces[k].id + "</td><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "</td><td><img src='./2020-08-10-china-villages/img-" + provinces[k].name_en + ".jpg' class='picture-show' width='120'></td><td><select id='year-select-" + provinces[k].id + "' class='selectpicker' data-width='80' data-style='btn-warning'><option>2019</option><option>2018</option><option>2017</option></select> <span class='badge badge-important'>选</span></td><td><form class='form-search'><input id='data-key-" + provinces[k].id + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + provinces[k].name_en + "', '" + provinces[k].id + "')\"><i class='icon-download-blue'></i></a></td></tr>");
 		}
 		
 		function openDownloadWin(name, id) {
