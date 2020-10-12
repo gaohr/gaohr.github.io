@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020101201", "title":"全国各省Landsat TM分幅遥感影像数据", "type":"数据资源", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"随着卫星遥感影像的大量获取和应用，遥感影像的使用范围越来越广，针对不同应用需求，处理制作了基于省级行政区划分幅的Landsat TM 2006年遥感影像产品，对于政府部门、企事业单位等了解区域地貌类型、资源状况、城市分布以及指导规划等研究都有很大的帮助。", "img":"site/blogs/2020/images/RSTMCN.jpg", "date":"2020-10-12", "href":"http://gaohr.win/site/blogs/2020/2020-10-12-landsat-tm-province-cn.html", "tags":["TM", "遥感", "全国"]},
+
 {"blogid":"2020082901", "title":"GDAL编译详细步骤与注意事项（精讲）", "type":"专业技术", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"GDAL是个开源库，应用环境多样，所以官方并不提供各种应用环境下的编译版本，仅提供源码。如果需要使用GDAL，则必须在用户当前系统环境下进行编译。这便是本文主要介绍的内容，如何成功编译GDAL！", "img":"site/blogs/2020/images/GDAL.jpg", "date":"2020-08-29", "href":"http://gaohr.win/site/blogs/2020/2020-08-29-win10-vs2019-gdal.html", "tags":["GDAL", "C++", "编译"]},
 
 {"blogid":"2020082202", "title":"[深度学习] 卷积神经网络那点事儿----理论篇（二）", "type":"专业技术", "author":"<a href='http://wuxuan.site/' target='_blank'>也无风雨也无晴</a>", "content":"主要介绍了各种分割模型的优缺点，深度学习中每年会有模型的创新，但是在其思想上还是会有类似的地方，理解这些模型的内核思想，是了解深度学习模型，构建自己模型的重要方法。", "img":"site/blogs/2020/images/DeepLearning.jpg", "date":"2020-08-22", "href":"http://gaohr.win/site/blogs/2020/2020-08-22-convolution-neural-network-theory-2.html", "tags":["深度学习", "卷积神经网络", "理论"]},

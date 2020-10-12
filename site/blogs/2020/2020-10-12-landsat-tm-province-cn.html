@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国各省 Landsat TM 分幅遥感影像数据</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2020101201">
+				<div class="blogcontent alist">
+					<h2>全国各省 Landsat TM 分幅遥感影像数据</h2>
+					<h2><small>Landsat TM remote sensing image data of China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>1. 数据介绍</b></p>
+					<p class="g-color-green">Landsat主题成像仪 (TM)从1982年发射至今，其工作状态良好，几乎实现了连续的获得地球影像。LandsatTM影像包含7个波段，波段1-5和波段7的空间分辨率为30米，波段6（热红外波段）的空间分辨率为120米。南北的扫描范围大约为170km，东西的扫描范围大约为183km。</p>
+					<p>随着卫星遥感影像的大量获取和应用，遥感影像的使用范围越来越广，针对不同应用需求，处理制作了<b>基于省级行政区划分幅的 Landsat TM 2006年遥感影像产品</b>，对于政府部门、企事业单位等了解区域地貌类型、资源状况、城市分布以及指导规划等研究都有很大的帮助。</p>
+					<p><b></b></p>
+					<p><a href="", target="_blank"></a></p>
+					<p class="g-color-red"><b></b></p>
+					<p class="g-color-green"></p>
+					<p class="blog-sub-title"><b>2. 数据属性</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国（各省）</p>
+						<p>时间范围：2006</p>
+						<p>空间分辨率：90m</p>
+						<p>数据类型：栅格|GeoTIFF</p>
+						<p>投影坐标：Lambert Conformal Conic (基准：WGS 84)</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-orange"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<br><hr>
+					<p><b>其他说明</b></p>
+					<p>存储结构：本数据集包含2006年分幅影像产品，完全按照国家行政区范围进行图像拼接处理。数据源为对应时期Landsat5卫星正射产品数据，每一个行政区域数据存储在一个压缩文件中，压缩文件中包含产品图像文件（TIFF）、产品描述文件（XML）、产品缩略图文件（JPG）。</p>
+					<p>分块标识：用于GeoTIFF数据文件的分块标识，R-行号，C-列号。</p>
+					<p class="blog-sub-title"><b>3. 数据预览图</b></p>
+					<table class="table table-hover percent-90" style="font-size:1.1em;color:#921">
+						<tbody>
+							<tr><td><b>北京</b></td><td><b>重庆</b></td><td><b>山东</b></td></tr>
+							<tr><td><img src="2020-10-12-landsat-tm-province-cn/img/Beijing_TM_2006.jpg" class="picture-show"></td><td><img src="2020-10-12-landsat-tm-province-cn/img/Chongqing_TM_2006.jpg" class="picture-show"></td><td><img src="2020-10-12-landsat-tm-province-cn/img/Shandong_TM_2006.jpg" class="picture-show"></td></tr>
+							<tr><td><b>广东</b></td><td><b>四川</b></td><td><b>湖北</b></td></tr>
+							<tr><td><img src="2020-10-12-landsat-tm-province-cn/img/Guangdong_TM_2006.jpg" class="picture-show"></td><td><img src="2020-10-12-landsat-tm-province-cn/img/Sichuan_TM_2006.jpg" class="picture-show"></td><td><img src="2020-10-12-landsat-tm-province-cn/img/Hubei_TM_2006.jpg" class="picture-show"></td></tr>
+						</tbody>
+					</table>
+					<p class="blog-sub-title"><b>4. 数据下载</b></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-orange"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 该数据为“<span class="g-color-orange"><b>有限共享</b></span>”数据，不直接提供数据下载口令，需要先邮件（gispie@163.com）联系，获取共享口令，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
+					<div class="portlet box grey percent-90">
+						<div class="portlet-title">
+							<div class="caption">全国各省 Landsat TM 分幅遥感影像</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>省份</th><th>年份</th><th>数据源</th><th>缩略图</th><th>数据大小</th><th>下载链接</th></tr></thead>
+								<tbody id="data-list"></tbody>
+							</table>
+						</div>
+					</div>
+					<hr>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script>
+		var provinces = [
+			{"id":"11", "name":"北京市", "name_en":"Beijing", "url":"", "size":""},
+			{"id":"12", "name":"天津市", "name_en":"Tianjin", "url":"", "size":""},
+			{"id":"13", "name":"河北省", "name_en":"Hebei", "url":"", "size":""},
+			{"id":"14", "name":"山西省", "name_en":"Shanxi", "url":"", "size":""},
+			{"id":"15", "name":"内蒙古自治区", "name_en":"Neimenggu", "url":"", "size":""},
+			{"id":"21", "name":"辽宁省", "name_en":"Liaoning", "url":"", "size":""},
+			{"id":"22", "name":"吉林省", "name_en":"Jilin", "url":"", "size":""},
+			{"id":"23", "name":"黑龙江省", "name_en":"Heilongjiang", "url":"", "size":""},
+			{"id":"31", "name":"上海市", "name_en":"Shanghai", "url":"", "size":""},
+			{"id":"32", "name":"江苏省", "name_en":"Jiangsu", "url":"", "size":""},
+			{"id":"33", "name":"浙江省", "name_en":"Zhejiang", "url":"", "size":""},
+			{"id":"34", "name":"安徽省", "name_en":"Anhui", "url":"", "size":""},
+			{"id":"35", "name":"福建省", "name_en":"Fujian", "url":"", "size":""},
+			{"id":"36", "name":"江西省", "name_en":"Jiangxi", "url":"", "size":""},
+			{"id":"37", "name":"山东省", "name_en":"Shandong", "url":"", "size":""},
+			{"id":"41", "name":"河南省", "name_en":"Henan", "url":"", "size":""},
+			{"id":"42", "name":"湖北省", "name_en":"Hubei", "url":"", "size":""},
+			{"id":"43", "name":"湖南省", "name_en":"Hunan", "url":"", "size":""},
+			{"id":"44", "name":"广东省", "name_en":"Guangdong", "url":"", "size":""},
+			{"id":"45", "name":"广西壮族自治区", "name_en":"Guangxi", "url":"", "size":""},
+			{"id":"46", "name":"海南省", "name_en":"Hainan", "url":"", "size":""},
+			{"id":"50", "name":"重庆市", "name_en":"Chongqing", "url":"", "size":""},
+			{"id":"51", "name":"四川省", "name_en":"Sichuan", "url":"", "size":""},
+			{"id":"52", "name":"贵州省", "name_en":"Guizhou", "url":"", "size":""},
+			{"id":"53", "name":"云南省", "name_en":"Yunnan", "url":"", "size":""},
+			{"id":"54", "name":"西藏自治区", "name_en":"Xizang", "url":"", "size":""},
+			{"id":"61", "name":"陕西省", "name_en":"Shanxi02", "url":"", "size":""},
+			{"id":"62", "name":"甘肃省", "name_en":"Gansu", "url":"", "size":""},
+			{"id":"63", "name":"青海省", "name_en":"Qinghai", "url":"", "size":""},
+			{"id":"64", "name":"宁夏回族自治区", "name_en":"Ningxia", "url":"", "size":""},
+			{"id":"65", "name":"新疆维吾尔族自治区", "name_en":"Xinjiang", "url":"", "size":""},
+			{"id":"71", "name":"台湾省", "name_en":"Taiwan", "url":"", "size":""},
+			{"id":"81", "name":"香港特别行政区", "name_en":"Xianggang", "url":"", "size":""},
+			{"id":"82", "name":"澳门特别行政区", "name_en":"Aomen", "url":"", "size":""}
+		]
+		
+		for(var k = 0; k < provinces.length; k++) {
+			$("#data-list").append("<tr><td style='color:#921;font-size:1.1em'>" + provinces[k].name + "</td><td>2006年</td><td>TM</td><td><img src='2020-10-12-landsat-tm-province-cn/img/" + provinces[k].name_en + "_TM_2006.jpg' width='80px' class='picture-show'></td><td>" + provinces[k].size + "</td><td><a href='" + provinces[k].url + "' target='_blank'><i class='icon-download'></i></a></td></tr>");
+		}
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
+	</script>
+</body>
+</html>
