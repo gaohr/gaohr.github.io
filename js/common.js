@@ -143,7 +143,8 @@ function Copyright() {
 function Comments() {
 	return "<div class=\"portlet\">" +
 			"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
-			"<p class=\"g-color-red\">温馨提示：如遇评论系统图标显示异常，可将鼠标停留在图标片刻查看登录方式等</p>" +
+			"<p class=\"g-color-gray\">温馨提示：如遇评论系统图标显示异常，可将鼠标停留在图标片刻查看登录方式等</p>" +
+			"<p class=\"g-color-red\">特别提示：<b>最近评论系统后台登录异常，评论回复不及时，还请见谅，十分抱歉！如有要事，请邮箱联系 gispie@163.com （2020.10.31）</b></p>" +
 			"<!-- 来必力City版安装代码 -->" +
 			"<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC8zNzkwMC8xNDQzMA==\">" +
 			"<script type=\"text/javascript\">(function(d, s) {var j, e = d.getElementsByTagName(s)[0];if (typeof LivereTower === 'function') { return; }j = d.createElement(s);j.src = 'https://cdn-city.livere.com/js/embed.dist.js';j.async = true;e.parentNode.insertBefore(j, e);})(document, 'script');</script>" +
