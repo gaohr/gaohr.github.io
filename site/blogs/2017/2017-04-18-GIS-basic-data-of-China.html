@@ -165,6 +165,7 @@
 									<tr><td style="color:#921;font-size:1.2em"><b>农村<br>居民点</b></td><td>2015</td><td><img src="2017-04-18-GIS-basic-data-of-China/cun2015_points.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/cun2015_points-attr.JPG" width="60px" class="picture-show"> <img src="2017-04-18-GIS-basic-data-of-China/cun2015_points_rs.JPG" width="60px" class="picture-show"></td><td>329.5万</td><td>ESRI Shapefile<br>Point</td><td><form class='form-search'><input id="data-key-cun-point-2015" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-cun-point-2015"><i class='icon-download'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em"><b>行政村<br>居民点</b></td><td>2017</td><td><img src="2017-04-18-GIS-basic-data-of-China/cun2017_points.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/cun2017_points-attr.JPG" width="60px" class="picture-show"></td><td>67.4万</td><td>ESRI Shapefile<br>Point</td><td><form class='form-search'><input id="data-key-cun-point-2017" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-cun-point-2017"><i class='icon-download'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em"><b>行政村<br>居民点</b></td><td>2019</td><td><img src="2017-04-18-GIS-basic-data-of-China/cun2017_points.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/cun2017_points-attr.JPG" width="60px" class="picture-show"></td><td>65.8万</td><td>ESRI Shapefile<br>Point</td><td><form class='form-search'><input id="data-key-cun-point-2019" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-cun-point-2019"><i class='icon-download'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em"><b>行政村<br>居民点</b></td><td>2020</td><td><img src="2017-04-18-GIS-basic-data-of-China/cun2017_points.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/cun2017_points-attr.JPG" width="60px" class="picture-show"></td><td>63.4万</td><td>ESRI Shapefile<br>Point</td><td><form class='form-search'><input id="data-key-cun-point-2020" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-cun-point-2020"><i class='icon-download'></i></a></td></tr>
 								</tbody>
 							</table>
 						</div>
@@ -346,6 +347,15 @@
 				alert("口令不能为空");
 			} else {
 				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/CN_Vallige_2019_" + key + ".rar");
+			}
+		})
+		
+		$("#get-cun-point-2020").click(function () {
+			var key = $("#data-key-cun-point-2020").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/CN_Vallige_2020_" + key + ".rar");
 			}
 		})
 		
