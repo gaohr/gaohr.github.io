@@ -237,7 +237,7 @@
 								<tbody>
 									<tr><td style="color:#921;font-size:1.2em"><b>2012年</b></td><td style="font-size:1.2em">全国县级<br>行政区划</td><td><img src="2017-04-18-GIS-basic-data-of-China/xian2017.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/xian2017-attr.JPG" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-xian2012" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-xian2012"><i class='icon-download-purple'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em"><b>2015年</b></td><td style="font-size:1.2em">全国县级<br>行政区划</td><td><img src="2017-04-18-GIS-basic-data-of-China/xian2017.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/xian2017-attr.JPG" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-xian2015" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-xian2015"><i class='icon-download-purple'></i></a></td></tr>
-									<tr><td style="color:#921;font-size:1.2em"><b>2018年</b></td><td style="font-size:1.2em">全国县级<br>行政区划</td><td><img src="2017-04-18-GIS-basic-data-of-China/xian2017.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/xian2017-attr.JPG" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-xian2018" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-xian2018"><i class='icon-download-purple'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em"><b>2017年</b></td><td style="font-size:1.2em">全国县级<br>行政区划</td><td><img src="2017-04-18-GIS-basic-data-of-China/xian2017.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/xian2017-attr.JPG" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-xian2017" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-xian2017"><i class='icon-download-purple'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em"><b>2019年</b></td><td style="font-size:1.2em">全国县级<br>行政区划</td><td><img src="2017-04-18-GIS-basic-data-of-China/xian2017.JPG" width="80px" class="picture-show"><img src="2017-04-18-GIS-basic-data-of-China/xian2017-attr.JPG" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-xian2019" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-xian2019"><i class='icon-download-purple'></i></a></td></tr>
 								</tbody>
 							</table>
@@ -367,12 +367,12 @@
 			}
 		})
 		
-		$("#get-xian2018").click(function () {
-			var key = $("#data-key-xian2018").val();
+		$("#get-xian2017").click(function () {
+			var key = $("#data-key-xian2017").val();
 			if(key == "" || key == null) {
 				alert("口令不能为空");
 			} else {
-				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_100w/CN-Xian-2018-" + key + ".rar");
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_100w/CN-Xian-2017-" + key + ".rar");
 			}
 		})
 		
