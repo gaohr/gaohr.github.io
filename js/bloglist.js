@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2020）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
+
 {"blogid":"2020101201", "title":"全国各省Landsat TM分幅遥感影像数据", "type":"数据资源", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"随着卫星遥感影像的大量获取和应用，遥感影像的使用范围越来越广，针对不同应用需求，处理制作了基于省级行政区划分幅的Landsat TM 2006年遥感影像产品，对于政府部门、企事业单位等了解区域地貌类型、资源状况、城市分布以及指导规划等研究都有很大的帮助。", "img":"site/blogs/2020/images/RSTMCN.jpg", "date":"2020-10-12", "href":"http://gaohr.win/site/blogs/2020/2020-10-12-landsat-tm-province-cn.html", "tags":["TM", "遥感", "全国"]},
 
 {"blogid":"2020082901", "title":"GDAL编译详细步骤与注意事项（精讲）", "type":"专业技术", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"GDAL是个开源库，应用环境多样，所以官方并不提供各种应用环境下的编译版本，仅提供源码。如果需要使用GDAL，则必须在用户当前系统环境下进行编译。这便是本文主要介绍的内容，如何成功编译GDAL！", "img":"site/blogs/2020/images/GDAL.jpg", "date":"2020-08-29", "href":"http://gaohr.win/site/blogs/2020/2020-08-29-win10-vs2019-gdal.html", "tags":["GDAL", "C++", "编译"]},
@@ -9,8 +11,6 @@ var bloglist = [
 {"blogid":"2020082201", "title":"[深度学习] 卷积神经网络那点事儿----理论篇（一）", "type":"专业技术", "author":"<a href='http://wuxuan.site/' target='_blank'>也无风雨也无晴</a>", "content":"深度学习是一系列算法的统称，包括卷积神经网络（CNN），循环神经网络（RNN），自编码器（AE），深度置信网络（DBN），生成对抗模型（GAN）等。由于各算法的网络结构不同，被运用到的领域也不尽相同。卷积神经网络常被用于图像处理，如图像分类，语义分割，目标识别等领域。", "img":"site/blogs/2020/images/DeepLearning.jpg", "date":"2020-08-22", "href":"http://gaohr.win/site/blogs/2020/2020-08-22-convolution-neural-network-theory-1.html", "tags":["深度学习", "卷积神经网络", "理论"]},
 
 {"blogid":"2020081501", "title":"[深度学习] Tensorflow中Attention机制和测试实验", "type":"专业技术", "author":"<a href='http://wuxuan.site/' target='_blank'>也无风雨也无晴</a>", "content":"Attention机制在近几年的深度学习模型中可谓是刷分利器，万物皆可Attention。那么在卷积神经网络（CNN）中，Attention是怎么工作的呢？", "img":"site/blogs/2020/images/TensorFlowDL.jpg", "date":"2020-08-15", "href":"http://gaohr.win/site/blogs/2020/2020-08-15-deep-learning-tensorflow-and-attention.html", "tags":["深度学习", "Tensorflow", "Python"]},
-
-{"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2020）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2020071301", "title":"国家生态景观等空间分布与统计数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"国家5A级旅游景区、国家地质公园、国家级森林公园、国家自然保护区、全国风景名胜、全国文保单位等空间分布与统计数据，来源于文化和旅游部等官方网站发布的相关信息，通过地理编码等处理，制作形成空间分布矢量数据点。", "img":"site/blogs/2020/images/NationalEco.jpg", "date":"2020-07-13", "href":"http://gaohr.win/site/blogs/2020/2020-07-13-national-ecology-landscape.html", "tags":["生态", "景观", "旅游"]},
 
