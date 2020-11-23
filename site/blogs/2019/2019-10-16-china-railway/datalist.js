@@ -11,7 +11,7 @@ var datalist_province = [
 	{"id":"09", "name":"江苏省", "name_en":"Jiangsu", "data":"1", "key2015": "2015_100w-wh9r4mozqn"},
 	{"id":"10", "name":"黑龙江省", "name_en":"Heilongjiang", "data":"1", "key2015": "2015_100w-yslz3akw75"},
 	{"id":"11", "name":"贵州省", "name_en":"Guizhou", "data":"1", "key2015": "2015_100w-jnolsic14e"},
-	{"id":"12", "name":"福建省", "name_en":"Fujian", "data":"1", "key2015": "015_100w-5og4j44l4v"},
+	{"id":"12", "name":"福建省", "name_en":"Fujian", "data":"1", "key2015": "2015_100w-5og4j44l4v"},
 	{"id":"13", "name":"河南省", "name_en":"Henan", "data":"1", "key2015": "2015_100w-4dcp6lgfb6"},
 	{"id":"14", "name":"吉林省", "name_en":"Jilin", "data":"1", "key2015": "2015_100w-i5bpcvm3gb"},
 	{"id":"15", "name":"四川省", "name_en":"Sichuan", "data":"1", "key2015": "2015_100w-cli429sr73"},
