@@ -207,7 +207,7 @@ function BlogAD() {
 							"<p class='ad-close' id='ad-close-right'><span></span></p>" +
 							// "<div class=\"timer-container\"><p class='g-color-purple'>71周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							"<p><img src='http://gaohr.win/img/others/left_ad_China71.jpg'></p>" +
+							"<p><img src='http://gaohr.win/img/others/left_ad_Day-12-13.jpg'></p>" +
 							//"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='http://gaohr.win/img/others/left_ad_nCov2020.jpg'></p>" +
 						"</div>");
 	$("#rightad-con").show(500);
