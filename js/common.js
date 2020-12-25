@@ -201,18 +201,28 @@ function Weather() {
 var jrgwufvieh = "高会然";
 	
 function BlogAD() {
+	const month = new Date().getMonth() + 1;
+	const day = new Date().getDate();
 	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
 	$("#leftad").append("<p class='warm-alert'>" + warm_alert + "</p>");
 	$("#rightad").append("<div id='rightad-con' style='margin:0 auto;padding:5px;background:rgba(255,255,255,0.75);box-shadow: 2px 4px 8px rgba(195,195,195,0.75);'>" +
 							"<p class='ad-close' id='ad-close-right'><span></span></p>" +
 							// "<div class=\"timer-container\"><p class='g-color-purple'>71周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							"<p><img src='http://gaohr.win/img/others/left_ad_Day-12-13.jpg'></p>" +
-							//"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='http://gaohr.win/img/others/left_ad_nCov2020.jpg'></p>" +
+							"<p><img src='http://gaohr.win/img/importantdays/left_ad_" + importantDays(month, day) + ".jpg'></p>" +
+							//"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='http://gaohr.win/img/importantdays/left_ad_nCov2020.jpg'></p>" +
 						"</div>");
 	$("#rightad-con").show(500);
 	/*$("#ad-close-right").click(function() {$("#rightad-con").hide(500);});
 	const year = new Date().getFullYear();const firstOfOct = new Date(year, 9, 1).getTime();let timer = setInterval(function() {const today = new Date().getTime();const diff = firstOfOct - today;let days = Math.floor(diff / (1000 * 60 * 60 * 24));let hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));let seconds = Math.floor((diff % (1000 * 60)) / 1000);$("#timer").html("<div class=\"days\"><div class=\"numbers\">" + days + "</div>天</div><div class=\"hours\"><div class=\"numbers\">" + hours + "</div>时</div><div class=\"minutes\"><div class=\"numbers\">" + minutes + "</div>分</div><div class=\"seconds\"><div class=\"numbers\">" + seconds + "</div>秒</div></div>");}, 1000);*/
+}
+	
+function importantDays(month, day) {
+	var re = "";
+	switch(month + day / 10) {
+		case 1.1:re = "Yuandan";break;case 1.15:re = "GoHome";break;case 3.12:re = "Planting";break;case 4.5:re = "Qingming";break;case 5.1:re = "LaborDay";break;case 5.4:re = "YouthDay";break;case 5.9:re = "MothersDay";break;case 6.1:re = "Children";break;case 6.14:re = "Duanwu";break;case 7.1:re = "Jiangdang";break;case 7.7:re = "Lugouqiao";break;case 8.1:re = "Jiangjun";break;case 9.10:re = "TeachersDay";break;case 9.18:re = "918";break;case 10.1:re = "Guoqing";break;case 10.2:re = "Zhongqiu";break;case 11.1:re = "AIDS";break;case 12.13:re = "Nanjing";break;case 12.26:re = "Maozhuxi";break;default:re = "GreatChina"
+	}
+	return re;
 }
 	
 function warmAlert(city, weather0, weather1, wind) {
