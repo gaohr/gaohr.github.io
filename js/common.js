@@ -220,7 +220,7 @@ function BlogAD() {
 function importantDays(month, day) {
 	var re = "";
 	var day_new = 0;
-	if (day >= 10) {day_new = day / 10;}
+	if (day >= 10) {day_new = day / 10;} else {day_new = day;}
 	switch(month + day_new / 10) {
 		case 1.1:re = "Yuandan";break;case 1.15:re = "GoHome";break;case 3.12:re = "Planting";break;case 4.5:re = "Qingming";break;case 5.1:re = "LaborDay";break;case 5.4:re = "YouthDay";break;case 5.9:re = "MothersDay";break;case 6.1:re = "Children";break;case 6.14:re = "Duanwu";break;case 7.1:re = "Jiangdang";break;case 7.7:re = "Lugouqiao";break;case 8.1:re = "Jiangjun";break;case 9.10:re = "TeachersDay";break;case 9.18:re = "918";break;case 10.1:re = "Guoqing";break;case 10.2:re = "Zhongqiu";break;case 11.1:re = "AIDS";break;case 12.13:re = "Nanjing";break;case 12.26:re = "Maozhuxi";break;default:re = "GreatChina";
 	}
