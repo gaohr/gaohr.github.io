@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国传统村落空间分布矢量数据</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2021010601">
+				<div class="blogcontent alist">
+					<h2>全国传统村落空间分布数据（更新至第五批）</h2>
+					<h2><small>Traditional village of China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="g-color-green blog-important-part">传统村落是那些历史悠久、遗存雄厚、文化典型的村落。在漫长的历史变迁与现代化冲击下，这类村落正处于急速消失的过程中，但它们是中华民族决不能丢失、失不再来的根性的遗产，是蕴藏着我们民族基因与凝聚力的"最后的家园"，是五千年文明活态的人文硕果。</p>
+					<p class="blog-sub-title"><b>数据介绍</b></p>
+					<p>习近平在中央城镇化工作会议上的讲话中提到，要"让城市融入大自然，让居民望得见山、看得见水、记得住乡愁"。传统村落保护同样是城镇化进程中的一个重要组成部分，在积极稳妥地推进城镇化的同时，保护好山水田园，尤其是那些有传承价值、历史记忆、地域特色、民族特点的美丽乡村，十分必要。</p>
+					<div class="row-fluid">
+						<div class="span3"><img src="2021-01-06-traditional-village-cn/img001.png"><br><span>当今国际上对历史文化遗产分为两部分。一是物质文化遗产，一是非物质文化遗产。</span><br><span class="pull-right">——冯骥才</span></div>
+						<div class="span3"><img src="2021-01-06-traditional-village-cn/img002.png"><br><span>古代社会的发展、经济除官方记载,绝大多数蕴藏在村落里。古村落是民间历史的载体。</span><br><span class="pull-right">——林济</span></div>
+						<div class="span3"><img src="2021-01-06-traditional-village-cn/img003.png"><br><span>作为一个拥有悠久文明史的国家，我国国土上遍布着众多风情各具、历史悠久的古村落。</span><br><span class="pull-right">——仇保兴</span></div>
+						<div class="span3"><img src="2021-01-06-traditional-village-cn/img004.png"><br><span>如果说80年代我是跟无知做斗争，那现在就是跟贪婪做斗争，比过去深刻得多，也难得多。</span><br><span class="pull-right">——阮仪三</span></div>
+					</div>
+					<hr>
+					<p>2012年12月17日，住房城乡建设部等部门组织开展了全国第一次传统村落摸底调查，在各地初步评价推荐的基础上，经传统村落保护和发展专家委员会评审认定并公示，住房城乡建设部、文化部、财政部等部门共同决定具有重要保护价值的村落列入中国传统村落名录。</p>
+					<p>本站提供的数据是在中国传统村落名录的基础上，通过地理编码，制作成具有空间坐标信息的矢量数据。中国传统村落名录参考<a href="http://www.chuantongcunluo.com/index.php/home/index/index.html" target="_blank">中国传统村落网</a></p>
+					<p class="blog-sub-title"><b>数据概况</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国</p>
+						<p>时间范围：2012年至今</p>
+						<p>空间分辨率：--</p>
+						<p>数据类型：矢量|ESRI Shapefile Point</p>
+						<p>投影坐标：WGS 84</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<p><b></b></p>
+					<table class="table table-hover percent-90">
+						<tbody>
+							<tr><td><img src="2021-01-06-traditional-village-cn/map001.jpg" class="picture-show"></td><td><img src="2021-01-06-traditional-village-cn/map002.jpg" class="picture-show"></td><td><img src="2021-01-06-traditional-village-cn/map003.jpg" class="picture-show"></td></tr>
+							<tr><td>第一批</td><td>第二批</td><td>第三批</td></tr>
+							<tr><td><img src="2021-01-06-traditional-village-cn/map004.jpg" class="picture-show"></td><td><img src="2021-01-06-traditional-village-cn/map005.jpg" class="picture-show"></td><td><img src="2021-01-06-traditional-village-cn/map006.jpg" class="picture-show"></td></tr>
+							<tr><td>第四批</td><td>第五批</td><td>属性表</td></tr>
+						</tbody>
+					</table>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<div class="portlet box green percent-90">
+						<div class="portlet-title">
+							<div class="caption">全国传统村落空间分布矢量数据</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>数据名称</th><th>年份</th><th>缩略图</th><th>数据类型</th><th>数据下载</th></tr></thead>
+								<tbody>
+									<tr><td style="color:#921;font-size:1.2em">第一批全国传统村落</td><td><b>2012年</b></td><td><img src="2021-01-06-traditional-village-cn/map001.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile Point</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/traditional_vallige/traditional_village_01-to93ks3g7e.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">第二批全国传统村落</td><td><b>2013年</b></td><td><img src="2021-01-06-traditional-village-cn/map002.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile Point</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/traditional_vallige/traditional_village_02-7lvks83kf4.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">第三批全国传统村落</td><td><b>2014年</b></td><td><img src="2021-01-06-traditional-village-cn/map003.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile Point</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/traditional_vallige/traditional_village_03-6pv93kahe3.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">第四批全国传统村落</td><td><b>2016年</b></td><td><img src="2021-01-06-traditional-village-cn/map004.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile Point</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/traditional_vallige/traditional_village_04-7pvk39xjs3.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">第五批全国传统村落</td><td><b>2019年</b></td><td><img src="2021-01-06-traditional-village-cn/map005.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile Point</td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/traditional_vallige/traditional_village_05-6lcu2ld05m.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script>
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
+	</script>
+</body>
+</html>

@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2021010601", "title":"全国传统村落空间分布矢量数据（更新至第五批）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"统村落是那些历史悠久、遗存雄厚、文化典型的村落。在漫长的历史变迁与现代化冲击下，这类村落正处于急速消失的过程中，但它们是中华民族决不能丢失、失不再来的根性的遗产，是蕴藏着我们民族基因与凝聚力的最后的家园，是五千年文明活态的人文硕果。", "img":"site/blogs/2021/images/TraditionalVillage.jpg", "date":"2021-01-06", "href":"http://gaohr.win/site/blogs/2021/2021-01-06-traditional-village-cn.html", "tags":["传统村落", "GIS", "全国"]},
+
 {"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2020）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2020101201", "title":"全国各省Landsat TM分幅遥感影像数据", "type":"数据资源", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"随着卫星遥感影像的大量获取和应用，遥感影像的使用范围越来越广，针对不同应用需求，处理制作了基于省级行政区划分幅的Landsat TM 2006年遥感影像产品，对于政府部门、企事业单位等了解区域地貌类型、资源状况、城市分布以及指导规划等研究都有很大的帮助。", "img":"site/blogs/2020/images/RSTMCN.jpg", "date":"2020-10-12", "href":"http://gaohr.win/site/blogs/2020/2020-10-12-landsat-tm-province-cn.html", "tags":["TM", "遥感", "全国"]},

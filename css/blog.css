@@ -65,7 +65,7 @@ Blog Page
 .blogcontent .forld{background-color:#fed;color:#333;font-size:1.05em;border:1px solid #eca;border-radius:5%;padding:0 5px;}
 .blogcontent .no-indent {text-indent:0}
 .blogcontent p .btninblog {background-color:#6898c8;padding:2px;border-radius:3px;color:#fff}
-.blogcontent .blog-important-part {line-height:24px;text-indent:0;padding:10px;margin:1.2em;border:1px solid #6af;border-bottom:7px solid #6af;display:inline-block}
+.blogcontent .blog-important-part {line-height:24px;text-indent:2em;padding:10px;margin:1.2em;border:1px solid #6af;border-bottom:7px solid #6af;display:inline-block}
 .blogtopinfo {font-size:14px;color:#555;text-align:center !important}
 .blogtopinfo > span > a {margin-left:5px}
 .cmdblack {background:rgba(0,0,0,0.75);color:#fff;padding:0 2px;border-radius:2px}
