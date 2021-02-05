@@ -189,7 +189,6 @@
 							<table class="table table-hover">
 								<thead><tr><th>数据名称</th><th>年份</th><th>缩略图(非公开出版)</th><th>数据类型</th><th>下载口令</th><th>数据下载</th></tr></thead>
 								<tbody>
-									<tr><td style="color:#921;font-size:1.2em">全国乡镇<br>行政区划</td><td><b>2012年</b></td><td><img src="2017-04-18-GIS-basic-data-of-China/township2015.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-township2012" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-township2012"><i class='icon-download-green'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em">全国乡镇<br>行政区划</td><td><b>2015年</b></td><td><img src="2017-04-18-GIS-basic-data-of-China/township2015.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-township2015" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-township2015"><i class='icon-download-green'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em">全国乡镇<br>行政区划</td><td><b>2018年</b></td><td><img src="2017-04-18-GIS-basic-data-of-China/township2018.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-township2018" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-township2018"><i class='icon-download-green'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em">全国乡镇<br>行政区划</td><td><b>2020年</b></td><td><img src="2017-04-18-GIS-basic-data-of-China/township2018.jpg" width="80px" class="picture-show"></td><td>ESRI Shapefile<br>Polygon</td><td><form class='form-search'><input id="data-key-township2020" type='text' class='input-small' placeholder='在此输入口令'></form></td><td><a href="###" id="get-township2020"><i class='icon-download-green'></i></a></td></tr>
@@ -393,15 +392,6 @@
 				alert("口令不能为空");
 			} else {
 				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_100w/CN-Xian-2019-" + key + ".rar");
-			}
-		})
-		
-		$("#get-township2012").click(function () {
-			var key = $("#data-key-township2012").val();
-			if(key == "" || key == null) {
-				alert("口令不能为空");
-			} else {
-				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Township_pl/CN_Township_2012_" + key + ".rar");
 			}
 		})
 		
