@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019111901", "title":"1980-2020年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年、2018年和2020年等土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},
+
 {"blogid":"2021010601", "title":"全国传统村落空间分布矢量数据（更新至第五批）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"统村落是那些历史悠久、遗存雄厚、文化典型的村落。在漫长的历史变迁与现代化冲击下，这类村落正处于急速消失的过程中，但它们是中华民族决不能丢失、失不再来的根性的遗产，是蕴藏着我们民族基因与凝聚力的最后的家园，是五千年文明活态的人文硕果。", "img":"site/blogs/2021/images/TraditionalVillage.jpg", "date":"2021-01-06", "href":"http://gaohr.win/site/blogs/2021/2021-01-06-traditional-village-cn.html", "tags":["传统村落", "GIS", "全国"]},
 
 {"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（2020）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
@@ -35,8 +37,6 @@ var bloglist = [
 {"blogid":"2019120201", "title":"全球1:100万基础地理数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全球1:100万基础地理数据，包括七大洲范围、全球国家边界、全球省级行政边界、全球主要道路、全球铁路、全球面状水系、全球线状水系以及1度经纬网等矢量数据。", "img":"site/blogs/2019/images/WorldGIS.jpg", "date":"2019-12-02", "href":"http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html", "tags":["数据", "GIS", "全球"]},
 
 // {"blogid":"2019112601", "title":"全国10m分辨率DEM数据产品", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国10m分辨率DEM数据，以合成孔径雷达（SAR）数据提取的相位信息为信息源，通过数据聚焦、基线估算、干涉图去平、滤波和生成相干系数图、相位解缠、轨道重定义、高程转换和地理编码等一系列算法处理，获取地表的三维信息制作而成", "img":"site/blogs/2019/images/ChinaDEM.jpg", "date":"2019-11-26", "href":"http://gaohr.win/site/blogs/2019/2019-11-26-dem-10m-cn.html", "tags":["DEM", "高分辨率", "全国"]},
-
-{"blogid":"2019111901", "title":"1980-2018年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年和2018年等8期土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},
 
 {"blogid":"2019111101", "title":"不得不了解的中国基本地理国情", "type":"奇闻趣问", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"[GIS day 特别篇] 中国领土南北跨越的纬度近50度，东西跨越经度超过60度，陆地面积约960万平方公里，领海约470万平方公里。作为一名地理学科学生、学者、工作者，祖国的基本地理国情，不得不了解一下", "img":"site/blogs/2019/images/ChinaGeo.jpg", "date":"2019-11-13", "href":"http://gaohr.win/site/blogs/2019/2019-11-11-geographical-situation-of-cn.html", "tags":["中国", "地理", "国情"]},
 

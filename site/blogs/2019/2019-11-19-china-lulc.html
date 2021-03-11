@@ -49,19 +49,19 @@
 				<!--正文-->
 				<input id="blogid" style="display:none" value="2019111901">
 				<div class="blogcontent">
-					<h2>中国土地利用遥感监测数据</h2>
+					<h2>中国土地利用遥感监测数据（更新至2020年）</h2>
 					<h2><small>Remotely sensed data of land use in China</small></h2>
 					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
 					<p class="blog-sub-title"><b>数据概况</b></p>
 					<p>中国土地利用遥感监测数据来源于中国多时相土地利用现状数据库，该数据库是在国家科技支撑计划、中国科学院知识创新工程等多项重大科技项目的支持下，经过多年的积累而建立的覆盖全国陆地区域的数据库。</p>
-					<p class="g-color-blue">本站提供的数据集来自<a href="http://www.resdc.cn/" target="_blank">中国科学院资源环境科学数据中心</a>，包括1970年代末期（1980年）、1980年代末期（1990年）、1995年、2000年、2005年、2010年、2015年和2018年等8期数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成，数据可靠、质量较高。</p>
+					<p class="g-color-green">本站提供的数据集来自<a href="http://www.resdc.cn/" target="_blank">中国科学院资源环境科学数据中心</a>，包括1970年代末期（1980年）、1980年代末期（1990年）、1995年、2000年、2005年、2010年、2015年、2018年和2020年等数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成，数据可靠、质量较高。</p>
 					<p>本站提供1km空间分辨率的数据，另外有100m、30m空间分辨率的栅格数据和矢量数据，可以访问<a href="http://www.resdc.cn/" target="_blank">中国科学院资源环境科学数据中心 （点击访问）</a>获取</p>
 					<div class="blog-quote">
 						<p><i class="icon-info-sign"></i> 空间范围：全国（各省）</p>
 						<p><i class="icon-info-sign"></i> 数据类型：栅格 | ESRI GRID</p>
 						<p><i class="icon-info-sign"></i> 空间分辨率：1 km</p>
 						<p><i class="icon-info-sign"></i> 投影坐标：Krasovsky 1940 Albers</p>
-						<p><i class="icon-info-sign"></i> 生产时间：1980年、1990年、1995年、2000年、2005年、2010年、2015年、2018年</p>
+						<p><i class="icon-info-sign"></i> 生产时间：1980|1990|1995|2000|2005|2010|2015|2018|2020</p>
 						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					</div>
 					<p class="blog-sub-title"><b>数据预览</b></p>
@@ -90,7 +90,7 @@
 						<div class="portlet-title">
 							<div class="caption">分类系统说明表</div>
 						</div>
-						<div class="portlet-body" style="max-height:800px;overflow-y:scroll;">
+						<div class="portlet-body">
 							<table class="table table-hover">
 								<thead><tr><th>代码编号</th><th>地类名称</th><th>代码编号</th><th>地类名称</th><th width='60%'>含义说明</th></tr></thead>
 								<tbody>
@@ -142,7 +142,7 @@
 						</div>
 						<div class="portlet-body">
 							<table class="table table-hover">
-								<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>下载<br>1980 | 1990 | 1995 | 2000 | 2005 | 2010 | 2015 | 2018</th></tr></thead>
+								<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>下载<br>1980 | 1990 | 1995 | 2000 | 2005 | 2010 | 2015 | 2018 | 2020</th></tr></thead>
 								<tbody id="data-province"></tbody>
 							</table>
 						</div>
@@ -278,6 +278,7 @@
 		$(".tip-top-2010").tooltip();
 		$(".tip-top-2015").tooltip();
 		$(".tip-top-2018").tooltip();
+		$(".tip-top-2020").tooltip();
 	</script>
 </body>
 </html>
