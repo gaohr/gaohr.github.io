@@ -1,4 +1,4 @@
-var data_date_list = ["1980","1990","1995","2000","2005","2010","2015","2018", "2020"];
+var data_date_list = [""];
 var datalist = [
 	{"id":"01", "name":"北京市", "name_en":"Beijing", "data":data_date_list},
 	{"id":"02", "name":"天津市", "name_en":"Tianjin", "data":data_date_list},

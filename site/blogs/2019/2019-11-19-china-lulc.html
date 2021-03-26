@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
 	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
     <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
 	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
@@ -61,7 +62,7 @@
 						<p><i class="icon-info-sign"></i> 数据类型：栅格 | ESRI GRID</p>
 						<p><i class="icon-info-sign"></i> 空间分辨率：1 km</p>
 						<p><i class="icon-info-sign"></i> 投影坐标：Krasovsky 1940 Albers</p>
-						<p><i class="icon-info-sign"></i> 生产时间：1980|1990|1995|2000|2005|2010|2015|2018|2020</p>
+						<p><i class="icon-info-sign"></i> 生产时间：1980 至 2020</p>
 						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
 					</div>
 					<p class="blog-sub-title"><b>数据预览</b></p>
@@ -129,20 +130,25 @@
 							</table>
 						</div>
 					</div>
-						
 					<hr>
 					<p class="blog-sub-title"><b>数据下载</b></p>
 					<p>可供下载数据的省份、地区列表如下，目前仅提供<b class="g-color-orange">省级范围</b>数据下载。</p>
 					<p>中国省级、地市级行政区划可以参考 <a href="http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html" target="_blank">国家基础GIS数据</a></p>
+					<div class="alert alert-success">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						<b>下载说明</b>
+						<br>
+							<li>点击年份按钮，在列表中选择想要下载的年份，点击“下载”即可</li>
+							<li>默认下载的数据为最新的年份</li>
+					</div>
 					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
-					<br>
 					<div class="portlet box blue percent-90">
 						<div class="portlet-title">
 							<div class="caption">中国土地利用数据列表</div>
 						</div>
 						<div class="portlet-body">
 							<table class="table table-hover">
-								<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>下载<br>1980 | 1990 | 1995 | 2000 | 2005 | 2010 | 2015 | 2018 | 2020</th></tr></thead>
+								<thead><tr><th>编号</th><th>省级</th><th>数据类型</th><th>年份<span class="g-color-red">(选择)</span></th><th>下载</th></tr></thead>
 								<tbody id="data-province"></tbody>
 							</table>
 						</div>
@@ -192,7 +198,7 @@
     <!-- JavaScript -->
     <script src="../../../js/jquery.min.js"></script>
     <script src="../../../js/bootstrap.min.js"></script>
-	<script src="../../../js/echarts.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
 	<script src="../../../js/bloglist.js"></script>
 	<script src="../../special/js/topicslist.js"></script>
 	<script src="../../../js/paylist.js"></script>
@@ -246,39 +252,14 @@
 		}
 		
 		for(var i = 0; i < datalist.length; i++) {
-			if(datalist[i].data != "") {
-				$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td>" + datalist[i].name + "</td><td>ESRI GRID</td><td>" + getLink(datalist[i]) + "</td></tr>");
-			} else {
-				$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td>" + datalist[i].name + "</td><td>ESRI Shapefile</td><td class='g-color-gray'>敬请期待</td></tr>");
-			} 
+			$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td style='color:#921;font-size:1.2em'>" + datalist[i].name + "</td><td>ESRI GRID</td><td><select id='year-select-" + datalist[i].id + "' class='selectpicker' data-width='100' data-style='btn-success'><option>2020</option><option>2018</option><option>2015</option><option>2010</option><option>2005</option><option>2000</option><option>1995</option><option>1990</option><option>1980</option></select> <span class='badge badge-important'>选</span></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + datalist[i].name_en + "', '" + datalist[i].id + "')\"><i class='icon-download-blue'></i></a></td></tr>");
 		}
 		
-		function getLink(pdata) {
-			linkStr = ""
-			for(var j = 0; j < pdata.data.length; j++) {
-				if(pdata.data[j] != "") {
-					linkStr += "<a target='_blank' href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/LULC/lulc_1km/" + pdata.data[j] + "/lulc_" + pdata.name_en + "_" + pdata.data[j] + ".rar' data-toggle='tooltip' title='" + pdata.data[j] + "' data-content='' data-html='true' data-placement='top' class='tip-top-" + pdata.data[j] + "'><i class='icon-download-blue'></i></a>"
-				} else {
-					linkStr += "<span class='g-color-gray'>......</span>"
-				}
-				if(j != pdata.data.length - 1) {
-					linkStr += " | ";
-				} else {
-					linkStr += "";
-				}
-			}
-			return linkStr
+		function openDownloadWin(name, id) {
+			var year_select = $("#year-select-" + id).val();
+			window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/LULC/lulc_1km/" + year_select + "/lulc_" + name + "_" + year_select + ".rar");
 		}
 		
-		$(".tip-top-1980").tooltip();
-		$(".tip-top-1990").tooltip();
-		$(".tip-top-1995").tooltip();
-		$(".tip-top-2000").tooltip();
-		$(".tip-top-2005").tooltip();
-		$(".tip-top-2010").tooltip();
-		$(".tip-top-2015").tooltip();
-		$(".tip-top-2018").tooltip();
-		$(".tip-top-2020").tooltip();
 	</script>
 </body>
 </html>
