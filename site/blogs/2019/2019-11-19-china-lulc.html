@@ -253,7 +253,7 @@
 		}
 		
 		for(var i = 0; i < datalist.length; i++) {
-			$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td style='color:#921;font-size:1.2em'>" + datalist[i].name + "</td><td>ESRI GRID</td><td><select id='year-select-" + datalist[i].id + "' class='selectpicker' data-width='100' data-style='btn-success'><option>2020</option><option>2018</option><option>2015</option><option>2010</option><option>2005</option><option>2000</option><option>1995</option><option>1990</option><option>1980</option></select> <span class='badge badge-important'>选</span></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + datalist[i].name_en + "', '" + datalist[i].id + "')\"><i class='icon-download-blue'></i></a></td></tr>");
+			$("#data-province").append("<tr><td>" + datalist[i].id + "</td><td style='color:#921;font-size:1.2em'>" + datalist[i].name + "</td><td>ESRI GRID</td><td><select id='year-select-" + datalist[i].id + "' class='selectpicker' data-width='100' data-style='btn-success'><option>2020</option><option>2018</option><option>2015</option><option>2010</option><option>2005</option><option>2000</option><option>1995</option><option>1990</option><option>1980</option></select> <span class='badge badge-important'>选</span></td><td><a href='###' onclick=\"openDownloadWin('" + datalist[i].name_en + "', '" + datalist[i].id + "')\"><i class='icon-download-blue'></i></a></td></tr>");
 		}
 		
 		function openDownloadWin(name, id) {
