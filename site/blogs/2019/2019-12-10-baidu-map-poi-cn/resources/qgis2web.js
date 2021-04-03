@@ -177,9 +177,14 @@ var onSingleClick = function(evt) {
 	setTimeout(function() {
 		// 稍微增加等待时间
 		$("#loading").remove();
-		for(var i = 1; i < province_cities[p_id].length; i++) {
+		$("#data-list").append("<tr><td><span class='g-color-red g-text-bg'><b>全国</b></span></td><td><form class='form-search'><input id='China' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('China')\" data-toggle='tooltip' title='下载' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download'></i></a></td></tr>");
+		for(var i = 0; i < province_cities[p_id].length; i++) {
 			c_id = province_cities[p_id][0][1] + "_" + province_cities[p_id][i][1]
-			$("#data-list").append("<tr><td><span class='g-color-purple'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-purple'></i></a></td></tr>");
+			if(i == 0){
+				$("#data-list").append("<tr><td><span class='g-color-green g-text-bg'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-green'></i></a></td></tr>");
+			} else {
+				$("#data-list").append("<tr><td><span class='g-color-purple'><b>" + province_cities[p_id][i][0] + "</b></span></td><td><form class='form-search'><input id='" + c_id + "' type='text' class='input-medium' placeholder='输入共享口令'></form></td><td><a href='###' onclick=\"openDownloadWin('" + c_id + "')\" data-toggle='tooltip' title='下载链接' data-content='' data-html='true' data-trigger='click' data-placement='top' class='popup-top-download'><i class='icon-download-purple'></i></a></td></tr>");
+			}
 		}
 	}, 500);
 	
@@ -187,6 +192,10 @@ var onSingleClick = function(evt) {
 	
 function openDownloadWin(id) {
 	var key = $("#" + id).val();
+	idArr = id.split("_");
+	if(idArr[0] == idArr[1]) {
+		id = idArr[0]
+	}
 	if(key == "" || key == null) {
 		alert("口令不能为空");
 	} else {
