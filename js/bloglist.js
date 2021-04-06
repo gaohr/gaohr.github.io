@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2021040501", "title":"中国各类统计年鉴数据合集(更新至2019)", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国各类统计年鉴包括中国统计年鉴、中国城市统计年鉴、中国农村统计年鉴、中国能源统计年鉴、中国金融统计年鉴、中国港口年鉴、中国环境统计年鉴、中国区域经济统计年鉴、中国低碳你年鉴、中国劳动统计年鉴、中国教育统计年鉴、中国民政统计年鉴、中国旅游统计年鉴等等", "img":"site/blogs/2021/images/StatisYearbook.jpg", "date":"2021-04-05", "href":"http://gaohr.win/site/blogs/2021/2021-04-05-statistical-yearbook-of-cn.html", "tags":["社会经济", "统计年鉴", "全国"]},
+
 {"blogid":"2019111901", "title":"1980-2020年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年、2018年和2020年等土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},
 
 {"blogid":"2021010601", "title":"全国传统村落空间分布矢量数据（更新至第五批）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"统村落是那些历史悠久、遗存雄厚、文化典型的村落。在漫长的历史变迁与现代化冲击下，这类村落正处于急速消失的过程中，但它们是中华民族决不能丢失、失不再来的根性的遗产，是蕴藏着我们民族基因与凝聚力的最后的家园，是五千年文明活态的人文硕果。", "img":"site/blogs/2021/images/TraditionalVillage.jpg", "date":"2021-01-06", "href":"http://gaohr.win/site/blogs/2021/2021-01-06-traditional-village-cn.html", "tags":["传统村落", "GIS", "全国"]},
