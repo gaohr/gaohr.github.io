@@ -146,8 +146,8 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 
 /* ads */
 .leftad {width:100%;}
-.leftad .warm-alert {color:#0af;font-size:1.15em;padding:5px;background:rgba(255,255,255,0.75);margin:20px 0;box-shadow:0 3px 5px #aaa;}
-.leftad .warm-alert:hover {background:rgba(255,255,255,1)}
+.leftad .warm-alert {width:80%;color:#acf;font-size:1.15em;padding:5px;background:#222;margin:20px 0;margin-left:10%;box-shadow:0 3px 5px #aaa;}
+.leftad .warm-alert:hover {color:#0af;background:rgba(255,255,255,1)}
 .leftad .warm-alert b {color:#f65;margin:0 3px;}
 
 .leftad .ad-close span:before {content:"X"}
