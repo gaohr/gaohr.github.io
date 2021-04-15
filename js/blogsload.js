@@ -10,7 +10,7 @@ $(document).ready(function() {
 		var tags = readtags(i);
 		blogs_index += "<div class='row-fluid'>" +
 			"<div class='span12 blog-article'>" +
-			"<a href='" + bloglist[i].href + "' class='blog-title'><i class='icon-bookmark'></i> " + bloglist[i].title + "</a>" +
+			"<a href='" + bloglist[i].href + "' class='blog-title' target='_blank'><i class='icon-bookmark'></i> " + bloglist[i].title + "</a>" +
 			"<a href='Blogs.html#" + blogtype(bloglist[i].type) + "' class='blog-type'>[ " + bloglist[i].type + " ]</a>" +
 			"<div class='row-fluid'>" +
 			"<div class='span2 blog-tag-data'>" +
@@ -21,13 +21,13 @@ $(document).ready(function() {
 			"</div>" +
 			"<div class='span10'>" +
 			"<p>" + bloglist[i].content + "</p>" +
-			"<a class='btn-blue pull-right readmore' href='" + bloglist[i].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
+			"<a class='btn-blue pull-right readmore' href='" + bloglist[i].href + "' target='_blank'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 			"</div>" +
 			"</div>" +
 			"</div>" +
 			"</div><hr>";
 	}
-	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-block'><b>>>> 点 击 阅 读 更 多 博 客 <<<</b></a></div>"
+	blogs_index += "<div class='text-center g-color-gray g-text-bg'><a href='Blogs.html' class='btn-block' target='_blank'><b>>>> 点 击 阅 读 更 多 博 客 <<<</b></a></div>"
 	$("#blog").append(blogs_index);
 	
 	//Blogs
@@ -95,18 +95,18 @@ function addblog(bloglist,n,tags) {
 		"<img src='" + bloglist[n].img + "' class='blog-img'>" +
 		"<ul class='unstyled inline'>" +
 		"<li type='circle' class='pull-left'><i class='icon-calendar'></i> <a href='#'>" + bloglist[n].date + "</a></li>" +
-		"<li type='circle'><i class='icon-comments'></i> <a href='" + bloglist[n].href + "#cloud-tie-wrapper'><span>Comments</span></a></li>" +
+		"<li type='circle'><i class='icon-comments'></i> <a href='" + bloglist[n].href + "#comments'><span>Comments</span></a></li>" +
 		"</ul>" +
 		"</div>" +
 		"<div class='span9 blog-article'>" +
-		"<a href='" + bloglist[n].href + "' class='blog-title'>" + bloglist[n].title + "</a>" +
+		"<a href='" + bloglist[n].href + "' class='blog-title' target='_blank'>" + bloglist[n].title + "</a>" +
 		"<ul class='unstyled inline blog-tags pull-right'>" +
 		"<li>" +
 		"<i class='icon-tags'></i>" + tags +
 		"</li>" +
 		"</ul>" +
 		"<p>" + bloglist[n].content + "</p>" +
-		"<a class='btn-blue btn-mini pull-right readmore' href='" + bloglist[n].href + "'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
+		"<a class='btn-blue btn-mini pull-right readmore' href='" + bloglist[n].href + "' target='_blank'>阅读更多 <i class='icon-circle-arrow-right'></i></a>" +
 		"</div>" +
 		"</div>" +
 		"<hr>";
