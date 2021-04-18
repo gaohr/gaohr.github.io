@@ -39,8 +39,8 @@ Blog Page
 .blog-images li > a > img{width:32px;margin-right:10px}
 .blog-page .blog-type {color:#eb493d;background:rgba(0,0,0,0);float:right;font-size:0.5em;margin-right:5px;border-radius:5px}
 .blog-page .blog-type:hover {color:#fff;background:rgba(238,39,39,0.7);}
-.tab-title > li > a {color:#d85556}
-.tab-title > li > a:hover {color:#c83536}
+.tab-title > li > a {color:#555}
+.tab-title > li > a:hover {color:#2878c8 !important}
 
 .share-level {padding:5px;border:1px solid #4c0;border-left:5px solid #4c0}
 .picture-show {border-bottom:3px solid rgba(0,0,0,0);cursor:pointer;}
