@@ -1,6 +1,6 @@
 var bloglist = [
 
-{"blogid":"2021072101", "title":"全国370城市空间权重矩阵及计算方法", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"", "img":"site/blogs/2021/images/SpatialJoin.jpg", "date":"2021-07-20", "href":"http://gaohr.win/site/blogs/2021/2021-07-20-city-relation-matrix.html", "tags":["经济地理", "权重矩阵", "面板数据"]},
+{"blogid":"2021072101", "title":"全国370城市空间权重矩阵及计算方法", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"空间权重矩阵是一个反映个体在空间中相互依赖关系的矩阵，相近的事物关联关系越密切,权重影响越大，本文中计算的城市空间权重矩阵主要是基于地理距离的空间距离权重矩阵和基于共享空间要素的空间邻接矩阵", "img":"site/blogs/2021/images/SpatialJoin.jpg", "date":"2021-07-20", "href":"http://gaohr.win/site/blogs/2021/2021-07-20-city-relation-matrix.html", "tags":["经济地理", "权重矩阵", "面板数据"]},
 
 {"blogid":"2021040501", "title":"中国各类统计年鉴数据合集(更新至2020)", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国各类统计年鉴包括中国统计年鉴、中国城市统计年鉴、中国农村统计年鉴、中国能源统计年鉴、中国金融统计年鉴、中国港口年鉴、中国环境统计年鉴、中国区域经济统计年鉴、中国低碳你年鉴、中国劳动统计年鉴、中国教育统计年鉴、中国民政统计年鉴、中国旅游统计年鉴等等", "img":"site/blogs/2021/images/StatisYearbook.jpg", "date":"2021-04-05", "href":"http://gaohr.win/site/blogs/2021/2021-04-05-statistical-yearbook-of-cn.html", "tags":["社会经济", "统计年鉴", "面板数据"]},
 
