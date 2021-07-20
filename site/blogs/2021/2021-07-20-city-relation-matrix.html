@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国370城市空间权重矩阵及计算方法</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2021040501">
+				<div class="blogcontent alist">
+					<h2>全国370城市空间权重矩阵及计算方法</h2>
+					<h2><small>Spatial weight matrix and adjacency matrix of cities in China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="g-color-green blog-important-part">空间权重矩阵是一个反映个体在空间中相互依赖关系的矩阵，相近的事物关联关系越密切,权重影响越大，本文中计算的城市空间权重矩阵主要是基于地理距离的<b class="g-color-orange">空间距离权重矩阵</b>和基于共享空间要素的<b class="g-color-orange">空间邻接矩阵</b>。此外，不仅仅有从地理角度测算的狭义距离，还有广义距离，比如说经济距离、社会距离或者时间距离等等。</p>
+					<p class="blog-sub-title"><b>数据介绍</b></p>
+					<p>空间距离权重矩阵是通过城市中心点经纬度计算得到，其中，全国370个城市（包括地级市、直辖市、省直辖县、副省级市、自治州、盟、地区等）的中心点经纬度文本数据可以从文后<a href="#download-part">数据下载</a>部分下载。计算球面上两个经纬度点的方法可参考文后<a href="#extra-part-1">附录一</a>。</p>
+					<p>空间邻接矩阵利用全国市级行政区划矢量数据，首先通过ArcGIS的<code>Spatial Join [空间连接]</code>工具计算获得与各个空间要素相邻接的要素，然后利用该结果生成邻接矩阵。</p>
+					<p>用于计算城市空间权重矩阵和空间邻接矩阵的原始地级市数据，现势性为2019年，数据来源于本站<a href="http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html/" target="_blank">中国国家基础地理信息数据</a>。</p>
+					<p class="blog-sub-title"><b>数据概况</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国地级市</p>
+						<p>时间范围：2019年</p>
+						<p>数据类型：EXCEL等</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<img src="2021-07-20-city-relation-matrix/img01.jpg" class="picture-show" style="width:80%;margin-left:10%">
+					<p class="text-center">城市距离权重矩阵</p>
+					<img src="2021-07-20-city-relation-matrix/img02.jpg" class="picture-show" style="width:80%;margin-left:10%">
+					<p class="text-center">城市空间邻接矩阵</p>
+					<img src="2021-07-20-city-relation-matrix/img03.jpg" class="picture-show" style="width:60%;margin-left:20%">
+					<p class="text-center">全国370个城市及中心经纬度</p>
+					<p class="blog-sub-title" id="download-part"><b>数据下载</b></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> “<span class="g-color-orange"><b>有限共享</b></span>”数据，不直接提供数据下载口令，需要先联系邮箱 <span class="g-color-red">gispie@163.com</span>、QQ <span class="g-color-red">2783343898</span>或新浪微博私信<a href="https://weibo.com/531239592" target="_blank">@斩之浪</a>，获取共享口令，流程详见<a href="http://gaohr.win/About.html" target="_blank">本站数据共享说明</a></p>
+					<p><i class="icon-bullhorn g-text-bg g-color-blue"></i> 本数据持续更新，同时也可提供定制处理，有需要可联系！</p>
+					<div class="portlet box blue percent-90">
+						<div class="portlet-title">
+							<div class="caption">全国370城市空间权重矩阵数据列表</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>编号</th><th>数据名称</th><th>类型</th><th>年份</th><th>共享口令</th><th>数据下载</th></tr></thead>
+								<tbody>
+									<tr><td>1</td><td>全国370个城市及中心经纬度</td><td>TXT文本</td><td>2019</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="###" target="_blank"><i class="icon-download-blue"></i></a></td></tr>
+									<tr><td>2</td><td>全国370个城市距离权重矩阵</td><td>Excel</td><td>2019</td><td><input id='data-key-01' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="###" id="get-data-01"><i class="icon-download-blue"></i></a></td></tr>
+									<tr><td>3</td><td>全国370个城市空间邻接矩阵</td><td>Excel</td><td>2019</td><td><input id='data-key-02' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="###" id="get-data-02"><i class="icon-download-blue"></i></a></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<p class="blog-sub-title"><b>附录说明一</b></p>
+					<p id="extra-part-1">计算球面上两个经纬度点的Python代码</p>
+					<div id="highlighter_305378" class="syntaxhighlighter  python"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="python keyword">def</code>&nbsp;<code class="python plain">calcDistance(lat1,&nbsp;lng1,&nbsp;lat2,&nbsp;lng2):</code></div><div class="line number2 index1 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">'''</code></div><div class="line number3 index2 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">已知两点经纬度,&nbsp;求球面距离</code></div><div class="line number4 index3 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">:param&nbsp;lat1:&nbsp;p1纬度</code></div><div class="line number5 index4 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">:param&nbsp;lng1:&nbsp;p1经度</code></div><div class="line number6 index5 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">:param&nbsp;lat2:&nbsp;p2纬度</code></div><div class="line number7 index6 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">:param&nbsp;lng2:&nbsp;p2经度</code></div><div class="line number8 index7 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">:return:&nbsp;distance&nbsp;(m)</code></div><div class="line number9 index8 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python comments">'''</code></div><div class="line number10 index9 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">R&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python value">6378137.</code>&nbsp;&nbsp;<code class="python comments">#&nbsp;地球平均半径</code></div><div class="line number11 index10 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">pi_180&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">math.pi&nbsp;</code><code class="python keyword">/</code>&nbsp;<code class="python value">180.</code></div><div class="line number12 index11 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">radLat1&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">lat1&nbsp;</code><code class="python keyword">*</code>&nbsp;<code class="python plain">pi_180</code></div><div class="line number13 index12 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">radLat2&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">lat2&nbsp;</code><code class="python keyword">*</code>&nbsp;<code class="python plain">pi_180</code></div><div class="line number14 index13 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">a&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">radLat1&nbsp;</code><code class="python keyword">-</code>&nbsp;<code class="python plain">radLat2</code></div><div class="line number15 index14 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">b&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python plain">lng1&nbsp;</code><code class="python keyword">*</code>&nbsp;<code class="python plain">pi_180&nbsp;</code><code class="python keyword">-</code>&nbsp;<code class="python plain">lng2&nbsp;</code><code class="python keyword">*</code>&nbsp;<code class="python plain">pi_180</code></div><div class="line number16 index15 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">d&nbsp;</code><code class="python keyword">=</code>&nbsp;<code class="python value">2</code>&nbsp;<code class="python keyword">*</code>&nbsp;<code class="python plain">math.asin(math.sqrt(math.</code><code class="python functions">pow</code><code class="python plain">(math.sin(a&nbsp;</code><code class="python keyword">/</code>&nbsp;<code class="python value">2</code><code class="python plain">),&nbsp;</code><code class="python value">2</code><code class="python plain">)&nbsp;</code><code class="python keyword">+</code></div><div class="line number17 index16 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">math.cos(radLat1)&nbsp;</code><code class="python keyword">*</code>&nbsp;<code class="python plain">math.cos(radLat2)&nbsp;</code><code class="python keyword">*</code></div><div class="line number18 index17 alt1"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python plain">math.</code><code class="python functions">pow</code><code class="python plain">(math.sin(b&nbsp;</code><code class="python keyword">/</code>&nbsp;<code class="python value">2</code><code class="python plain">),&nbsp;</code><code class="python value">2</code><code class="python plain">)))&nbsp;</code><code class="python keyword">*</code>&nbsp;<code class="python plain">R</code></div><div class="line number19 index18 alt2"><code class="python spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="python keyword">return</code>&nbsp;<code class="python plain">d</code></div></div></td></tr></tbody></table></div>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script>
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
+		$("#get-data-01").click(function () {
+			var key = $("#data-key-01").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/excel/370%E5%9F%8E%E5%B8%82%E7%A9%BA%E9%97%B4%E8%B7%9D%E7%A6%BB%E6%9D%83%E9%87%8D%E7%9F%A9%E9%98%B5_2019-" + key + ".xlsx");
+			}
+		})
+		$("#get-data-02").click(function () {
+			var key = $("#data-key-02").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/Economic_data/excel/370%E5%9F%8E%E5%B8%82%E7%A9%BA%E9%97%B4%E9%82%BB%E6%8E%A5%E7%9F%A9%E9%98%B5_2019" + key + ".xlsx");
+			}
+		})
+		
+	</script>
+</body>
+</html>
