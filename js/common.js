@@ -18,8 +18,8 @@ $(document).ready(function($) {
 	/*鼠标点击特效*/
 	var a_idx = 0;
    $("body").click(function(e) {
-       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "@斩之浪");
-       var arrT = new Array("战疫", "中国加油", "坚持", "不松懈", "必胜");
+       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善");
+       var arrT = new Array("战疫", "中国加油", "坚持", "不松懈", "必胜", "@斩之浪", "淘宝店：蹉跎的点线面");
 	   var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
    });
    
@@ -220,7 +220,7 @@ function BlogAD() {
 function importantDays(month, day) {
 	var re = "";
 	switch(month + day / 100) {
-		case 1.01:re = "Yuandan";break;case 1.10:re = "Police110";break;case 1.15:re = "GoHome";break;case 3.12:re = "Planting";break;case 4.05:re = "Qingming";break;case 5.01:re = "LaborDay";break;case 5.04:re = "YouthDay";break;case 5.09:re = "MothersDay";break;case 6.01:re = "Children";break;case 6.14:re = "Duanwu";break;case 7.01:re = "Jiangdang";break;case 7.07:re = "Lugouqiao";break;case 8.01:re = "Jiangjun";break;case 9.10:re = "TeachersDay";break;case 9.18:re = "918";break;case 10.01:re = "Guoqing";break;case 10.02:re = "Zhongqiu";break;case 11.01:re = "AIDS";break;case 12.13:re = "Nanjing";break;case 12.26:re = "Maozhuxi";break;default:re = "GreatChina";
+		case 1.01:re = "Yuandan";break;case 1.10:re = "Police110";break;case 1.15:re = "GoHome";break;case 3.12:re = "Planting";break;case 4.05:re = "Qingming";break;case 5.01:re = "LaborDay";break;case 5.04:re = "YouthDay";break;case 5.09:re = "MothersDay";break;case 6.01:re = "Children";break;case 6.14:re = "Duanwu";break;case 7.01:re = "Jiangdang";break;case 7.07:re = "Lugouqiao";break;case 8.01:re = "Jianjun";break;case 9.10:re = "TeachersDay";break;case 9.18:re = "918";break;case 10.01:re = "Guoqing";break;case 10.02:re = "Zhongqiu";break;case 11.01:re = "AIDS";break;case 12.13:re = "Nanjing";break;case 12.26:re = "Maozhuxi";break;default:re = "GreatChina";
 	}
 	return re;
 }
