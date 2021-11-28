@@ -136,10 +136,11 @@
 	<script>
 		var namelist = ["国家5A级旅游景区", "国家地质公园", "国家级森林公园", "国家自然保护区", "2019年全国各级自然保护区", "全国风景名胜", "第一至第六批全国文保单位", "第七批全国文保单位", "第八批全国文保单位"];
 		var imglist = ["aaaaa", "dizhigongyuan", "senlingongyuan", "ziranbaohuqu", "qgziranbaohuqu", "fengjingmingsheng",  "wenbaodanwei", "wenbaodanwei", "wenbaodanwei"];
+		var idlist = ["aaaaa", "dizhigongyuan", "senlingongyuan", "ziranbaohuqu", "qgziranbaohuqu", "fengjingmingsheng",  "wenbaodanwei01", "wenbaodanwei02", "wenbaodanwei03"];
 		var timelist = ["2017", "2017", "2017", "2016", "2019", "2017", "2006", "2013", "2019"]
 		var nptlist = ["247", "241", "827", "341", "2750", "250", "2356", "1944", "762"]
 		for(var i = 0; i < namelist.length; i++) {
-			$("#data-list").append("<tr><td>"+ (i + 1) +"</td><td style='color:#921;font-size:1.2em'>" + namelist[i] + "</td><td>" + timelist[i] + "年</td><td><img src='2020-07-13-national-ecology-landscape/" + imglist[i] + ".jpg' class='picture-show' width='120'></td><td>" + nptlist[i] + "</td><td><form class='form-search'><input id='data-key-" + imglist[i] + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + namelist[i] + "', 'data-key-" + imglist[i] + "')\"><i class='icon-download-green'></i></a></td></tr>");
+			$("#data-list").append("<tr><td>"+ (i + 1) +"</td><td style='color:#921;font-size:1.2em'>" + namelist[i] + "</td><td>" + timelist[i] + "年</td><td><img src='2020-07-13-national-ecology-landscape/" + imglist[i] + ".jpg' class='picture-show' width='120'></td><td>" + nptlist[i] + "</td><td><form class='form-search'><input id='data-key-" + idlist[i] + "' type='text' class='input-medium' placeholder='请输入口令'></form></td><td><a target='_blank' href='###' onclick=\"openDownloadWin('" + namelist[i] + "', 'data-key-" + idlist[i] + "')\"><i class='icon-download-green'></i></a></td></tr>");
 		}
 		function openDownloadWin(name, id) {
 			var key = $("#" + id).val();
