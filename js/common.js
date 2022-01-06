@@ -254,12 +254,13 @@ function warmAlert(city, weather0, weather1, wind) {
 function HotTopic() {
 	$("#others").append("<div class=\"notice\">" +
 						"<ul id=\"notice01\" class=\"noticTipTxt\">" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html\" target=\"_blank\">全国农村居民点矢量数据（2021更新） <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html\" target=\"_blank\">全国城市兴趣点（POI） <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2020/2020-02-20-china-roads.html\" target=\"_blank\">全国道路网矢量数据集 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/About.html\" target=\"_blank\">本站数据共享说明 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据免费下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						// "<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html\" target=\"_blank\">利用ArcGIS制作水墨山水画风格图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +

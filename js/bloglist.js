@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（更新至2021）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
+
 {"blogid":"2021072101", "title":"全国370城市空间权重矩阵及计算方法", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"空间权重矩阵是一个反映个体在空间中相互依赖关系的矩阵，相近的事物关联关系越密切,权重影响越大，本文中计算的城市空间权重矩阵主要是基于地理距离的空间距离权重矩阵和基于共享空间要素的空间邻接矩阵", "img":"site/blogs/2021/images/SpatialJoin.jpg", "date":"2021-07-20", "href":"http://gaohr.win/site/blogs/2021/2021-07-20-city-relation-matrix.html", "tags":["经济地理", "权重矩阵", "面板数据"]},
 
 {"blogid":"2021040501", "title":"中国各类统计年鉴数据合集(更新至2020)", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国各类统计年鉴包括中国统计年鉴、中国城市统计年鉴、中国农村统计年鉴、中国能源统计年鉴、中国金融统计年鉴、中国港口年鉴、中国环境统计年鉴、中国区域经济统计年鉴、中国低碳你年鉴、中国劳动统计年鉴、中国教育统计年鉴、中国民政统计年鉴、中国旅游统计年鉴等等", "img":"site/blogs/2021/images/StatisYearbook.jpg", "date":"2021-04-05", "href":"http://gaohr.win/site/blogs/2021/2021-04-05-statistical-yearbook-of-cn.html", "tags":["社会经济", "统计年鉴", "面板数据"]},
@@ -7,8 +9,6 @@ var bloglist = [
 {"blogid":"2019111901", "title":"1980-2020年中国土地利用遥感监测数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"1980年、1990年、1995年、2000年、2005年、2010年、2015年、2018年和2020年等土地利用数据，数据生产制作是以各期Landsat TM/ETM遥感影像为主要数据源，在前一年数据成果基础上，通过人工目视解译生成", "img":"site/blogs/2019/images/ChinaLULC.jpg", "date":"2019-11-19", "href":"http://gaohr.win/site/blogs/2019/2019-11-19-china-lulc.html", "tags":["数据", "土地利用", "全国"]},
 
 {"blogid":"2021010601", "title":"全国传统村落空间分布矢量数据（更新至第五批）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"统村落是那些历史悠久、遗存雄厚、文化典型的村落。在漫长的历史变迁与现代化冲击下，这类村落正处于急速消失的过程中，但它们是中华民族决不能丢失、失不再来的根性的遗产，是蕴藏着我们民族基因与凝聚力的最后的家园，是五千年文明活态的人文硕果。", "img":"site/blogs/2021/images/TraditionalVillage.jpg", "date":"2021-01-06", "href":"http://gaohr.win/site/blogs/2021/2021-01-06-traditional-village-cn.html", "tags":["传统村落", "GIS", "全国"]},
-
-{"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（更新至2020）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2020101201", "title":"全国各省Landsat TM分幅遥感影像数据", "type":"数据资源", "author":"<a href='http://gaohr.win'>GaoHR</a>", "content":"随着卫星遥感影像的大量获取和应用，遥感影像的使用范围越来越广，针对不同应用需求，处理制作了基于省级行政区划分幅的Landsat TM 2006年遥感影像产品，对于政府部门、企事业单位等了解区域地貌类型、资源状况、城市分布以及指导规划等研究都有很大的帮助。", "img":"site/blogs/2020/images/RSTMCN.jpg", "date":"2020-10-12", "href":"http://gaohr.win/site/blogs/2020/2020-10-12-landsat-tm-province-cn.html", "tags":["TM", "遥感", "全国"]},
 
