@@ -130,7 +130,7 @@ var onPointerMove = function(evt) {
                 var styleDefinition = currentLayer.getStyle().toString();
 
                 if (currentFeature.getGeometry().getType() == 'Point') {
-                    var radius = styleDefinition.split('radius')[1].split(' ')[1];
+                    // var radius = styleDefinition.split('radius')[1].split(' ')[1];
 					
                     highlightStyle = new ol.style.Style({
                         image: new ol.style.Circle({

@@ -24,7 +24,7 @@ var lyr_university_China_0 = new ol.layer.Vector({
                 source:jsonSource_university_China_0, 
                 style: style_university_China_0,
                 interactive: true,
-                title: '<img src="./2022-03-27-university-of-china/styles/legend/university_China_0.png" /> 全国大学分布'
+                title: '<img src="./2022-03-27-university-of-china/styles/legend/university_China_0.png" /> 全国大学分布</br></br>'
             });
 
 lyr_university_China_0.setVisible(true);
