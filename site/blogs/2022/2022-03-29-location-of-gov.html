@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国省市县乡四级政府驻地经纬度坐标</title>
+		<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2022032901">
+				<div class="blogcontent alist">
+					<h2>全国省、市、县、乡四级政府驻地经纬度坐标</h2>
+					<h2><small>Location of Provinces, Cities, Counties and Township in China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>数据介绍</b></p>
+					<p>全国省级（省份直辖市自治区）、地市级（城市）、县级（区县）、乡级（乡镇街道）四级政府驻地经纬度坐标位置数据，不包含港澳台地区。</p>
+					<p>该数据可用于空间距离计算、地图制图等。</p>
+					<p>数据来源于民政部、国家统计局等官方网站（<a href="http://www.mca.gov.cn/article/sj/xzqh/" target="_blank">中华人民共和国民政部-中华人民共和国行政区划代码</a>、<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/" target="_blank">中华人民共和国国家统计局-统计用区划和城乡划分代码</a>）发布的相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据。</p>
+					<p class="blog-sub-title"><b>数据属性</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国（港澳台除外）</p>
+						<p>时间范围：2020年</p>
+						<p>空间分辨率：--</p>
+						<p>数据类型：矢量|ESRI Shapefile Point</p>
+						<p>投影坐标：WGS 84</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<p class="blog-sub-title"><b>数据示例图</b></p>
+					<p>本博客地图是在国家有关地图编制标准基础上绘制。</p>
+					<p>温馨提示：编制地图，应当执行国家有关地图编制标准，遵守国家有关地图内容表示的规定。</p>
+					<p>点击访问<a href="http://bzdt.ch.mnr.gov.cn/index.html" target="_blank">标准地图服务系统</a></p>
+					<table class="table percent-90">
+						<tbody>
+							<tr><td style="text-align:center">全国省政府驻地</td><td style="text-align:center">全国市政府驻地</td></tr>
+							<tr><td><img src="2022-03-29-location-of-gov/img001.jpg" class="picture-show"></td><td><img src="2022-03-29-location-of-gov/img002.jpg" class="picture-show"></td></tr>
+							<tr><td style="text-align:center">全国区县政府驻地</td><td style="text-align:center">全国乡镇政府驻地</td></tr>
+							<tr><td><img src="2022-03-29-location-of-gov/img003.jpg" class="picture-show"></td><td><img src="2022-03-29-location-of-gov/img004.jpg" class="picture-show"></td></tr>
+						</tbody>
+					</table>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p>提供Text | csv 和 ESRI | shapefile 格式的数据下载</p>
+					<p>由于乡镇级政府驻地数据量较大，为了限制数据下载流量，仅免费提供分省的数据下载</p>
+					<p>如果需要全国范围的乡镇级政府驻地位置数据，可通过邮箱 <span class="g-color-red">gispie@163.com</span>、QQ <span class="g-color-red">2783343898</span> 或 新浪微博私信<a href="https://weibo.com/531239592" target="_blank">@斩之浪</a> 申请获取下载口令。</p>
+					<p class="g-color-red g-text-lg"><i class="icon-bullhorn g-text-bg g-color-blue"></i> <b class="g-text-bg">分批上传各省的乡镇级政府驻地数据，如果下载失败，请在页面下方留言说明需要的省份，我会优先上传！</b></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-yellow"><b>有限共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<div class="portlet box green percent-90">
+						<div class="portlet-title">
+							<div class="caption">全国省、市、县、乡四级政府驻地位置数据（不含港澳台）</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>数据名称</th><th>年份</th><th>数据类型</th><th>下载口令</th><th>数据下载</th></tr></thead>
+								<tbody id="datalist">
+									<tr><td style="color:#921;font-size:1.2em">全国省政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_prvn_2020.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr style="border-bottom:1.5px solid green"><td style="color:#921;font-size:1.2em">全国省政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_prvn_2020.csv" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">全国市政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_city_2020.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr style="border-bottom:1.5px solid green"><td style="color:#921;font-size:1.2em">全国市政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_city_2020.csv" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">全国区县政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_county_2020.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr style="border-bottom:1.5px solid green"><td style="color:#921;font-size:1.2em">全国区县政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_county_2020.csv" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">全国乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><input id='data-key-01' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr style="border-bottom:7px solid green"><td style="color:#921;font-size:1.2em">全国乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><input id='data-key-02' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<p></p>
+					<p></p>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script src="../../../js/geojs/regionlist.js"></script>
+	
+	<script>
+		
+		
+		$("#get-data-01").click(function () {
+			var key = $("#data-key-01").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020-" + key + ".rar");
+			}
+		})
+		$("#get-data-02").click(function () {
+			var key = $("#data-key-02").val();
+			if(key == "" || key == null) {
+				alert("口令不能为空");
+			} else {
+				window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020-" + key + ".csv");
+			}
+		})
+		
+		for(var k = 1; k < provinces.length; k++) {
+			$("#datalist").append("<tr><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='' target='_blank'><i class='icon-download-green'></i></a></td></tr><tr style='border-bottom:1.5px solid green'><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='' target='_blank'><i class='icon-download-green'></i></a></td></tr>");
+		}
+		
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
+	</script>
+	
+</body>
+</html>
