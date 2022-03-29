@@ -57,7 +57,8 @@
 					<p class="blog-sub-title"><b>数据介绍</b></p>
 					<p>全国省级（省份直辖市自治区）、地市级（城市）、县级（区县）、乡级（乡镇街道）四级政府驻地经纬度坐标位置数据，不包含港澳台地区。</p>
 					<p>该数据可用于空间距离计算、地图制图等。</p>
-					<p>数据来源于民政部、国家统计局等官方网站（<a href="http://www.mca.gov.cn/article/sj/xzqh/" target="_blank">中华人民共和国民政部-中华人民共和国行政区划代码</a>、<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/" target="_blank">中华人民共和国国家统计局-统计用区划和城乡划分代码</a>）发布的相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据。</p>
+					<p>数据来源于国家统计局等官方网站（<a href="http://www.mca.gov.cn/article/sj/xzqh/" target="_blank">中华人民共和国民政部-中华人民共和国行政区划代码</a>、<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/" target="_blank">中华人民共和国国家统计局-统计用区划和城乡划分代码</a>）发布的相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据。</p>
+					<p class="g-color-purple">全国村级（行政村）居民点数据可访问博客<a href="http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html" target="_blank">全国行政区划五级联动及村级居民点数据</a></p>
 					<p class="blog-sub-title"><b>数据属性</b></p>
 					<div class="blog-quote">
 						<p>空间范围：全国（港澳台除外）</p>
@@ -180,7 +181,7 @@
 		})
 		
 		for(var k = 1; k < provinces.length; k++) {
-			$("#datalist").append("<tr><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020_'" + provinces[k].name_en +  ".rar' target='_blank'><i class='icon-download-green'></i></a></td></tr><tr style='border-bottom:1.5px solid green'><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020_'" + provinces[k].name_en +  ".csv' target='_blank'><i class='icon-download-green'></i></a></td></tr>");
+			$("#datalist").append("<tr><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020_" + provinces[k].name_en +  ".rar' target='_blank'><i class='icon-download-green'></i></a></td></tr><tr style='border-bottom:1.5px solid green'><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020_" + provinces[k].name_en +  ".csv' target='_blank'><i class='icon-download-green'></i></a></td></tr>");
 		}
 		
 		
