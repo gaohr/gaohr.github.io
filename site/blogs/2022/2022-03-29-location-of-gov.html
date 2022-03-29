@@ -101,8 +101,8 @@
 									<tr style="border-bottom:1.5px solid green"><td style="color:#921;font-size:1.2em">全国市政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_city_2020.csv" target="_blank"><i class='icon-download-green'></i></a></td></tr>
 									<tr><td style="color:#921;font-size:1.2em">全国区县政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_county_2020.rar" target="_blank"><i class='icon-download-green'></i></a></td></tr>
 									<tr style="border-bottom:1.5px solid green"><td style="color:#921;font-size:1.2em">全国区县政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class="g-color-gray">[直接下载]</span></td><td><a href="https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_county_2020.csv" target="_blank"><i class='icon-download-green'></i></a></td></tr>
-									<tr><td style="color:#921;font-size:1.2em">全国乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><input id='data-key-01' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="###" id="get-data-01" target="_blank"><i class='icon-download-green'></i></a></td></tr>
-									<tr style="border-bottom:7px solid green"><td style="color:#921;font-size:1.2em">全国乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><input id='data-key-02' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="###" id="get-data-02" target="_blank"><i class='icon-download-green'></i></a></td></tr>
+									<tr><td style="color:#921;font-size:1.2em">全国乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><input id='data-key-01' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="###" id="get-data-01"><i class='icon-download-green'></i></a></td></tr>
+									<tr style="border-bottom:7px solid green"><td style="color:#921;font-size:1.2em">全国乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><input id='data-key-02' type='text' class='input-small' placeholder='请输入口令'></td><td><a href="###" id="get-data-02"><i class='icon-download-green'></i></a></td></tr>
 								</tbody>
 							</table>
 						</div>
@@ -180,7 +180,7 @@
 		})
 		
 		for(var k = 1; k < provinces.length; k++) {
-			$("#datalist").append("<tr><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='' target='_blank'><i class='icon-download-green'></i></a></td></tr><tr style='border-bottom:1.5px solid green'><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='' target='_blank'><i class='icon-download-green'></i></a></td></tr>");
+			$("#datalist").append("<tr><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>ESRI Shapefile Point</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020_'" + provinces[k].name_en +  ".rar' target='_blank'><i class='icon-download-green'></i></a></td></tr><tr style='border-bottom:1.5px solid green'><td style='color:#921;font-size:1.2em'>" + provinces[k].name + "乡镇政府驻地</td><td><b>2020年</b></td><td>Text csv</td><td><span class='g-color-gray'>[直接下载]</span></td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Loc_gov_pt/CN_town_2020_'" + provinces[k].name_en +  ".csv' target='_blank'><i class='icon-download-green'></i></a></td></tr>");
 		}
 		
 		
