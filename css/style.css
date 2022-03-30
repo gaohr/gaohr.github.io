@@ -3,7 +3,7 @@
 */
 /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}*/
 /*body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/background/bg-04.jpg');background-size:100%;background-attachment:fixed;}*/
-body {background-color:#fefefe;font-size:14px;overflow-x:hidden;}
+body {background-color:#e0e0e8;font-size:14px;overflow-x:hidden;}
 hr {margin-top:10px;margin-bottom:10px}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
@@ -21,7 +21,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.75);z-index:0;height:auto;width:80%;margin-left:9%;box-shadow:0 0 5px rgba(0, 0, 0, 0.25)}
+.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.7);z-index:0;height:auto;width:80%;margin-left:9%;box-shadow:0 0 5px rgba(0, 0, 0, 0.25)}
 .main-page .span2 {margin-left:10px}
 
 .main-div {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
