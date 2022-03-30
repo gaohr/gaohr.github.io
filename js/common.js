@@ -18,7 +18,7 @@ $(document).ready(function($) {
 	/*鼠标点击特效*/
 	var a_idx = 0;
    $("body").click(function(e) {
-       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "@斩之浪", "淘宝店：蹉跎的点线面");
+       var arrT = new Array("富强", "民主", "文明", "和谐", "自由", "平等", "公正" ,"法治", "爱国", "敬业", "诚信", "友善", "@斩之浪", "蹉跎的点线面");
        //var arrT = new Array("战疫", "中国加油", "坚持", "不松懈", "必胜", "@斩之浪", "淘宝店：蹉跎的点线面");
 	   var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f65","font-size": "1.2em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
    });
@@ -115,15 +115,16 @@ function ScrollDivFixed(id, h) {
 	
 function Relatedlinks() {
 	return "<ul class=\"blog-images\">" +
+			"<li><a href=\"https://shop196715718.taobao.com/\" target=\"_blank\" title=\"淘宝店铺：蹉跎的点线面\"><img alt=\"蹉跎的点线面\" src=\"img/images/cuotuoPPP.png\">蹉跎的点线面</a></li><br>" +
 			"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"专题栏目\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
 			"<li><a href=\"site/historytoday/index.html\" target=\"\" title=\"历史上的今天\"><img alt=\"历史上的今天\" src=\"img/images/History.png\">历史上的今天</a></li><br>" +
 			"<li><a href=\"site/skills/index.html\" target=\"_blank\" title=\"技能图谱\"><img alt=\"技能图谱\" src=\"img/images/skills.png\">技能图谱</a></li><br>" +
 			"<li><a href=\"site/turing/index.html\" target=\"_blank\" title=\"图灵机器人\"><img alt=\"图灵机器人\" src=\"img/images/turing.png\">图灵-对话机器人</a></li><br>" +
 			"<li><a href=\"site/food/index.html\" target=\"_blank\" title=\"菜谱查询\"><img alt=\"菜谱查询\" src=\"img/images/food.png\">菜谱查询</a></li><br>" +
 			"<li><a href=\"site/weixin/index.html\" target=\"_blank\" title=\"微信精选\"><img alt=\"微信精选\" src=\"img/images/Weixinhot.png\">微信精选</a></li><br>" +
-			"<li><a href=\"site/natgeo/index.html\" target=\"_blank\" title=\"国家地理百年典藏\"><img alt=\"国家地理百年典藏\" src=\"img/images/NationalGeo.png\">国家地理百年典藏</a></li><br>" +
-			"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"二战全史\" src=\"img/images/BBCWar2.png\">二战全史</a></li><br>" +
-			"<li><a href=\"site/graph/index.html\" target=\"_blank\" title=\"函数绘图\"><img alt=\"函数绘图\" src=\"img/images/Graph.png\">函数绘图</a></li><br>" +
+			//"<li><a href=\"site/natgeo/index.html\" target=\"_blank\" title=\"国家地理百年典藏\"><img alt=\"国家地理百年典藏\" src=\"img/images/NationalGeo.png\">国家地理百年典藏</a></li><br>" +
+			//"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"二战全史\" src=\"img/images/BBCWar2.png\">二战全史</a></li><br>" +
+			//"<li><a href=\"site/graph/index.html\" target=\"_blank\" title=\"函数绘图\"><img alt=\"函数绘图\" src=\"img/images/Graph.png\">函数绘图</a></li><br>" +
 			"<li><a href=\"http://wetlands.top\" target=\"_blank\" title=\"Wetland\"><img alt=\"Wetland\" src=\"img/images/Water.png\">Wetland专题</a></li><br>" +
 			"<li><a href=\"http://jpliu.top\" target=\"_blank\" title=\"LiuJP\"><img alt=\"LiuJP\" src=\"img/images/LiuJP.png\">LiuJP主页</a></li><br>" +
 			"<li><a href=\"http://wuxuan.site\" target=\"_blank\" title=\"WuXuan\"><img alt=\"WuXuan\" src=\"img/images/WuXuan.png\">WuXuan主页</a></li><br>" +
@@ -137,14 +138,14 @@ function ClustrMaps() {
 
 
 function Copyright() {
-	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/pages/specialneeds/'> 数据定制 </a><div class='footer-text'><span> 在线服务时间 17:00-22:00 </span><span> 单位地址:北京市海淀区邓庄南路9号 </span><span> 联系邮箱:gaohr@radi.ac.cn </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2020 <a href='http://gaohr.win/' target='_blank'>GIS大饼 GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
+	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/pages/specialneeds/'> 数据定制 </a><div class='footer-text'><span> 在线时间 17:00-22:00 </span><span> 单位地址:北京市海淀区邓庄南路9号 </span><span> 联系邮箱:gaohr@radi.ac.cn </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2020 <a href='http://gaohr.win/' target='_blank'>GIS大饼 GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
 }
 
 function Comments() {
 	return "<div class=\"portlet\">" +
 			"<p class=\"title\"><i class=\"icon-comments\"></i><b> 评论</b></p>" +
 			"<p class=\"g-color-gray\">温馨提示：如遇评论系统图标显示异常，可将鼠标停留在图标片刻查看登录方式等</p>" +
-			"<p class=\"g-color-red\">特别提示：<b>最近评论系统后台登录异常，评论回复不及时，还请见谅，十分抱歉！如有要事，请邮箱联系 gispie@163.com （2020.10.31）</b></p>" +
+			"<p class=\"g-color-red\">特别提示：<b>评论系统后台登录异常，评论回复可能不及时,如需即时沟通，可联系邮箱 gispie@163.com！（2020.10.31）</b></p>" +
 			"<!-- 来必力City版安装代码 -->" +
 			"<div id=\"lv-container\" data-id=\"city\" data-uid=\"MTAyMC8zNzkwMC8xNDQzMA==\">" +
 			"<script type=\"text/javascript\">(function(d, s) {var j, e = d.getElementsByTagName(s)[0];if (typeof LivereTower === 'function') { return; }j = d.createElement(s);j.src = 'https://cdn-city.livere.com/js/embed.dist.js';j.async = true;e.parentNode.insertBefore(j, e);})(document, 'script');</script>" +
@@ -183,7 +184,7 @@ function Dashang() {
 }
 
 function Warning() {
-	return "<hr><br><p><span class='g-color-red'>*** </span>由于工作原因，可能白天不会及时回复邮件，但我会尽可能及时回复和处理的~~</p><p><span class='g-color-red'>*** </span>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><br><p class='g-color-red'> (原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b>)</p>";
+	return "<p class='blog-sub-title'><b>一些说明，请留意</b></p><hr><br><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>由于工作原因，可能白天不会及时回复邮件，但我会尽可能及时回复和处理的~~</p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>最近邮件较多，有时可能会选择性回复，<b>邮件内容空白或表达不明确的一律不回哦 </b><i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i></p><hr><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>有网友说发了私信没回，我都几年没收到过私信了，可能是账号或什么设置问题，也可以在我的微博下评论留言。</p><br><hr><p class='g-color-red'> 原创博客，转载请注明来源 <b class='mywarning'>GaoHR 个人博客: http://gaohr.win</b></p>";
 }
 	
 var loc_city = "";
