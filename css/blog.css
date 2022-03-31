@@ -97,7 +97,7 @@ Blog Page
 .topicbody .topicbody-type {position:absolute;right:5px;top:5px;color:#fff;background:#c30;padding:5px 2px;border-radius:50%;border:3px solid rgba(255,255,255,1)}
 
 /*--Topics--*/
-#topics {min-height:800px;display:block;background:#fff}
+#topics {min-height:500px;padding-bottom:20px;display:block;background:#fff}
 .topic {position:relative;width:20%;margin:2%;min-height:240px;text-align:center;float:left;font-family:'Microsoft YaHei';overflow:auto;}
 .topic a > img {width:99%;opacity:1;border:2px solid rgba(0,0,0,0)}
 .topic a > img:hover {min-width:100px;opacity:0.8;border:2px solid #6af}

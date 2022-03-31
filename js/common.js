@@ -125,6 +125,7 @@ function Relatedlinks() {
 			//"<li><a href=\"site/natgeo/index.html\" target=\"_blank\" title=\"国家地理百年典藏\"><img alt=\"国家地理百年典藏\" src=\"img/images/NationalGeo.png\">国家地理百年典藏</a></li><br>" +
 			//"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"二战全史\" src=\"img/images/BBCWar2.png\">二战全史</a></li><br>" +
 			//"<li><a href=\"site/graph/index.html\" target=\"_blank\" title=\"函数绘图\"><img alt=\"函数绘图\" src=\"img/images/Graph.png\">函数绘图</a></li><br>" +
+			"<li><a href=\"https://zhulj.net\" target=\"_blank\" title=\"Liang-Jun Zhu\"><img alt=\"Liang-Jun Zhu\" src=\"img/images/ljzhu.png\">Liang-Jun Zhu</a></li><br>" +
 			"<li><a href=\"http://wetlands.top\" target=\"_blank\" title=\"Wetland\"><img alt=\"Wetland\" src=\"img/images/Water.png\">Wetland专题</a></li><br>" +
 			"<li><a href=\"http://jpliu.top\" target=\"_blank\" title=\"LiuJP\"><img alt=\"LiuJP\" src=\"img/images/LiuJP.png\">LiuJP主页</a></li><br>" +
 			"<li><a href=\"http://wuxuan.site\" target=\"_blank\" title=\"WuXuan\"><img alt=\"WuXuan\" src=\"img/images/WuXuan.png\">WuXuan主页</a></li><br>" +
