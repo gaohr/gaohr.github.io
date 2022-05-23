@@ -104,11 +104,14 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 #code .comments{color:#3f7f5f}
 
 #gotoTop{display:none;position:fixed;bottom:60px;left:78%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
-#gotoTop.hover{background:#D55C42;color:#fff;text-decoration:none;border-radius:0}
+#gotoTop.hover{background:#039604;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
 #gotoComment{display:none;position:fixed;bottom:120px;left:78%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
 #gotoComment.hover{background:#1E90FF;color:#fff;text-decoration:none;border-radius:0}
 #gotoComment i {font-size:2em;line-height:40px;}
+#likeIt{display:none;position:fixed;bottom:200px;left:78%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:20%}
+#likeIt i {font-size:2em;line-height:40px;}
+#likeIt:hover{background:rgba(0,0,0,0);color:#D55C42;font-size:1.2em;text-decoration:none;border-radius:0;}
 
 body footer p {margin:0;}
 body footer {position:relative;background:#333;text-align:center;color:#fff;padding:20px 0 0 0;vertical-align:baseline;margin:0;}

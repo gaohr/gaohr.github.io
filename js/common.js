@@ -49,6 +49,7 @@ $(document).ready(function($) {
 		
 	// Comments
 	if($("#comments").length > 0) {
+		likeIt(600);
 		$("#comments").append(Comments());
 		gotoComment(600);
 	}
@@ -343,6 +344,30 @@ function gotoComment(min_height){
 	});
 };
 	
+function likeIt(min_height){
+	var likeIt_html = "<div id='likeIt'><i class='icon-heart'></i><br><span id='likeNum' class='g-color-red'>0</span></div>";
+	$("#others").append(likeIt_html);
+	var g_plike = 0;
+	var cur_link = window.location.href;
+	$.ajax({url:"http://123.56.254.70:8080/gispie/PageLike?do=0&link=null", async:false, success:function(res) {g_plike = parseInt(res)}});
+	$("#likeNum").html(g_plike);
+	
+	$("#likeIt").click(function(e){
+		var $i = $("<span/>").text("♥ +1");var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f00","font-size": "2em"});$("body").append($i);$i.animate({"top": y - 120,"opacity": 0},3000,function() {$i.remove();});
+		$.ajax({url:"http://123.56.254.70:8080/gispie/PageLike?do=1&link=" + encodeURI(encodeURI(cur_link)), async:false, success:function(res) {g_plike = parseInt(res)}});
+		$("#likeNum").html(g_plike + 1);
+		
+	});
+	$(window).scroll(function(){
+		var s = $(window).scrollTop();
+		if(s > min_height){
+			$("#likeIt").fadeIn(100);
+		}else{
+			$("#likeIt").fadeOut(500);
+		};
+	});
+};
+	
 function Search() {
 	$("body").append("<div id='popup-search' class='popup-search'><div class='title'><p id='p-title' class='g-text-bg no-indent'>查询结果</p><span class='close'>X</span></div><div id='pop-cont' class='cont'></div></div>");
 	// 屏幕居中
@@ -438,12 +463,29 @@ function PageViews() {
 	$.ajax({url:"http://123.56.254.70:8080/gispie/PageView?link=" + encodeURI(encodeURI(cur_link)), async:false, success:function(res) {g_pv = parseInt(res)}});
 	
 	if($(".blogtopinfo").length > 0) {
-		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span><br><hr>");
+		$(".blogtopinfo").append("<span style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green'>" + g_pv + "</span></b></span><br><hr>");
+	}
+	if($(".topictopinfo").length > 0) {
+		$(".topictopinfo").append("<span style='margin-left:10px;'>专题访问量 <b><span class='g-color-green'>" + g_pv + "</span></b></span>");
 	}
 	
+	// busuanzi
+	if($(".blogtopinfo").length > 0) {
+		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>");
+	}
+	if($(".topictopinfo").length > 0) {
+		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>");
+	}
+	
+	/*
+	// busuanzi
+	if($(".blogtopinfo").length > 0) {
+		$(".blogtopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span><br><hr>");
+	}
 	if($(".topictopinfo").length > 0) {
 		$(".topictopinfo").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script><span id='busuanzi_container_page_pv' style='margin-left:10px;'>专题访问量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span>");
 	}
+	*/
 }
 	
 function ParticalEffect() {
