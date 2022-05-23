@@ -12,7 +12,7 @@ var topicslist = [
 
 {"topicid":"2019101401", "title":"伊朗自然风情", "type":"旅行", "content":"探秘伊朗自然风情（感谢国际友人供稿）", "img":"2019/images/IranScenery.jpg", "date":"2019-10-14", "href":"http://gaohr.win/site/special/2019/2019-10-14-iran-scenery.html", "comments":"0"},
 
-{"topicid":"2019082301", "title":"开心一刻--短视频", "type":"娱乐", "content":"令人捧腹的短视频，时常打开看看放松一下", "img":"2019/images/FunnyVideos.jpg", "date":"2019-08-23", "href":"http://gaohr.win/site/special/2019/2019-08-23-funny-videos.html", "comments":"0"},
+// {"topicid":"2019082301", "title":"开心一刻--短视频", "type":"娱乐", "content":"令人捧腹的短视频，时常打开看看放松一下", "img":"2019/images/FunnyVideos.jpg", "date":"2019-08-23", "href":"http://gaohr.win/site/special/2019/2019-08-23-funny-videos.html", "comments":"0"},
 
 {"topicid":"2018082501", "title":"走遍中国", "type":"旅行", "content":"五岳奇景，桂林山水，传世建筑……组成了神州大地美不胜收的地理画卷！", "img":"2018/images/GeoChina.jpg", "date":"2018-08-25", "href":"http://gaohr.win/site/special/2018/2018-08-25-geo-china.html", "comments":"0"},
 
