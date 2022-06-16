@@ -21,7 +21,7 @@
             margin: 0 auto;padding: 0px;font-size: 12px;
             background: url(img/bg.gif) repeat center 36px;text-align: center;background-color: #c30230;
         }
-        #content {margin: 0 auto; width: 960px; height: 627px; background: url(img/content_bg.jpg) no-repeat left top; position: relative;}
+        #content {margin: 0 auto; width: 100%; height: 100%; position: relative;}
 
         #content .tip1, #content .tip2, #content .tip3, #content .tip4, #content .tip5, #content .tip6, #content .tip7, #content .tip8 {
             position:absolute; width:227px; left:200px; top:100px;}
@@ -67,8 +67,8 @@
             newDiv.className = "tip1";
             newDiv.id = "tip"+messages[i].id;
             //改变位置
-            var topValue = parseInt(Math.random()*400);
-            var leftValue = parseInt(Math.random()*700);
+            var topValue = parseInt(Math.random()*800);
+            var leftValue = parseInt(Math.random()*1600);
             newDiv.style.top = topValue+"px";
             newDiv.style.left = leftValue+"px";
             //赋值内容
