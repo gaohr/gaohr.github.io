@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据（更新至2022年）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
+
 {"blogid":"2022032901", "title":"全国省市县乡四级政府驻地坐标位置数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国省级（省份直辖市自治区）、地市级（城市）、县级（区县）、乡级（乡镇街道）四级政府驻地经纬度坐标位置数据，不包含港澳台地区", "img":"site/blogs/2022/images/LocationGov.jpg", "date":"2022-03-29", "href":"http://gaohr.win/site/blogs/2022/2022-03-29-location-of-gov.html", "tags":["GIS", "政府驻地", "数据"]},
 
 {"blogid":"2022032701", "title":"全国大学基本信息数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"2021年更新的全国大学基本信息数据（港澳台除外），数据包括全国高等学校办学性质、专业类别、是否985/211/双一流等、归属部门、学校坐标等信息", "img":"site/blogs/2022/images/UniversityChina.jpg", "date":"2022-03-27", "href":"http://gaohr.win/site/blogs/2022/2022-03-27-university-of-china.html", "tags":["GIS", "大学", "数据"]},
@@ -41,8 +43,6 @@ var bloglist = [
 {"blogid":"2020012701", "title":"全国各省固定资本存量（1978-2015）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"根据张军和单豪杰估算方法计算全国31个省、直辖市1978年至2015年固定资本存量。数据来源：《中国国内生产总值核算历史资料1952-1995》、《中国国内生产总值历史资料1952-2004》、《中国统计年鉴（2004-2016）》等。", "img":"site/blogs/2020/images/EconomicData.jpg", "date":"2020-01-27", "href":"http://gaohr.win/site/blogs/2020/2020-01-27-socio-economic-data-fixed-capital-stocks.html", "tags":["社会经济", "数据"]},
 
 {"blogid":"2020010601", "title":"Python网页爬虫IP被限制的解决方法", "type":"专业技术", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"进行网页爬虫的时候，经常会遇到所要爬取的网站采取了反爬虫技术，同一个IP反复爬取一个网站，就很可能被限制IP，无法访问该网站。本文主要介绍在使用Python爬虫时遇到的IP被限制的问题，及其简单有效的解决方法。", "img":"site/blogs/2020/images/PythonWeb.jpg", "date":"2020-01-06", "href":"http://gaohr.win/site/blogs/2020/2020-01-06-get-web-content-using-python.html", "tags":["Python", "爬虫"]},
-
-{"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
 
 {"blogid":"2019120201", "title":"全球1:100万基础地理数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全球1:100万基础地理数据，包括七大洲范围、全球国家边界、全球省级行政边界、全球主要道路、全球铁路、全球面状水系、全球线状水系以及1度经纬网等矢量数据。", "img":"site/blogs/2019/images/WorldGIS.jpg", "date":"2019-12-02", "href":"http://gaohr.win/site/blogs/2019/2019-12-02-GIS-basic-data-of-world.html", "tags":["数据", "GIS", "全球"]},
 
