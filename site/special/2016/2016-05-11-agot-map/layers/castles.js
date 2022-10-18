@@ -63,6 +63,7 @@ var geojson_castles = {
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "冷水城", "info": "冷水城（Coldwater Burn）是谷地寇瓦特家族的封城。该城位于五指半岛最北部。" }, "geometry": { "type": "Point", "coordinates": [ 47.739977, 34.624612 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "洪歌城", "info": "洪歌城（Strongsong ）位于谷地，是贝尔摩家族的家堡。 它坐落在鹰巢城的西北。" }, "geometry": { "type": "Point", "coordinates": [ 41.960038, 29.435327 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "海疆城", "info": "海疆城（Seagard ）是一座城堡和一座城镇，是梅利斯特家族的族堡。海疆城位于河间地西部沿岸，在雄鹰角内，临近蓝叉河的源头。 海疆城的城堡为抵抗铁民的劫掠而修建。" }, "geometry": { "type": "Point", "coordinates": [ 32.569828, 29.697695 ] } },
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "孪河城", "info": "孪河城（The Twins ）又称河渡口，是佛雷家族在渡河口处的要塞，位于河间地。在五王之战期间，瓦德侯爵加入了罗柏·史塔克，并让北方军队通过孪河城。但是在战争的后期，孪河城成为了红色婚礼发生之地。" }, "geometry": { "type": "Point", "coordinates": [ 33.527541, 31.178650 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "角谷城", "info": "角谷城（Hornvale ）位于西境，在金牙城南侧。角谷城是布拉克斯家族的家堡。" }, "geometry": { "type": "Point", "coordinates": [ 29.568993, 17.660002 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "祸垒", "info": "祸垒（Banefort ）位于西境，在维斯特洛的西海岸线上， 是班佛特家族的家堡。" }, "geometry": { "type": "Point", "coordinates": [ 23.907291, 24.534304 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "十塔城", "info": "十塔城（Ten Towers）是哈尔咯家族的居城，也是群岛中最新的家堡，外观如十座挤在一起的城堡，由席奥默·哈洛尔带领修建。" }, "geometry": { "type": "Point", "coordinates": [ 24.850720, 28.085905 ] } },
