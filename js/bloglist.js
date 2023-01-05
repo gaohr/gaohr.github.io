@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2020081001", "title":"全国五级行政区划及村级居民点数据（更新至2022）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
+
 {"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据（更新至2022年）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
 
 {"blogid":"2022032901", "title":"全国省市县乡四级政府驻地坐标位置数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国省级（省份直辖市自治区）、地市级（城市）、县级（区县）、乡级（乡镇街道）四级政府驻地经纬度坐标位置数据，不包含港澳台地区", "img":"site/blogs/2022/images/LocationGov.jpg", "date":"2022-03-29", "href":"http://gaohr.win/site/blogs/2022/2022-03-29-location-of-gov.html", "tags":["GIS", "政府驻地", "数据"]},
@@ -7,8 +9,6 @@ var bloglist = [
 {"blogid":"2022032701", "title":"全国大学基本信息数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"2021年更新的全国大学基本信息数据（港澳台除外），数据包括全国高等学校办学性质、专业类别、是否985/211/双一流等、归属部门、学校坐标等信息", "img":"site/blogs/2022/images/UniversityChina.jpg", "date":"2022-03-27", "href":"http://gaohr.win/site/blogs/2022/2022-03-27-university-of-china.html", "tags":["GIS", "大学", "数据"]},
 
 {"blogid":"2017041801", "title":"中国国家基础地理信息系统（GIS）数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"中国国家基础地理信息系统（GIS）数据，包括世界行政边界图、中国省级、县级行政界线、河流水系、主要公路铁路等矢量数据", "img":"site/blogs/2017/images/GIS_China.jpg", "date":"2017-04-18", "href":"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html", "tags":["GIS", "数据", "全国"]},
-
-{"blogid":"2020081001", "title":"全国行政区划五级联动及村级居民点数据（更新至2021）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2021072101", "title":"全国370城市空间权重矩阵及计算方法", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"空间权重矩阵是一个反映个体在空间中相互依赖关系的矩阵，相近的事物关联关系越密切,权重影响越大，本文中计算的城市空间权重矩阵主要是基于地理距离的空间距离权重矩阵和基于共享空间要素的空间邻接矩阵", "img":"site/blogs/2021/images/SpatialJoin.jpg", "date":"2021-07-20", "href":"http://gaohr.win/site/blogs/2021/2021-07-20-city-relation-matrix.html", "tags":["经济地理", "权重矩阵", "面板数据"]},
 

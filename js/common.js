@@ -70,9 +70,9 @@ $(document).ready(function($) {
 	}
 		
 	// Weather
-	//if($("#weather").length > 0) {
-	//	$("#weather").html(Weather());
-	//}
+	if($("#weather").length > 0) {
+		$("#weather").html(Weather());
+	}
 		
 	// ClustrMaps
 	ClustrMaps();
