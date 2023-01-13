@@ -38,6 +38,7 @@ var geojson_cities = {
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "莲花港", "info": "null" }, "geometry": { "type": "Point", "coordinates": [ 55.753885, -44.679699 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "檀头镇", "info": "null" }, "geometry": { "type": "Point", "coordinates": [ 63.723850, -50.051112 ] } },
 { "type": "Feature", "properties": { "Id": 0.000000, "name": "临冬城", "info": "临冬城（Winterfell）是史塔克家族祖传的城堡和权力的中心，被认为是北境的首府。其坐落于七大王国北方省份的中心，国王大道将其与君临和长城连接起来。" }, "geometry": { "type": "Point", "coordinates": [ 36.396698, 52.809125 ] } },
-{ "type": "Feature", "properties": { "Id": 0.000000, "name": "凯岩城", "info": "凯岩城（Casterly Rock）是一座高大宏伟的岩石城堡，位于维斯特洛大陆西部沿海，俯瞰着对面的兰尼斯港和日落之海。它是西境首府，兰尼斯特家族的统治所在。" }, "geometry": { "type": "Point", "coordinates": [ 21.839829, 17.001817 ] } }
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "凯岩城", "info": "凯岩城（Casterly Rock）是一座高大宏伟的岩石城堡，位于维斯特洛大陆西部沿海，俯瞰着对面的兰尼斯港和日落之海。它是西境首府，兰尼斯特家族的统治所在。" }, "geometry": { "type": "Point", "coordinates": [ 21.839829, 17.001817 ] } },
+{ "type": "Feature", "properties": { "Id": 0.000000, "name": "阳戟城", "info": "阳戟城（Sunspear）由棕褐色泥土和稻草建成，外形酷似一艘大帆船，是马泰尔家族的族堡，多恩的首府。多恩亲王的私人住所流水花园位于阳戟城以西三里格的海滩边，一条滨海道路将它们分开。" }, "geometry": { "type": "Point", "coordinates": [ 51.897871, -11.546633 ] } }
 ]
 }
