@@ -200,9 +200,11 @@
 	<!-- footer  --> 
 	<footer>
 		<p id="copyright" class="copyright"></p>
+		<a href="###" id="set-cookie">***</a>
 	</footer>
     <!-- JavaScript -->
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.cookie.js"></script>
     <script src="js/bootstrap.min.js"></script>
 	<script src="js/bloglist.js"></script>
 	<script src="site/special/js/topicslist.js"></script>
@@ -211,6 +213,10 @@
 	<script>
 		$('.carousel').carousel({
 			interval: 3000
+		})
+		$("#set-cookie").click(function() {
+			$.cookie("gispie_username", "GIS大饼", {expires: 999, path: "/", secure: false});
+			$.cookie("gispie_userhead", "0", {expires: 999, path: "/", secure: false});
 		})
 	</script>
 	<script src="site/clock/clock.js"></script>
