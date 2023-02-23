@@ -103,9 +103,7 @@
 					<!--<li class="active">Data</li>-->
 				</ol>
 				<!--正文-->
-				<hr>
 				<div class="main-div">
-					
 					<div id="chat-box" class="chat-box">
 						<div>当前在线<span id="num-online" class="num-online"><i><b> 1 </b></i></span>人</div>
 						<div id="chat-list" class="chat-list"></div>
@@ -149,6 +147,7 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/jquery.cookie.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/common.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		//user_name = "GIS大饼";
@@ -179,8 +178,8 @@
 			user_head = user_now_head;
 		}
 		
-		$("#user-info-content").html("<span>我的头像：</span><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
-				".png\"><br><span class=\"chat-username\"><span>我的昵称：</span><span style=\"color:#39f\">" + user_name + 
+		$("#user-info-content").html("<span>我的头像：</span><span><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
+				".png\"></span><br><span class=\"chat-username\"><span>我的昵称：</span><span style=\"color:#39f\">" + user_name + 
 				"</span></span>");
 		
 		// alert(user_now_name + user_now_head);
@@ -300,6 +299,5 @@
 		}
 	}
 	</script>
-	<!--<script src="../../js/common.js"></script>-->
 </body>
 </html>
