@@ -3,10 +3,9 @@
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min-2.3.1.css">
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.min.css">
 	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-style.css">
@@ -150,7 +149,6 @@
     <script src="../../js/jquery.min.js"></script>
     <script src="../../js/jquery.cookie.js"></script>
     <script src="../../js/bootstrap.min.js"></script>
-	<script src="../../js/common.js"></script>
 	<script type="text/javascript">
 	$(document).ready(function(){
 		//user_name = "GIS大饼";
@@ -219,7 +217,7 @@
 					
 					// 提交到服务器
 					$.ajax({
-						type: 'get',
+						//type: 'get',
 						url:"http://123.56.254.70:8080/gispie/SaveComment?userhead=" + user_head + 
 						"&username=" + encodeURI(encodeURI(user_name)) + 
 						"&datetime=" + datetime_cur + 
@@ -250,7 +248,7 @@
 		var date = new Date();
 		var date_s = date.getTime();  //当前时间(毫秒数)
 		$.ajax({
-			type: 'get',
+			//type: 'get',
 			url:"http://123.56.254.70:8080/gispie/NumOnLine?username=" + encodeURI(encodeURI(user_name)) + "&datetime=" + date_s,
 			async:false
 		});
@@ -260,7 +258,7 @@
 		// 先清空列表
 		$("#chat-list").html("");
 		res = $.ajax({
-			type: 'get',
+			//type: 'get',
 			url:"http://123.56.254.70:8080/gispie/ReadComment",
 			async:false
 		});
@@ -279,7 +277,7 @@
 	
 	function updateNumOL(){
 		res = $.ajax({
-			type: 'get',
+			//type: 'get',
 			url:"http://123.56.254.70:8080/gispie/ReadNum",
 			async:false
 		});
@@ -302,5 +300,6 @@
 		}
 	}
 	</script>
+	<!--<script src="../../js/common.js"></script>-->
 </body>
 </html>
