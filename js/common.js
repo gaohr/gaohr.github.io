@@ -200,7 +200,7 @@ function Weather() {
 	return re;
 }
 	
-var jrgwufvieh = "高会然";
+var jrgwufvieh = "";
 	
 function BlogAD() {
 	const month = new Date().getMonth() + 1;
@@ -211,6 +211,7 @@ function BlogAD() {
 							"<p class='ad-close' id='ad-close-right'><span></span></p>" +
 							// "<div class=\"timer-container\"><p class='g-color-purple'>71周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
+							"<a href='http://gaohr.win/site/chat/index.html' target='_blank'><img src='http://gaohr.win/site/chat/GISerchat.jpg'></a><hr>" +
 							"<p><img src='http://gaohr.win/img/importantdays/left_ad_" + importantDays(month, day) + ".jpg'></p>" +
 							//"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='http://gaohr.win/img/importantdays/left_ad_nCov2020.jpg'></p>" +
 						"</div>");
