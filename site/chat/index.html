@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap-style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<link rel="shortcut icon" href="../../img/logo.ico">
+	<style>
+		hr{border:none;border-top:1px dashed #ddd;}
+		
+		.chat-box{width:100%;height:800px;margin-left:0;padding:10px;background-color:rgba(0,0,0,0.1)}
+		.num-online{color:#f21}
+		.chat-list{width:98%;height:640px;background-color:rgba(255,255,255,0.8);overflow:auto;padding:1%;}
+		
+		.chat-content{padding:3px 5px;margin-bottom:5px}
+		.chat-content .chat-userhead{float:left;}
+		.chat-content .chat-userhead img{width:36px; height:36px;}
+		.chat-content .chat-username{margin:5px;color:#39f;}
+		.chat-content .chat-time{margin:5px;color:#999;font-size:9px;}
+		.chat-content .chat-text{background-color:rgba(0,0,0,0.05);padding:5px 7px;border-radius:5px}
+		
+		.chat-edit{width:98%;height:95px;margin-top:10px;background-color:rgba(255,255,255,0.8);padding:1%}
+		.chat-edit .user-info{width:32%;height:80%;float:left;background-color:rgba(0,0,0,0.05);;padding:10px}
+		.chat-edit .user-info small{color:#fa9}
+		.chat-edit .chat-info{width:62%;height:80%;float:right;background-color:rgba(0,0,0,0.05);padding:10px}
+		.chat-edit .chat-info .chat-submit{color:#fff;padding:10px 20px;background-color:rgba(0,155,255,0.5);}
+		.chat-edit .chat-info .chat-submit:hover{background-color:rgba(0,155,255,0.75);}
+		
+	</style>
+	
+    <title>GaoHR | GIS大饼聊天室 | Chat</title>
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="index.html" class="g-blog-logo"></a>
+		<img src="../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="main-page container-fluid">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div class="menulist">
+					<div class="btn-group">
+						<ul class="nav nav-pills">
+							<li class="dropdown">
+								<a class="dropdown-toggle"data-toggle="dropdown"href="#"><i class="icon-list"></i></a>
+								<ul class="dropdown-menu">
+									<li><a href="../../index.html"><i class="icon-home"></i></a></li>
+									<li><a href="../../Blogs.html">博客</a></li>
+									<li><a href="../../site/special/index.html">专题</a></li>
+									<li class="divider"></li>
+									<li><a href="../../About.html">关于</a></li>
+									<li><a href="../../Contact.html">留言</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sider-bar">
+					<div class="host">
+						<img src="../../img/blog_logo_main.png" class="img-rounded"><br><br>
+					</div>
+					<!-- Navigation -->
+					<div class="svg-wrapper">
+						<span class="svg"><svg height="40" width="150" xmlns="http://www.w3.org/2000/svg"><rect id="shape" height="40" width="150"></rect></svg></span>
+						<div id="text"><a href="../../../index.html"><span class="spot"></span><i class="icon-home"></i></a></div>
+					</div>
+					<div class="sider-menu centerer-menu wrap-menu">
+						<a href="../../Blogs.html" class="btn-menu">博客</a>
+						<a href="../../site/special/index.html" class="btn-menu">专题</a>
+						<a href="../../About.html" class="btn-menu">关于</a>
+						<a href="../../Contact.html" class="btn-menu">留言</a>
+					</div>
+					<hr>
+					<div class="links">
+						<a href="http://weibo.com/531239592" target="_blank" class="weibo"><i class="icon-weibo"></i></a>
+						<a href="https://github.com/gaohr" target="_blank" class="github"><i class="icon-github-sign"></i></a>
+						<a href="###" target="_blank" class="google"><i class=" icon-google-plus-sign"></i></a>
+						<a href="###" target="_blank" class="fb"><i class="icon-facebook-sign"></i></a>
+						<a href="###" target="_blank" class="twitter"><i class="icon-twitter-sign"></i></a>
+					</div>
+					<hr>
+					<div id="cltmap" class="cltmap"></div>
+					<div id="leftad" class="leftad"></div>
+				</div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><i class="icon-comment"></i><a href="###"> GIS大饼聊天室</a></li>
+					<!--<li class="active">Data</li>-->
+				</ol>
+				<!--正文-->
+				<hr>
+				<div class="main-div">
+					
+					<div id="chat-box" class="chat-box">
+						<div>当前在线<span id="num-online" class="num-online"><i><b> 1 </b></i></span>人</div>
+						<div id="chat-list" class="chat-list"></div>
+						<div id="chat-edit" class="chat-edit">
+							<div class="user-info">
+								<div id="user-info-content"></div>
+								<small>(随机生成，暂无法更改)</small>
+							</div>
+							<div class="chat-info">
+								<input type="text" id="chat-submit-text" class="span10" style="height:80%;margin-top:1%"> <a href="###" id="chat-submit" class="chat-submit">发送</a>
+							</div>
+							
+					
+						</div>
+					
+					</div>
+					
+					
+				</div>
+				<!-- -->
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<a href="#" style="margin:0 auto"><img src="GISerchat.jpg" width="100%"></a>
+				</div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others
+	<div id="others"></div>  --> 
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../js/jquery.min.js"></script>
+    <script src="../../js/jquery.cookie.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+	<script src="../../js/common.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		//user_name = "GIS大饼";
+		//user_head = "0";
+		
+		var un_arr = ["天", "地", "人", "君", "臣", "义", "仁", "道", "信", "智", "贤", "德", 
+		              "一", "二", "三", "五", "八", "十一", 
+		              "甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸", 
+		              "十里", "百里", "千里", "万里", "千百", "百万", "京", "津", "晋", "豫", "鲁", 
+		              "江", "河", "湖", "海", "日", "月", "山", "川", 
+		              "龙", "虎", "象", "鹤", "鹏", "飞", "行", "步", "远", 
+		              "飞云", "北风", "青溪", "舒月", "何人", "秋千", "江花", "玉山", "天外"];
+		var uh_arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+		c1 = Math.round( Math.random() * (un_arr.length - 1));
+		c2 = Math.round( Math.random() * (un_arr.length - 1));
+		user_name = un_arr[c1] + un_arr[c2];
+		user_head = Math.round( Math.random() * (uh_arr.length - 1)) + "";
+		//alert(user_name + user_head)
+
+		// 读取 cookie;
+		var user_now_name = $.cookie("gispie_username");
+		var user_now_head = $.cookie("gispie_userhead");
+		if (user_now_name == null || user_now_name == "" ||  user_now_name == undefined) {
+			$.cookie("gispie_username", user_name, {expires: 999, path: "/", secure: false});
+			$.cookie("gispie_userhead", user_head, {expires: 999, path: "/", secure: false});
+		} else {
+			user_name = user_now_name;
+			user_head = user_now_head;
+		}
+		
+		$("#user-info-content").html("<span>我的头像：</span><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
+				".png\"><br><span class=\"chat-username\"><span>我的昵称：</span><span style=\"color:#39f\">" + user_name + 
+				"</span></span>");
+		
+		// alert(user_now_name + user_now_head);
+		// 每隔2分钟提交一次状态，以此判断在线人数
+		uploadStatus();
+		setInterval("uploadStatus()", 120000);
+		
+		
+		// 先更新1次线人数数字和聊天列表，然后每隔30秒更新1次
+		updateComment();
+		setInterval("updateComment()", 30000);
+		
+		updateNumOL();
+		setInterval("updateNumOL()", 60000);
+		
+		$("#chat-submit").click(function(){
+			var chat_text = $("#chat-submit-text").val();
+			
+			var date = new Date();  //当前时间
+			var date_s = date.getTime();
+			
+			var datetime_cur = date.getFullYear() + "-" + add0(date.getMonth() + 1) + "-" + date.getDate() + 
+			                   " " + date.getHours() + ":" + date.getMinutes() + ":" + add0(date.getSeconds());
+				
+			// alert(datetime_cur + "," + date_s);
+			
+			if(chat_text != "" && chat_text != null){
+				if(chat_text.length < 200){
+					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
+							".png\"></div><div><span class=\"chat-username\">" + user_name + 
+							"</span><br><span class=\"chat-time\">" + datetime_cur + 
+							"</span></div><br><span class=\"chat-text\">" + chat_text + 
+							"</span></div><hr>");
+					
+					// 提交到服务器
+					$.ajax({
+						type: 'get',
+						url:"http://123.56.254.70:8080/gispie/SaveComment?userhead=" + user_head + 
+						"&username=" + encodeURI(encodeURI(user_name)) + 
+						"&datetime=" + datetime_cur + 
+						"&comment=" + encodeURI(encodeURI(chat_text)),
+						async:false
+					});
+					
+					
+				} else {
+					alert("话太多了，慢点儿说！")
+				}
+				
+			} else {
+				alert("说什么？我没戴眼镜听不见！")
+			}
+			
+			// 窗口滚动到最底部
+			var scroll_box = document.getElementById('chat-list');
+			scroll_box.scrollTop = scroll_box.scrollHeight;
+			
+			// 清空文本框
+			$("#chat-submit-text").val("");
+		})
+		
+	});
+	
+	function uploadStatus(){
+		var date = new Date();
+		var date_s = date.getTime();  //当前时间(毫秒数)
+		$.ajax({
+			type: 'get',
+			url:"http://123.56.254.70:8080/gispie/NumOnLine?username=" + encodeURI(encodeURI(user_name)) + "&datetime=" + date_s,
+			async:false
+		});
+	}
+	
+	function updateComment(){
+		// 先清空列表
+		$("#chat-list").html("");
+		res = $.ajax({
+			type: 'get',
+			url:"http://123.56.254.70:8080/gispie/ReadComment",
+			async:false
+		});
+		resComment = eval("(" + res.responseText + ")");
+		for(var i = 0; i < resComment["chat_list"].length; i++){
+			$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
+					".png\"></div><div><span class=\"chat-username\">" + resComment["chat_list"][i]["user"] + 
+					"</span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
+					"</span></div><br><span class=\"chat-text\">" + resComment["chat_list"][i]["comment"] + 
+					"</span></div><hr>");
+		}
+		// 窗口滚动到最底部
+		var scroll_box = document.getElementById('chat-list');
+		scroll_box.scrollTop = scroll_box.scrollHeight;
+	}
+	
+	function updateNumOL(){
+		res = $.ajax({
+			type: 'get',
+			url:"http://123.56.254.70:8080/gispie/ReadNum",
+			async:false
+		});
+		resNum = eval("(" + res.responseText + ")");
+		var users = new Array();
+		for(var i = 0; i < resNum["user_time"].length; i++){
+			if(users.indexOf(resNum["user_time"][i]["user"]) == -1){
+				users.push(resNum["user_time"][i]["user"]);
+			}
+		}
+		$("#num-online").html("<i><b> " + users.length + " </b></i>");
+		
+	}
+	
+	function add0(n){
+		if(n < 10){
+			return "0" + n;
+		} else {
+			return n;
+		}
+	}
+	</script>
+</body>
+</html>
