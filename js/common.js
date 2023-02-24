@@ -116,7 +116,7 @@ function ScrollDivFixed(id, h) {
 	
 function Relatedlinks() {
 	return "<ul class=\"blog-images\">" +
-			"<li><a href=\"http://gaohr.win/site/chat/index.html/\" target=\"_blank\" title=\"GIS大饼聊天室\"><img alt=\"GIS大饼聊天室\" src=\"img/images/chat.png\">GIS大饼聊天室</a></li><br>" +
+			"<li><a href=\"http://gaohr.win/site/chat/index.html\" target=\"_blank\" title=\"GIS大饼聊天室\"><img alt=\"GIS大饼聊天室\" src=\"img/images/chat.png\">GIS大饼聊天室</a></li><br>" +
 			"<li><a href=\"https://shop196715718.taobao.com/\" target=\"_blank\" title=\"淘宝店铺：蹉跎的点线面\"><img alt=\"蹉跎的点线面\" src=\"img/images/cuotuoPPP.png\">蹉跎的点线面</a></li><br>" +
 			"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"专题栏目\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
 			"<li><a href=\"site/historytoday/index.html\" target=\"\" title=\"历史上的今天\"><img alt=\"历史上的今天\" src=\"img/images/History.png\">历史上的今天</a></li><br>" +
