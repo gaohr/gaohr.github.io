@@ -260,7 +260,7 @@
 		});
 		resComment = eval("(" + res.responseText + ")");
 		for(var i = 0; i < resComment["chat_list"].length; i++){
-			if(resComment["chat_list"][i]["user"] == user_name){
+			if(resComment["chat_list"][i]["user"] == user_name && resComment["chat_list"][i]["user"] != "GIS大饼"){
 				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 					".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
 					"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
