@@ -26,7 +26,7 @@
 		.chat-content .chat-userhead img{width:36px; height:36px;}
 		.chat-content .chat-username{margin:5px;color:#39f;}
 		.chat-content .chat-time{margin:5px;color:#999;font-size:9px;}
-		.chat-content .chat-text{background-color:rgba(0,0,0,0.05);padding:5px 7px;border-radius:5px}
+		.chat-content .chat-text{width:fit-content;width:-webkit-fit-content;width:-moz-fit-content;background-color:rgba(0,0,0,0.075);padding:7px;border-radius:5px}
 		
 		.chat-edit{width:98%;height:95px;margin-top:10px;background-color:rgba(255,255,255,0.8);padding:1%}
 		.chat-edit .user-info{width:32%;height:80%;float:left;background-color:rgba(0,0,0,0.05);;padding:10px}
@@ -153,7 +153,7 @@
 		var un_arr = ["天", "地", "人", "君", "臣", "义", "仁", "道", "信", "智", "贤", "德", 
 		              "一", "二", "三", "五", "八", "十一", 
 		              "甲", "乙", "丙", "丁", "戊", "己", "庚", "辛", "壬", "癸", 
-		              "十里", "百里", "千里", "万里", "千百", "百万", "京", "津", "晋", "豫", "鲁", 
+		              "十里", "百里", "千里", "万里", "千百", "百万", 
 		              "江", "河", "湖", "海", "日", "月", "山", "川", 
 		              "龙", "虎", "象", "鹤", "鹏", "飞", "行", "步", "远", 
 		              "飞云", "北风", "青溪", "舒月", "何人", "秋千", "江花", "玉山", "天外"];
@@ -208,7 +208,7 @@
 					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
 							".png\"></div><div><span class=\"chat-username\">" + user_name + 
 							"</span><br><span class=\"chat-time\">" + datetime_cur + 
-							"</span></div><br><span class=\"chat-text\">" + chat_text + 
+							"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\">" + chat_text + 
 							"</span></div><hr>");
 					
 					// 提交到服务器
@@ -264,14 +264,20 @@
 				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 					".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
 					"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
-					"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.1)\">" + resComment["chat_list"][i]["comment"] + 
+					"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\">" + resComment["chat_list"][i]["comment"] + 
+					"</span></div><hr>");
+			} else if(resComment["chat_list"][i]["user"] == "GIS大饼"){
+				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
+					".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
+					"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
+					"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,255,0.15)\">" + resComment["chat_list"][i]["comment"] + 
 					"</span></div><hr>");
 			} else {
 				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 					".png\"></div><div><span class=\"chat-username\">" + resComment["chat_list"][i]["user"] + 
 					"</span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
-					"</span></div><br><span class=\"chat-text\">" + resComment["chat_list"][i]["comment"] + 
-					"</span></div><hr>");
+					"</span></div><div class=\"chat-text\"><span>" + resComment["chat_list"][i]["comment"] + 
+					"</span></div></div><hr>");
 			}
 		}
 		// 窗口滚动到最底部
