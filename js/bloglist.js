@@ -1,8 +1,8 @@
 var bloglist = [
 
-{"blogid":"2023022601", "title":"气温和降雨1公里格网数据产品(1961-2019)", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"", "img":"site/blogs/2023/images/ClimateData.jpg", "date":"2023-02-26", "href":"http://gaohr.win/site/blogs/2023/2023-02-26-hrlt-gridded-dataset-for-temperature-precipitation-cn", "tags":["气象数据", "高分辨率", "全国"]},
+{"blogid":"2023022601", "title":"气温和降雨1公里格网数据产品(1961-2019)", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"逐日最高气温、最低气温和降水网格数据集，空间分辨率为1公里，时间分辨率为1天（1961年至2019年）", "img":"site/blogs/2023/images/ClimateData.jpg", "date":"2023-02-26", "href":"http://gaohr.win/site/blogs/2023/2023-02-26-hrlt-gridded-dataset-for-temperature-precipitation-cn", "tags":["气象数据", "高分辨率", "全国"]},
 
-{"blogid":"2020081001", "title":"全国五级行政区划及村级居民点数据（更新至2022）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
+{"blogid":"2020081001", "title":"全国五级行政区划及村级居民点数据（更新至2022年）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2019121001", "title":"全国城市兴趣点（POI）数据（更新至2022年）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"POI通常包含地理对象的名称，位置，类别等信息，随着大数据时代的来临，POI兴趣点被广泛应用于各行各业。本站提供的POI数据源自百度地图Web服务API，在此提供全国市级地区的POI数据下载", "img":"site/blogs/2019/images/CityPOI.jpg", "date":"2019-12-10", "href":"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html", "tags":["城市", "POI", "全国"]},
 
