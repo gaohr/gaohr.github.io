@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 气温和降雨1公里格网数据产品(1961-2019)</title>
+
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2023022601">
+				<div class="blogcontent alist">
+					<h2>气温和降雨1公里格网数据产品(1961-2019)</h2>
+					<h2><small>A high-resolution and long-term gridded dataset for temperature and precipitation across China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="g-color-green blog-important-part">分享一个质量不错的气象数据产品，这个是我在查找文献资料时发现的，对于有长时段、高分辨率气象数据需求的可以关注一下。尤其在当前气象数据网不再公开中国地面气候资料日值数据的情况下，这种模型同化生产的数据集可以说是非常有价值的替代品。该数据是网格化的逐日最高气温、最低气温和降水数据集（简称HRLT数据集），空间分辨率为1公里，时间分辨率为1天（1961年至2019年）。</p>
+					<p class="blog-sub-title"><b>数据介绍</b></p>
+					<p class="g-color-blue"></p>
+					<p>使用综合统计分析方法（包括机器学习），结合高程、坡向、坡度、地形湿度指数、纬度和经度等协变量，对中国气象网发布的0.5°×0.5°网格逐日数据参数进行空间插值。最高温度的平均绝对误差（MAE）、均方根误差（RMSE）、皮尔逊相关系数（Cor）、调整后确定系数（R²）和Nash-Sutcliffe建模效率（NSE）分别为1.07°C、1.62°C、0.99、0.98和0.98；最低温度的MAE、RMSE、Cor、R²和NSE分别为1.08°C、1.53°C、0.99、0.99和0.99；降水数据的MAE、RMSE、Cor、R²和NSE分别为1.30 mm、4.78 mm、0.84、0.71和0.70。</p>
+					<p></p>
+					<p><b>数据引用方式：</b></p>
+					<div class="blog-quote"><span>Qin, Rongzhu; Zhang, Feng (2022): HRLT: A high-resolution (1 day, 1 km) and long-term (1961–2019) gridded dataset for temperature and precipitation across China. PANGAEA. doi:10.1594/PANGAEA.941329.</span></div>
+					<br>
+					<p class="blog-sub-title"><b>数据属性</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国</p>
+						<p>空间分辨率：1 km</p>
+						<p>时间范围：1961-2019</p>
+						<p>时间分辨率：逐日</p>
+						<p>数据类型：NetCDF|nc</p>
+						<p>投影坐标：GCS WGS 84</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<br>
+					<p class="blog-sub-title"><b>数据预览</b></p>
+					<div class="row-fluid">
+						<div class="span4"><img class="imginblog" src="2023-02-26-hrlt-gridded-dataset-for-temperature-precipitation-cn/img01.jpg" alt="暂无图片，待更新"></div>
+						<div class="span4"><img class="imginblog" src="2023-02-26-hrlt-gridded-dataset-for-temperature-precipitation-cn/img02.jpg" alt="暂无图片，待更新"></div>
+						<div class="span4"><img class="imginblog" src="2023-02-26-hrlt-gridded-dataset-for-temperature-precipitation-cn/img03.jpg" alt="暂无图片，待更新"></div>
+					</div>
+					<p class="blog-sub-title"><b>数据下载</b></p>
+					<p>数据较大，单个文件大小约<b class="g-color-red">3~5GB</b>，建议在稳定的网络环境下下载。</p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<div class="portlet box grey percent-90">
+						<div class="portlet-title">
+							<div class="caption">气象数据列表</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>编号</th><th>名称</th><th>数据类型</th><th>年份</th><th>范围</th><th>数据下载</th></tr></thead>
+								<tbody id="data-climate"></tbody>
+							</table>
+						</div>
+					</div>
+					<br>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript -->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script>
+		var border = "1";
+		for(var i = 1961; i < 2020; i++){
+			if(i == 2019){
+				border = "3"
+			}
+			$("#data-climate").append("<tr style=\"border-bottom:" + border + "px solid #666\"><td>" + (i - 1961) + "</td><td style=\"color:#921\"><b>最高气温</b></td><td>NetCDF | nc</td><td><b>" + i + "年</b></td><td>全国</td><td><a href=\"https://download.pangaea.de/dataset/941329/files/China_1km_maxtmp_" + i + ".nc\" target=\"_blank\"><i class='icon-download'></i></a></td></tr>");
+		}
+		border = "1";
+		for(var i = 1961; i < 2020; i++){
+			if(i == 2019){
+				border = "3"
+			}
+			$("#data-climate").append("<tr style=\"border-bottom:" + border + "px solid #666\"><td>" + (i - 1961) + "</td><td style=\"color:#e81\"><b>最低气温</b></td><td>NetCDF | nc</td><td><b>" + i + "年</b></td><td>全国</td><td><a href=\"https://download.pangaea.de/dataset/941329/files/China_1km_mintmp_" + i + ".nc\" target=\"_blank\"><i class='icon-download-orange'></i></a></td></tr>");
+		}
+		border = "1";
+		for(var i = 1961; i < 2020; i++){
+			if(i == 2019){
+				border = "3"
+			}
+			$("#data-climate").append("<tr style=\"border-bottom:" + border + "px solid #666\"><td>" + (i - 1961) + "</td><td style=\"color:#06a\"><b>降水</b></td><td>NetCDF | nc</td><td><b>" + i + "年</b></td><td>全国</td><td><a href=\"https://download.pangaea.de/dataset/941329/files/China_1km_prep_" + i + ".nc\" target=\"_blank\"><i class='icon-download-blue'></i></a></td></tr>");
+		}
+	</script>
+	
+</body>
+</html>
