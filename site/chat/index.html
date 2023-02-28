@@ -208,8 +208,8 @@
 					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
 							".png\"></div><div><span class=\"chat-username\">" + user_name + 
 							"</span><br><span class=\"chat-time\">" + datetime_cur + 
-							"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\">" + chat_text + 
-							"</span></div><hr>");
+							"</span></div><div class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\"><span>" + chat_text + 
+							"</span></div></div><hr>");
 					
 					// 提交到服务器
 					$.ajax({
@@ -264,14 +264,14 @@
 				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 					".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
 					"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
-					"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\">" + resComment["chat_list"][i]["comment"] + 
-					"</span></div><hr>");
+					"</span></div><div class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\"><span>" + resComment["chat_list"][i]["comment"] + 
+					"</span></div></div><hr>");
 			} else if(resComment["chat_list"][i]["user"] == "GIS大饼"){
 				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 					".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
 					"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
-					"</span></div><br><span class=\"chat-text\" style=\"background-color:rgba(0,155,255,0.15)\">" + resComment["chat_list"][i]["comment"] + 
-					"</span></div><hr>");
+					"</span></div><div class=\"chat-text\" style=\"background-color:rgba(0,155,255,0.15)\"><span>" + resComment["chat_list"][i]["comment"] + 
+					"</span></div></div><hr>");
 			} else {
 				$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 					".png\"></div><div><span class=\"chat-username\">" + resComment["chat_list"][i]["user"] + 
