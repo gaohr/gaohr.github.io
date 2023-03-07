@@ -1,0 +1,36 @@
+.chat-hr{width:100%;height:1px;border-top:1px dashed #ddd;margin:10px 0;}
+.chat-box{width:100%;height:800px;margin-left:0;padding:10px;background-color:rgba(0,0,0,0.75);}
+.num-online{color:#f21}
+.chat-list{width:98%;height:675px;background-color:rgba(255,255,255,0.95);overflow:auto;padding:1%;}
+
+.chat-content{padding:3px 5px;margin-bottom:5px}
+.chat-content .chat-userhead{float:left;}
+.chat-content .chat-userhead img{width:36px; height:36px;}
+.chat-content .chat-username{margin:5px;color:#39f;}
+.chat-content .chat-time{margin:5px;color:#999;font-size:9px;}
+.chat-content .chat-text{width:fit-content;width:-webkit-fit-content;width:-moz-fit-content;background-color:rgba(0,0,0,0.075);padding:7px;border-radius:5px}
+
+.chat-edit{width:98%;height:75px;margin-top:10px;background-color:rgba(255,255,255,0.95);padding:1%;border:1px solid #aaa;}
+.chat-edit .user-info{width:24%;height:75%;float:left;background-color:rgba(0,0,0,0.05);padding:10px;border-radius:10px;}
+.chat-edit .user-info .user-info-des{color:#6af;font-size:0.8em;}
+.chat-edit .user-info .user-name-show{color:#c21;}
+.chat-edit .user-info .user-name-change{color:#999;border-radius:5px;background-color:rgba(255,255,255,0.95);margin-left:10px;padding:2px;font-size:0.8em;}
+.chat-edit .user-info .user-name-change:hover{color:#fff;background-color:#c63;}
+.chat-edit .chat-info{width:70%;height:75%;float:right;background-color:rgba(0,0,0,0.05);padding:10px;border-radius:10px;}
+.chat-edit .chat-info input{height:64%;margin-top:10px}
+.chat-edit .chat-info .chat-submit{color:#fff;padding:10px 20px;background-color:rgba(0,155,255,0.65);}
+.chat-edit .chat-info .chat-submit:hover{background-color:rgba(0,155,255,0.85);}
+
+.chat-change-name {width:20%;height:auto;display:none;z-index:999;position:absolute; top:15%; left:40%;background-color:#fff;box-shadow: 12px 7px 5px rgba(0,0,0,0.25);}
+.chat-change-name .content-title {padding:5px;background-color:rgba(0,0,0,0.75);color:#1ee}
+.chat-change-name .content-body {padding:5px;}
+.chat-change-name .control-label {width:50px;color:#555;}
+.chat-change-name .controls {margin-left:70px;color:#555;}
+.chat-change-name .controls #input-user {width:85%;height:24px;border-radius:0;background:rgba(255,255,255,0.9)}
+
+.btn-white {background-color:#eee;padding:3px 9px;border-radius:3px;color:#555;display:inline-block;}
+.btn-white:hover {background-color:#ddd;color:#333}
+.btn-white:active {background-color:#f0f0f0;}
+.btn-blue {background-color:#2878c8;padding:3px 9px;border-radius:3px;color:#fff;display:inline-block;}
+.btn-blue:hover {background-color:#295c8e;color:#fff}
+.btn-blue:active {background-color:#2878c8;}
