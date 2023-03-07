@@ -2,9 +2,15 @@
 @ Developed by GIS大饼
 */
 
+var cur_url_full = window.location.href;
+cur_url = cur_url_full.split("/")[2];
+if(cur_url == ""){
+	cur_url += "0"
+}
+
+var spetial_name = ["GIS大饼"];
+
 $(document).ready(function(){
-		
-		var spetial_name = ["GIS大饼"];
 		
 		var un_arr = ["天", "地", "人", "君", "臣", "义", "仁", "道", "信", "智", "贤", "德", 
 		              "一", "二", "三", "五", "八", "十一", 
@@ -28,12 +34,6 @@ $(document).ready(function(){
 		} else {
 			user_name = user_now_name;
 			user_head = user_now_head;
-		}
-		
-		var cur_url_full = window.location.href;
-		cur_url = cur_url_full.split("/")[2];
-		if(cur_url == ""){
-			cur_url += "0"
 		}
 		
 		// 添加容器
@@ -61,7 +61,6 @@ $(document).ready(function(){
 		uploadStatus();
 		setInterval("uploadStatus()", 120000);
 		
-		
 		// 先更新1次线人数数字和聊天列表，然后每隔30秒更新1次
 		updateComment();
 		setInterval("updateComment()", 30000);
@@ -69,6 +68,8 @@ $(document).ready(function(){
 		updateNumOL();
 		setInterval("updateNumOL()", 60000);
 		
+	});
+	
 		$("#chat-submit").click(function(){
 			var chat_text = $("#chat-submit-text").val();
 			
@@ -140,7 +141,8 @@ $(document).ready(function(){
 		$("#close-chat-change-name").click(function(){
 			$("#chat-change-name").hide();
 		});
-	
+		
+		
 		function uploadStatus(){
 			var date = new Date();
 			var date_s = date.getTime();  //当前时间(毫秒数)
@@ -210,4 +212,3 @@ $(document).ready(function(){
 				return n;
 			}
 		}
-	});
