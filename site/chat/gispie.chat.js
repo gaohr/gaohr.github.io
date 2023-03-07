@@ -68,8 +68,7 @@ $(document).ready(function(){
 		updateNumOL();
 		setInterval("updateNumOL()", 60000);
 		
-	});
-	
+		
 		$("#chat-submit").click(function(){
 			var chat_text = $("#chat-submit-text").val();
 			
@@ -142,6 +141,7 @@ $(document).ready(function(){
 			$("#chat-change-name").hide();
 		});
 		
+	});
 		
 		function uploadStatus(){
 			var date = new Date();
