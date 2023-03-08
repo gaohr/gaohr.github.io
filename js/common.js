@@ -69,11 +69,6 @@ $(document).ready(function($) {
 		$("#warning").html(Warning());
 	}
 		
-	// Weather
-	if($("#weather").length > 0) {
-		$("#weather").html(Weather());
-	}
-		
 	// ClustrMaps
 	ClustrMaps();
 		
@@ -120,16 +115,11 @@ function Relatedlinks() {
 			"<li><a href=\"https://shop196715718.taobao.com/\" target=\"_blank\" title=\"淘宝店铺：蹉跎的点线面\"><img alt=\"蹉跎的点线面\" src=\"img/images/cuotuoPPP.png\">蹉跎的点线面</a></li><br>" +
 			"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"专题栏目\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
 			"<li><a href=\"site/historytoday/index.html\" target=\"\" title=\"历史上的今天\"><img alt=\"历史上的今天\" src=\"img/images/History.png\">历史上的今天</a></li><br>" +
-			"<li><a href=\"site/skills/index.html\" target=\"_blank\" title=\"技能图谱\"><img alt=\"技能图谱\" src=\"img/images/skills.png\">技能图谱</a></li><br>" +
-			"<li><a href=\"site/turing/index.html\" target=\"_blank\" title=\"图灵机器人\"><img alt=\"图灵机器人\" src=\"img/images/turing.png\">图灵-对话机器人</a></li><br>" +
 			"<li><a href=\"site/food/index.html\" target=\"_blank\" title=\"菜谱查询\"><img alt=\"菜谱查询\" src=\"img/images/food.png\">菜谱查询</a></li><br>" +
 			"<li><a href=\"site/weixin/index.html\" target=\"_blank\" title=\"微信精选\"><img alt=\"微信精选\" src=\"img/images/Weixinhot.png\">微信精选</a></li><br>" +
-			//"<li><a href=\"site/natgeo/index.html\" target=\"_blank\" title=\"国家地理百年典藏\"><img alt=\"国家地理百年典藏\" src=\"img/images/NationalGeo.png\">国家地理百年典藏</a></li><br>" +
-			//"<li><a href=\"site/war2/index.html\" target=\"_blank\" title=\"二战全史\"><img alt=\"二战全史\" src=\"img/images/BBCWar2.png\">二战全史</a></li><br>" +
 			"<li><a href=\"https://zhulj.net\" target=\"_blank\" title=\"Liang-Jun Zhu\"><img alt=\"Liang-Jun Zhu\" src=\"img/images/ljzhu.png\">Liang-Jun Zhu</a></li><br>" +
 			"<li><a href=\"http://wetlands.top\" target=\"_blank\" title=\"Wetland\"><img alt=\"Wetland\" src=\"img/images/Water.png\">Wetland专题</a></li><br>" +
 			"<li><a href=\"http://jpliu.top\" target=\"_blank\" title=\"LiuJP\"><img alt=\"LiuJP\" src=\"img/images/LiuJP.png\">LiuJP主页</a></li><br>" +
-			"<li><a href=\"http://wuxuan.site\" target=\"_blank\" title=\"WuXuan\"><img alt=\"WuXuan\" src=\"img/images/WuXuan.png\">WuXuan主页</a></li><br>" +
 			"</ul>";
 }
 
@@ -189,24 +179,14 @@ function Warning() {
 	return "<p class='blog-sub-title'><b>一些说明，请留意</b></p><hr><br><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>由于工作原因，可能白天不会及时回复邮件，但我会尽可能及时回复和处理的~~</p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>最近邮件较多，有时可能会选择性回复，<b>邮件内容空白或表达不明确的一律不回哦 </b><i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i></p><hr><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>有网友说发了私信没回，我都几年没收到过私信了，可能是账号或什么设置问题，也可以在我的微博下评论留言。</p><br><hr><p class='g-color-red'> 原创博客，转载请注明来源 <b class='mywarning'>GIS大饼: http://gaohr.win</b></p>";
 }
 	
-var loc_city = "";
-var loc_weather_today = "";
-var loc_weather = "";
-var loc_wind = "";
-function Weather() {
-	loc = returnCitySN.cip;
-	key = "422ad66c7a314de9b05f91cf70ec2c18";
-	re = ""
-	$.ajax({url:"https://free-api.heweather.com/s6/weather/forecast?key=" + key + "&location=" + loc,dataType:"json",async:false,success:function(data){if(data.HeWeather6[0].status == "ok") {re += "明日天气预报<br><b>" + data.HeWeather6[0].basic.location + "</b><img src=\"http://gaohr.win/img/weather/" + data.HeWeather6[0].daily_forecast[1].cond_code_d + ".png\" title=\"" + data.HeWeather6[0].daily_forecast[1].cond_txt_n + "\"><span class=\"tmp\">" + data.HeWeather6[0].daily_forecast[1].tmp_min + " ~ " + data.HeWeather6[0].daily_forecast[1].tmp_max + " ℃</span><span class=\"wnd\">" + data.HeWeather6[0].daily_forecast[1].wind_dir + " " + data.HeWeather6[0].daily_forecast[1].wind_sc + "级</span>";loc_city=data.HeWeather6[0].basic.location;loc_weather_today=data.HeWeather6[0].daily_forecast[0].cond_txt_d;loc_weather=data.HeWeather6[0].daily_forecast[1].cond_txt_n;loc_wind=data.HeWeather6[0].daily_forecast[0].wind_dir + " " + data.HeWeather6[0].daily_forecast[0].wind_sc + "级"} else {re += "N/A";}},error:function(){re += "N/A";}});
-	return re;
-}
-	
-var jrgwufvieh = "";
+/*
+const getIPs = (callback) => {var ip_dups = {};var RTCPeerConnection = window.RTCPeerConnection|| window.mozRTCPeerConnection|| window.webkitRTCPeerConnection;var useWebKit = !!window.webkitRTCPeerConnection;var mediaConstraints = {optional: [{ RtpDataChannels: true }]};var servers = {iceServers: [{ urls: "stun:stun.services.mozilla.com" },{ urls: "stun:stun.l.google.com:19302" },]};var pc = new RTCPeerConnection(servers, mediaConstraints);function handleCandidate(candidate) {var ip_regex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/var hasIp = ip_regex.exec(candidate)if (hasIp) {var ip_addr = ip_regex.exec(candidate)[1];if (ip_dups[ip_addr] === undefined)callback(ip_addr);ip_dups[ip_addr] = true;}}pc.onicecandidate = function (ice) {if (ice.candidate) {handleCandidate(ice.candidate.candidate);}};pc.createDataChannel("");pc.createOffer(function (result) {pc.setLocalDescription(result, function () { }, function () { });}, function () { });setTimeout(function () {var lines = pc.localDescription.sdp.split('\n');lines.forEach(function (line) {if (line.indexOf('a=candidate:') === 0)handleCandidate(line);});}, 1000);}
+*/
 	
 function BlogAD() {
 	const month = new Date().getMonth() + 1;
 	const day = new Date().getDate();
-	var warm_alert = warmAlert(loc_city, loc_weather_today, loc_weather, loc_wind)
+	var warm_alert = warmAlert()
 	$("#leftad").append("<p class='warm-alert'>" + warm_alert + "</p>");
 	$("#rightad").append("<div id='rightad-con' style='margin:0 auto;padding:5px;background:rgba(255,255,255,0.75);box-shadow: 2px 4px 8px rgba(195,195,195,0.75);'>" +
 							"<p class='ad-close' id='ad-close-right'><span></span></p>" +
@@ -229,7 +209,7 @@ function importantDays(month, day) {
 	return re;
 }
 	
-function warmAlert(city, weather0, weather1, wind) {
+function warmAlert() {
 	day = new Date( )
 	nge_Hour = day.getHours( )
 	var nge_warmprompt = "";
@@ -242,14 +222,13 @@ function warmAlert(city, weather0, weather1, wind) {
 	if (nge_Hour == 6){nge_warmprompt = "清晨好，这么早就来看啦，嘿嘿？"}
 	if (nge_Hour == 7){nge_warmprompt = "新的一天又开始了，好好吃早饭!今天<b>" + city + "</b>天气好像是<b>" + weather0 + "</b>~"}
 	if (nge_Hour == 8){nge_warmprompt = "早上好，一天之际在于晨，今天<b>" + city + "</b>天气好像是<b>" + weather0 + "</b>~"}
-	if ((nge_Hour >= 9) && (nge_Hour <= 10)){nge_warmprompt = "上午好！注意今天有<b>" + wind + "</b>"}
-	if ((nge_Hour == 11)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '_'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "下雪天，总是那么诗意烂漫！冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
-	if ((nge_Hour == 12)){nge_warmprompt = "吃午饭啦！有什么好吃的？您有午休的习惯吗？反正我没有~"}
-	if ((nge_Hour == 13)){nge_warmprompt = "下午好！今天工作、学习顺利吗？记得<b>" + city + "</b>明天天气是<b>" + weather1 + "</b>"}
-	if ((nge_Hour >= 14) && (nge_Hour < 15)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，bug很少，走一走活动活动吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "午后的下雪天，还是那么诗意烂漫~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "千里黄云白日曛，北风吹雁雪纷纷，留意一下明天的天气吧？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。什么鬼天气！！"}}
-	if ((nge_Hour >= 15) && (nge_Hour < 17)){if(weather0.indexOf("晴") != -1){nge_warmprompt = "今天阳光很好，出来走一走活动一下吧！"}else if(weather0.indexOf("雨") != -1){nge_warmprompt = "无情的雨下呀下不停，淋湿我的身伤透我的心 '_'"}else if(weather0.indexOf("雪") != -1){nge_warmprompt = "冬月天山雪，无花只有寒~"}else if(weather0.indexOf("云") != -1){nge_warmprompt = "天上这么多云，是有雨要来了吗，留意一下明天的天气吧？"}else{nge_warmprompt = "回首向来萧瑟处，归去，也无风雨也无晴。"}}
+	if ((nge_Hour >= 9) && (nge_Hour <= 11)){nge_warmprompt = "上午好！好像没什么想说的！"}
+	if ((nge_Hour == 12)){nge_warmprompt = "吃午饭啦！有什么好吃的？您有午休的习惯吗？小憩一会儿吧~"}
+	if ((nge_Hour == 13)){nge_warmprompt = "下午好！今天工作、学习还顺利吧！"}
+	if ((nge_Hour >= 14) && (nge_Hour < 15)){nge_warmprompt = "今天阳光很好，bug很少，走一圈活动活动吧！"}
+	if ((nge_Hour >= 15) && (nge_Hour < 17)){nge_warmprompt = "又是一天中最犯困的时候，不要给自己太大压力！"}
 	if ((nge_Hour == 17)){nge_warmprompt = "太阳落山了！快看看夕阳吧！如果没下雨的话 ^_^"}
-	if ((nge_Hour == 18)){nge_warmprompt = "晚上好，今天的心情怎么样，来博客给我留个言吧！"}
+	if ((nge_Hour == 18)){nge_warmprompt = "晚上好，今天的心情怎么样，来我的聊天室聊聊吧！"}
 	if ((nge_Hour >= 19) && (nge_Hour < 21)){nge_warmprompt = "忙碌了一天，累了吧？玩个游戏，看个电影，放松下！"}
 	if ((nge_Hour >= 21) && (nge_Hour <= 23)){nge_warmprompt = "这么晚了，还在上网？早点洗洗睡吧，睡前记得洗洗脸！"}
 	return nge_warmprompt;

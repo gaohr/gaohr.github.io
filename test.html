@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 	<link href="site/clock/clock.css" rel="stylesheet" type="text/css">
 	<link rel="shortcut icon" href="img/logo.ico">
-    <title>GaoHR | 博客首页</title>
+    <title>GaoHR | Homepage</title>
 </head>
 
 <body>
@@ -25,6 +25,7 @@
 	<div class="mainlogo">
 		<a href="index.html" class="g-blog-logo"></a>
 		<img src="img/head.png" class="headimg">
+		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 		<div class="weather" id ="weather"></div>
 		<span id="head-tool" class="head-tool"></span>
 	</div>
@@ -208,7 +209,29 @@
 	<script src="js/bloglist.js"></script>
 	<script src="site/special/js/topicslist.js"></script>
 	<script src="js/blogsload.js"></script>
-	<script src="js/common.js"></script>
+    <script type="text/javascript">
+const getIPs = (callback) => {var ip_dups = {};var RTCPeerConnection = window.RTCPeerConnection|| window.mozRTCPeerConnection|| window.webkitRTCPeerConnection;var useWebKit = !!window.webkitRTCPeerConnection;var mediaConstraints = {optional: [{ RtpDataChannels: true }]};var servers = {iceServers: [{ urls: "stun:stun.services.mozilla.com" },{ urls: "stun:stun.l.google.com:19302" },]};var pc = new RTCPeerConnection(servers, mediaConstraints);function handleCandidate(candidate) {var ip_regex = /([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/var hasIp = ip_regex.exec(candidate)if (hasIp) {var ip_addr = ip_regex.exec(candidate)[1];if (ip_dups[ip_addr] === undefined)callback(ip_addr);ip_dups[ip_addr] = true;}}pc.onicecandidate = function (ice) {if (ice.candidate) {handleCandidate(ice.candidate.candidate);}};pc.createDataChannel("");pc.createOffer(function (result) {pc.setLocalDescription(result, function () { }, function () { });}, function () { });setTimeout(function () {var lines = pc.localDescription.sdp.split('\n');lines.forEach(function (line) {if (line.indexOf('a=candidate:') === 0)handleCandidate(line);});}, 1000);}
+
+getIPs((ip) => {
+	$.ajax({
+                url:"https://api.ip138.com/ip/?ip=" + ip + "&oid=74246&mid=131151&token=d3e26e133a78b9ede0fa7176799e46ee",
+                success:function(result){
+				console.log(result['data']);
+                   $("#others").html(result['data'][0]);
+                }
+           });
+});
+
+	var loc_id;
+	loc_cn = "北京";
+	$.ajax({url:"https://geoapi.qweather.com/v2/city/lookup?location="+loc_cn+"&key=422ad66c7a314de9b05f91cf70ec2c18",dataType:"json",async:false,success:function(data){loc_id = data.location[0].id}});
+	console.log(loc_id)
+
+    </script>
+	
+</script>
+	
+	
 	<script>
 		$('.carousel').carousel({
 			interval: 3000
@@ -217,6 +240,8 @@
 			$.cookie("gispie_username", "GIS大饼", {expires: 999, path: "/", secure: false});
 			$.cookie("gispie_userhead", "0", {expires: 999, path: "/", secure: false});
 		})
+		
+		
 	</script>
 	<script src="site/clock/clock.js"></script>
 </body>

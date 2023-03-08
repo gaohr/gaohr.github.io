@@ -25,7 +25,6 @@
 	<div class="mainlogo">
 		<a href="../../../index.html" class="g-blog-logo"></a>
 		<img src="../../../img/head.png" class="headimg">
-		<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
 		<div class="weather" id ="weather"></div>
 		<span id="head-tool" class="head-tool"></span>
 	</div>
@@ -93,9 +92,8 @@
 					<p>当我们下载了大量遥感影像数据（如风云卫星数据产品，为国产数据打call），一般不可能直接就可以使用，需要进行一定的预数据处理，才能达到我们的使用标准。在这个过程中，一般情况下可能涉及到的数据处理有“定义投影”、“投影变换”、“地图配置”、“数据裁剪”、“重采样”等等。下面具体介绍程序编写实现方法。</p>
 					<p>以栅格数据裁剪为例。</p>
 					<p>首先，引入Arcpy包，</p>
-					<div class="codeblock">
-						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
+					<div class="codeblock" style="background:#eee">
+						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:blue;mso-font-kerning:
 0pt'>import</span></b></span><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:black;mso-font-kerning:
@@ -103,16 +101,14 @@ font-family:"Courier New";mso-fareast-font-family:宋体;color:black;mso-font-ke
 12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:0pt'><o:p></o:p></span></p>
 					</div>
 					<p>调用Arcpy的栅格裁剪函数，</p>
-					<div class="codeblock">
-						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+					<div class="codeblock" style="background:#eee">
+						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:green;mso-font-kerning:0pt'># <span
 class=GramE>function</span>: <span class=SpellE>RasterClip</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><b><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><b><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:blue;mso-font-kerning:0pt'>def</span></b></span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
@@ -138,49 +134,42 @@ color:black;mso-font-kerning:0pt'> <span class=SpellE>out_raster</span></span><b
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
 宋体;color:navy;mso-font-kerning:0pt'>):<o:p></o:p></span></b></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:#FF8000;mso-font-kerning:0pt'>'''<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:<span
 class=SpellE>param</span></span> <span class=SpellE>datadir</span>: data
 direction<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:<span
 class=SpellE>param</span></span> <span class=SpellE>in_raster</span>: raster
 data to be clip<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:<span
 class=SpellE>param</span></span> <span class=SpellE>extent_feature</span>:
 cutting boundary<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:<span
 class=SpellE>param</span></span> <span class=SpellE>file_name</span>: output<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>'''</span><span lang=EN-US
 style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
 0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span class=GramE><b><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -190,8 +179,7 @@ color:navy;mso-font-kerning:0pt'>:</span></b><span lang=EN-US style='font-size:
 10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;color:black;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 class=SpellE>arcpy<b><span style='color:navy'>.</span></b>Clip_<span
@@ -231,8 +219,7 @@ color:navy;mso-font-kerning:0pt'>)</span></b><span lang=EN-US style='font-size:
 10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;color:black;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
 class=GramE><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -253,8 +240,7 @@ font-family:"Courier New";mso-fareast-font-family:宋体;color:navy;mso-font-ker
 0pt'>))</span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
 class=GramE><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -301,8 +287,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span class=GramE><b><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -312,8 +297,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
 class=GramE><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -326,8 +310,7 @@ color:navy;mso-font-kerning:0pt'>()</span></b><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
 class=GramE><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -339,22 +322,19 @@ mso-font-kerning:0pt'>&quot;Process failed.&quot;</span><span lang=EN-US
 style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;mso-font-kerning:
 0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:12.0pt;mso-bidi-font-size:
 11.0pt;font-family:"Times New Roman","serif"'><o:p>&nbsp;</o:p></span></p>
 
 					</div>
 					<p>以上函数可以进行一幅影像的裁剪，接下来便可以实现批处理功能，获取待裁剪栅格数据文件路径及文件名函数如下，</p>
-					<div class="codeblock">
-						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+					<div class="codeblock" style="background:#eee">
+						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:green;mso-font-kerning:0pt'># <span
 class=GramE>function</span>: <span class=SpellE>getFileList</span></span><span
 lang=EN-US style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><b><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><b><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:blue;mso-font-kerning:0pt'>def</span></b></span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
@@ -374,41 +354,35 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:#FF8000;mso-font-kerning:0pt'>'''<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:<span
 class=SpellE>param</span></span> <span class=SpellE>dataDir</span>: <span
 class=SpellE>forld</span> path<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:<span
 class=SpellE>param</span></span> <span class=SpellE>ftype</span>: file suffix(.*)<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=GramE>:return</span>:
 full path, file name(without suffix)<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:#FF8000;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>'''</span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><span
 class=GramE>fileFullPathList</span></span> </span><b><span lang=EN-US
@@ -420,8 +394,7 @@ font-family:"Courier New";mso-fareast-font-family:宋体;color:navy;mso-font-ker
 0pt'>[]</span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><span
 class=GramE>fileNameList</span></span> </span><b><span lang=EN-US
@@ -433,8 +406,7 @@ font-family:"Courier New";mso-fareast-font-family:宋体;color:navy;mso-font-ker
 0pt'>[]</span></b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><span
 class=GramE>filenameList</span></span> </span><b><span lang=EN-US
@@ -451,8 +423,7 @@ color:navy;mso-font-kerning:0pt'>)</span></b><span lang=EN-US style='font-size:
 10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;color:black;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span class=GramE><b><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -468,8 +439,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
 class=SpellE>file_name</span></span><b><span lang=EN-US style='font-size:10.0pt;
@@ -491,8 +461,7 @@ color:navy;mso-font-kerning:0pt'>)</span></b><span lang=EN-US style='font-size:
 10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;color:black;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><span
 class=GramE><b><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
@@ -508,8 +477,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span><span class=SpellE><span class=GramE>fileFullPathList<b><span
@@ -533,8 +501,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 </span><span class=SpellE><span class=GramE>fileNameList<b><span
@@ -548,8 +515,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span></span><span class=GramE><b><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -564,16 +530,14 @@ lang=EN-US style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋�
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 					</div>
 					<p>最后，遍历所有要裁剪的数据，实现数据批量裁剪，</p>
-					<div class="codeblock">
-						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+					<div class="codeblock" style="background:#eee">
+						<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:green;mso-font-kerning:0pt'># <span
 class=GramE>Define</span> data direction and vector data of boundary</span><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
 宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'>datadir</span></span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
@@ -588,8 +552,7 @@ font-family:"Courier New";mso-fareast-font-family:宋体;color:gray;mso-font-ker
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
 宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'>extentFeature</span></span></span><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -603,18 +566,15 @@ color:gray;mso-font-kerning:0pt'>r'D</span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:gray;mso-font-kerning:0pt'>:\...\*.<span class=SpellE>shp</span>'<o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:green;mso-font-kerning:0pt'># Get data</span><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
 宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'>fType</span></span></span><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
@@ -628,8 +588,7 @@ class=SpellE>tif</span>'</span><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:black;mso-font-kerning:
 0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:blue;mso-font-kerning:
 0pt'>print</span></b></span><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:black;mso-font-kerning:
@@ -642,8 +601,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'> <span class=SpellE>fType</span><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'>fileList</span></span></span><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -663,19 +621,16 @@ mso-font-kerning:0pt'> <span class=SpellE>fType</span></span><b><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
 宋体;color:navy;mso-font-kerning:0pt'>)<o:p></o:p></span></b></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:green;mso-font-kerning:0pt'># <span
 class=GramE>Create</span> <span class=SpellE>forld</span></span><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
 宋体;color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=SpellE><span class=GramE><span lang=EN-US
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=SpellE><span class=GramE><span lang=EN-US
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'>clipForld</span></span></span><span
 lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:
@@ -698,8 +653,7 @@ font-family:"Courier New";mso-fareast-font-family:宋体;color:gray;mso-font-ker
 font-family:"Courier New";mso-fareast-font-family:宋体;color:black;mso-font-kerning:
 0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:blue;mso-font-kerning:
 0pt'>if</span></b></span><span lang=EN-US style='font-size:10.0pt;font-family:
 "Courier New";mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'> </span><b><span
@@ -717,8 +671,7 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><span
 class=GramE>os<b><span style='color:navy'>.</span></b>makedirs</span></span></span><span
@@ -731,12 +684,10 @@ lang=EN-US style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-fa
 style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:宋体;
 color:black;mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><o:p>&nbsp;</o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span class=GramE><b><span lang=EN-US style='font-size:10.0pt;
 font-family:"Courier New";mso-fareast-font-family:宋体;color:blue;mso-font-kerning:
 0pt'>for</span></b></span><span lang=EN-US style='font-size:10.0pt;font-family:
 "Courier New";mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'> i </span><b><span
@@ -787,8 +738,7 @@ color:gray;mso-font-kerning:0pt'>&quot;_<span class=SpellE>clip.tif</span>&quot;
 lang=EN-US style='font-size:12.0pt;font-family:宋体;mso-bidi-font-family:宋体;
 mso-font-kerning:0pt'><o:p></o:p></span></p>
 
-<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;
-background:white'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
+<p class=MsoNormal align=left style='text-align:left;mso-pagination:widow-orphan;'><span lang=EN-US style='font-size:10.0pt;font-family:"Courier New";
 mso-fareast-font-family:宋体;color:black;mso-font-kerning:0pt'><span
 style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span><span class=SpellE><span
 class=GramE>RasterClip</span></span></span><span class=GramE><b><span
