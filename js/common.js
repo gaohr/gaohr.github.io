@@ -46,7 +46,11 @@ $(document).ready(function($) {
 	//	var $i = $("<span/>").text(arrT[a_idx]);a_idx = (a_idx + 1) % arrT.length;var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","color": "#666","font-size": "1.em"});$("body").append($i);$i.animate({"top": y - 180,"opacity": 0},2000,function() {$i.remove();});
 	//	return false;
 	//});
-		
+	
+	if($("#weather").length > 0) {
+		Weather();
+	}
+	
 	// Comments
 	if($("#comments").length > 0) {
 		likeIt(600);
@@ -127,7 +131,10 @@ function ClustrMaps() {
 	$("#cltmap").html("<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=200&t=tt&d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ&co=00365c&ct=ffffff&cmo=00bf00&cmn=cf2500'></script>");
 	//$("#cltmap").html("<div class='row-fluid'><div class='span2'></div><div class='span8'><script type='text/javascript' id='clstr_globe' src='//cdn.clustrmaps.com/globe.js?d=2MAtWut9LH7lh-B1sQLqIbylbTqh4tSwQyno2E1RAEQ'></script></div><div class='span2'></div></div>");
 }
-
+	
+function Weather() {
+	$("#weather").html("GIS大饼 你我共享");
+}
 
 function Copyright() {
 	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/pages/specialneeds/'> 数据定制 </a><div class='footer-text'><span> 在线时间 17:00-22:00 </span><span> 单位地址:北京市海淀区邓庄南路9号 </span><span> 联系邮箱:gispie@163.com </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2023 <a href='http://gaohr.win/' target='_blank'>GIS大饼 GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
