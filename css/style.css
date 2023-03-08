@@ -284,6 +284,10 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 	.blogcontent .imginblog img {max-width:640px;}
 }
 
+@media (max-width: 1200px) {
+	.cltmap {display:none}
+}
+
 @media (max-width: 560px) {
 	.main-page {position:relative;width:100%;margin:15% 0;}
 	.menulist {display:block;margin-top:10%;font-size:18px;}
@@ -300,6 +304,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 	.greatChina {display:none}
 	.notice {display:none}
 	.g-search {display:none}
+	.cltmap {display:none}
 }
 
 @media (max-width: 480px) {
