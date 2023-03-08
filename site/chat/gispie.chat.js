@@ -10,6 +10,8 @@ if(cur_url == ""){
 
 var spetial_name = ["GIS大饼"];
 
+$("#chat-box").height($(window).height() * 0.66);
+
 $(document).ready(function(){
 		
 		var un_arr = ["天", "地", "人", "君", "臣", "义", "仁", "道", "信", "智", "贤", "德", 
@@ -56,6 +58,9 @@ $(document).ready(function(){
 						"<div class=\"controls\"><label class=\"checkbox\"><input type=\"checkbox\" checked> 记住我</label>" + 
 						"<a href=\"###\" id=\"btn-change-name-ok\" class=\"chat-btn btn-blue\">确认</a>" + 
 						"<a href=\"###\" id=\"btn-change-name-cancel\" class=\"chat-btn btn-white\">取消</a></div></div></form></div></div>");
+						
+		$("#chat-list").height($("#chat-box").height() - 125);
+		
 		// alert(user_now_name + user_now_head);
 		// 每隔2分钟提交一次状态，以此判断在线人数
 		uploadStatus();

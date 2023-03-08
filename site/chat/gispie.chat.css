@@ -1,7 +1,7 @@
 .chat-hr{width:100%;height:1px;border-top:1px dashed #ddd;margin:10px 0;}
-.chat-box{width:100%;height:800px;margin-left:0;padding:10px;background-color:rgba(0,0,0,0.75);}
+.chat-box{width:100%;margin-left:0;padding:10px;background-color:rgba(0,0,0,0.75);}
 .num-online{color:#f21}
-.chat-list{width:98%;height:675px;background-color:rgba(255,255,255,0.95);overflow:auto;padding:1%;}
+.chat-list{width:98%;min-height:400px;background-color:rgba(255,255,255,0.95);overflow-y:auto;padding:10px;}
 
 .chat-content{padding:3px 5px;margin-bottom:5px}
 .chat-content .chat-userhead{float:left;}
@@ -10,7 +10,7 @@
 .chat-content .chat-time{margin:5px;color:#999;font-size:9px;}
 .chat-content .chat-text{width:fit-content;width:-webkit-fit-content;width:-moz-fit-content;background-color:rgba(0,0,0,0.075);padding:7px;border-radius:5px}
 
-.chat-edit{width:98%;height:75px;margin-top:10px;background-color:rgba(255,255,255,0.95);padding:1%;border:1px solid #aaa;}
+.chat-edit{width:98%;height:75px;margin-top:10px;background-color:rgba(255,255,255,0.95);padding:10px;border:1px solid #aaa;}
 .chat-edit .user-info{width:24%;height:75%;float:left;background-color:rgba(0,0,0,0.05);padding:10px;border-radius:10px;}
 .chat-edit .user-info .user-info-des{color:#6af;font-size:0.8em;}
 .chat-edit .user-info .user-name-show{color:#c21;}
