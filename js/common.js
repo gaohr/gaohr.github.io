@@ -135,7 +135,7 @@ function ClustrMaps() {
 function Weather() {
 	$("#weather").html("GIS大饼 你我共享");
 }
-
+	
 function Copyright() {
 	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/pages/specialneeds/'> 数据定制 </a><div class='footer-text'><span> 在线时间 17:00-22:00 </span><span> 单位地址:北京市海淀区邓庄南路9号 </span><span> 联系邮箱:gispie@163.com </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2023 <a href='http://gaohr.win/' target='_blank'>GIS大饼 GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
 }
@@ -225,10 +225,10 @@ function warmAlert() {
 	if (nge_Hour == 2){nge_warmprompt = "该休息了，身体可是革命的本钱啊！啊？！！"}
 	if (nge_Hour == 3){nge_warmprompt = "夜深了，熬夜很容易导致身体内分泌失调，长痘痘的！"}
 	if (nge_Hour == 4){nge_warmprompt = "四点了，你是起了还是没睡？？？"}
-	if (nge_Hour == 5){nge_warmprompt = "<b>" + city + "</b>凌晨5点的天空，你看看了吗？"}
+	if (nge_Hour == 5){nge_warmprompt = "凌晨5点的天空，你看看了吗？"}
 	if (nge_Hour == 6){nge_warmprompt = "清晨好，这么早就来看啦，嘿嘿？"}
-	if (nge_Hour == 7){nge_warmprompt = "新的一天又开始了，好好吃早饭!今天<b>" + city + "</b>天气好像是<b>" + weather0 + "</b>~"}
-	if (nge_Hour == 8){nge_warmprompt = "早上好，一天之际在于晨，今天<b>" + city + "</b>天气好像是<b>" + weather0 + "</b>~"}
+	if (nge_Hour == 7){nge_warmprompt = "新的一天又开始了，好好吃早饭!"}
+	if (nge_Hour == 8){nge_warmprompt = "早上好，一天之际在于晨~"}
 	if ((nge_Hour >= 9) && (nge_Hour <= 11)){nge_warmprompt = "上午好！好像没什么想说的！"}
 	if ((nge_Hour == 12)){nge_warmprompt = "吃午饭啦！有什么好吃的？您有午休的习惯吗？小憩一会儿吧~"}
 	if ((nge_Hour == 13)){nge_warmprompt = "下午好！今天工作、学习还顺利吧！"}
