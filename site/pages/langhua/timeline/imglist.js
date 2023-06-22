@@ -85,7 +85,7 @@ var imglist = [
 	{
 		title:'小浪语录', data:'2022-01-20', location:'• 大兴国际机场 北京', type:'location', 
 		src:[{url:'LHxiaolang.jpg'}],
-		textcon:'小青和小黄游得很欢快，<br>似乎还不知道你出远门了。<br>365个日夜太漫长，<br>期待你在那一天返航。'
+		textcon:'小青和小黄游得很欢快，似乎还不知道你出远门了。365个日夜太漫长，期待你在那一天返航。'
 	},
 	
 	{
@@ -565,7 +565,7 @@ var imglist = [
 	{
 		title:'浪花', data:'2016-11-19', location:'• 拙政园• 寒山寺 苏州', type:'image', 
 		src:[{url:'201611191.jpg'},{url:'201611192.jpg'},{url:'201611193.jpg'},{url:'201611194.jpg'},{url:'201611195.jpg'},{url:'201611196.jpg'}],
-		textcon:'月落乌啼霜满天,<br>江枫渔火对愁眠。<br>姑苏城外寒山寺,<br>夜半钟声到客船。',
+		textcon:'月落乌啼霜满天,江枫渔火对愁眠。姑苏城外寒山寺,夜半钟声到客船。',
 	},
 	{
 		title:'浪花', data:'2016-11-18', location:'• 高铁上', type:'image', 
@@ -700,12 +700,12 @@ var imglist = [
 	{
 		title:'小浪语录', data:'2016-01-12', location:'• 中科院地理所 北京', type:'location', 
 		src:[{url:'LHxiaolang.jpg'}],
-		textcon:'长大了了，不再是小孩，也该独当一面了！<br>一切为了你，为了我们；我会改变，对你不变，我的承诺！'
+		textcon:'长大了了，不再是小孩，也该独当一面了！一切为了你，为了我们；我会改变，对你不变，我的承诺！'
 	},
 	{
 		title:'小花语录', data:'2016-01-04', location:'• 首都师范大学 北京', type:'location', 
 		src:[{url:'LHxiaohua.jpg'}],
-		textcon:'人有多大胆，复习拖多晚。<br>死猪不怕开水烫，越到考试我越浪'
+		textcon:'人有多大胆，复习拖多晚。死猪不怕开水烫，越到考试我越浪'
 	},
 	{
 		title:'浪花', data:'2016-01-01', location:'• 首都师范大学 北京', type:'image', 
@@ -735,7 +735,7 @@ var imglist = [
 	{
 		title:'小花语录', data:'2015-12-30', location:'• 首都师范大学 北京', type:'location', 
 		src:[{url:'LHxiaohua.jpg'}],
-		textcon:'卖萌又卖身<br>集赚钱、服务于一体的好男友<br>一朝拥有，终身使唤'
+		textcon:'卖萌又卖身，集赚钱、服务于一体的好男友。一朝拥有，终身使唤'
 	},
 	{
 		title:'小花', data:'2015-12-20', location:'• 首都师范大学 北京', type:'image', 
