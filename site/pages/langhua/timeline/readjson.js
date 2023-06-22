@@ -40,10 +40,15 @@ for(i = 0; i < imgs.length; i++) {
 
 function getsrcnum(n) {
 	var imgsrc = "";
-	for(k = 0; k < imgs[n].src.length; k++) {
-		var year_cur = imgs[n].data.substring(0, 4);
-		imgsrc += "<img class='imglh' onclick='imgdisplay(\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[n].src[k].url + "\", " + n + ")' src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[n].src[k].url + "'> "
+	if(imgs[n].type == "image") {
+		for(k = 0; k < imgs[n].src.length; k++) {
+			var year_cur = imgs[n].data.substring(0, 4);
+			imgsrc += "<img class='imglh' onclick='imgdisplay(\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[n].src[k].url + "\", " + n + ")' src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[n].src[k].url + "'> "
+		}
+	} else {
+		imgsrc += "<img class='imglh' onclick='imgdisplay(\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[n].src[0].url + "\", " + n + ")' src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[n].src[0].url + "'> "
 	}
+	
 	return imgsrc;
 }
 
