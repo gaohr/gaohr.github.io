@@ -1,8 +1,168 @@
 ﻿
 var imglist = [
+	//2023
+	{
+		title:'division', data:'2023',
+	},
+	
+	{
+		title:'小花', data:'2023-06-21', location:'• 中国人民大学 北京', type:'image', 
+		src:[{url:'2023062101.jpg'}, {url:'2023062102.jpg'}],
+		textcon:'毕业快乐~~',
+	},
+	
+	{
+		title:'浪花', data:'2023-10-11', location:'• 雍和宫 北京', type:'image', 
+		src:[{url:'2023042001.jpg'}, {url:'2023042002.jpg'}],
+		textcon:'雍和宫的一角',
+	},
+	
+	//2022
+	{
+		title:'division', data:'2022',
+	},
+	
+	{
+		title:'小花', data:'2022-12-02', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022120201.jpg'}],
+		textcon:'期待再见',
+	},
+	
+	{
+		title:'小花', data:'2022-11-30', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022113001.jpg'}],
+		textcon:'窗外湖畔的夜',
+	},
+	
+	{
+		title:'小花', data:'2022-10-11', location:'• 格罗宁根大学 荷兰', type:'image', 
+		src:[{url:'2022101101.jpg'}, {url:'2022101102.jpg'}, {url:'2022101103.jpg'}],
+		textcon:'校园一角留念',
+	},
+	
+	{
+		title:'小花', data:'2022-07-31', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022073101.jpg'}, {url:'2022073102.jpg'}, {url:'2022073103.jpg'}, {url:'2022073104.jpg'}, {url:'2022073105.jpg'}, {url:'2022073106.jpg'}],
+		textcon:'畅游东欧五国',
+	},
+	
+	{
+		title:'小花', data:'2022-06-20', location:'• 格罗宁根大学 荷兰', type:'image', 
+		src:[{url:'2022062001.jpg'}, {url:'2022062002.jpg'}, {url:'2022062003.jpg'}],
+		textcon:'参加格罗宁根大学博士答辩',
+	},
+	
+	{
+		title:'小花', data:'2022-05-15', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022051501.jpg'}, {url:'2022051502.jpg'}, {url:'2022051503.jpg'}],
+		textcon:'我又来了，绿色牧场',
+	},
+	
+	{
+		title:'小花', data:'2022-05-07', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022050701.jpg'}, {url:'2022050702.jpg'}, {url:'2022050703.jpg'}, {url:'2022050704.jpg'}],
+		textcon:'绿色牧场',
+	},
+	
+	{
+		title:'小花', data:'2022-04-28', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022042801.jpg'}, {url:'2022042802.jpg'}],
+		textcon:'我的心，漂洋过海给了你~',
+	},
+	
+	{
+		title:'小浪', data:'2022-04-08', location:'• 应急部 北京', type:'image', 
+		src:[{url:'2022040801.jpg'}],
+		textcon:'应急部救灾司，前来报到',
+	},
+	
+	{
+		title:'小花', data:'2022-02-23', location:'• 格罗宁根 荷兰', type:'image', 
+		src:[{url:'2022022301.jpg'}, {url:'2022022302.jpg'}, {url:'2022022303.jpg'}, {url:'2022022304.jpg'}],
+		textcon:'窗外的景色，还挺美！',
+	},
+	
+	{
+		title:'小浪语录', data:'2022-01-20', location:'• 大兴国际机场 北京', type:'location', 
+		src:[{url:'LHxiaolang.jpg'}],
+		textcon:'小青和小黄游得很欢快，<br>似乎还不知道你出远门了。<br>365个日夜太漫长，<br>期待你在那一天返航。'
+	},
+	
+	{
+		title:'浪花', data:'2022-01-20', location:'• 北新家园 北京', type:'image', 
+		src:[{url:'2022012001.jpg'}, {url:'2022012002.jpg'}],
+		textcon:'送你离开，万里之外……',
+	},
+	
+	
+	//2021
+	{
+		title:'division', data:'2021',
+	},
+	
+	{
+		title:'浪花', data:'2021-10-23', location:'• 森林公园 北京', type:'image', 
+		src:[{url:'2021102301.jpg'}, {url:'2021102302.jpg'}, {url:'2021102303.jpg'}, {url:'2021102304.jpg'}],
+		textcon:'发现了新风景，芦苇荡',
+	},
+	
+	{
+		title:'浪花', data:'2021-10-01', location:'• 天安门 北京', type:'image', 
+		src:[{url:'2021100101.jpg'}, {url:'2021100102.jpg'}],
+		textcon:'祝福祖国',
+	},
+	
+	{
+		title:'浪花', data:'2021-06-27', location:'• 四川', type:'image', 
+		src:[{url:'2021062701.jpg'}, {url:'2021062702.jpg'}, {url:'2021062703.jpg'}, {url:'2021062704.jpg'}, {url:'2021062705.jpg'}, {url:'2021062706.jpg'}, {url:'2021062707.jpg'}],
+		textcon:'毕业旅行，九寨黄龙大熊猫',
+	},
+	
+	{
+		title:'浪花', data:'2021-06-15', location:'• 空天院 北京', type:'image', 
+		src:[{url:'2021061501.jpg'}, {url:'2021061502.jpg'}, {url:'2021061503.jpg'}, {url:'2021061504.jpg'}, {url:'2021061505.jpg'}, {url:'2021061506.jpg'}],
+		textcon:'毕业快乐~',
+	},
+	
+	{
+		title:'浪花', data:'2021-04-04', location:'• 国子监 北京', type:'image', 
+		src:[{url:'2021040401.jpg'}, {url:'2021040402.jpg'}, {url:'2021040403.jpg'}, {url:'2021040404.jpg'}],
+		textcon:'春日游',
+	},
+	
+	{
+		title:'浪花', data:'2021-01-23', location:'• 八达岭长城 北京', type:'image', 
+		src:[{url:'2021012301.jpg'}, {url:'2021012302.jpg'}, {url:'2021012303.jpg'}],
+		textcon:'不到长城非好汉',
+	},
+	
+	{
+		title:'浪花', data:'2021-01-02', location:'• 昌平草莓园 北京', type:'image', 
+		src:[{url:'2021010201.jpg'}, {url:'2021010202.jpg'}],
+		textcon:'摘草莓滴小姑娘',
+	},
+	
 	//2020
 	{
 		title:'division', data:'2020',
+	},
+	
+	{
+		title:'浪花', data:'2020-12-05', location:'• 新中关 北京', type:'image', 
+		src:[{url:'2020120501.jpg'}, {url:'2020120502.jpg'}],
+		textcon:'改善生活的日常',
+	},
+	
+	{
+		title:'浪花', data:'2020-11-07', location:'• 植物园 北京', type:'image', 
+		src:[{url:'2020110701.jpg'}, {url:'2020110702.jpg'}, {url:'2020110703.jpg'}, {url:'2020110704.jpg'}, {url:'2020110705.jpg'}],
+		textcon:'来植物园欣赏秋色',
+	},
+	
+	{
+		title:'浪花', data:'2020-11-01', location:'• 空天院 北京', type:'image', 
+		src:[{url:'2020110101.jpg'}, {url:'2020110102.jpg'}, {url:'2020110103.jpg'}, {url:'2020110104.jpg'}],
+		textcon:'黄昏下散步',
 	},
 	
 	{
@@ -12,9 +172,21 @@ var imglist = [
 	},
 	
 	{
+		title:'浪花', data:'2020-07-23', location:'• 小花家', type:'image', 
+		src:[{url:'2020072301.jpg'}, {url:'2020072302.jpg'}, {url:'2020072303.jpg'}, {url:'2020072304.jpg'}, {url:'2020072305.jpg'}, {url:'2020072306.jpg'}],
+		textcon:'在山间小路上摆pose',
+	},
+	
+	{
 		title:'小花', data:'2020-07-20', location:'• 莱芜To巨野', type:'image', 
 		src:[{url:'2020072001.jpg'}, {url:'2020072002.jpg'}, {url:'2020072003.jpg'}],
 		textcon:'无论环境多不合适，都不是不做运动的理由！',
+	},
+	
+	{
+		title:'小花', data:'2020-07-18', location:'• 小花家', type:'image', 
+		src:[{url:'2020071801.jpg'}, {url:'2020071802.jpg'}],
+		textcon:'做一个安静的大家闺秀',
 	},
 	
 	{

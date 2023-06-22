@@ -29,7 +29,7 @@ for(i = 0; i < imgs.length; i++) {
 					"<h2>" + imgs[i].title + "</h2>" + 
 					"<a href='###'>" + getsrcnum(i) + "</a>" +
 					"<p class='textcon' id='p_" + i + "'><span class='yinhao'>" + yinhao_left(imgs[i].type) + "</span>" + imgs[i].textcon + "<span class='yinhao'>" + yinhao_right(imgs[i].type) + "</span></p>" + 
-					"<p style='color:#fff'>" + imgs[i].location + "</p>" + 
+					"<p style='color:#393'>" + imgs[i].location + "</p>" + 
 					"<span class='cd-date'><strong>" + imgs[i].data + "</strong></span>" + 
 				"</div>" + 
 			"</div>"
@@ -41,7 +41,8 @@ for(i = 0; i < imgs.length; i++) {
 function getsrcnum(n) {
 	var imgsrc = "";
 	for(k = 0; k < imgs[n].src.length; k++) {
-		imgsrc += "<img class='imglh' onclick='imgdisplay(\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[n].src[k].url + "\", " + n + ")' src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[n].src[k].url + "'> "
+		var year_cur = imgs[n].data.substring(0, 4);
+		imgsrc += "<img class='imglh' onclick='imgdisplay(\"https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[n].src[k].url + "\", " + n + ")' src='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[n].src[k].url + "'> "
 	}
 	return imgsrc;
 }
@@ -132,7 +133,8 @@ $(".imglh").hover(function(event){
 //向后翻
 var imgnum = 0;
 $("#imgnext").click(function() {
-	imgsrc = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+	var year_cur = imgs[imgid].data.substring(0, 4);
+	imgsrc = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[imgid].src[imgnum].url
 	$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	imgnum++;
 	if(imgnum == imgs[imgid].src.length){
@@ -148,7 +150,8 @@ $("#imgpre").click(function() {
 		alert("前面没有照片啦！"); 
 		imgnum = 0;
 	} else {
-		imgsrc = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + imgs[imgid].src[imgnum].url
+		var year_cur = imgs[imgid].data.substring(0, 4);
+		imgsrc = "https://gaohr-blog.oss-cn-beijing.aliyuncs.com/imgs/life/langhua/" + year_cur + "/" + imgs[imgid].src[imgnum].url
 		$("#imgdiv").html("<img class='imglhdis' onclick='divclose()' src='" + imgsrc + "'>");
 	}
 })
@@ -156,14 +159,12 @@ $("#imgpre").click(function() {
 	
 	$("#submit").click(function() {
 		var key = $("#keyword").val();
-		alert(key);
 		if(key == "love") {
 			$("#cd-timeline").css('display', 'block');
 			$("#errordiv").css('display', 'none');
 			$("#logindiv").css('display', 'none');
 			
 			$.cookie("pw", key, { expires: 365, path: "/LangHua" }); // 存储一个一年期限的 cookie 
-			alert(key);
 		} else {
 			$("#errordiv").html("密码“" + key + "”错误，没有权限浏览");
 			$("#errordiv").css('display', 'block');

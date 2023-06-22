@@ -17,7 +17,7 @@ body {
   font-size: 100%;
   font-family: "Microsoft yahei", serif;
   color: #7f8c97;
-  background-image:url('bg.jpg');background-repeat:no-repeat;background-attachment:fixed;
+  background-image:url('bg01.jpg');background-repeat:no-repeat;background-attachment:fixed;
 }
 
 a {
@@ -33,22 +33,55 @@ h1, h2 {
 
 /* -------------------------------- 
 
-Modules - reusable parts of our design
+Main components 
 
 -------------------------------- */
-.cd-container {
-  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
-  width: 72%;
-  max-width: 1170px;
-  margin: 0 auto;
+.header {
+  position:fixed;
+  top:0;
+  width:100%;
+  height: 100px;
+  background: rgba(25,25,25,0.9);
+  padding:5px;
+  z-index:9999;
 }
-.cd-container::after {
-  /* clearfix */
-  content: '';
-  display: table;
-  clear: both;
+.header img {height:100%;margin-left:5%}
+.logindiv {
+	color:#fff;
+	font-size:24px;
+	text-align:center;
+	padding:30px;
+	margin:50px;
+	margin-left:20%;
+	margin-right:20%;
+	margin-top:15%;
+	background:rgba(0,0,0,0.35);
+	border-radius:10px;
 }
-header img {width:35%;margin-left:10%}
+.logindiv input {height:30px;}
+.submit {
+	font-size:20px;
+	background:rgba(255,255,255,0.5);
+	padding:3px 10px;
+	color:#333;
+	border-radius:10px;
+	transition:0.5s
+}
+.submit:hover {
+	background:rgba(0,0,0,0.5);
+	color:#fff;
+	transition:0.5s
+}
+.submit:active {
+	background:rgba(0,0,0,0.8);
+	color:#ddd;
+}
+.errordiv {
+	color:#f21;
+	font-size:32px;
+	margin:50px;
+	text-align:center;
+}
 .imglh {border-radius:2px;width:18%;border:8px solid rgba(255,255,255,0.9);transition:0.5s;box-shadow:2px 2px 3px #777}
 /*.imglh:hover {border:8px solid rgba(255,155,0,0.75);transition:0.5s;}*/
 .yinhao{font-size:56px;font-family:黑体;color:#eee}
@@ -60,13 +93,32 @@ header img {width:35%;margin-left:10%}
 .imgnext :hover {background:rgba(0,0,0,0.6)}
 .imgpre {position:fixed;display:none;top:40%;left:10%;font-size:72px;padding:20px 15px;text-align:center;color:#ddd;background:rgba(0,0,0,0.3);border-radius:20px}
 .imgpre:hover {background:rgba(0,0,0,0.6)}
-.yearsdiv {position:fixed;top:24%;left:0;}
-.years {font-size:24px;text-align:center;background:rgba(255,255,255,0.75);border-left:10px solid rgba(255,0,0,0.3);border-right:10px solid rgba(255,0,0,0.3);border-top:10px solid transparent;border-bottom:10px solid transparent;border-radius:50%;transition:0.5s}
-.years:hover {background:rgba(255,255,255,0.3);border-left:10px solid rgba(255,0,0,0.5);border-right:10px solid rgba(255,0,0,0.5);border-top:10px solid transparent;border-bottom:10px solid transparent;transition:0.5s}
-.years a {color:#555;padding:0 10px;transition:0.5s}
-.years a:hover {color:#fff;transition:0.5s}
+.yearsdiv {position:fixed;top:24%;left:10px;}
+.years {font-size:20px;text-align:center;margin:3px;background:rgba(255,255,255,1);border-left:5px solid rgba(255,55,55,0.6);border-right:5px solid rgba(255,55,55,0.6);border-top:5px solid transparent;border-bottom:5px solid transparent;border-radius:1%;transition:0.5s;font-weight:bold;}
+.years:hover {background:rgba(255,255,255,0.8);border-left:5px solid rgba(255,55,55,0.8);border-right:5px solid rgba(255,55,55,0.8);border-top:5px solid transparent;border-bottom:5px solid transparent;transition:0.5s}
+.years a {color:#333;padding:0 10px;transition:0.5s}
+.years a:hover {color:#f21;transition:0.5s}
 
-.division {color:#a00;font-size:36px;background:rgba(255,255,255,0.9);border-radius:20px;padding:10px;text-align:center}
+.division {color:#a00;font-size:36px;background:rgba(255,255,255,0.9);border-radius:5px;padding:10px;text-align:center}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+.cd-container {
+  /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
+  width: 72%;
+  max-width: 1170px;
+  margin: 0 auto;
+  margin-top:100px;
+}
+.cd-container::after {
+  /* clearfix */
+  content: '';
+  display: table;
+  clear: both;
+}
 
 @media (max-width: 560px) {
 	.imglh {border-radius:2px;width:85%;border:2px solid rgba(0,0,0,0.1)}
@@ -79,24 +131,11 @@ header img {width:35%;margin-left:10%}
 	.cd-timeline-content {padding:0;margin:0;}
 	header img {width:90%}
 }
-/* -------------------------------- 
 
-Main components 
-
--------------------------------- */
-header {
-  height: auto;
-  background: rgba(0,0,0,0.75);
-}
-header h1 {
-  color: #ffffff;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
 #cd-timeline {
   position: relative;
   padding: 2em 0;
-  margin-top: 2em;
+  margin-top: 100px;
   margin-bottom: 2em;
 }
 #cd-timeline::before {
@@ -212,7 +251,7 @@ header h1 {
   padding: 1em;
 }
 .cd-timeline-content:hover {
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.6);
 }
 .cd-timeline-content:hover .cd-date {
   color:#555;
@@ -237,6 +276,7 @@ header h1 {
   line-height: 1.2;
 }
 .cd-timeline-content .cd-date {
+  color:#999;
   float: left;
   padding: .8em 0;
   opacity: .7;
@@ -267,7 +307,7 @@ header h1 {
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     font-size: 18px;
     font-size: 0.875rem;
-	color: #ccc
+	color: #999
   }
 }
 
@@ -380,38 +420,4 @@ header h1 {
     -o-transform: translateX(0);
     transform: translateX(0);
   }
-}
-.logindiv {
-	color:#fff;
-	font-size:24px;
-	text-align:center;
-	padding:20px;
-	margin:50px;
-	margin-left:20%;
-	margin-right:20%;
-	background:rgba(0,0,0,0.2);
-	border-radius:10px;
-	box-shadow:2px 2px 2px #555
-}
-.submit {
-	background:rgba(255,255,255,0.5);
-	padding:5px;
-	color:#151;
-	border-radius:10px;
-	transition:0.5s
-}
-.submit:hover {
-	background:rgba(0,0,0,0.5);
-	color:#fff;
-	transition:0.5s
-}
-.submit:active {
-	background:rgba(0,0,0,0.8);
-	color:#ddd;
-}
-.errordiv {
-	color:#911;
-	font-size:36px;
-	margin:50px;
-	text-align:center;
 }
