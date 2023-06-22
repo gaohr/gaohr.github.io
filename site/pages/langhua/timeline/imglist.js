@@ -197,7 +197,7 @@ var imglist = [
 	
 	{
 		title:'小浪', data:'2020-02-10', location:'• 小浪家', type:'image', 
-		src:[{url:'2020021001.jpg'}, {url:'2020021002.jpg'}, {url:'2020021003.jpg'}, {url:'2020021004.jpg'}],
+		src:[{url:'2020021001.png'}, {url:'2020021002.png'}, {url:'2020021003.jpg'}, {url:'2020021004.jpg'}],
 		textcon:'今年家里新来的小成员，欢迎你们哦',
 	},
 	
