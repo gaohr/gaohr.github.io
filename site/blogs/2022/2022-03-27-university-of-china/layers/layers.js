@@ -1,13 +1,13 @@
 var baseLayer = new ol.layer.Group({
     'title': '底图',
     layers: [
-		new ol.layer.Tile({
-			'title': 'OSM地图',
-			'type': 'base',
-			source: new ol.source.OSM({
-				layer: 'osm'
-			})
-		})
+new ol.layer.Tile({
+			"title": "<span style='color:#012'>Stamen Terrain</span>",
+			"type": "base",
+			source: new ol.source.XYZ({
+		         url: 'https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}',
+		    })
+		}),
 	]
 });
 

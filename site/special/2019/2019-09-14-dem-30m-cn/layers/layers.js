@@ -2,12 +2,12 @@ var baseLayer = new ol.layer.Group({
     'title': 'Base maps',
     layers: [
 new ol.layer.Tile({
-    'title': 'Stamen Terrain',
-    'type': 'base',
-    source: new ol.source.Stamen({
-        layer: 'terrain'
-    })
-})
+			"title": "<span style='color:#012'>Stamen Terrain</span>",
+			"type": "base",
+			source: new ol.source.XYZ({
+		         url: 'https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}',
+		    })
+		}),
 ]
 });
 var format_province_cn = new ol.format.GeoJSON();
