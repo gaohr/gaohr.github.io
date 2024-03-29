@@ -54,7 +54,7 @@
 					<p class="blog-sub-title"><b>数据介绍</b></p>
 					<p>中华人民共和国行政区划：省级（省份直辖市自治区）、 地级（城市）、 县级（区县）、 乡级（乡镇街道）、 村级（村委会居委会），五级联动地址文本数据，以及村级居民点空间分布矢量点数据。</p>
 					<p>数据来源于民政部、国家统计局等官方网站（<a href="http://www.mca.gov.cn/article/sj/xzqh/" target="_blank">中华人民共和国民政部-中华人民共和国行政区划代码</a>、<a href="http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/" target="_blank">中华人民共和国国家统计局-统计用区划和城乡划分代码</a>）发布的相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据。</p>
-					<p class="g-color-red"><b>数据更新至2022年</b>，统计截止时间：2023-06-30，数据发布时间：2023-09-11</p>
+					<p class="g-color-red"><b>数据更新至2023年</b>，统计截止时间：2023-06-30，数据发布时间：2023-09-11</p>
 					<p>感谢modood (Github: <a href="https://github.com/modood/Administrative-divisions-of-China" target="_blank">modood/Administrative-divisions-of-China</a>)的数据整理和校验工作！</p>
 					<p class="blog-sub-title"><b>数据属性</b></p>
 					<div class="blog-quote">
@@ -111,7 +111,7 @@
 						</div>
 						<div class="portlet-body">
 							<table class="table table-hover">
-								<thead><tr><th>代码</th><th>省份</th><th>数据类型</th><th>数据下载<br> 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023</th></tr></thead>
+								<thead><tr><th>代码</th><th>省份</th><th>数据类型</th><th>年份<span class="g-color-red">(选择)</span></th><th>下载</th></tr></thead>
 								<tbody id="data-list-csv"></tbody>
 							</table>
 						</div>
@@ -222,7 +222,12 @@
 		]
 		
 		for(var i = 0; i < provinces.length; i++) {
-			$("#data-list-csv").append("<tr><td>" + provinces[i].id + "</td><td style='color:#921;font-size:1.2em'>" + provinces[i].name + "</td><td>文本|csv</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2017/CN_villages_2017_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a> | <a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2018/CN_villages_2018_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a> | <a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2019/CN_villages_2019_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a> | <a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2020/CN_villages_2020_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a> | <a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2021/CN_villages_2021_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a> | <a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2022/CN_villages_2022_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a> | <a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/2023/CN_villages_2023_" + provinces[i].name_en + ".rar' target='_blank'><i class='icon-download-blue'></i></a></td></td></tr>");
+			$("#data-list-csv").append("<tr><td>" + provinces[i].id + "</td><td style='color:#921;font-size:1.2em'>" + provinces[i].name + "</td><td>文本|csv (不含坐标信息)</td><td><select id='year-select-csv-" + provinces[i].id + "' class='selectpicker' data-width='80' data-style='btn-warning'><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option></select> <span class='badge badge-important'>选</span></td><td><a href='###' onclick=\"openDownloadWin_csv('" + provinces[i].name_en + "', '" + provinces[i].id + "')\"><i class='icon-download-green'></i></a></td></tr>");
+		}
+		
+		function openDownloadWin_csv(name, id) {
+			var year_select = $("#year-select-csv-" + id).val();
+			window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/Vallige_pt/csv/" + year_select + "/CN_villages_" + year_select + "_" + name + ".rar");
 		}
 		
 		for(var k = 0; k < provinces.length; k++) {
