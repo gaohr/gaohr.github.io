@@ -449,6 +449,7 @@ function PageViews() {
 	var g_pv = 0;
 	var cur_link = window.location.href;
 	var cur_link_new = cur_link.split("//")[1];
+	console.log(cur_link_new);
 	$.ajax({url:"http://123.56.254.70:8080/gispie/PageView?link=" + encodeURI(encodeURI(cur_link_new)), async:false, success:function(res) {g_pv = parseInt(res)}});
 	
 	if($(".blogtopinfo").length > 0) {
