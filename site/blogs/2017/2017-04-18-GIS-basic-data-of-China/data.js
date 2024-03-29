@@ -35,14 +35,6 @@ var datalist_province = [
 	{"id":"34", "name":"海南省", "name_en":"Hainan", "data_cpl":"Hainan-xfg3k6cd", "data_city":"Hainan-city-j65489d"}
 ]
 
-for(var i = 0; i < datalist_province.length; i++) {
-	if(datalist_province[i].data_city != "") {
-		$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td style='color:#921;font-size:1.2em'>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg' class='picture-show'> <img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +"-data-shi.jpg' class='picture-show'></td><td>ESRI Shapefile<br>Polygon</td><td><select id='year-select-" + datalist_province[i].id + "' class='selectpicker' data-width='100' data-style='btn-warning'><option>2020</option><option>2015</option></select> <span class='badge badge-important'>选</span></td><td><a href='###' onclick=\"openDownloadWin_prvn('" + datalist_province[i].name_en + "', '" + datalist_province[i].id + "')\" data-toggle='tooltip' title='省界' data-placement='left' class='popup-left'><i class='icon-download'></i></a> | <a href='###' onclick=\"openDownloadWin_city('" + datalist_province[i].name_en + "', '" + datalist_province[i].id + "')\" data-toggle='tooltip' title='地市界' data-placement='right' class='popup-right'><i class='icon-download-purple'></i></a></td></tr>");
-	} else {
-		$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td style='color:#921;font-size:1.2em'>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +".jpg'> <img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +"-data-shi.jpg'></td><td>ESRI Shapefile<br>Polygon</td><td><select id='year-select-" + datalist_province[i].id + "' class='selectpicker' data-width='100' data-style='btn-warning'><option>2020</option><option>2015</option></select> <span class='badge badge-important'>选</span></td><td><a href='###' onclick=\"openDownloadWin_prvn('" + datalist_province[i].name_en + "', '" + datalist_province[i].id + "')\" data-toggle='tooltip' title='省界' data-placement='left' class='popup-left'><i class='icon-download'></i></a> | ---</td></tr>");
-	}
-}
-
 function openDownloadWin_prvn(name, id) {
 			var year_select = $("#year-select-" + id).val();
 			window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province/" + name + "-" + year_select + ".rar");
@@ -53,12 +45,25 @@ function openDownloadWin_city(name, id) {
 			window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/province_city/" + name + "-city-" + year_select + ".rar");
 		}
 
+for(var i = 0; i < datalist_province.length; i++) {
+	if(datalist_province[i].data_city != "") {
+		$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td style='color:#921;font-size:1.1em'>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/" + datalist_province[i].name_en + ".jpg' class='picture-show'> <img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +"-data-shi.jpg' class='picture-show'></td><td>ESRI SHP<br>Polygon</td><td><select id='year-select-" + datalist_province[i].id + "' class='selectpicker' data-width='100' data-style='btn-warning'><option>2020</option><option>2015</option></select> <span class='badge badge-important'>选</span></td><td><a href='###' onclick=\"openDownloadWin_prvn('" + datalist_province[i].name_en + "', '" + datalist_province[i].id + "')\" data-toggle='tooltip' title='省界' data-placement='left' class='popup-left'><i class='icon-download'></i></a> | <a href='###' onclick=\"openDownloadWin_city('" + datalist_province[i].name_en + "', '" + datalist_province[i].id + "')\" data-toggle='tooltip' title='地市界' data-placement='right' class='popup-right'><i class='icon-download-purple'></i></a></td></tr>");
+	} else {
+		$("#data-province").append("<tr><td>"+ datalist_province[i].id +"</td><td style='color:#921;font-size:1.1em'>"+ datalist_province[i].name +"</td><td><img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/" + datalist_province[i].name_en + ".jpg'> <img width='60' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[i].name_en +"-data-shi.jpg'></td><td>ESRI SHP<br>Polygon</td><td><select id='year-select-" + datalist_province[i].id + "' class='selectpicker' data-width='100' data-style='btn-warning'><option>2020</option><option>2015</option></select> <span class='badge badge-important'>选</span></td><td><a href='###' onclick=\"openDownloadWin_prvn('" + datalist_province[i].name_en + "', '" + datalist_province[i].id + "')\" data-toggle='tooltip' title='省界' data-placement='left' class='popup-left'><i class='icon-download'></i></a> | ---</td></tr>");
+	}
+}
+
+function openDownloadWin_cpl(name, id) {
+			var year_select_cpl = $("#year-select-cpl-" + id).val();
+			window.open("https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl/" + year_select_cpl + "/" + "CN-Xian-" + year_select_cpl + "-" + name + ".rar");
+		}
+
 
 for(var c = 0; c < datalist_province.length; c++) {
 	if(datalist_province[c].data_cpl != "") {
-		$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td style='color:#921;font-size:1.2em'>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +"-data-cpl.jpg' class='picture-show'></td><td>ESRI Shapefile | Polygon</td><td><a href='https://gaohr-blog.oss-cn-beijing.aliyuncs.com/data/GIS_China/County_pl/"+ datalist_province[c].data_cpl +".rar' target='_blank'><i class='icon-download-blue'></i></a></td></tr>");
+		$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td style='color:#921;font-size:1.1em'>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +"-data-cpl.jpg' class='picture-show'></td><td>ESRI SHP | Polygon</td><td><select id='year-select-cpl-" + datalist_province[c].id + "' class='selectpicker' data-width='100' data-style='btn-warning'><option>2015</option><option>2010</option></select> <span class='badge badge-important'>选</span></td><td><a href='###'  onclick=\"openDownloadWin_cpl('" + datalist_province[c].name_en + "', '" + datalist_province[c].id + "')\" target='_blank'><i class='icon-download-blue'></i></a></td></tr>");
 	} else {
-		$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td style='color:#921;font-size:1.2em'>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +".jpg'></td><td>ESRI Shapefile | Polygon</td><td class='g-color-gray'>---</td></tr>");
+		$("#data-province-cpl").append("<tr><td>"+ datalist_province[c].id +"</td><td style='color:#921;font-size:1.1em'>"+ datalist_province[c].name +"</td><td><img width='80' src='http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn/imgs/"+ datalist_province[c].name_en +".jpg'></td><td>ESRI SHP | Polygon</td><td>---</td><td class='g-color-gray'>---</td></tr>");
 	}
 }
 		
