@@ -451,7 +451,7 @@ function PageViews() {
 	var cur_link = window.location.href;
 	var cur_link_new = cur_link.split("//")[1];
 	console.log(cur_link_new);
-	$.ajax({url:"123.56.254.70:8080/gispie/PageView?link=" + encodeURI(encodeURI(cur_link_new)), async:false, success:function(res) {g_pv = parseInt(res)}});
+	$.ajax({url:"http://123.56.254.70:8080/gispie/PageView?link=" + encodeURI(encodeURI(cur_link_new)), async:false, success:function(res) {g_pv = parseInt(res)}});
 	
 	if($(".blogtopinfo").length > 0) {
 		$(".blogtopinfo").append("<span style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green'>" + g_pv + "</span></b></span><br><hr>");
