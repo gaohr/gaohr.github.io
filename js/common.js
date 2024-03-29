@@ -242,6 +242,7 @@ function warmAlert() {
 }
 	
 function HotTopic() {
+	var curProtocol = window.location.protocol;
 	$("#others").append("<div class=\"notice\">" +
 						"<ul id=\"notice01\" class=\"noticTipTxt\">" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html\" target=\"_blank\">全国农村居民点矢量数据（2021更新） <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
@@ -254,7 +255,7 @@ function HotTopic() {
 						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
 						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html\" target=\"_blank\">利用ArcGIS制作水墨山水画风格图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"</ul></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
+						"</ul></div><script type=\"text/javascript\" src=\"" + curProtocol + "gaohr.win/js/scrolltext.js\"></script>");
 	if($("#notice01").length > 0){var scrollup = new ScrollText("notice01");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = "down";}
 }
 	
