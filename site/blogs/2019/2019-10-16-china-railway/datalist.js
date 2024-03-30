@@ -1,5 +1,5 @@
 var datalist_province = [
-	{"id":"00", "name":"全国", "name_en":"China", "data":"1", "key2015": "-"},
+	{"id":"00", "name":"全国", "name_en":"China", "data":"1", "key2015": ""},
 	{"id":"01", "name":"北京市", "name_en":"Beijing", "data":"1", "key2015": "2015_100w-xzambupugb"},
 	{"id":"02", "name":"天津市", "name_en":"Tianjin", "data":"1", "key2015": "2015_100w-m8kffj94qx"},
 	{"id":"03", "name":"河北省", "name_en":"Hebei", "data":"1", "key2015": "2015_100w-cdznw576cg"},

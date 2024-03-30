@@ -5,6 +5,7 @@
 /*body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/background/bg-04.jpg');background-size:100%;background-attachment:fixed;}*/
 body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;}
 hr {margin-top:10px;margin-bottom:10px;border-top: 1px dashed #acf;}
+input {color:#0a0 !important;font-style: italic;font-weight:bold;}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/bg_top_fu_2.jpg');background-size:100% 100%;;}
