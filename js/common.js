@@ -447,6 +447,7 @@ function findblog(key, bloglist,n, type) {
 // Pageview statistics
 function PageViews() {
 	// 统计
+	/*
 	var g_pv = 0;
 	var cur_link = window.location.href;
 	var cur_link_new = cur_link.split("//")[1];
@@ -459,19 +460,19 @@ function PageViews() {
 	if($(".topictopinfo").length > 0) {
 		$(".topictopinfo").append("<span style='margin-left:10px;'>专题访问量 <b><span class='g-color-green'>" + g_pv + "</span></b></span>");
 	}
-	
+	*/
 	
 	// busuanzi
 	$(".body").append("<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>");
 
-	/*
+
 	if($(".blogtopinfo").length > 0) {
-		$(".blogtopinfo").append("<span id='busuanzi_container_page_pv' style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span><br><hr>");
+		$(".blogtopinfo").append("<span id='busuanzi_container_page_pv' style='margin-left:10px;'><i class='icon-eye-open'></i> 本文阅读量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> </span><br><hr>");
 	}
 	if($(".topictopinfo").length > 0) {
-		$(".topictopinfo").append("<span id='busuanzi_container_page_pv' style='margin-left:10px;'>专题访问量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b> 次</span>");
+		$(".topictopinfo").append("<span id='busuanzi_container_page_pv' style='margin-left:10px;'>专题访问量 <b><span class='g-color-green' id='busuanzi_value_page_pv'></span></b></span>");
 	}
-	*/
+
 }
 	
 function ParticalEffect() {
