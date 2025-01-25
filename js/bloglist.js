@@ -1,5 +1,7 @@
 var bloglist = [
 
+{"blogid":"2025012501", "title":"全国各省谷歌地球无偏卫星影像数据", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"全国各省（市、自治区、特别行政区）范围75m分辨率卫星影像数据免费下载", "img":"site/blogs/2025/images/GoogleEarthImage.jpg", "date":"2025-01-25", "href":"http://gaohr.win/site/blogs/2025/2025-01-25-google-earth-province-cn.html", "tags":["谷歌地球", "遥感", "全国"]},
+
 {"blogid":"2020081001", "title":"全国五级行政区划及村级居民点数据（更新至2023年）", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"民政部、国家统计局等官方网站发布的省级、地级、县级、乡级和村级行政区相关信息，整理成格式化文本数据，然后通过地理编码等处理，制作形成空间分布矢量点数据", "img":"site/blogs/2020/images/NationalVillages.jpg", "date":"2020-08-10", "href":"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html", "tags":["GIS", "行政村", "全国"]},
 
 {"blogid":"2023062301", "title":"ArcGIS图标素材下载", "type":"数据资源", "author":"<a href='http://gaohr.win/'>GaoHR</a>", "content":"ArcGIS 10.X桌面软件的图标库，包括4000多个图标，留存备用，前端开发时可参考使用。", "img":"site/blogs/2023/images/ArcGISIcons.jpg", "date":"2023-06-23", "href":"http://gaohr.win/site/blogs/2023/2023-06-23-arcgis-icons.html", "tags":["图标", "ArcGIS", "素材"]},

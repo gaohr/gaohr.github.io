@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!--> <html lang="zh" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min-2.3.1.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-responsive.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-style.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/bootstrap-select.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/menu.css">
+	<link rel="stylesheet" type="text/css" href="../../../css/blog.css">
+    <link rel="stylesheet" type="text/css" href="../../../css/style.css">
+	<link rel='stylesheet' type='text/css' href='../../../css/shCoreRDark.css'/>
+	<link rel="shortcut icon" href="../../../img/logo.ico" />
+    <title>GaoHR | 全国各省谷歌地球无偏卫星影像数据</title>
+	<style>
+		#outerdiv {position:fixed;top:0;left:0;background:rgba(0,0,0,0.5);z-index:99;width:100%;height:100%;display:none;}
+		#innerdiv {position:absolute;}
+		#bigimg {border:2px solid #fff;}
+	</style>
+
+</head>
+
+<body>
+	<!--head-->
+	<div class="mainlogo">
+		<a href="../../../index.html" class="g-blog-logo"></a>
+		<img src="../../../img/head.png" class="headimg">
+		<div class="weather" id ="weather"></div>
+		<span id="head-tool" class="head-tool"></span>
+	</div>
+	<div class="container-fluid main-page">
+		<div class="row-fluid">
+			<div class="span2">
+				<!--responsive menu-->
+				<div id="mainmenu"></div>
+			</div>
+			<div class="span8">
+				<!--breadcrumb-->
+				<ol class="breadcrumb">
+					<li><a href="../../../index.html"><i class="icon-home"></i> Home</a></li>
+					<i class="icon-angle-right"></i>
+					<a href="../../../Blogs.html"> Blog</a>
+					<!--<li class="active">Blog</li>-->
+				</ol>
+				<!--正文-->
+				<input id="blogid" style="display:none" value="2025012501">
+				<div class="blogcontent alist">
+					<h2>全国各省谷歌地球无偏卫星影像数据</h2>
+					<h2><small>Google Earth remote sensing image data of China</small></h2>
+					<div class="blogtopinfo"><span id="blogtopinfo"></span></div>
+					<p class="blog-sub-title"><b>1. 数据介绍</b></p>
+					<p><b>谷歌地球（Google earth）</b>的卫星影像，并非单一数据来源，而是卫星影像与航拍的数据整合。其卫星影像部分来自于美国DigitalGlobe公司的QuickBird（快鸟）商业卫星与EarthSat公司（美国公司，影像来源于陆地卫星LANDSAT-7卫星居多），航拍部分的来源有BlueSky公司（英国公司，以航拍、GIS/GPS相关业务为主）、Sanborn公司（美国公司，以GIS、地理数据、空中勘测等业务为主）、美国IKONOS及法国SPOT5。</p>
+					<p>其中SPOT5可以提供解析度为2.5米的影像、IKONOS可提供1米左右的影像、而快鸟就能够提供最高为0.61米的高精度影像，是全球商用的最高水平。</p>
+					<p class="g-color-green">本站提供全国各省（市、自治区、特别行政区）范围的中分辨率影像数据下载。</p>
+					<p><a href="", target="_blank"></a></p>
+					<p class="g-color-red"><b></b></p>
+					<p class="g-color-green"></p>
+					<p class="blog-sub-title"><b>2. 数据属性</b></p>
+					<div class="blog-quote">
+						<p>空间范围：全国（各省）</p>
+						<p>时间范围：约2020-2022</p>
+						<p>空间分辨率：75m</p>
+						<p>数据类型：栅格|GeoTIFF</p>
+						<p>投影坐标：WGS 84</p>
+						<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					</div>
+					<br><hr>
+					<p><b>其他说明</b></p>
+					<p>无偏影像数据。</p>
+					<p class="g-color-red"><b>如果有需要更高分辨率影像数据（最高可达厘米级），可以联系邮箱 gispie@163.com</b></p>
+					<p class="blog-sub-title"><b>3. 数据预览图</b></p>
+					<table class="table table-hover percent-90" style="font-size:1.1em;color:#921">
+						<tbody>
+							<tr><td><b>北京</b></td><td><b>重庆</b></td><td><b>山东</b></td></tr>
+							<tr><td><img src="2025-01-25-google-earth-province-cn/img/Beijing_GE_2025.jpg" class="picture-show"></td><td><img src="2025-01-25-google-earth-province-cn/img/Chongqing_GE_2025.jpg" class="picture-show"></td><td><img src="2025-01-25-google-earth-province-cn/img/Shandong_GE_2025.jpg" class="picture-show"></td></tr>
+							<tr><td><b>广东</b></td><td><b>四川</b></td><td><b>湖北</b></td></tr>
+							<tr><td><img src="2025-01-25-google-earth-province-cn/img/Guangdong_GE_2025.jpg" class="picture-show"></td><td><img src="2025-01-25-google-earth-province-cn/img/Sichuan_GE_2025.jpg" class="picture-show"></td><td><img src="2025-01-25-google-earth-province-cn/img/Hubei_GE_2025.jpg" class="picture-show"></td></tr>
+						</tbody>
+					</table>
+					<p class="blog-sub-title"><b>4. 数据下载</b></p>
+					<p><span class="share-level">数据共享等级：<span class="g-color-green"><b>免费共享</b></span><a href="http://gaohr.win/About.html" target="_blank"><i class="icon-question-sign"></i></a></span></p>
+					<div class="portlet box grey percent-90">
+						<div class="portlet-title">
+							<div class="caption">全国各省谷歌地球无偏卫星影像数据</div>
+						</div>
+						<div class="portlet-body">
+							<table class="table table-hover">
+								<thead><tr><th>编号</th><th>省份</th><th>年份</th><th>数据源</th><th>分辨率</th><th>数据大小</th><th>提取码</th><th>下载链接</th></tr></thead>
+								<tbody id="data-list"></tbody>
+							</table>
+						</div>
+					</div>
+					<hr>
+					<p class="g-color-red"><i class="icon-bullhorn g-text-bg g-color-blue"></i> 建议使用Google浏览器，IE内核浏览器可能不正常显示下载按钮等！</p>
+					<div id="outerdiv">
+						<div id="innerdiv">
+							<img id="bigimg" src="" />
+						</div>
+					</div>
+					<br>
+					<p>Fighting, GISer!</p>
+					<!-- Warning -->
+					<div id="warning"></div>
+				</div>
+				<!-- Da shang -->
+				<div id="dashang" class="dashang"></div>
+				<!-- Comments -->
+				<div id="comments"></div>
+			</div>
+			<div class="span2">
+				<div class="block"></div>
+				<div class="portlet" id="declareDiv"></div>
+				<div class="block"></div>
+				<div class="portlet">
+					<p class="title"><i class="icon-book"></i><b>最新博文</b></p>
+					<br>
+					<div class="blog-page" id="blogs"></div>
+				</div>
+				<!-- Share -->
+				<div id="shareit"></div>
+				<!-- right ad  -->
+				<div id="rightad" class="rightad"></div>
+			</div>
+		</div>
+	</div>
+	<!-- others  --> 
+	<div id="others"></div>
+	<!-- footer  --> 
+	<footer>
+		<p id="copyright" class="copyright"></p>
+	</footer>
+    <!-- JavaScript-->
+    <script src="../../../js/jquery.min.js"></script>
+    <script src="../../../js/bootstrap.min.js"></script>
+    <script src="../../../js/bootstrap-select.min.js"></script>
+	<script src="../../../js/echarts.min.js"></script>
+	<script src="../../../js/bloglist.js"></script>
+	<script src="../../special/js/topicslist.js"></script>
+	<script src="../../../js/paylist.js"></script>
+	<script src="../blogsload.js"></script>
+	<script src="../../../js/common.js"></script>
+	<script>
+		var provinces = [
+			{"id":"11", "name":"北京市", "name_en":"Beijing", "url":"1p0N3E148Elrm_5teruxHmA?pwd=nwq8", "size":"5.00 MB", "key":"nwq8"},
+			{"id":"12", "name":"天津市", "name_en":"Tianjin", "url":"129VhLpGtJkFOtnEecBnw6Q?pwd=6254", "size":"2.97 MB", "key":"6254"},
+			{"id":"13", "name":"河北省", "name_en":"Hebei", "url":"190Wvb_KNBX6nA7WjCqOTnA?pwd=6exy", "size":"42.08 MB", "key":"6exy"},
+			{"id":"14", "name":"山西省", "name_en":"Shanxi", "url":"13LO4Lb-QmRNVgl8zYtiYrA?pwd=ci3h", "size":"36.12 MB", "key":"ci3h"},
+			{"id":"15", "name":"内蒙古自治区", "name_en":"Neimenggu", "url":"1h0hLs-7MVMZAO2viLKjmkg?pwd=e8nh", "size":"179.63 MB", "key":"e8nh"},
+			{"id":"21", "name":"辽宁省", "name_en":"Liaoning", "url":"1wOJLwBchW-2m2BU2_sA-qA?pwd=ijg7", "size":"30.36 MB", "key":"ijg7"},
+			{"id":"22", "name":"吉林省", "name_en":"Jilin", "url":"1JH9p8yobUa0v-v99aTjpmw?pwd=q98f", "size":"33.90 MB", "key":"q98f"},
+			{"id":"23", "name":"黑龙江省", "name_en":"Heilongjiang", "url":"1mK8gst8wXcnrywij34LGlA?pwd=qnpg", "size":"68.60 MB", "key":"qnpg"},
+			{"id":"31", "name":"上海市", "name_en":"Shanghai", "url":"123NP286kIyw61vJoaapkMQ?pwd=nzpv", "size":"1.83 MB", "key":"nzpv"},
+			{"id":"32", "name":"江苏省", "name_en":"Jiangsu", "url":"1C3p8no2mLHMvcv2FggV0-Q?pwd=8bjq", "size":"17.45 MB", "key":"8bjq"},
+			{"id":"33", "name":"浙江省", "name_en":"Zhejiang", "url":"1mTW-JSs2pbv1tLthETZhxg?pwd=7961", "size":"17.48 MB", "key":"7961"},
+			{"id":"34", "name":"安徽省", "name_en":"Anhui", "url":"1VV7LXAmtASXr_X525zq9IA?pwd=j57h", "size":"24.03 MB", "key":"j57h"},
+			{"id":"35", "name":"福建省", "name_en":"Fujian", "url":"17ojIcXeeOUK_hsASxqrCkQ?pwd=ygnq", "size":"20.60 MB", "key":"ygnq"},
+			{"id":"36", "name":"江西省", "name_en":"Jiangxi", "url":"1X-0YJJNgrSqbBytF1JbMIg?pwd=xmn9", "size":"27.36 MB", "key":"xmn9"},
+			{"id":"37", "name":"山东省", "name_en":"Shandong", "url":"1find5SzlwcnJue1lDKD1_w?pwd=cxgy", "size":"28.74 MB", "key":"cxgy"},
+			{"id":"41", "name":"河南省", "name_en":"Henan", "url":"1whVXPvKcMHiAGp3MLawATw?pwd=mt85", "size":"30.23 MB", "key":"mt85"},
+			{"id":"42", "name":"湖北省", "name_en":"Hubei", "url":"1bSXE6nw2wrR_2asMVdq08w?pwd=unh2", "size":"31.81 MB", "key":"unh2"},
+			{"id":"43", "name":"湖南省", "name_en":"Hunan", "url":"1FixcarzjHeutM7fTf0Srow?pwd=ig3n", "size":"34.63 MB", "key":"ig3n"},
+			{"id":"44", "name":"广东省", "name_en":"Guangdong", "url":"188uYR0VHQSnTRIiNWNjOBA?pwd=pq2r", "size":"29.91 MB", "key":"pq2r"},
+			{"id":"45", "name":"广西壮族自治区", "name_en":"Guangxi", "url":"1Kfye-gC52omI4JcmsFPddw?pwd=d5vi", "size":"37.81 MB", "key":"d5vi"},
+			{"id":"46", "name":"海南省", "name_en":"Hainan", "url":"1iDCxU_zWarGZTON0JPRuyA?pwd=ekuf", "size":"4.70 MB", "key":"ekuf"},
+			{"id":"50", "name":"重庆市", "name_en":"Chongqing", "url":"1-bfyKqY6lV4P9ygcXrhjHA?pwd=hkee", "size":"15.83 MB", "key":"hkee"},
+			{"id":"51", "name":"四川省", "name_en":"Sichuan", "url":"1cjunMn9feTX_8w88pB17YA?pwd=7exa", "size":"91.83 MB", "key":"7exa"},
+			{"id":"52", "name":"贵州省", "name_en":"Guizhou", "url":"1goa1QXkOOqxPzzK_URDtTQ?pwd=uu63", "size":"32.39 MB", "key":"uu63"},
+			{"id":"53", "name":"云南省", "name_en":"Yunnan", "url":"1VKuf3NzVhRMGmjUrEQubJQ?pwd=pqut", "size":"69.39 MB", "key":"pqut"},
+			{"id":"54", "name":"西藏自治区", "name_en":"Xizang", "url":"1-An82OY2_AxiQKHVgi8yaw?pwd=hvj1", "size":"223.25 MB", "key":"hvj1"},
+			{"id":"61", "name":"陕西省", "name_en":"Shanxi02", "url":"1EDYBUqmsHNA6iEAEqkAoMg?pwd=wu26", "size":"44.29 MB", "key":"wu26"},
+			{"id":"62", "name":"甘肃省", "name_en":"Gansu", "url":"1Pn3rAnHfGjEz5l1Qqn274g?pwd=eevn", "size":"90.96 MB", "key":"eevn"},
+			{"id":"63", "name":"青海省", "name_en":"Qinghai", "url":"151RuQJIlh0n2bwszV_HtWg?pwd=f4ha", "size":"138.54 MB", "key":"f4ha"},
+			{"id":"64", "name":"宁夏回族自治区", "name_en":"Ningxia", "url":"14tXPHi30wWFMZPVgimsp9Q?pwd=7btd", "size":"12.92 MB", "key":"7btd"},
+			{"id":"65", "name":"新疆维吾尔自治区", "name_en":"Xinjiang", "url":"1Ixdx9KPUAoNDPPUuqaf4KA?pwd=3cbq", "size":"278.78 MB", "key":"3cbq"},
+			{"id":"71", "name":"台湾省", "name_en":"Taiwan", "url":"1gvg78QfH6ZrYKhuXELl6HA?pwd=g1nw", "size":"5.54 MB", "key":"g1nw"},
+			{"id":"81", "name":"香港特别行政区", "name_en":"Xianggang", "url":"1sstDFMlvEeTI1xCjxCQ05A?pwd=msnj", "size":"0.46 MB", "key":"msnj"},
+			{"id":"82", "name":"澳门特别行政区", "name_en":"Aomen", "url":"1zSMqyqEHAiLuVfZhxAXcWw?pwd=ddup", "size":"0.12 MB", "key":"ddup"}
+		]
+		
+		for(var k = 0; k < provinces.length; k++) {
+			$("#data-list").append("<tr><td>" + provinces[k].id + "</td><td style='color:#921;font-size:1.1em'>" + provinces[k].name + "</td><td>2020-2022</td><td>谷歌地球</td><td>75m</td><td>" + provinces[k].size + "</td></span></td><td class='g-color-green'><b>" + provinces[k].key + "</b></td><td><a href='https://pan.baidu.com/s/" + provinces[k].url + "' target='_blank'><i class='icon-download'></i></a></td></tr>");
+		}
+		
+		$(".picture-show").click(function(){  
+			var _this = $(this);//将当前的pimg元素作为_this传入函数  
+			imgShow("#outerdiv", "#innerdiv", "#bigimg", _this);  
+		}); 
+		
+		function imgShow(outerdiv, innerdiv, bigimg, _this){  
+			var src = _this.attr("src");//获取当前点击的pimg元素中的src属性  
+			$(bigimg).attr("src", src);//设置#bigimg元素的src属性  
+		  
+				/*获取当前点击图片的真实大小，并显示弹出层及大图*/  
+			$("<img/>").attr("src", src).load(function(){  
+				var windowW = $(window).width();//获取当前窗口宽度  
+				var windowH = $(window).height();//获取当前窗口高度  
+				var realWidth = this.width;//获取图片真实宽度  
+				var realHeight = this.height;//获取图片真实高度  
+				var imgWidth, imgHeight;  
+				var scale = 0.8;//缩放尺寸，当图片真实宽度和高度大于窗口宽度和高度时进行缩放  
+				  
+				if(realHeight > windowH * scale) {//判断图片高度  
+					imgHeight = windowH * scale;//如大于窗口高度，图片高度进行缩放  
+					imgWidth = imgHeight / realHeight * realWidth;//等比例缩放宽度  
+					if(imgWidth > windowW * scale) {//如宽度扔大于窗口宽度  
+						imgWidth = windowW * scale;//再对宽度进行缩放  
+					}  
+				} else if(realWidth > windowW * scale) {//如图片高度合适，判断图片宽度  
+					imgWidth = windowW * scale;//如大于窗口宽度，图片宽度进行缩放  
+					imgHeight = imgWidth / realWidth * realHeight;//等比例缩放高度  
+				} else {//如果图片真实高度和宽度都符合要求，高宽不变  
+					imgWidth = realWidth;  
+					imgHeight = realHeight;  
+				}  
+						$(bigimg).css("width",imgWidth);//以最终的宽度对图片缩放  
+				  
+				var w = (windowW - imgWidth) / 2;//计算图片与窗口左边距  
+				var h = (windowH - imgHeight) / 2;//计算图片与窗口上边距  
+				$(innerdiv).css({"top": h, "left": w});//设置#innerdiv的top和left属性  
+				$(outerdiv).fadeIn("fast");//淡入显示#outerdiv及.pimg  
+			});  
+			  
+			$(outerdiv).click(function(){//再次点击淡出消失弹出层  
+				$(this).fadeOut("fast");  
+			});  
+		}
+		
+	</script>
+</body>
+</html>
