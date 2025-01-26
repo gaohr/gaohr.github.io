@@ -14,7 +14,7 @@ $(document).ready(function($) {
 	
 	/*Background*/
 	var randomIndex = Math.floor(Math.random() * 24);
-	$('body').css('background-image', 'url(img/background/bg-' + randomIndex + '.jpg)');
+	$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + randomIndex + '.jpg)');
 	
 	/*粒子特效*/
 	ParticalEffect();
