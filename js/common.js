@@ -12,6 +12,10 @@ $(document).ready(function($) {
 	var this_title = $(document).attr("title");
 	$('title').html("GIS大饼 | " + this_title)
 	
+	/*Background*/
+	var randomIndex = Math.floor(Math.random() * 24);
+	$('body').css('background-image', 'url(img/background/bg-' + randomIndex + '.jpg)');
+	
 	/*粒子特效*/
 	ParticalEffect();
 	
@@ -49,6 +53,7 @@ $(document).ready(function($) {
 	
 	if($("#weather").length > 0) {
 		Weather();
+		CurrentTime();
 	}
 	
 	// Comments
@@ -133,7 +138,23 @@ function ClustrMaps() {
 }
 	
 function Weather() {
-	$("#weather").html("GIS大饼 你我共享");
+	$("#weather").html("GIS大饼 你我共享<br><div id='cur-time'></div>");
+}
+	
+function CurrentTime() {
+    var i=0;
+    function curDate(){
+        var now = new Date();
+        var year = now.getFullYear();
+        var month = now.getMonth()+1;
+        var day = now.getDate();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+ 
+        $("#cur-time").html("<span class='g-color-lightgreen' style='font-family:SimHei'><b>" + year + "年" + month.toString().padStart(2, '0') + "月" + day.toString().padStart(2, '0') + "日 " + hours.toString().padStart(2, '0') + ":" + minutes.toString().padStart(2, '0') + ":" + seconds.toString().padStart(2, '0') + "</b></span>");
+    }
+    setInterval(curDate,1000);
 }
 	
 function Copyright() {

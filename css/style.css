@@ -2,14 +2,14 @@
 *By GaoHR
 */
 /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}*/
-/*body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url('http://gaohr.win/img/background/bg-04.jpg');background-size:100%;background-attachment:fixed;}*/
-body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;}
+body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url();background-size:100% 100%;background-attachment:fixed;}
+/*body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;}*/
 hr {margin-top:10px;margin-bottom:10px;border-top: 1px dashed #acf;}
 input {color:#0a0 !important;font-style: italic;font-weight:bold;}
 a {color:#08e}
 a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;text-decoration: none;}
 .mainlogo {position:fixed;top:0;left:0;background-color:#222;width:100%;padding:10px;z-index:999;max-height:40px;background-image:url('http://gaohr.win/img/others/bg_top_fu_2.jpg');background-size:100% 100%;;}
-.mainlogo .weather {height:40px;float:right;background:rgba(255,255,255,0.1);padding:16px;margin-right:20px;margin-top:-5px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff}
+.mainlogo .weather {height:auto;width:200px;float:right;background:rgba(255,255,255,0.1);padding:5px;margin-right:20px;margin-top:-5px;color:#fff;border-left:1px solid #fff;border-right:1px solid #fff;text-align:center;}
 .mainlogo .head-tool {float:right;height:auto;margin-right:32px;}
 
 .mainlogo .g-blog-logo img {float:left;margin-top:-10px;margin-right:10px;height:60px;}
@@ -19,7 +19,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.7);z-index:0;height:auto;width:80%;margin-left:10%;box-shadow:0 0 5px rgba(0, 0, 0, 0.25)}
+.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.85);z-index:0;height:auto;width:80%;margin-left:10%;box-shadow:0 0 5px rgba(0, 0, 0, 0.25)}
 .main-page .span2 {margin-left:10px}
 
 .main-div {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
@@ -60,6 +60,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .g-color-orange {color:#f80 !important}
 .g-color-yellow {color:#fb0 !important}
 .g-color-green {color:#3a0!important}
+.g-color-lightgreen {color:#0f0!important}
 .g-color-blue {color:#39e !important}
 .g-color-purple {color:#809 !important}
 .g-color-gray {color:#888 !important}
