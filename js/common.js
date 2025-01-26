@@ -64,9 +64,9 @@ $(document).ready(function($) {
 	}
 		
 	// Share
-	//if($("#shareit").length > 0) {
-	//	$("#shareit").append(Share());
-	//}
+	if($("#shareit").length > 0) {
+		$("#shareit").append(Share());
+	}
 		
 	// Dashang
 	if($("#dashang").length > 0) {
