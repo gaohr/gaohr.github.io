@@ -14,7 +14,7 @@ $(document).ready(function($) {
 	
 	/*Background*/
 	var now = new Date();
-	var day = now.getDate() - 1;
+	var day = now.getDate();
 	// var randomIndex = Math.floor(Math.random() * 24);
 	if(day <= 24){
 		$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + day + '.jpg)');
