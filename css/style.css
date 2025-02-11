@@ -2,7 +2,7 @@
 *By GaoHR
 */
 /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}*/
-body {background-color:#fff;font-size:14px;overflow-x:hidden;background-image:url();background-size:100% 100%;background-attachment:fixed;}
+body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;background-image:url();background-size:100% 100%;background-attachment:fixed;}
 /*body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;}*/
 hr {margin-top:10px;margin-bottom:10px;border-top: 1px dashed #acf;}
 input {color:#0a0 !important;font-style: italic;font-weight:bold;}

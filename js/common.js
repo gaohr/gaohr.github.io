@@ -13,8 +13,15 @@ $(document).ready(function($) {
 	$('title').html("GIS大饼 | " + this_title)
 	
 	/*Background*/
-	var randomIndex = Math.floor(Math.random() * 24);
-	$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + randomIndex + '.jpg)');
+	var now = new Date();
+	var day = now.getDate() - 1;
+	// var randomIndex = Math.floor(Math.random() * 24);
+	if(day <= 24){
+		$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + day + '.jpg)');
+	} else {
+		$('body').css('background-image', 'url()');
+	}
+	
 	
 	/*粒子特效*/
 	ParticalEffect();
