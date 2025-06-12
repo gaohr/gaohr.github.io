@@ -13,14 +13,13 @@ $(document).ready(function($) {
 	$('title').html("GIS大饼 | " + this_title)
 	
 	/*Background*/
-	var now = new Date();
-	var day = now.getDate();
-	// var randomIndex = Math.floor(Math.random() * 24);
-	if(day <= 24){
-		$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + day + '.jpg)');
-	} else {
-		$('body').css('background-image', 'url()');
-	}
+	//var now = new Date();
+	//var day = now.getDate();
+	//if(day <= 24){
+	//	$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + day + '.jpg)');
+	//} else {
+	//	$('body').css('background-image', 'url()');
+	//}
 	
 	
 	/*粒子特效*/
