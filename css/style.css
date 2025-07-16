@@ -2,7 +2,7 @@
 *By GaoHR
 */
 /*html {-webkit-filter: grayscale(100%);filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}*/
-body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;background-image:url();background-size:100% 100%;background-attachment:fixed;}
+body {background-color:#f2f5f8;font-size:14px;overflow-x:hidden;background-image:url();background-size:100% 100%;background-attachment:fixed;}
 /*body {background-color:#eef0ff;font-size:14px;overflow-x:hidden;}*/
 hr {margin-top:10px;margin-bottom:10px;border-top: 1px dashed #acf;}
 input {color:#0a0 !important;font-style: italic;font-weight:bold;}
@@ -19,11 +19,11 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 .menulist ul > li > a{font-size:12px !important;line-height:16px !important;}
 
 .breadcrumb {background-color:#fefefe}
-.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.85);z-index:0;height:auto;width:80%;margin-left:10%;box-shadow:0 0 5px rgba(0, 0, 0, 0.25)}
+.main-page {position:relative;margin-top:60px;background-color:rgba(255,255,255,0.85);z-index:0;height:auto;width:80%;margin-left:10%;box-shadow:0 0 5px rgba(0, 0, 0, 0.1)}
 .main-page .span2 {margin-left:10px}
 
 .main-div {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
-.centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px;box-shadow:0 10px 20px rgba(0, 0, 0, 0.1)}
+.centerpage {height:auto;background-color:#fefefe;padding:10px 50px;display:inline-block;margin-bottom:20px;box-shadow:0 7px 16px rgba(0, 0, 0, 0.1)}
 .centerpage .carousel img {cursor:pointer;width:100%;}
 .centerpage .carousel ol {top:90%;}
 .centerpage .carousel .img-title {color:#fff;background-color:rgba(0,0,0,0.75);width:100%;padding:20px;font-size:1.5em}
