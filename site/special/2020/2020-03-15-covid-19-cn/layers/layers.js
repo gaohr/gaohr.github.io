@@ -2,12 +2,12 @@ var baseLayer = new ol.layer.Group({
     'title': 'Base maps',
     layers: [
 new ol.layer.Tile({
-    'title': 'OSM',
-    'type': 'base',
-    source: new ol.source.Stamen({
-        layer: 'terrain'
-    })
-})
+			"title": "<span style='color:#012'>Stamen Terrain</span>",
+			"type": "base",
+			source: new ol.source.XYZ({
+		         url: 'https://thematic.geoq.cn/arcgis/rest/services/ChinaOnlineStreetGray/MapServer/tile/{z}/{y}/{x}',
+		    })
+		})
 ]
 });
 var format_CNcity = new ol.format.GeoJSON();

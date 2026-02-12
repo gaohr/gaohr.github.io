@@ -5,7 +5,7 @@ new ol.layer.Tile({
 			"title": "<span style='color:#012'>Stamen Terrain</span>",
 			"type": "base",
 			source: new ol.source.XYZ({
-		         url: 'https://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}',
+		         url: 'https://thematic.geoq.cn/arcgis/rest/services/ChinaOnlineStreetGray/MapServer/tile/{z}/{y}/{x}',
 		    })
 		}),
 ]
