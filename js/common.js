@@ -5,19 +5,11 @@
 *Update date: 2019-09-16
 */
 
-/*
-// 检查当前协议是否为HTTPS
-if (window.location.protocol === 'https:') {
-    // 构建HTTP版本的URL
-    var httpUrl = 'http://' + window.location.host + window.location.pathname + window.location.search + window.location.hash;
-    // 重定向到HTTP
-    window.location.replace(httpUrl);
-}
-*/
+var curProtocol = window.location.protocol.split(':')[0]
 
 $(document).ready(function($) {
 	/*LOGO*/
-	$(".g-blog-logo").html("<img src='http://gaohr.win/img/blog_logo.png'>");
+	$(".g-blog-logo").html("<img src='" + curProtocol + "://gaohr.win/img/blog_logo.png'>");
 	$("head").append("<meta name='descrpition' content='GIS大饼,GaoHR个人综合类博客网站,博客主题多为GIS、遥感学科方向，博客和专题内容主要为专业技术、科研资源、经验分享等'/>");
 	var this_title = $(document).attr("title");
 	$('title').html("GIS大饼 | " + this_title)
@@ -26,7 +18,7 @@ $(document).ready(function($) {
 	//var now = new Date();
 	//var day = now.getDate();
 	//if(day <= 24){
-	//	$('body').css('background-image', 'url(http://gaohr.win/img/background/bg-' + day + '.jpg)');
+	//	$('body').css('background-image', 'url(" + curProtocol + "://gaohr.win/img/background/bg-' + day + '.jpg)');
 	//} else {
 	//	$('body').css('background-image', 'url()');
 	//}
@@ -136,7 +128,7 @@ function ScrollDivFixed(id, h) {
 	
 function Relatedlinks() {
 	return "<ul class=\"blog-images\">" +
-			"<li><a href=\"http://gaohr.win/site/chat/index.html\" target=\"_blank\" title=\"GIS大饼聊天室\"><img alt=\"GIS大饼聊天室\" src=\"img/images/chat.png\">GIS大饼聊天室</a></li><br>" +
+			"<li><a href=\"" + curProtocol + "://gaohr.win/site/chat/index.html\" target=\"_blank\" title=\"GIS大饼聊天室\"><img alt=\"GIS大饼聊天室\" src=\"img/images/chat.png\">GIS大饼聊天室</a></li><br>" +
 			"<li><a href=\"https://shop196715718.taobao.com/\" target=\"_blank\" title=\"淘宝店铺：蹉跎的点线面\"><img alt=\"蹉跎的点线面\" src=\"img/images/cuotuoPPP.png\">蹉跎的点线面</a></li><br>" +
 			"<li><a href=\"site/special/index.html\" target=\"\" title=\"专题栏目\"><img alt=\"专题栏目\" src=\"img/images/SpecialTopics.png\">专题栏目</a></li><br>" +
 			"<li><a href=\"site/historytoday/index.html\" target=\"\" title=\"历史上的今天\"><img alt=\"历史上的今天\" src=\"img/images/History.png\">历史上的今天</a></li><br>" +
@@ -174,7 +166,7 @@ function CurrentTime() {
 }
 	
 function Copyright() {
-	$("#copyright").html("<img class='footer-logo' src='http://gaohr.win/img/head.png' width='50'><a href='http://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='http://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='http://gaohr.win/site/special/About.html'> 关于本站 </a><span>|</span><a href='http://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='http://gaohr.win/site/pages/specialneeds/'> 数据定制 </a><div class='footer-text'><span> 在线时间 17:00-22:00 </span><span> 单位地址:北京市海淀区邓庄南路9号 </span><span> 联系邮箱:gispie@163.com </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2023 <a href='http://gaohr.win/' target='_blank'>GIS大饼 GaoHR个人博客 <img src='http://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
+	$("#copyright").html("<img class='footer-logo' src='" + curProtocol + "://gaohr.win/img/head.png' width='50'><a href='" + curProtocol + "://gaohr.win/Blogs.html'> 原创博客 </a><span>|</span><a href='" + curProtocol + "://gaohr.win/site/special/index.html'> 专题系列 </a><span>|</span><a href='" + curProtocol + "://gaohr.win/site/special/About.html'> 关于本站 </a><span>|</span><a href='" + curProtocol + "://gaohr.win/site/pages/pay/'> 支付页面 </a><span>|</span><a href='" + curProtocol + "://gaohr.win/site/pages/specialneeds/'> 数据定制 </a><div class='footer-text'><span> 在线时间 17:00-22:00 </span><span> 单位地址:北京市海淀区邓庄南路9号 </span><span> 联系邮箱:gispie@163.com </span></div><div class='footer-copy' id='copyright'>Copyright © 2016-2023 <a href='" + curProtocol + "://gaohr.win/' target='_blank'>GIS大饼 GaoHR个人博客 <img src='" + curProtocol + "://gaohr.win/img/head.png' width='12'></a> All Rights Reserved<br>Powered by <a href='https://github.com/' target='_blank'>GitHub <i class='icon-github-sign'></i></a></div>");
 }
 
 function Comments() {
@@ -196,15 +188,15 @@ function Dashang() {
 	$("#dashang").html("<br><hr><span class='g-color-red'>点击打赏支持</span><div class=\"shang_img\"></div>" +
 						"<span class=\"tdcode\">" +
 						"<p style='color:#fff'>非常感谢您的支持！</p>" +
-						"<img src=\"http://gaohr.win/img/pay/alipay.png\">" +
-						"<img src=\"http://gaohr.win/img/pay/wechat.png\">" +
+						"<img src=\"" + curProtocol + "://gaohr.win/img/pay/alipay.png\">" +
+						"<img src=\"" + curProtocol + "://gaohr.win/img/pay/wechat.png\">" +
 						"<p style='color:#fff'>扫码打赏，建议金额：1-10元</p>" +
 						"</span><br>" + 
 						"<div class=\"row-fluid\"><div class=\"span8\"><div class=\"dshstatis\" id=\"dshstatis\"></div></div><div class=\"span4\"><div class=\"dshlist\"><p class=\"dshtext\"></p><hr><div class=\"dshcontent\"></div></div></div></div><hr>");
 	
 	$(".shang_img").hover(
-		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang_hover.png)");}, 
-		function(){$(".shang_img").css("background-image","url(http://gaohr.win/img/pay/shang.png)");});
+		function(){$(".shang_img").css("background-image","url(" + curProtocol + "://gaohr.win/img/pay/shang_hover.png)");}, 
+		function(){$(".shang_img").css("background-image","url(" + curProtocol + "://gaohr.win/img/pay/shang.png)");});
 	$(".shang_img").click(function() {$(".tdcode").toggle(200);});
 	var dsh_num = paylist.length;
 	$(".dshtext").append("共 <span><i>" + dsh_num + "</i></span> 人次打赏");
@@ -220,7 +212,7 @@ function Dashang() {
 }
 
 function Warning() {
-	return "<p class='blog-sub-title'><b>一些说明，请留意</b></p><hr><br><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>由于工作原因，可能白天不会及时回复邮件，但我会尽可能及时回复和处理的~~</p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>最近邮件较多，有时可能会选择性回复，<b>邮件内容空白或表达不明确的一律不回哦 </b><i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i></p><hr><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>有网友说发了私信没回，我都几年没收到过私信了，可能是账号或什么设置问题，也可以在我的微博下评论留言。</p><br><hr><p class='g-color-red'> 原创博客，转载请注明来源 <b class='mywarning'>GIS大饼: http://gaohr.win</b></p>";
+	return "<p class='blog-sub-title'><b>一些说明，请留意</b></p><hr><br><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>由于工作原因，可能白天不会及时回复邮件，但我会尽可能及时回复和处理的~~</p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>最近邮件较多，有时可能会选择性回复，<b>邮件内容空白或表达不明确的一律不回哦 </b><i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i> <i class='emo-bg emo-02-13'></i></p><hr><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>关注我的新浪微博吧 <a href='http://weibo.com/531239592' target='_blank'>@斩之浪 <i class='icon-sina emo-sm'></i></a></p><p><i class='icon-bullhorn g-text-bg g-color-red'></i> <span class='g-color-red'>*** </span>有网友说发了私信没回，我都几年没收到过私信了，可能是账号或什么设置问题，也可以在我的微博下评论留言。</p><br><hr><p class='g-color-red'> 原创博客，转载请注明来源 <b class='mywarning'>GIS大饼: " + curProtocol + "://gaohr.win</b></p>";
 }
 	
 /*
@@ -236,9 +228,9 @@ function BlogAD() {
 							"<p class='ad-close' id='ad-close-right'><span></span></p>" +
 							// "<div class=\"timer-container\"><p class='g-color-purple'>71周年国庆倒计时</p><div id=\"timer\" class=\"timer\"></div></div><br>" +
 							// "<div class=\"timer-container\"><p class='g-color-black'>中华人民共和国<br>70周年华诞</p></div>" +
-							"<a href='http://gaohr.win/site/chat/index.html' target='_blank'><img src='http://gaohr.win/site/chat/GISerchat.jpg'></a><hr>" +
-							"<p><img src='http://gaohr.win/img/importantdays/left_ad_" + importantDays(month, day) + ".jpg'></p>" +
-							//"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='http://gaohr.win/img/importantdays/left_ad_nCov2020.jpg'></p>" +
+							"<a href='" + curProtocol + "://gaohr.win/site/chat/index.html' target='_blank'><img src='" + curProtocol + "://gaohr.win/site/chat/GISerchat.jpg'></a><hr>" +
+							"<p><img src='" + curProtocol + "://gaohr.win/img/importantdays/left_ad_" + importantDays(month, day) + ".jpg'></p>" +
+							//"<p class='ad-content'><span class='g-color-purple'><b>提供数据处理服务，联系QQ: 2783343898</b></span><hr><img src='" + curProtocol + "://gaohr.win/img/importantdays/left_ad_nCov2020.jpg'></p>" +
 						"</div>");
 	$("#rightad-con").show(500);
 	$("#ad-close-right").click(function() {$("#rightad-con").hide(500);});
@@ -281,17 +273,17 @@ function warmAlert() {
 function HotTopic() {
 	$("#others").append("<div class=\"notice\">" +
 						"<ul id=\"notice01\" class=\"noticTipTxt\">" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html\" target=\"_blank\">全国农村居民点矢量数据（2021更新） <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html\" target=\"_blank\">全国城市兴趣点（POI） <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2020/2020-02-20-china-roads.html\" target=\"_blank\">全国道路网矢量数据集 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/About.html\" target=\"_blank\">本站数据共享说明 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据免费下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html\" target=\"_blank\">利用ArcGIS制作水墨山水画风格图 <img src=\"http://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
-						"</ul></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/scrolltext.js\"></script>");
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2020/2020-08-10-china-villages.html\" target=\"_blank\">全国农村居民点矢量数据（2021更新） <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-12-10-baidu-map-poi-cn.html\" target=\"_blank\">全国城市兴趣点（POI） <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2020/2020-02-20-china-roads.html\" target=\"_blank\">全国道路网矢量数据集 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/About.html\" target=\"_blank\">本站数据共享说明 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据免费下载 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-01-15-arcgis-mapping-ink.html\" target=\"_blank\">利用ArcGIS制作水墨山水画风格图 <img src=\"" + curProtocol + "://gaohr.win/img/others/hot001.gif\" width=\"22\"></a></li>" +
+						"</ul></div><script type=\"text/javascript\" src=\"" + curProtocol + "://gaohr.win/js/scrolltext.js\"></script>");
 	if($("#notice01").length > 0){var scrollup = new ScrollText("notice01");scrollup.LineHeight = 36;scrollup.Amount = 1;scrollup.Delay = 20;scrollup.Start();scrollup.Direction = "down";}
 }
 	
@@ -452,12 +444,12 @@ function blogsSearch(keyword) {
 							"<hr>" +
 							"<p class='g-color-red g-text-bg'>热门话题推荐</p>" +
 							"<ul class='g-text-bg'>" +
-							"<li><a href=\"http://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据免费下载</a></li>" +
-							"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序</a></li>" +
-							"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据</a></li>" +
-							"<li><a href=\"http://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载</a></li>" +
-							"<li><a href=\"http://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图</a></li>" +
-							"<li><a href=\"http://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美</a></li>" +
+							"<li><a href=\"" + curProtocol + "://gaohr.win/site/special/2019/2019-09-14-dem-30m-cn.html\" target=\"_blank\">全国各省30m DEM数据免费下载</a></li>" +
+							"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-08-20-china-daily-ground-climate-data-extraction.html\" target=\"_blank\">中国地面气候资料数据提取Python程序</a></li>" +
+							"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-09-13-china-soil-type.html\" target=\"_blank\">中国土壤类型1km空间分布数据</a></li>" +
+							"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2017/2017-04-18-GIS-basic-data-of-China.html\" target=\"_blank\">中国国家基础地理信息数据打包下载</a></li>" +
+							"<li><a href=\"" + curProtocol + "://gaohr.win/site/special/2016/2016-05-11-agot-map.html\" target=\"_blank\">冰与火之歌：在线世界电子地图</a></li>" +
+							"<li><a href=\"" + curProtocol + "://gaohr.win/site/blogs/2019/2019-05-27-arcgis-and-art.html\" target=\"_blank\">GISer情怀：GIS地图制图的艺术之美</a></li>" +
 							"</ul>")
 	}
 }
@@ -512,5 +504,5 @@ function PageViews() {
 }
 	
 function ParticalEffect() {
-	$(".mainlogo").append("<div id='particle-effect' style='position:fixed;top:0;left:0;right:0;height:60px;z-index:-1'></div><script type=\"text/javascript\" src=\"http://gaohr.win/js/particaleffect.js\"></script>")
+	$(".mainlogo").append("<div id='particle-effect' style='position:fixed;top:0;left:0;right:0;height:60px;z-index:-1'></div><script type=\"text/javascript\" src=\"" + curProtocol + "://gaohr.win/js/particaleffect.js\"></script>")
 }
