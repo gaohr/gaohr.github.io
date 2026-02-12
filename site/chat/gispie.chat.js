@@ -41,7 +41,7 @@ $(document).ready(function(){
 		// 添加容器
 		$("#chat-box").html("<div id=\"chat-list\" class=\"chat-list\"></div><div id=\"chat-edit\" class=\"chat-edit\"></div>");
 		$("#chat-edit").html("<div class=\"user-info\">" + 
-							"<div id=\"user-info-content\"><span>我的头像：<img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + user_head + 
+							"<div id=\"user-info-content\"><span>我的头像：<img src=\"https://123.56.254.70:8443/gispie/chat/imgs/img" + user_head + 
 							".png\"></span><br><span class=\"chat-username\"><span>我的昵称：</span><b><span id=\"user-name-show\" class=\"user-name-show\">" + user_name + 
 							"</span></b><a href=\"###\" id=\"user-name-change\" class=\"user-name-change\">改名</a></span></div>" + 
 							"<span class=\"user-info-des\">(随机头像，暂无法更改)</span></div>" + 
@@ -96,7 +96,7 @@ $(document).ready(function(){
 					// 提交到服务器
 					$.ajax({
 						//type: 'get',
-						url:"http://123.56.254.70:8080/gispie/SaveComment?url=" + cur_url + "&userhead=" + user_head + 
+						url:"https://123.56.254.70:8443/gispie/SaveComment?url=" + cur_url + "&userhead=" + user_head + 
 						"&username=" + encodeURI(encodeURI(user_name)) + 
 						"&datetime=" + datetime_cur + 
 						"&comment=" + encodeURI(encodeURI(chat_text)),
@@ -153,7 +153,7 @@ $(document).ready(function(){
 			var date_s = date.getTime();  //当前时间(毫秒数)
 			$.ajax({
 				//type: 'get',
-				url:"http://123.56.254.70:8080/gispie/NumOnLine?url=" + cur_url + "&username=" + encodeURI(encodeURI(user_name)) + "&datetime=" + date_s,
+				url:"https://123.56.254.70:8443/gispie/NumOnLine?url=" + cur_url + "&username=" + encodeURI(encodeURI(user_name)) + "&datetime=" + date_s,
 				async:false
 			});
 		}
@@ -163,26 +163,26 @@ $(document).ready(function(){
 			$("#chat-list").html("");
 			res = $.ajax({
 				//type: 'get',
-				url:"http://123.56.254.70:8080/gispie/ReadComment?url=" + cur_url,
+				url:"https://123.56.254.70:8443/gispie/ReadComment?url=" + cur_url,
 				async:false
 			});
 			resComment = eval("(" + res.responseText + ")");
 			
 			for(var i = 0; i < resComment["chat_list"].length; i++){
 				if(resComment["chat_list"][i]["user"] == user_name && spetial_name.indexOf(resComment["chat_list"][i]["user"]) == -1){
-					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
+					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"https://123.56.254.70:8443/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 						".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
 						"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
 						"</span></div><div class=\"chat-text\" style=\"background-color:rgba(0,155,0,0.15)\"><span>" + resComment["chat_list"][i]["comment"] + 
 						"</span></div></div><div class=\"chat-hr\"></div>");
 				} else if(spetial_name.indexOf(resComment["chat_list"][i]["user"]) != -1){
-					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
+					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"https://123.56.254.70:8443/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 						".png\"></div><div><span class=\"chat-username\" style=\"color:#c21\"><b>" + resComment["chat_list"][i]["user"] + 
 						"</b></span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
 						"</span></div><div class=\"chat-text\" style=\"background-color:rgba(0,155,255,0.15)\"><span>" + resComment["chat_list"][i]["comment"] + 
 						"</span></div></div><div class=\"chat-hr\"></div>");
 				} else {
-					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"http://123.56.254.70:8080/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
+					$("#chat-list").append("<div class=\"chat-content\"><div class=\"chat-userhead\"><img src=\"https://123.56.254.70:8443/gispie/chat/imgs/img" + resComment["chat_list"][i]["head"] + 
 						".png\"></div><div><span class=\"chat-username\">" + resComment["chat_list"][i]["user"] + 
 						"</span><br><span class=\"chat-time\">" + resComment["chat_list"][i]["time"] + 
 						"</span></div><div class=\"chat-text\"><span>" + resComment["chat_list"][i]["comment"] + 
@@ -197,7 +197,7 @@ $(document).ready(function(){
 		function updateNumOL(){
 			res = $.ajax({
 				//type: 'get',
-				url:"http://123.56.254.70:8080/gispie/ReadNum?url=" + cur_url,
+				url:"https://123.56.254.70:8443/gispie/ReadNum?url=" + cur_url,
 				async:false
 			});
 			resNum = eval("(" + res.responseText + ")");
