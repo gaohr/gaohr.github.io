@@ -5,11 +5,7 @@
 *Update date: 2019-09-16
 */
 
-console.log(window.location.host);
-console.log(window.location.pathname);
-console.log(window.location.search);
-console.log(window.location.hash);
-
+/*
 // 检查当前协议是否为HTTPS
 if (window.location.protocol === 'https:') {
     // 构建HTTP版本的URL
@@ -17,6 +13,7 @@ if (window.location.protocol === 'https:') {
     // 重定向到HTTP
     window.location.replace(httpUrl);
 }
+*/
 
 $(document).ready(function($) {
 	/*LOGO*/
