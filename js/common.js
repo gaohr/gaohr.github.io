@@ -374,12 +374,12 @@ function likeIt(min_height){
 	var g_plike = 0;
 	var cur_link = window.location.href;
 	var cur_link_new = cur_link.split("//")[1];
-	$.ajax({url:"http://123.56.254.70:8080/gispie/PageLike?do=0&link=null", async:false, success:function(res) {g_plike = parseInt(res)}});
+	$.ajax({url:"https://123.56.254.70:8443/gispie/PageLike?do=0&link=null", async:false, success:function(res) {g_plike = parseInt(res)}});
 	$("#likeNum").html(g_plike);
 	
 	$("#likeIt").click(function(e){
 		var $i = $("<span/>").text("♥ +1");var x = e.pageX,y = e.pageY;$i.css({"z-index": 9999,"top": y - 20,"left": x,"position": "absolute","font-weight": "bold","color": "#f00","font-size": "2em"});$("body").append($i);$i.animate({"top": y - 120,"opacity": 0},3000,function() {$i.remove();});
-		$.ajax({url:"http://123.56.254.70:8080/gispie/PageLike?do=1&link=" + encodeURI(encodeURI(cur_link_new)), async:false, success:function(res) {g_plike = parseInt(res)}});
+		$.ajax({url:"https://123.56.254.70:8443/gispie/PageLike?do=1&link=" + encodeURI(encodeURI(cur_link_new)), async:false, success:function(res) {g_plike = parseInt(res)}});
 		$("#likeNum").html(g_plike);
 		
 	});
