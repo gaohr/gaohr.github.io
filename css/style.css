@@ -93,7 +93,7 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 
 #comments {background:#fefefe;padding:10px;margin-top:10px;margin-bottom:10px;}
 
-#others {position:absolute;z-index:9999}
+#others {position:absolute;left:79%;z-index:9999}
 
 #declare{width:100%;margin:0 auto}
 #code{width:100%;height:auto;min-height:180px;background:#ffffff;color:#333;font-family:"宋体";font-size:12px;padding:2px 2px;box-shadow:0 3px 5px #aaa}
@@ -102,15 +102,16 @@ a:hover {color:#f65;-webkit-transition: all 0.3s ease;transition: all 0.3s ease;
 #code .string{color:#b22222}
 #code .comments{color:#3f7f5f}
 
-#gotoTop{display:none;position:fixed;bottom:60px;left:78%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
+#gotoTop{display:none;position:fixed;bottom:60px;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
 #gotoTop.hover{background:#039604;color:#fff;text-decoration:none;border-radius:0}
 #gotoTop i {font-size:2em;line-height:40px;}
-#gotoComment{display:none;position:fixed;bottom:120px;left:78%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
+#gotoComment{display:none;position:fixed;bottom:120px;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:50%}
 #gotoComment.hover{background:#1E90FF;color:#fff;text-decoration:none;border-radius:0}
 #gotoComment i {font-size:2em;line-height:40px;}
-#likeIt{display:none;position:fixed;bottom:200px;left:78%;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:20%}
-#likeIt i {font-size:2em;line-height:40px;}
-#likeIt:hover{background:rgba(0,0,0,0);color:#D55C42;font-size:1.2em;text-decoration:none;border-radius:0;}
+#likeIt{display:none;position:fixed;bottom:200px;cursor:pointer;padding:5px 0;width:50px;text-align:center;background:#555;color:#fff;border-radius:20%}
+#likeIt i {font-size:2em;line-height:40px;cursor:pointer;}
+#likeIt i::before {cursor:pointer;}
+#likeIt:hover{background:rgba(255,215,0,0.25);color:#D55C42;text-decoration:none;}
 
 body footer p {margin:0;}
 body footer {position:relative;background:#333;text-align:center;color:#fff;padding:20px 0 0 0;vertical-align:baseline;margin:0;}
@@ -283,6 +284,10 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 	.blogcontent .imginblog img {max-width:640px;}
 }
 
+@media (min-width: 1560px) {
+	#others {left:73%;}
+}
+
 @media (max-width: 1200px) {
 	.cltmap {display:none}
 }
@@ -304,6 +309,7 @@ body footer .footer-copy {margin: 0 auto;border-top: 1px solid #616161;margin-to
 	.notice {display:none}
 	.g-search {display:none}
 	.cltmap {display:none}
+	
 }
 
 @media (max-width: 480px) {
