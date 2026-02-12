@@ -6,7 +6,7 @@
 /***
 Import fonts
 ***/
-@import url(../image/css);
+/*@import url(../image/css);*/
 
 /***
 Reset and overrides  
@@ -109,7 +109,7 @@ Close icon used for modal dialog and other UI element close buttons
   width: 9px;
   height: 9px;
   background-repeat: no-repeat !important;
-  background-image: url("../image/remove-icon-small.png") !important;
+  background-image: url("../img/icon/remove-icon-small.png") !important;
 }
 
 /***
@@ -517,7 +517,7 @@ ul.page-sidebar-menu > li.active > a .selected {
   display: block;
   width: 8px;
   height: 25px;
-  background-image: url("../image/sidebar-menu-arrow.png");
+  background-image: url("../img/icon/sidebar-menu-arrow.png");
   float: right;
   position: absolute;
   right:0px;
@@ -663,7 +663,7 @@ ul.page-sidebar-menu > li > ul.sub-menu  li > ul.sub-menu > li > a > i {
   margin-top: 8px;
   width: 13px;
   height: 13px;
-  background-image: url(../image/search-icon.png);
+  background-image: url(../img/icon/search-icon.png);
   background-repeat: no-repeat;
 }
  
